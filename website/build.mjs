@@ -1128,14 +1128,21 @@ function versionHistory(page) {
   }
   const caseCount = initialCases.size;
   const problemCount = loggedProblems.size;
-  days.set(initial.date, [`<li><div><h4>Initial private launch candidate</h4>
+  const initialEntry = `<li><div><h4>Initial private launch candidate</h4>
     <p>${problemCount} problems and ${caseCount} parameterizations.</p></div>
-    <div class="change-result"><p>${escape(initial.contributor)}</p></div></li>`]);
+    <div class="change-result"><p>${escape(initial.contributor)}</p></div></li>`;
   const moveDestinations = new Set((db.boundMoves ?? []).map(move => boundKey(move.to)));
   const heldBounds = new Set([...(atlas.raw.cases ?? []), ...atlas.caseFiles.values()].flatMap(record =>
     record.bounds.filter(bound => bound.includeInRelease === false).map(bound => record.id + '/' + bound.id)));
   for (const event of entries.slice().reverse()) {
     checkEvent(event);
+    if (event.kind === 'update') {
+      if (!event.title?.trim() || !event.summary?.trim()) throw Error('Missing Atlas update title or summary');
+      if (!days.has(event.date)) days.set(event.date, []);
+      days.get(event.date).push(`<li><div><h4>${escape(event.title)}</h4><p>${escape(event.summary)}</p></div>
+        <div class="change-result"><p>${escape(event.contributor)}</p></div></li>`);
+      continue;
+    }
     const groups = new Map();
     for (const id of event.problems) {
       if (!problems.has(id) || loggedProblems.has(id)) throw Error('Unknown or duplicate problem in history: ' + id);
@@ -1183,6 +1190,8 @@ function versionHistory(page) {
     add(review.date, review.object, humanize(review.type) + ' review · ' + humanize(review.verdict),
       routes.review(review.id), 'Read review');
   }
+  if (!days.has(initial.date)) days.set(initial.date, []);
+  days.get(initial.date).push(initialEntry);
   const format = new Intl.DateTimeFormat('en-GB', { dateStyle: 'long', timeZone: 'UTC' });
   const sections = [...days.keys()].sort().reverse().map(date =>
     `<section class="change-day"><h3><time datetime="${escape(date)}">${escape(format.format(new Date(date)))}</time></h3>

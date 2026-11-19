@@ -130,6 +130,8 @@ In the contribution summary, give the resulting assessment or identify the direc
 
 ### Credit in the version history
 
+For an Atlas-wide change, append a history entry with `kind` set to `update`, a date, contributor, short title and reader-facing summary. Use the problem and bound records below for new entries and statement revisions.
+
 When adding a public problem or adding or revising a public lower bound, append a change set to `data/history.json`. Record the atlas date in YYYY-MM-DD format and credit the contributor who prepared the entry, including when a maintainer merges it on their behalf. List newly added problem IDs in `problems`. In `bounds`, identify each changed statement by `caseId`, `id`, and `revision`, with `change` set to `added` or `updated`. Either list can be empty. The optional `commit` field links an already recorded change to Git. The website build checks coverage of public entries. Continue to credit the theorem authors in the statement’s sources.
 
 Record the manuscript’s actual author credits in the proof revision’s `authorship` field. External contributors retain their own bylines and acknowledgements. The Atlas byline and acknowledgement that the proof was found using ChatGPT are an internal convention for AI proofs produced by the atlas project. Record those revisions with origin `atlas`, kind `ai`, and author `Atlas`. Review and authorship are separate. The statement page uses “Proof by AI” for AI authorship and “Proof” for a human-authored theorem with applicable human verification.

@@ -461,5 +461,12 @@
       "vc-order-sh-source-review",
       "weighted-fixed-width-cnf-sat-weight-w1-hardness-scope"
     ]
+  },
+  {
+    "kind": "update",
+    "date": "2026-11-19",
+    "contributor": "Hendrik Molter with ChatGPT",
+    "title": "Search filters and original references",
+    "summary": "Problem search now supports combinations of hypotheses and recovery statuses. Search results can be sorted, and filtered views can be shared by URL. The citation audit added eight original references and documented when a result needs a second edition. Five Atlas proof manuscripts received updated citations and independent review."
   }
 ]

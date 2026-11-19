@@ -114,6 +114,8 @@ test('the launch history records one initial snapshot with the released totals',
   assert.equal((history.match(/<section class="change-day">/g) ?? []).length, 1);
   assert.match(history, /<time datetime="2026-11-19">19 November 2026<\/time>/);
   assert.match(history, /<h4>Initial private launch candidate<\/h4>/);
+  assert.ok(history.indexOf('<h4>Search filters and original references</h4>') >= 0);
+  assert.ok(history.indexOf('Search filters and original references') < history.indexOf('Initial private launch candidate'));
   assert.ok(history.includes(`${catalogue.problems.length} problems and ${catalogue.cases.length} parameterizations.`));
   assert.match(history, /<p>Hendrik Molter<\/p>/);
   assert.doesNotMatch(history, /\/commit\/[a-f0-9]{40}|Read review|Read challenge|Problem added|Lower bounds changed/);
