@@ -460,12 +460,13 @@ function filters(label, selects, sortOptions = []) {
   const select = ([name, label, options]) => {
     if (['assumption','status'].includes(name)) {
       const summary = name === 'status' ? 'Any recovery status' : label === 'Cited for a lower bound under' ? 'All papers' : 'All hypotheses';
-      return `<fieldset class="multi-filter" data-field="${name}"><legend>${escape(label)}</legend>
+      return `<div class="filter-field"><span id="filter-${name}-label">${escape(label)}</span>
+        <fieldset class="multi-filter" data-field="${name}" aria-labelledby="filter-${name}-label">
         <details><summary data-default="${summary}">${summary}</summary><div class="choices">
         ${options.map(([id,text]) => `<label><input type="checkbox" name="${name}" value="${escape(id)}"><span>${escape(text)}</span></label>`).join('')}
-        </div></details></fieldset>`;
+        </div></details></fieldset></div>`;
     }
-    return `<label><span>${escape(label)}</span><select name="${name}">${optionList(name === 'sort' ? options : [['', 'Any'], ...options])}</select></label>`;
+    return `<label class="filter-field"><span>${escape(label)}</span><select name="${name}">${optionList(name === 'sort' ? options : [['', 'Any'], ...options])}</select></label>`;
   };
   const first = selects.filter(([name]) => !['rule', 'family', 'kind'].includes(name));
   const more = selects.filter(([name]) => ['rule', 'family', 'kind'].includes(name));
