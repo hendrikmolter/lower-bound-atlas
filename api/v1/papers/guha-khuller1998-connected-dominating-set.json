@@ -1,0 +1,22 @@
+{
+  "authors": [
+    "Sudipto Guha",
+    "Samir Khuller"
+  ],
+  "editions": [
+    {
+      "access": "Journal-layout PDF checked for the optimum-preserving reduction with additive offset one in §5.1.",
+      "doi": "10.1007/PL00009201",
+      "id": "journal",
+      "kind": "journal",
+      "label": "Algorithmica 20(4) (1998), 374–387",
+      "openUrl": "https://cgi.di.uoa.gr/~istavrak/Group-Presentations/DomSet/guha98_cds.pdf",
+      "preferredUrl": "https://doi.org/10.1007/PL00009201",
+      "primaryUrl": "https://doi.org/10.1007/PL00009201"
+    }
+  ],
+  "id": "guha-khuller1998-connected-dominating-set",
+  "preferredEditionId": "journal",
+  "preferredUrl": "https://doi.org/10.1007/PL00009201",
+  "title": "Approximation Algorithms for Connected Dominating Sets"
+}

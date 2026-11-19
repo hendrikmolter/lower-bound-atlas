@@ -8,6 +8,7 @@
   "model": "Deterministic uniform algorithms on explicitly encoded inputs, under fixed-parameter reductions.",
   "name": "FPT ≠ W[1]",
   "quantifiers": "An FPT algorithm has time f(k) · L^C for a computable function f, a fixed constant C, parameter k, and complete input length L.",
+  "researchStatus": "active",
   "revision": 1,
   "source": {
     "editionId": "journal",

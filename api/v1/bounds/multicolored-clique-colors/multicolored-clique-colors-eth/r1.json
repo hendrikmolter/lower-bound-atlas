@@ -32,9 +32,9 @@
   ],
   "sources": [
     {
-      "editionId": "bulletin",
-      "locator": "Theorem 5.2, p. 58",
-      "paperId": "lms2011",
+      "editionId": "journal",
+      "locator": "Section 2, Lemma 1, p. 56",
+      "paperId": "fellows-hermelin-rosamond-vialette2009",
       "placement": "statement",
       "role": "parameter-preserving color-copy reduction"
     },
@@ -44,6 +44,13 @@
       "paperId": "lms2011",
       "placement": "statement",
       "role": "benchmark"
+    },
+    {
+      "editionId": "journal",
+      "locator": "Theorem 5.5, p. 1360",
+      "paperId": "chkx2006",
+      "placement": "statement",
+      "role": "Original quantitative Clique lower bound used in the transfer"
     }
   ],
   "statement": "Under ETH, no deterministic algorithm decides Multicolored Clique within the stated running time.",

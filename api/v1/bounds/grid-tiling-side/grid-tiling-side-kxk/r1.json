@@ -60,17 +60,17 @@
   "sources": [
     {
       "editionId": "v3",
-      "locator": "Proposition 1 and Table 1",
+      "locator": "§3, Proposition 1, pp. 3–4, and Table 1, second row, p. 5",
       "paperId": "szeider2026",
       "placement": "statement",
       "role": "benchmark"
     },
     {
-      "editionId": "oct30",
-      "locator": "§3, Proposition 1 and Table 1, second row",
-      "paperId": "szeider2026",
+      "editionId": "book",
+      "locator": "Theorem 14.28, pp. 490–491",
+      "paperId": "cygan2015",
       "placement": "statement",
-      "role": "benchmark"
+      "role": "underlying reduction"
     }
   ],
   "statement": "Under the k × k Clique Hypothesis, no deterministic algorithm solves Grid Tiling within the stated running time.",

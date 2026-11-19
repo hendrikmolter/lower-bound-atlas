@@ -1,0 +1,32 @@
+{
+  "authors": [
+    "Rodney G. Downey",
+    "Vladimir Estivill-Castro",
+    "Michael R. Fellows",
+    "Elena Prieto",
+    "Frances A. Rosamond"
+  ],
+  "editions": [
+    {
+      "access": "Published abstract checked for the decision variant and W[1]-hardness.",
+      "doi": "10.1016/S1571-0661(04)81014-4",
+      "id": "journal",
+      "kind": "journal",
+      "label": "Electronic Notes in Theoretical Computer Science 78 (2003), 209–222",
+      "preferredUrl": "https://doi.org/10.1016/S1571-0661(04)81014-4",
+      "primaryUrl": "https://doi.org/10.1016/S1571-0661(04)81014-4"
+    },
+    {
+      "access": "Theorem 1 and its proof in §3 verify the k+1 component threshold and unit-cost graph construction.",
+      "id": "manuscript",
+      "kind": "manuscript",
+      "label": "Author manuscript, Universitat Pompeu Fabra repository",
+      "preferredUrl": "https://repositori-api.upf.edu/api/core/bitstreams/37d8507d-555e-4dbb-9f08-d589e6cbc3ca/content",
+      "primaryUrl": "https://repositori-api.upf.edu/api/core/bitstreams/37d8507d-555e-4dbb-9f08-d589e6cbc3ca/content"
+    }
+  ],
+  "id": "downey-et-al2003-k-cut",
+  "preferredEditionId": "journal",
+  "preferredUrl": "https://doi.org/10.1016/S1571-0661(04)81014-4",
+  "title": "Cutting Up Is Hard To Do: The Parameterised Complexity of k-Cut and Related Problems"
+}

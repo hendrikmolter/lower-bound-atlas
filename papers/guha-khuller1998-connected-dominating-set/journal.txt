@@ -1,0 +1,1 @@
+Sudipto Guha, Samir Khuller. Approximation Algorithms for Connected Dominating Sets. Algorithmica 20(4) (1998), 374–387. https://doi.org/10.1007/PL00009201

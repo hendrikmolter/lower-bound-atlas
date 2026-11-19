@@ -1,0 +1,20 @@
+{
+  "applicable": true,
+  "date": "2026-11-19",
+  "evidence": "evidence/sh-preprint-v2-proof-review.md",
+  "id": "subset-sum-item-count-sh-review-r2",
+  "independent": true,
+  "label": "Agent verified",
+  "object": {
+    "id": "subset-sum-item-count-sh",
+    "revision": 2,
+    "theorem": "subset-sum-item-count-sh",
+    "type": "proof"
+  },
+  "reviewer": "Codex agent originals",
+  "scope": "Checked the v2 fixed-width size characterization of SH and the indexed positive binary Subset Sum reduction, including the no-carry property, linear item count, and polynomial output length.",
+  "sourceSha256": "11d89eb042394d4eb72c62becd3db4de44fa4d40c93f67524f477319900b2801",
+  "stale": false,
+  "type": "agent",
+  "verdict": "verified"
+}

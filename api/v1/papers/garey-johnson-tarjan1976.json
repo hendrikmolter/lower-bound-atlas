@@ -1,0 +1,23 @@
+{
+  "authors": [
+    "Michael R. Garey",
+    "David S. Johnson",
+    "Robert Endre Tarjan"
+  ],
+  "editions": [
+    {
+      "access": "Published scan checked for the construction, crossover analysis and correctness on pp. 709–712. Its crossing count is the source used in Lokshtanov, Marx and Saurabh, Proposition 3.4.",
+      "doi": "10.1137/0205049",
+      "id": "journal",
+      "kind": "journal",
+      "label": "SIAM Journal on Computing 5(4) (1976), 704–714",
+      "openUrl": "https://www.cs.princeton.edu/courses/archive/spr04/cos423/handouts/the%20planar%20hamiltonian.pdf",
+      "preferredUrl": "https://doi.org/10.1137/0205049",
+      "primaryUrl": "https://doi.org/10.1137/0205049"
+    }
+  ],
+  "id": "garey-johnson-tarjan1976",
+  "preferredEditionId": "journal",
+  "preferredUrl": "https://doi.org/10.1137/0205049",
+  "title": "The Planar Hamiltonian Circuit Problem is NP-Complete"
+}

@@ -7,15 +7,6 @@
   ],
   "editions": [
     {
-      "access": "Inspected author manuscript with the DS-Core definition and Theorem 5.4. Retained for earlier citations and their pagination.",
-      "id": "jan17",
-      "kind": "manuscript",
-      "label": "Inspected author manuscript, 17 January 2006",
-      "openUrl": "https://www.cs.lafayette.edu/~gexia/research/jcss72_8.pdf",
-      "preferredUrl": "https://www.cs.lafayette.edu/~gexia/research/jcss72_8.pdf",
-      "primaryUrl": "https://www.cs.lafayette.edu/~gexia/research/jcss72_8.pdf"
-    },
-    {
       "access": "Published text checked for DS-Core and Theorems 5.4–5.8 in §5, pp. 1358–1361.",
       "doi": "10.1016/j.jcss.2006.04.007",
       "id": "journal",

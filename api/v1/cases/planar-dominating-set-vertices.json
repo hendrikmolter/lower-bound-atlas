@@ -42,6 +42,13 @@
           "paperId": "cygan2015",
           "placement": "statement",
           "role": "lower-bound statement"
+        },
+        {
+          "editionId": "journal",
+          "locator": "Theorem 2, p. 333, invoking the planarization construction in §3",
+          "paperId": "lichtenstein1982",
+          "placement": "forward",
+          "role": "quadratic Planar 3SAT reduction"
         }
       ],
       "statement": "Under ETH, no deterministic algorithm solves Planar Dominating Set within the stated running time.",
@@ -80,11 +87,25 @@
       ],
       "sources": [
         {
-          "editionId": "oct30",
-          "locator": "Table 1, Weak ETH row",
+          "editionId": "v3",
+          "locator": "§3, Table 1, fourth row, p. 5 (Cygan et al., Theorem 14.9)",
           "paperId": "szeider2026",
           "placement": "statement",
           "role": "lower-bound statement"
+        },
+        {
+          "editionId": "book",
+          "locator": "Theorem 14.9 and Exercise 14.3(b), pp. 475, 516–517",
+          "paperId": "cygan2015",
+          "placement": "statement",
+          "role": "underlying reduction"
+        },
+        {
+          "editionId": "journal",
+          "locator": "Theorem 2, p. 333, invoking the planarization construction in §3",
+          "paperId": "lichtenstein1982",
+          "placement": "forward",
+          "role": "quadratic Planar 3SAT reduction"
         }
       ],
       "statement": "Under SH, no deterministic algorithm solves Planar Dominating Set within the stated running time.",
@@ -143,8 +164,8 @@
           "role": "lower-bound statement"
         },
         {
-          "editionId": "oct30",
-          "locator": "Table 1, Weak ETH row",
+          "editionId": "v3",
+          "locator": "§3, Table 1, fourth row, p. 5 (Cygan et al., Theorem 14.9)",
           "paperId": "szeider2026",
           "placement": "statement",
           "role": "lower-bound statement"
@@ -209,8 +230,8 @@
           "role": "lower-bound statement"
         },
         {
-          "editionId": "oct30",
-          "locator": "Table 1, Weak ETH row",
+          "editionId": "v3",
+          "locator": "§3, Table 1, fourth row, p. 5 (Cygan et al., Theorem 14.9)",
           "paperId": "szeider2026",
           "placement": "statement",
           "role": "lower-bound statement"

@@ -43,6 +43,13 @@
           "paperId": "lms2011",
           "placement": "statement",
           "role": "benchmark"
+        },
+        {
+          "editionId": "journal",
+          "locator": "Theorems 2–3 and §4, pp. 333–335",
+          "paperId": "lichtenstein1982",
+          "placement": "forward",
+          "role": "planarization and planar Vertex Cover gadgets"
         }
       ],
       "statement": "Under ETH, no deterministic algorithm decides Planar Vertex Cover within the stated running time.",
@@ -94,6 +101,13 @@
           "paperId": "cygan2015",
           "placement": "statement",
           "role": "benchmark"
+        },
+        {
+          "editionId": "journal",
+          "locator": "Theorems 2–3 and §4, pp. 333–335",
+          "paperId": "lichtenstein1982",
+          "placement": "forward",
+          "role": "planarization and planar Vertex Cover gadgets"
         }
       ],
       "statement": "Under SH, no deterministic algorithm decides Planar Vertex Cover within the stated running time.",

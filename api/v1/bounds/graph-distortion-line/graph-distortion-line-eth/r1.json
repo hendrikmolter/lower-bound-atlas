@@ -57,13 +57,6 @@
       "paperId": "cygan2015",
       "placement": "context",
       "role": "textbook statement"
-    },
-    {
-      "editionId": "bulletin",
-      "locator": "Theorem 4.6, p. 56",
-      "paperId": "lms2011",
-      "placement": "context",
-      "role": "earlier natural-coordinate statement"
     }
   ],
   "statement": "Under ETH, no deterministic algorithm solves the stated decision problem within the stated running time.",

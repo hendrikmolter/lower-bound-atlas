@@ -1,1 +1,0 @@
-Daniel Lokshtanov, Dániel Marx, Saket Saurabh. Slightly Superexponential Parameterized Problems. Public journal author manuscript. https://sites.cs.ucsb.edu/~daniello/papers/slightlySuperexpSICOMP18.pdf

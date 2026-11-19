@@ -1,0 +1,62 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\title{The 3-Coloring bound implies the Satisfiability Hypothesis}
+\author{Atlas\thanks{The proof in this note was found using ChatGPT.}}
+\date{}
+\begin{document}
+\maketitle
+
+The Satisfiability Hypothesis (SH) asserts that for every fixed \(0<b<1\),
+no deterministic algorithm decides satisfiability of CNF formulas of normalized
+input length \(s\) in time \(2^{\mathcal O(s^b)}s^{\mathcal O(1)}\)~\cite{sh}.
+We consider simple undirected graphs with all vertices represented explicitly.
+Let \(n\) denote the number of vertices and \(B\) the binary input length.
+
+\hypertarget{color-sh-converse}{}\begin{theorem}\label{color-sh-converse}
+If for every fixed \(0<a<1\) there is no deterministic algorithm for
+3-Coloring running in time \(2^{\mathcal O(n^a)}B^{\mathcal O(1)}\),
+then SH holds.
+\end{theorem}
+
+\begin{proof}
+Suppose that SH fails, and fix a CNF satisfiability algorithm with the
+stated running time for some \(0<b<1\). Given a graph \(G\), encode its
+coloring by a formula with \(v=3n\) variables, one variable \(x_{u,i}\) for
+each vertex \(u\) and each color \(i\in\{1,2,3\}\). For each vertex,
+one clause requires at least one color, and three binary clauses forbid
+each pair of colors. For each edge \(uw\) and color \(i\), add the clause
+\(\neg x_{u,i}\lor\neg x_{w,i}\). The satisfying assignments are precisely
+the proper 3-colorings of \(G\). The formula has width at most three and
+can be constructed in time polynomial in \(B\).
+
+To bound the length of the inputs to the CNF algorithm even when \(G\) is
+dense, apply quantitative sparsification~\cite[Lemma~2.2]{sh} at width
+three. In the form needed here, there is a constant \(K\ge1\) such that
+for every fixed \(0<d<1\) the formula can be written as a disjunction
+of at most \(2^{\mathcal O(v^{1-d})}\) formulas in deterministic time
+\(2^{\mathcal O(v^{1-d})}B^{\mathcal O(1)}\). Each formula has at most
+\(v\) variables and \(\mathcal O(v^{1+Kd})\) clauses of width at most
+three. With consecutive variable names its binary length is therefore
+\(\mathcal O(v^{1+Kd}\log(v+2))\).
+
+Choose \(d>0\) small enough that \(d<1\) and \(b(1+Kd)<1\), and fix
+\(a\) strictly between \(\max\{1-d,b(1+Kd)\}\) and~\(1\).
+On each formula the CNF algorithm takes time \(2^{\mathcal O(v^a)}\),
+since the strict inequality absorbs the logarithmic factor.
+Run it on all formulas and accept if any is satisfiable. Multiplying
+by the number of formulas and adding their generation time gives
+\(2^{\mathcal O(v^a)}B^{\mathcal O(1)}\) time. Since \(v=3n\), this
+contradicts the assumed 3-Coloring bound for the fixed exponent~\(a\).
+\end{proof}
+
+\begin{thebibliography}{1}
+\bibitem{sh} MIT Hardness Group, J. Brunner, E. D. Demaine, F. Frei,
+T. Gomez, M. Hecher, J. Li, and J. Lynch.
+\emph{ETH is Dead, Long Live SH}.
+\href{https://arxiv.org/abs/2611.02650v2}{arXiv:2611.02650v2}, 2026.
+\end{thebibliography}
+\end{document}

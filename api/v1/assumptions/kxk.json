@@ -9,6 +9,7 @@
   "model": "The graph is given explicitly.",
   "name": "k × k Clique Hypothesis",
   "quantifiers": "The exclusion concerns the worst-case running time as the number of rows k grows.",
+  "researchStatus": "active",
   "revision": 1,
   "source": {
     "editionId": "v3",

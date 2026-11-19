@@ -1,1 +1,0 @@
-Klaus Jansen, Stefan Kratsch, Dániel Marx, Ildikó Schlotter. Bin Packing with Fixed Number of Bins Revisited. Authors’ full manuscript. https://www.cs.bme.hu/~dmarx/papers/jansen-binpacking-algo.pdf

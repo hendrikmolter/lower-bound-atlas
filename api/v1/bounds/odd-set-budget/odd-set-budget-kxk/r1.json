@@ -60,17 +60,17 @@
   "sources": [
     {
       "editionId": "v3",
-      "locator": "Proposition 1 and Table 1",
+      "locator": "§3, Proposition 1, pp. 3–4, and Table 1, third row, p. 5; quadratic parameter transfer discussed on p. 4",
       "paperId": "szeider2026",
       "placement": "statement",
       "role": "benchmark"
     },
     {
-      "editionId": "oct30",
-      "locator": "§3, Proposition 1 and Table 1, third row (quadratic parameter growth)",
-      "paperId": "szeider2026",
+      "editionId": "book",
+      "locator": "Theorems 13.31–13.32, pp. 454–456, and Exercise 14.11, p. 516",
+      "paperId": "cygan2015",
       "placement": "statement",
-      "role": "benchmark"
+      "role": "underlying reduction"
     }
   ],
   "statement": "Under the k × k Clique Hypothesis, no deterministic algorithm solves Odd Set within the stated running time.",

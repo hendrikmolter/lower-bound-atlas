@@ -33,6 +33,13 @@
       "paperId": "cygan2015",
       "placement": "statement",
       "role": "lower-bound statement"
+    },
+    {
+      "editionId": "journal",
+      "locator": "Corollary 1.6 and §6",
+      "paperId": "marx2010-treewidth",
+      "placement": "forward",
+      "role": "Original ETH lower bound for Subgraph Isomorphism parameterized by pattern edges"
     }
   ],
   "statement": "Under ETH, no deterministic algorithm solves Strongly Connected Steiner Subgraph within the stated running time.",

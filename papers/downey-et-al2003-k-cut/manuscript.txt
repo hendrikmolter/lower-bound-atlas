@@ -1,0 +1,1 @@
+Rodney G. Downey, Vladimir Estivill-Castro, Michael R. Fellows, Elena Prieto, Frances A. Rosamond. Cutting Up Is Hard To Do: The Parameterised Complexity of k-Cut and Related Problems. Author manuscript, Universitat Pompeu Fabra repository. https://repositori-api.upf.edu/api/core/bitstreams/37d8507d-555e-4dbb-9f08-d589e6cbc3ca/content

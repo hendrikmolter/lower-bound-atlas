@@ -30,7 +30,7 @@
   "sources": [
     {
       "editionId": "journal",
-      "locator": "Sections 2–3, reduction for domination",
+      "locator": "§§2–3, proof of Theorem 1 and paragraph before Theorem 2 (unit-disk transfer)",
       "paperId": "marx2006-geometric",
       "placement": "statement",
       "role": "lower-bound statement"

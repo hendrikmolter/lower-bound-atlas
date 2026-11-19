@@ -14,10 +14,10 @@
             "hypothesisRevision": 1,
             "proof": {
               "proofId": "ilp-equations-w1-effective",
-              "revision": 2,
+              "revision": 3,
               "theorem": "ilp-equations-w1-effective"
             },
-            "reviewId": "ilp-equations-w1-all-ones-review"
+            "reviewId": "ilp-equations-w1-all-ones-r3-citation-review"
           }
         ],
         "status": "established"
@@ -44,7 +44,7 @@
   "proofs": [
     {
       "proofId": "ilp-equations-w1-effective",
-      "revision": 2,
+      "revision": 3,
       "theorem": "ilp-equations-w1-effective"
     }
   ],

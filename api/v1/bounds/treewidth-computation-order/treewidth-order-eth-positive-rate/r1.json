@@ -41,6 +41,7 @@
     },
     {
       "editionId": "arxiv-v2",
+      "editionReason": "The publisher index verifies the journal theorem statement. The inspected arXiv proof supplies the explicit decision threshold and the size bounds used for the positive-rate formulation.",
       "locator": "Theorem 2 and Section 3",
       "paperId": "bonnet2026-treewidth",
       "placement": "statement",

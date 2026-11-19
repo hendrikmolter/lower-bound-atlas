@@ -1,1 +1,0 @@
-Dušan Knop, Michał Pilipczuk, Marcin Wrochna. Tight Complexity Lower Bounds for Integer Linear Programming with Few Constraints. STACS 2019, LIPIcs 126, pp. 44:1–44:15. https://doi.org/10.4230/LIPIcs.STACS.2019.44

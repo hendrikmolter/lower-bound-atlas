@@ -38,13 +38,6 @@
           "role": "lower-bound statement"
         },
         {
-          "editionId": "bulletin",
-          "locator": "Theorem 5.7, p. 60",
-          "paperId": "lms2011",
-          "placement": "statement",
-          "role": "lower-bound statement"
-        },
-        {
           "editionId": "book",
           "locator": "Theorem 14.24, pp. 488–489",
           "paperId": "cygan2015",
@@ -86,11 +79,18 @@
       ],
       "sources": [
         {
-          "editionId": "oct30",
-          "locator": "Section 3, Table 1 and Proposition 1",
+          "editionId": "v3",
+          "locator": "§3, Proposition 1, pp. 3–4, and Table 1, third row, p. 5; quadratic parameter transfer discussed on p. 4",
           "paperId": "szeider2026",
           "placement": "statement",
           "role": "lower-bound statement"
+        },
+        {
+          "editionId": "journal",
+          "locator": "§1, discussion following Theorem 1.5, pp. 88–89 (quadratic clique-pattern transfer)",
+          "paperId": "marx2010-treewidth",
+          "placement": "statement",
+          "role": "underlying reduction"
         }
       ],
       "statement": "Under the k × k Clique Hypothesis, no deterministic algorithm solves Subgraph Isomorphism within the stated running time.",
@@ -227,8 +227,8 @@
           "role": "lower-bound statement"
         },
         {
-          "editionId": "oct30",
-          "locator": "Section 3, Table 1 and Proposition 1",
+          "editionId": "v3",
+          "locator": "§3, Proposition 1, pp. 3–4, and Table 1, third row, p. 5; quadratic parameter transfer discussed on p. 4",
           "paperId": "szeider2026",
           "placement": "statement",
           "role": "lower-bound statement"
@@ -278,8 +278,8 @@
           "role": "lower-bound statement"
         },
         {
-          "editionId": "oct30",
-          "locator": "Section 3, Table 1 and Proposition 1",
+          "editionId": "v3",
+          "locator": "§3, Proposition 1, pp. 3–4, and Table 1, third row, p. 5; quadratic parameter transfer discussed on p. 4",
           "paperId": "szeider2026",
           "placement": "statement",
           "role": "lower-bound statement"

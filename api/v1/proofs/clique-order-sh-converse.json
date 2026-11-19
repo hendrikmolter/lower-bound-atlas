@@ -1,5 +1,5 @@
 {
-  "currentRevision": 1,
+  "currentRevision": 2,
   "id": "clique-order-sh-converse",
   "revisions": [
     {
@@ -22,6 +22,32 @@
           "number": "1",
           "reviewIds": [
             "clique-order-sh-converse-review"
+          ],
+          "statement": "The whole fixed-power exclusion family for Clique by number of vertices implies SH.",
+          "supports": true
+        }
+      ]
+    },
+    {
+      "authorship": {
+        "authors": [
+          "Atlas"
+        ],
+        "kind": "ai",
+        "origin": "atlas"
+      },
+      "dependencies": [],
+      "dependencyCoverage": "complete",
+      "pdf": "proofs/clique-order-sh-converse-r2.pdf",
+      "revision": 2,
+      "source": "proofs/clique-order-sh-converse-r2.tex",
+      "theorems": [
+        {
+          "destination": "clique-order-sh-converse",
+          "label": "clique-order-sh-converse",
+          "number": "1",
+          "reviewIds": [
+            "clique-order-sh-converse-review-r2"
           ],
           "statement": "The whole fixed-power exclusion family for Clique by number of vertices implies SH.",
           "supports": true

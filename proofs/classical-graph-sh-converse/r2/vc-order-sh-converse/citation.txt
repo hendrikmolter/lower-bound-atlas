@@ -1,0 +1,1 @@
+Atlas. The Satisfiability Hypothesis from fixed-power graph bounds · Theorem 1(b). classical-graph-sh-converse, theorem vc-order-sh-converse, proof revision 2. Edition v1.0.0, Git commit 748ce11db2a05c258c10772c880b848b7afe5e6b. https://github.com/hendrikmolter/lower-bound-atlas/blob/748ce11db2a05c258c10772c880b848b7afe5e6b/proofs/classical-graph-sh-converse-r2.tex

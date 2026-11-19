@@ -1,5 +1,5 @@
 {
-  "currentRevision": 1,
+  "currentRevision": 2,
   "id": "three-coloring-sh-converse",
   "revisions": [
     {
@@ -22,6 +22,32 @@
           "number": "1",
           "reviewIds": [
             "three-coloring-sh-converse-review"
+          ],
+          "statement": "If for every fixed 0<a<1 there is no deterministic 3-Coloring algorithm in 2^{O(n^a)} B^{O(1)}, then SH holds.",
+          "supports": true
+        }
+      ]
+    },
+    {
+      "authorship": {
+        "authors": [
+          "Atlas"
+        ],
+        "kind": "ai",
+        "origin": "atlas"
+      },
+      "dependencies": [],
+      "dependencyCoverage": "complete",
+      "pdf": "proofs/three-coloring-sh-converse-r2.pdf",
+      "revision": 2,
+      "source": "proofs/three-coloring-sh-converse-r2.tex",
+      "theorems": [
+        {
+          "destination": "color-sh-converse",
+          "label": "color-sh-converse",
+          "number": "1",
+          "reviewIds": [
+            "three-coloring-sh-converse-review-r2"
           ],
           "statement": "If for every fixed 0<a<1 there is no deterministic 3-Coloring algorithm in 2^{O(n^a)} B^{O(1)}, then SH holds.",
           "supports": true

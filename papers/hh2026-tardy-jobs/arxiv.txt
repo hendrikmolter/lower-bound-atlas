@@ -1,1 +1,0 @@
-Klaus Heeger, Danny Hermelin. Minimizing the Weighted Number of Tardy Jobs is W[1]-hard. arXiv:2401.01740. https://arxiv.org/abs/2401.01740

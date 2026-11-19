@@ -15,27 +15,13 @@
     "name": "3-Coloring by graph order",
     "recoveries": [
       {
-        "hypothesis": "kxk",
-        "status": "equivalence",
-        "target": "color-eth-historical"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "equivalence",
-        "target": "color-eth-historical"
-      },
-      {
+        "bound": "color-sh-fixed-power",
         "hypothesis": "sh",
         "status": "degree",
         "target": "color-eth-historical"
       },
       {
         "hypothesis": "sh",
-        "status": "equivalence",
-        "target": "color-eth-historical"
-      },
-      {
-        "hypothesis": "w1",
         "status": "equivalence",
         "target": "color-eth-historical"
       }
@@ -55,6 +41,11 @@
       "Satisfiability Hypothesis",
       "SH",
       "SAT power index one",
+      "ipz2001",
+      "Which Problems Have Strongly Exponential Complexity?",
+      "Russell Impagliazzo",
+      "Ramamohan Paturi",
+      "Francis Zane",
       "lms2011",
       "Lower bounds based on the Exponential Time Hypothesis",
       "Daniel Lokshtanov",
@@ -70,6 +61,20 @@
       "Markus Hecher",
       "Jeffery Li",
       "Jayson Lynch"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "color-eth-historical"
+      },
+      {
+        "hypotheses": [
+          "sh"
+        ],
+        "id": "color-sh-fixed-power"
+      }
     ]
   },
   {
@@ -86,27 +91,13 @@
     "name": "3SAT by clause count",
     "recoveries": [
       {
-        "hypothesis": "kxk",
-        "status": "equivalence",
-        "target": "three-sat-clauses-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "equivalence",
-        "target": "three-sat-clauses-eth"
-      },
-      {
+        "bound": "three-sat-clauses-sh",
         "hypothesis": "sh",
         "status": "degree",
         "target": "three-sat-clauses-eth"
       },
       {
         "hypothesis": "sh",
-        "status": "equivalence",
-        "target": "three-sat-clauses-eth"
-      },
-      {
-        "hypothesis": "w1",
         "status": "equivalence",
         "target": "three-sat-clauses-eth"
       }
@@ -146,6 +137,20 @@
       "Markus Hecher",
       "Jeffery Li",
       "Jayson Lynch"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "three-sat-clauses-eth"
+      },
+      {
+        "hypotheses": [
+          "sh"
+        ],
+        "id": "three-sat-clauses-sh"
+      }
     ]
   },
   {
@@ -163,6 +168,7 @@
     "name": "3SAT by variable count",
     "recoveries": [
       {
+        "bound": "three-sat-variables-kxk",
         "hypothesis": "kxk",
         "status": "degree",
         "target": "three-sat-variables-eth"
@@ -173,22 +179,13 @@
         "target": "three-sat-variables-eth"
       },
       {
-        "hypothesis": "np_qp",
-        "status": "equivalence",
-        "target": "three-sat-variables-eth"
-      },
-      {
+        "bound": "three-sat-variables-sh",
         "hypothesis": "sh",
         "status": "degree",
         "target": "three-sat-variables-eth"
       },
       {
         "hypothesis": "sh",
-        "status": "equivalence",
-        "target": "three-sat-variables-eth"
-      },
-      {
-        "hypothesis": "w1",
         "status": "equivalence",
         "target": "three-sat-variables-eth"
       }
@@ -230,6 +227,26 @@
       "Markus Hecher",
       "Jeffery Li",
       "Jayson Lynch"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "three-sat-variables-eth"
+      },
+      {
+        "hypotheses": [
+          "kxk"
+        ],
+        "id": "three-sat-variables-kxk"
+      },
+      {
+        "hypotheses": [
+          "sh"
+        ],
+        "id": "three-sat-variables-sh"
+      }
     ]
   },
   {
@@ -247,23 +264,9 @@
     "name": "Balanced Vertex Separator by solution budget",
     "recoveries": [
       {
+        "bound": "balanced-vertex-separator-budget-kxk",
         "hypothesis": "kxk",
         "status": "recovered",
-        "target": "balanced-vertex-separator-budget-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "balanced-vertex-separator-budget-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "balanced-vertex-separator-budget-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
         "target": "balanced-vertex-separator-budget-eth"
       }
     ],
@@ -296,9 +299,29 @@
       "Marcin Pilipczuk",
       "Michał Pilipczuk",
       "Saket Saurabh",
+      "chkx2006",
+      "Strong Computational Lower Bounds via Parameterized Complexity",
+      "Jianer Chen",
+      "Xiuzhen Huang",
+      "Iyad A. Kanj",
+      "Ge Xia",
       "szeider2026",
       "After ETH: the k×k Clique Hypothesis",
       "Stefan Szeider"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "balanced-vertex-separator-budget-eth"
+      },
+      {
+        "hypotheses": [
+          "kxk"
+        ],
+        "id": "balanced-vertex-separator-budget-kxk"
+      }
     ]
   },
   {
@@ -316,21 +339,13 @@
     "name": "Chromatic Number by treewidth",
     "recoveries": [
       {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "chromatic-tw-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "chromatic-tw-eth"
-      },
-      {
+        "bound": "chromatic-tw-sh",
         "hypothesis": "sh",
         "status": "degree",
         "target": "chromatic-tw-eth"
       },
       {
+        "bound": "chromatic-tw-w1",
         "hypothesis": "w1",
         "status": "effective",
         "target": "chromatic-tw-eth"
@@ -359,11 +374,6 @@
       "Daniel Lokshtanov",
       "Dániel Marx",
       "Saket Saurabh",
-      "lms2011",
-      "Lower bounds based on the Exponential Time Hypothesis",
-      "Daniel Lokshtanov",
-      "Dániel Marx",
-      "Saket Saurabh",
       "sh26",
       "ETH is Dead, Long Live SH",
       "MIT Hardness Group",
@@ -378,6 +388,26 @@
       "Fixed-parameter tractability and completeness II: On completeness for W[1]",
       "Rod G. Downey",
       "Michael R. Fellows"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "chromatic-tw-eth"
+      },
+      {
+        "hypotheses": [
+          "sh"
+        ],
+        "id": "chromatic-tw-sh"
+      },
+      {
+        "hypotheses": [
+          "w1"
+        ],
+        "id": "chromatic-tw-w1"
+      }
     ]
   },
   {
@@ -395,21 +425,13 @@
     "name": "Chromatic Number by vertex cover number",
     "recoveries": [
       {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "chromatic-vc-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "chromatic-vc-eth"
-      },
-      {
+        "bound": "chromatic-vc-sh",
         "hypothesis": "sh",
         "status": "degree",
         "target": "chromatic-vc-eth"
       },
       {
+        "bound": "chromatic-vc-w1",
         "hypothesis": "w1",
         "status": "logarithmic",
         "target": "chromatic-vc-eth"
@@ -452,6 +474,26 @@
       "Fixed-parameter tractability and completeness II: On completeness for W[1]",
       "Rod G. Downey",
       "Michael R. Fellows"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "chromatic-vc-eth"
+      },
+      {
+        "hypotheses": [
+          "sh"
+        ],
+        "id": "chromatic-vc-sh"
+      },
+      {
+        "hypotheses": [
+          "w1"
+        ],
+        "id": "chromatic-vc-w1"
+      }
     ]
   },
   {
@@ -468,27 +510,13 @@
     "name": "Clique by number of vertices",
     "recoveries": [
       {
-        "hypothesis": "kxk",
-        "status": "equivalence",
-        "target": "clique-order-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "equivalence",
-        "target": "clique-order-eth"
-      },
-      {
+        "bound": "clique-order-sh",
         "hypothesis": "sh",
         "status": "degree",
         "target": "clique-order-eth"
       },
       {
         "hypothesis": "sh",
-        "status": "equivalence",
-        "target": "clique-order-eth"
-      },
-      {
-        "hypothesis": "w1",
         "status": "equivalence",
         "target": "clique-order-eth"
       }
@@ -523,6 +551,20 @@
       "Markus Hecher",
       "Jeffery Li",
       "Jayson Lynch"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "clique-order-eth"
+      },
+      {
+        "hypotheses": [
+          "sh"
+        ],
+        "id": "clique-order-sh"
+      }
     ]
   },
   {
@@ -541,22 +583,13 @@
     "name": "Clique by solution size",
     "recoveries": [
       {
+        "bound": "clique-budget-kxk",
         "hypothesis": "kxk",
         "status": "recovered",
         "target": "clique-budget-eth"
       },
       {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "clique-budget-eth"
-      },
-      {
         "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "clique-budget-eth"
-      },
-      {
-        "hypothesis": "w1",
         "status": "unresolved",
         "target": "clique-budget-eth"
       }
@@ -615,6 +648,26 @@
       "Fixed-parameter tractability and completeness II: On completeness for W[1]",
       "Rod G. Downey",
       "Michael R. Fellows"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "clique-budget-eth"
+      },
+      {
+        "hypotheses": [
+          "kxk"
+        ],
+        "id": "clique-budget-kxk"
+      },
+      {
+        "hypotheses": [
+          "sh"
+        ],
+        "id": "clique-budget-sh"
+      }
     ]
   },
   {
@@ -629,23 +682,9 @@
     "name": "Closest String by radius",
     "recoveries": [
       {
+        "bound": "cs-radius-kxk",
         "hypothesis": "kxk",
         "status": "recovered",
-        "target": "cs-radius-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "cs-radius-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "cs-radius-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
         "target": "cs-radius-eth"
       }
     ],
@@ -682,6 +721,20 @@
       "szeider2026",
       "After ETH: the k×k Clique Hypothesis",
       "Stefan Szeider"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "cs-radius-eth"
+      },
+      {
+        "hypotheses": [
+          "kxk"
+        ],
+        "id": "cs-radius-kxk"
+      }
     ]
   },
   {
@@ -699,21 +752,13 @@
     "name": "Closest String by radius and used alphabet",
     "recoveries": [
       {
+        "bound": "cs-kxk-balanced",
         "hypothesis": "kxk",
         "status": "recovered",
         "target": "cs-eth-balanced-historical"
       },
       {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "cs-eth-balanced-historical"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "cs-eth-balanced-historical"
-      },
-      {
+        "bound": "cs-w1-balanced",
         "hypothesis": "w1",
         "status": "logarithmic",
         "target": "cs-eth-balanced-historical"
@@ -742,11 +787,6 @@
       "Daniel Lokshtanov",
       "Dániel Marx",
       "Saket Saurabh",
-      "lms2011",
-      "Lower bounds based on the Exponential Time Hypothesis",
-      "Daniel Lokshtanov",
-      "Dániel Marx",
-      "Saket Saurabh",
       "szeider2026",
       "After ETH: the k×k Clique Hypothesis",
       "Stefan Szeider",
@@ -764,6 +804,26 @@
       "Fixed-parameter tractability and completeness II: On completeness for W[1]",
       "Rod G. Downey",
       "Michael R. Fellows"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "cs-eth-balanced-historical"
+      },
+      {
+        "hypotheses": [
+          "kxk"
+        ],
+        "id": "cs-kxk-balanced"
+      },
+      {
+        "hypotheses": [
+          "w1"
+        ],
+        "id": "cs-w1-balanced"
+      }
     ]
   },
   {
@@ -775,28 +835,7 @@
     "id": "cluster-editing-budget",
     "kind": "lower-bound-case",
     "name": "Cluster Editing by edge-edit budget",
-    "recoveries": [
-      {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "cluster-editing-budget-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "cluster-editing-budget-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "cluster-editing-budget-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
-        "target": "cluster-editing-budget-eth"
-      }
-    ],
+    "recoveries": [],
     "search": [
       "Cluster Editing",
       "Edge-edit budget",
@@ -812,6 +851,14 @@
       "Cluster Editing with Locally Bounded Modifications",
       "Christian Komusiewicz",
       "Johannes Uhlmann"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "cluster-editing-budget-eth"
+      }
     ]
   },
   {
@@ -823,28 +870,7 @@
     "id": "cluster-editing-size",
     "kind": "lower-bound-case",
     "name": "Cluster Editing by number of edges",
-    "recoveries": [
-      {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "cluster-editing-size-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "cluster-editing-size-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "cluster-editing-size-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
-        "target": "cluster-editing-size-eth"
-      }
-    ],
+    "recoveries": [],
     "search": [
       "Cluster Editing",
       "Number of edges",
@@ -860,6 +886,14 @@
       "Cluster Editing with Locally Bounded Modifications",
       "Christian Komusiewicz",
       "Johannes Uhlmann"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "cluster-editing-size-eth"
+      }
     ]
   },
   {
@@ -871,28 +905,7 @@
     "id": "cluster-editing-order",
     "kind": "lower-bound-case",
     "name": "Cluster Editing by number of vertices",
-    "recoveries": [
-      {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "cluster-editing-order-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "cluster-editing-order-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "cluster-editing-order-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
-        "target": "cluster-editing-order-eth"
-      }
-    ],
+    "recoveries": [],
     "search": [
       "Cluster Editing",
       "Number of vertices",
@@ -908,6 +921,14 @@
       "Cluster Editing with Locally Bounded Modifications",
       "Christian Komusiewicz",
       "Johannes Uhlmann"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "cluster-editing-order-eth"
+      }
     ]
   },
   {
@@ -925,23 +946,9 @@
     "name": "Connected Dominating Set by solution budget",
     "recoveries": [
       {
+        "bound": "connected-dominating-set-budget-kxk",
         "hypothesis": "kxk",
         "status": "recovered",
-        "target": "connected-dominating-set-budget-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "connected-dominating-set-budget-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "connected-dominating-set-budget-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
         "target": "connected-dominating-set-budget-eth"
       }
     ],
@@ -974,9 +981,38 @@
       "Marcin Pilipczuk",
       "Michał Pilipczuk",
       "Saket Saurabh",
+      "lms2011",
+      "Lower bounds based on the Exponential Time Hypothesis",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Saket Saurabh",
+      "guha-khuller1998-connected-dominating-set",
+      "Approximation Algorithms for Connected Dominating Sets",
+      "Sudipto Guha",
+      "Samir Khuller",
+      "chkx2006",
+      "Strong Computational Lower Bounds via Parameterized Complexity",
+      "Jianer Chen",
+      "Xiuzhen Huang",
+      "Iyad A. Kanj",
+      "Ge Xia",
       "szeider2026",
       "After ETH: the k×k Clique Hypothesis",
       "Stefan Szeider"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "connected-dominating-set-budget-eth"
+      },
+      {
+        "hypotheses": [
+          "kxk"
+        ],
+        "id": "connected-dominating-set-budget-kxk"
+      }
     ]
   },
   {
@@ -988,28 +1024,7 @@
     "id": "connected-vertex-cover-budget",
     "kind": "lower-bound-case",
     "name": "Connected Vertex Cover by solution budget",
-    "recoveries": [
-      {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "connected-vertex-cover-budget-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "connected-vertex-cover-budget-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "connected-vertex-cover-budget-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
-        "target": "connected-vertex-cover-budget-eth"
-      }
-    ],
+    "recoveries": [],
     "search": [
       "Connected Vertex Cover",
       "Solution budget",
@@ -1032,6 +1047,14 @@
       "Russell Impagliazzo",
       "Ramamohan Paturi",
       "Francis Zane"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "connected-vertex-cover-budget-eth"
+      }
     ]
   },
   {
@@ -1049,43 +1072,15 @@
     "name": "Constant-alphabet Closest Substring by distance threshold and string count",
     "recoveries": [
       {
+        "bound": "closest-substring-constant-alphabet-distance-kxk",
         "hypothesis": "kxk",
         "status": "recovered",
         "target": "closest-substring-constant-alphabet-distance-eth"
       },
       {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "closest-substring-constant-alphabet-distance-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "closest-substring-constant-alphabet-distance-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
-        "target": "closest-substring-constant-alphabet-distance-eth"
-      },
-      {
+        "bound": "closest-substring-constant-alphabet-strings-kxk",
         "hypothesis": "kxk",
         "status": "recovered",
-        "target": "closest-substring-constant-alphabet-strings-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "closest-substring-constant-alphabet-strings-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "closest-substring-constant-alphabet-strings-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
         "target": "closest-substring-constant-alphabet-strings-eth"
       }
     ],
@@ -1129,6 +1124,32 @@
       "Marcin Pilipczuk",
       "Michał Pilipczuk",
       "Saket Saurabh"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "closest-substring-constant-alphabet-distance-eth"
+      },
+      {
+        "hypotheses": [
+          "kxk"
+        ],
+        "id": "closest-substring-constant-alphabet-distance-kxk"
+      },
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "closest-substring-constant-alphabet-strings-eth"
+      },
+      {
+        "hypotheses": [
+          "kxk"
+        ],
+        "id": "closest-substring-constant-alphabet-strings-kxk"
+      }
     ]
   },
   {
@@ -1143,21 +1164,7 @@
     "name": "Cycle Packing by treewidth",
     "recoveries": [
       {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "cp-tw-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "cp-tw-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "cp-tw-eth"
-      },
-      {
+        "bound": "cp-tw-w1-effective",
         "hypothesis": "w1",
         "status": "effective",
         "target": "cp-tw-eth"
@@ -1177,11 +1184,6 @@
       "w1",
       "FPT ≠ W[1]",
       "deterministic W[1] separation",
-      "lms2011",
-      "Lower bounds based on the Exponential Time Hypothesis",
-      "Daniel Lokshtanov",
-      "Dániel Marx",
-      "Saket Saurabh",
       "cygan-cut-count",
       "Solving Connectivity Problems Parameterized by Treewidth in Single Exponential Time",
       "Marek Cygan",
@@ -1190,6 +1192,20 @@
       "Michał Pilipczuk",
       "Johan M. M. van Rooij",
       "Jakub Onufry Wojtaszczyk"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "cp-tw-eth"
+      },
+      {
+        "hypotheses": [
+          "w1"
+        ],
+        "id": "cp-tw-w1-effective"
+      }
     ]
   },
   {
@@ -1205,21 +1221,13 @@
     "name": "Cycle Packing by width of a supplied path decomposition",
     "recoveries": [
       {
+        "bound": "cp-pw-kxk",
         "hypothesis": "kxk",
         "status": "recovered",
         "target": "cp-pw-eth"
       },
       {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "cp-pw-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "cp-pw-eth"
-      },
-      {
+        "bound": "cp-pw-w1-effective",
         "hypothesis": "w1",
         "status": "effective",
         "target": "cp-pw-eth"
@@ -1264,6 +1272,26 @@
       "szeider2026",
       "After ETH: the k×k Clique Hypothesis",
       "Stefan Szeider"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "cp-pw-eth"
+      },
+      {
+        "hypotheses": [
+          "kxk"
+        ],
+        "id": "cp-pw-kxk"
+      },
+      {
+        "hypotheses": [
+          "w1"
+        ],
+        "id": "cp-pw-w1-effective"
+      }
     ]
   },
   {
@@ -1275,28 +1303,7 @@
     "id": "directed-steiner-tree-terminals",
     "kind": "lower-bound-case",
     "name": "Directed Steiner Tree by number of terminals",
-    "recoveries": [
-      {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "directed-steiner-tree-terminals-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "directed-steiner-tree-terminals-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "directed-steiner-tree-terminals-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
-        "target": "directed-steiner-tree-terminals-eth"
-      }
-    ],
+    "recoveries": [],
     "search": [
       "Directed Steiner Tree",
       "Number of terminals",
@@ -1319,6 +1326,14 @@
       "Dániel Marx",
       "Marcin Pilipczuk",
       "Michał Pilipczuk"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "directed-steiner-tree-terminals-eth"
+      }
     ]
   },
   {
@@ -1336,21 +1351,7 @@
     "name": "Distinct Vectors",
     "recoveries": [
       {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "dv-eth-column-budget"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "dv-eth-column-budget"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "dv-eth-column-budget"
-      },
-      {
+        "bound": "dv-w1-fixed-coefficient",
         "hypothesis": "w1",
         "status": "recovered",
         "target": "dv-eth-column-budget"
@@ -1384,6 +1385,20 @@
       "froese2012",
       "Combinatorial Feature Selection: Parameterized Algorithms and Complexity",
       "Vincent Froese"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "dv-eth-column-budget"
+      },
+      {
+        "hypotheses": [
+          "w1"
+        ],
+        "id": "dv-w1-fixed-coefficient"
+      }
     ]
   },
   {
@@ -1398,21 +1413,7 @@
     "name": "Dominating Set by linear rank-width",
     "recoveries": [
       {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "dominating-set-linear-rank-width-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "dominating-set-linear-rank-width-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "dominating-set-linear-rank-width-eth"
-      },
-      {
+        "bound": "dominating-set-linear-rank-width-w1-effective",
         "hypothesis": "w1",
         "status": "effective",
         "target": "dominating-set-linear-rank-width-eth"
@@ -1436,6 +1437,20 @@
       "Lower Bounds for Domination-Type Problems Parameterized by Rank-Width",
       "Chenghua Liu",
       "Boning Meng"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "dominating-set-linear-rank-width-eth"
+      },
+      {
+        "hypotheses": [
+          "w1"
+        ],
+        "id": "dominating-set-linear-rank-width-w1-effective"
+      }
     ]
   },
   {
@@ -1450,27 +1465,13 @@
     "name": "Dominating Set by graph order",
     "recoveries": [
       {
-        "hypothesis": "kxk",
-        "status": "equivalence",
-        "target": "ds-order-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "equivalence",
-        "target": "ds-order-eth"
-      },
-      {
+        "bound": "ds-order-sh-fixed-power",
         "hypothesis": "sh",
         "status": "degree",
         "target": "ds-order-eth"
       },
       {
         "hypothesis": "sh",
-        "status": "equivalence",
-        "target": "ds-order-eth"
-      },
-      {
-        "hypothesis": "w1",
         "status": "equivalence",
         "target": "ds-order-eth"
       }
@@ -1505,6 +1506,20 @@
       "Markus Hecher",
       "Jeffery Li",
       "Jayson Lynch"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "ds-order-eth"
+      },
+      {
+        "hypotheses": [
+          "sh"
+        ],
+        "id": "ds-order-sh-fixed-power"
+      }
     ]
   },
   {
@@ -1519,21 +1534,7 @@
     "name": "Dominating Set by rank-width",
     "recoveries": [
       {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "dominating-set-rank-width-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "dominating-set-rank-width-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "dominating-set-rank-width-eth"
-      },
-      {
+        "bound": "dominating-set-rank-width-w1-effective",
         "hypothesis": "w1",
         "status": "effective",
         "target": "dominating-set-rank-width-eth"
@@ -1557,6 +1558,20 @@
       "Lower Bounds for Domination-Type Problems Parameterized by Rank-Width",
       "Chenghua Liu",
       "Boning Meng"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "dominating-set-rank-width-eth"
+      },
+      {
+        "hypotheses": [
+          "w1"
+        ],
+        "id": "dominating-set-rank-width-w1-effective"
+      }
     ]
   },
   {
@@ -1572,23 +1587,9 @@
     "name": "Dominating Set by solution size",
     "recoveries": [
       {
+        "bound": "ds-budget-kxk",
         "hypothesis": "kxk",
         "status": "recovered",
-        "target": "ds-budget-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "ds-budget-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "ds-budget-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
         "target": "ds-budget-eth"
       }
     ],
@@ -1635,6 +1636,20 @@
       "Xiuzhen Huang",
       "Iyad A. Kanj",
       "Ge Xia"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "ds-budget-eth"
+      },
+      {
+        "hypotheses": [
+          "kxk"
+        ],
+        "id": "ds-budget-kxk"
+      }
     ]
   },
   {
@@ -1649,21 +1664,7 @@
     "name": "Dominating Set by treewidth",
     "recoveries": [
       {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "ds-tw-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "ds-tw-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "ds-tw-eth"
-      },
-      {
+        "bound": "ds-tw-w1",
         "hypothesis": "w1",
         "status": "effective",
         "target": "ds-tw-eth"
@@ -1695,6 +1696,20 @@
       "lin2019",
       "A Simple Gap-Producing Reduction for the Parameterized Set Cover Problem",
       "Bingkai Lin"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "ds-tw-eth"
+      },
+      {
+        "hypotheses": [
+          "w1"
+        ],
+        "id": "ds-tw-w1"
+      }
     ]
   },
   {
@@ -1709,21 +1724,7 @@
     "name": "Dominating Set by width of a supplied rank decomposition",
     "recoveries": [
       {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "dominating-set-supplied-rank-decomposition-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "dominating-set-supplied-rank-decomposition-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "dominating-set-supplied-rank-decomposition-eth"
-      },
-      {
+        "bound": "dominating-set-supplied-rank-decomposition-w1-effective",
         "hypothesis": "w1",
         "status": "effective",
         "target": "dominating-set-supplied-rank-decomposition-eth"
@@ -1747,6 +1748,20 @@
       "Lower Bounds for Domination-Type Problems Parameterized by Rank-Width",
       "Chenghua Liu",
       "Boning Meng"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "dominating-set-supplied-rank-decomposition-eth"
+      },
+      {
+        "hypotheses": [
+          "w1"
+        ],
+        "id": "dominating-set-supplied-rank-decomposition-w1-effective"
+      }
     ]
   },
   {
@@ -1761,21 +1776,7 @@
     "name": "Dominating Set by width of a supplied vertex order",
     "recoveries": [
       {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "dominating-set-supplied-linear-layout-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "dominating-set-supplied-linear-layout-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "dominating-set-supplied-linear-layout-eth"
-      },
-      {
+        "bound": "dominating-set-supplied-linear-layout-w1-effective",
         "hypothesis": "w1",
         "status": "effective",
         "target": "dominating-set-supplied-linear-layout-eth"
@@ -1799,6 +1800,20 @@
       "Lower Bounds for Domination-Type Problems Parameterized by Rank-Width",
       "Chenghua Liu",
       "Boning Meng"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "dominating-set-supplied-linear-layout-eth"
+      },
+      {
+        "hypotheses": [
+          "w1"
+        ],
+        "id": "dominating-set-supplied-linear-layout-w1-effective"
+      }
     ]
   },
   {
@@ -1816,18 +1831,9 @@
     "name": "Dominating Set on tournaments by solution budget",
     "recoveries": [
       {
+        "bound": "tournament-dominating-set-budget-kxk",
         "hypothesis": "kxk",
         "status": "recovered",
-        "target": "tournament-dominating-set-budget-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "tournament-dominating-set-budget-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
         "target": "tournament-dominating-set-budget-eth"
       },
       {
@@ -1873,6 +1879,26 @@
       "Xiuzhen Huang",
       "Iyad A. Kanj",
       "Ge Xia"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "tournament-dominating-set-budget-eth"
+      },
+      {
+        "hypotheses": [
+          "kxk"
+        ],
+        "id": "tournament-dominating-set-budget-kxk"
+      },
+      {
+        "hypotheses": [
+          "w1"
+        ],
+        "id": "tournament-dominating-set-budget-w1"
+      }
     ]
   },
   {
@@ -1887,22 +1913,7 @@
     "name": "Edge Clique Cover by clique budget",
     "recoveries": [
       {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "ecc-budget-eth"
-      },
-      {
         "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "ecc-budget-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "ecc-budget-eth"
-      },
-      {
-        "hypothesis": "w1",
         "status": "unresolved",
         "target": "ecc-budget-eth"
       }
@@ -1936,6 +1947,20 @@
       "Marcin Pilipczuk",
       "Michał Pilipczuk",
       "Saket Saurabh"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "ecc-budget-eth"
+      },
+      {
+        "hypotheses": [
+          "np_qp"
+        ],
+        "id": "ecc-budget-np-qp"
+      }
     ]
   },
   {
@@ -1948,28 +1973,7 @@
     "id": "edge-dominating-set-intrinsic-clique-width",
     "kind": "lower-bound-case",
     "name": "Edge Dominating Set by intrinsic clique-width",
-    "recoveries": [
-      {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "edge-dominating-set-intrinsic-clique-width-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "edge-dominating-set-intrinsic-clique-width-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "edge-dominating-set-intrinsic-clique-width-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
-        "target": "edge-dominating-set-intrinsic-clique-width-eth"
-      }
-    ],
+    "recoveries": [],
     "search": [
       "Edge Dominating Set",
       "Intrinsic clique-width",
@@ -1997,6 +2001,14 @@
       "Petr A. Golovach",
       "Daniel Lokshtanov",
       "Saket Saurabh"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "edge-dominating-set-intrinsic-clique-width-eth"
+      }
     ]
   },
   {
@@ -2008,28 +2020,7 @@
     "id": "edge-dominating-set-budget",
     "kind": "lower-bound-case",
     "name": "Edge Dominating Set by solution budget",
-    "recoveries": [
-      {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "edge-dominating-set-budget-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "edge-dominating-set-budget-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "edge-dominating-set-budget-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
-        "target": "edge-dominating-set-budget-eth"
-      }
-    ],
+    "recoveries": [],
     "search": [
       "Edge Dominating Set",
       "Solution budget",
@@ -2047,6 +2038,14 @@
       "Matthias Mnich",
       "Erik Jan van Leeuwen",
       "Gerhard J. Woeginger"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "edge-dominating-set-budget-eth"
+      }
     ]
   },
   {
@@ -2061,28 +2060,7 @@
     "id": "edge-dominating-set-clique-width",
     "kind": "lower-bound-case",
     "name": "Edge Dominating Set by width of a supplied clique-width expression",
-    "recoveries": [
-      {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "edge-dominating-set-clique-width-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "edge-dominating-set-clique-width-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "edge-dominating-set-clique-width-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
-        "target": "edge-dominating-set-clique-width-eth"
-      }
-    ],
+    "recoveries": [],
     "search": [
       "Edge Dominating Set",
       "Width of a supplied clique-width expression",
@@ -2110,6 +2088,14 @@
       "Petr A. Golovach",
       "Daniel Lokshtanov",
       "Saket Saurabh"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "edge-dominating-set-clique-width-eth"
+      }
     ]
   },
   {
@@ -2126,23 +2112,9 @@
     "name": "Euclidean Traveling Salesman by number of points",
     "recoveries": [
       {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "euclidean-traveling-salesman-points-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "euclidean-traveling-salesman-points-eth"
-      },
-      {
+        "bound": "euclidean-traveling-salesman-points-sh",
         "hypothesis": "sh",
         "status": "degree",
-        "target": "euclidean-traveling-salesman-points-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
         "target": "euclidean-traveling-salesman-points-eth"
       }
     ],
@@ -2178,6 +2150,20 @@
       "Markus Hecher",
       "Jeffery Li",
       "Jayson Lynch"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "euclidean-traveling-salesman-points-eth"
+      },
+      {
+        "hypotheses": [
+          "sh"
+        ],
+        "id": "euclidean-traveling-salesman-points-sh"
+      }
     ]
   },
   {
@@ -2192,28 +2178,7 @@
     "id": "explicit-table-csp-treewidth",
     "kind": "lower-bound-case",
     "name": "Explicit-table CSP by primal treewidth",
-    "recoveries": [
-      {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "explicit-table-csp-treewidth-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "explicit-table-csp-treewidth-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "explicit-table-csp-treewidth-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
-        "target": "explicit-table-csp-treewidth-eth"
-      }
-    ],
+    "recoveries": [],
     "search": [
       "Explicit-table CSP",
       "Primal treewidth",
@@ -2234,6 +2199,15 @@
       "Daniel Lokshtanov",
       "Dániel Marx",
       "Saket Saurabh",
+      "fellows-et-al2011-colorful-treewidth",
+      "On the Complexity of Some Colorful Problems Parameterized by Treewidth",
+      "Michael R. Fellows",
+      "Fedor V. Fomin",
+      "Daniel Lokshtanov",
+      "Frances Rosamond",
+      "Saket Saurabh",
+      "Stefan Szeider",
+      "Carsten Thomassen",
       "marx2010-treewidth",
       "Can You Beat Treewidth?",
       "Dániel Marx",
@@ -2247,6 +2221,14 @@
       "Marcin Pilipczuk",
       "Michał Pilipczuk",
       "Saket Saurabh"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "explicit-table-csp-treewidth-eth"
+      }
     ]
   },
   {
@@ -2263,41 +2245,12 @@
     "name": "Feature Set by number of selected features",
     "recoveries": [
       {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "feature-set-budget-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "feature-set-budget-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "feature-set-budget-eth"
-      },
-      {
         "hypothesis": "w1",
         "status": "unresolved",
         "target": "feature-set-budget-eth"
       },
       {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "feature-set-budget-eth-fixed"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "feature-set-budget-eth-fixed"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "feature-set-budget-eth-fixed"
-      },
-      {
+        "bound": "feature-set-budget-w1-fixed",
         "hypothesis": "w1",
         "status": "recovered",
         "target": "feature-set-budget-eth-fixed"
@@ -2332,6 +2285,32 @@
       "David Juedes",
       "Iyad A. Kanj",
       "Ge Xia"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "feature-set-budget-eth"
+      },
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "feature-set-budget-eth-fixed"
+      },
+      {
+        "hypotheses": [
+          "w1"
+        ],
+        "id": "feature-set-budget-w1"
+      },
+      {
+        "hypotheses": [
+          "w1"
+        ],
+        "id": "feature-set-budget-w1-fixed"
+      }
     ]
   },
   {
@@ -2348,23 +2327,9 @@
     "name": "Feedback Vertex Set by solution budget",
     "recoveries": [
       {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "feedback-vertex-set-budget-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "feedback-vertex-set-budget-eth"
-      },
-      {
+        "bound": "feedback-vertex-set-budget-sh-cubic-line",
         "hypothesis": "sh",
         "status": "degree",
-        "target": "feedback-vertex-set-budget-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
         "target": "feedback-vertex-set-budget-eth"
       }
     ],
@@ -2388,75 +2353,11 @@
       "Daniel Lokshtanov",
       "Dániel Marx",
       "Saket Saurabh",
-      "akiyama-nishizeki-saito1980",
-      "NP-Completeness of the Hamiltonian Cycle Problem for Bipartite Graphs",
-      "Takanori Akiyama",
-      "Takao Nishizeki",
-      "Nobuji Saito",
-      "munaro2017-line-graphs",
-      "On Line Graphs of Subcubic Triangle-Free Graphs",
-      "Andrea Munaro",
-      "sh26",
-      "ETH is Dead, Long Live SH",
-      "MIT Hardness Group",
-      "Josh Brunner",
-      "Erik D. Demaine",
-      "Fabian Frei",
-      "Timothy Gomez",
-      "Markus Hecher",
-      "Jeffery Li",
-      "Jayson Lynch"
-    ]
-  },
-  {
-    "aliases": [
-      "book-fvs-graph-size"
-    ],
-    "assumptions": [
-      "eth",
-      "sh"
-    ],
-    "family": "",
-    "id": "feedback-vertex-set-graph-size",
-    "kind": "lower-bound-case",
-    "name": "Feedback Vertex Set by vertex-plus-edge count",
-    "recoveries": [
-      {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "feedback-vertex-set-graph-size-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "feedback-vertex-set-graph-size-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "degree",
-        "target": "feedback-vertex-set-graph-size-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
-        "target": "feedback-vertex-set-graph-size-eth"
-      }
-    ],
-    "search": [
-      "Feedback Vertex Set",
-      "Vertex-plus-edge count",
-      "Feedback Vertex Set by vertex-plus-edge count",
-      "Feedback Vertex Set",
-      "The sum of the numbers of vertices and edges s.",
-      "Can at most k vertices be deleted so that the remaining graph is a forest?",
-      "eth",
-      "Exponential Time Hypothesis",
-      "ETH",
-      "positive-rate ETH",
-      "sh",
-      "Satisfiability Hypothesis",
-      "SH",
-      "SAT power index one",
+      "ipz2001",
+      "Which Problems Have Strongly Exponential Complexity?",
+      "Russell Impagliazzo",
+      "Ramamohan Paturi",
+      "Francis Zane",
       "cygan2015",
       "Parameterized Algorithms",
       "Marek Cygan",
@@ -2485,6 +2386,104 @@
       "Markus Hecher",
       "Jeffery Li",
       "Jayson Lynch"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "feedback-vertex-set-budget-eth"
+      },
+      {
+        "hypotheses": [
+          "sh"
+        ],
+        "id": "feedback-vertex-set-budget-sh-cubic-line"
+      }
+    ]
+  },
+  {
+    "aliases": [
+      "book-fvs-graph-size"
+    ],
+    "assumptions": [
+      "eth",
+      "sh"
+    ],
+    "family": "",
+    "id": "feedback-vertex-set-graph-size",
+    "kind": "lower-bound-case",
+    "name": "Feedback Vertex Set by vertex-plus-edge count",
+    "recoveries": [
+      {
+        "bound": "feedback-vertex-set-graph-size-sh-cubic-line",
+        "hypothesis": "sh",
+        "status": "degree",
+        "target": "feedback-vertex-set-graph-size-eth"
+      }
+    ],
+    "search": [
+      "Feedback Vertex Set",
+      "Vertex-plus-edge count",
+      "Feedback Vertex Set by vertex-plus-edge count",
+      "Feedback Vertex Set",
+      "The sum of the numbers of vertices and edges s.",
+      "Can at most k vertices be deleted so that the remaining graph is a forest?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "sh",
+      "Satisfiability Hypothesis",
+      "SH",
+      "SAT power index one",
+      "cygan2015",
+      "Parameterized Algorithms",
+      "Marek Cygan",
+      "Fedor V. Fomin",
+      "Łukasz Kowalik",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Marcin Pilipczuk",
+      "Michał Pilipczuk",
+      "Saket Saurabh",
+      "ipz2001",
+      "Which Problems Have Strongly Exponential Complexity?",
+      "Russell Impagliazzo",
+      "Ramamohan Paturi",
+      "Francis Zane",
+      "akiyama-nishizeki-saito1980",
+      "NP-Completeness of the Hamiltonian Cycle Problem for Bipartite Graphs",
+      "Takanori Akiyama",
+      "Takao Nishizeki",
+      "Nobuji Saito",
+      "munaro2017-line-graphs",
+      "On Line Graphs of Subcubic Triangle-Free Graphs",
+      "Andrea Munaro",
+      "sh26",
+      "ETH is Dead, Long Live SH",
+      "MIT Hardness Group",
+      "Josh Brunner",
+      "Erik D. Demaine",
+      "Fabian Frei",
+      "Timothy Gomez",
+      "Markus Hecher",
+      "Jeffery Li",
+      "Jayson Lynch"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "feedback-vertex-set-graph-size-eth"
+      },
+      {
+        "hypotheses": [
+          "sh"
+        ],
+        "id": "feedback-vertex-set-graph-size-sh-cubic-line"
+      }
     ]
   },
   {
@@ -2501,27 +2500,13 @@
     "name": "Fixed-width SAT by total formula size",
     "recoveries": [
       {
-        "hypothesis": "kxk",
-        "status": "equivalence",
-        "target": "fixed-width-sat-formula-size-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "equivalence",
-        "target": "fixed-width-sat-formula-size-eth"
-      },
-      {
+        "bound": "fixed-width-sat-formula-size-sh",
         "hypothesis": "sh",
         "status": "degree",
         "target": "fixed-width-sat-formula-size-eth"
       },
       {
         "hypothesis": "sh",
-        "status": "equivalence",
-        "target": "fixed-width-sat-formula-size-eth"
-      },
-      {
-        "hypothesis": "w1",
         "status": "equivalence",
         "target": "fixed-width-sat-formula-size-eth"
       }
@@ -2566,6 +2551,20 @@
       "Markus Hecher",
       "Jeffery Li",
       "Jayson Lynch"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "fixed-width-sat-formula-size-eth"
+      },
+      {
+        "hypotheses": [
+          "sh"
+        ],
+        "id": "fixed-width-sat-formula-size-sh"
+      }
     ]
   },
   {
@@ -2581,6 +2580,7 @@
     "name": "Fixed-width SAT by variable count",
     "recoveries": [
       {
+        "bound": "fixed-width-sat-variables-kxk",
         "hypothesis": "kxk",
         "status": "degree",
         "target": "fixed-width-sat-variables-eth"
@@ -2591,22 +2591,13 @@
         "target": "fixed-width-sat-variables-eth"
       },
       {
-        "hypothesis": "np_qp",
-        "status": "equivalence",
-        "target": "fixed-width-sat-variables-eth"
-      },
-      {
+        "bound": "fixed-width-sat-variables-sh",
         "hypothesis": "sh",
         "status": "degree",
         "target": "fixed-width-sat-variables-eth"
       },
       {
         "hypothesis": "sh",
-        "status": "equivalence",
-        "target": "fixed-width-sat-variables-eth"
-      },
-      {
-        "hypothesis": "w1",
         "status": "equivalence",
         "target": "fixed-width-sat-variables-eth"
       }
@@ -2653,6 +2644,26 @@
       "Markus Hecher",
       "Jeffery Li",
       "Jayson Lynch"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "fixed-width-sat-variables-eth"
+      },
+      {
+        "hypotheses": [
+          "kxk"
+        ],
+        "id": "fixed-width-sat-variables-kxk"
+      },
+      {
+        "hypotheses": [
+          "sh"
+        ],
+        "id": "fixed-width-sat-variables-sh"
+      }
     ]
   },
   {
@@ -2670,21 +2681,13 @@
     "name": "Graph Distortion into a line by distortion threshold",
     "recoveries": [
       {
+        "bound": "graph-distortion-line-kxk",
         "hypothesis": "kxk",
         "status": "recovered",
         "target": "graph-distortion-line-eth"
       },
       {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "graph-distortion-line-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "graph-distortion-line-eth"
-      },
-      {
+        "bound": "graph-distortion-line-w1",
         "hypothesis": "w1",
         "status": "effective",
         "target": "graph-distortion-line-eth"
@@ -2723,11 +2726,6 @@
       "Marcin Pilipczuk",
       "Michał Pilipczuk",
       "Saket Saurabh",
-      "lms2011",
-      "Lower bounds based on the Exponential Time Hypothesis",
-      "Daniel Lokshtanov",
-      "Dániel Marx",
-      "Saket Saurabh",
       "szeider2026",
       "After ETH: the k×k Clique Hypothesis",
       "Stefan Szeider",
@@ -2735,6 +2733,26 @@
       "Fixed-parameter tractability and completeness II: On completeness for W[1]",
       "Rod G. Downey",
       "Michael R. Fellows"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "graph-distortion-line-eth"
+      },
+      {
+        "hypotheses": [
+          "kxk"
+        ],
+        "id": "graph-distortion-line-kxk"
+      },
+      {
+        "hypotheses": [
+          "w1"
+        ],
+        "id": "graph-distortion-line-w1"
+      }
     ]
   },
   {
@@ -2751,23 +2769,9 @@
     "name": "Graph Homomorphism by total graph order",
     "recoveries": [
       {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "graph-homomorphism-total-order-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "graph-homomorphism-total-order-eth"
-      },
-      {
+        "bound": "graph-homomorphism-total-order-sh",
         "hypothesis": "sh",
         "status": "degree",
-        "target": "graph-homomorphism-total-order-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
         "target": "graph-homomorphism-total-order-eth"
       }
     ],
@@ -2805,6 +2809,20 @@
       "Markus Hecher",
       "Jeffery Li",
       "Jayson Lynch"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "graph-homomorphism-total-order-eth"
+      },
+      {
+        "hypotheses": [
+          "sh"
+        ],
+        "id": "graph-homomorphism-total-order-sh"
+      }
     ]
   },
   {
@@ -2816,48 +2834,7 @@
     "id": "graph-motif-order",
     "kind": "lower-bound-case",
     "name": "Graph Motif by number of vertices",
-    "recoveries": [
-      {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "graph-motif-cluster-distance-order-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "graph-motif-cluster-distance-order-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "graph-motif-cluster-distance-order-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
-        "target": "graph-motif-cluster-distance-order-eth"
-      },
-      {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "graph-motif-tree-order-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "graph-motif-tree-order-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "graph-motif-tree-order-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
-        "target": "graph-motif-tree-order-eth"
-      }
-    ],
+    "recoveries": [],
     "search": [
       "Graph Motif",
       "Number of vertices",
@@ -2873,6 +2850,20 @@
       "The Graph Motif Problem Parameterized by the Structure of the Input Graph",
       "Édouard Bonnet",
       "Florian Sikora"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "graph-motif-cluster-distance-order-eth"
+      },
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "graph-motif-tree-order-eth"
+      }
     ]
   },
   {
@@ -2890,23 +2881,9 @@
     "name": "Grid Tiling by grid side",
     "recoveries": [
       {
+        "bound": "grid-tiling-side-kxk",
         "hypothesis": "kxk",
         "status": "recovered",
-        "target": "grid-tiling-side-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "grid-tiling-side-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "grid-tiling-side-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
         "target": "grid-tiling-side-eth"
       }
     ],
@@ -2939,9 +2916,33 @@
       "Marcin Pilipczuk",
       "Michał Pilipczuk",
       "Saket Saurabh",
+      "chkx2006",
+      "Strong Computational Lower Bounds via Parameterized Complexity",
+      "Jianer Chen",
+      "Xiuzhen Huang",
+      "Iyad A. Kanj",
+      "Ge Xia",
       "szeider2026",
       "After ETH: the k×k Clique Hypothesis",
-      "Stefan Szeider"
+      "Stefan Szeider",
+      "df1995",
+      "Fixed-parameter tractability and completeness II: On completeness for W[1]",
+      "Rod G. Downey",
+      "Michael R. Fellows"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "grid-tiling-side-eth"
+      },
+      {
+        "hypotheses": [
+          "kxk"
+        ],
+        "id": "grid-tiling-side-kxk"
+      }
     ]
   },
   {
@@ -2958,23 +2959,9 @@
     "name": "Hamiltonian Cycle by number of vertices",
     "recoveries": [
       {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "hamiltonian-cycle-order-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "hamiltonian-cycle-order-eth"
-      },
-      {
+        "bound": "hamiltonian-cycle-order-sh",
         "hypothesis": "sh",
         "status": "degree",
-        "target": "hamiltonian-cycle-order-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
         "target": "hamiltonian-cycle-order-eth"
       }
     ],
@@ -3018,6 +3005,20 @@
       "Russell Impagliazzo",
       "Ramamohan Paturi",
       "Francis Zane"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "hamiltonian-cycle-order-eth"
+      },
+      {
+        "hypotheses": [
+          "sh"
+        ],
+        "id": "hamiltonian-cycle-order-sh"
+      }
     ]
   },
   {
@@ -3032,23 +3033,9 @@
     "name": "Hamiltonian Cycle by number of vertices plus edges",
     "recoveries": [
       {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "hamiltonian-cycle-graph-size-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "hamiltonian-cycle-graph-size-eth"
-      },
-      {
+        "bound": "hamiltonian-cycle-graph-size-sh",
         "hypothesis": "sh",
         "status": "degree",
-        "target": "hamiltonian-cycle-graph-size-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
         "target": "hamiltonian-cycle-graph-size-eth"
       }
     ],
@@ -3092,6 +3079,20 @@
       "Russell Impagliazzo",
       "Ramamohan Paturi",
       "Francis Zane"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "hamiltonian-cycle-graph-size-eth"
+      },
+      {
+        "hypotheses": [
+          "sh"
+        ],
+        "id": "hamiltonian-cycle-graph-size-sh"
+      }
     ]
   },
   {
@@ -3108,23 +3109,9 @@
     "name": "Hamiltonian Path by number of vertices",
     "recoveries": [
       {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "hamiltonian-path-order-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "hamiltonian-path-order-eth"
-      },
-      {
+        "bound": "hamiltonian-path-order-sh",
         "hypothesis": "sh",
         "status": "degree",
-        "target": "hamiltonian-path-order-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
         "target": "hamiltonian-path-order-eth"
       }
     ],
@@ -3163,6 +3150,20 @@
       "Russell Impagliazzo",
       "Ramamohan Paturi",
       "Francis Zane"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "hamiltonian-path-order-eth"
+      },
+      {
+        "hypotheses": [
+          "sh"
+        ],
+        "id": "hamiltonian-path-order-sh"
+      }
     ]
   },
   {
@@ -3179,41 +3180,13 @@
     "name": "Hitting Set by solution budget",
     "recoveries": [
       {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "hitting-set-budget-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "hitting-set-budget-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "hitting-set-budget-eth"
-      },
-      {
+        "bound": "hitting-set-budget-w1",
         "hypothesis": "w1",
         "status": "recovered",
         "target": "hitting-set-budget-eth"
       },
       {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "hitting-set-budget-eth-complete-input"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "hitting-set-budget-eth-complete-input"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "hitting-set-budget-eth-complete-input"
-      },
-      {
+        "bound": "hitting-set-budget-w1",
         "hypothesis": "w1",
         "status": "recovered",
         "target": "hitting-set-budget-eth-complete-input"
@@ -3239,6 +3212,26 @@
       "Xiuzhen Huang",
       "Iyad A. Kanj",
       "Ge Xia"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "hitting-set-budget-eth"
+      },
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "hitting-set-budget-eth-complete-input"
+      },
+      {
+        "hypotheses": [
+          "w1"
+        ],
+        "id": "hitting-set-budget-w1"
+      }
     ]
   },
   {
@@ -3254,21 +3247,13 @@
     "name": "Independent Set by linear rank-width",
     "recoveries": [
       {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "independent-set-linear-rank-width-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "independent-set-linear-rank-width-eth"
-      },
-      {
+        "bound": "independent-set-linear-rank-width-sh-degree",
         "hypothesis": "sh",
         "status": "degree",
         "target": "independent-set-linear-rank-width-eth"
       },
       {
+        "bound": "independent-set-linear-rank-width-w1-effective",
         "hypothesis": "w1",
         "status": "effective",
         "target": "independent-set-linear-rank-width-eth"
@@ -3297,6 +3282,26 @@
       "Benjamin Bergougnoux",
       "Tuukka Korhonen",
       "Jesper Nederlof"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "independent-set-linear-rank-width-eth"
+      },
+      {
+        "hypotheses": [
+          "sh"
+        ],
+        "id": "independent-set-linear-rank-width-sh-degree"
+      },
+      {
+        "hypotheses": [
+          "w1"
+        ],
+        "id": "independent-set-linear-rank-width-w1-effective"
+      }
     ]
   },
   {
@@ -3311,27 +3316,13 @@
     "name": "Independent Set by graph order",
     "recoveries": [
       {
-        "hypothesis": "kxk",
-        "status": "equivalence",
-        "target": "is-order-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "equivalence",
-        "target": "is-order-eth"
-      },
-      {
+        "bound": "is-order-sh",
         "hypothesis": "sh",
         "status": "degree",
         "target": "is-order-eth"
       },
       {
         "hypothesis": "sh",
-        "status": "equivalence",
-        "target": "is-order-eth"
-      },
-      {
-        "hypothesis": "w1",
         "status": "equivalence",
         "target": "is-order-eth"
       }
@@ -3366,6 +3357,20 @@
       "Markus Hecher",
       "Jeffery Li",
       "Jayson Lynch"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "is-order-eth"
+      },
+      {
+        "hypotheses": [
+          "sh"
+        ],
+        "id": "is-order-sh"
+      }
     ]
   },
   {
@@ -3381,21 +3386,13 @@
     "name": "Independent Set by rank-width",
     "recoveries": [
       {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "independent-set-rank-width-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "independent-set-rank-width-eth"
-      },
-      {
+        "bound": "independent-set-rank-width-sh-degree",
         "hypothesis": "sh",
         "status": "degree",
         "target": "independent-set-rank-width-eth"
       },
       {
+        "bound": "independent-set-rank-width-w1-effective",
         "hypothesis": "w1",
         "status": "effective",
         "target": "independent-set-rank-width-eth"
@@ -3424,6 +3421,26 @@
       "Benjamin Bergougnoux",
       "Tuukka Korhonen",
       "Jesper Nederlof"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "independent-set-rank-width-eth"
+      },
+      {
+        "hypotheses": [
+          "sh"
+        ],
+        "id": "independent-set-rank-width-sh-degree"
+      },
+      {
+        "hypotheses": [
+          "w1"
+        ],
+        "id": "independent-set-rank-width-w1-effective"
+      }
     ]
   },
   {
@@ -3439,23 +3456,9 @@
     "name": "Independent Set by solution size",
     "recoveries": [
       {
+        "bound": "is-budget-kxk",
         "hypothesis": "kxk",
         "status": "recovered",
-        "target": "is-budget-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "is-budget-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "is-budget-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
         "target": "is-budget-eth"
       }
     ],
@@ -3506,6 +3509,20 @@
       "Fixed-parameter tractability and completeness II: On completeness for W[1]",
       "Rod G. Downey",
       "Michael R. Fellows"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "is-budget-eth"
+      },
+      {
+        "hypotheses": [
+          "kxk"
+        ],
+        "id": "is-budget-kxk"
+      }
     ]
   },
   {
@@ -3520,21 +3537,7 @@
     "name": "Independent Set by treewidth",
     "recoveries": [
       {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "is-tw-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "is-tw-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "is-tw-eth"
-      },
-      {
+        "bound": "is-tw-w1",
         "hypothesis": "w1",
         "status": "effective",
         "target": "is-tw-eth"
@@ -3563,6 +3566,20 @@
       "Fixed-parameter tractability and completeness II: On completeness for W[1]",
       "Rod G. Downey",
       "Michael R. Fellows"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "is-tw-eth"
+      },
+      {
+        "hypotheses": [
+          "w1"
+        ],
+        "id": "is-tw-w1"
+      }
     ]
   },
   {
@@ -3578,21 +3595,13 @@
     "name": "Independent Set by width of a supplied rank decomposition",
     "recoveries": [
       {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "independent-set-supplied-rank-decomposition-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "independent-set-supplied-rank-decomposition-eth"
-      },
-      {
+        "bound": "independent-set-supplied-rank-decomposition-sh-degree",
         "hypothesis": "sh",
         "status": "degree",
         "target": "independent-set-supplied-rank-decomposition-eth"
       },
       {
+        "bound": "independent-set-supplied-rank-decomposition-w1-effective",
         "hypothesis": "w1",
         "status": "effective",
         "target": "independent-set-supplied-rank-decomposition-eth"
@@ -3621,6 +3630,26 @@
       "Benjamin Bergougnoux",
       "Tuukka Korhonen",
       "Jesper Nederlof"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "independent-set-supplied-rank-decomposition-eth"
+      },
+      {
+        "hypotheses": [
+          "sh"
+        ],
+        "id": "independent-set-supplied-rank-decomposition-sh-degree"
+      },
+      {
+        "hypotheses": [
+          "w1"
+        ],
+        "id": "independent-set-supplied-rank-decomposition-w1-effective"
+      }
     ]
   },
   {
@@ -3636,21 +3665,13 @@
     "name": "Independent Set by width of a supplied vertex order",
     "recoveries": [
       {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "independent-set-supplied-linear-layout-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "independent-set-supplied-linear-layout-eth"
-      },
-      {
+        "bound": "independent-set-supplied-linear-layout-sh-degree",
         "hypothesis": "sh",
         "status": "degree",
         "target": "independent-set-supplied-linear-layout-eth"
       },
       {
+        "bound": "independent-set-supplied-linear-layout-w1-effective",
         "hypothesis": "w1",
         "status": "effective",
         "target": "independent-set-supplied-linear-layout-eth"
@@ -3679,6 +3700,26 @@
       "Benjamin Bergougnoux",
       "Tuukka Korhonen",
       "Jesper Nederlof"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "independent-set-supplied-linear-layout-eth"
+      },
+      {
+        "hypotheses": [
+          "sh"
+        ],
+        "id": "independent-set-supplied-linear-layout-sh-degree"
+      },
+      {
+        "hypotheses": [
+          "w1"
+        ],
+        "id": "independent-set-supplied-linear-layout-w1-effective"
+      }
     ]
   },
   {
@@ -3696,23 +3737,9 @@
     "name": "Independent Set of axis-parallel unit squares by solution budget",
     "recoveries": [
       {
+        "bound": "unit-square-independent-set-budget-kxk",
         "hypothesis": "kxk",
         "status": "recovered",
-        "target": "unit-square-independent-set-budget-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "unit-square-independent-set-budget-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "unit-square-independent-set-budget-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
         "target": "unit-square-independent-set-budget-eth"
       }
     ],
@@ -3745,12 +3772,29 @@
       "Marcin Pilipczuk",
       "Michał Pilipczuk",
       "Saket Saurabh",
+      "marx2007-geometric-ptas",
+      "On the Optimality of Planar and Geometric Approximation Schemes",
+      "Dániel Marx",
       "szeider2026",
       "After ETH: the k×k Clique Hypothesis",
       "Stefan Szeider",
       "marx2005-geometric",
       "Efficient Approximation Schemes for Geometric Problems?",
       "Dániel Marx"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "unit-square-independent-set-budget-eth"
+      },
+      {
+        "hypotheses": [
+          "kxk"
+        ],
+        "id": "unit-square-independent-set-budget-kxk"
+      }
     ]
   },
   {
@@ -3768,23 +3812,9 @@
     "name": "Independent Set of unit disks by solution budget",
     "recoveries": [
       {
+        "bound": "unit-disk-independent-set-budget-kxk",
         "hypothesis": "kxk",
         "status": "recovered",
-        "target": "unit-disk-independent-set-budget-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "unit-disk-independent-set-budget-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "unit-disk-independent-set-budget-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
         "target": "unit-disk-independent-set-budget-eth"
       }
     ],
@@ -3817,12 +3847,29 @@
       "Marcin Pilipczuk",
       "Michał Pilipczuk",
       "Saket Saurabh",
+      "marx2007-geometric-ptas",
+      "On the Optimality of Planar and Geometric Approximation Schemes",
+      "Dániel Marx",
       "szeider2026",
       "After ETH: the k×k Clique Hypothesis",
       "Stefan Szeider",
       "marx2005-geometric",
       "Efficient Approximation Schemes for Geometric Problems?",
       "Dániel Marx"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "unit-disk-independent-set-budget-eth"
+      },
+      {
+        "hypotheses": [
+          "kxk"
+        ],
+        "id": "unit-disk-independent-set-budget-kxk"
+      }
     ]
   },
   {
@@ -3837,41 +3884,12 @@
     "name": "Integer Linear Programming Feasibility by number of equality constraints",
     "recoveries": [
       {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "ilp-equations-eth-klogk"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "ilp-equations-eth-klogk"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "ilp-equations-eth-klogk"
-      },
-      {
         "hypothesis": "w1",
         "status": "unresolved",
         "target": "ilp-equations-eth-klogk"
       },
       {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "ilp-equations-eth-klogk-binary-coefficients"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "ilp-equations-eth-klogk-binary-coefficients"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "ilp-equations-eth-klogk-binary-coefficients"
-      },
-      {
+        "bound": "ilp-equations-w1-effective",
         "hypothesis": "w1",
         "status": "logarithmic",
         "target": "ilp-equations-eth-klogk-binary-coefficients"
@@ -3899,6 +3917,26 @@
       "lin2019",
       "A Simple Gap-Producing Reduction for the Parameterized Set Cover Problem",
       "Bingkai Lin"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "ilp-equations-eth-klogk"
+      },
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "ilp-equations-eth-klogk-binary-coefficients"
+      },
+      {
+        "hypotheses": [
+          "w1"
+        ],
+        "id": "ilp-equations-w1-effective"
+      }
     ]
   },
   {
@@ -3917,23 +3955,15 @@
     "name": "k × k Clique",
     "recoveries": [
       {
+        "bound": "square-kxk",
         "hypothesis": "kxk",
         "status": "recovered",
         "target": "square-eth"
       },
       {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "square-eth"
-      },
-      {
+        "bound": "square-sh",
         "hypothesis": "sh",
         "status": "degree",
-        "target": "square-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
         "target": "square-eth"
       }
     ],
@@ -3961,11 +3991,6 @@
       "Daniel Lokshtanov",
       "Dániel Marx",
       "Saket Saurabh",
-      "lms2011",
-      "Lower bounds based on the Exponential Time Hypothesis",
-      "Daniel Lokshtanov",
-      "Dániel Marx",
-      "Saket Saurabh",
       "szeider2026",
       "After ETH: the k×k Clique Hypothesis",
       "Stefan Szeider",
@@ -3979,6 +4004,26 @@
       "Markus Hecher",
       "Jeffery Li",
       "Jayson Lynch"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "square-eth"
+      },
+      {
+        "hypotheses": [
+          "kxk"
+        ],
+        "id": "square-kxk"
+      },
+      {
+        "hypotheses": [
+          "sh"
+        ],
+        "id": "square-sh"
+      }
     ]
   },
   {
@@ -3996,23 +4041,9 @@
     "name": "List Coloring by treewidth",
     "recoveries": [
       {
+        "bound": "list-coloring-treewidth-kxk",
         "hypothesis": "kxk",
         "status": "recovered",
-        "target": "list-coloring-treewidth-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "list-coloring-treewidth-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "list-coloring-treewidth-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
         "target": "list-coloring-treewidth-eth"
       }
     ],
@@ -4035,6 +4066,15 @@
       "w1",
       "FPT ≠ W[1]",
       "deterministic W[1] separation",
+      "fellows-et-al2011-colorful-treewidth",
+      "On the Complexity of Some Colorful Problems Parameterized by Treewidth",
+      "Michael R. Fellows",
+      "Fedor V. Fomin",
+      "Daniel Lokshtanov",
+      "Frances Rosamond",
+      "Saket Saurabh",
+      "Stefan Szeider",
+      "Carsten Thomassen",
       "cygan2015",
       "Parameterized Algorithms",
       "Marek Cygan",
@@ -4053,6 +4093,20 @@
       "szeider2026",
       "After ETH: the k×k Clique Hypothesis",
       "Stefan Szeider"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "list-coloring-treewidth-eth"
+      },
+      {
+        "hypotheses": [
+          "kxk"
+        ],
+        "id": "list-coloring-treewidth-kxk"
+      }
     ]
   },
   {
@@ -4069,23 +4123,9 @@
     "name": "Longest Path by path length",
     "recoveries": [
       {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "longest-path-budget-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "longest-path-budget-eth"
-      },
-      {
+        "bound": "longest-path-budget-sh",
         "hypothesis": "sh",
         "status": "degree",
-        "target": "longest-path-budget-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
         "target": "longest-path-budget-eth"
       }
     ],
@@ -4109,6 +4149,11 @@
       "Daniel Lokshtanov",
       "Dániel Marx",
       "Saket Saurabh",
+      "ipz2001",
+      "Which Problems Have Strongly Exponential Complexity?",
+      "Russell Impagliazzo",
+      "Ramamohan Paturi",
+      "Francis Zane",
       "sh26",
       "ETH is Dead, Long Live SH",
       "MIT Hardness Group",
@@ -4118,12 +4163,21 @@
       "Timothy Gomez",
       "Markus Hecher",
       "Jeffery Li",
-      "Jayson Lynch",
-      "ipz2001",
-      "Which Problems Have Strongly Exponential Complexity?",
-      "Russell Impagliazzo",
-      "Ramamohan Paturi",
-      "Francis Zane"
+      "Jayson Lynch"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "longest-path-budget-eth"
+      },
+      {
+        "hypotheses": [
+          "sh"
+        ],
+        "id": "longest-path-budget-sh"
+      }
     ]
   },
   {
@@ -4136,28 +4190,7 @@
     "id": "max-cut-clique-width",
     "kind": "lower-bound-case",
     "name": "Max Cut by clique-width",
-    "recoveries": [
-      {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "max-cut-clique-width-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "max-cut-clique-width-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "max-cut-clique-width-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
-        "target": "max-cut-clique-width-eth"
-      }
-    ],
+    "recoveries": [],
     "search": [
       "Max Cut",
       "Clique-width",
@@ -4179,6 +4212,14 @@
       "Petr A. Golovach",
       "Daniel Lokshtanov",
       "Saket Saurabh"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "max-cut-clique-width-eth"
+      }
     ]
   },
   {
@@ -4193,28 +4234,7 @@
     "id": "max-cut-supplied-clique-width",
     "kind": "lower-bound-case",
     "name": "Max Cut by supplied expression width",
-    "recoveries": [
-      {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "max-cut-supplied-clique-width-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "max-cut-supplied-clique-width-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "max-cut-supplied-clique-width-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
-        "target": "max-cut-supplied-clique-width-eth"
-      }
-    ],
+    "recoveries": [],
     "search": [
       "Max Cut",
       "Supplied expression width",
@@ -4236,6 +4256,14 @@
       "Petr A. Golovach",
       "Daniel Lokshtanov",
       "Saket Saurabh"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "max-cut-supplied-clique-width-eth"
+      }
     ]
   },
   {
@@ -4247,28 +4275,7 @@
     "id": "maximum-common-induced-subgraph-vertex-cover",
     "kind": "lower-bound-case",
     "name": "Maximum Common Induced Subgraph by sum of the two vertex-cover sizes",
-    "recoveries": [
-      {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "maximum-common-induced-subgraph-vc-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "maximum-common-induced-subgraph-vc-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "maximum-common-induced-subgraph-vc-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
-        "target": "maximum-common-induced-subgraph-vc-eth"
-      }
-    ],
+    "recoveries": [],
     "search": [
       "Maximum Common Induced Subgraph",
       "Sum of the two vertex-cover sizes",
@@ -4285,6 +4292,14 @@
       "Faisal N. Abu-Khzam",
       "Édouard Bonnet",
       "Florian Sikora"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "maximum-common-induced-subgraph-vc-eth"
+      }
     ]
   },
   {
@@ -4302,21 +4317,13 @@
     "name": "Maximum Cycle Cover by supplied pathwidth",
     "recoveries": [
       {
+        "bound": "maximum-cycle-cover-supplied-pathwidth-kxk",
         "hypothesis": "kxk",
         "status": "recovered",
         "target": "maximum-cycle-cover-supplied-pathwidth-eth"
       },
       {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "maximum-cycle-cover-supplied-pathwidth-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "maximum-cycle-cover-supplied-pathwidth-eth"
-      },
-      {
+        "bound": "maximum-cycle-cover-supplied-pathwidth-w1",
         "hypothesis": "w1",
         "status": "effective",
         "target": "maximum-cycle-cover-supplied-pathwidth-eth"
@@ -4370,6 +4377,26 @@
       "Daniel Lokshtanov",
       "Dániel Marx",
       "Saket Saurabh"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "maximum-cycle-cover-supplied-pathwidth-eth"
+      },
+      {
+        "hypotheses": [
+          "kxk"
+        ],
+        "id": "maximum-cycle-cover-supplied-pathwidth-kxk"
+      },
+      {
+        "hypotheses": [
+          "w1"
+        ],
+        "id": "maximum-cycle-cover-supplied-pathwidth-w1"
+      }
     ]
   },
   {
@@ -4382,28 +4409,7 @@
     "id": "minimum-bisection-clique-width",
     "kind": "lower-bound-case",
     "name": "Minimum Bisection by clique-width",
-    "recoveries": [
-      {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "minimum-bisection-clique-width-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "minimum-bisection-clique-width-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "minimum-bisection-clique-width-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
-        "target": "minimum-bisection-clique-width-eth"
-      }
-    ],
+    "recoveries": [],
     "search": [
       "Minimum Bisection",
       "Clique-width",
@@ -4429,6 +4435,14 @@
       "Upper Bounds to the Clique Width of Graphs",
       "Bruno Courcelle",
       "Stephan Olariu"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "minimum-bisection-clique-width-eth"
+      }
     ]
   },
   {
@@ -4441,28 +4455,7 @@
     "id": "minimum-bisection-supplied-clique-width",
     "kind": "lower-bound-case",
     "name": "Minimum Bisection by width of a supplied clique-width expression",
-    "recoveries": [
-      {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "minimum-bisection-supplied-clique-width-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "minimum-bisection-supplied-clique-width-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "minimum-bisection-supplied-clique-width-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
-        "target": "minimum-bisection-supplied-clique-width-eth"
-      }
-    ],
+    "recoveries": [],
     "search": [
       "Minimum Bisection",
       "Width of a supplied clique-width expression",
@@ -4488,6 +4481,14 @@
       "Upper Bounds to the Clique Width of Graphs",
       "Bruno Courcelle",
       "Stephan Olariu"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "minimum-bisection-supplied-clique-width-eth"
+      }
     ]
   },
   {
@@ -4499,48 +4500,7 @@
     "id": "minimum-common-string-partition-length",
     "kind": "lower-bound-case",
     "name": "Minimum Common String Partition by common string length",
-    "recoveries": [
-      {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "minimum-common-string-partition-binary-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "minimum-common-string-partition-binary-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "minimum-common-string-partition-binary-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
-        "target": "minimum-common-string-partition-binary-eth"
-      },
-      {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "minimum-common-string-partition-general-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "minimum-common-string-partition-general-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "minimum-common-string-partition-general-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
-        "target": "minimum-common-string-partition-general-eth"
-      }
-    ],
+    "recoveries": [],
     "search": [
       "Minimum Common String Partition",
       "Common string length",
@@ -4559,6 +4519,20 @@
       "Ivan Mihajlin",
       "Maksim Nikolaev",
       "Grigory Reznikov"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "minimum-common-string-partition-binary-eth"
+      },
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "minimum-common-string-partition-general-eth"
+      }
     ]
   },
   {
@@ -4570,28 +4544,7 @@
     "id": "minimum-fill-in-budget",
     "kind": "lower-bound-case",
     "name": "Minimum Fill-In by edge-addition budget",
-    "recoveries": [
-      {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "minimum-fill-in-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "minimum-fill-in-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "minimum-fill-in-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
-        "target": "minimum-fill-in-eth"
-      }
-    ],
+    "recoveries": [],
     "search": [
       "Minimum Fill-In",
       "Edge-addition budget",
@@ -4607,6 +4560,14 @@
       "Minimum Fill-In: Inapproximability and Almost Tight Lower Bounds",
       "Yixin Cao",
       "R. B. Sandeep"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "minimum-fill-in-eth"
+      }
     ]
   },
   {
@@ -4621,28 +4582,7 @@
     "id": "minimum-k-cut-components",
     "kind": "lower-bound-case",
     "name": "Minimum k-Cut by number of required components",
-    "recoveries": [
-      {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "minimum-k-cut-components-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "minimum-k-cut-components-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "minimum-k-cut-components-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
-        "target": "minimum-k-cut-components-eth"
-      }
-    ],
+    "recoveries": [],
     "search": [
       "Minimum k-Cut",
       "Number of required components",
@@ -4658,11 +4598,6 @@
       "w1",
       "FPT ≠ W[1]",
       "deterministic W[1] separation",
-      "lss2022-min-k-cut",
-      "A Parameterized Approximation Scheme for Min k-Cut",
-      "Daniel Lokshtanov",
-      "Saket Saurabh",
-      "Vaishali Surianarayanan",
       "ccfhjkx2005",
       "Tight Lower Bounds for Certain Parameterized NP-Hard Problems",
       "Jianer Chen",
@@ -4671,7 +4606,27 @@
       "Xiuzhen Huang",
       "David Juedes",
       "Iyad A. Kanj",
-      "Ge Xia"
+      "Ge Xia",
+      "lss2022-min-k-cut",
+      "A Parameterized Approximation Scheme for Min k-Cut",
+      "Daniel Lokshtanov",
+      "Saket Saurabh",
+      "Vaishali Surianarayanan",
+      "downey-et-al2003-k-cut",
+      "Cutting Up Is Hard To Do: The Parameterised Complexity of k-Cut and Related Problems",
+      "Rodney G. Downey",
+      "Vladimir Estivill-Castro",
+      "Michael R. Fellows",
+      "Elena Prieto",
+      "Frances A. Rosamond"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "minimum-k-cut-components-eth"
+      }
     ]
   },
   {
@@ -4690,22 +4645,13 @@
     "name": "Multicolored Clique by number of color classes",
     "recoveries": [
       {
+        "bound": "multicolored-clique-colors-kxk",
         "hypothesis": "kxk",
         "status": "recovered",
         "target": "multicolored-clique-colors-eth"
       },
       {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "multicolored-clique-colors-eth"
-      },
-      {
         "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "multicolored-clique-colors-eth"
-      },
-      {
-        "hypothesis": "w1",
         "status": "unresolved",
         "target": "multicolored-clique-colors-eth"
       }
@@ -4733,21 +4679,49 @@
       "w1",
       "FPT ≠ W[1]",
       "deterministic W[1] separation",
+      "fellows-hermelin-rosamond-vialette2009",
+      "On the parameterized complexity of multiple-interval graph problems",
+      "Michael R. Fellows",
+      "Danny Hermelin",
+      "Frances Rosamond",
+      "Stéphane Vialette",
       "lms2011",
       "Lower bounds based on the Exponential Time Hypothesis",
       "Daniel Lokshtanov",
       "Dániel Marx",
       "Saket Saurabh",
+      "chkx2006",
+      "Strong Computational Lower Bounds via Parameterized Complexity",
+      "Jianer Chen",
+      "Xiuzhen Huang",
+      "Iyad A. Kanj",
+      "Ge Xia",
       "szeider2026",
       "After ETH: the k×k Clique Hypothesis",
       "Stefan Szeider",
       "koutecky2026-hard-side",
       "Lecture 2 – Proving the hard side",
-      "Martin Koutecký",
-      "df1995",
-      "Fixed-parameter tractability and completeness II: On completeness for W[1]",
-      "Rod G. Downey",
-      "Michael R. Fellows"
+      "Martin Koutecký"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "multicolored-clique-colors-eth"
+      },
+      {
+        "hypotheses": [
+          "kxk"
+        ],
+        "id": "multicolored-clique-colors-kxk"
+      },
+      {
+        "hypotheses": [
+          "sh"
+        ],
+        "id": "multicolored-clique-colors-sh"
+      }
     ]
   },
   {
@@ -4764,21 +4738,7 @@
     "name": "Odd Cycle Transversal by treewidth",
     "recoveries": [
       {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "odd-cycle-transversal-treewidth-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "odd-cycle-transversal-treewidth-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "odd-cycle-transversal-treewidth-eth"
-      },
-      {
+        "bound": "odd-cycle-transversal-treewidth-w1",
         "hypothesis": "w1",
         "status": "effective",
         "target": "odd-cycle-transversal-treewidth-eth"
@@ -4807,6 +4767,20 @@
       "Fixed-parameter tractability and completeness II: On completeness for W[1]",
       "Rod G. Downey",
       "Michael R. Fellows"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "odd-cycle-transversal-treewidth-eth"
+      },
+      {
+        "hypotheses": [
+          "w1"
+        ],
+        "id": "odd-cycle-transversal-treewidth-w1"
+      }
     ]
   },
   {
@@ -4824,23 +4798,9 @@
     "name": "Odd Set by solution budget",
     "recoveries": [
       {
+        "bound": "odd-set-budget-kxk",
         "hypothesis": "kxk",
         "status": "degree",
-        "target": "odd-set-budget-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "odd-set-budget-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "odd-set-budget-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
         "target": "odd-set-budget-eth"
       }
     ],
@@ -4873,9 +4833,32 @@
       "Marcin Pilipczuk",
       "Michał Pilipczuk",
       "Saket Saurabh",
+      "marx2010-treewidth",
+      "Can You Beat Treewidth?",
+      "Dániel Marx",
       "szeider2026",
       "After ETH: the k×k Clique Hypothesis",
-      "Stefan Szeider"
+      "Stefan Szeider",
+      "downey-fellows-vardy-whittle1999-coding",
+      "The Parametrized Complexity of Some Fundamental Problems in Coding Theory",
+      "Rod G. Downey",
+      "Michael R. Fellows",
+      "Alexander Vardy",
+      "Geoff Whittle"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "odd-set-budget-eth"
+      },
+      {
+        "hypotheses": [
+          "kxk"
+        ],
+        "id": "odd-set-budget-kxk"
+      }
     ]
   },
   {
@@ -4887,28 +4870,7 @@
     "id": "planar-3-coloring-order",
     "kind": "lower-bound-case",
     "name": "Planar 3-Coloring by graph order",
-    "recoveries": [
-      {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "color-eth-planar"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "color-eth-planar"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "color-eth-planar"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
-        "target": "color-eth-planar"
-      }
-    ],
+    "recoveries": [],
     "search": [
       "Planar 3-Coloring",
       "Number of vertices",
@@ -4929,7 +4891,23 @@
       "Dániel Marx",
       "Marcin Pilipczuk",
       "Michał Pilipczuk",
-      "Saket Saurabh"
+      "Saket Saurabh",
+      "garey-johnson-stockmeyer1976",
+      "Some simplified NP-complete graph problems",
+      "Michael R. Garey",
+      "David S. Johnson",
+      "Larry Stockmeyer",
+      "lichtenstein1982",
+      "Planar Formulae and Their Uses",
+      "David Lichtenstein"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "color-eth-planar"
+      }
     ]
   },
   {
@@ -4946,23 +4924,9 @@
     "name": "Planar 3SAT by number of variables",
     "recoveries": [
       {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "planar-3sat-variables-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "planar-3sat-variables-eth"
-      },
-      {
+        "bound": "planar-3sat-variables-sh",
         "hypothesis": "sh",
         "status": "degree",
-        "target": "planar-3sat-variables-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
         "target": "planar-3sat-variables-eth"
       }
     ],
@@ -5004,6 +4968,20 @@
       "Markus Hecher",
       "Jeffery Li",
       "Jayson Lynch"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "planar-3sat-variables-eth"
+      },
+      {
+        "hypotheses": [
+          "sh"
+        ],
+        "id": "planar-3sat-variables-sh"
+      }
     ]
   },
   {
@@ -5018,23 +4996,9 @@
     "name": "Planar 3SAT by number of variables plus clauses",
     "recoveries": [
       {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "planar-3sat-formula-size-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "planar-3sat-formula-size-eth"
-      },
-      {
+        "bound": "planar-3sat-formula-size-sh",
         "hypothesis": "sh",
         "status": "degree",
-        "target": "planar-3sat-formula-size-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
         "target": "planar-3sat-formula-size-eth"
       }
     ],
@@ -5069,6 +5033,20 @@
       "szeider2026",
       "After ETH: the k×k Clique Hypothesis",
       "Stefan Szeider"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "planar-3sat-formula-size-eth"
+      },
+      {
+        "hypotheses": [
+          "sh"
+        ],
+        "id": "planar-3sat-formula-size-sh"
+      }
     ]
   },
   {
@@ -5083,23 +5061,9 @@
     "name": "Planar Dominating Set by dominating-set budget",
     "recoveries": [
       {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "planar-dominating-set-budget-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "planar-dominating-set-budget-eth"
-      },
-      {
+        "bound": "planar-dominating-set-budget-sh",
         "hypothesis": "sh",
         "status": "degree",
-        "target": "planar-dominating-set-budget-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
         "target": "planar-dominating-set-budget-eth"
       }
     ],
@@ -5135,6 +5099,20 @@
       "szeider2026",
       "After ETH: the k×k Clique Hypothesis",
       "Stefan Szeider"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "planar-dominating-set-budget-eth"
+      },
+      {
+        "hypotheses": [
+          "sh"
+        ],
+        "id": "planar-dominating-set-budget-sh"
+      }
     ]
   },
   {
@@ -5149,23 +5127,9 @@
     "name": "Planar Dominating Set by number of vertices",
     "recoveries": [
       {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "planar-dominating-set-vertices-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "planar-dominating-set-vertices-eth"
-      },
-      {
+        "bound": "planar-dominating-set-vertices-sh",
         "hypothesis": "sh",
         "status": "degree",
-        "target": "planar-dominating-set-vertices-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
         "target": "planar-dominating-set-vertices-eth"
       }
     ],
@@ -5199,9 +5163,26 @@
       "Marcin Pilipczuk",
       "Michał Pilipczuk",
       "Saket Saurabh",
+      "lichtenstein1982",
+      "Planar Formulae and Their Uses",
+      "David Lichtenstein",
       "szeider2026",
       "After ETH: the k×k Clique Hypothesis",
       "Stefan Szeider"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "planar-dominating-set-vertices-eth"
+      },
+      {
+        "hypotheses": [
+          "sh"
+        ],
+        "id": "planar-dominating-set-vertices-sh"
+      }
     ]
   },
   {
@@ -5214,28 +5195,7 @@
     "id": "planar-edge-multiway-cut-terminals",
     "kind": "lower-bound-case",
     "name": "Planar Edge Multiway Cut by number of terminals",
-    "recoveries": [
-      {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "planar-edge-multiway-cut-terminals-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "planar-edge-multiway-cut-terminals-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "planar-edge-multiway-cut-terminals-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
-        "target": "planar-edge-multiway-cut-terminals-eth"
-      }
-    ],
+    "recoveries": [],
     "search": [
       "Planar Edge Multiway Cut",
       "Number of terminals",
@@ -5264,6 +5224,14 @@
       "Marcin Pilipczuk",
       "Michał Pilipczuk",
       "Saket Saurabh"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "planar-edge-multiway-cut-terminals-eth"
+      }
     ]
   },
   {
@@ -5278,23 +5246,9 @@
     "name": "Planar Feedback Vertex Set by deletion budget",
     "recoveries": [
       {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "planar-feedback-vertex-set-budget-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "planar-feedback-vertex-set-budget-eth"
-      },
-      {
+        "bound": "planar-feedback-vertex-set-budget-sh",
         "hypothesis": "sh",
         "status": "degree",
-        "target": "planar-feedback-vertex-set-budget-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
         "target": "planar-feedback-vertex-set-budget-eth"
       }
     ],
@@ -5323,9 +5277,26 @@
       "Marcin Pilipczuk",
       "Michał Pilipczuk",
       "Saket Saurabh",
+      "lichtenstein1982",
+      "Planar Formulae and Their Uses",
+      "David Lichtenstein",
       "szeider2026",
       "After ETH: the k×k Clique Hypothesis",
       "Stefan Szeider"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "planar-feedback-vertex-set-budget-eth"
+      },
+      {
+        "hypotheses": [
+          "sh"
+        ],
+        "id": "planar-feedback-vertex-set-budget-sh"
+      }
     ]
   },
   {
@@ -5340,23 +5311,9 @@
     "name": "Planar Feedback Vertex Set by number of vertices",
     "recoveries": [
       {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "planar-feedback-vertex-set-vertices-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "planar-feedback-vertex-set-vertices-eth"
-      },
-      {
+        "bound": "planar-feedback-vertex-set-vertices-sh",
         "hypothesis": "sh",
         "status": "degree",
-        "target": "planar-feedback-vertex-set-vertices-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
         "target": "planar-feedback-vertex-set-vertices-eth"
       }
     ],
@@ -5385,9 +5342,26 @@
       "Marcin Pilipczuk",
       "Michał Pilipczuk",
       "Saket Saurabh",
+      "lichtenstein1982",
+      "Planar Formulae and Their Uses",
+      "David Lichtenstein",
       "szeider2026",
       "After ETH: the k×k Clique Hypothesis",
       "Stefan Szeider"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "planar-feedback-vertex-set-vertices-eth"
+      },
+      {
+        "hypotheses": [
+          "sh"
+        ],
+        "id": "planar-feedback-vertex-set-vertices-sh"
+      }
     ]
   },
   {
@@ -5402,23 +5376,9 @@
     "name": "Planar Hamiltonian Cycle by number of vertices",
     "recoveries": [
       {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "planar-hamiltonian-cycle-vertices-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "planar-hamiltonian-cycle-vertices-eth"
-      },
-      {
+        "bound": "planar-hamiltonian-cycle-vertices-sh",
         "hypothesis": "sh",
         "status": "degree",
-        "target": "planar-hamiltonian-cycle-vertices-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
         "target": "planar-hamiltonian-cycle-vertices-eth"
       }
     ],
@@ -5452,6 +5412,11 @@
       "Marcin Pilipczuk",
       "Michał Pilipczuk",
       "Saket Saurabh",
+      "garey-johnson-tarjan1976",
+      "The Planar Hamiltonian Circuit Problem is NP-Complete",
+      "Michael R. Garey",
+      "David S. Johnson",
+      "Robert Endre Tarjan",
       "sh26",
       "ETH is Dead, Long Live SH",
       "MIT Hardness Group",
@@ -5462,6 +5427,20 @@
       "Markus Hecher",
       "Jeffery Li",
       "Jayson Lynch"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "planar-hamiltonian-cycle-vertices-eth"
+      },
+      {
+        "hypotheses": [
+          "sh"
+        ],
+        "id": "planar-hamiltonian-cycle-vertices-sh"
+      }
     ]
   },
   {
@@ -5474,28 +5453,7 @@
     "id": "planar-list-coloring-treewidth",
     "kind": "lower-bound-case",
     "name": "Planar List Coloring by intrinsic treewidth",
-    "recoveries": [
-      {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "planar-list-coloring-treewidth-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "planar-list-coloring-treewidth-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "planar-list-coloring-treewidth-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
-        "target": "planar-list-coloring-treewidth-eth"
-      }
-    ],
+    "recoveries": [],
     "search": [
       "Planar List Coloring",
       "Intrinsic treewidth",
@@ -5521,6 +5479,14 @@
       "Marcin Pilipczuk",
       "Michał Pilipczuk",
       "Saket Saurabh"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "planar-list-coloring-treewidth-eth"
+      }
     ]
   },
   {
@@ -5536,23 +5502,9 @@
     "name": "Planar Scattered Set by number of selected vertices",
     "recoveries": [
       {
+        "bound": "planar-scattered-set-solution-size-kxk",
         "hypothesis": "kxk",
         "status": "recovered",
-        "target": "planar-scattered-set-solution-size-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "planar-scattered-set-solution-size-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "planar-scattered-set-solution-size-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
         "target": "planar-scattered-set-solution-size-eth"
       }
     ],
@@ -5592,6 +5544,20 @@
       "szeider2026",
       "After ETH: the k×k Clique Hypothesis",
       "Stefan Szeider"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "planar-scattered-set-solution-size-eth"
+      },
+      {
+        "hypotheses": [
+          "kxk"
+        ],
+        "id": "planar-scattered-set-solution-size-kxk"
+      }
     ]
   },
   {
@@ -5604,28 +5570,7 @@
     "id": "planar-strongly-connected-steiner-subgraph-terminals",
     "kind": "lower-bound-case",
     "name": "Planar Strongly Connected Steiner Subgraph by number of terminals",
-    "recoveries": [
-      {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "planar-strongly-connected-steiner-subgraph-terminals-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "planar-strongly-connected-steiner-subgraph-terminals-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "planar-strongly-connected-steiner-subgraph-terminals-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
-        "target": "planar-strongly-connected-steiner-subgraph-terminals-eth"
-      }
-    ],
+    "recoveries": [],
     "search": [
       "Planar Strongly Connected Steiner Subgraph",
       "Number of terminals",
@@ -5657,6 +5602,14 @@
       "Marcin Pilipczuk",
       "Michał Pilipczuk",
       "Saket Saurabh"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "planar-strongly-connected-steiner-subgraph-terminals-eth"
+      }
     ]
   },
   {
@@ -5671,23 +5624,9 @@
     "name": "Planar Vertex Cover by graph order",
     "recoveries": [
       {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "pvc-order-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "pvc-order-eth"
-      },
-      {
+        "bound": "pvc-order-sh",
         "hypothesis": "sh",
         "status": "degree",
-        "target": "pvc-order-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
         "target": "pvc-order-eth"
       }
     ],
@@ -5721,9 +5660,26 @@
       "Daniel Lokshtanov",
       "Dániel Marx",
       "Saket Saurabh",
+      "lichtenstein1982",
+      "Planar Formulae and Their Uses",
+      "David Lichtenstein",
       "szeider2026",
       "After ETH: the k×k Clique Hypothesis",
       "Stefan Szeider"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "pvc-order-eth"
+      },
+      {
+        "hypotheses": [
+          "sh"
+        ],
+        "id": "pvc-order-sh"
+      }
     ]
   },
   {
@@ -5738,23 +5694,9 @@
     "name": "Planar Vertex Cover by solution size",
     "recoveries": [
       {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "pvc-budget-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "pvc-budget-eth"
-      },
-      {
+        "bound": "pvc-budget-sh",
         "hypothesis": "sh",
         "status": "degree",
-        "target": "pvc-budget-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
         "target": "pvc-budget-eth"
       }
     ],
@@ -5777,11 +5719,6 @@
       "On the Existence of Subexponential Parameterized Algorithms",
       "Liming Cai",
       "David Juedes",
-      "lms2011",
-      "Lower bounds based on the Exponential Time Hypothesis",
-      "Daniel Lokshtanov",
-      "Dániel Marx",
-      "Saket Saurabh",
       "cygan2015",
       "Parameterized Algorithms",
       "Marek Cygan",
@@ -5802,6 +5739,20 @@
       "Markus Hecher",
       "Jeffery Li",
       "Jayson Lynch"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "pvc-budget-eth"
+      },
+      {
+        "hypotheses": [
+          "sh"
+        ],
+        "id": "pvc-budget-sh"
+      }
     ]
   },
   {
@@ -5816,28 +5767,7 @@
     "id": "qbf-fixed-block-width",
     "kind": "lower-bound-case",
     "name": "Quantified Boolean satisfiability",
-    "recoveries": [
-      {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "qbf-eth-primal-treewidth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "qbf-eth-primal-treewidth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "qbf-eth-primal-treewidth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
-        "target": "qbf-eth-primal-treewidth"
-      }
-    ],
+    "recoveries": [],
     "search": [
       "Quantified Boolean satisfiability",
       "Primal treewidth at fixed quantifier depth",
@@ -5854,6 +5784,14 @@
       "Johannes K. Fichte",
       "Markus Hecher",
       "Andreas Pfandler"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "qbf-eth-primal-treewidth"
+      }
     ]
   },
   {
@@ -5869,23 +5807,9 @@
     "name": "Scattered Set by number of selected vertices",
     "recoveries": [
       {
+        "bound": "scattered-set-solution-size-kxk",
         "hypothesis": "kxk",
         "status": "recovered",
-        "target": "scattered-set-solution-size-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "scattered-set-solution-size-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "scattered-set-solution-size-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
         "target": "scattered-set-solution-size-eth"
       }
     ],
@@ -5925,6 +5849,20 @@
       "Fixed-parameter tractability and completeness II: On completeness for W[1]",
       "Rod G. Downey",
       "Michael R. Fellows"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "scattered-set-solution-size-eth"
+      },
+      {
+        "hypotheses": [
+          "kxk"
+        ],
+        "id": "scattered-set-solution-size-kxk"
+      }
     ]
   },
   {
@@ -5938,21 +5876,6 @@
     "kind": "lower-bound-case",
     "name": "Set Cover by cover budget",
     "recoveries": [
-      {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "set-cover-budget-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "set-cover-budget-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "set-cover-budget-eth"
-      },
       {
         "hypothesis": "w1",
         "status": "unresolved",
@@ -5988,6 +5911,20 @@
       "David Juedes",
       "Iyad A. Kanj",
       "Ge Xia"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "set-cover-budget-eth"
+      },
+      {
+        "hypotheses": [
+          "w1"
+        ],
+        "id": "set-cover-budget-w1"
+      }
     ]
   },
   {
@@ -5999,28 +5936,7 @@
     "id": "steiner-tree-terminals",
     "kind": "lower-bound-case",
     "name": "Steiner Tree by terminal count",
-    "recoveries": [
-      {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "steiner-tree-terminals-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "steiner-tree-terminals-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "steiner-tree-terminals-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
-        "target": "steiner-tree-terminals-eth"
-      }
-    ],
+    "recoveries": [],
     "search": [
       "Steiner Tree",
       "Number of terminals",
@@ -6037,6 +5953,14 @@
       "Dániel Marx",
       "Marcin Pilipczuk",
       "Michał Pilipczuk"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "steiner-tree-terminals-eth"
+      }
     ]
   },
   {
@@ -6052,23 +5976,9 @@
     "name": "Strongly Connected Steiner Subgraph by solution vertex budget",
     "recoveries": [
       {
+        "bound": "strongly-connected-steiner-subgraph-solution-vertices-kxk",
         "hypothesis": "kxk",
         "status": "degree",
-        "target": "strongly-connected-steiner-subgraph-solution-vertices-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "strongly-connected-steiner-subgraph-solution-vertices-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "strongly-connected-steiner-subgraph-solution-vertices-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
         "target": "strongly-connected-steiner-subgraph-solution-vertices-eth"
       }
     ],
@@ -6101,9 +6011,26 @@
       "Marcin Pilipczuk",
       "Michał Pilipczuk",
       "Saket Saurabh",
+      "marx2010-treewidth",
+      "Can You Beat Treewidth?",
+      "Dániel Marx",
       "szeider2026",
       "After ETH: the k×k Clique Hypothesis",
       "Stefan Szeider"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "strongly-connected-steiner-subgraph-solution-vertices-eth"
+      },
+      {
+        "hypotheses": [
+          "kxk"
+        ],
+        "id": "strongly-connected-steiner-subgraph-solution-vertices-kxk"
+      }
     ]
   },
   {
@@ -6119,23 +6046,9 @@
     "name": "Subgraph Isomorphism by number of pattern edges",
     "recoveries": [
       {
+        "bound": "subgraph-isomorphism-pattern-edges-kxk",
         "hypothesis": "kxk",
         "status": "degree",
-        "target": "subgraph-isomorphism-pattern-edges-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "subgraph-isomorphism-pattern-edges-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "subgraph-isomorphism-pattern-edges-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
         "target": "subgraph-isomorphism-pattern-edges-eth"
       }
     ],
@@ -6161,11 +6074,6 @@
       "marx2010-treewidth",
       "Can You Beat Treewidth?",
       "Dániel Marx",
-      "lms2011",
-      "Lower bounds based on the Exponential Time Hypothesis",
-      "Daniel Lokshtanov",
-      "Dániel Marx",
-      "Saket Saurabh",
       "cygan2015",
       "Parameterized Algorithms",
       "Marek Cygan",
@@ -6179,6 +6087,20 @@
       "szeider2026",
       "After ETH: the k×k Clique Hypothesis",
       "Stefan Szeider"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "subgraph-isomorphism-pattern-edges-eth"
+      },
+      {
+        "hypotheses": [
+          "kxk"
+        ],
+        "id": "subgraph-isomorphism-pattern-edges-kxk"
+      }
     ]
   },
   {
@@ -6193,23 +6115,9 @@
     "name": "Subset Sum by item count",
     "recoveries": [
       {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "subset-sum-item-count-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "subset-sum-item-count-eth"
-      },
-      {
+        "bound": "subset-sum-item-count-sh",
         "hypothesis": "sh",
         "status": "degree",
-        "target": "subset-sum-item-count-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
         "target": "subset-sum-item-count-eth"
       }
     ],
@@ -6234,10 +6142,6 @@
       "Stefan Kratsch",
       "Matthias Mnich",
       "Heiko Röglin",
-      "nederlof-swennenhuis2022",
-      "On the Fine-grained Parameterized Complexity of Partial Scheduling to Minimize the Makespan",
-      "Jesper Nederlof",
-      "Céline M. F. Swennenhuis",
       "sh26",
       "ETH is Dead, Long Live SH",
       "MIT Hardness Group",
@@ -6248,6 +6152,20 @@
       "Markus Hecher",
       "Jeffery Li",
       "Jayson Lynch"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "subset-sum-item-count-eth"
+      },
+      {
+        "hypotheses": [
+          "sh"
+        ],
+        "id": "subset-sum-item-count-sh"
+      }
     ]
   },
   {
@@ -6259,28 +6177,7 @@
     "id": "three-dimensional-matching-part-size",
     "kind": "lower-bound-case",
     "name": "Three-Dimensional Matching by common part size",
-    "recoveries": [
-      {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "three-dimensional-matching-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "three-dimensional-matching-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "three-dimensional-matching-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
-        "target": "three-dimensional-matching-eth"
-      }
-    ],
+    "recoveries": [],
     "search": [
       "Three-Dimensional Matching",
       "Common part size",
@@ -6298,6 +6195,14 @@
       "Tim Oosterwijk",
       "Tjark Vredeveld",
       "Ruben van der Zwaan"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "three-dimensional-matching-eth"
+      }
     ]
   },
   {
@@ -6312,23 +6217,9 @@
     "name": "Treewidth computation by graph order",
     "recoveries": [
       {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "treewidth-order-eth-positive-rate"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "treewidth-order-eth-positive-rate"
-      },
-      {
+        "bound": "treewidth-order-sh",
         "hypothesis": "sh",
         "status": "degree",
-        "target": "treewidth-order-eth-positive-rate"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
         "target": "treewidth-order-eth-positive-rate"
       }
     ],
@@ -6360,6 +6251,20 @@
       "Markus Hecher",
       "Jeffery Li",
       "Jayson Lynch"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "treewidth-order-eth-positive-rate"
+      },
+      {
+        "hypotheses": [
+          "sh"
+        ],
+        "id": "treewidth-order-sh"
+      }
     ]
   },
   {
@@ -6372,48 +6277,7 @@
     "id": "unary-bin-packing-bins",
     "kind": "lower-bound-case",
     "name": "Unary Bin Packing by number of bins",
-    "recoveries": [
-      {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "unary-bin-packing-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "unary-bin-packing-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "unary-bin-packing-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
-        "target": "unary-bin-packing-eth"
-      },
-      {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "unary-bin-packing-eth-items-capacity"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "unary-bin-packing-eth-items-capacity"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "unary-bin-packing-eth-items-capacity"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
-        "target": "unary-bin-packing-eth-items-capacity"
-      }
-    ],
+    "recoveries": [],
     "search": [
       "Unary Bin Packing",
       "Number of bins",
@@ -6440,6 +6304,20 @@
       "Karl Bringmann",
       "Anita Dürr",
       "Karol Węgrzycki"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "unary-bin-packing-eth"
+      },
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "unary-bin-packing-eth-items-capacity"
+      }
     ]
   },
   {
@@ -6452,28 +6330,7 @@
     "id": "unit-disk-dominating-set-budget",
     "kind": "lower-bound-case",
     "name": "Unit Disk Dominating Set by dominating-set budget",
-    "recoveries": [
-      {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "unit-disk-dominating-set-budget-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "unit-disk-dominating-set-budget-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "unit-disk-dominating-set-budget-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
-        "target": "unit-disk-dominating-set-budget-eth"
-      }
-    ],
+    "recoveries": [],
     "search": [
       "Unit Disk Dominating Set",
       "Dominating-set budget",
@@ -6497,6 +6354,14 @@
       "marx2006-geometric",
       "Parameterized Complexity of Independence and Domination on Geometric Graphs",
       "Dániel Marx"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "unit-disk-dominating-set-budget-eth"
+      }
     ]
   },
   {
@@ -6511,27 +6376,13 @@
     "name": "Vertex Cover by graph order",
     "recoveries": [
       {
-        "hypothesis": "kxk",
-        "status": "equivalence",
-        "target": "vc-order-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "equivalence",
-        "target": "vc-order-eth"
-      },
-      {
+        "bound": "vc-order-sh",
         "hypothesis": "sh",
         "status": "degree",
         "target": "vc-order-eth"
       },
       {
         "hypothesis": "sh",
-        "status": "equivalence",
-        "target": "vc-order-eth"
-      },
-      {
-        "hypothesis": "w1",
         "status": "equivalence",
         "target": "vc-order-eth"
       }
@@ -6566,6 +6417,20 @@
       "Markus Hecher",
       "Jeffery Li",
       "Jayson Lynch"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "vc-order-eth"
+      },
+      {
+        "hypotheses": [
+          "sh"
+        ],
+        "id": "vc-order-sh"
+      }
     ]
   },
   {
@@ -6580,27 +6445,13 @@
     "name": "Vertex Cover by solution size",
     "recoveries": [
       {
-        "hypothesis": "kxk",
-        "status": "equivalence",
-        "target": "vc-budget-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "equivalence",
-        "target": "vc-budget-eth"
-      },
-      {
+        "bound": "vc-budget-sh",
         "hypothesis": "sh",
         "status": "degree",
         "target": "vc-budget-eth"
       },
       {
         "hypothesis": "sh",
-        "status": "equivalence",
-        "target": "vc-budget-eth"
-      },
-      {
-        "hypothesis": "w1",
         "status": "equivalence",
         "target": "vc-budget-eth"
       }
@@ -6624,11 +6475,6 @@
       "On the Existence of Subexponential Parameterized Algorithms",
       "Liming Cai",
       "David Juedes",
-      "lms2011",
-      "Lower bounds based on the Exponential Time Hypothesis",
-      "Daniel Lokshtanov",
-      "Dániel Marx",
-      "Saket Saurabh",
       "cygan2015",
       "Parameterized Algorithms",
       "Marek Cygan",
@@ -6649,6 +6495,20 @@
       "Markus Hecher",
       "Jeffery Li",
       "Jayson Lynch"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "vc-budget-eth"
+      },
+      {
+        "hypotheses": [
+          "sh"
+        ],
+        "id": "vc-budget-sh"
+      }
     ]
   },
   {
@@ -6664,21 +6524,13 @@
     "name": "Vertex-Disjoint Paths by treewidth",
     "recoveries": [
       {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "vdp-tw-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "vdp-tw-eth"
-      },
-      {
+        "bound": "vdp-tw-sh",
         "hypothesis": "sh",
         "status": "degree",
         "target": "vdp-tw-eth"
       },
       {
+        "bound": "vdp-tw-w1",
         "hypothesis": "w1",
         "status": "effective",
         "target": "vdp-tw-eth"
@@ -6707,11 +6559,6 @@
       "Daniel Lokshtanov",
       "Dániel Marx",
       "Saket Saurabh",
-      "lms2011",
-      "Lower bounds based on the Exponential Time Hypothesis",
-      "Daniel Lokshtanov",
-      "Dániel Marx",
-      "Saket Saurabh",
       "sh26",
       "ETH is Dead, Long Live SH",
       "MIT Hardness Group",
@@ -6726,6 +6573,26 @@
       "Fixed-parameter tractability and completeness II: On completeness for W[1]",
       "Rod G. Downey",
       "Michael R. Fellows"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "vdp-tw-eth"
+      },
+      {
+        "hypotheses": [
+          "sh"
+        ],
+        "id": "vdp-tw-sh"
+      },
+      {
+        "hypotheses": [
+          "w1"
+        ],
+        "id": "vdp-tw-w1"
+      }
     ]
   },
   {
@@ -6741,21 +6608,13 @@
     "name": "Vertex-Disjoint Paths by width of a supplied path decomposition",
     "recoveries": [
       {
+        "bound": "vdp-pw-kxk",
         "hypothesis": "kxk",
         "status": "recovered",
         "target": "vdp-pw-eth"
       },
       {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "vdp-pw-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "vdp-pw-eth"
-      },
-      {
+        "bound": "vdp-pw-w1",
         "hypothesis": "w1",
         "status": "effective",
         "target": "vdp-pw-eth"
@@ -6801,6 +6660,26 @@
       "Fixed-parameter tractability and completeness II: On completeness for W[1]",
       "Rod G. Downey",
       "Michael R. Fellows"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "vdp-pw-eth"
+      },
+      {
+        "hypotheses": [
+          "kxk"
+        ],
+        "id": "vdp-pw-kxk"
+      },
+      {
+        "hypotheses": [
+          "w1"
+        ],
+        "id": "vdp-pw-w1"
+      }
     ]
   },
   {
@@ -6814,21 +6693,6 @@
     "kind": "lower-bound-case",
     "name": "Weighted CNF SAT by required satisfying weight",
     "recoveries": [
-      {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "weighted-cnf-sat-weight-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "weighted-cnf-sat-weight-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "weighted-cnf-sat-weight-eth"
-      },
       {
         "hypothesis": "w1",
         "status": "unresolved",
@@ -6864,6 +6728,20 @@
       "David Juedes",
       "Iyad A. Kanj",
       "Ge Xia"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "weighted-cnf-sat-weight-eth"
+      },
+      {
+        "hypotheses": [
+          "w1"
+        ],
+        "id": "weighted-cnf-sat-weight-w1"
+      }
     ]
   },
   {
@@ -6876,28 +6754,7 @@
     "id": "weighted-fixed-width-cnf-sat-weight",
     "kind": "lower-bound-case",
     "name": "Weighted Fixed-Width CNF SAT by required satisfying weight",
-    "recoveries": [
-      {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "weighted-fixed-width-cnf-sat-weight-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "weighted-fixed-width-cnf-sat-weight-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "weighted-fixed-width-cnf-sat-weight-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
-        "target": "weighted-fixed-width-cnf-sat-weight-eth"
-      }
-    ],
+    "recoveries": [],
     "search": [
       "Weighted Fixed-Width CNF SAT",
       "Required satisfying weight",
@@ -6928,6 +6785,14 @@
       "David Juedes",
       "Iyad A. Kanj",
       "Ge Xia"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "weighted-fixed-width-cnf-sat-weight-eth"
+      }
     ]
   },
   {
@@ -6941,21 +6806,6 @@
     "kind": "lower-bound-case",
     "name": "Weighted normalized circuit SAT by weight",
     "recoveries": [
-      {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "nc-eth-full"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "nc-eth-full"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "nc-eth-full"
-      },
       {
         "hypothesis": "w1",
         "status": "unresolved",
@@ -6991,6 +6841,26 @@
       "David Juedes",
       "Iyad A. Kanj",
       "Ge Xia"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "nc-eth-full"
+      },
+      {
+        "hypotheses": [
+          "w1"
+        ],
+        "id": "nc-w1-candidate"
+      },
+      {
+        "hypotheses": [
+          "w1"
+        ],
+        "id": "nc-w1-input-count"
+      }
     ]
   },
   {
@@ -7003,28 +6873,7 @@
     "id": "weighted-tardy-jobs-processing-times",
     "kind": "lower-bound-case",
     "name": "Weighted Number of Tardy Jobs on One Machine by number of distinct processing times",
-    "recoveries": [
-      {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "weighted-tardy-jobs-processing-times-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "weighted-tardy-jobs-processing-times-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "weighted-tardy-jobs-processing-times-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
-        "target": "weighted-tardy-jobs-processing-times-eth"
-      }
-    ],
+    "recoveries": [],
     "search": [
       "Weighted Number of Tardy Jobs on One Machine",
       "Number of distinct processing times",
@@ -7044,6 +6893,14 @@
       "Minimizing the Weighted Number of Tardy Jobs is W[1]-hard",
       "Klaus Heeger",
       "Danny Hermelin"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "weighted-tardy-jobs-processing-times-eth"
+      }
     ]
   },
   {
@@ -7056,28 +6913,7 @@
     "id": "weighted-tardy-jobs-weights",
     "kind": "lower-bound-case",
     "name": "Weighted Number of Tardy Jobs on One Machine by number of distinct weights",
-    "recoveries": [
-      {
-        "hypothesis": "kxk",
-        "status": "unresolved",
-        "target": "weighted-tardy-jobs-weights-eth"
-      },
-      {
-        "hypothesis": "np_qp",
-        "status": "unresolved",
-        "target": "weighted-tardy-jobs-weights-eth"
-      },
-      {
-        "hypothesis": "sh",
-        "status": "unresolved",
-        "target": "weighted-tardy-jobs-weights-eth"
-      },
-      {
-        "hypothesis": "w1",
-        "status": "unresolved",
-        "target": "weighted-tardy-jobs-weights-eth"
-      }
-    ],
+    "recoveries": [],
     "search": [
       "Weighted Number of Tardy Jobs on One Machine",
       "Number of distinct weights",
@@ -7097,6 +6933,14 @@
       "Minimizing the Weighted Number of Tardy Jobs is W[1]-hard",
       "Klaus Heeger",
       "Danny Hermelin"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "weighted-tardy-jobs-weights-eth"
+      }
     ]
   }
 ]

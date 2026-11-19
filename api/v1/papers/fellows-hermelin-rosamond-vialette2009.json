@@ -1,0 +1,23 @@
+{
+  "authors": [
+    "Michael R. Fellows",
+    "Danny Hermelin",
+    "Frances Rosamond",
+    "Stéphane Vialette"
+  ],
+  "editions": [
+    {
+      "access": "Published text checked for §2, Lemma 1 and deletion of edges within color classes, p. 56.",
+      "doi": "10.1016/j.tcs.2008.09.065",
+      "id": "journal",
+      "kind": "journal",
+      "label": "Theoretical Computer Science 410(1) (2009), 53–61",
+      "preferredUrl": "https://doi.org/10.1016/j.tcs.2008.09.065",
+      "primaryUrl": "https://doi.org/10.1016/j.tcs.2008.09.065"
+    }
+  ],
+  "id": "fellows-hermelin-rosamond-vialette2009",
+  "preferredEditionId": "journal",
+  "preferredUrl": "https://doi.org/10.1016/j.tcs.2008.09.065",
+  "title": "On the parameterized complexity of multiple-interval graph problems"
+}

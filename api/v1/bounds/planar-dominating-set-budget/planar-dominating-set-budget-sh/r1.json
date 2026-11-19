@@ -30,11 +30,18 @@
   ],
   "sources": [
     {
-      "editionId": "oct30",
-      "locator": "Table 1, Weak ETH row",
+      "editionId": "v3",
+      "locator": "§3, Table 1, fourth row, p. 5 (Cygan et al., Theorem 14.11)",
       "paperId": "szeider2026",
       "placement": "statement",
       "role": "lower-bound statement"
+    },
+    {
+      "editionId": "journal",
+      "locator": "Corollary 5.1 and the reduction it invokes, p. 805",
+      "paperId": "cai-juedes2003",
+      "placement": "statement",
+      "role": "underlying reduction"
     }
   ],
   "statement": "Under SH, no deterministic algorithm solves Planar Dominating Set within the stated running time.",

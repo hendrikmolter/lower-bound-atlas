@@ -60,11 +60,11 @@
   ],
   "sources": [
     {
-      "editionId": "book",
-      "locator": "Theorem 14.29 (parameterized Grid Tiling reduction)",
-      "paperId": "cygan2015",
+      "editionId": "journal",
+      "locator": "§2.1, Theorem 1 and its reduction, pp. 145–146",
+      "paperId": "fellows-et-al2011-colorful-treewidth",
       "placement": "statement",
-      "role": "benchmark"
+      "role": "W[1]-hardness"
     }
   ],
   "statement": "Under FPT ≠ W[1], no deterministic algorithm solves List Coloring within the stated running time.",

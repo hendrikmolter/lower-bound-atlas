@@ -6,15 +6,6 @@
   ],
   "editions": [
     {
-      "access": "Full text inspected.",
-      "id": "author",
-      "kind": "preprint",
-      "label": "Authors’ full manuscript",
-      "openUrl": "https://perso.ens-lyon.fr/edouard.bonnet/publi/tcs2017.pdf",
-      "preferredUrl": "https://perso.ens-lyon.fr/edouard.bonnet/publi/tcs2017.pdf",
-      "primaryUrl": "https://perso.ens-lyon.fr/edouard.bonnet/publi/tcs2017.pdf"
-    },
-    {
       "access": "Published text checked for Theorem 12 and Corollary 13, with the sum of the two intrinsic vertex-cover numbers.",
       "doi": "10.1016/j.tcs.2017.07.010",
       "id": "journal",

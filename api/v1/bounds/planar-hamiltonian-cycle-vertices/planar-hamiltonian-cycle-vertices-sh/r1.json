@@ -35,6 +35,13 @@
       "paperId": "sh26",
       "placement": "statement",
       "role": "lower-bound statement"
+    },
+    {
+      "editionId": "journal",
+      "locator": "Construction and crossing count, pp. 709–712",
+      "paperId": "garey-johnson-tarjan1976",
+      "placement": "forward",
+      "role": "original reduction from 3SAT"
     }
   ],
   "statement": "Under SH, no deterministic algorithm solves Planar Hamiltonian Cycle within the stated running time.",

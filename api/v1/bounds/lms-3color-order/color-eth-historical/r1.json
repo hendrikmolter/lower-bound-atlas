@@ -90,6 +90,13 @@
   ],
   "sources": [
     {
+      "editionId": "journal",
+      "locator": "Theorem 4, p. 525",
+      "paperId": "ipz2001",
+      "placement": "forward",
+      "role": "Earlier linear-size reduction from 3-SAT to 3-Coloring under the SNP subexponential-time comparison"
+    },
+    {
       "editionId": "bulletin",
       "locator": "Theorem 3.2, PDF p. 12",
       "paperId": "lms2011",

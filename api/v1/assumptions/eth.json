@@ -10,6 +10,7 @@
   "name": "Exponential Time Hypothesis",
   "quantifiers": "There exists δ > 0 such that, for every fixed C ≥ 0, no correct algorithm runs in O(2^(δ n) L^C).",
   "refutation": "https://github.com/openai/math/tree/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026",
+  "researchStatus": "historical",
   "revision": 1,
   "source": {
     "editionId": "journal",

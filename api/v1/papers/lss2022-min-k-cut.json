@@ -6,12 +6,12 @@
   ],
   "editions": [
     {
-      "access": "Published proceedings PDF, introduction, p. 798.",
+      "access": "Published IEEE proceedings, §I, p. 798, restates the exact ETH exclusion and attributes it to earlier work.",
       "doi": "10.1109/FOCS46700.2020.00079",
       "id": "focs",
       "kind": "proceedings",
       "label": "FOCS 2020, 798–809",
-      "openUrl": "https://sites.cs.ucsb.edu/~daniello/papers/minkcutFOCS20.pdf",
+      "openUrl": "https://ieee-focs.org/FOCS-2020-Papers/pdfs/FOCS2020-SFPLmbQgSLgOwZlanGgzq/962100a798/962100a798.pdf",
       "preferredUrl": "https://doi.org/10.1109/FOCS46700.2020.00079",
       "primaryUrl": "https://doi.org/10.1109/FOCS46700.2020.00079"
     },

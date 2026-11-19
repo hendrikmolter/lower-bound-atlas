@@ -91,6 +91,13 @@
           "paperId": "cygan2015",
           "placement": "statement",
           "role": "benchmark"
+        },
+        {
+          "editionId": "focs",
+          "locator": "§§2 and 4, Matrix Tiling reduction in the proof of Theorem 4.1",
+          "paperId": "marx2007-geometric-ptas",
+          "placement": "forward",
+          "role": "original Matrix Tiling construction"
         }
       ],
       "statement": "Under ETH, no deterministic algorithm solves Independent Set of axis-parallel unit squares within the stated running time.",
@@ -195,14 +202,7 @@
       "sources": [
         {
           "editionId": "v3",
-          "locator": "Proposition 1 and Table 1",
-          "paperId": "szeider2026",
-          "placement": "statement",
-          "role": "benchmark"
-        },
-        {
-          "editionId": "oct30",
-          "locator": "§3, geometric transfers from Grid Tiling",
+          "locator": "§3, Proposition 1, pp. 3–4, and Table 1, second row, p. 5 (Unit Disk Independent Set and Grid Tiling transfer starting bounds)",
           "paperId": "szeider2026",
           "placement": "statement",
           "role": "benchmark"
@@ -213,6 +213,13 @@
           "paperId": "cygan2015",
           "placement": "statement",
           "role": "benchmark"
+        },
+        {
+          "editionId": "focs",
+          "locator": "§§2 and 4, Matrix Tiling reduction in the proof of Theorem 4.1",
+          "paperId": "marx2007-geometric-ptas",
+          "placement": "forward",
+          "role": "original Matrix Tiling construction"
         }
       ],
       "statement": "Under the k × k Clique Hypothesis, no deterministic algorithm solves Independent Set of axis-parallel unit squares within the stated running time.",
@@ -389,14 +396,7 @@
         },
         {
           "editionId": "v3",
-          "locator": "Proposition 1 and Table 1",
-          "paperId": "szeider2026",
-          "placement": "statement",
-          "role": "benchmark"
-        },
-        {
-          "editionId": "oct30",
-          "locator": "§3, geometric transfers from Grid Tiling",
+          "locator": "§3, Proposition 1, pp. 3–4, and Table 1, second row, p. 5 (Unit Disk Independent Set and Grid Tiling transfer starting bounds)",
           "paperId": "szeider2026",
           "placement": "statement",
           "role": "benchmark"
@@ -445,14 +445,7 @@
         },
         {
           "editionId": "v3",
-          "locator": "Proposition 1 and Table 1",
-          "paperId": "szeider2026",
-          "placement": "statement",
-          "role": "benchmark"
-        },
-        {
-          "editionId": "oct30",
-          "locator": "§3, geometric transfers from Grid Tiling",
+          "locator": "§3, Proposition 1, pp. 3–4, and Table 1, second row, p. 5 (Unit Disk Independent Set and Grid Tiling transfer starting bounds)",
           "paperId": "szeider2026",
           "placement": "statement",
           "role": "benchmark"

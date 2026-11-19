@@ -6,15 +6,6 @@
   ],
   "editions": [
     {
-      "access": "Inspected arXiv version retained for earlier citations and their pagination.",
-      "id": "full",
-      "kind": "preprint",
-      "label": "Full version (arXiv:1910.01047v2)",
-      "openUrl": "https://arxiv.org/pdf/1910.01047v2",
-      "preferredUrl": "https://arxiv.org/abs/1910.01047v2",
-      "primaryUrl": "https://arxiv.org/abs/1910.01047v2"
-    },
-    {
       "access": "Published text checked for Theorem 13, its proof, and the source definitions of ETH and normalized QBF.",
       "doi": "10.1145/3373718.3394756",
       "id": "proceedings",

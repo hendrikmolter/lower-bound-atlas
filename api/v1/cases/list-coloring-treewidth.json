@@ -64,6 +64,13 @@
       ],
       "sources": [
         {
+          "editionId": "journal",
+          "locator": "§2.1, Theorem 1 and its reduction, pp. 145–146",
+          "paperId": "fellows-et-al2011-colorful-treewidth",
+          "placement": "forward",
+          "role": "Original polynomial-time reduction from Multicolored Clique, with treewidth at most the number of colors"
+        },
+        {
           "editionId": "book",
           "locator": "Theorem 14.29, pp. 492–493 (planar hard instances)",
           "paperId": "cygan2015",
@@ -144,17 +151,17 @@
       "sources": [
         {
           "editionId": "v3",
-          "locator": "Proposition 1 and Table 1",
+          "locator": "§3, Proposition 1, pp. 3–4, and Table 1, second row, p. 5",
           "paperId": "szeider2026",
           "placement": "statement",
           "role": "benchmark"
         },
         {
-          "editionId": "oct30",
-          "locator": "Proposition 1 and Table 1, second row; transfer in Cygan et al., Theorem 14.29",
-          "paperId": "szeider2026",
+          "editionId": "book",
+          "locator": "Theorem 14.29, pp. 492–493",
+          "paperId": "cygan2015",
           "placement": "statement",
-          "role": "benchmark"
+          "role": "underlying reduction"
         }
       ],
       "statement": "Under the k × k Clique Hypothesis, no deterministic algorithm solves List Coloring within the stated running time.",
@@ -223,11 +230,11 @@
       ],
       "sources": [
         {
-          "editionId": "book",
-          "locator": "Theorem 14.29 (parameterized Grid Tiling reduction)",
-          "paperId": "cygan2015",
+          "editionId": "journal",
+          "locator": "§2.1, Theorem 1 and its reduction, pp. 145–146",
+          "paperId": "fellows-et-al2011-colorful-treewidth",
           "placement": "statement",
-          "role": "benchmark"
+          "role": "W[1]-hardness"
         }
       ],
       "statement": "Under FPT ≠ W[1], no deterministic algorithm solves List Coloring within the stated running time.",
@@ -282,14 +289,7 @@
         },
         {
           "editionId": "v3",
-          "locator": "Proposition 1 and Table 1",
-          "paperId": "szeider2026",
-          "placement": "statement",
-          "role": "benchmark"
-        },
-        {
-          "editionId": "oct30",
-          "locator": "Proposition 1 and Table 1, second row; transfer in Cygan et al., Theorem 14.29",
+          "locator": "§3, Proposition 1, pp. 3–4, and Table 1, second row, p. 5",
           "paperId": "szeider2026",
           "placement": "statement",
           "role": "benchmark"
@@ -333,14 +333,7 @@
         },
         {
           "editionId": "v3",
-          "locator": "Proposition 1 and Table 1",
-          "paperId": "szeider2026",
-          "placement": "statement",
-          "role": "benchmark"
-        },
-        {
-          "editionId": "oct30",
-          "locator": "Proposition 1 and Table 1, second row; transfer in Cygan et al., Theorem 14.29",
+          "locator": "§3, Proposition 1, pp. 3–4, and Table 1, second row, p. 5",
           "paperId": "szeider2026",
           "placement": "statement",
           "role": "benchmark"

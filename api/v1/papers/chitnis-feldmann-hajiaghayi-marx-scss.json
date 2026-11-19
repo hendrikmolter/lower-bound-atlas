@@ -7,25 +7,7 @@
   ],
   "editions": [
     {
-      "access": "University of Birmingham peer-reviewed manuscript checked for Theorem 1.2 and §3, including §3.6.",
-      "id": "accepted",
-      "kind": "manuscript",
-      "label": "Journal accepted manuscript",
-      "openUrl": "https://pure-oai.bham.ac.uk/ws/portalfiles/portal/84854624/J10_Tight_Bounds_for_Planar.pdf",
-      "preferredUrl": "https://pure-oai.bham.ac.uk/ws/portalfiles/portal/84854624/J10_Tight_Bounds_for_Planar.pdf",
-      "primaryUrl": "https://pure-oai.bham.ac.uk/ws/portalfiles/portal/84854624/J10_Tight_Bounds_for_Planar.pdf"
-    },
-    {
-      "access": "Public version used where the published full text was unavailable.",
-      "id": "author",
-      "kind": "preprint",
-      "label": "Inspected author version",
-      "openUrl": "https://arxiv.org/abs/1911.13161",
-      "preferredUrl": "https://arxiv.org/abs/1911.13161",
-      "primaryUrl": "https://arxiv.org/abs/1911.13161"
-    },
-    {
-      "access": "Journal DOI and theorem checked against the institutional peer-reviewed accepted manuscript. Publisher pagination was not checked.",
+      "access": "Published text checked for Theorem 1.2, p. 321, Remark 1.5, p. 323, and §3, pp. 328–337, including the final reduction argument in §3.6, p. 337.",
       "doi": "10.1137/18M122371X",
       "id": "journal",
       "kind": "journal",

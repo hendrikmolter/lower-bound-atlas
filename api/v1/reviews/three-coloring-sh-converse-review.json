@@ -14,7 +14,7 @@
   "reviewer": "Independent agent reviewer",
   "scope": "Converse only. Checks the encoding, the quantitative sparsification import, the choice of fixed exponents and the deterministic running time.",
   "sourceSha256": "9f946a0078c62a6ae28959f44f9ad2f6df97133f59a14e8f715a53da497da49a",
-  "stale": false,
+  "stale": true,
   "type": "agent",
   "verdict": "verified"
 }

@@ -86,6 +86,13 @@
       "paperId": "cygan2015",
       "placement": "statement",
       "role": "benchmark"
+    },
+    {
+      "editionId": "focs",
+      "locator": "§§2 and 4, Matrix Tiling reduction in the proof of Theorem 4.1",
+      "paperId": "marx2007-geometric-ptas",
+      "placement": "forward",
+      "role": "original Matrix Tiling construction"
     }
   ],
   "statement": "Under ETH, no deterministic algorithm solves Independent Set of axis-parallel unit squares within the stated running time.",

@@ -62,6 +62,20 @@
       "paperId": "cygan2015",
       "placement": "statement",
       "role": "benchmark"
+    },
+    {
+      "editionId": "journal",
+      "locator": "Theorems 2.1–2.2, pp. 248–251",
+      "paperId": "garey-johnson-stockmeyer1976",
+      "placement": "forward",
+      "role": "direct 3SAT and planar crossover reductions"
+    },
+    {
+      "editionId": "journal",
+      "locator": "Theorem 2, p. 333, invoking the planarization construction in §3",
+      "paperId": "lichtenstein1982",
+      "placement": "forward",
+      "role": "quadratic Planar 3SAT reduction"
     }
   ],
   "statement": "Under ETH, no deterministic algorithm decides Planar 3-Coloring within the stated running time.",

@@ -7,15 +7,6 @@
   ],
   "editions": [
     {
-      "access": "Full text inspected.",
-      "id": "author",
-      "kind": "preprint",
-      "label": "Authors’ full manuscript",
-      "openUrl": "https://www.cs.bme.hu/~dmarx/papers/jansen-binpacking-algo.pdf",
-      "preferredUrl": "https://www.cs.bme.hu/~dmarx/papers/jansen-binpacking-algo.pdf",
-      "primaryUrl": "https://www.cs.bme.hu/~dmarx/papers/jansen-binpacking-algo.pdf"
-    },
-    {
       "access": "Published text checked for the unary decision formulation and Theorems 2–3.",
       "doi": "10.1016/j.jcss.2012.04.004",
       "id": "journal",

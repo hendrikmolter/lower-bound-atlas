@@ -70,6 +70,13 @@
           "paperId": "cygan2015",
           "placement": "statement",
           "role": "benchmark"
+        },
+        {
+          "editionId": "journal",
+          "locator": "Theorem 5.5, p. 1360",
+          "paperId": "chkx2006",
+          "placement": "forward",
+          "role": "Original Clique lower bound under the subexponential-time SNP premise"
         }
       ],
       "statement": "Under ETH, no deterministic algorithm solves Grid Tiling within the stated running time.",
@@ -138,17 +145,17 @@
       "sources": [
         {
           "editionId": "v3",
-          "locator": "Proposition 1 and Table 1",
+          "locator": "§3, Proposition 1, pp. 3–4, and Table 1, second row, p. 5",
           "paperId": "szeider2026",
           "placement": "statement",
           "role": "benchmark"
         },
         {
-          "editionId": "oct30",
-          "locator": "§3, Proposition 1 and Table 1, second row",
-          "paperId": "szeider2026",
+          "editionId": "book",
+          "locator": "Theorem 14.28, pp. 490–491",
+          "paperId": "cygan2015",
           "placement": "statement",
-          "role": "benchmark"
+          "role": "underlying reduction"
         }
       ],
       "statement": "Under the k × k Clique Hypothesis, no deterministic algorithm solves Grid Tiling within the stated running time.",
@@ -269,6 +276,13 @@
           "paperId": "cygan2015",
           "placement": "statement",
           "role": "benchmark"
+        },
+        {
+          "editionId": "journal",
+          "locator": "Theorem 3.1 and Corollary 3.2",
+          "paperId": "df1995",
+          "placement": "forward",
+          "role": "Original W[1]-completeness of Clique before the Grid Tiling reduction"
         }
       ],
       "statement": "Under FPT ≠ W[1], no deterministic algorithm solves Grid Tiling within the stated running time.",
@@ -320,14 +334,7 @@
         },
         {
           "editionId": "v3",
-          "locator": "Proposition 1 and Table 1",
-          "paperId": "szeider2026",
-          "placement": "statement",
-          "role": "benchmark"
-        },
-        {
-          "editionId": "oct30",
-          "locator": "§3, Proposition 1 and Table 1, second row",
+          "locator": "§3, Proposition 1, pp. 3–4, and Table 1, second row, p. 5",
           "paperId": "szeider2026",
           "placement": "statement",
           "role": "benchmark"
@@ -364,14 +371,7 @@
         },
         {
           "editionId": "v3",
-          "locator": "Proposition 1 and Table 1",
-          "paperId": "szeider2026",
-          "placement": "statement",
-          "role": "benchmark"
-        },
-        {
-          "editionId": "oct30",
-          "locator": "§3, Proposition 1 and Table 1, second row",
+          "locator": "§3, Proposition 1, pp. 3–4, and Table 1, second row, p. 5",
           "paperId": "szeider2026",
           "placement": "statement",
           "role": "benchmark"

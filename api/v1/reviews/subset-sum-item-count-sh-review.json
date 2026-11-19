@@ -14,7 +14,7 @@
   "reviewer": "Codex agent gaps_batch",
   "scope": "Checks the exact deterministic SH forward implication, including binary encoding, positivity, all fixed power savings, and the complete input factor.",
   "sourceSha256": "58dea1b6ad3c5f4c594f78a99b1370a59b27f9c70750eb6b7cc6b31871914380",
-  "stale": false,
+  "stale": true,
   "type": "agent",
   "verdict": "verified"
 }

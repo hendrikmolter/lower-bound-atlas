@@ -1,0 +1,1 @@
+Dániel Marx. On the Optimality of Planar and Geometric Approximation Schemes. FOCS 2007, pp. 338–348. https://doi.org/10.1109/FOCS.2007.26

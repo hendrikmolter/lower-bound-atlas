@@ -65,6 +65,13 @@
       "paperId": "ccfhjkx2005",
       "placement": "statement",
       "role": "weighted k-Cut W[1]-hardness"
+    },
+    {
+      "editionId": "journal",
+      "locator": "Abstract",
+      "paperId": "downey-et-al2003-k-cut",
+      "placement": "statement",
+      "role": "Original W[1]-hardness of weighted k-Cut by number of components"
     }
   ],
   "statement": "Under FPT ≠ W[1], no deterministic algorithm solves Minimum k-Cut within the stated running time.",

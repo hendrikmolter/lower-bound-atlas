@@ -1,0 +1,24 @@
+{
+  "authorship": {
+    "authors": [
+      "Atlas"
+    ],
+    "kind": "ai",
+    "origin": "atlas"
+  },
+  "dependencies": [],
+  "pdf": "proofs/classical-graph-sh-converse-r2.pdf",
+  "proofId": "classical-graph-sh-converse",
+  "revision": 2,
+  "source": "proofs/classical-graph-sh-converse-r2.tex",
+  "theorem": {
+    "destination": "is-order-sh-converse",
+    "label": "is-order-sh-converse",
+    "number": "1(a)",
+    "reviewIds": [
+      "is-order-sh-converse-review-r2"
+    ],
+    "statement": "The fixed-power exclusion for Independent Set parameterized by the number of vertices implies SH.",
+    "supports": true
+  }
+}

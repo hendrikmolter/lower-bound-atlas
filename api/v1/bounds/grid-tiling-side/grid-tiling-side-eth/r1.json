@@ -65,6 +65,13 @@
       "paperId": "cygan2015",
       "placement": "statement",
       "role": "benchmark"
+    },
+    {
+      "editionId": "journal",
+      "locator": "Theorem 5.5, p. 1360",
+      "paperId": "chkx2006",
+      "placement": "forward",
+      "role": "Original Clique lower bound under the subexponential-time SNP premise"
     }
   ],
   "statement": "Under ETH, no deterministic algorithm solves Grid Tiling within the stated running time.",

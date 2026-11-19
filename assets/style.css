@@ -195,9 +195,9 @@ main {
 }
 .filter-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr));
-  align-items: end;
-  gap: 0.8rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+  align-items: start;
+  gap: .27rem .8rem;
 }
 .filters label {
   min-width: 0;
@@ -207,7 +207,7 @@ main {
   font-size: 0.81rem;
   font-weight: 650;
 }
-.filters :is(input, select) {
+.filters :is(input, select, .multi-filter summary) {
   width: 100%;
   min-width: 0;
   min-height: 2.65rem;
@@ -219,7 +219,7 @@ main {
   font: 400 1rem/1.3 var(--sans);
 }
 .filters select:disabled { background: #f4f3f4; color: var(--muted); cursor: default; }
-.filters select { padding-inline-end: 0.25rem; }
+
 .filters input[type="search"] { padding-inline: 0.8rem; font-size: 1rem; }
 .filters input::placeholder { color: var(--muted); opacity: 1; }
 .filters > :last-child { margin-bottom: 0; }
@@ -454,3 +454,38 @@ math {
 @media (max-width: 42rem) {
   .implication { grid-template-columns: minmax(0, 1fr); }
 }
+
+.filters .filter-field {
+  display: grid;
+  grid-row: span 2;
+  grid-template-rows: subgrid;
+  min-width: 0;
+  align-items: start;
+  color: var(--ink);
+  font: 650 .81rem/1.5 var(--sans);
+}
+.multi-filter { min-width: 0; margin: 0; padding: 0; border: 0; }
+.multi-filter details { margin: 0; }
+.filters :is(select, .multi-filter summary) {
+  appearance: none;
+  display: block;
+  height: 2.65rem;
+  padding: .6rem 2rem .6rem .75rem;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14'%3E%3Cpath d='m3 5 4 4 4-4' fill='none' stroke='%23445458' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right .75rem center;
+}
+.multi-filter summary { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.multi-filter summary::-webkit-details-marker { display: none; }
+.filters :is(select, .multi-filter summary):focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.filters .multi-filter[disabled] summary { color: var(--muted); background-color: #f4f3f4; cursor: default; }
+.choices { padding: .35rem .75rem; border: 1px solid #8e898f; border-radius: .3rem; margin-top: .2rem; }
+@media (forced-colors: active) {
+  .filters select { appearance: auto; }
+  .filters .multi-filter summary { display: list-item; list-style-position: inside; }
+}
+.filters .choices label { display: flex; align-items: baseline; gap: .5rem; padding: .25rem 0; font-weight: 400; cursor: pointer; }
+.filters .choices input { width: 1rem; height: 1rem; min-height: 0; padding: 0; accent-color: var(--accent); flex: none; }
+.match-info { color: var(--muted); font-size: .875rem; margin: .25rem 0; }
+.search-actions { display: flex; align-items: center; flex-wrap: wrap; gap: .65rem; }

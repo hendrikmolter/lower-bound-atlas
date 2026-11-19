@@ -52,6 +52,20 @@
       "paperId": "cygan2015",
       "placement": "statement",
       "role": "budget-preserving hardness reduction and W[2]-completeness"
+    },
+    {
+      "editionId": "journal",
+      "locator": "Proof of Theorem 5.4, pp. 1359–1360",
+      "paperId": "chkx2006",
+      "placement": "forward",
+      "role": "W[2]-hardness of Dominating Set by solution budget before the connectedness transfer"
+    },
+    {
+      "editionId": "journal",
+      "locator": "§5.1, pp. 384–385",
+      "paperId": "guha-khuller1998-connected-dominating-set",
+      "placement": "forward",
+      "role": "Earlier polynomial reduction from Set Cover, increasing the optimum by exactly one"
     }
   ],
   "statement": "Under FPT ≠ W[1], no deterministic algorithm solves this decision problem within the stated running time.",

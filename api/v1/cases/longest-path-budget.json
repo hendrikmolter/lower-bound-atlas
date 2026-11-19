@@ -67,6 +67,13 @@
           "paperId": "lms2011",
           "placement": "statement",
           "role": "benchmark"
+        },
+        {
+          "editionId": "journal",
+          "locator": "§3, p. 526, following Theorem 5",
+          "paperId": "ipz2001",
+          "placement": "forward",
+          "role": "Original sparse-SAT transfer to Hamiltonian Circuit, upstream of the Hamiltonian Path and Longest Path transfer"
         }
       ],
       "statement": "Under ETH, no deterministic algorithm solves Longest Path within the stated running time.",
@@ -145,7 +152,7 @@
         },
         {
           "editionId": "journal",
-          "locator": "Section 3, p. 525, following Theorem 5",
+          "locator": "§3, p. 526, following Theorem 5",
           "paperId": "ipz2001",
           "placement": "proof",
           "role": "linear-size reduction to Hamiltonian Circuit"

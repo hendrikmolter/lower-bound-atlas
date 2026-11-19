@@ -1,0 +1,20 @@
+{
+  "applicable": true,
+  "date": "2026-11-19",
+  "evidence": "evidence/ilp-equations-w1-all-ones-r3-citation-review.md",
+  "id": "ilp-equations-w1-all-ones-r3-citation-review",
+  "independent": true,
+  "label": "Agent verified",
+  "object": {
+    "id": "ilp-equations-w1-effective",
+    "revision": 3,
+    "theorem": "ilp-equations-w1-effective",
+    "type": "proof"
+  },
+  "reviewer": "Codex agent /root/remaining",
+  "scope": "Theorem 1, revision 3. Checked the journal locator and exact scope of the comparison statement and verified that the theorem and its proof match the independently reviewed revision 2.",
+  "sourceSha256": "bcfd01fdc4de9b242960aa6d4fa251898a4e0b31a38289fbbd69a8514e0a6baf",
+  "stale": false,
+  "type": "agent",
+  "verdict": "verified"
+}

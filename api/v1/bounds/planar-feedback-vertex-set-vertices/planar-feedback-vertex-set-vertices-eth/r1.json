@@ -32,6 +32,13 @@
       "paperId": "cygan2015",
       "placement": "statement",
       "role": "lower-bound statement"
+    },
+    {
+      "editionId": "journal",
+      "locator": "Theorems 2–3 and §4, pp. 333–335",
+      "paperId": "lichtenstein1982",
+      "placement": "forward",
+      "role": "planarization and planar Vertex Cover gadgets"
     }
   ],
   "statement": "Under ETH, no deterministic algorithm solves Planar Feedback Vertex Set within the stated running time.",

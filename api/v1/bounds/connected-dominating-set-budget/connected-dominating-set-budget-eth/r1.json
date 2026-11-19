@@ -50,6 +50,27 @@
       "paperId": "cygan2015",
       "placement": "statement",
       "role": "conditional lower bound"
+    },
+    {
+      "editionId": "bulletin",
+      "locator": "Theorem 5.3 and proof, pp. 58–59",
+      "paperId": "lms2011",
+      "placement": "forward",
+      "role": "ETH lower bound for Dominating Set before the budget-preserving connectedness transfer"
+    },
+    {
+      "editionId": "journal",
+      "locator": "§5.1, pp. 384–385",
+      "paperId": "guha-khuller1998-connected-dominating-set",
+      "placement": "forward",
+      "role": "Earlier polynomial reduction from Set Cover, increasing the optimum by exactly one"
+    },
+    {
+      "editionId": "journal",
+      "locator": "Theorems 5.4 and 5.6, pp. 1359–1361",
+      "paperId": "chkx2006",
+      "placement": "forward",
+      "role": "Upstream Set Cover lower bound with an arbitrary computable parameter factor"
     }
   ],
   "statement": "Under ETH, no deterministic algorithm solves the stated decision problem within the stated running time.",

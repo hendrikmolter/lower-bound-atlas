@@ -1,0 +1,20 @@
+{
+  "applicable": true,
+  "date": "2026-11-19",
+  "evidence": "evidence/sh-preprint-v2-proof-review.md",
+  "id": "three-coloring-sh-converse-review-r2",
+  "independent": true,
+  "label": "Agent verified",
+  "object": {
+    "id": "three-coloring-sh-converse",
+    "revision": 2,
+    "theorem": "color-sh-converse",
+    "type": "proof"
+  },
+  "reviewer": "Codex agent originals",
+  "scope": "Checked the v2 decision sparsification interface and fixed exponents, the three-variable-per-vertex coloring encoding, and the full-input polynomial overhead.",
+  "sourceSha256": "37e81a7db845fdff77e451dafc10866b3da9f9e1ad26f8f7424b414feb24de81",
+  "stale": false,
+  "type": "agent",
+  "verdict": "verified"
+}

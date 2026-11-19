@@ -35,13 +35,6 @@
       "role": "benchmark"
     },
     {
-      "editionId": "bulletin",
-      "locator": "Theorem 4.3, p. 54",
-      "paperId": "lms2011",
-      "placement": "statement",
-      "role": "benchmark"
-    },
-    {
       "editionId": "book",
       "locator": "Theorem 14.11, p. 477",
       "paperId": "cygan2015",

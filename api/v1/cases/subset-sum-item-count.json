@@ -37,13 +37,6 @@
           "paperId": "etscheid-kratsch-mnich-rog-lin2017",
           "placement": "statement",
           "role": "published linear-item ETH reduction"
-        },
-        {
-          "editionId": "journal",
-          "locator": "p. 2317 and Section 5",
-          "paperId": "nederlof-swennenhuis2022",
-          "placement": "context",
-          "role": "independent statement of the item-count benchmark"
         }
       ],
       "statement": "Under ETH, no deterministic algorithm decides Subset Sum within the stated running time.",
@@ -66,7 +59,7 @@
       "proofs": [
         {
           "proofId": "subset-sum-item-count-sh",
-          "revision": 1,
+          "revision": 2,
           "theorem": "subset-sum-item-count-sh"
         }
       ],
@@ -89,8 +82,8 @@
       ],
       "sources": [
         {
-          "editionId": "v1",
-          "locator": "Lemma 2.1, p. 5",
+          "editionId": "v2",
+          "locator": "Lemma 2.1, pp. 5–6",
           "paperId": "sh26",
           "placement": "proof",
           "role": "fixed-width SAT size formulation of SH"

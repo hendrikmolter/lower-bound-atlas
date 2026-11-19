@@ -5,15 +5,6 @@
   ],
   "editions": [
     {
-      "access": "Public version used where the published full text was unavailable.",
-      "id": "author",
-      "kind": "preprint",
-      "label": "Inspected author version",
-      "openUrl": "https://arxiv.org/abs/1504.05476",
-      "preferredUrl": "https://arxiv.org/abs/1504.05476",
-      "primaryUrl": "https://arxiv.org/abs/1504.05476"
-    },
-    {
       "access": "Published text checked for the planar d-Scattered Set lower-bound paragraph in §1, p. 13:6, and its textbook reduction reference.",
       "doi": "10.1145/3483425",
       "id": "journal",

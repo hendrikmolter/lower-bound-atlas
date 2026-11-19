@@ -1,0 +1,1 @@
+Rod G. Downey, Michael R. Fellows, Alexander Vardy, Geoff Whittle. The Parametrized Complexity of Some Fundamental Problems in Coding Theory. SIAM Journal on Computing 29(2) (1999), 545–570. https://doi.org/10.1137/S0097539797323571

@@ -36,6 +36,13 @@
           "paperId": "cygan2015",
           "placement": "statement",
           "role": "lower-bound statement"
+        },
+        {
+          "editionId": "journal",
+          "locator": "Corollary 1.6 and §6",
+          "paperId": "marx2010-treewidth",
+          "placement": "forward",
+          "role": "Original ETH lower bound for Subgraph Isomorphism parameterized by pattern edges"
         }
       ],
       "statement": "Under ETH, no deterministic algorithm solves Strongly Connected Steiner Subgraph within the stated running time.",
@@ -72,11 +79,18 @@
       ],
       "sources": [
         {
-          "editionId": "oct30",
-          "locator": "Section 3, Table 1 and Proposition 1",
+          "editionId": "v3",
+          "locator": "§3, Proposition 1, pp. 3–4, and Table 1, third row, p. 5; quadratic parameter transfer discussed on p. 4",
           "paperId": "szeider2026",
           "placement": "statement",
           "role": "lower-bound statement"
+        },
+        {
+          "editionId": "book",
+          "locator": "Theorem 13.33 and its proof, pp. 457–459",
+          "paperId": "cygan2015",
+          "placement": "statement",
+          "role": "underlying reduction"
         }
       ],
       "statement": "Under the k × k Clique Hypothesis, no deterministic algorithm solves Strongly Connected Steiner Subgraph within the stated running time.",
@@ -192,8 +206,8 @@
           "role": "lower-bound statement"
         },
         {
-          "editionId": "oct30",
-          "locator": "Section 3, Table 1 and Proposition 1",
+          "editionId": "v3",
+          "locator": "§3, Proposition 1, pp. 3–4, and Table 1, third row, p. 5; quadratic parameter transfer discussed on p. 4",
           "paperId": "szeider2026",
           "placement": "statement",
           "role": "lower-bound statement"
@@ -229,8 +243,8 @@
           "role": "lower-bound statement"
         },
         {
-          "editionId": "oct30",
-          "locator": "Section 3, Table 1 and Proposition 1",
+          "editionId": "v3",
+          "locator": "§3, Proposition 1, pp. 3–4, and Table 1, third row, p. 5; quadratic parameter transfer discussed on p. 4",
           "paperId": "szeider2026",
           "placement": "statement",
           "role": "lower-bound statement"

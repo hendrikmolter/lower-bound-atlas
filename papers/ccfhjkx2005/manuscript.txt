@@ -1,1 +1,0 @@
-Jianer Chen, Benny Chor, Mike Fellows, Xiuzhen Huang, David Juedes, Iyad A. Kanj, Ge Xia. Tight Lower Bounds for Certain Parameterized NP-Hard Problems. Inspected author manuscript. https://people.csail.mit.edu/rrw/presentations/w1-vs-eth.pdf

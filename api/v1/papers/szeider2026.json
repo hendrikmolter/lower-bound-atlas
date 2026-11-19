@@ -4,16 +4,7 @@
   ],
   "editions": [
     {
-      "access": "Inspected original version.",
-      "doi": "10.5281/zenodo.23797197",
-      "id": "oct30",
-      "kind": "preprint",
-      "label": "Zenodo preprint v1, 30 October 2026",
-      "preferredUrl": "https://doi.org/10.5281/zenodo.23797197",
-      "primaryUrl": "https://doi.org/10.5281/zenodo.23797197"
-    },
-    {
-      "access": "Checked the exact Zenodo PDF for the hypothesis and the transfers in Table 1.",
+      "access": "Official Zenodo version 3 PDF inspected. The latest-version endpoint identifies v3. Section 2, Propositions 1–2 and Table 1 checked for the cited hypothesis and transfers. These are preprint results.",
       "doi": "10.5281/zenodo.24088151",
       "id": "v3",
       "kind": "preprint",

@@ -90,13 +90,6 @@
       "role": "benchmark"
     },
     {
-      "editionId": "bulletin",
-      "locator": "Theorem 4.1, p. 53",
-      "paperId": "lms2011",
-      "placement": "statement",
-      "role": "benchmark"
-    },
-    {
       "editionId": "book",
       "locator": "Section 14.3.1, p. 476",
       "paperId": "cygan2015",

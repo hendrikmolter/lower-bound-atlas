@@ -47,18 +47,11 @@
   ],
   "sources": [
     {
-      "editionId": "oct30",
-      "locator": "Proposition 2(b), p. 3",
+      "editionId": "v3",
+      "locator": "§3, Proposition 2(b), p. 4",
       "paperId": "szeider2026",
       "placement": "statement",
       "role": "theorem"
-    },
-    {
-      "editionId": "v3",
-      "locator": "November 9 revision",
-      "paperId": "szeider2026",
-      "placement": "context",
-      "role": "preferred edition"
     }
   ],
   "statement": "Under the k × k Clique Hypothesis, no deterministic algorithm solves the stated decision problem within the stated running time.",

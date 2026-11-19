@@ -4,11 +4,12 @@
   ],
   "editions": [
     {
-      "access": "Published edition.",
+      "access": "Published IWPEC edition. Theorem 1 and unit-disk transfer paragraph immediately before Theorem 2 checked in the author copy. The heading for Theorem 2 in this copy says Maximum Independent Set, while the abstract and surrounding construction concern Dominating Set.",
       "doi": "10.1007/11847250_14",
       "id": "journal",
       "kind": "proceedings",
       "label": "IWPEC 2006, LNCS 4169, 154–165",
+      "openUrl": "https://www.cs.bme.hu/~dmarx/papers/marx-iwpec2006.pdf",
       "preferredUrl": "https://doi.org/10.1007/11847250_14",
       "primaryUrl": "https://doi.org/10.1007/11847250_14"
     }

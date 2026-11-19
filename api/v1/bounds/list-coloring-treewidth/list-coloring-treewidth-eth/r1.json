@@ -59,6 +59,13 @@
   ],
   "sources": [
     {
+      "editionId": "journal",
+      "locator": "§2.1, Theorem 1 and its reduction, pp. 145–146",
+      "paperId": "fellows-et-al2011-colorful-treewidth",
+      "placement": "forward",
+      "role": "Original polynomial-time reduction from Multicolored Clique, with treewidth at most the number of colors"
+    },
+    {
       "editionId": "book",
       "locator": "Theorem 14.29, pp. 492–493 (planar hard instances)",
       "paperId": "cygan2015",

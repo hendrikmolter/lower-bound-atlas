@@ -9,5 +9,6 @@
   "model": "Deterministic worst-case decision time on complete binary inputs of length L.",
   "name": "NP ⊈ QP",
   "quantifiers": "QP is the union over fixed c ≥ 1 of DTIME(2^O((log(L+2))^c)). Containment would allow a language-specific algorithm and exponent.",
+  "researchStatus": "active",
   "revision": 1
 }

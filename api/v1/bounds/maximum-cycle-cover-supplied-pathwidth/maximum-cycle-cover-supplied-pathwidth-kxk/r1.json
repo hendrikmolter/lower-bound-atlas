@@ -80,6 +80,7 @@
     },
     {
       "editionId": "arxiv-v1",
+      "editionReason": "The journal gives the pathwidth lower bound but omits Lemma C.22, which gives the transfer that adds at most three to the supplied pathwidth.",
       "locator": "Appendix C.4, Lemma C.22, p. 70",
       "paperId": "cygan-cut-count",
       "placement": "statement",

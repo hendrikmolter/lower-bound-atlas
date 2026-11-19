@@ -1,1 +1,0 @@
-Dániel Marx, Michał Pilipczuk. Optimal Parameterized Algorithms for Planar Facility Location Problems Using Voronoi Diagrams. Inspected author version. https://arxiv.org/abs/1504.05476

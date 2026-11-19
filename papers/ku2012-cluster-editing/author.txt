@@ -1,1 +1,0 @@
-Christian Komusiewicz, Johannes Uhlmann. Cluster Editing with Locally Bounded Modifications. Authors’ full manuscript. https://www.uni-marburg.de/de/fb12/arbeitsgruppen/algorith/paper/ce-bounded-degree.pdf

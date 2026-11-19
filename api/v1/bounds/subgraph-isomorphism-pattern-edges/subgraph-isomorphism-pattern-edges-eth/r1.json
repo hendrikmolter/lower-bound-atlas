@@ -35,13 +35,6 @@
       "role": "lower-bound statement"
     },
     {
-      "editionId": "bulletin",
-      "locator": "Theorem 5.7, p. 60",
-      "paperId": "lms2011",
-      "placement": "statement",
-      "role": "lower-bound statement"
-    },
-    {
       "editionId": "book",
       "locator": "Theorem 14.24, pp. 488–489",
       "paperId": "cygan2015",

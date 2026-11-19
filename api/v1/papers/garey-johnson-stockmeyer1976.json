@@ -1,0 +1,23 @@
+{
+  "authors": [
+    "Michael R. Garey",
+    "David S. Johnson",
+    "Larry Stockmeyer"
+  ],
+  "editions": [
+    {
+      "access": "Published scan checked for Theorems 2.1 and 2.2, including the direct planar crossover. The textbook also credits Stockmeyer’s 1973 precursor.",
+      "doi": "10.1016/0304-3975(76)90059-1",
+      "id": "journal",
+      "kind": "journal",
+      "label": "Theoretical Computer Science 1(3) (1976), 237–267",
+      "openUrl": "https://www.math.ucdavis.edu/~deloera/MISC/LA-BIBLIO/trunk/JohnsonDavid2.pdf",
+      "preferredUrl": "https://doi.org/10.1016/0304-3975(76)90059-1",
+      "primaryUrl": "https://doi.org/10.1016/0304-3975(76)90059-1"
+    }
+  ],
+  "id": "garey-johnson-stockmeyer1976",
+  "preferredEditionId": "journal",
+  "preferredUrl": "https://doi.org/10.1016/0304-3975(76)90059-1",
+  "title": "Some simplified NP-complete graph problems"
+}

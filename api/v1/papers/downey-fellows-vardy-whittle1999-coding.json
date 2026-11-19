@@ -1,0 +1,31 @@
+{
+  "authors": [
+    "Rod G. Downey",
+    "Michael R. Fellows",
+    "Alexander Vardy",
+    "Geoff Whittle"
+  ],
+  "editions": [
+    {
+      "access": "Publisher metadata verified. The full journal text and the locator of the at-most-k Odd Set theorem in that edition remain unverified.",
+      "doi": "10.1137/S0097539797323571",
+      "id": "journal",
+      "kind": "journal",
+      "label": "SIAM Journal on Computing 29(2) (1999), 545–570",
+      "preferredUrl": "https://doi.org/10.1137/S0097539797323571",
+      "primaryUrl": "https://doi.org/10.1137/S0097539797323571"
+    },
+    {
+      "access": "Section 2 explicitly defines the at-most-k red/blue Odd Set problem and proves its W[1]-hardness in Theorem 2.",
+      "id": "manuscript",
+      "kind": "manuscript",
+      "label": "Authors’ manuscript",
+      "preferredUrl": "https://www.academia.edu/125868710/The_Parametrized_Complexity_of_Some_Fundamental_Problems_in_Coding_Theory",
+      "primaryUrl": "https://www.academia.edu/125868710/The_Parametrized_Complexity_of_Some_Fundamental_Problems_in_Coding_Theory"
+    }
+  ],
+  "id": "downey-fellows-vardy-whittle1999-coding",
+  "preferredEditionId": "journal",
+  "preferredUrl": "https://doi.org/10.1137/S0097539797323571",
+  "title": "The Parametrized Complexity of Some Fundamental Problems in Coding Theory"
+}

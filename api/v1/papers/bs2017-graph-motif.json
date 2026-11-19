@@ -5,15 +5,6 @@
   ],
   "editions": [
     {
-      "access": "Full text inspected.",
-      "id": "arxiv-v3",
-      "kind": "preprint",
-      "label": "arXiv:1503.05110v3",
-      "openUrl": "https://arxiv.org/abs/1503.05110v3",
-      "preferredUrl": "https://arxiv.org/abs/1503.05110v3",
-      "primaryUrl": "https://arxiv.org/abs/1503.05110v3"
-    },
-    {
       "access": "Published text checked for both parts of Theorem 14 and their proof in §3.4.",
       "doi": "10.1016/j.dam.2016.11.016",
       "id": "journal",

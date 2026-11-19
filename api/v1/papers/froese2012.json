@@ -4,6 +4,7 @@
   ],
   "editions": [
     {
+      "access": "Theorem 4.1 in §4.1.1, p. 33, gives the paired binary row-address construction. The later MFCS and JCSS Hitting Set reductions use an unbounded alphabet. Chapter 4 of Froese’s 2018 doctoral thesis treats binary Hamming-distance restrictions using a different construction.",
       "id": "thesis",
       "kind": "thesis",
       "label": "Master’s thesis, Technische Universität Berlin (2012)",

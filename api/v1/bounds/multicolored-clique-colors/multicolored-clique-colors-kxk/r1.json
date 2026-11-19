@@ -39,9 +39,9 @@
       "role": "benchmark"
     },
     {
-      "editionId": "bulletin",
-      "locator": "Theorem 5.2, p. 58",
-      "paperId": "lms2011",
+      "editionId": "journal",
+      "locator": "Section 2, Lemma 1, p. 56",
+      "paperId": "fellows-hermelin-rosamond-vialette2009",
       "placement": "statement",
       "role": "parameter-preserving color-copy reduction"
     }

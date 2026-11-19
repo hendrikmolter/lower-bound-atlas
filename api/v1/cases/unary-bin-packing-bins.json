@@ -114,6 +114,7 @@
         },
         {
           "editionId": "arxiv-v1",
+          "editionReason": "The proceedings proof explicitly defers the transfer from Multiset k-way Partition with targets to Theorem 8.1 of this full version.",
           "locator": "§8, Theorem 8.1",
           "paperId": "bdw2026-bin-packing",
           "placement": "forward",

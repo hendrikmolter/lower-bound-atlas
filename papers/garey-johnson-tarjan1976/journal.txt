@@ -1,0 +1,1 @@
+Michael R. Garey, David S. Johnson, Robert Endre Tarjan. The Planar Hamiltonian Circuit Problem is NP-Complete. SIAM Journal on Computing 5(4) (1976), 704–714. https://doi.org/10.1137/0205049

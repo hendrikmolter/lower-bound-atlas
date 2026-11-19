@@ -33,6 +33,13 @@
       "paperId": "lms2011",
       "placement": "statement",
       "role": "lower-bound statement"
+    },
+    {
+      "editionId": "journal",
+      "locator": "§§2–3, proof of Theorem 1 and paragraph before Theorem 2 (unit-disk transfer)",
+      "paperId": "marx2006-geometric",
+      "placement": "forward",
+      "role": "original quadratic-budget reduction"
     }
   ],
   "statement": "Under ETH, no deterministic algorithm solves Unit Disk Dominating Set within the stated running time.",

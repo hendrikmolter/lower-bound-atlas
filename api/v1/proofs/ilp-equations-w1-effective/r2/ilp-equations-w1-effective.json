@@ -7,10 +7,10 @@
     "origin": "atlas"
   },
   "dependencies": [],
-  "pdf": "proofs/ilp-equations-w1-all-ones.pdf",
+  "pdf": "proofs/ilp-equations-w1-all-ones-r2.pdf",
   "proofId": "ilp-equations-w1-effective",
   "revision": 2,
-  "source": "proofs/ilp-equations-w1-all-ones.tex",
+  "source": "proofs/ilp-equations-w1-all-ones-r2.tex",
   "theorem": {
     "destination": "ilp-equations-w1-effective",
     "label": "ilp-equations-w1-effective",

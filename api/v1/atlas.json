@@ -13,6 +13,7 @@
       "name": "Exponential Time Hypothesis",
       "quantifiers": "There exists δ > 0 such that, for every fixed C ≥ 0, no correct algorithm runs in O(2^(δ n) L^C).",
       "refutation": "https://github.com/openai/math/tree/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026",
+      "researchStatus": "historical",
       "revision": 1,
       "source": {
         "editionId": "journal",
@@ -32,6 +33,7 @@
       "model": "The graph is given explicitly.",
       "name": "k × k Clique Hypothesis",
       "quantifiers": "The exclusion concerns the worst-case running time as the number of rows k grows.",
+      "researchStatus": "active",
       "revision": 1,
       "source": {
         "editionId": "v3",
@@ -52,6 +54,7 @@
       "model": "Deterministic worst-case decision time on complete binary inputs of length L.",
       "name": "NP ⊈ QP",
       "quantifiers": "QP is the union over fixed c ≥ 1 of DTIME(2^O((log(L+2))^c)). Containment would allow a language-specific algorithm and exponent.",
+      "researchStatus": "active",
       "revision": 1
     },
     {
@@ -66,6 +69,7 @@
       "model": "Explicit CNF-SAT with the source encoding length as the size measure.",
       "name": "Satisfiability Hypothesis",
       "quantifiers": "For each fixed 0 < a < 1 there is no deterministic 2^O(n^a) · poly(n) SAT algorithm, with n the normalized input length.",
+      "researchStatus": "active",
       "revision": 1,
       "source": {
         "editionId": "journal",
@@ -84,6 +88,7 @@
       "model": "Deterministic uniform algorithms on explicitly encoded inputs, under fixed-parameter reductions.",
       "name": "FPT ≠ W[1]",
       "quantifiers": "An FPT algorithm has time f(k) · L^C for a computable function f, a fixed constant C, parameter k, and complete input length L.",
+      "researchStatus": "active",
       "revision": 1,
       "source": {
         "editionId": "journal",
@@ -151,6 +156,13 @@
               "paperId": "cygan2015",
               "placement": "statement",
               "role": "conditional lower bound"
+            },
+            {
+              "editionId": "journal",
+              "locator": "Theorem 5.5, p. 1360",
+              "paperId": "chkx2006",
+              "placement": "forward",
+              "role": "Original Clique lower bound under the subexponential-time SNP premise"
             }
           ],
           "statement": "Under ETH, no deterministic algorithm solves the stated decision problem within the stated running time.",
@@ -466,13 +478,6 @@
               "paperId": "lms2018",
               "placement": "statement",
               "role": "published reduction"
-            },
-            {
-              "editionId": "bulletin",
-              "locator": "Theorem 6.3, PDF p. 22",
-              "paperId": "lms2011",
-              "placement": "statement",
-              "role": "published lower bound"
             }
           ],
           "statement": "Under ETH, no deterministic algorithm decides Chromatic Number within the stated running time.",
@@ -1575,13 +1580,13 @@
                     "hypothesisRevision": 1,
                     "proof": {
                       "proofId": "clique-order-sh-converse",
-                      "revision": 1,
+                      "revision": 2,
                       "theorem": "clique-order-sh-converse"
                     },
-                    "reviewId": "clique-order-sh-converse-review",
+                    "reviewId": "clique-order-sh-converse-review-r2",
                     "source": {
-                      "editionId": "v1",
-                      "locator": "Lemma 2.2, pp. 5–6",
+                      "editionId": "v2",
+                      "locator": "Lemma 2.2, pp. 6–7 (decision interface)",
                       "paperId": "sh26",
                       "placement": "proof",
                       "role": "quantitative decision sparsification, preprint dependency"
@@ -2916,6 +2921,27 @@
               "paperId": "cygan2015",
               "placement": "statement",
               "role": "conditional lower bound"
+            },
+            {
+              "editionId": "bulletin",
+              "locator": "Theorem 5.3 and proof, pp. 58–59",
+              "paperId": "lms2011",
+              "placement": "forward",
+              "role": "ETH lower bound for Dominating Set before the budget-preserving connectedness transfer"
+            },
+            {
+              "editionId": "journal",
+              "locator": "§5.1, pp. 384–385",
+              "paperId": "guha-khuller1998-connected-dominating-set",
+              "placement": "forward",
+              "role": "Earlier polynomial reduction from Set Cover, increasing the optimum by exactly one"
+            },
+            {
+              "editionId": "journal",
+              "locator": "Theorems 5.4 and 5.6, pp. 1359–1361",
+              "paperId": "chkx2006",
+              "placement": "forward",
+              "role": "Upstream Set Cover lower bound with an arbitrary computable parameter factor"
             }
           ],
           "statement": "Under ETH, no deterministic algorithm solves the stated decision problem within the stated running time.",
@@ -3041,6 +3067,20 @@
               "paperId": "cygan2015",
               "placement": "statement",
               "role": "budget-preserving hardness reduction and W[2]-completeness"
+            },
+            {
+              "editionId": "journal",
+              "locator": "Proof of Theorem 5.4, pp. 1359–1360",
+              "paperId": "chkx2006",
+              "placement": "forward",
+              "role": "W[2]-hardness of Dominating Set by solution budget before the connectedness transfer"
+            },
+            {
+              "editionId": "journal",
+              "locator": "§5.1, pp. 384–385",
+              "paperId": "guha-khuller1998-connected-dominating-set",
+              "placement": "forward",
+              "role": "Earlier polynomial reduction from Set Cover, increasing the optimum by exactly one"
             }
           ],
           "statement": "Under FPT ≠ W[1], no deterministic algorithm solves this decision problem within the stated running time.",
@@ -3862,13 +3902,6 @@
           ],
           "sources": [
             {
-              "editionId": "bulletin",
-              "locator": "Theorem 6.3",
-              "paperId": "lms2011",
-              "placement": "statement",
-              "role": "benchmark"
-            },
-            {
               "editionId": "journal",
               "locator": "Theorem 1.3, p. 17:4",
               "paperId": "cygan-cut-count",
@@ -4156,14 +4189,14 @@
           "sources": [
             {
               "editionId": "proceedings",
-              "locator": "Theorem 2(ii) and Section 3, proof of statement (ii)",
+              "locator": "p. 67:2, Theorem 2(ii), p. 67:6, and discussion of statement (ii), p. 67:8",
               "paperId": "galby-et-al2024-directed-steiner",
               "placement": "statement",
-              "role": "conditional lower bound"
+              "role": "Published statement for out-star demands, using the earlier planar Steiner Tree lower bound"
             },
             {
               "editionId": "focs",
-              "locator": "Theorem I.2",
+              "locator": "Theorem I.2, p. 475",
               "paperId": "marx-pilipczuk-pilipczuk2018-steiner",
               "placement": "forward",
               "role": "underlying undirected planar Steiner Tree reduction"
@@ -4412,21 +4445,21 @@
           "sources": [
             {
               "editionId": "journal",
-              "locator": "Independent Set completeness, with Clique by complementation",
+              "locator": "Corollary 3.2, with Clique by complementation",
               "paperId": "df1995",
               "placement": "proof",
               "role": "source completeness"
             },
             {
               "editionId": "proceedings",
-              "locator": "Lemma 14",
+              "locator": "Lemma 14 and proof, pp. 81:11–81:12",
               "paperId": "lin2019",
               "placement": "proof",
               "role": "source reduction"
             },
             {
               "editionId": "thesis",
-              "locator": "Section 4.1.1, Theorem 4.1, pp. 33–34",
+              "locator": "Section 4.1.1, proof of Theorem 4.1, p. 33",
               "paperId": "froese2012",
               "placement": "proof",
               "role": "address construction"
@@ -6392,7 +6425,7 @@
             },
             {
               "editionId": "proceedings",
-              "locator": "Lemma 14",
+              "locator": "Lemma 14 and proof, pp. 81:11–81:12",
               "paperId": "lin2019",
               "placement": "proof",
               "role": "compact reduction to Set Cover"
@@ -7655,6 +7688,13 @@
               "paperId": "lms2011",
               "placement": "statement",
               "role": "conditional lower bound"
+            },
+            {
+              "editionId": "journal",
+              "locator": "§2.1, Theorem 1 and its reduction, pp. 145–146",
+              "paperId": "fellows-et-al2011-colorful-treewidth",
+              "placement": "forward",
+              "role": "Original linear-treewidth List Coloring reduction, upstream of the CSP encoding"
             }
           ],
           "statement": "Under ETH, no deterministic algorithm solves the stated decision problem within the stated running time.",
@@ -8301,6 +8341,20 @@
               "paperId": "lms2011",
               "placement": "statement",
               "role": "conditional lower bound"
+            },
+            {
+              "editionId": "journal",
+              "locator": "Corollary 2, p. 524, and Theorem 5, p. 526",
+              "paperId": "ipz2001",
+              "placement": "forward",
+              "role": "Original linear-size sparse SAT transfer to Vertex Cover"
+            },
+            {
+              "editionId": "book",
+              "locator": "Exercise 14.2(c), p. 515",
+              "paperId": "cygan2015",
+              "placement": "forward",
+              "role": "Transfer from Vertex Cover by enforcing edge constraints with cycles"
             }
           ],
           "statement": "Under ETH, no deterministic algorithm solves the stated decision problem within the stated running time.",
@@ -8629,6 +8683,13 @@
               "paperId": "cygan2015",
               "placement": "statement",
               "role": "conditional lower bound"
+            },
+            {
+              "editionId": "journal",
+              "locator": "Corollary 2, p. 524, and Theorem 5, p. 526",
+              "paperId": "ipz2001",
+              "placement": "forward",
+              "role": "Original linear-size sparse SAT transfer to Vertex Cover"
             }
           ],
           "statement": "Under ETH, no deterministic algorithm solves the stated decision problem within the stated running time.",
@@ -9310,18 +9371,11 @@
           ],
           "sources": [
             {
-              "editionId": "oct30",
-              "locator": "Proposition 2(b), p. 3",
+              "editionId": "v3",
+              "locator": "§3, Proposition 2(b), p. 4",
               "paperId": "szeider2026",
               "placement": "statement",
               "role": "theorem"
-            },
-            {
-              "editionId": "v3",
-              "locator": "November 9 revision",
-              "paperId": "szeider2026",
-              "placement": "context",
-              "role": "preferred edition"
             }
           ],
           "statement": "Under the k × k Clique Hypothesis, no deterministic algorithm solves the stated decision problem within the stated running time.",
@@ -9425,18 +9479,11 @@
           "effective": false,
           "evidence": [
             {
-              "editionId": "oct30",
-              "locator": "Proposition 2(b), p. 3",
+              "editionId": "v3",
+              "locator": "§3, Proposition 2(b), p. 4",
               "paperId": "szeider2026",
               "placement": "statement",
               "role": "theorem"
-            },
-            {
-              "editionId": "v3",
-              "locator": "November 9 revision",
-              "paperId": "szeider2026",
-              "placement": "context",
-              "role": "preferred edition"
             }
           ],
           "hypothesis": {
@@ -9490,18 +9537,11 @@
           "effective": false,
           "evidence": [
             {
-              "editionId": "oct30",
-              "locator": "Proposition 2(b), p. 3",
+              "editionId": "v3",
+              "locator": "§3, Proposition 2(b), p. 4",
               "paperId": "szeider2026",
               "placement": "statement",
               "role": "theorem"
-            },
-            {
-              "editionId": "v3",
-              "locator": "November 9 revision",
-              "paperId": "szeider2026",
-              "placement": "context",
-              "role": "preferred edition"
             }
           ],
           "hypothesis": {
@@ -9681,13 +9721,6 @@
               "paperId": "cygan2015",
               "placement": "context",
               "role": "textbook statement"
-            },
-            {
-              "editionId": "bulletin",
-              "locator": "Theorem 4.6, p. 56",
-              "paperId": "lms2011",
-              "placement": "context",
-              "role": "earlier natural-coordinate statement"
             }
           ],
           "statement": "Under ETH, no deterministic algorithm solves the stated decision problem within the stated running time.",
@@ -10608,6 +10641,13 @@
               "paperId": "cygan2015",
               "placement": "statement",
               "role": "benchmark"
+            },
+            {
+              "editionId": "journal",
+              "locator": "Theorem 5.5, p. 1360",
+              "paperId": "chkx2006",
+              "placement": "forward",
+              "role": "Original Clique lower bound under the subexponential-time SNP premise"
             }
           ],
           "statement": "Under ETH, no deterministic algorithm solves Grid Tiling within the stated running time.",
@@ -10676,17 +10716,17 @@
           "sources": [
             {
               "editionId": "v3",
-              "locator": "Proposition 1 and Table 1",
+              "locator": "§3, Proposition 1, pp. 3–4, and Table 1, second row, p. 5",
               "paperId": "szeider2026",
               "placement": "statement",
               "role": "benchmark"
             },
             {
-              "editionId": "oct30",
-              "locator": "§3, Proposition 1 and Table 1, second row",
-              "paperId": "szeider2026",
+              "editionId": "book",
+              "locator": "Theorem 14.28, pp. 490–491",
+              "paperId": "cygan2015",
               "placement": "statement",
-              "role": "benchmark"
+              "role": "underlying reduction"
             }
           ],
           "statement": "Under the k × k Clique Hypothesis, no deterministic algorithm solves Grid Tiling within the stated running time.",
@@ -10807,6 +10847,13 @@
               "paperId": "cygan2015",
               "placement": "statement",
               "role": "benchmark"
+            },
+            {
+              "editionId": "journal",
+              "locator": "Theorem 3.1 and Corollary 3.2",
+              "paperId": "df1995",
+              "placement": "forward",
+              "role": "Original W[1]-completeness of Clique before the Grid Tiling reduction"
             }
           ],
           "statement": "Under FPT ≠ W[1], no deterministic algorithm solves Grid Tiling within the stated running time.",
@@ -10858,14 +10905,7 @@
             },
             {
               "editionId": "v3",
-              "locator": "Proposition 1 and Table 1",
-              "paperId": "szeider2026",
-              "placement": "statement",
-              "role": "benchmark"
-            },
-            {
-              "editionId": "oct30",
-              "locator": "§3, Proposition 1 and Table 1, second row",
+              "locator": "§3, Proposition 1, pp. 3–4, and Table 1, second row, p. 5",
               "paperId": "szeider2026",
               "placement": "statement",
               "role": "benchmark"
@@ -10902,14 +10942,7 @@
             },
             {
               "editionId": "v3",
-              "locator": "Proposition 1 and Table 1",
-              "paperId": "szeider2026",
-              "placement": "statement",
-              "role": "benchmark"
-            },
-            {
-              "editionId": "oct30",
-              "locator": "§3, Proposition 1 and Table 1, second row",
+              "locator": "§3, Proposition 1, pp. 3–4, and Table 1, second row, p. 5",
               "paperId": "szeider2026",
               "placement": "statement",
               "role": "benchmark"
@@ -11129,7 +11162,7 @@
             },
             {
               "editionId": "journal",
-              "locator": "Section 3, p. 525, following Theorem 5",
+              "locator": "§3, p. 526, following Theorem 5",
               "paperId": "ipz2001",
               "placement": "proof",
               "role": "linear-size reduction to Hamiltonian Circuit"
@@ -11410,7 +11443,7 @@
             },
             {
               "editionId": "journal",
-              "locator": "Section 3, p. 525, following Theorem 5",
+              "locator": "§3, p. 526, following Theorem 5",
               "paperId": "ipz2001",
               "placement": "proof",
               "role": "linear-size reduction to Hamiltonian Circuit"
@@ -11690,7 +11723,7 @@
             },
             {
               "editionId": "journal",
-              "locator": "Section 3, p. 525, following Theorem 5",
+              "locator": "§3, p. 526, following Theorem 5",
               "paperId": "ipz2001",
               "placement": "proof",
               "role": "linear-size reduction to Hamiltonian Circuit"
@@ -13099,13 +13132,13 @@
                     "boundRevision": 2,
                     "proof": {
                       "proofId": "classical-graph-sh-converse",
-                      "revision": 1,
+                      "revision": 2,
                       "theorem": "is-order-sh-converse"
                     },
-                    "reviewId": "is-order-sh-converse-review",
+                    "reviewId": "is-order-sh-converse-review-r2",
                     "source": {
-                      "editionId": "v1",
-                      "locator": "Lemma 2.2, pp. 5–6",
+                      "editionId": "v2",
+                      "locator": "Lemma 2.2, pp. 6–7 (decision interface)",
                       "paperId": "sh26",
                       "placement": "proof",
                       "role": "quantitative decision sparsification, preprint dependency"
@@ -14855,10 +14888,10 @@
                     "hypothesisRevision": 1,
                     "proof": {
                       "proofId": "ilp-equations-w1-effective",
-                      "revision": 2,
+                      "revision": 3,
                       "theorem": "ilp-equations-w1-effective"
                     },
-                    "reviewId": "ilp-equations-w1-all-ones-review"
+                    "reviewId": "ilp-equations-w1-all-ones-r3-citation-review"
                   }
                 ],
                 "status": "established"
@@ -14885,7 +14918,7 @@
           "proofs": [
             {
               "proofId": "ilp-equations-w1-effective",
-              "revision": 2,
+              "revision": 3,
               "theorem": "ilp-equations-w1-effective"
             }
           ],
@@ -14985,7 +15018,7 @@
           "evidence": [
             {
               "proofId": "ilp-equations-w1-effective",
-              "revision": 2,
+              "revision": 3,
               "theorem": "ilp-equations-w1-effective"
             }
           ],
@@ -15090,7 +15123,7 @@
           "evidence": [
             {
               "proofId": "ilp-equations-w1-effective",
-              "revision": 2,
+              "revision": 3,
               "theorem": "ilp-equations-w1-effective"
             }
           ],
@@ -15184,6 +15217,13 @@
           ],
           "sources": [
             {
+              "editionId": "journal",
+              "locator": "§2.1, Theorem 1 and its reduction, pp. 145–146",
+              "paperId": "fellows-et-al2011-colorful-treewidth",
+              "placement": "forward",
+              "role": "Original polynomial-time reduction from Multicolored Clique, with treewidth at most the number of colors"
+            },
+            {
               "editionId": "book",
               "locator": "Theorem 14.29, pp. 492–493 (planar hard instances)",
               "paperId": "cygan2015",
@@ -15264,17 +15304,17 @@
           "sources": [
             {
               "editionId": "v3",
-              "locator": "Proposition 1 and Table 1",
+              "locator": "§3, Proposition 1, pp. 3–4, and Table 1, second row, p. 5",
               "paperId": "szeider2026",
               "placement": "statement",
               "role": "benchmark"
             },
             {
-              "editionId": "oct30",
-              "locator": "Proposition 1 and Table 1, second row; transfer in Cygan et al., Theorem 14.29",
-              "paperId": "szeider2026",
+              "editionId": "book",
+              "locator": "Theorem 14.29, pp. 492–493",
+              "paperId": "cygan2015",
               "placement": "statement",
-              "role": "benchmark"
+              "role": "underlying reduction"
             }
           ],
           "statement": "Under the k × k Clique Hypothesis, no deterministic algorithm solves List Coloring within the stated running time.",
@@ -15343,11 +15383,11 @@
           ],
           "sources": [
             {
-              "editionId": "book",
-              "locator": "Theorem 14.29 (parameterized Grid Tiling reduction)",
-              "paperId": "cygan2015",
+              "editionId": "journal",
+              "locator": "§2.1, Theorem 1 and its reduction, pp. 145–146",
+              "paperId": "fellows-et-al2011-colorful-treewidth",
               "placement": "statement",
-              "role": "benchmark"
+              "role": "W[1]-hardness"
             }
           ],
           "statement": "Under FPT ≠ W[1], no deterministic algorithm solves List Coloring within the stated running time.",
@@ -15402,14 +15442,7 @@
             },
             {
               "editionId": "v3",
-              "locator": "Proposition 1 and Table 1",
-              "paperId": "szeider2026",
-              "placement": "statement",
-              "role": "benchmark"
-            },
-            {
-              "editionId": "oct30",
-              "locator": "Proposition 1 and Table 1, second row; transfer in Cygan et al., Theorem 14.29",
+              "locator": "§3, Proposition 1, pp. 3–4, and Table 1, second row, p. 5",
               "paperId": "szeider2026",
               "placement": "statement",
               "role": "benchmark"
@@ -15453,14 +15486,7 @@
             },
             {
               "editionId": "v3",
-              "locator": "Proposition 1 and Table 1",
-              "paperId": "szeider2026",
-              "placement": "statement",
-              "role": "benchmark"
-            },
-            {
-              "editionId": "oct30",
-              "locator": "Proposition 1 and Table 1, second row; transfer in Cygan et al., Theorem 14.29",
+              "locator": "§3, Proposition 1, pp. 3–4, and Table 1, second row, p. 5",
               "paperId": "szeider2026",
               "placement": "statement",
               "role": "benchmark"
@@ -15622,6 +15648,13 @@
           ],
           "sources": [
             {
+              "editionId": "journal",
+              "locator": "Theorem 4, p. 525",
+              "paperId": "ipz2001",
+              "placement": "forward",
+              "role": "Earlier linear-size reduction from 3-SAT to 3-Coloring under the SNP subexponential-time comparison"
+            },
+            {
               "editionId": "bulletin",
               "locator": "Theorem 3.2, PDF p. 12",
               "paperId": "lms2011",
@@ -15664,13 +15697,13 @@
                     "boundRevision": 1,
                     "proof": {
                       "proofId": "three-coloring-sh-converse",
-                      "revision": 1,
+                      "revision": 2,
                       "theorem": "color-sh-converse"
                     },
-                    "reviewId": "three-coloring-sh-converse-review",
+                    "reviewId": "three-coloring-sh-converse-review-r2",
                     "source": {
-                      "editionId": "v1",
-                      "locator": "Lemma 2.2, printed pp. 5–6",
+                      "editionId": "v2",
+                      "locator": "Lemma 2.2, pp. 6–7 (decision interface)",
                       "paperId": "sh26",
                       "role": "preprint dependency"
                     }
@@ -15685,8 +15718,8 @@
                     "boundRevision": 1,
                     "reviewId": "color-sh-review",
                     "source": {
-                      "editionId": "v1",
-                      "locator": "Table 1 and Theorem 3.1",
+                      "editionId": "v2",
+                      "locator": "Table 1, 3-Coloring row, p. 4, and Theorem 3.1, p. 8",
                       "paperId": "sh26",
                       "role": "preprint implication"
                     }
@@ -15738,8 +15771,8 @@
               "role": "benchmark"
             },
             {
-              "editionId": "v1",
-              "locator": "Lemma 2.2, printed pp. 5–6",
+              "editionId": "v2",
+              "locator": "Lemma 2.2, pp. 6–7 (decision interface)",
               "paperId": "sh26",
               "placement": "proof",
               "role": "preprint dependency"
@@ -15790,8 +15823,8 @@
           "effective": false,
           "evidence": [
             {
-              "editionId": "v1",
-              "locator": "Table 1 and Theorem 3.1",
+              "editionId": "v2",
+              "locator": "Table 1, 3-Coloring row, p. 4, and Theorem 3.1, p. 8",
               "paperId": "sh26",
               "placement": "forward",
               "role": "benchmark"
@@ -15850,8 +15883,8 @@
           "effective": false,
           "evidence": [
             {
-              "editionId": "v1",
-              "locator": "Table 1 and Theorem 3.1",
+              "editionId": "v2",
+              "locator": "Table 1, 3-Coloring row, p. 4, and Theorem 3.1, p. 8",
               "paperId": "sh26",
               "placement": "forward",
               "role": "benchmark"
@@ -15927,7 +15960,7 @@
             },
             {
               "proofId": "three-coloring-sh-converse",
-              "revision": 1,
+              "revision": 2,
               "theorem": "color-sh-converse"
             }
           ],
@@ -16387,9 +16420,9 @@
           ],
           "sources": [
             {
-              "editionId": "bulletin",
-              "locator": "Theorem 4.5, PDF p. 16",
-              "paperId": "lms2011",
+              "editionId": "journal",
+              "locator": "Theorem 3.1, p. 687",
+              "paperId": "lms2018",
               "placement": "statement",
               "role": "benchmark"
             }
@@ -16995,13 +17028,6 @@
               "paperId": "lms2018",
               "placement": "statement",
               "role": "lower bound"
-            },
-            {
-              "editionId": "bulletin",
-              "locator": "Theorem 4.4",
-              "paperId": "lms2011",
-              "placement": "statement",
-              "role": "lower bound"
             }
           ],
           "statement": "Under ETH, no deterministic algorithm decides k × k Clique within the stated running time.",
@@ -17461,6 +17487,13 @@
               "paperId": "lms2011",
               "placement": "statement",
               "role": "benchmark"
+            },
+            {
+              "editionId": "journal",
+              "locator": "§3, p. 526, following Theorem 5",
+              "paperId": "ipz2001",
+              "placement": "forward",
+              "role": "Original sparse-SAT transfer to Hamiltonian Circuit, upstream of the Hamiltonian Path and Longest Path transfer"
             }
           ],
           "statement": "Under ETH, no deterministic algorithm solves Longest Path within the stated running time.",
@@ -17539,7 +17572,7 @@
             },
             {
               "editionId": "journal",
-              "locator": "Section 3, p. 525, following Theorem 5",
+              "locator": "§3, p. 526, following Theorem 5",
               "paperId": "ipz2001",
               "placement": "proof",
               "role": "linear-size reduction to Hamiltonian Circuit"
@@ -18446,6 +18479,7 @@
             },
             {
               "editionId": "arxiv-v1",
+              "editionReason": "The journal gives the pathwidth lower bound but omits Lemma C.22, which gives the transfer that adds at most three to the supplied pathwidth.",
               "locator": "Appendix C.4, Lemma C.22, p. 70",
               "paperId": "cygan-cut-count",
               "placement": "statement",
@@ -18549,6 +18583,7 @@
             },
             {
               "editionId": "arxiv-v1",
+              "editionReason": "The journal states the lower bounds but omits the pathwidth constructions in Appendix C.2–C.4 that the Atlas proof uses.",
               "locator": "Appendix C.2–C.4",
               "paperId": "cygan-cut-count",
               "placement": "proof",
@@ -18647,6 +18682,7 @@
             },
             {
               "editionId": "arxiv-v1",
+              "editionReason": "The journal gives the pathwidth lower bound but omits Lemma C.22, which gives the transfer that adds at most three to the supplied pathwidth.",
               "locator": "Appendix C.4, Lemma C.22, p. 70",
               "paperId": "cygan-cut-count",
               "placement": "statement",
@@ -18698,6 +18734,7 @@
             },
             {
               "editionId": "arxiv-v1",
+              "editionReason": "The journal gives the pathwidth lower bound but omits Lemma C.22, which gives the transfer that adds at most three to the supplied pathwidth.",
               "locator": "Appendix C.4, Lemma C.22, p. 70",
               "paperId": "cygan-cut-count",
               "placement": "statement",
@@ -19665,18 +19702,27 @@
           ],
           "sources": [
             {
-              "editionId": "focs",
-              "locator": "Introduction, p. 798",
-              "paperId": "lss2022-min-k-cut",
-              "placement": "statement",
-              "role": "historical exact lower bound"
-            },
-            {
               "editionId": "journal",
               "locator": "Theorem 4.3 and its k-Cut proof, pp. 228–230",
               "paperId": "ccfhjkx2005",
               "placement": "statement",
-              "role": "earlier weighted k-Cut lower bound and Clique reduction"
+              "role": "Original weighted k-Cut time lower bound under the subexponential-time SNP premise, using the reduction from Clique"
+            },
+            {
+              "editionId": "focs",
+              "editionReason": "The proceedings explicitly state the excluded exact running time with a parameter prefactor on p. 798. The accessible journal abstract does not give this historical statement, and its locator in the full journal article remains unverified.",
+              "locator": "§I, p. 798",
+              "paperId": "lss2022-min-k-cut",
+              "placement": "statement",
+              "role": "Later explicit formulation under ETH, including the parameter prefactor"
+            },
+            {
+              "editionId": "manuscript",
+              "editionReason": "The manuscript supplies the component threshold k+1 and the explicit graph size used in the ETH transfer. The publisher abstract confirms the qualitative result, and the journal proof locator remains unverified.",
+              "locator": "§3, Theorem 1 and its proof",
+              "paperId": "downey-et-al2003-k-cut",
+              "placement": "forward",
+              "role": "Original Clique reduction with component threshold k+1 and polynomial graph size"
             }
           ],
           "statement": "Under ETH, no deterministic algorithm solves Minimum k-Cut within the stated running time.",
@@ -19750,6 +19796,13 @@
               "paperId": "ccfhjkx2005",
               "placement": "statement",
               "role": "weighted k-Cut W[1]-hardness"
+            },
+            {
+              "editionId": "journal",
+              "locator": "Abstract",
+              "paperId": "downey-et-al2003-k-cut",
+              "placement": "statement",
+              "role": "Original W[1]-hardness of weighted k-Cut by number of components"
             }
           ],
           "statement": "Under FPT ≠ W[1], no deterministic algorithm solves Minimum k-Cut within the stated running time.",
@@ -19878,9 +19931,9 @@
           ],
           "sources": [
             {
-              "editionId": "bulletin",
-              "locator": "Theorem 5.2, p. 58",
-              "paperId": "lms2011",
+              "editionId": "journal",
+              "locator": "Section 2, Lemma 1, p. 56",
+              "paperId": "fellows-hermelin-rosamond-vialette2009",
               "placement": "statement",
               "role": "parameter-preserving color-copy reduction"
             },
@@ -19890,6 +19943,13 @@
               "paperId": "lms2011",
               "placement": "statement",
               "role": "benchmark"
+            },
+            {
+              "editionId": "journal",
+              "locator": "Theorem 5.5, p. 1360",
+              "paperId": "chkx2006",
+              "placement": "statement",
+              "role": "Original quantitative Clique lower bound used in the transfer"
             }
           ],
           "statement": "Under ETH, no deterministic algorithm decides Multicolored Clique within the stated running time.",
@@ -19937,9 +19997,9 @@
               "role": "benchmark"
             },
             {
-              "editionId": "bulletin",
-              "locator": "Theorem 5.2, p. 58",
-              "paperId": "lms2011",
+              "editionId": "journal",
+              "locator": "Section 2, Lemma 1, p. 56",
+              "paperId": "fellows-hermelin-rosamond-vialette2009",
               "placement": "statement",
               "role": "parameter-preserving color-copy reduction"
             }
@@ -20004,9 +20064,9 @@
                     "hypothesisRevision": 1,
                     "reviewId": "multicolored-clique-colors-w1-equivalence-review",
                     "source": {
-                      "editionId": "notes",
-                      "locator": "Definition immediately before Theorem 1",
-                      "paperId": "koutecky2026-hard-side",
+                      "editionId": "journal",
+                      "locator": "Section 2, Lemma 1 and the following observation on deleting same-color edges, p. 56",
+                      "paperId": "fellows-hermelin-rosamond-vialette2009",
                       "placement": "proof",
                       "role": "deletion of same-color edges followed by Clique membership"
                     }
@@ -20034,9 +20094,9 @@
                     "hypothesisRevision": 1,
                     "reviewId": "multicolored-clique-colors-w1-equivalence-review",
                     "source": {
-                      "editionId": "notes",
-                      "locator": "Theorem 1",
-                      "paperId": "koutecky2026-hard-side",
+                      "editionId": "journal",
+                      "locator": "Section 2, Lemma 1, p. 56",
+                      "paperId": "fellows-hermelin-rosamond-vialette2009",
                       "placement": "forward",
                       "role": "parameter-preserving hardness reduction from Clique"
                     }
@@ -20084,17 +20144,10 @@
           "sources": [
             {
               "editionId": "journal",
-              "locator": "Corollary 3.2 and Theorem 3.1",
-              "paperId": "df1995",
+              "locator": "Section 2, Lemma 1, p. 56",
+              "paperId": "fellows-hermelin-rosamond-vialette2009",
               "placement": "statement",
               "role": "W[1]-completeness"
-            },
-            {
-              "editionId": "notes",
-              "locator": "Theorem 1",
-              "paperId": "koutecky2026-hard-side",
-              "placement": "statement",
-              "role": "hardness by a parameter-preserving reduction"
             }
           ],
           "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Multicolored Clique within the stated running time.",
@@ -20166,9 +20219,9 @@
               "role": "benchmark"
             },
             {
-              "editionId": "bulletin",
-              "locator": "Theorem 5.2, p. 58",
-              "paperId": "lms2011",
+              "editionId": "journal",
+              "locator": "Section 2, Lemma 1, p. 56",
+              "paperId": "fellows-hermelin-rosamond-vialette2009",
               "placement": "statement",
               "role": "parameter-preserving color-copy reduction"
             }
@@ -20210,9 +20263,9 @@
               "role": "benchmark"
             },
             {
-              "editionId": "bulletin",
-              "locator": "Theorem 5.2, p. 58",
-              "paperId": "lms2011",
+              "editionId": "journal",
+              "locator": "Section 2, Lemma 1, p. 56",
+              "paperId": "fellows-hermelin-rosamond-vialette2009",
               "placement": "statement",
               "role": "parameter-preserving color-copy reduction"
             }
@@ -20648,6 +20701,13 @@
               "paperId": "cygan2015",
               "placement": "statement",
               "role": "benchmark"
+            },
+            {
+              "editionId": "journal",
+              "locator": "Corollary 1.6 and §6",
+              "paperId": "marx2010-treewidth",
+              "placement": "forward",
+              "role": "Original ETH lower bound for Subgraph Isomorphism parameterized by pattern edges"
             }
           ],
           "statement": "Under ETH, no deterministic algorithm solves Odd Set within the stated running time.",
@@ -20716,17 +20776,17 @@
           "sources": [
             {
               "editionId": "v3",
-              "locator": "Proposition 1 and Table 1",
+              "locator": "§3, Proposition 1, pp. 3–4, and Table 1, third row, p. 5; quadratic parameter transfer discussed on p. 4",
               "paperId": "szeider2026",
               "placement": "statement",
               "role": "benchmark"
             },
             {
-              "editionId": "oct30",
-              "locator": "§3, Proposition 1 and Table 1, third row (quadratic parameter growth)",
-              "paperId": "szeider2026",
+              "editionId": "book",
+              "locator": "Theorems 13.31–13.32, pp. 454–456, and Exercise 14.11, p. 516",
+              "paperId": "cygan2015",
               "placement": "statement",
-              "role": "benchmark"
+              "role": "underlying reduction"
             }
           ],
           "statement": "Under the k × k Clique Hypothesis, no deterministic algorithm solves Odd Set within the stated running time.",
@@ -20768,7 +20828,7 @@
             "The parameter factor f is an arbitrary computable function and the exponent of B is an arbitrary fixed constant."
           ],
           "reader": {
-            "explanation": "The deterministic reduction starts from Multicolored Clique and uses a budget that depends only on the number of colors.",
+            "explanation": "The original reduction starts from Perfect Code. Interpreting red vertices as ground elements and each blue vertex neighborhood as a listed set preserves the budget and every odd-intersection test. The textbook also gives a reduction from Multicolored Clique.",
             "label": "Fixed-parameter tractability",
             "revision": 1,
             "title": "Odd Set under FPT ≠ W[1]: Fixed-parameter tractability"
@@ -20782,11 +20842,19 @@
           ],
           "sources": [
             {
+              "editionId": "manuscript",
+              "editionReason": "The inspected manuscript explicitly defines at-most-k Odd Set and proves its W[1]-hardness in Theorem 2. The location of this particular theorem in the full journal edition remains unverified.",
+              "locator": "§2, Odd Set definition and Theorems 1–2",
+              "paperId": "downey-fellows-vardy-whittle1999-coding",
+              "placement": "statement",
+              "role": "Original W[1]-hardness for the at-most-k version, by reduction from Perfect Code"
+            },
+            {
               "editionId": "book",
               "locator": "Theorems 13.31–13.32, pp. 454–456",
               "paperId": "cygan2015",
               "placement": "statement",
-              "role": "parameterized hardness"
+              "role": "Alternative hardness reduction from Multicolored Clique"
             }
           ],
           "statement": "Under FPT ≠ W[1], no deterministic algorithm solves this decision problem within the stated running time.",
@@ -20834,14 +20902,7 @@
             },
             {
               "editionId": "v3",
-              "locator": "Proposition 1 and Table 1",
-              "paperId": "szeider2026",
-              "placement": "statement",
-              "role": "benchmark"
-            },
-            {
-              "editionId": "oct30",
-              "locator": "§3, Proposition 1 and Table 1, third row (quadratic parameter growth)",
+              "locator": "§3, Proposition 1, pp. 3–4, and Table 1, third row, p. 5; quadratic parameter transfer discussed on p. 4",
               "paperId": "szeider2026",
               "placement": "statement",
               "role": "benchmark"
@@ -20878,14 +20939,7 @@
             },
             {
               "editionId": "v3",
-              "locator": "Proposition 1 and Table 1",
-              "paperId": "szeider2026",
-              "placement": "statement",
-              "role": "benchmark"
-            },
-            {
-              "editionId": "oct30",
-              "locator": "§3, Proposition 1 and Table 1, third row (quadratic parameter growth)",
+              "locator": "§3, Proposition 1, pp. 3–4, and Table 1, third row, p. 5; quadratic parameter transfer discussed on p. 4",
               "paperId": "szeider2026",
               "placement": "statement",
               "role": "benchmark"
@@ -21015,6 +21069,20 @@
               "paperId": "cygan2015",
               "placement": "statement",
               "role": "benchmark"
+            },
+            {
+              "editionId": "journal",
+              "locator": "Theorems 2.1–2.2, pp. 248–251",
+              "paperId": "garey-johnson-stockmeyer1976",
+              "placement": "forward",
+              "role": "direct 3SAT and planar crossover reductions"
+            },
+            {
+              "editionId": "journal",
+              "locator": "Theorem 2, p. 333, invoking the planarization construction in §3",
+              "paperId": "lichtenstein1982",
+              "placement": "forward",
+              "role": "quadratic Planar 3SAT reduction"
             }
           ],
           "statement": "Under ETH, no deterministic algorithm decides Planar 3-Coloring within the stated running time.",
@@ -21255,17 +21323,17 @@
           "sources": [
             {
               "editionId": "v3",
-              "locator": "Table 1, Weak ETH row",
+              "locator": "§3, Table 1, fourth row, p. 5 (Cygan et al., Theorem 14.8)",
               "paperId": "szeider2026",
               "placement": "statement",
               "role": "benchmark"
             },
             {
-              "editionId": "oct30",
-              "locator": "Table 1, Weak ETH row",
-              "paperId": "szeider2026",
+              "editionId": "journal",
+              "locator": "Theorem 2, p. 333 (quadratic planarity reduction)",
+              "paperId": "lichtenstein1982",
               "placement": "statement",
-              "role": "benchmark"
+              "role": "underlying reduction"
             }
           ],
           "statement": "Under SH, no deterministic algorithm solves Planar 3SAT within the stated running time.",
@@ -21320,14 +21388,7 @@
             },
             {
               "editionId": "v3",
-              "locator": "Table 1, Weak ETH row",
-              "paperId": "szeider2026",
-              "placement": "statement",
-              "role": "benchmark"
-            },
-            {
-              "editionId": "oct30",
-              "locator": "Table 1, Weak ETH row",
+              "locator": "§3, Table 1, fourth row, p. 5 (Cygan et al., Theorem 14.8)",
               "paperId": "szeider2026",
               "placement": "statement",
               "role": "benchmark"
@@ -21393,14 +21454,7 @@
             },
             {
               "editionId": "v3",
-              "locator": "Table 1, Weak ETH row",
-              "paperId": "szeider2026",
-              "placement": "statement",
-              "role": "benchmark"
-            },
-            {
-              "editionId": "oct30",
-              "locator": "Table 1, Weak ETH row",
+              "locator": "§3, Table 1, fourth row, p. 5 (Cygan et al., Theorem 14.8)",
               "paperId": "szeider2026",
               "placement": "statement",
               "role": "benchmark"
@@ -21589,6 +21643,13 @@
               "paperId": "sh26",
               "placement": "statement",
               "role": "benchmark"
+            },
+            {
+              "editionId": "journal",
+              "locator": "Theorem 2, p. 333, invoking the planarization construction in §3",
+              "paperId": "lichtenstein1982",
+              "placement": "forward",
+              "role": "quadratic Planar 3SAT reduction"
             }
           ],
           "statement": "Under SH, no deterministic algorithm solves Planar 3SAT within the stated running time.",
@@ -21832,11 +21893,18 @@
           ],
           "sources": [
             {
-              "editionId": "oct30",
-              "locator": "Table 1, Weak ETH row",
+              "editionId": "v3",
+              "locator": "§3, Table 1, fourth row, p. 5 (Cygan et al., Theorem 14.11)",
               "paperId": "szeider2026",
               "placement": "statement",
               "role": "lower-bound statement"
+            },
+            {
+              "editionId": "journal",
+              "locator": "Corollary 5.1 and the reduction it invokes, p. 805",
+              "paperId": "cai-juedes2003",
+              "placement": "statement",
+              "role": "underlying reduction"
             }
           ],
           "statement": "Under SH, no deterministic algorithm solves Planar Dominating Set within the stated running time.",
@@ -21895,8 +21963,8 @@
               "role": "lower-bound statement"
             },
             {
-              "editionId": "oct30",
-              "locator": "Table 1, Weak ETH row",
+              "editionId": "v3",
+              "locator": "§3, Table 1, fourth row, p. 5 (Cygan et al., Theorem 14.11)",
               "paperId": "szeider2026",
               "placement": "statement",
               "role": "lower-bound statement"
@@ -21961,8 +22029,8 @@
               "role": "lower-bound statement"
             },
             {
-              "editionId": "oct30",
-              "locator": "Table 1, Weak ETH row",
+              "editionId": "v3",
+              "locator": "§3, Table 1, fourth row, p. 5 (Cygan et al., Theorem 14.11)",
               "paperId": "szeider2026",
               "placement": "statement",
               "role": "lower-bound statement"
@@ -22047,6 +22115,13 @@
               "paperId": "cygan2015",
               "placement": "statement",
               "role": "lower-bound statement"
+            },
+            {
+              "editionId": "journal",
+              "locator": "Theorem 2, p. 333, invoking the planarization construction in §3",
+              "paperId": "lichtenstein1982",
+              "placement": "forward",
+              "role": "quadratic Planar 3SAT reduction"
             }
           ],
           "statement": "Under ETH, no deterministic algorithm solves Planar Dominating Set within the stated running time.",
@@ -22085,11 +22160,25 @@
           ],
           "sources": [
             {
-              "editionId": "oct30",
-              "locator": "Table 1, Weak ETH row",
+              "editionId": "v3",
+              "locator": "§3, Table 1, fourth row, p. 5 (Cygan et al., Theorem 14.9)",
               "paperId": "szeider2026",
               "placement": "statement",
               "role": "lower-bound statement"
+            },
+            {
+              "editionId": "book",
+              "locator": "Theorem 14.9 and Exercise 14.3(b), pp. 475, 516–517",
+              "paperId": "cygan2015",
+              "placement": "statement",
+              "role": "underlying reduction"
+            },
+            {
+              "editionId": "journal",
+              "locator": "Theorem 2, p. 333, invoking the planarization construction in §3",
+              "paperId": "lichtenstein1982",
+              "placement": "forward",
+              "role": "quadratic Planar 3SAT reduction"
             }
           ],
           "statement": "Under SH, no deterministic algorithm solves Planar Dominating Set within the stated running time.",
@@ -22148,8 +22237,8 @@
               "role": "lower-bound statement"
             },
             {
-              "editionId": "oct30",
-              "locator": "Table 1, Weak ETH row",
+              "editionId": "v3",
+              "locator": "§3, Table 1, fourth row, p. 5 (Cygan et al., Theorem 14.9)",
               "paperId": "szeider2026",
               "placement": "statement",
               "role": "lower-bound statement"
@@ -22214,8 +22303,8 @@
               "role": "lower-bound statement"
             },
             {
-              "editionId": "oct30",
-              "locator": "Table 1, Weak ETH row",
+              "editionId": "v3",
+              "locator": "§3, Table 1, fourth row, p. 5 (Cygan et al., Theorem 14.9)",
               "paperId": "szeider2026",
               "placement": "statement",
               "role": "lower-bound statement"
@@ -22474,6 +22563,13 @@
               "paperId": "cygan2015",
               "placement": "statement",
               "role": "lower-bound statement"
+            },
+            {
+              "editionId": "journal",
+              "locator": "Theorems 2–3 and §4, pp. 333–335",
+              "paperId": "lichtenstein1982",
+              "placement": "forward",
+              "role": "planarization and planar Vertex Cover gadgets"
             }
           ],
           "statement": "Under ETH, no deterministic algorithm solves Planar Feedback Vertex Set within the stated running time.",
@@ -22512,11 +22608,25 @@
           ],
           "sources": [
             {
-              "editionId": "oct30",
-              "locator": "Table 1, Weak ETH row",
+              "editionId": "v3",
+              "locator": "§3, Table 1, fourth row, p. 5 (Cygan et al., Theorem 14.11)",
               "paperId": "szeider2026",
               "placement": "statement",
               "role": "lower-bound statement"
+            },
+            {
+              "editionId": "book",
+              "locator": "Theorem 14.11, p. 477",
+              "paperId": "cygan2015",
+              "placement": "statement",
+              "role": "underlying reduction"
+            },
+            {
+              "editionId": "journal",
+              "locator": "Theorems 2–3 and §4, pp. 333–335",
+              "paperId": "lichtenstein1982",
+              "placement": "forward",
+              "role": "planarization and planar Vertex Cover gadgets"
             }
           ],
           "statement": "Under SH, no deterministic algorithm solves Planar Feedback Vertex Set within the stated running time.",
@@ -22568,8 +22678,8 @@
               "role": "lower-bound statement"
             },
             {
-              "editionId": "oct30",
-              "locator": "Table 1, Weak ETH row",
+              "editionId": "v3",
+              "locator": "§3, Table 1, fourth row, p. 5 (Cygan et al., Theorem 14.11)",
               "paperId": "szeider2026",
               "placement": "statement",
               "role": "lower-bound statement"
@@ -22627,8 +22737,8 @@
               "role": "lower-bound statement"
             },
             {
-              "editionId": "oct30",
-              "locator": "Table 1, Weak ETH row",
+              "editionId": "v3",
+              "locator": "§3, Table 1, fourth row, p. 5 (Cygan et al., Theorem 14.11)",
               "paperId": "szeider2026",
               "placement": "statement",
               "role": "lower-bound statement"
@@ -22706,6 +22816,13 @@
               "paperId": "cygan2015",
               "placement": "statement",
               "role": "lower-bound statement"
+            },
+            {
+              "editionId": "journal",
+              "locator": "Theorems 2–3 and §4, pp. 333–335",
+              "paperId": "lichtenstein1982",
+              "placement": "forward",
+              "role": "planarization and planar Vertex Cover gadgets"
             }
           ],
           "statement": "Under ETH, no deterministic algorithm solves Planar Feedback Vertex Set within the stated running time.",
@@ -22744,11 +22861,25 @@
           ],
           "sources": [
             {
-              "editionId": "oct30",
-              "locator": "Table 1, Weak ETH row",
+              "editionId": "v3",
+              "locator": "§3, Table 1, fourth row, p. 5 (Cygan et al., Theorem 14.9)",
               "paperId": "szeider2026",
               "placement": "statement",
               "role": "lower-bound statement"
+            },
+            {
+              "editionId": "book",
+              "locator": "Theorem 14.9 and Exercise 14.3(c), pp. 475, 516–517",
+              "paperId": "cygan2015",
+              "placement": "statement",
+              "role": "underlying reduction"
+            },
+            {
+              "editionId": "journal",
+              "locator": "Theorems 2–3 and §4, pp. 333–335",
+              "paperId": "lichtenstein1982",
+              "placement": "forward",
+              "role": "planarization and planar Vertex Cover gadgets"
             }
           ],
           "statement": "Under SH, no deterministic algorithm solves Planar Feedback Vertex Set within the stated running time.",
@@ -22800,8 +22931,8 @@
               "role": "lower-bound statement"
             },
             {
-              "editionId": "oct30",
-              "locator": "Table 1, Weak ETH row",
+              "editionId": "v3",
+              "locator": "§3, Table 1, fourth row, p. 5 (Cygan et al., Theorem 14.9)",
               "paperId": "szeider2026",
               "placement": "statement",
               "role": "lower-bound statement"
@@ -22859,8 +22990,8 @@
               "role": "lower-bound statement"
             },
             {
-              "editionId": "oct30",
-              "locator": "Table 1, Weak ETH row",
+              "editionId": "v3",
+              "locator": "§3, Table 1, fourth row, p. 5 (Cygan et al., Theorem 14.9)",
               "paperId": "szeider2026",
               "placement": "statement",
               "role": "lower-bound statement"
@@ -22945,6 +23076,13 @@
               "paperId": "cygan2015",
               "placement": "statement",
               "role": "lower-bound statement"
+            },
+            {
+              "editionId": "journal",
+              "locator": "Construction and crossing count, pp. 709–712",
+              "paperId": "garey-johnson-tarjan1976",
+              "placement": "forward",
+              "role": "original reduction from 3SAT"
             }
           ],
           "statement": "Under ETH, no deterministic algorithm solves Planar Hamiltonian Cycle within the stated running time.",
@@ -22988,6 +23126,13 @@
               "paperId": "sh26",
               "placement": "statement",
               "role": "lower-bound statement"
+            },
+            {
+              "editionId": "journal",
+              "locator": "Construction and crossing count, pp. 709–712",
+              "paperId": "garey-johnson-tarjan1976",
+              "placement": "forward",
+              "role": "original reduction from 3SAT"
             }
           ],
           "statement": "Under SH, no deterministic algorithm solves Planar Hamiltonian Cycle within the stated running time.",
@@ -23427,8 +23572,8 @@
           ],
           "sources": [
             {
-              "editionId": "oct30",
-              "locator": "Section 3, Table 1 and Proposition 1",
+              "editionId": "v3",
+              "locator": "§3, Proposition 1, pp. 3–4, and Table 1, second row, p. 5",
               "paperId": "szeider2026",
               "placement": "statement",
               "role": "lower-bound statement"
@@ -23584,8 +23729,8 @@
               "role": "published statement of the planar d-Scattered Set lower bound"
             },
             {
-              "editionId": "oct30",
-              "locator": "Section 3, Table 1 and Proposition 1",
+              "editionId": "v3",
+              "locator": "§3, Proposition 1, pp. 3–4, and Table 1, second row, p. 5",
               "paperId": "szeider2026",
               "placement": "statement",
               "role": "lower-bound statement"
@@ -23635,8 +23780,8 @@
               "role": "published statement of the planar d-Scattered Set lower bound"
             },
             {
-              "editionId": "oct30",
-              "locator": "Section 3, Table 1 and Proposition 1",
+              "editionId": "v3",
+              "locator": "§3, Proposition 1, pp. 3–4, and Table 1, second row, p. 5",
               "paperId": "szeider2026",
               "placement": "statement",
               "role": "lower-bound statement"
@@ -23741,8 +23886,8 @@
           ],
           "sources": [
             {
-              "editionId": "accepted",
-              "locator": "Theorem 1.2 and §3",
+              "editionId": "journal",
+              "locator": "Theorem 1.2, p. 321, Remark 1.5, p. 323, and §3, pp. 328–337",
               "paperId": "chitnis-feldmann-hajiaghayi-marx-scss",
               "placement": "statement",
               "role": "ETH theorem and reduction"
@@ -23792,8 +23937,8 @@
           ],
           "sources": [
             {
-              "editionId": "accepted",
-              "locator": "Theorem 1.2 and §3",
+              "editionId": "journal",
+              "locator": "Theorem 1.2, p. 321, Remark 1.5, p. 323, and §3, pp. 328–337",
               "paperId": "chitnis-feldmann-hajiaghayi-marx-scss",
               "placement": "statement",
               "role": "W[1]-hardness statement and reduction"
@@ -23937,13 +24082,6 @@
               "role": "benchmark"
             },
             {
-              "editionId": "bulletin",
-              "locator": "Theorem 4.3, p. 54",
-              "paperId": "lms2011",
-              "placement": "statement",
-              "role": "benchmark"
-            },
-            {
               "editionId": "book",
               "locator": "Theorem 14.11, p. 477",
               "paperId": "cygan2015",
@@ -23993,6 +24131,13 @@
               "paperId": "sh26",
               "placement": "statement",
               "role": "benchmark"
+            },
+            {
+              "editionId": "journal",
+              "locator": "Lemma 5.1 (Planar Vertex Cover part) and Corollary 5.1, pp. 803–805",
+              "paperId": "cai-juedes2003",
+              "placement": "forward",
+              "role": "original square-root solution-budget exclusion"
             }
           ],
           "statement": "Under SH, no deterministic algorithm decides Planar Vertex Cover within the stated running time.",
@@ -24205,6 +24350,13 @@
               "paperId": "lms2011",
               "placement": "statement",
               "role": "benchmark"
+            },
+            {
+              "editionId": "journal",
+              "locator": "Theorems 2–3 and §4, pp. 333–335",
+              "paperId": "lichtenstein1982",
+              "placement": "forward",
+              "role": "planarization and planar Vertex Cover gadgets"
             }
           ],
           "statement": "Under ETH, no deterministic algorithm decides Planar Vertex Cover within the stated running time.",
@@ -24256,6 +24408,13 @@
               "paperId": "cygan2015",
               "placement": "statement",
               "role": "benchmark"
+            },
+            {
+              "editionId": "journal",
+              "locator": "Theorems 2–3 and §4, pp. 333–335",
+              "paperId": "lichtenstein1982",
+              "placement": "forward",
+              "role": "planarization and planar Vertex Cover gadgets"
             }
           ],
           "statement": "Under SH, no deterministic algorithm decides Planar Vertex Cover within the stated running time.",
@@ -24674,8 +24833,8 @@
           ],
           "sources": [
             {
-              "editionId": "oct30",
-              "locator": "Section 3, Table 1 and Proposition 1",
+              "editionId": "v3",
+              "locator": "§3, Proposition 1, pp. 3–4 (Clique starting bound)",
               "paperId": "szeider2026",
               "placement": "statement",
               "role": "lower-bound statement"
@@ -24839,8 +24998,8 @@
               "role": "lower-bound statement"
             },
             {
-              "editionId": "oct30",
-              "locator": "Section 3, Table 1 and Proposition 1",
+              "editionId": "v3",
+              "locator": "§3, Proposition 1, pp. 3–4 (Clique starting bound)",
               "paperId": "szeider2026",
               "placement": "statement",
               "role": "lower-bound statement"
@@ -24883,8 +25042,8 @@
               "role": "lower-bound statement"
             },
             {
-              "editionId": "oct30",
-              "locator": "Section 3, Table 1 and Proposition 1",
+              "editionId": "v3",
+              "locator": "§3, Proposition 1, pp. 3–4 (Clique starting bound)",
               "paperId": "szeider2026",
               "placement": "statement",
               "role": "lower-bound statement"
@@ -25177,7 +25336,7 @@
           "sources": [
             {
               "editionId": "focs",
-              "locator": "Theorem I.2 and Corollary I.4, p. 475",
+              "locator": "Theorem I.2, p. 475",
               "paperId": "marx-pilipczuk-pilipczuk2018-steiner",
               "placement": "statement",
               "role": "planar terminal-count lower bound"
@@ -25323,6 +25482,13 @@
               "paperId": "cygan2015",
               "placement": "statement",
               "role": "lower-bound statement"
+            },
+            {
+              "editionId": "journal",
+              "locator": "Corollary 1.6 and §6",
+              "paperId": "marx2010-treewidth",
+              "placement": "forward",
+              "role": "Original ETH lower bound for Subgraph Isomorphism parameterized by pattern edges"
             }
           ],
           "statement": "Under ETH, no deterministic algorithm solves Strongly Connected Steiner Subgraph within the stated running time.",
@@ -25359,11 +25525,18 @@
           ],
           "sources": [
             {
-              "editionId": "oct30",
-              "locator": "Section 3, Table 1 and Proposition 1",
+              "editionId": "v3",
+              "locator": "§3, Proposition 1, pp. 3–4, and Table 1, third row, p. 5; quadratic parameter transfer discussed on p. 4",
               "paperId": "szeider2026",
               "placement": "statement",
               "role": "lower-bound statement"
+            },
+            {
+              "editionId": "book",
+              "locator": "Theorem 13.33 and its proof, pp. 457–459",
+              "paperId": "cygan2015",
+              "placement": "statement",
+              "role": "underlying reduction"
             }
           ],
           "statement": "Under the k × k Clique Hypothesis, no deterministic algorithm solves Strongly Connected Steiner Subgraph within the stated running time.",
@@ -25479,8 +25652,8 @@
               "role": "lower-bound statement"
             },
             {
-              "editionId": "oct30",
-              "locator": "Section 3, Table 1 and Proposition 1",
+              "editionId": "v3",
+              "locator": "§3, Proposition 1, pp. 3–4, and Table 1, third row, p. 5; quadratic parameter transfer discussed on p. 4",
               "paperId": "szeider2026",
               "placement": "statement",
               "role": "lower-bound statement"
@@ -25516,8 +25689,8 @@
               "role": "lower-bound statement"
             },
             {
-              "editionId": "oct30",
-              "locator": "Section 3, Table 1 and Proposition 1",
+              "editionId": "v3",
+              "locator": "§3, Proposition 1, pp. 3–4, and Table 1, third row, p. 5; quadratic parameter transfer discussed on p. 4",
               "paperId": "szeider2026",
               "placement": "statement",
               "role": "lower-bound statement"
@@ -25620,13 +25793,6 @@
               "role": "lower-bound statement"
             },
             {
-              "editionId": "bulletin",
-              "locator": "Theorem 5.7, p. 60",
-              "paperId": "lms2011",
-              "placement": "statement",
-              "role": "lower-bound statement"
-            },
-            {
               "editionId": "book",
               "locator": "Theorem 14.24, pp. 488–489",
               "paperId": "cygan2015",
@@ -25668,11 +25834,18 @@
           ],
           "sources": [
             {
-              "editionId": "oct30",
-              "locator": "Section 3, Table 1 and Proposition 1",
+              "editionId": "v3",
+              "locator": "§3, Proposition 1, pp. 3–4, and Table 1, third row, p. 5; quadratic parameter transfer discussed on p. 4",
               "paperId": "szeider2026",
               "placement": "statement",
               "role": "lower-bound statement"
+            },
+            {
+              "editionId": "journal",
+              "locator": "§1, discussion following Theorem 1.5, pp. 88–89 (quadratic clique-pattern transfer)",
+              "paperId": "marx2010-treewidth",
+              "placement": "statement",
+              "role": "underlying reduction"
             }
           ],
           "statement": "Under the k × k Clique Hypothesis, no deterministic algorithm solves Subgraph Isomorphism within the stated running time.",
@@ -25809,8 +25982,8 @@
               "role": "lower-bound statement"
             },
             {
-              "editionId": "oct30",
-              "locator": "Section 3, Table 1 and Proposition 1",
+              "editionId": "v3",
+              "locator": "§3, Proposition 1, pp. 3–4, and Table 1, third row, p. 5; quadratic parameter transfer discussed on p. 4",
               "paperId": "szeider2026",
               "placement": "statement",
               "role": "lower-bound statement"
@@ -25860,8 +26033,8 @@
               "role": "lower-bound statement"
             },
             {
-              "editionId": "oct30",
-              "locator": "Section 3, Table 1 and Proposition 1",
+              "editionId": "v3",
+              "locator": "§3, Proposition 1, pp. 3–4, and Table 1, third row, p. 5; quadratic parameter transfer discussed on p. 4",
               "paperId": "szeider2026",
               "placement": "statement",
               "role": "lower-bound statement"
@@ -25963,13 +26136,6 @@
               "paperId": "etscheid-kratsch-mnich-rog-lin2017",
               "placement": "statement",
               "role": "published linear-item ETH reduction"
-            },
-            {
-              "editionId": "journal",
-              "locator": "p. 2317 and Section 5",
-              "paperId": "nederlof-swennenhuis2022",
-              "placement": "context",
-              "role": "independent statement of the item-count benchmark"
             }
           ],
           "statement": "Under ETH, no deterministic algorithm decides Subset Sum within the stated running time.",
@@ -25992,7 +26158,7 @@
           "proofs": [
             {
               "proofId": "subset-sum-item-count-sh",
-              "revision": 1,
+              "revision": 2,
               "theorem": "subset-sum-item-count-sh"
             }
           ],
@@ -26015,8 +26181,8 @@
           ],
           "sources": [
             {
-              "editionId": "v1",
-              "locator": "Lemma 2.1, p. 5",
+              "editionId": "v2",
+              "locator": "Lemma 2.1, pp. 5–6",
               "paperId": "sh26",
               "placement": "proof",
               "role": "fixed-width SAT size formulation of SH"
@@ -26694,18 +26860,11 @@
           ],
           "sources": [
             {
-              "editionId": "oct30",
-              "locator": "Proposition 2(a), p. 3",
+              "editionId": "v3",
+              "locator": "§3, Proposition 2(a), p. 4",
               "paperId": "szeider2026",
               "placement": "statement",
               "role": "theorem"
-            },
-            {
-              "editionId": "v3",
-              "locator": "November 9 revision",
-              "paperId": "szeider2026",
-              "placement": "context",
-              "role": "preferred edition"
             }
           ],
           "statement": "Under the k × k Clique Hypothesis, no deterministic algorithm solves the stated decision problem within the stated running time.",
@@ -26832,18 +26991,11 @@
           "effective": false,
           "evidence": [
             {
-              "editionId": "oct30",
-              "locator": "Proposition 2(a), p. 3",
+              "editionId": "v3",
+              "locator": "§3, Proposition 2(a), p. 4",
               "paperId": "szeider2026",
               "placement": "statement",
               "role": "theorem"
-            },
-            {
-              "editionId": "v3",
-              "locator": "November 9 revision",
-              "paperId": "szeider2026",
-              "placement": "context",
-              "role": "preferred edition"
             }
           ],
           "hypothesis": {
@@ -26869,18 +27021,11 @@
           "effective": false,
           "evidence": [
             {
-              "editionId": "oct30",
-              "locator": "Proposition 2(a), p. 3",
+              "editionId": "v3",
+              "locator": "§3, Proposition 2(a), p. 4",
               "paperId": "szeider2026",
               "placement": "statement",
               "role": "theorem"
-            },
-            {
-              "editionId": "v3",
-              "locator": "November 9 revision",
-              "paperId": "szeider2026",
-              "placement": "context",
-              "role": "preferred edition"
             }
           ],
           "hypothesis": {
@@ -27384,6 +27529,7 @@
             },
             {
               "editionId": "arxiv-v2",
+              "editionReason": "The publisher index verifies the journal theorem statement. The inspected arXiv proof supplies the explicit decision threshold and the size bounds used for the positive-rate formulation.",
               "locator": "Theorem 2 and Section 3",
               "paperId": "bonnet2026-treewidth",
               "placement": "statement",
@@ -27724,6 +27870,7 @@
             },
             {
               "editionId": "arxiv-v1",
+              "editionReason": "The proceedings proof explicitly defers the transfer from Multiset k-way Partition with targets to Theorem 8.1 of this full version.",
               "locator": "§8, Theorem 8.1",
               "paperId": "bdw2026-bin-packing",
               "placement": "forward",
@@ -27962,6 +28109,13 @@
               "paperId": "lms2011",
               "placement": "statement",
               "role": "lower-bound statement"
+            },
+            {
+              "editionId": "journal",
+              "locator": "§§2–3, proof of Theorem 1 and paragraph before Theorem 2 (unit-disk transfer)",
+              "paperId": "marx2006-geometric",
+              "placement": "forward",
+              "role": "original quadratic-budget reduction"
             }
           ],
           "statement": "Under ETH, no deterministic algorithm solves Unit Disk Dominating Set within the stated running time.",
@@ -28000,7 +28154,7 @@
           "sources": [
             {
               "editionId": "journal",
-              "locator": "Sections 2–3, reduction for domination",
+              "locator": "§§2–3, proof of Theorem 1 and paragraph before Theorem 2 (unit-disk transfer)",
               "paperId": "marx2006-geometric",
               "placement": "statement",
               "role": "lower-bound statement"
@@ -28198,6 +28352,13 @@
               "paperId": "cygan2015",
               "placement": "statement",
               "role": "benchmark"
+            },
+            {
+              "editionId": "focs",
+              "locator": "§§2 and 4, disk adaptation after the proof of Theorem 4.1",
+              "paperId": "marx2007-geometric-ptas",
+              "placement": "forward",
+              "role": "original Matrix Tiling construction"
             }
           ],
           "statement": "Under ETH, no deterministic algorithm solves Independent Set of unit disks within the stated running time.",
@@ -28302,14 +28463,7 @@
           "sources": [
             {
               "editionId": "v3",
-              "locator": "Proposition 1 and Table 1",
-              "paperId": "szeider2026",
-              "placement": "statement",
-              "role": "benchmark"
-            },
-            {
-              "editionId": "oct30",
-              "locator": "§3, geometric transfers from Grid Tiling",
+              "locator": "§3, Proposition 1, pp. 3–4, and Table 1, second row, p. 5",
               "paperId": "szeider2026",
               "placement": "statement",
               "role": "benchmark"
@@ -28320,6 +28474,13 @@
               "paperId": "cygan2015",
               "placement": "statement",
               "role": "benchmark"
+            },
+            {
+              "editionId": "focs",
+              "locator": "§§2 and 4, disk adaptation after the proof of Theorem 4.1",
+              "paperId": "marx2007-geometric-ptas",
+              "placement": "forward",
+              "role": "original Matrix Tiling construction"
             }
           ],
           "statement": "Under the k × k Clique Hypothesis, no deterministic algorithm solves Independent Set of unit disks within the stated running time.",
@@ -28496,14 +28657,7 @@
             },
             {
               "editionId": "v3",
-              "locator": "Proposition 1 and Table 1",
-              "paperId": "szeider2026",
-              "placement": "statement",
-              "role": "benchmark"
-            },
-            {
-              "editionId": "oct30",
-              "locator": "§3, geometric transfers from Grid Tiling",
+              "locator": "§3, Proposition 1, pp. 3–4, and Table 1, second row, p. 5",
               "paperId": "szeider2026",
               "placement": "statement",
               "role": "benchmark"
@@ -28552,14 +28706,7 @@
             },
             {
               "editionId": "v3",
-              "locator": "Proposition 1 and Table 1",
-              "paperId": "szeider2026",
-              "placement": "statement",
-              "role": "benchmark"
-            },
-            {
-              "editionId": "oct30",
-              "locator": "§3, geometric transfers from Grid Tiling",
+              "locator": "§3, Proposition 1, pp. 3–4, and Table 1, second row, p. 5",
               "paperId": "szeider2026",
               "placement": "statement",
               "role": "benchmark"
@@ -28727,6 +28874,13 @@
               "paperId": "cygan2015",
               "placement": "statement",
               "role": "benchmark"
+            },
+            {
+              "editionId": "focs",
+              "locator": "§§2 and 4, Matrix Tiling reduction in the proof of Theorem 4.1",
+              "paperId": "marx2007-geometric-ptas",
+              "placement": "forward",
+              "role": "original Matrix Tiling construction"
             }
           ],
           "statement": "Under ETH, no deterministic algorithm solves Independent Set of axis-parallel unit squares within the stated running time.",
@@ -28831,14 +28985,7 @@
           "sources": [
             {
               "editionId": "v3",
-              "locator": "Proposition 1 and Table 1",
-              "paperId": "szeider2026",
-              "placement": "statement",
-              "role": "benchmark"
-            },
-            {
-              "editionId": "oct30",
-              "locator": "§3, geometric transfers from Grid Tiling",
+              "locator": "§3, Proposition 1, pp. 3–4, and Table 1, second row, p. 5 (Unit Disk Independent Set and Grid Tiling transfer starting bounds)",
               "paperId": "szeider2026",
               "placement": "statement",
               "role": "benchmark"
@@ -28849,6 +28996,13 @@
               "paperId": "cygan2015",
               "placement": "statement",
               "role": "benchmark"
+            },
+            {
+              "editionId": "focs",
+              "locator": "§§2 and 4, Matrix Tiling reduction in the proof of Theorem 4.1",
+              "paperId": "marx2007-geometric-ptas",
+              "placement": "forward",
+              "role": "original Matrix Tiling construction"
             }
           ],
           "statement": "Under the k × k Clique Hypothesis, no deterministic algorithm solves Independent Set of axis-parallel unit squares within the stated running time.",
@@ -29025,14 +29179,7 @@
             },
             {
               "editionId": "v3",
-              "locator": "Proposition 1 and Table 1",
-              "paperId": "szeider2026",
-              "placement": "statement",
-              "role": "benchmark"
-            },
-            {
-              "editionId": "oct30",
-              "locator": "§3, geometric transfers from Grid Tiling",
+              "locator": "§3, Proposition 1, pp. 3–4, and Table 1, second row, p. 5 (Unit Disk Independent Set and Grid Tiling transfer starting bounds)",
               "paperId": "szeider2026",
               "placement": "statement",
               "role": "benchmark"
@@ -29081,14 +29228,7 @@
             },
             {
               "editionId": "v3",
-              "locator": "Proposition 1 and Table 1",
-              "paperId": "szeider2026",
-              "placement": "statement",
-              "role": "benchmark"
-            },
-            {
-              "editionId": "oct30",
-              "locator": "§3, geometric transfers from Grid Tiling",
+              "locator": "§3, Proposition 1, pp. 3–4, and Table 1, second row, p. 5 (Unit Disk Independent Set and Grid Tiling transfer starting bounds)",
               "paperId": "szeider2026",
               "placement": "statement",
               "role": "benchmark"
@@ -29258,13 +29398,6 @@
               "role": "benchmark"
             },
             {
-              "editionId": "bulletin",
-              "locator": "Theorem 4.1, p. 53",
-              "paperId": "lms2011",
-              "placement": "statement",
-              "role": "benchmark"
-            },
-            {
               "editionId": "book",
               "locator": "Section 14.3.1, p. 476",
               "paperId": "cygan2015",
@@ -29286,13 +29419,13 @@
                     "boundRevision": 2,
                     "proof": {
                       "proofId": "classical-graph-sh-converse",
-                      "revision": 1,
+                      "revision": 2,
                       "theorem": "vc-budget-sh-converse"
                     },
-                    "reviewId": "vc-budget-sh-converse-review",
+                    "reviewId": "vc-budget-sh-converse-review-r2",
                     "source": {
-                      "editionId": "v1",
-                      "locator": "Lemma 2.2, pp. 5–6",
+                      "editionId": "v2",
+                      "locator": "Lemma 2.2, pp. 6–7 (decision interface)",
                       "paperId": "sh26",
                       "placement": "proof",
                       "role": "quantitative decision sparsification, preprint dependency"
@@ -29646,13 +29779,13 @@
                     "boundRevision": 2,
                     "proof": {
                       "proofId": "classical-graph-sh-converse",
-                      "revision": 1,
+                      "revision": 2,
                       "theorem": "vc-order-sh-converse"
                     },
-                    "reviewId": "vc-order-sh-converse-review",
+                    "reviewId": "vc-order-sh-converse-review-r2",
                     "source": {
-                      "editionId": "v1",
-                      "locator": "Lemma 2.2, pp. 5–6",
+                      "editionId": "v2",
+                      "locator": "Lemma 2.2, pp. 6–7 (decision interface)",
                       "paperId": "sh26",
                       "placement": "proof",
                       "role": "quantitative decision sparsification, preprint dependency"
@@ -30319,13 +30452,6 @@
               "paperId": "lms2018",
               "placement": "statement",
               "role": "published reduction"
-            },
-            {
-              "editionId": "bulletin",
-              "locator": "Theorem 6.3, PDF p. 22",
-              "paperId": "lms2011",
-              "placement": "statement",
-              "role": "published lower bound"
             }
           ],
           "statement": "Under ETH, no deterministic algorithm decides Vertex-Disjoint Paths within the stated running time.",
@@ -31972,15 +32098,6 @@
       ],
       "editions": [
         {
-          "access": "Full text inspected.",
-          "id": "author",
-          "kind": "preprint",
-          "label": "Authors’ full manuscript",
-          "openUrl": "https://perso.ens-lyon.fr/edouard.bonnet/publi/tcs2017.pdf",
-          "preferredUrl": "https://perso.ens-lyon.fr/edouard.bonnet/publi/tcs2017.pdf",
-          "primaryUrl": "https://perso.ens-lyon.fr/edouard.bonnet/publi/tcs2017.pdf"
-        },
-        {
           "access": "Published text checked for Theorem 12 and Corollary 13, with the sum of the two intrinsic vertex-cover numbers.",
           "doi": "10.1016/j.tcs.2017.07.010",
           "id": "journal",
@@ -32088,6 +32205,7 @@
         },
         {
           "access": "Journal publication and Theorem 1.2 locator confirmed in publisher-indexed text. Direct full-text access returned 403.",
+          "doi": "10.1145/3833387",
           "id": "journal",
           "kind": "journal",
           "label": "Journal of the ACM 73(5), article 35 (2026)",
@@ -32130,15 +32248,6 @@
         "Florian Sikora"
       ],
       "editions": [
-        {
-          "access": "Full text inspected.",
-          "id": "arxiv-v3",
-          "kind": "preprint",
-          "label": "arXiv:1503.05110v3",
-          "openUrl": "https://arxiv.org/abs/1503.05110v3",
-          "preferredUrl": "https://arxiv.org/abs/1503.05110v3",
-          "primaryUrl": "https://arxiv.org/abs/1503.05110v3"
-        },
         {
           "access": "Published text checked for both parts of Theorem 14 and their proof in §3.4.",
           "doi": "10.1016/j.dam.2016.11.016",
@@ -32183,15 +32292,6 @@
       ],
       "editions": [
         {
-          "access": "Full text inspected.",
-          "id": "arxiv-v1",
-          "kind": "preprint",
-          "label": "arXiv:1606.08141v1",
-          "openUrl": "https://arxiv.org/abs/1606.08141v1",
-          "preferredUrl": "https://arxiv.org/abs/1606.08141v1",
-          "primaryUrl": "https://arxiv.org/abs/1606.08141v1"
-        },
-        {
           "access": "Published text checked for Theorem 1.3 and the proof of Theorem 1.2 that yields it.",
           "doi": "10.1016/j.ic.2020.104514",
           "id": "journal",
@@ -32226,15 +32326,6 @@
           "label": "Information and Computation 201(2) (2005), 216–231",
           "preferredUrl": "https://doi.org/10.1016/j.ic.2005.05.001",
           "primaryUrl": "https://doi.org/10.1016/j.ic.2005.05.001"
-        },
-        {
-          "access": "Author manuscript retained for earlier citations and their numbering.",
-          "id": "manuscript",
-          "kind": "manuscript",
-          "label": "Inspected author manuscript",
-          "openUrl": "https://people.csail.mit.edu/rrw/presentations/w1-vs-eth.pdf",
-          "preferredUrl": "https://people.csail.mit.edu/rrw/presentations/w1-vs-eth.pdf",
-          "primaryUrl": "https://people.csail.mit.edu/rrw/presentations/w1-vs-eth.pdf"
         }
       ],
       "id": "ccfhjkx2005",
@@ -32251,25 +32342,7 @@
       ],
       "editions": [
         {
-          "access": "University of Birmingham peer-reviewed manuscript checked for Theorem 1.2 and §3, including §3.6.",
-          "id": "accepted",
-          "kind": "manuscript",
-          "label": "Journal accepted manuscript",
-          "openUrl": "https://pure-oai.bham.ac.uk/ws/portalfiles/portal/84854624/J10_Tight_Bounds_for_Planar.pdf",
-          "preferredUrl": "https://pure-oai.bham.ac.uk/ws/portalfiles/portal/84854624/J10_Tight_Bounds_for_Planar.pdf",
-          "primaryUrl": "https://pure-oai.bham.ac.uk/ws/portalfiles/portal/84854624/J10_Tight_Bounds_for_Planar.pdf"
-        },
-        {
-          "access": "Public version used where the published full text was unavailable.",
-          "id": "author",
-          "kind": "preprint",
-          "label": "Inspected author version",
-          "openUrl": "https://arxiv.org/abs/1911.13161",
-          "preferredUrl": "https://arxiv.org/abs/1911.13161",
-          "primaryUrl": "https://arxiv.org/abs/1911.13161"
-        },
-        {
-          "access": "Journal DOI and theorem checked against the institutional peer-reviewed accepted manuscript. Publisher pagination was not checked.",
+          "access": "Published text checked for Theorem 1.2, p. 321, Remark 1.5, p. 323, and §3, pp. 328–337, including the final reduction argument in §3.6, p. 337.",
           "doi": "10.1137/18M122371X",
           "id": "journal",
           "kind": "journal",
@@ -32292,15 +32365,6 @@
       ],
       "editions": [
         {
-          "access": "Published conference edition.",
-          "doi": "10.1007/11533719_98",
-          "id": "cocoon",
-          "kind": "proceedings",
-          "label": "COCOON 2005, LNCS 3595, 975–984",
-          "preferredUrl": "https://doi.org/10.1007/11533719_98",
-          "primaryUrl": "https://doi.org/10.1007/11533719_98"
-        },
-        {
           "access": "Published text checked for Theorems 2.2–2.3, 3.2, 4.1 and 5.1, the linear-reduction definition, and the complexity-function convention.",
           "doi": "10.1007/s10878-006-7137-6",
           "id": "journal",
@@ -32309,15 +32373,6 @@
           "preferredUrl": "https://doi.org/10.1007/s10878-006-7137-6",
           "primaryUrl": "https://doi.org/10.1007/s10878-006-7137-6",
           "title": "On the computational hardness based on linear FPT-reductions"
-        },
-        {
-          "access": "Several technical proofs are omitted and deferred to a technical report.",
-          "id": "manuscript",
-          "kind": "manuscript",
-          "label": "Inspected 2005 conference author manuscript",
-          "openUrl": "https://www.cs.lafayette.edu/~gexia/research/jcombopt.pdf",
-          "preferredUrl": "https://www.cs.lafayette.edu/~gexia/research/jcombopt.pdf",
-          "primaryUrl": "https://www.cs.lafayette.edu/~gexia/research/jcombopt.pdf"
         }
       ],
       "id": "chkx2005",
@@ -32333,15 +32388,6 @@
         "Ge Xia"
       ],
       "editions": [
-        {
-          "access": "Inspected author manuscript with the DS-Core definition and Theorem 5.4. Retained for earlier citations and their pagination.",
-          "id": "jan17",
-          "kind": "manuscript",
-          "label": "Inspected author manuscript, 17 January 2006",
-          "openUrl": "https://www.cs.lafayette.edu/~gexia/research/jcss72_8.pdf",
-          "preferredUrl": "https://www.cs.lafayette.edu/~gexia/research/jcss72_8.pdf",
-          "primaryUrl": "https://www.cs.lafayette.edu/~gexia/research/jcss72_8.pdf"
-        },
         {
           "access": "Published text checked for DS-Core and Theorems 5.4–5.8 in §5, pp. 1358–1361.",
           "doi": "10.1016/j.jcss.2006.04.007",
@@ -32481,15 +32527,6 @@
           "label": "SIAM J. Comput. 45(1) (2016), 67–83",
           "preferredUrl": "https://doi.org/10.1137/130947076",
           "primaryUrl": "https://doi.org/10.1137/130947076"
-        },
-        {
-          "access": "Checked the reduction statement and lower-bound corollary in the full text.",
-          "id": "v2",
-          "kind": "preprint",
-          "label": "arXiv:1203.1754v2, 26 September 2012",
-          "openUrl": "https://arxiv.org/pdf/1203.1754v2",
-          "preferredUrl": "https://arxiv.org/abs/1203.1754v2",
-          "primaryUrl": "https://arxiv.org/abs/1203.1754v2"
         }
       ],
       "id": "cygan-pilipczuk-pilipczuk-ecc",
@@ -32596,21 +32633,75 @@
     },
     {
       "authors": [
+        "Rodney G. Downey",
+        "Vladimir Estivill-Castro",
+        "Michael R. Fellows",
+        "Elena Prieto",
+        "Frances A. Rosamond"
+      ],
+      "editions": [
+        {
+          "access": "Published abstract checked for the decision variant and W[1]-hardness.",
+          "doi": "10.1016/S1571-0661(04)81014-4",
+          "id": "journal",
+          "kind": "journal",
+          "label": "Electronic Notes in Theoretical Computer Science 78 (2003), 209–222",
+          "preferredUrl": "https://doi.org/10.1016/S1571-0661(04)81014-4",
+          "primaryUrl": "https://doi.org/10.1016/S1571-0661(04)81014-4"
+        },
+        {
+          "access": "Theorem 1 and its proof in §3 verify the k+1 component threshold and unit-cost graph construction.",
+          "id": "manuscript",
+          "kind": "manuscript",
+          "label": "Author manuscript, Universitat Pompeu Fabra repository",
+          "preferredUrl": "https://repositori-api.upf.edu/api/core/bitstreams/37d8507d-555e-4dbb-9f08-d589e6cbc3ca/content",
+          "primaryUrl": "https://repositori-api.upf.edu/api/core/bitstreams/37d8507d-555e-4dbb-9f08-d589e6cbc3ca/content"
+        }
+      ],
+      "id": "downey-et-al2003-k-cut",
+      "preferredEditionId": "journal",
+      "preferredUrl": "https://doi.org/10.1016/S1571-0661(04)81014-4",
+      "title": "Cutting Up Is Hard To Do: The Parameterised Complexity of k-Cut and Related Problems"
+    },
+    {
+      "authors": [
+        "Rod G. Downey",
+        "Michael R. Fellows",
+        "Alexander Vardy",
+        "Geoff Whittle"
+      ],
+      "editions": [
+        {
+          "access": "Publisher metadata verified. The full journal text and the locator of the at-most-k Odd Set theorem in that edition remain unverified.",
+          "doi": "10.1137/S0097539797323571",
+          "id": "journal",
+          "kind": "journal",
+          "label": "SIAM Journal on Computing 29(2) (1999), 545–570",
+          "preferredUrl": "https://doi.org/10.1137/S0097539797323571",
+          "primaryUrl": "https://doi.org/10.1137/S0097539797323571"
+        },
+        {
+          "access": "Section 2 explicitly defines the at-most-k red/blue Odd Set problem and proves its W[1]-hardness in Theorem 2.",
+          "id": "manuscript",
+          "kind": "manuscript",
+          "label": "Authors’ manuscript",
+          "preferredUrl": "https://www.academia.edu/125868710/The_Parametrized_Complexity_of_Some_Fundamental_Problems_in_Coding_Theory",
+          "primaryUrl": "https://www.academia.edu/125868710/The_Parametrized_Complexity_of_Some_Fundamental_Problems_in_Coding_Theory"
+        }
+      ],
+      "id": "downey-fellows-vardy-whittle1999-coding",
+      "preferredEditionId": "journal",
+      "preferredUrl": "https://doi.org/10.1137/S0097539797323571",
+      "title": "The Parametrized Complexity of Some Fundamental Problems in Coding Theory"
+    },
+    {
+      "authors": [
         "Michael Etscheid",
         "Stefan Kratsch",
         "Matthias Mnich",
         "Heiko Röglin"
       ],
       "editions": [
-        {
-          "access": "Lemma 3 and the detailed positive-item no-carry reduction were inspected.",
-          "id": "arxiv",
-          "kind": "preprint",
-          "label": "arXiv:1507.03439",
-          "openUrl": "https://arxiv.org/pdf/1507.03439",
-          "preferredUrl": "https://arxiv.org/abs/1507.03439",
-          "primaryUrl": "https://arxiv.org/abs/1507.03439"
-        },
         {
           "access": "Published text checked for §3, Lemma 13, p. 8, including the linear-item reduction.",
           "id": "journal",
@@ -32624,6 +32715,56 @@
       "preferredEditionId": "journal",
       "preferredUrl": "https://doi.org/10.1016/j.jcss.2016.06.004",
       "title": "Polynomial kernels for weighted problems"
+    },
+    {
+      "authors": [
+        "Michael R. Fellows",
+        "Fedor V. Fomin",
+        "Daniel Lokshtanov",
+        "Frances Rosamond",
+        "Saket Saurabh",
+        "Stefan Szeider",
+        "Carsten Thomassen"
+      ],
+      "editions": [
+        {
+          "access": "Journal-layout author copy. Theorem 1 and §2.1 give a reduction with treewidth at most the number of color classes.",
+          "doi": "10.1016/j.ic.2010.11.026",
+          "id": "journal",
+          "kind": "journal",
+          "label": "Information and Computation 209(2) (2011), 143–153",
+          "openUrl": "https://fedorvf.github.io/articles/2011/2011b.pdf",
+          "preferredUrl": "https://doi.org/10.1016/j.ic.2010.11.026",
+          "primaryUrl": "https://doi.org/10.1016/j.ic.2010.11.026"
+        }
+      ],
+      "id": "fellows-et-al2011-colorful-treewidth",
+      "preferredEditionId": "journal",
+      "preferredUrl": "https://doi.org/10.1016/j.ic.2010.11.026",
+      "title": "On the Complexity of Some Colorful Problems Parameterized by Treewidth"
+    },
+    {
+      "authors": [
+        "Michael R. Fellows",
+        "Danny Hermelin",
+        "Frances Rosamond",
+        "Stéphane Vialette"
+      ],
+      "editions": [
+        {
+          "access": "Published text checked for §2, Lemma 1 and deletion of edges within color classes, p. 56.",
+          "doi": "10.1016/j.tcs.2008.09.065",
+          "id": "journal",
+          "kind": "journal",
+          "label": "Theoretical Computer Science 410(1) (2009), 53–61",
+          "preferredUrl": "https://doi.org/10.1016/j.tcs.2008.09.065",
+          "primaryUrl": "https://doi.org/10.1016/j.tcs.2008.09.065"
+        }
+      ],
+      "id": "fellows-hermelin-rosamond-vialette2009",
+      "preferredEditionId": "journal",
+      "preferredUrl": "https://doi.org/10.1016/j.tcs.2008.09.065",
+      "title": "On the parameterized complexity of multiple-interval graph problems"
     },
     {
       "authors": [
@@ -32681,15 +32822,6 @@
       ],
       "editions": [
         {
-          "access": "Inspected arXiv version retained for earlier citations and their pagination.",
-          "id": "full",
-          "kind": "preprint",
-          "label": "Full version (arXiv:1910.01047v2)",
-          "openUrl": "https://arxiv.org/pdf/1910.01047v2",
-          "preferredUrl": "https://arxiv.org/abs/1910.01047v2",
-          "primaryUrl": "https://arxiv.org/abs/1910.01047v2"
-        },
-        {
           "access": "Published text checked for Theorem 13, its proof, and the source definitions of ETH and normalized QBF.",
           "doi": "10.1145/3373718.3394756",
           "id": "proceedings",
@@ -32710,6 +32842,7 @@
       ],
       "editions": [
         {
+          "access": "Theorem 4.1 in §4.1.1, p. 33, gives the paired binary row-address construction. The later MFCS and JCSS Hitting Set reductions use an unbounded alphabet. Chapter 4 of Froese’s 2018 doctoral thesis treats binary Hamming-distance restrictions using a different construction.",
           "id": "thesis",
           "kind": "thesis",
           "label": "Master’s thesis, Technische Universität Berlin (2012)",
@@ -32762,22 +32895,58 @@
           "label": "ACM Transactions on Computation Theory 12(4) (2020), Article 22",
           "preferredUrl": "https://doi.org/10.1145/3417759",
           "primaryUrl": "https://doi.org/10.1145/3417759"
-        },
-        {
-          "access": "Proceedings full text inspected for the single-algorithm definition and Dominating Set corollary.",
-          "doi": "10.4230/LIPIcs.MFCS.2016.42",
-          "id": "mfcs",
-          "kind": "proceedings",
-          "label": "MFCS 2016, LIPIcs 58, 42:1–42:14",
-          "openUrl": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol058-mfcs2016/LIPIcs.MFCS.2016.42/LIPIcs.MFCS.2016.42.pdf",
-          "preferredUrl": "https://doi.org/10.4230/LIPIcs.MFCS.2016.42",
-          "primaryUrl": "https://doi.org/10.4230/LIPIcs.MFCS.2016.42"
         }
       ],
       "id": "ganian-dehaan-kanj-szeider2020",
       "preferredEditionId": "journal",
       "preferredUrl": "https://doi.org/10.1145/3417759",
       "title": "On Existential MSO and Its Relation to ETH"
+    },
+    {
+      "authors": [
+        "Michael R. Garey",
+        "David S. Johnson",
+        "Larry Stockmeyer"
+      ],
+      "editions": [
+        {
+          "access": "Published scan checked for Theorems 2.1 and 2.2, including the direct planar crossover. The textbook also credits Stockmeyer’s 1973 precursor.",
+          "doi": "10.1016/0304-3975(76)90059-1",
+          "id": "journal",
+          "kind": "journal",
+          "label": "Theoretical Computer Science 1(3) (1976), 237–267",
+          "openUrl": "https://www.math.ucdavis.edu/~deloera/MISC/LA-BIBLIO/trunk/JohnsonDavid2.pdf",
+          "preferredUrl": "https://doi.org/10.1016/0304-3975(76)90059-1",
+          "primaryUrl": "https://doi.org/10.1016/0304-3975(76)90059-1"
+        }
+      ],
+      "id": "garey-johnson-stockmeyer1976",
+      "preferredEditionId": "journal",
+      "preferredUrl": "https://doi.org/10.1016/0304-3975(76)90059-1",
+      "title": "Some simplified NP-complete graph problems"
+    },
+    {
+      "authors": [
+        "Michael R. Garey",
+        "David S. Johnson",
+        "Robert Endre Tarjan"
+      ],
+      "editions": [
+        {
+          "access": "Published scan checked for the construction, crossover analysis and correctness on pp. 709–712. Its crossing count is the source used in Lokshtanov, Marx and Saurabh, Proposition 3.4.",
+          "doi": "10.1137/0205049",
+          "id": "journal",
+          "kind": "journal",
+          "label": "SIAM Journal on Computing 5(4) (1976), 704–714",
+          "openUrl": "https://www.cs.princeton.edu/courses/archive/spr04/cos423/handouts/the%20planar%20hamiltonian.pdf",
+          "preferredUrl": "https://doi.org/10.1137/0205049",
+          "primaryUrl": "https://doi.org/10.1137/0205049"
+        }
+      ],
+      "id": "garey-johnson-tarjan1976",
+      "preferredEditionId": "journal",
+      "preferredUrl": "https://doi.org/10.1137/0205049",
+      "title": "The Planar Hamiltonian Circuit Problem is NP-Complete"
     },
     {
       "authors": [
@@ -32788,12 +32957,11 @@
       ],
       "editions": [
         {
-          "access": "Published text checked for §2, Rules 1 and 3′, and Theorem 1, pp. 2.2:4–2.2:7. The linked author manuscript is also available.",
+          "access": "Published text checked for §2, Rules 1 and 3′, and Theorem 1, pp. 2.2:4–2.2:7.",
           "doi": "10.1145/1412228.1412236",
           "id": "journal",
           "kind": "journal",
           "label": "ACM Journal of Experimental Algorithmics 13 (2009), Article 2.2",
-          "openUrl": "https://hueffner.de/falk/clique-cover-jea07.pdf",
           "preferredUrl": "https://doi.org/10.1145/1412228.1412236",
           "primaryUrl": "https://doi.org/10.1145/1412228.1412236"
         }
@@ -32802,6 +32970,28 @@
       "preferredEditionId": "journal",
       "preferredUrl": "https://doi.org/10.1145/1412228.1412236",
       "title": "Data Reduction and Exact Algorithms for Clique Cover"
+    },
+    {
+      "authors": [
+        "Sudipto Guha",
+        "Samir Khuller"
+      ],
+      "editions": [
+        {
+          "access": "Journal-layout PDF checked for the optimum-preserving reduction with additive offset one in §5.1.",
+          "doi": "10.1007/PL00009201",
+          "id": "journal",
+          "kind": "journal",
+          "label": "Algorithmica 20(4) (1998), 374–387",
+          "openUrl": "https://cgi.di.uoa.gr/~istavrak/Group-Presentations/DomSet/guha98_cds.pdf",
+          "preferredUrl": "https://doi.org/10.1007/PL00009201",
+          "primaryUrl": "https://doi.org/10.1007/PL00009201"
+        }
+      ],
+      "id": "guha-khuller1998-connected-dominating-set",
+      "preferredEditionId": "journal",
+      "preferredUrl": "https://doi.org/10.1007/PL00009201",
+      "title": "Approximation Algorithms for Connected Dominating Sets"
     },
     {
       "authors": [
@@ -32833,25 +33023,6 @@
         "Danny Hermelin"
       ],
       "editions": [
-        {
-          "access": "Full manuscript inspected for the ETH reduction and bit sizes.",
-          "id": "arxiv",
-          "kind": "preprint",
-          "label": "arXiv:2401.01740",
-          "openUrl": "https://arxiv.org/html/2401.01740",
-          "preferredUrl": "https://arxiv.org/abs/2401.01740",
-          "primaryUrl": "https://arxiv.org/abs/2401.01740"
-        },
-        {
-          "access": "Full text inspected.",
-          "doi": "10.4230/LIPIcs.ESA.2024.68",
-          "id": "esa",
-          "kind": "proceedings",
-          "label": "ESA 2024, LIPIcs 308, pp. 68:1–68:14",
-          "openUrl": "https://doi.org/10.4230/LIPIcs.ESA.2024.68",
-          "preferredUrl": "https://doi.org/10.4230/LIPIcs.ESA.2024.68",
-          "primaryUrl": "https://doi.org/10.4230/LIPIcs.ESA.2024.68"
-        },
         {
           "access": "Published text checked for Theorem 3 and §§3–4, and for Corollary 1 and the full §5 ETH reduction.",
           "doi": "10.1016/j.jcss.2026.103817",
@@ -32921,15 +33092,6 @@
       ],
       "editions": [
         {
-          "access": "Full text inspected.",
-          "id": "author",
-          "kind": "preprint",
-          "label": "Authors’ full manuscript",
-          "openUrl": "https://www.cs.bme.hu/~dmarx/papers/jansen-binpacking-algo.pdf",
-          "preferredUrl": "https://www.cs.bme.hu/~dmarx/papers/jansen-binpacking-algo.pdf",
-          "primaryUrl": "https://www.cs.bme.hu/~dmarx/papers/jansen-binpacking-algo.pdf"
-        },
-        {
           "access": "Published text checked for the unary decision formulation and Theorems 2–3.",
           "doi": "10.1016/j.jcss.2012.04.004",
           "id": "journal",
@@ -32980,16 +33142,6 @@
           "openUrl": "https://doi.org/10.1145/3397484",
           "preferredUrl": "https://doi.org/10.1145/3397484",
           "primaryUrl": "https://doi.org/10.1145/3397484"
-        },
-        {
-          "access": "Full text inspected.",
-          "doi": "10.4230/LIPIcs.STACS.2019.44",
-          "id": "stacs",
-          "kind": "proceedings",
-          "label": "STACS 2019, LIPIcs 126, pp. 44:1–44:15",
-          "openUrl": "https://doi.org/10.4230/LIPIcs.STACS.2019.44",
-          "preferredUrl": "https://doi.org/10.4230/LIPIcs.STACS.2019.44",
-          "primaryUrl": "https://doi.org/10.4230/LIPIcs.STACS.2019.44"
         }
       ],
       "id": "kpw2020-ilp",
@@ -33003,15 +33155,6 @@
         "Johannes Uhlmann"
       ],
       "editions": [
-        {
-          "access": "Full text inspected.",
-          "id": "author",
-          "kind": "preprint",
-          "label": "Authors’ full manuscript",
-          "openUrl": "https://www.uni-marburg.de/de/fb12/arbeitsgruppen/algorith/paper/ce-bounded-degree.pdf",
-          "preferredUrl": "https://www.uni-marburg.de/de/fb12/arbeitsgruppen/algorith/paper/ce-bounded-degree.pdf",
-          "primaryUrl": "https://www.uni-marburg.de/de/fb12/arbeitsgruppen/algorith/paper/ce-bounded-degree.pdf"
-        },
         {
           "access": "Published text checked for Theorem 2 and its reduction in §2, including the maximum-degree-six restriction.",
           "doi": "10.1016/j.dam.2012.05.019",
@@ -33039,6 +33182,7 @@
           "id": "journal",
           "kind": "journal",
           "label": "SIAM J. Comput. 11(2), 329–343 (1982)",
+          "openUrl": "https://www.math.ucdavis.edu/~deloera/MISC/LA-BIBLIO/trunk/Lichtens.pdf",
           "preferredUrl": "https://doi.org/10.1137/0211025",
           "primaryUrl": "https://doi.org/10.1137/0211025"
         }
@@ -33126,15 +33270,6 @@
           "label": "SIAM J. Comput. 47(3) (2018), 675–702",
           "preferredUrl": "https://doi.org/10.1137/16M1104834",
           "primaryUrl": "https://doi.org/10.1137/16M1104834"
-        },
-        {
-          "access": "Open author manuscript used for theorem and reduction interfaces.",
-          "id": "manuscript",
-          "kind": "manuscript",
-          "label": "Public journal author manuscript",
-          "openUrl": "https://sites.cs.ucsb.edu/~daniello/papers/slightlySuperexpSICOMP18.pdf",
-          "preferredUrl": "https://sites.cs.ucsb.edu/~daniello/papers/slightlySuperexpSICOMP18.pdf",
-          "primaryUrl": "https://sites.cs.ucsb.edu/~daniello/papers/slightlySuperexpSICOMP18.pdf"
         }
       ],
       "id": "lms2018",
@@ -33150,12 +33285,12 @@
       ],
       "editions": [
         {
-          "access": "Published proceedings PDF, introduction, p. 798.",
+          "access": "Published IEEE proceedings, §I, p. 798, restates the exact ETH exclusion and attributes it to earlier work.",
           "doi": "10.1109/FOCS46700.2020.00079",
           "id": "focs",
           "kind": "proceedings",
           "label": "FOCS 2020, 798–809",
-          "openUrl": "https://sites.cs.ucsb.edu/~daniello/papers/minkcutFOCS20.pdf",
+          "openUrl": "https://ieee-focs.org/FOCS-2020-Papers/pdfs/FOCS2020-SFPLmbQgSLgOwZlanGgzq/962100a798/962100a798.pdf",
           "preferredUrl": "https://doi.org/10.1109/FOCS46700.2020.00079",
           "primaryUrl": "https://doi.org/10.1109/FOCS46700.2020.00079"
         },
@@ -33203,15 +33338,6 @@
       ],
       "editions": [
         {
-          "access": "Public version used where the published full text was unavailable.",
-          "id": "author",
-          "kind": "preprint",
-          "label": "Inspected author version",
-          "openUrl": "https://arxiv.org/abs/1504.05476",
-          "preferredUrl": "https://arxiv.org/abs/1504.05476",
-          "primaryUrl": "https://arxiv.org/abs/1504.05476"
-        },
-        {
           "access": "Published text checked for the planar d-Scattered Set lower-bound paragraph in §1, p. 13:6, and its textbook reduction reference.",
           "doi": "10.1145/3483425",
           "id": "journal",
@@ -33253,11 +33379,12 @@
       ],
       "editions": [
         {
-          "access": "Published edition.",
+          "access": "Published IWPEC edition. Theorem 1 and unit-disk transfer paragraph immediately before Theorem 2 checked in the author copy. The heading for Theorem 2 in this copy says Maximum Independent Set, while the abstract and surrounding construction concern Dominating Set.",
           "doi": "10.1007/11847250_14",
           "id": "journal",
           "kind": "proceedings",
           "label": "IWPEC 2006, LNCS 4169, 154–165",
+          "openUrl": "https://www.cs.bme.hu/~dmarx/papers/marx-iwpec2006.pdf",
           "preferredUrl": "https://doi.org/10.1007/11847250_14",
           "primaryUrl": "https://doi.org/10.1007/11847250_14"
         }
@@ -33266,6 +33393,27 @@
       "preferredEditionId": "journal",
       "preferredUrl": "https://doi.org/10.1007/11847250_14",
       "title": "Parameterized Complexity of Independence and Domination on Geometric Graphs"
+    },
+    {
+      "authors": [
+        "Dániel Marx"
+      ],
+      "editions": [
+        {
+          "access": "The author copy gives Matrix Tiling in §2, the exact-size square construction in §4, and the disk adaptation after the proof of Theorem 4.1. The atlas cites the textbook for the exact decision-time exclusions.",
+          "doi": "10.1109/FOCS.2007.26",
+          "id": "focs",
+          "kind": "proceedings",
+          "label": "FOCS 2007, pp. 338–348",
+          "openUrl": "https://www.cs.bme.hu/~dmarx/papers/marx-focs2007-ptas.pdf",
+          "preferredUrl": "https://doi.org/10.1109/FOCS.2007.26",
+          "primaryUrl": "https://doi.org/10.1109/FOCS.2007.26"
+        }
+      ],
+      "id": "marx2007-geometric-ptas",
+      "preferredEditionId": "focs",
+      "preferredUrl": "https://doi.org/10.1109/FOCS.2007.26",
+      "title": "On the Optimality of Planar and Geometric Approximation Schemes"
     },
     {
       "authors": [
@@ -33314,15 +33462,6 @@
       ],
       "editions": [
         {
-          "access": "Public version used where the published full text was unavailable.",
-          "id": "author",
-          "kind": "preprint",
-          "label": "Inspected author version",
-          "openUrl": "https://www.cs.bme.hu/~dmarx/papers/marx-mway-icalp2012.pdf",
-          "preferredUrl": "https://www.cs.bme.hu/~dmarx/papers/marx-mway-icalp2012.pdf",
-          "primaryUrl": "https://www.cs.bme.hu/~dmarx/papers/marx-mway-icalp2012.pdf"
-        },
-        {
           "access": "Published ICALP text checked for Theorem 3 and Corollary 5.",
           "doi": "10.1007/978-3-642-31594-7_57",
           "id": "journal",
@@ -33358,27 +33497,6 @@
       "preferredEditionId": "journal",
       "preferredUrl": "https://doi.org/10.1016/j.disc.2017.01.006",
       "title": "On Line Graphs of Subcubic Triangle-Free Graphs"
-    },
-    {
-      "authors": [
-        "Jesper Nederlof",
-        "Céline M. F. Swennenhuis"
-      ],
-      "editions": [
-        {
-          "access": "Published PDF inspected for the ETH item-count statement on p. 2317 and its attribution in Section 5.",
-          "id": "journal",
-          "kind": "journal",
-          "label": "Algorithmica 84(8) (2022), pp. 2309–2334",
-          "openUrl": "https://pure.tue.nl/ws/files/215115935/s00453_022_00970_8.pdf",
-          "preferredUrl": "https://doi.org/10.1007/s00453-022-00970-8",
-          "primaryUrl": "https://doi.org/10.1007/s00453-022-00970-8"
-        }
-      ],
-      "id": "nederlof-swennenhuis2022",
-      "preferredEditionId": "journal",
-      "preferredUrl": "https://doi.org/10.1007/s00453-022-00970-8",
-      "title": "On the Fine-grained Parameterized Complexity of Partial Scheduling to Minimize the Makespan"
     },
     {
       "authors": [
@@ -33435,16 +33553,7 @@
       ],
       "editions": [
         {
-          "access": "Exact arXiv v1. The quantitative sparsification proof is a preprint-only dependency.",
-          "id": "v1",
-          "kind": "preprint",
-          "label": "arXiv:2611.02650v1, 2 November 2026",
-          "openUrl": "https://arxiv.org/pdf/2611.02650v1",
-          "preferredUrl": "https://arxiv.org/abs/2611.02650v1",
-          "primaryUrl": "https://arxiv.org/abs/2611.02650v1"
-        },
-        {
-          "access": "Preprint. Table 1, its footnotes and Theorem 3.1 were checked in this version.",
+          "access": "Preprint. Decision portions of Lemmas 2.1 (pp. 5–6) and 2.2 (pp. 6–7), Table 1 and its footnotes (p. 4), and Theorem 3.1 (p. 8) checked. Quantitative sparsification is a preprint-only dependency.",
           "id": "v2",
           "kind": "preprint",
           "label": "arXiv:2611.02650v2, 16 November 2026",
@@ -33464,16 +33573,7 @@
       ],
       "editions": [
         {
-          "access": "Inspected original version.",
-          "doi": "10.5281/zenodo.23797197",
-          "id": "oct30",
-          "kind": "preprint",
-          "label": "Zenodo preprint v1, 30 October 2026",
-          "preferredUrl": "https://doi.org/10.5281/zenodo.23797197",
-          "primaryUrl": "https://doi.org/10.5281/zenodo.23797197"
-        },
-        {
-          "access": "Checked the exact Zenodo PDF for the hypothesis and the transfers in Table 1.",
+          "access": "Official Zenodo version 3 PDF inspected. The latest-version endpoint identifies v3. Section 2, Propositions 1–2 and Table 1 checked for the cited hypothesis and transfers. These are preprint results.",
           "doi": "10.5281/zenodo.24088151",
           "id": "v3",
           "kind": "preprint",
@@ -34130,7 +34230,7 @@
       "title": "An effective treewidth lower bound for Chromatic Number"
     },
     {
-      "currentRevision": 1,
+      "currentRevision": 2,
       "id": "classical-graph-sh-converse",
       "revisions": [
         {
@@ -34178,12 +34278,58 @@
               "supports": true
             }
           ]
+        },
+        {
+          "authorship": {
+            "authors": [
+              "Atlas"
+            ],
+            "kind": "ai",
+            "origin": "atlas"
+          },
+          "dependencies": [],
+          "dependencyCoverage": "complete",
+          "pdf": "proofs/classical-graph-sh-converse-r2.pdf",
+          "revision": 2,
+          "source": "proofs/classical-graph-sh-converse-r2.tex",
+          "theorems": [
+            {
+              "destination": "is-order-sh-converse",
+              "label": "is-order-sh-converse",
+              "number": "1(a)",
+              "reviewIds": [
+                "is-order-sh-converse-review-r2"
+              ],
+              "statement": "The fixed-power exclusion for Independent Set parameterized by the number of vertices implies SH.",
+              "supports": true
+            },
+            {
+              "destination": "vc-order-sh-converse",
+              "label": "vc-order-sh-converse",
+              "number": "1(b)",
+              "reviewIds": [
+                "vc-order-sh-converse-review-r2"
+              ],
+              "statement": "The fixed-power exclusion for Vertex Cover parameterized by the number of vertices implies SH.",
+              "supports": true
+            },
+            {
+              "destination": "vc-budget-sh-converse",
+              "label": "vc-budget-sh-converse",
+              "number": "1(c)",
+              "reviewIds": [
+                "vc-budget-sh-converse-review-r2"
+              ],
+              "statement": "The fixed-power exclusion for Vertex Cover parameterized by the solution budget implies SH.",
+              "supports": true
+            }
+          ]
         }
       ],
       "title": "The Satisfiability Hypothesis from fixed-power graph bounds"
     },
     {
-      "currentRevision": 1,
+      "currentRevision": 2,
       "id": "clique-order-sh-converse",
       "revisions": [
         {
@@ -34206,6 +34352,32 @@
               "number": "1",
               "reviewIds": [
                 "clique-order-sh-converse-review"
+              ],
+              "statement": "The whole fixed-power exclusion family for Clique by number of vertices implies SH.",
+              "supports": true
+            }
+          ]
+        },
+        {
+          "authorship": {
+            "authors": [
+              "Atlas"
+            ],
+            "kind": "ai",
+            "origin": "atlas"
+          },
+          "dependencies": [],
+          "dependencyCoverage": "complete",
+          "pdf": "proofs/clique-order-sh-converse-r2.pdf",
+          "revision": 2,
+          "source": "proofs/clique-order-sh-converse-r2.tex",
+          "theorems": [
+            {
+              "destination": "clique-order-sh-converse",
+              "label": "clique-order-sh-converse",
+              "number": "1",
+              "reviewIds": [
+                "clique-order-sh-converse-review-r2"
               ],
               "statement": "The whole fixed-power exclusion family for Clique by number of vertices implies SH.",
               "supports": true
@@ -34556,7 +34728,7 @@
       "title": "Fixed-power lower bounds for Hamiltonian Cycle, Hamiltonian Path, and Longest Path"
     },
     {
-      "currentRevision": 2,
+      "currentRevision": 3,
       "id": "ilp-equations-w1-effective",
       "revisions": [
         {
@@ -34569,9 +34741,9 @@
           },
           "dependencies": [],
           "dependencyCoverage": "complete",
-          "pdf": "proofs/ilp-equations-w1-all-ones.pdf",
+          "pdf": "proofs/ilp-equations-w1-all-ones-r2.pdf",
           "revision": 2,
-          "source": "proofs/ilp-equations-w1-all-ones.tex",
+          "source": "proofs/ilp-equations-w1-all-ones-r2.tex",
           "theorems": [
             {
               "destination": "ilp-equations-w1-effective",
@@ -34579,6 +34751,32 @@
               "number": "1",
               "reviewIds": [
                 "ilp-equations-w1-all-ones-review"
+              ],
+              "statement": "Assuming deterministic FPT ≠ W[1], for every fixed C ≥ 0 and every finite nonnegative function h admitting a computable threshold T(j) with h(k) ≤ k/j for every positive integer j and all k ≥ T(j), no deterministic algorithm decides feasibility of Ax=1 over nonnegative integers for a binary k-row matrix A in O(2^(h(k)) N^C) time, with complete binary input length N and unrestricted column count. The exclusion holds even when all columns are nonzero, in which case every feasible coordinate is at most one.",
+              "supports": true
+            }
+          ]
+        },
+        {
+          "authorship": {
+            "authors": [
+              "Atlas"
+            ],
+            "kind": "ai",
+            "origin": "atlas"
+          },
+          "dependencies": [],
+          "dependencyCoverage": "complete",
+          "pdf": "proofs/ilp-equations-w1-all-ones.pdf",
+          "revision": 3,
+          "source": "proofs/ilp-equations-w1-all-ones.tex",
+          "theorems": [
+            {
+              "destination": "ilp-equations-w1-effective",
+              "label": "ilp-equations-w1-effective",
+              "number": "1",
+              "reviewIds": [
+                "ilp-equations-w1-all-ones-r3-citation-review"
               ],
               "statement": "Assuming deterministic FPT ≠ W[1], for every fixed C ≥ 0 and every finite nonnegative function h admitting a computable threshold T(j) with h(k) ≤ k/j for every positive integer j and all k ≥ T(j), no deterministic algorithm decides feasibility of Ax=1 over nonnegative integers for a binary k-row matrix A in O(2^(h(k)) N^C) time, with complete binary input length N and unrestricted column count. The exclusion holds even when all columns are nonzero, in which case every feasible coordinate is at most one.",
               "supports": true
@@ -34824,7 +35022,7 @@
       "title": "Membership in W[1] for six parameterizations"
     },
     {
-      "currentRevision": 1,
+      "currentRevision": 2,
       "id": "subset-sum-item-count-sh",
       "revisions": [
         {
@@ -34852,12 +35050,38 @@
               "supports": true
             }
           ]
+        },
+        {
+          "authorship": {
+            "authors": [
+              "Atlas"
+            ],
+            "kind": "ai",
+            "origin": "atlas"
+          },
+          "dependencies": [],
+          "dependencyCoverage": "partial",
+          "pdf": "proofs/subset-sum-item-count-sh-r2.pdf",
+          "revision": 2,
+          "source": "proofs/subset-sum-item-count-sh-r2.tex",
+          "theorems": [
+            {
+              "destination": "subset-sum-item-count-sh",
+              "label": "subset-sum-item-count-sh",
+              "number": "1",
+              "reviewIds": [
+                "subset-sum-item-count-sh-review-r2"
+              ],
+              "statement": "Under SH, for each fixed 0 < ε < 1 there is no deterministic 2^(O(p^(1−ε))) B^(O(1))-time algorithm for positive binary Subset Sum by indexed item count.",
+              "supports": true
+            }
+          ]
         }
       ],
       "title": "Subset Sum by item count under the Satisfiability Hypothesis"
     },
     {
-      "currentRevision": 1,
+      "currentRevision": 2,
       "id": "three-coloring-sh-converse",
       "revisions": [
         {
@@ -34880,6 +35104,32 @@
               "number": "1",
               "reviewIds": [
                 "three-coloring-sh-converse-review"
+              ],
+              "statement": "If for every fixed 0<a<1 there is no deterministic 3-Coloring algorithm in 2^{O(n^a)} B^{O(1)}, then SH holds.",
+              "supports": true
+            }
+          ]
+        },
+        {
+          "authorship": {
+            "authors": [
+              "Atlas"
+            ],
+            "kind": "ai",
+            "origin": "atlas"
+          },
+          "dependencies": [],
+          "dependencyCoverage": "complete",
+          "pdf": "proofs/three-coloring-sh-converse-r2.pdf",
+          "revision": 2,
+          "source": "proofs/three-coloring-sh-converse-r2.tex",
+          "theorems": [
+            {
+              "destination": "color-sh-converse",
+              "label": "color-sh-converse",
+              "number": "1",
+              "reviewIds": [
+                "three-coloring-sh-converse-review-r2"
               ],
               "statement": "If for every fixed 0<a<1 there is no deterministic 3-Coloring algorithm in 2^{O(n^a)} B^{O(1)}, then SH holds.",
               "supports": true
@@ -36467,6 +36717,7 @@
         {
           "caseId": "unary-bin-packing-bins",
           "editionId": "arxiv-v1",
+          "editionReason": "The proceedings proof explicitly defers the transfer from Multiset k-way Partition with targets to Theorem 8.1 of this full version.",
           "id": "unary-bin-packing-eth-items-capacity",
           "locator": "§8, Theorem 8.1",
           "paperId": "bdw2026-bin-packing",
@@ -36537,6 +36788,7 @@
         {
           "caseId": "treewidth-computation-order",
           "editionId": "arxiv-v2",
+          "editionReason": "The publisher index verifies the journal theorem statement. The inspected arXiv proof supplies the explicit decision threshold and the size bounds used for the positive-rate formulation.",
           "id": "treewidth-order-eth-positive-rate",
           "locator": "Theorem 2 and Section 3",
           "paperId": "bonnet2026-treewidth",
@@ -36596,6 +36848,17 @@
           "type": "bound"
         },
         {
+          "caseId": "planar-dominating-set-budget",
+          "editionId": "journal",
+          "id": "planar-dominating-set-budget-sh",
+          "locator": "Corollary 5.1 and the reduction it invokes, p. 805",
+          "paperId": "cai-juedes2003",
+          "placement": "statement",
+          "revision": 1,
+          "role": "underlying reduction",
+          "type": "bound"
+        },
+        {
           "caseId": "planar-vertex-cover-budget",
           "editionId": "journal",
           "id": "pvc-budget-eth",
@@ -36604,6 +36867,17 @@
           "placement": "statement",
           "revision": 1,
           "role": "benchmark",
+          "type": "bound"
+        },
+        {
+          "caseId": "planar-vertex-cover-budget",
+          "editionId": "journal",
+          "id": "pvc-budget-sh",
+          "locator": "Lemma 5.1 (Planar Vertex Cover part) and Corollary 5.1, pp. 803–805",
+          "paperId": "cai-juedes2003",
+          "placement": "forward",
+          "revision": 1,
+          "role": "original square-root solution-budget exclusion",
           "type": "bound"
         },
         {
@@ -36684,7 +36958,7 @@
           "paperId": "ccfhjkx2005",
           "placement": "statement",
           "revision": 1,
-          "role": "earlier weighted k-Cut lower bound and Clique reduction",
+          "role": "Original weighted k-Cut time lower bound under the subexponential-time SNP premise, using the reduction from Clique",
           "type": "bound"
         },
         {
@@ -36757,9 +37031,9 @@
       "chitnis-feldmann-hajiaghayi-marx-scss": [
         {
           "caseId": "planar-strongly-connected-steiner-subgraph-terminals",
-          "editionId": "accepted",
+          "editionId": "journal",
           "id": "planar-strongly-connected-steiner-subgraph-terminals-eth",
-          "locator": "Theorem 1.2 and §3",
+          "locator": "Theorem 1.2, p. 321, Remark 1.5, p. 323, and §3, pp. 328–337",
           "paperId": "chitnis-feldmann-hajiaghayi-marx-scss",
           "placement": "statement",
           "revision": 1,
@@ -36768,9 +37042,9 @@
         },
         {
           "caseId": "planar-strongly-connected-steiner-subgraph-terminals",
-          "editionId": "accepted",
+          "editionId": "journal",
           "id": "planar-strongly-connected-steiner-subgraph-terminals-w1",
-          "locator": "Theorem 1.2 and §3",
+          "locator": "Theorem 1.2, p. 321, Remark 1.5, p. 323, and §3, pp. 328–337",
           "paperId": "chitnis-feldmann-hajiaghayi-marx-scss",
           "placement": "statement",
           "revision": 1,
@@ -36859,6 +37133,17 @@
       ],
       "chkx2006": [
         {
+          "caseId": "balanced-vertex-separator-budget",
+          "editionId": "journal",
+          "id": "balanced-vertex-separator-budget-eth",
+          "locator": "Theorem 5.5, p. 1360",
+          "paperId": "chkx2006",
+          "placement": "forward",
+          "revision": 1,
+          "role": "Original Clique lower bound under the subexponential-time SNP premise",
+          "type": "bound"
+        },
+        {
           "caseId": "clique-budget",
           "editionId": "journal",
           "id": "clique-budget-eth",
@@ -36870,6 +37155,28 @@
           "type": "bound"
         },
         {
+          "caseId": "connected-dominating-set-budget",
+          "editionId": "journal",
+          "id": "connected-dominating-set-budget-eth",
+          "locator": "Theorems 5.4 and 5.6, pp. 1359–1361",
+          "paperId": "chkx2006",
+          "placement": "forward",
+          "revision": 1,
+          "role": "Upstream Set Cover lower bound with an arbitrary computable parameter factor",
+          "type": "bound"
+        },
+        {
+          "caseId": "connected-dominating-set-budget",
+          "editionId": "journal",
+          "id": "connected-dominating-set-budget-w1-baseline",
+          "locator": "Proof of Theorem 5.4, pp. 1359–1360",
+          "paperId": "chkx2006",
+          "placement": "forward",
+          "revision": 1,
+          "role": "W[2]-hardness of Dominating Set by solution budget before the connectedness transfer",
+          "type": "bound"
+        },
+        {
           "caseId": "dominating-set-budget",
           "editionId": "journal",
           "id": "ds-budget-w1",
@@ -36878,6 +37185,17 @@
           "placement": "statement",
           "revision": 1,
           "role": "W[2]-hardness for the solution budget",
+          "type": "bound"
+        },
+        {
+          "caseId": "grid-tiling-side",
+          "editionId": "journal",
+          "id": "grid-tiling-side-eth",
+          "locator": "Theorem 5.5, p. 1360",
+          "paperId": "chkx2006",
+          "placement": "forward",
+          "revision": 1,
+          "role": "Original Clique lower bound under the subexponential-time SNP premise",
           "type": "bound"
         },
         {
@@ -36922,6 +37240,17 @@
           "placement": "context",
           "revision": 1,
           "role": "original lower bound under the subexponential-time SNP premise",
+          "type": "bound"
+        },
+        {
+          "caseId": "multicolored-clique-colors",
+          "editionId": "journal",
+          "id": "multicolored-clique-colors-eth",
+          "locator": "Theorem 5.5, p. 1360",
+          "paperId": "chkx2006",
+          "placement": "statement",
+          "revision": 1,
+          "role": "Original quantitative Clique lower bound used in the transfer",
           "type": "bound"
         },
         {
@@ -37074,6 +37403,7 @@
         {
           "caseId": "maximum-cycle-cover-supplied-pathwidth",
           "editionId": "arxiv-v1",
+          "editionReason": "The journal gives the pathwidth lower bound but omits Lemma C.22, which gives the transfer that adds at most three to the supplied pathwidth.",
           "id": "maximum-cycle-cover-supplied-pathwidth-kxk",
           "locator": "Appendix C.4, Lemma C.22, p. 70",
           "paperId": "cygan-cut-count",
@@ -37096,6 +37426,7 @@
         {
           "caseId": "maximum-cycle-cover-supplied-pathwidth",
           "editionId": "arxiv-v1",
+          "editionReason": "The journal states the lower bounds but omits the pathwidth constructions in Appendix C.2–C.4 that the Atlas proof uses.",
           "id": "maximum-cycle-cover-supplied-pathwidth-w1",
           "locator": "Appendix C.2–C.4",
           "paperId": "cygan-cut-count",
@@ -37344,6 +37675,17 @@
           "type": "bound"
         },
         {
+          "caseId": "feedback-vertex-set-budget",
+          "editionId": "book",
+          "id": "feedback-vertex-set-budget-eth",
+          "locator": "Exercise 14.2(c), p. 515",
+          "paperId": "cygan2015",
+          "placement": "forward",
+          "revision": 1,
+          "role": "Transfer from Vertex Cover by enforcing edge constraints with cycles",
+          "type": "bound"
+        },
+        {
           "caseId": "feedback-vertex-set-graph-size",
           "editionId": "book",
           "id": "feedback-vertex-set-graph-size-eth",
@@ -37385,6 +37727,17 @@
           "placement": "statement",
           "revision": 1,
           "role": "benchmark",
+          "type": "bound"
+        },
+        {
+          "caseId": "grid-tiling-side",
+          "editionId": "book",
+          "id": "grid-tiling-side-kxk",
+          "locator": "Theorem 14.28, pp. 490–491",
+          "paperId": "cygan2015",
+          "placement": "statement",
+          "revision": 1,
+          "role": "underlying reduction",
           "type": "bound"
         },
         {
@@ -37467,12 +37820,12 @@
         {
           "caseId": "list-coloring-treewidth",
           "editionId": "book",
-          "id": "list-coloring-treewidth-w1",
-          "locator": "Theorem 14.29 (parameterized Grid Tiling reduction)",
+          "id": "list-coloring-treewidth-kxk",
+          "locator": "Theorem 14.29, pp. 492–493",
           "paperId": "cygan2015",
           "placement": "statement",
           "revision": 1,
-          "role": "benchmark",
+          "role": "underlying reduction",
           "type": "bound"
         },
         {
@@ -37544,12 +37897,23 @@
         {
           "caseId": "odd-set-budget",
           "editionId": "book",
+          "id": "odd-set-budget-kxk",
+          "locator": "Theorems 13.31–13.32, pp. 454–456, and Exercise 14.11, p. 516",
+          "paperId": "cygan2015",
+          "placement": "statement",
+          "revision": 1,
+          "role": "underlying reduction",
+          "type": "bound"
+        },
+        {
+          "caseId": "odd-set-budget",
+          "editionId": "book",
           "id": "odd-set-budget-w1-baseline",
           "locator": "Theorems 13.31–13.32, pp. 454–456",
           "paperId": "cygan2015",
           "placement": "statement",
           "revision": 1,
-          "role": "parameterized hardness",
+          "role": "Alternative hardness reduction from Multicolored Clique",
           "type": "bound"
         },
         {
@@ -37608,6 +37972,17 @@
           "type": "bound"
         },
         {
+          "caseId": "planar-dominating-set-vertices",
+          "editionId": "book",
+          "id": "planar-dominating-set-vertices-sh",
+          "locator": "Theorem 14.9 and Exercise 14.3(b), pp. 475, 516–517",
+          "paperId": "cygan2015",
+          "placement": "statement",
+          "revision": 1,
+          "role": "underlying reduction",
+          "type": "bound"
+        },
+        {
           "caseId": "planar-edge-multiway-cut-terminals",
           "editionId": "book",
           "id": "planar-edge-multiway-cut-terminals-eth",
@@ -37630,6 +38005,17 @@
           "type": "bound"
         },
         {
+          "caseId": "planar-feedback-vertex-set-budget",
+          "editionId": "book",
+          "id": "planar-feedback-vertex-set-budget-sh",
+          "locator": "Theorem 14.11, p. 477",
+          "paperId": "cygan2015",
+          "placement": "statement",
+          "revision": 1,
+          "role": "underlying reduction",
+          "type": "bound"
+        },
+        {
           "caseId": "planar-feedback-vertex-set-vertices",
           "editionId": "book",
           "id": "planar-feedback-vertex-set-vertices-eth",
@@ -37638,6 +38024,17 @@
           "placement": "statement",
           "revision": 1,
           "role": "lower-bound statement",
+          "type": "bound"
+        },
+        {
+          "caseId": "planar-feedback-vertex-set-vertices",
+          "editionId": "book",
+          "id": "planar-feedback-vertex-set-vertices-sh",
+          "locator": "Theorem 14.9 and Exercise 14.3(c), pp. 475, 516–517",
+          "paperId": "cygan2015",
+          "placement": "statement",
+          "revision": 1,
+          "role": "underlying reduction",
           "type": "bound"
         },
         {
@@ -37792,6 +38189,17 @@
           "placement": "statement",
           "revision": 1,
           "role": "lower-bound statement",
+          "type": "bound"
+        },
+        {
+          "caseId": "strongly-connected-steiner-subgraph-solution-vertices",
+          "editionId": "book",
+          "id": "strongly-connected-steiner-subgraph-solution-vertices-kxk",
+          "locator": "Theorem 13.33 and its proof, pp. 457–459",
+          "paperId": "cygan2015",
+          "placement": "statement",
+          "revision": 1,
+          "role": "underlying reduction",
           "type": "bound"
         },
         {
@@ -38033,7 +38441,7 @@
           "caseId": "distinct-vectors-budget",
           "editionId": "journal",
           "id": "dv-w1-fixed-coefficient",
-          "locator": "Independent Set completeness, with Clique by complementation",
+          "locator": "Corollary 3.2, with Clique by complementation",
           "paperId": "df1995",
           "placement": "proof",
           "revision": 1,
@@ -38060,6 +38468,17 @@
           "placement": "proof",
           "revision": 1,
           "role": "Clique hardness by Independent Set complementation",
+          "type": "bound"
+        },
+        {
+          "caseId": "grid-tiling-side",
+          "editionId": "journal",
+          "id": "grid-tiling-side-w1",
+          "locator": "Theorem 3.1 and Corollary 3.2",
+          "paperId": "df1995",
+          "placement": "forward",
+          "revision": 2,
+          "role": "Original W[1]-completeness of Clique before the Grid Tiling reduction",
           "type": "bound"
         },
         {
@@ -38115,17 +38534,6 @@
           "placement": "proof",
           "revision": 1,
           "role": "source hardness",
-          "type": "bound"
-        },
-        {
-          "caseId": "multicolored-clique-colors",
-          "editionId": "journal",
-          "id": "multicolored-clique-colors-w1",
-          "locator": "Corollary 3.2 and Theorem 3.1",
-          "paperId": "df1995",
-          "placement": "statement",
-          "revision": 2,
-          "role": "W[1]-completeness",
           "type": "bound"
         },
         {
@@ -38195,6 +38603,45 @@
           "type": "assumption"
         }
       ],
+      "downey-et-al2003-k-cut": [
+        {
+          "caseId": "minimum-k-cut-components",
+          "editionId": "manuscript",
+          "editionReason": "The manuscript supplies the component threshold k+1 and the explicit graph size used in the ETH transfer. The publisher abstract confirms the qualitative result, and the journal proof locator remains unverified.",
+          "id": "minimum-k-cut-components-eth",
+          "locator": "§3, Theorem 1 and its proof",
+          "paperId": "downey-et-al2003-k-cut",
+          "placement": "forward",
+          "revision": 1,
+          "role": "Original Clique reduction with component threshold k+1 and polynomial graph size",
+          "type": "bound"
+        },
+        {
+          "caseId": "minimum-k-cut-components",
+          "editionId": "journal",
+          "id": "minimum-k-cut-components-w1",
+          "locator": "Abstract",
+          "paperId": "downey-et-al2003-k-cut",
+          "placement": "statement",
+          "revision": 1,
+          "role": "Original W[1]-hardness of weighted k-Cut by number of components",
+          "type": "bound"
+        }
+      ],
+      "downey-fellows-vardy-whittle1999-coding": [
+        {
+          "caseId": "odd-set-budget",
+          "editionId": "manuscript",
+          "editionReason": "The inspected manuscript explicitly defines at-most-k Odd Set and proves its W[1]-hardness in Theorem 2. The location of this particular theorem in the full journal edition remains unverified.",
+          "id": "odd-set-budget-w1-baseline",
+          "locator": "§2, Odd Set definition and Theorems 1–2",
+          "paperId": "downey-fellows-vardy-whittle1999-coding",
+          "placement": "statement",
+          "revision": 1,
+          "role": "Original W[1]-hardness for the at-most-k version, by reduction from Perfect Code",
+          "type": "bound"
+        }
+      ],
       "etscheid-kratsch-mnich-rog-lin2017": [
         {
           "caseId": "subset-sum-item-count",
@@ -38205,6 +38652,98 @@
           "placement": "statement",
           "revision": 1,
           "role": "published linear-item ETH reduction",
+          "type": "bound"
+        }
+      ],
+      "fellows-et-al2011-colorful-treewidth": [
+        {
+          "caseId": "explicit-table-csp-treewidth",
+          "editionId": "journal",
+          "id": "explicit-table-csp-treewidth-eth",
+          "locator": "§2.1, Theorem 1 and its reduction, pp. 145–146",
+          "paperId": "fellows-et-al2011-colorful-treewidth",
+          "placement": "forward",
+          "revision": 1,
+          "role": "Original linear-treewidth List Coloring reduction, upstream of the CSP encoding",
+          "type": "bound"
+        },
+        {
+          "caseId": "list-coloring-treewidth",
+          "editionId": "journal",
+          "id": "list-coloring-treewidth-eth",
+          "locator": "§2.1, Theorem 1 and its reduction, pp. 145–146",
+          "paperId": "fellows-et-al2011-colorful-treewidth",
+          "placement": "forward",
+          "revision": 1,
+          "role": "Original polynomial-time reduction from Multicolored Clique, with treewidth at most the number of colors",
+          "type": "bound"
+        },
+        {
+          "caseId": "list-coloring-treewidth",
+          "editionId": "journal",
+          "id": "list-coloring-treewidth-w1",
+          "locator": "§2.1, Theorem 1 and its reduction, pp. 145–146",
+          "paperId": "fellows-et-al2011-colorful-treewidth",
+          "placement": "statement",
+          "revision": 1,
+          "role": "W[1]-hardness",
+          "type": "bound"
+        }
+      ],
+      "fellows-hermelin-rosamond-vialette2009": [
+        {
+          "caseId": "multicolored-clique-colors",
+          "editionId": "journal",
+          "id": "multicolored-clique-colors-eth",
+          "locator": "Section 2, Lemma 1, p. 56",
+          "paperId": "fellows-hermelin-rosamond-vialette2009",
+          "placement": "statement",
+          "revision": 1,
+          "role": "parameter-preserving color-copy reduction",
+          "type": "bound"
+        },
+        {
+          "caseId": "multicolored-clique-colors",
+          "editionId": "journal",
+          "id": "multicolored-clique-colors-kxk",
+          "locator": "Section 2, Lemma 1, p. 56",
+          "paperId": "fellows-hermelin-rosamond-vialette2009",
+          "placement": "statement",
+          "revision": 1,
+          "role": "parameter-preserving color-copy reduction",
+          "type": "bound"
+        },
+        {
+          "caseId": "multicolored-clique-colors",
+          "editionId": "journal",
+          "id": "multicolored-clique-colors-w1",
+          "locator": "Section 2, Lemma 1, p. 56",
+          "paperId": "fellows-hermelin-rosamond-vialette2009",
+          "placement": "statement",
+          "revision": 2,
+          "role": "W[1]-completeness",
+          "type": "bound"
+        },
+        {
+          "caseId": "multicolored-clique-colors",
+          "editionId": "journal",
+          "id": "multicolored-clique-colors-w1",
+          "locator": "Section 2, Lemma 1, p. 56",
+          "paperId": "fellows-hermelin-rosamond-vialette2009",
+          "placement": "forward",
+          "revision": 2,
+          "role": "parameter-preserving hardness reduction from Clique",
+          "type": "bound"
+        },
+        {
+          "caseId": "multicolored-clique-colors",
+          "editionId": "journal",
+          "id": "multicolored-clique-colors-w1",
+          "locator": "Section 2, Lemma 1 and the following observation on deleting same-color edges, p. 56",
+          "paperId": "fellows-hermelin-rosamond-vialette2009",
+          "placement": "proof",
+          "revision": 2,
+          "role": "deletion of same-color edges followed by Clique membership",
           "type": "bound"
         }
       ],
@@ -38362,7 +38901,7 @@
           "caseId": "distinct-vectors-budget",
           "editionId": "thesis",
           "id": "dv-w1-fixed-coefficient",
-          "locator": "Section 4.1.1, Theorem 4.1, pp. 33–34",
+          "locator": "Section 4.1.1, proof of Theorem 4.1, p. 33",
           "paperId": "froese2012",
           "placement": "proof",
           "revision": 1,
@@ -38375,11 +38914,11 @@
           "caseId": "directed-steiner-tree-terminals",
           "editionId": "proceedings",
           "id": "directed-steiner-tree-terminals-eth",
-          "locator": "Theorem 2(ii) and Section 3, proof of statement (ii)",
+          "locator": "p. 67:2, Theorem 2(ii), p. 67:6, and discussion of statement (ii), p. 67:8",
           "paperId": "galby-et-al2024-directed-steiner",
           "placement": "statement",
           "revision": 1,
-          "role": "conditional lower bound",
+          "role": "Published statement for out-star demands, using the earlier planar Steiner Tree lower bound",
           "type": "bound"
         }
       ],
@@ -38407,6 +38946,43 @@
           "type": "bound"
         }
       ],
+      "garey-johnson-stockmeyer1976": [
+        {
+          "caseId": "planar-3-coloring-order",
+          "editionId": "journal",
+          "id": "color-eth-planar",
+          "locator": "Theorems 2.1–2.2, pp. 248–251",
+          "paperId": "garey-johnson-stockmeyer1976",
+          "placement": "forward",
+          "revision": 2,
+          "role": "direct 3SAT and planar crossover reductions",
+          "type": "bound"
+        }
+      ],
+      "garey-johnson-tarjan1976": [
+        {
+          "caseId": "planar-hamiltonian-cycle-vertices",
+          "editionId": "journal",
+          "id": "planar-hamiltonian-cycle-vertices-eth",
+          "locator": "Construction and crossing count, pp. 709–712",
+          "paperId": "garey-johnson-tarjan1976",
+          "placement": "forward",
+          "revision": 1,
+          "role": "original reduction from 3SAT",
+          "type": "bound"
+        },
+        {
+          "caseId": "planar-hamiltonian-cycle-vertices",
+          "editionId": "journal",
+          "id": "planar-hamiltonian-cycle-vertices-sh",
+          "locator": "Construction and crossing count, pp. 709–712",
+          "paperId": "garey-johnson-tarjan1976",
+          "placement": "forward",
+          "revision": 1,
+          "role": "original reduction from 3SAT",
+          "type": "bound"
+        }
+      ],
       "gramm-guo-hueffner-niedermeier2009": [
         {
           "caseId": "edge-clique-cover-budget",
@@ -38417,6 +38993,30 @@
           "placement": "proof",
           "revision": 2,
           "role": "exponential kernel argument",
+          "type": "bound"
+        }
+      ],
+      "guha-khuller1998-connected-dominating-set": [
+        {
+          "caseId": "connected-dominating-set-budget",
+          "editionId": "journal",
+          "id": "connected-dominating-set-budget-eth",
+          "locator": "§5.1, pp. 384–385",
+          "paperId": "guha-khuller1998-connected-dominating-set",
+          "placement": "forward",
+          "revision": 1,
+          "role": "Earlier polynomial reduction from Set Cover, increasing the optimum by exactly one",
+          "type": "bound"
+        },
+        {
+          "caseId": "connected-dominating-set-budget",
+          "editionId": "journal",
+          "id": "connected-dominating-set-budget-w1-baseline",
+          "locator": "§5.1, pp. 384–385",
+          "paperId": "guha-khuller1998-connected-dominating-set",
+          "placement": "forward",
+          "revision": 1,
+          "role": "Earlier polynomial reduction from Set Cover, increasing the optimum by exactly one",
           "type": "bound"
         }
       ],
@@ -38558,6 +39158,28 @@
           "type": "bound"
         },
         {
+          "caseId": "feedback-vertex-set-budget",
+          "editionId": "journal",
+          "id": "feedback-vertex-set-budget-eth",
+          "locator": "Corollary 2, p. 524, and Theorem 5, p. 526",
+          "paperId": "ipz2001",
+          "placement": "forward",
+          "revision": 1,
+          "role": "Original linear-size sparse SAT transfer to Vertex Cover",
+          "type": "bound"
+        },
+        {
+          "caseId": "feedback-vertex-set-graph-size",
+          "editionId": "journal",
+          "id": "feedback-vertex-set-graph-size-eth",
+          "locator": "Corollary 2, p. 524, and Theorem 5, p. 526",
+          "paperId": "ipz2001",
+          "placement": "forward",
+          "revision": 1,
+          "role": "Original linear-size sparse SAT transfer to Vertex Cover",
+          "type": "bound"
+        },
+        {
           "caseId": "fixed-width-sat-formula-size",
           "editionId": "journal",
           "id": "fixed-width-sat-formula-size-eth",
@@ -38583,7 +39205,7 @@
           "caseId": "hamiltonian-cycle-graph-size",
           "editionId": "journal",
           "id": "hamiltonian-cycle-graph-size-sh",
-          "locator": "Section 3, p. 525, following Theorem 5",
+          "locator": "§3, p. 526, following Theorem 5",
           "paperId": "ipz2001",
           "placement": "proof",
           "revision": 1,
@@ -38594,7 +39216,7 @@
           "caseId": "hamiltonian-cycle-order",
           "editionId": "journal",
           "id": "hamiltonian-cycle-order-sh",
-          "locator": "Section 3, p. 525, following Theorem 5",
+          "locator": "§3, p. 526, following Theorem 5",
           "paperId": "ipz2001",
           "placement": "proof",
           "revision": 1,
@@ -38605,7 +39227,7 @@
           "caseId": "hamiltonian-path-order",
           "editionId": "journal",
           "id": "hamiltonian-path-order-sh",
-          "locator": "Section 3, p. 525, following Theorem 5",
+          "locator": "§3, p. 526, following Theorem 5",
           "paperId": "ipz2001",
           "placement": "proof",
           "revision": 1,
@@ -38635,10 +39257,32 @@
           "type": "bound"
         },
         {
+          "caseId": "lms-3color-order",
+          "editionId": "journal",
+          "id": "color-eth-historical",
+          "locator": "Theorem 4, p. 525",
+          "paperId": "ipz2001",
+          "placement": "forward",
+          "revision": 1,
+          "role": "Earlier linear-size reduction from 3-SAT to 3-Coloring under the SNP subexponential-time comparison",
+          "type": "bound"
+        },
+        {
+          "caseId": "longest-path-budget",
+          "editionId": "journal",
+          "id": "longest-path-budget-eth",
+          "locator": "§3, p. 526, following Theorem 5",
+          "paperId": "ipz2001",
+          "placement": "forward",
+          "revision": 1,
+          "role": "Original sparse-SAT transfer to Hamiltonian Circuit, upstream of the Hamiltonian Path and Longest Path transfer",
+          "type": "bound"
+        },
+        {
           "caseId": "longest-path-budget",
           "editionId": "journal",
           "id": "longest-path-budget-sh",
-          "locator": "Section 3, p. 525, following Theorem 5",
+          "locator": "§3, p. 526, following Theorem 5",
           "paperId": "ipz2001",
           "placement": "proof",
           "revision": 1,
@@ -38747,39 +39391,6 @@
           "revision": 1,
           "role": "SH lower bound",
           "type": "bound"
-        },
-        {
-          "caseId": "multicolored-clique-colors",
-          "editionId": "notes",
-          "id": "multicolored-clique-colors-w1",
-          "locator": "Theorem 1",
-          "paperId": "koutecky2026-hard-side",
-          "placement": "statement",
-          "revision": 2,
-          "role": "hardness by a parameter-preserving reduction",
-          "type": "bound"
-        },
-        {
-          "caseId": "multicolored-clique-colors",
-          "editionId": "notes",
-          "id": "multicolored-clique-colors-w1",
-          "locator": "Theorem 1",
-          "paperId": "koutecky2026-hard-side",
-          "placement": "forward",
-          "revision": 2,
-          "role": "parameter-preserving hardness reduction from Clique",
-          "type": "bound"
-        },
-        {
-          "caseId": "multicolored-clique-colors",
-          "editionId": "notes",
-          "id": "multicolored-clique-colors-w1",
-          "locator": "Definition immediately before Theorem 1",
-          "paperId": "koutecky2026-hard-side",
-          "placement": "proof",
-          "revision": 2,
-          "role": "deletion of same-color edges followed by Clique membership",
-          "type": "bound"
         }
       ],
       "kpw2020-ilp": [
@@ -38843,6 +39454,17 @@
       ],
       "lichtenstein1982": [
         {
+          "caseId": "planar-3-coloring-order",
+          "editionId": "journal",
+          "id": "color-eth-planar",
+          "locator": "Theorem 2, p. 333, invoking the planarization construction in §3",
+          "paperId": "lichtenstein1982",
+          "placement": "forward",
+          "revision": 2,
+          "role": "quadratic Planar 3SAT reduction",
+          "type": "bound"
+        },
+        {
           "caseId": "planar-3sat-formula-size",
           "editionId": "journal",
           "id": "planar-3sat-formula-size-eth",
@@ -38851,6 +39473,17 @@
           "placement": "statement",
           "revision": 1,
           "role": "benchmark",
+          "type": "bound"
+        },
+        {
+          "caseId": "planar-3sat-formula-size",
+          "editionId": "journal",
+          "id": "planar-3sat-formula-size-sh",
+          "locator": "Theorem 2, p. 333 (quadratic planarity reduction)",
+          "paperId": "lichtenstein1982",
+          "placement": "statement",
+          "revision": 1,
+          "role": "underlying reduction",
           "type": "bound"
         },
         {
@@ -38863,6 +39496,105 @@
           "revision": 1,
           "role": "benchmark",
           "type": "bound"
+        },
+        {
+          "caseId": "planar-3sat-variables",
+          "editionId": "journal",
+          "id": "planar-3sat-variables-sh",
+          "locator": "Theorem 2, p. 333, invoking the planarization construction in §3",
+          "paperId": "lichtenstein1982",
+          "placement": "forward",
+          "revision": 1,
+          "role": "quadratic Planar 3SAT reduction",
+          "type": "bound"
+        },
+        {
+          "caseId": "planar-dominating-set-vertices",
+          "editionId": "journal",
+          "id": "planar-dominating-set-vertices-eth",
+          "locator": "Theorem 2, p. 333, invoking the planarization construction in §3",
+          "paperId": "lichtenstein1982",
+          "placement": "forward",
+          "revision": 1,
+          "role": "quadratic Planar 3SAT reduction",
+          "type": "bound"
+        },
+        {
+          "caseId": "planar-dominating-set-vertices",
+          "editionId": "journal",
+          "id": "planar-dominating-set-vertices-sh",
+          "locator": "Theorem 2, p. 333, invoking the planarization construction in §3",
+          "paperId": "lichtenstein1982",
+          "placement": "forward",
+          "revision": 1,
+          "role": "quadratic Planar 3SAT reduction",
+          "type": "bound"
+        },
+        {
+          "caseId": "planar-feedback-vertex-set-budget",
+          "editionId": "journal",
+          "id": "planar-feedback-vertex-set-budget-eth",
+          "locator": "Theorems 2–3 and §4, pp. 333–335",
+          "paperId": "lichtenstein1982",
+          "placement": "forward",
+          "revision": 1,
+          "role": "planarization and planar Vertex Cover gadgets",
+          "type": "bound"
+        },
+        {
+          "caseId": "planar-feedback-vertex-set-budget",
+          "editionId": "journal",
+          "id": "planar-feedback-vertex-set-budget-sh",
+          "locator": "Theorems 2–3 and §4, pp. 333–335",
+          "paperId": "lichtenstein1982",
+          "placement": "forward",
+          "revision": 1,
+          "role": "planarization and planar Vertex Cover gadgets",
+          "type": "bound"
+        },
+        {
+          "caseId": "planar-feedback-vertex-set-vertices",
+          "editionId": "journal",
+          "id": "planar-feedback-vertex-set-vertices-eth",
+          "locator": "Theorems 2–3 and §4, pp. 333–335",
+          "paperId": "lichtenstein1982",
+          "placement": "forward",
+          "revision": 1,
+          "role": "planarization and planar Vertex Cover gadgets",
+          "type": "bound"
+        },
+        {
+          "caseId": "planar-feedback-vertex-set-vertices",
+          "editionId": "journal",
+          "id": "planar-feedback-vertex-set-vertices-sh",
+          "locator": "Theorems 2–3 and §4, pp. 333–335",
+          "paperId": "lichtenstein1982",
+          "placement": "forward",
+          "revision": 1,
+          "role": "planarization and planar Vertex Cover gadgets",
+          "type": "bound"
+        },
+        {
+          "caseId": "planar-vertex-cover-order",
+          "editionId": "journal",
+          "id": "pvc-order-eth",
+          "locator": "Theorems 2–3 and §4, pp. 333–335",
+          "paperId": "lichtenstein1982",
+          "placement": "forward",
+          "revision": 1,
+          "role": "planarization and planar Vertex Cover gadgets",
+          "type": "bound"
+        },
+        {
+          "caseId": "planar-vertex-cover-order",
+          "editionId": "journal",
+          "id": "pvc-order-sh",
+          "locator": "Theorems 2–3 and §4, pp. 333–335",
+          "paperId": "lichtenstein1982",
+          "placement": "forward",
+          "revision": 1,
+          "role": "planarization and planar Vertex Cover gadgets",
+          "type": "bound"
         }
       ],
       "lin2019": [
@@ -38870,7 +39602,7 @@
           "caseId": "distinct-vectors-budget",
           "editionId": "proceedings",
           "id": "dv-w1-fixed-coefficient",
-          "locator": "Lemma 14",
+          "locator": "Lemma 14 and proof, pp. 81:11–81:12",
           "paperId": "lin2019",
           "placement": "proof",
           "revision": 1,
@@ -38881,7 +39613,7 @@
           "caseId": "dominating-set-treewidth",
           "editionId": "proceedings",
           "id": "ds-tw-w1",
-          "locator": "Lemma 14",
+          "locator": "Lemma 14 and proof, pp. 81:11–81:12",
           "paperId": "lin2019",
           "placement": "proof",
           "revision": 1,
@@ -38992,17 +39724,6 @@
       ],
       "lms2011": [
         {
-          "caseId": "chromatic-number-treewidth",
-          "editionId": "bulletin",
-          "id": "chromatic-tw-eth",
-          "locator": "Theorem 6.3, PDF p. 22",
-          "paperId": "lms2011",
-          "placement": "statement",
-          "revision": 1,
-          "role": "published lower bound",
-          "type": "bound"
-        },
-        {
           "caseId": "clique-budget",
           "editionId": "bulletin",
           "id": "clique-budget-eth",
@@ -39036,14 +39757,14 @@
           "type": "bound"
         },
         {
-          "caseId": "cycle-packing-treewidth",
+          "caseId": "connected-dominating-set-budget",
           "editionId": "bulletin",
-          "id": "cp-tw-eth",
-          "locator": "Theorem 6.3",
+          "id": "connected-dominating-set-budget-eth",
+          "locator": "Theorem 5.3 and proof, pp. 58–59",
           "paperId": "lms2011",
-          "placement": "statement",
+          "placement": "forward",
           "revision": 1,
-          "role": "benchmark",
+          "role": "ETH lower bound for Dominating Set before the budget-preserving connectedness transfer",
           "type": "bound"
         },
         {
@@ -39121,17 +39842,6 @@
           "placement": "context",
           "revision": 1,
           "role": "subexponential convention",
-          "type": "bound"
-        },
-        {
-          "caseId": "graph-distortion-line",
-          "editionId": "bulletin",
-          "id": "graph-distortion-line-eth",
-          "locator": "Theorem 4.6, p. 56",
-          "paperId": "lms2011",
-          "placement": "context",
-          "revision": 1,
-          "role": "earlier natural-coordinate statement",
           "type": "bound"
         },
         {
@@ -39222,33 +39932,11 @@
         {
           "caseId": "lms-closest-string-radius-alphabet",
           "editionId": "bulletin",
-          "id": "cs-eth-historical",
-          "locator": "Theorem 4.5, PDF p. 16",
-          "paperId": "lms2011",
-          "placement": "statement",
-          "revision": 2,
-          "role": "benchmark",
-          "type": "bound"
-        },
-        {
-          "caseId": "lms-closest-string-radius-alphabet",
-          "editionId": "bulletin",
           "id": "np_qp",
           "locator": "Theorem 4.5, PDF p. 16",
           "paperId": "lms2011",
           "role": "benchmark",
           "type": "resolution"
-        },
-        {
-          "caseId": "lms-square-clique",
-          "editionId": "bulletin",
-          "id": "square-eth",
-          "locator": "Theorem 4.4",
-          "paperId": "lms2011",
-          "placement": "statement",
-          "revision": 2,
-          "role": "lower bound",
-          "type": "bound"
         },
         {
           "caseId": "longest-path-budget",
@@ -39269,29 +39957,7 @@
           "paperId": "lms2011",
           "placement": "statement",
           "revision": 1,
-          "role": "parameter-preserving color-copy reduction",
-          "type": "bound"
-        },
-        {
-          "caseId": "multicolored-clique-colors",
-          "editionId": "bulletin",
-          "id": "multicolored-clique-colors-eth",
-          "locator": "Theorem 5.2, p. 58",
-          "paperId": "lms2011",
-          "placement": "statement",
-          "revision": 1,
           "role": "benchmark",
-          "type": "bound"
-        },
-        {
-          "caseId": "multicolored-clique-colors",
-          "editionId": "bulletin",
-          "id": "multicolored-clique-colors-kxk",
-          "locator": "Theorem 5.2, p. 58",
-          "paperId": "lms2011",
-          "placement": "statement",
-          "revision": 1,
-          "role": "parameter-preserving color-copy reduction",
           "type": "bound"
         },
         {
@@ -39328,17 +39994,6 @@
           "type": "bound"
         },
         {
-          "caseId": "planar-vertex-cover-budget",
-          "editionId": "bulletin",
-          "id": "pvc-budget-eth",
-          "locator": "Theorem 4.3, p. 54",
-          "paperId": "lms2011",
-          "placement": "statement",
-          "revision": 1,
-          "role": "benchmark",
-          "type": "bound"
-        },
-        {
           "caseId": "planar-vertex-cover-order",
           "editionId": "bulletin",
           "id": "pvc-order-eth",
@@ -39347,17 +40002,6 @@
           "placement": "statement",
           "revision": 1,
           "role": "benchmark",
-          "type": "bound"
-        },
-        {
-          "caseId": "subgraph-isomorphism-pattern-edges",
-          "editionId": "bulletin",
-          "id": "subgraph-isomorphism-pattern-edges-eth",
-          "locator": "Theorem 5.7, p. 60",
-          "paperId": "lms2011",
-          "placement": "statement",
-          "revision": 1,
-          "role": "lower-bound statement",
           "type": "bound"
         },
         {
@@ -39394,17 +40038,6 @@
           "type": "bound"
         },
         {
-          "caseId": "vertex-cover-budget",
-          "editionId": "bulletin",
-          "id": "vc-budget-eth",
-          "locator": "Theorem 4.1, p. 53",
-          "paperId": "lms2011",
-          "placement": "statement",
-          "revision": 2,
-          "role": "benchmark",
-          "type": "bound"
-        },
-        {
           "caseId": "vertex-cover-order",
           "editionId": "bulletin",
           "id": "vc-order-eth",
@@ -39413,17 +40046,6 @@
           "placement": "statement",
           "revision": 2,
           "role": "benchmark",
-          "type": "bound"
-        },
-        {
-          "caseId": "vertex-disjoint-paths-treewidth",
-          "editionId": "bulletin",
-          "id": "vdp-tw-eth",
-          "locator": "Theorem 6.3, PDF p. 22",
-          "paperId": "lms2011",
-          "placement": "statement",
-          "revision": 1,
-          "role": "published lower bound",
           "type": "bound"
         }
       ],
@@ -39514,6 +40136,17 @@
           "placement": "statement",
           "revision": 2,
           "role": "benchmark interface",
+          "type": "bound"
+        },
+        {
+          "caseId": "lms-closest-string-radius-alphabet",
+          "editionId": "journal",
+          "id": "cs-eth-historical",
+          "locator": "Theorem 3.1, p. 687",
+          "paperId": "lms2018",
+          "placement": "statement",
+          "revision": 2,
+          "role": "benchmark",
           "type": "bound"
         },
         {
@@ -39629,12 +40262,13 @@
         {
           "caseId": "minimum-k-cut-components",
           "editionId": "focs",
+          "editionReason": "The proceedings explicitly state the excluded exact running time with a parameter prefactor on p. 798. The accessible journal abstract does not give this historical statement, and its locator in the full journal article remains unverified.",
           "id": "minimum-k-cut-components-eth",
-          "locator": "Introduction, p. 798",
+          "locator": "§I, p. 798",
           "paperId": "lss2022-min-k-cut",
           "placement": "statement",
           "revision": 1,
-          "role": "historical exact lower bound",
+          "role": "Later explicit formulation under ETH, including the parameter prefactor",
           "type": "bound"
         }
       ],
@@ -39643,7 +40277,7 @@
           "caseId": "directed-steiner-tree-terminals",
           "editionId": "focs",
           "id": "directed-steiner-tree-terminals-eth",
-          "locator": "Theorem I.2",
+          "locator": "Theorem I.2, p. 475",
           "paperId": "marx-pilipczuk-pilipczuk2018-steiner",
           "placement": "forward",
           "revision": 1,
@@ -39654,7 +40288,7 @@
           "caseId": "steiner-tree-terminals",
           "editionId": "focs",
           "id": "steiner-tree-terminals-eth",
-          "locator": "Theorem I.2 and Corollary I.4, p. 475",
+          "locator": "Theorem I.2, p. 475",
           "paperId": "marx-pilipczuk-pilipczuk2018-steiner",
           "placement": "statement",
           "revision": 1,
@@ -39703,12 +40337,69 @@
         {
           "caseId": "unit-disk-dominating-set-budget",
           "editionId": "journal",
+          "id": "unit-disk-dominating-set-budget-eth",
+          "locator": "§§2–3, proof of Theorem 1 and paragraph before Theorem 2 (unit-disk transfer)",
+          "paperId": "marx2006-geometric",
+          "placement": "forward",
+          "revision": 1,
+          "role": "original quadratic-budget reduction",
+          "type": "bound"
+        },
+        {
+          "caseId": "unit-disk-dominating-set-budget",
+          "editionId": "journal",
           "id": "unit-disk-dominating-set-budget-w1",
-          "locator": "Sections 2–3, reduction for domination",
+          "locator": "§§2–3, proof of Theorem 1 and paragraph before Theorem 2 (unit-disk transfer)",
           "paperId": "marx2006-geometric",
           "placement": "statement",
           "revision": 1,
           "role": "lower-bound statement",
+          "type": "bound"
+        }
+      ],
+      "marx2007-geometric-ptas": [
+        {
+          "caseId": "unit-disk-independent-set-budget",
+          "editionId": "focs",
+          "id": "unit-disk-independent-set-budget-eth",
+          "locator": "§§2 and 4, disk adaptation after the proof of Theorem 4.1",
+          "paperId": "marx2007-geometric-ptas",
+          "placement": "forward",
+          "revision": 2,
+          "role": "original Matrix Tiling construction",
+          "type": "bound"
+        },
+        {
+          "caseId": "unit-disk-independent-set-budget",
+          "editionId": "focs",
+          "id": "unit-disk-independent-set-budget-kxk",
+          "locator": "§§2 and 4, disk adaptation after the proof of Theorem 4.1",
+          "paperId": "marx2007-geometric-ptas",
+          "placement": "forward",
+          "revision": 2,
+          "role": "original Matrix Tiling construction",
+          "type": "bound"
+        },
+        {
+          "caseId": "unit-square-independent-set-budget",
+          "editionId": "focs",
+          "id": "unit-square-independent-set-budget-eth",
+          "locator": "§§2 and 4, Matrix Tiling reduction in the proof of Theorem 4.1",
+          "paperId": "marx2007-geometric-ptas",
+          "placement": "forward",
+          "revision": 2,
+          "role": "original Matrix Tiling construction",
+          "type": "bound"
+        },
+        {
+          "caseId": "unit-square-independent-set-budget",
+          "editionId": "focs",
+          "id": "unit-square-independent-set-budget-kxk",
+          "locator": "§§2 and 4, Matrix Tiling reduction in the proof of Theorem 4.1",
+          "paperId": "marx2007-geometric-ptas",
+          "placement": "forward",
+          "revision": 2,
+          "role": "original Matrix Tiling construction",
           "type": "bound"
         }
       ],
@@ -39760,6 +40451,28 @@
           "type": "bound"
         },
         {
+          "caseId": "odd-set-budget",
+          "editionId": "journal",
+          "id": "odd-set-budget-eth",
+          "locator": "Corollary 1.6 and §6",
+          "paperId": "marx2010-treewidth",
+          "placement": "forward",
+          "revision": 1,
+          "role": "Original ETH lower bound for Subgraph Isomorphism parameterized by pattern edges",
+          "type": "bound"
+        },
+        {
+          "caseId": "strongly-connected-steiner-subgraph-solution-vertices",
+          "editionId": "journal",
+          "id": "strongly-connected-steiner-subgraph-solution-vertices-eth",
+          "locator": "Corollary 1.6 and §6",
+          "paperId": "marx2010-treewidth",
+          "placement": "forward",
+          "revision": 1,
+          "role": "Original ETH lower bound for Subgraph Isomorphism parameterized by pattern edges",
+          "type": "bound"
+        },
+        {
           "caseId": "subgraph-isomorphism-pattern-edges",
           "editionId": "journal",
           "id": "subgraph-isomorphism-pattern-edges-eth",
@@ -39768,6 +40481,17 @@
           "placement": "statement",
           "revision": 1,
           "role": "lower-bound statement",
+          "type": "bound"
+        },
+        {
+          "caseId": "subgraph-isomorphism-pattern-edges",
+          "editionId": "journal",
+          "id": "subgraph-isomorphism-pattern-edges-kxk",
+          "locator": "§1, discussion following Theorem 1.5, pp. 88–89 (quadratic clique-pattern transfer)",
+          "paperId": "marx2010-treewidth",
+          "placement": "statement",
+          "revision": 1,
+          "role": "underlying reduction",
           "type": "bound"
         },
         {
@@ -39827,19 +40551,6 @@
           "placement": "forward",
           "revision": 1,
           "role": "local Hamiltonian Path reduction and line-graph budget identity",
-          "type": "bound"
-        }
-      ],
-      "nederlof-swennenhuis2022": [
-        {
-          "caseId": "subset-sum-item-count",
-          "editionId": "journal",
-          "id": "subset-sum-item-count-eth",
-          "locator": "p. 2317 and Section 5",
-          "paperId": "nederlof-swennenhuis2022",
-          "placement": "context",
-          "revision": 1,
-          "role": "independent statement of the item-count benchmark",
           "type": "bound"
         }
       ],
@@ -39914,9 +40625,9 @@
         },
         {
           "caseId": "clique-order",
-          "editionId": "v1",
+          "editionId": "v2",
           "id": "clique-order-sh",
-          "locator": "Lemma 2.2, pp. 5–6",
+          "locator": "Lemma 2.2, pp. 6–7 (decision interface)",
           "paperId": "sh26",
           "placement": "proof",
           "revision": 2,
@@ -40046,9 +40757,9 @@
         },
         {
           "caseId": "independent-set-order",
-          "editionId": "v1",
+          "editionId": "v2",
           "id": "is-order-sh",
-          "locator": "Lemma 2.2, pp. 5–6",
+          "locator": "Lemma 2.2, pp. 6–7 (decision interface)",
           "paperId": "sh26",
           "placement": "proof",
           "revision": 2,
@@ -40079,9 +40790,9 @@
         },
         {
           "caseId": "lms-3color-order",
-          "editionId": "v1",
+          "editionId": "v2",
           "id": "color-sh-fixed-power",
-          "locator": "Lemma 2.2, printed pp. 5–6",
+          "locator": "Lemma 2.2, pp. 6–7 (decision interface)",
           "paperId": "sh26",
           "placement": "proof",
           "revision": 1,
@@ -40090,9 +40801,9 @@
         },
         {
           "caseId": "lms-3color-order",
-          "editionId": "v1",
+          "editionId": "v2",
           "id": "color-sh-fixed-power",
-          "locator": "Table 1 and Theorem 3.1",
+          "locator": "Table 1, 3-Coloring row, p. 4, and Theorem 3.1, p. 8",
           "paperId": "sh26",
           "revision": 1,
           "role": "preprint implication",
@@ -40100,9 +40811,9 @@
         },
         {
           "caseId": "lms-3color-order",
-          "editionId": "v1",
+          "editionId": "v2",
           "id": "color-sh-fixed-power",
-          "locator": "Lemma 2.2, printed pp. 5–6",
+          "locator": "Lemma 2.2, pp. 6–7 (decision interface)",
           "paperId": "sh26",
           "revision": 1,
           "role": "preprint dependency",
@@ -40165,9 +40876,9 @@
         },
         {
           "caseId": "subset-sum-item-count",
-          "editionId": "v1",
+          "editionId": "v2",
           "id": "subset-sum-item-count-sh",
-          "locator": "Lemma 2.1, p. 5",
+          "locator": "Lemma 2.1, pp. 5–6",
           "paperId": "sh26",
           "placement": "proof",
           "revision": 1,
@@ -40231,9 +40942,9 @@
         },
         {
           "caseId": "vertex-cover-budget",
-          "editionId": "v1",
+          "editionId": "v2",
           "id": "vc-budget-sh",
-          "locator": "Lemma 2.2, pp. 5–6",
+          "locator": "Lemma 2.2, pp. 6–7 (decision interface)",
           "paperId": "sh26",
           "placement": "proof",
           "revision": 2,
@@ -40253,9 +40964,9 @@
         },
         {
           "caseId": "vertex-cover-order",
-          "editionId": "v1",
+          "editionId": "v2",
           "id": "vc-order-sh",
-          "locator": "Lemma 2.2, pp. 5–6",
+          "locator": "Lemma 2.2, pp. 6–7 (decision interface)",
           "paperId": "sh26",
           "placement": "proof",
           "revision": 2,
@@ -40364,24 +41075,13 @@
         },
         {
           "caseId": "fixed-width-sat-variables",
-          "editionId": "oct30",
+          "editionId": "v3",
           "id": "fixed-width-sat-variables-kxk",
-          "locator": "Proposition 2(b), p. 3",
+          "locator": "§3, Proposition 2(b), p. 4",
           "paperId": "szeider2026",
           "placement": "statement",
           "revision": 1,
           "role": "theorem",
-          "type": "bound"
-        },
-        {
-          "caseId": "fixed-width-sat-variables",
-          "editionId": "v3",
-          "id": "fixed-width-sat-variables-kxk",
-          "locator": "November 9 revision",
-          "paperId": "szeider2026",
-          "placement": "context",
-          "revision": 1,
-          "role": "preferred edition",
           "type": "bound"
         },
         {
@@ -40399,18 +41099,7 @@
           "caseId": "grid-tiling-side",
           "editionId": "v3",
           "id": "grid-tiling-side-kxk",
-          "locator": "Proposition 1 and Table 1",
-          "paperId": "szeider2026",
-          "placement": "statement",
-          "revision": 1,
-          "role": "benchmark",
-          "type": "bound"
-        },
-        {
-          "caseId": "grid-tiling-side",
-          "editionId": "oct30",
-          "id": "grid-tiling-side-kxk",
-          "locator": "§3, Proposition 1 and Table 1, second row",
+          "locator": "§3, Proposition 1, pp. 3–4, and Table 1, second row, p. 5",
           "paperId": "szeider2026",
           "placement": "statement",
           "revision": 1,
@@ -40432,18 +41121,7 @@
           "caseId": "list-coloring-treewidth",
           "editionId": "v3",
           "id": "list-coloring-treewidth-kxk",
-          "locator": "Proposition 1 and Table 1",
-          "paperId": "szeider2026",
-          "placement": "statement",
-          "revision": 1,
-          "role": "benchmark",
-          "type": "bound"
-        },
-        {
-          "caseId": "list-coloring-treewidth",
-          "editionId": "oct30",
-          "id": "list-coloring-treewidth-kxk",
-          "locator": "Proposition 1 and Table 1, second row; transfer in Cygan et al., Theorem 14.29",
+          "locator": "§3, Proposition 1, pp. 3–4, and Table 1, second row, p. 5",
           "paperId": "szeider2026",
           "placement": "statement",
           "revision": 1,
@@ -40542,18 +41220,7 @@
           "caseId": "odd-set-budget",
           "editionId": "v3",
           "id": "odd-set-budget-kxk",
-          "locator": "Proposition 1 and Table 1",
-          "paperId": "szeider2026",
-          "placement": "statement",
-          "revision": 1,
-          "role": "benchmark",
-          "type": "bound"
-        },
-        {
-          "caseId": "odd-set-budget",
-          "editionId": "oct30",
-          "id": "odd-set-budget-kxk",
-          "locator": "§3, Proposition 1 and Table 1, third row (quadratic parameter growth)",
+          "locator": "§3, Proposition 1, pp. 3–4, and Table 1, third row, p. 5; quadratic parameter transfer discussed on p. 4",
           "paperId": "szeider2026",
           "placement": "statement",
           "revision": 1,
@@ -40564,18 +41231,7 @@
           "caseId": "planar-3sat-formula-size",
           "editionId": "v3",
           "id": "planar-3sat-formula-size-sh",
-          "locator": "Table 1, Weak ETH row",
-          "paperId": "szeider2026",
-          "placement": "statement",
-          "revision": 1,
-          "role": "benchmark",
-          "type": "bound"
-        },
-        {
-          "caseId": "planar-3sat-formula-size",
-          "editionId": "oct30",
-          "id": "planar-3sat-formula-size-sh",
-          "locator": "Table 1, Weak ETH row",
+          "locator": "§3, Table 1, fourth row, p. 5 (Cygan et al., Theorem 14.8)",
           "paperId": "szeider2026",
           "placement": "statement",
           "revision": 1,
@@ -40584,9 +41240,9 @@
         },
         {
           "caseId": "planar-dominating-set-budget",
-          "editionId": "oct30",
+          "editionId": "v3",
           "id": "planar-dominating-set-budget-sh",
-          "locator": "Table 1, Weak ETH row",
+          "locator": "§3, Table 1, fourth row, p. 5 (Cygan et al., Theorem 14.11)",
           "paperId": "szeider2026",
           "placement": "statement",
           "revision": 1,
@@ -40595,9 +41251,9 @@
         },
         {
           "caseId": "planar-dominating-set-vertices",
-          "editionId": "oct30",
+          "editionId": "v3",
           "id": "planar-dominating-set-vertices-sh",
-          "locator": "Table 1, Weak ETH row",
+          "locator": "§3, Table 1, fourth row, p. 5 (Cygan et al., Theorem 14.9)",
           "paperId": "szeider2026",
           "placement": "statement",
           "revision": 1,
@@ -40606,9 +41262,9 @@
         },
         {
           "caseId": "planar-feedback-vertex-set-budget",
-          "editionId": "oct30",
+          "editionId": "v3",
           "id": "planar-feedback-vertex-set-budget-sh",
-          "locator": "Table 1, Weak ETH row",
+          "locator": "§3, Table 1, fourth row, p. 5 (Cygan et al., Theorem 14.11)",
           "paperId": "szeider2026",
           "placement": "statement",
           "revision": 1,
@@ -40617,9 +41273,9 @@
         },
         {
           "caseId": "planar-feedback-vertex-set-vertices",
-          "editionId": "oct30",
+          "editionId": "v3",
           "id": "planar-feedback-vertex-set-vertices-sh",
-          "locator": "Table 1, Weak ETH row",
+          "locator": "§3, Table 1, fourth row, p. 5 (Cygan et al., Theorem 14.9)",
           "paperId": "szeider2026",
           "placement": "statement",
           "revision": 1,
@@ -40628,9 +41284,9 @@
         },
         {
           "caseId": "planar-scattered-set-solution-size",
-          "editionId": "oct30",
+          "editionId": "v3",
           "id": "planar-scattered-set-solution-size-kxk",
-          "locator": "Section 3, Table 1 and Proposition 1",
+          "locator": "§3, Proposition 1, pp. 3–4, and Table 1, second row, p. 5",
           "paperId": "szeider2026",
           "placement": "statement",
           "revision": 1,
@@ -40650,9 +41306,9 @@
         },
         {
           "caseId": "scattered-set-solution-size",
-          "editionId": "oct30",
+          "editionId": "v3",
           "id": "scattered-set-solution-size-kxk",
-          "locator": "Section 3, Table 1 and Proposition 1",
+          "locator": "§3, Proposition 1, pp. 3–4 (Clique starting bound)",
           "paperId": "szeider2026",
           "placement": "statement",
           "revision": 1,
@@ -40661,9 +41317,9 @@
         },
         {
           "caseId": "strongly-connected-steiner-subgraph-solution-vertices",
-          "editionId": "oct30",
+          "editionId": "v3",
           "id": "strongly-connected-steiner-subgraph-solution-vertices-kxk",
-          "locator": "Section 3, Table 1 and Proposition 1",
+          "locator": "§3, Proposition 1, pp. 3–4, and Table 1, third row, p. 5; quadratic parameter transfer discussed on p. 4",
           "paperId": "szeider2026",
           "placement": "statement",
           "revision": 1,
@@ -40672,9 +41328,9 @@
         },
         {
           "caseId": "subgraph-isomorphism-pattern-edges",
-          "editionId": "oct30",
+          "editionId": "v3",
           "id": "subgraph-isomorphism-pattern-edges-kxk",
-          "locator": "Section 3, Table 1 and Proposition 1",
+          "locator": "§3, Proposition 1, pp. 3–4, and Table 1, third row, p. 5; quadratic parameter transfer discussed on p. 4",
           "paperId": "szeider2026",
           "placement": "statement",
           "revision": 1,
@@ -40683,24 +41339,13 @@
         },
         {
           "caseId": "three-sat-variables",
-          "editionId": "oct30",
+          "editionId": "v3",
           "id": "three-sat-variables-kxk",
-          "locator": "Proposition 2(a), p. 3",
+          "locator": "§3, Proposition 2(a), p. 4",
           "paperId": "szeider2026",
           "placement": "statement",
           "revision": 1,
           "role": "theorem",
-          "type": "bound"
-        },
-        {
-          "caseId": "three-sat-variables",
-          "editionId": "v3",
-          "id": "three-sat-variables-kxk",
-          "locator": "November 9 revision",
-          "paperId": "szeider2026",
-          "placement": "context",
-          "revision": 1,
-          "role": "preferred edition",
           "type": "bound"
         },
         {
@@ -40718,7 +41363,7 @@
           "caseId": "unit-disk-independent-set-budget",
           "editionId": "v3",
           "id": "unit-disk-independent-set-budget-kxk",
-          "locator": "Proposition 1 and Table 1",
+          "locator": "§3, Proposition 1, pp. 3–4, and Table 1, second row, p. 5",
           "paperId": "szeider2026",
           "placement": "statement",
           "revision": 2,
@@ -40727,9 +41372,20 @@
         },
         {
           "caseId": "unit-disk-independent-set-budget",
-          "editionId": "oct30",
+          "editionId": "v3",
           "id": "unit-disk-independent-set-budget-kxk",
-          "locator": "§3, geometric transfers from Grid Tiling",
+          "locator": "Proposition 1 and Table 1",
+          "paperId": "szeider2026",
+          "placement": "statement",
+          "revision": 2,
+          "role": "benchmark",
+          "type": "bound"
+        },
+        {
+          "caseId": "unit-square-independent-set-budget",
+          "editionId": "v3",
+          "id": "unit-square-independent-set-budget-kxk",
+          "locator": "§3, Proposition 1, pp. 3–4, and Table 1, second row, p. 5 (Unit Disk Independent Set and Grid Tiling transfer starting bounds)",
           "paperId": "szeider2026",
           "placement": "statement",
           "revision": 2,
@@ -40741,17 +41397,6 @@
           "editionId": "v3",
           "id": "unit-square-independent-set-budget-kxk",
           "locator": "Proposition 1 and Table 1",
-          "paperId": "szeider2026",
-          "placement": "statement",
-          "revision": 2,
-          "role": "benchmark",
-          "type": "bound"
-        },
-        {
-          "caseId": "unit-square-independent-set-budget",
-          "editionId": "oct30",
-          "id": "unit-square-independent-set-budget-kxk",
-          "locator": "§3, geometric transfers from Grid Tiling",
           "paperId": "szeider2026",
           "placement": "statement",
           "revision": 2,
@@ -40799,7 +41444,7 @@
           "applicable": true,
           "caseId": "independent-set-order",
           "id": "is-order-sh",
-          "proofRevision": 1,
+          "proofRevision": 2,
           "revision": 2,
           "theorem": "is-order-sh-converse",
           "type": "bound"
@@ -40808,7 +41453,7 @@
           "applicable": true,
           "caseId": "vertex-cover-budget",
           "id": "vc-budget-sh",
-          "proofRevision": 1,
+          "proofRevision": 2,
           "revision": 2,
           "theorem": "vc-budget-sh-converse",
           "type": "bound"
@@ -40817,7 +41462,7 @@
           "applicable": true,
           "caseId": "vertex-cover-order",
           "id": "vc-order-sh",
-          "proofRevision": 1,
+          "proofRevision": 2,
           "revision": 2,
           "theorem": "vc-order-sh-converse",
           "type": "bound"
@@ -40828,7 +41473,7 @@
           "applicable": true,
           "caseId": "clique-order",
           "id": "clique-order-sh",
-          "proofRevision": 1,
+          "proofRevision": 2,
           "revision": 2,
           "theorem": "clique-order-sh-converse",
           "type": "bound"
@@ -41021,7 +41666,7 @@
           "applicable": true,
           "caseId": "integer-linear-programming-equations",
           "id": "ilp-equations-w1-effective",
-          "proofRevision": 2,
+          "proofRevision": 3,
           "revision": 2,
           "theorem": "ilp-equations-w1-effective",
           "type": "bound"
@@ -41249,7 +41894,7 @@
           "applicable": true,
           "caseId": "subset-sum-item-count",
           "id": "subset-sum-item-count-sh",
-          "proofRevision": 1,
+          "proofRevision": 2,
           "revision": 1,
           "theorem": "subset-sum-item-count-sh",
           "type": "bound"
@@ -41260,7 +41905,7 @@
           "applicable": true,
           "caseId": "lms-3color-order",
           "id": "color-sh-fixed-power",
-          "proofRevision": 1,
+          "proofRevision": 2,
           "revision": 1,
           "theorem": "color-sh-converse",
           "type": "bound"
@@ -41383,6 +42028,26 @@
       "reviewer": "Codex agent gaps_batch",
       "scope": "The full deterministic fixed-power graph-order exclusion implies SH using width-three quantitative sparsification and a linear-variable Clique encoding.",
       "sourceSha256": "27a3c3fd701f2d67594bb65240548386e79aa05f4d6f9816b66c056e5f176174",
+      "stale": true,
+      "type": "agent",
+      "verdict": "verified"
+    },
+    {
+      "applicable": true,
+      "date": "2026-11-19",
+      "evidence": "evidence/sh-preprint-v2-proof-review.md",
+      "id": "clique-order-sh-converse-review-r2",
+      "independent": true,
+      "label": "Agent verified",
+      "object": {
+        "id": "clique-order-sh-converse",
+        "revision": 2,
+        "theorem": "clique-order-sh-converse",
+        "type": "proof"
+      },
+      "reviewer": "Codex agent originals",
+      "scope": "Checked the v2 decision sparsification interface and fixed exponents, the graph encoding with linear variable count, and the full-input polynomial overhead.",
+      "sourceSha256": "6752db6a142276c113f292704e885725bbd3474c3694b8372e870d7aa5138969",
       "stale": false,
       "type": "agent",
       "verdict": "verified"
@@ -41778,6 +42443,26 @@
     {
       "applicable": true,
       "date": "2026-11-19",
+      "evidence": "evidence/ilp-equations-w1-all-ones-r3-citation-review.md",
+      "id": "ilp-equations-w1-all-ones-r3-citation-review",
+      "independent": true,
+      "label": "Agent verified",
+      "object": {
+        "id": "ilp-equations-w1-effective",
+        "revision": 3,
+        "theorem": "ilp-equations-w1-effective",
+        "type": "proof"
+      },
+      "reviewer": "Codex agent /root/remaining",
+      "scope": "Theorem 1, revision 3. Checked the journal locator and exact scope of the comparison statement and verified that the theorem and its proof match the independently reviewed revision 2.",
+      "sourceSha256": "bcfd01fdc4de9b242960aa6d4fa251898a4e0b31a38289fbbd69a8514e0a6baf",
+      "stale": false,
+      "type": "agent",
+      "verdict": "verified"
+    },
+    {
+      "applicable": true,
+      "date": "2026-11-19",
       "evidence": "evidence/ilp-equations-w1-all-ones-independent.md",
       "id": "ilp-equations-w1-all-ones-review",
       "independent": true,
@@ -41791,7 +42476,7 @@
       "reviewer": "Codex agent derived_shortlist",
       "scope": "Theorem 1, revision 2. Checks the exact-one Lin incidence reduction, nonzero columns and binary feasible coordinates, unrestricted column count, complete input factor, and a computable cutoff for finite nonnegative h, with no computability assumption on h.",
       "sourceSha256": "7384d8597eead558b47b321294814f5bb88a7192d24fd90499a343f02919f015",
-      "stale": false,
+      "stale": true,
       "type": "agent",
       "verdict": "verified"
     },
@@ -41909,6 +42594,26 @@
       "reviewer": "Codex agent secondary_natural",
       "scope": "Checks the converse for Independent Set parameterized by the number of vertices, including the exponent after quantitative sparsification, the linear-variable selection encoding, and the kernel when parameterized by the budget.",
       "sourceSha256": "a45124649155337293a6ef01825717af11a995de79ac2463cceb640c22ee646c",
+      "stale": true,
+      "type": "agent",
+      "verdict": "verified"
+    },
+    {
+      "applicable": true,
+      "date": "2026-11-19",
+      "evidence": "evidence/sh-preprint-v2-proof-review.md",
+      "id": "is-order-sh-converse-review-r2",
+      "independent": true,
+      "label": "Agent verified",
+      "object": {
+        "id": "classical-graph-sh-converse",
+        "revision": 2,
+        "theorem": "is-order-sh-converse",
+        "type": "proof"
+      },
+      "reviewer": "Codex agent originals",
+      "scope": "Checked the v2 decision sparsification interface and fixed exponents, the linear-variable Independent Set and Vertex Cover encodings, and the use of the 2k-vertex kernel for the budget bound.",
+      "sourceSha256": "1ae47f381036213689fc8c8b1b1b14d3d32094dda9482e2f2966f53657c97d52",
       "stale": false,
       "type": "agent",
       "verdict": "verified"
@@ -42143,6 +42848,26 @@
       "reviewer": "Codex agent gaps_batch",
       "scope": "Checks the exact deterministic SH forward implication, including binary encoding, positivity, all fixed power savings, and the complete input factor.",
       "sourceSha256": "58dea1b6ad3c5f4c594f78a99b1370a59b27f9c70750eb6b7cc6b31871914380",
+      "stale": true,
+      "type": "agent",
+      "verdict": "verified"
+    },
+    {
+      "applicable": true,
+      "date": "2026-11-19",
+      "evidence": "evidence/sh-preprint-v2-proof-review.md",
+      "id": "subset-sum-item-count-sh-review-r2",
+      "independent": true,
+      "label": "Agent verified",
+      "object": {
+        "id": "subset-sum-item-count-sh",
+        "revision": 2,
+        "theorem": "subset-sum-item-count-sh",
+        "type": "proof"
+      },
+      "reviewer": "Codex agent originals",
+      "scope": "Checked the v2 fixed-width size characterization of SH and the indexed positive binary Subset Sum reduction, including the no-carry property, linear item count, and polynomial output length.",
+      "sourceSha256": "11d89eb042394d4eb72c62becd3db4de44fa4d40c93f67524f477319900b2801",
       "stale": false,
       "type": "agent",
       "verdict": "verified"
@@ -42163,6 +42888,26 @@
       "reviewer": "Independent agent reviewer",
       "scope": "Converse only. Checks the encoding, the quantitative sparsification import, the choice of fixed exponents and the deterministic running time.",
       "sourceSha256": "9f946a0078c62a6ae28959f44f9ad2f6df97133f59a14e8f715a53da497da49a",
+      "stale": true,
+      "type": "agent",
+      "verdict": "verified"
+    },
+    {
+      "applicable": true,
+      "date": "2026-11-19",
+      "evidence": "evidence/sh-preprint-v2-proof-review.md",
+      "id": "three-coloring-sh-converse-review-r2",
+      "independent": true,
+      "label": "Agent verified",
+      "object": {
+        "id": "three-coloring-sh-converse",
+        "revision": 2,
+        "theorem": "color-sh-converse",
+        "type": "proof"
+      },
+      "reviewer": "Codex agent originals",
+      "scope": "Checked the v2 decision sparsification interface and fixed exponents, the three-variable-per-vertex coloring encoding, and the full-input polynomial overhead.",
+      "sourceSha256": "37e81a7db845fdff77e451dafc10866b3da9f9e1ad26f8f7424b414feb24de81",
       "stale": false,
       "type": "agent",
       "verdict": "verified"
@@ -42356,6 +43101,26 @@
       "reviewer": "Codex agent secondary_natural",
       "scope": "Checks the converse for Vertex Cover parameterized by the solution budget, including the exponent after quantitative sparsification, the linear-variable selection encoding, and the kernel when parameterized by the budget.",
       "sourceSha256": "a45124649155337293a6ef01825717af11a995de79ac2463cceb640c22ee646c",
+      "stale": true,
+      "type": "agent",
+      "verdict": "verified"
+    },
+    {
+      "applicable": true,
+      "date": "2026-11-19",
+      "evidence": "evidence/sh-preprint-v2-proof-review.md",
+      "id": "vc-budget-sh-converse-review-r2",
+      "independent": true,
+      "label": "Agent verified",
+      "object": {
+        "id": "classical-graph-sh-converse",
+        "revision": 2,
+        "theorem": "vc-budget-sh-converse",
+        "type": "proof"
+      },
+      "reviewer": "Codex agent originals",
+      "scope": "Checked the v2 decision sparsification interface and fixed exponents, the linear-variable Independent Set and Vertex Cover encodings, and the use of the 2k-vertex kernel for the budget bound.",
+      "sourceSha256": "1ae47f381036213689fc8c8b1b1b14d3d32094dda9482e2f2966f53657c97d52",
       "stale": false,
       "type": "agent",
       "verdict": "verified"
@@ -42414,6 +43179,26 @@
       "reviewer": "Codex agent secondary_natural",
       "scope": "Checks the converse for Vertex Cover parameterized by the number of vertices, including the exponent after quantitative sparsification, the linear-variable selection encoding, and the kernel when parameterized by the budget.",
       "sourceSha256": "a45124649155337293a6ef01825717af11a995de79ac2463cceb640c22ee646c",
+      "stale": true,
+      "type": "agent",
+      "verdict": "verified"
+    },
+    {
+      "applicable": true,
+      "date": "2026-11-19",
+      "evidence": "evidence/sh-preprint-v2-proof-review.md",
+      "id": "vc-order-sh-converse-review-r2",
+      "independent": true,
+      "label": "Agent verified",
+      "object": {
+        "id": "classical-graph-sh-converse",
+        "revision": 2,
+        "theorem": "vc-order-sh-converse",
+        "type": "proof"
+      },
+      "reviewer": "Codex agent originals",
+      "scope": "Checked the v2 decision sparsification interface and fixed exponents, the linear-variable Independent Set and Vertex Cover encodings, and the use of the 2k-vertex kernel for the budget bound.",
+      "sourceSha256": "1ae47f381036213689fc8c8b1b1b14d3d32094dda9482e2f2966f53657c97d52",
       "stale": false,
       "type": "agent",
       "verdict": "verified"

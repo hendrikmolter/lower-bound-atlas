@@ -7,15 +7,6 @@
   ],
   "editions": [
     {
-      "access": "Lemma 3 and the detailed positive-item no-carry reduction were inspected.",
-      "id": "arxiv",
-      "kind": "preprint",
-      "label": "arXiv:1507.03439",
-      "openUrl": "https://arxiv.org/pdf/1507.03439",
-      "preferredUrl": "https://arxiv.org/abs/1507.03439",
-      "primaryUrl": "https://arxiv.org/abs/1507.03439"
-    },
-    {
       "access": "Published text checked for §3, Lemma 13, p. 8, including the linear-item reduction.",
       "id": "journal",
       "kind": "journal",

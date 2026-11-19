@@ -1,0 +1,20 @@
+{
+  "applicable": true,
+  "date": "2026-11-19",
+  "evidence": "evidence/sh-preprint-v2-proof-review.md",
+  "id": "vc-order-sh-converse-review-r2",
+  "independent": true,
+  "label": "Agent verified",
+  "object": {
+    "id": "classical-graph-sh-converse",
+    "revision": 2,
+    "theorem": "vc-order-sh-converse",
+    "type": "proof"
+  },
+  "reviewer": "Codex agent originals",
+  "scope": "Checked the v2 decision sparsification interface and fixed exponents, the linear-variable Independent Set and Vertex Cover encodings, and the use of the 2k-vertex kernel for the budget bound.",
+  "sourceSha256": "1ae47f381036213689fc8c8b1b1b14d3d32094dda9482e2f2966f53657c97d52",
+  "stale": false,
+  "type": "agent",
+  "verdict": "verified"
+}

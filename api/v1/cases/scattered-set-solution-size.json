@@ -76,8 +76,8 @@
       ],
       "sources": [
         {
-          "editionId": "oct30",
-          "locator": "Section 3, Table 1 and Proposition 1",
+          "editionId": "v3",
+          "locator": "§3, Proposition 1, pp. 3–4 (Clique starting bound)",
           "paperId": "szeider2026",
           "placement": "statement",
           "role": "lower-bound statement"
@@ -241,8 +241,8 @@
           "role": "lower-bound statement"
         },
         {
-          "editionId": "oct30",
-          "locator": "Section 3, Table 1 and Proposition 1",
+          "editionId": "v3",
+          "locator": "§3, Proposition 1, pp. 3–4 (Clique starting bound)",
           "paperId": "szeider2026",
           "placement": "statement",
           "role": "lower-bound statement"
@@ -285,8 +285,8 @@
           "role": "lower-bound statement"
         },
         {
-          "editionId": "oct30",
-          "locator": "Section 3, Table 1 and Proposition 1",
+          "editionId": "v3",
+          "locator": "§3, Proposition 1, pp. 3–4 (Clique starting bound)",
           "paperId": "szeider2026",
           "placement": "statement",
           "role": "lower-bound statement"

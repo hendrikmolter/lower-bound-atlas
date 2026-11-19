@@ -48,6 +48,13 @@
       "paperId": "cygan2015",
       "placement": "statement",
       "role": "conditional lower bound"
+    },
+    {
+      "editionId": "journal",
+      "locator": "Corollary 2, p. 524, and Theorem 5, p. 526",
+      "paperId": "ipz2001",
+      "placement": "forward",
+      "role": "Original linear-size sparse SAT transfer to Vertex Cover"
     }
   ],
   "statement": "Under ETH, no deterministic algorithm solves the stated decision problem within the stated running time.",

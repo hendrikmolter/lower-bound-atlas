@@ -91,6 +91,7 @@
     },
     {
       "editionId": "arxiv-v1",
+      "editionReason": "The journal states the lower bounds but omits the pathwidth constructions in Appendix C.2–C.4 that the Atlas proof uses.",
       "locator": "Appendix C.2–C.4",
       "paperId": "cygan-cut-count",
       "placement": "proof",

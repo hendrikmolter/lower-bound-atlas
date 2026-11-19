@@ -1,1 +1,0 @@
-Dániel Marx. A Tight Lower Bound for Planar Multiway Cut with Fixed Number of Terminals. Inspected author version. https://www.cs.bme.hu/~dmarx/papers/marx-mway-icalp2012.pdf

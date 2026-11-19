@@ -93,13 +93,6 @@
           "role": "benchmark"
         },
         {
-          "editionId": "bulletin",
-          "locator": "Theorem 4.1, p. 53",
-          "paperId": "lms2011",
-          "placement": "statement",
-          "role": "benchmark"
-        },
-        {
           "editionId": "book",
           "locator": "Section 14.3.1, p. 476",
           "paperId": "cygan2015",
@@ -121,13 +114,13 @@
                 "boundRevision": 2,
                 "proof": {
                   "proofId": "classical-graph-sh-converse",
-                  "revision": 1,
+                  "revision": 2,
                   "theorem": "vc-budget-sh-converse"
                 },
-                "reviewId": "vc-budget-sh-converse-review",
+                "reviewId": "vc-budget-sh-converse-review-r2",
                 "source": {
-                  "editionId": "v1",
-                  "locator": "Lemma 2.2, pp. 5–6",
+                  "editionId": "v2",
+                  "locator": "Lemma 2.2, pp. 6–7 (decision interface)",
                   "paperId": "sh26",
                   "placement": "proof",
                   "role": "quantitative decision sparsification, preprint dependency"

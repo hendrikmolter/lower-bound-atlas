@@ -1,1 +1,0 @@
-Jianer Chen, Xiuzhen Huang, Iyad A. Kanj, Ge Xia. W-Hardness under Linear FPT-Reductions: Structural Properties and Further Applications. COCOON 2005, LNCS 3595, 975–984. https://doi.org/10.1007/11533719_98

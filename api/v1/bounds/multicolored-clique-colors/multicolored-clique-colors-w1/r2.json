@@ -9,9 +9,9 @@
             "hypothesisRevision": 1,
             "reviewId": "multicolored-clique-colors-w1-equivalence-review",
             "source": {
-              "editionId": "notes",
-              "locator": "Definition immediately before Theorem 1",
-              "paperId": "koutecky2026-hard-side",
+              "editionId": "journal",
+              "locator": "Section 2, Lemma 1 and the following observation on deleting same-color edges, p. 56",
+              "paperId": "fellows-hermelin-rosamond-vialette2009",
               "placement": "proof",
               "role": "deletion of same-color edges followed by Clique membership"
             }
@@ -39,9 +39,9 @@
             "hypothesisRevision": 1,
             "reviewId": "multicolored-clique-colors-w1-equivalence-review",
             "source": {
-              "editionId": "notes",
-              "locator": "Theorem 1",
-              "paperId": "koutecky2026-hard-side",
+              "editionId": "journal",
+              "locator": "Section 2, Lemma 1, p. 56",
+              "paperId": "fellows-hermelin-rosamond-vialette2009",
               "placement": "forward",
               "role": "parameter-preserving hardness reduction from Clique"
             }
@@ -89,17 +89,10 @@
   "sources": [
     {
       "editionId": "journal",
-      "locator": "Corollary 3.2 and Theorem 3.1",
-      "paperId": "df1995",
+      "locator": "Section 2, Lemma 1, p. 56",
+      "paperId": "fellows-hermelin-rosamond-vialette2009",
       "placement": "statement",
       "role": "W[1]-completeness"
-    },
-    {
-      "editionId": "notes",
-      "locator": "Theorem 1",
-      "paperId": "koutecky2026-hard-side",
-      "placement": "statement",
-      "role": "hardness by a parameter-preserving reduction"
     }
   ],
   "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Multicolored Clique within the stated running time.",

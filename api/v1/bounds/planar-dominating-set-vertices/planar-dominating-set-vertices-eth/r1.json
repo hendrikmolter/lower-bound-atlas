@@ -39,6 +39,13 @@
       "paperId": "cygan2015",
       "placement": "statement",
       "role": "lower-bound statement"
+    },
+    {
+      "editionId": "journal",
+      "locator": "Theorem 2, p. 333, invoking the planarization construction in §3",
+      "paperId": "lichtenstein1982",
+      "placement": "forward",
+      "role": "quadratic Planar 3SAT reduction"
     }
   ],
   "statement": "Under ETH, no deterministic algorithm solves Planar Dominating Set within the stated running time.",

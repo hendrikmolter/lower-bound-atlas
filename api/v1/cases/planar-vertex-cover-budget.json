@@ -38,13 +38,6 @@
           "role": "benchmark"
         },
         {
-          "editionId": "bulletin",
-          "locator": "Theorem 4.3, p. 54",
-          "paperId": "lms2011",
-          "placement": "statement",
-          "role": "benchmark"
-        },
-        {
           "editionId": "book",
           "locator": "Theorem 14.11, p. 477",
           "paperId": "cygan2015",
@@ -94,6 +87,13 @@
           "paperId": "sh26",
           "placement": "statement",
           "role": "benchmark"
+        },
+        {
+          "editionId": "journal",
+          "locator": "Lemma 5.1 (Planar Vertex Cover part) and Corollary 5.1, pp. 803–805",
+          "paperId": "cai-juedes2003",
+          "placement": "forward",
+          "role": "original square-root solution-budget exclusion"
         }
       ],
       "statement": "Under SH, no deterministic algorithm decides Planar Vertex Cover within the stated running time.",

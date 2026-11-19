@@ -103,13 +103,6 @@
       "paperId": "lms2018",
       "placement": "statement",
       "role": "lower bound"
-    },
-    {
-      "editionId": "bulletin",
-      "locator": "Theorem 4.4",
-      "paperId": "lms2011",
-      "placement": "statement",
-      "role": "lower bound"
     }
   ],
   "statement": "Under ETH, no deterministic algorithm decides k × k Clique within the stated running time.",

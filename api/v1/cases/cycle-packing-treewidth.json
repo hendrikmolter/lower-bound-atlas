@@ -60,13 +60,6 @@
       ],
       "sources": [
         {
-          "editionId": "bulletin",
-          "locator": "Theorem 6.3",
-          "paperId": "lms2011",
-          "placement": "statement",
-          "role": "benchmark"
-        },
-        {
           "editionId": "journal",
           "locator": "Theorem 1.3, p. 17:4",
           "paperId": "cygan-cut-count",

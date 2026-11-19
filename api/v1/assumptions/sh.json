@@ -10,6 +10,7 @@
   "model": "Explicit CNF-SAT with the source encoding length as the size measure.",
   "name": "Satisfiability Hypothesis",
   "quantifiers": "For each fixed 0 < a < 1 there is no deterministic 2^O(n^a) · poly(n) SAT algorithm, with n the normalized input length.",
+  "researchStatus": "active",
   "revision": 1,
   "source": {
     "editionId": "journal",

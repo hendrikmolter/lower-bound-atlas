@@ -1,0 +1,21 @@
+{
+  "authors": [
+    "Dániel Marx"
+  ],
+  "editions": [
+    {
+      "access": "The author copy gives Matrix Tiling in §2, the exact-size square construction in §4, and the disk adaptation after the proof of Theorem 4.1. The atlas cites the textbook for the exact decision-time exclusions.",
+      "doi": "10.1109/FOCS.2007.26",
+      "id": "focs",
+      "kind": "proceedings",
+      "label": "FOCS 2007, pp. 338–348",
+      "openUrl": "https://www.cs.bme.hu/~dmarx/papers/marx-focs2007-ptas.pdf",
+      "preferredUrl": "https://doi.org/10.1109/FOCS.2007.26",
+      "primaryUrl": "https://doi.org/10.1109/FOCS.2007.26"
+    }
+  ],
+  "id": "marx2007-geometric-ptas",
+  "preferredEditionId": "focs",
+  "preferredUrl": "https://doi.org/10.1109/FOCS.2007.26",
+  "title": "On the Optimality of Planar and Geometric Approximation Schemes"
+}

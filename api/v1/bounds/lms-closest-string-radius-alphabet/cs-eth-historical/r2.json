@@ -57,9 +57,9 @@
   ],
   "sources": [
     {
-      "editionId": "bulletin",
-      "locator": "Theorem 4.5, PDF p. 16",
-      "paperId": "lms2011",
+      "editionId": "journal",
+      "locator": "Theorem 3.1, p. 687",
+      "paperId": "lms2018",
       "placement": "statement",
       "role": "benchmark"
     }

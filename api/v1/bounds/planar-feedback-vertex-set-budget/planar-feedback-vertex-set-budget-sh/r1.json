@@ -30,11 +30,25 @@
   ],
   "sources": [
     {
-      "editionId": "oct30",
-      "locator": "Table 1, Weak ETH row",
+      "editionId": "v3",
+      "locator": "§3, Table 1, fourth row, p. 5 (Cygan et al., Theorem 14.11)",
       "paperId": "szeider2026",
       "placement": "statement",
       "role": "lower-bound statement"
+    },
+    {
+      "editionId": "book",
+      "locator": "Theorem 14.11, p. 477",
+      "paperId": "cygan2015",
+      "placement": "statement",
+      "role": "underlying reduction"
+    },
+    {
+      "editionId": "journal",
+      "locator": "Theorems 2–3 and §4, pp. 333–335",
+      "paperId": "lichtenstein1982",
+      "placement": "forward",
+      "role": "planarization and planar Vertex Cover gadgets"
     }
   ],
   "statement": "Under SH, no deterministic algorithm solves Planar Feedback Vertex Set within the stated running time.",

@@ -69,6 +69,13 @@
           "paperId": "cygan2015",
           "placement": "statement",
           "role": "benchmark"
+        },
+        {
+          "editionId": "journal",
+          "locator": "Corollary 1.6 and §6",
+          "paperId": "marx2010-treewidth",
+          "placement": "forward",
+          "role": "Original ETH lower bound for Subgraph Isomorphism parameterized by pattern edges"
         }
       ],
       "statement": "Under ETH, no deterministic algorithm solves Odd Set within the stated running time.",
@@ -137,17 +144,17 @@
       "sources": [
         {
           "editionId": "v3",
-          "locator": "Proposition 1 and Table 1",
+          "locator": "§3, Proposition 1, pp. 3–4, and Table 1, third row, p. 5; quadratic parameter transfer discussed on p. 4",
           "paperId": "szeider2026",
           "placement": "statement",
           "role": "benchmark"
         },
         {
-          "editionId": "oct30",
-          "locator": "§3, Proposition 1 and Table 1, third row (quadratic parameter growth)",
-          "paperId": "szeider2026",
+          "editionId": "book",
+          "locator": "Theorems 13.31–13.32, pp. 454–456, and Exercise 14.11, p. 516",
+          "paperId": "cygan2015",
           "placement": "statement",
-          "role": "benchmark"
+          "role": "underlying reduction"
         }
       ],
       "statement": "Under the k × k Clique Hypothesis, no deterministic algorithm solves Odd Set within the stated running time.",
@@ -189,7 +196,7 @@
         "The parameter factor f is an arbitrary computable function and the exponent of B is an arbitrary fixed constant."
       ],
       "reader": {
-        "explanation": "The deterministic reduction starts from Multicolored Clique and uses a budget that depends only on the number of colors.",
+        "explanation": "The original reduction starts from Perfect Code. Interpreting red vertices as ground elements and each blue vertex neighborhood as a listed set preserves the budget and every odd-intersection test. The textbook also gives a reduction from Multicolored Clique.",
         "label": "Fixed-parameter tractability",
         "revision": 1,
         "title": "Odd Set under FPT ≠ W[1]: Fixed-parameter tractability"
@@ -203,11 +210,19 @@
       ],
       "sources": [
         {
+          "editionId": "manuscript",
+          "editionReason": "The inspected manuscript explicitly defines at-most-k Odd Set and proves its W[1]-hardness in Theorem 2. The location of this particular theorem in the full journal edition remains unverified.",
+          "locator": "§2, Odd Set definition and Theorems 1–2",
+          "paperId": "downey-fellows-vardy-whittle1999-coding",
+          "placement": "statement",
+          "role": "Original W[1]-hardness for the at-most-k version, by reduction from Perfect Code"
+        },
+        {
           "editionId": "book",
           "locator": "Theorems 13.31–13.32, pp. 454–456",
           "paperId": "cygan2015",
           "placement": "statement",
-          "role": "parameterized hardness"
+          "role": "Alternative hardness reduction from Multicolored Clique"
         }
       ],
       "statement": "Under FPT ≠ W[1], no deterministic algorithm solves this decision problem within the stated running time.",
@@ -255,14 +270,7 @@
         },
         {
           "editionId": "v3",
-          "locator": "Proposition 1 and Table 1",
-          "paperId": "szeider2026",
-          "placement": "statement",
-          "role": "benchmark"
-        },
-        {
-          "editionId": "oct30",
-          "locator": "§3, Proposition 1 and Table 1, third row (quadratic parameter growth)",
+          "locator": "§3, Proposition 1, pp. 3–4, and Table 1, third row, p. 5; quadratic parameter transfer discussed on p. 4",
           "paperId": "szeider2026",
           "placement": "statement",
           "role": "benchmark"
@@ -299,14 +307,7 @@
         },
         {
           "editionId": "v3",
-          "locator": "Proposition 1 and Table 1",
-          "paperId": "szeider2026",
-          "placement": "statement",
-          "role": "benchmark"
-        },
-        {
-          "editionId": "oct30",
-          "locator": "§3, Proposition 1 and Table 1, third row (quadratic parameter growth)",
+          "locator": "§3, Proposition 1, pp. 3–4, and Table 1, third row, p. 5; quadratic parameter transfer discussed on p. 4",
           "paperId": "szeider2026",
           "placement": "statement",
           "role": "benchmark"

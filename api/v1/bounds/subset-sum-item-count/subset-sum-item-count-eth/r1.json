@@ -34,13 +34,6 @@
       "paperId": "etscheid-kratsch-mnich-rog-lin2017",
       "placement": "statement",
       "role": "published linear-item ETH reduction"
-    },
-    {
-      "editionId": "journal",
-      "locator": "p. 2317 and Section 5",
-      "paperId": "nederlof-swennenhuis2022",
-      "placement": "context",
-      "role": "independent statement of the item-count benchmark"
     }
   ],
   "statement": "Under ETH, no deterministic algorithm decides Subset Sum within the stated running time.",

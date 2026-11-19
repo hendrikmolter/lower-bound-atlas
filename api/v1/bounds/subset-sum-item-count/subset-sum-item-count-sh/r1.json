@@ -14,7 +14,7 @@
   "proofs": [
     {
       "proofId": "subset-sum-item-count-sh",
-      "revision": 1,
+      "revision": 2,
       "theorem": "subset-sum-item-count-sh"
     }
   ],
@@ -37,8 +37,8 @@
   ],
   "sources": [
     {
-      "editionId": "v1",
-      "locator": "Lemma 2.1, p. 5",
+      "editionId": "v2",
+      "locator": "Lemma 2.1, pp. 5–6",
       "paperId": "sh26",
       "placement": "proof",
       "role": "fixed-width SAT size formulation of SH"

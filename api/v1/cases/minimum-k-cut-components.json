@@ -65,18 +65,27 @@
       ],
       "sources": [
         {
-          "editionId": "focs",
-          "locator": "Introduction, p. 798",
-          "paperId": "lss2022-min-k-cut",
-          "placement": "statement",
-          "role": "historical exact lower bound"
-        },
-        {
           "editionId": "journal",
           "locator": "Theorem 4.3 and its k-Cut proof, pp. 228–230",
           "paperId": "ccfhjkx2005",
           "placement": "statement",
-          "role": "earlier weighted k-Cut lower bound and Clique reduction"
+          "role": "Original weighted k-Cut time lower bound under the subexponential-time SNP premise, using the reduction from Clique"
+        },
+        {
+          "editionId": "focs",
+          "editionReason": "The proceedings explicitly state the excluded exact running time with a parameter prefactor on p. 798. The accessible journal abstract does not give this historical statement, and its locator in the full journal article remains unverified.",
+          "locator": "§I, p. 798",
+          "paperId": "lss2022-min-k-cut",
+          "placement": "statement",
+          "role": "Later explicit formulation under ETH, including the parameter prefactor"
+        },
+        {
+          "editionId": "manuscript",
+          "editionReason": "The manuscript supplies the component threshold k+1 and the explicit graph size used in the ETH transfer. The publisher abstract confirms the qualitative result, and the journal proof locator remains unverified.",
+          "locator": "§3, Theorem 1 and its proof",
+          "paperId": "downey-et-al2003-k-cut",
+          "placement": "forward",
+          "role": "Original Clique reduction with component threshold k+1 and polynomial graph size"
         }
       ],
       "statement": "Under ETH, no deterministic algorithm solves Minimum k-Cut within the stated running time.",
@@ -150,6 +159,13 @@
           "paperId": "ccfhjkx2005",
           "placement": "statement",
           "role": "weighted k-Cut W[1]-hardness"
+        },
+        {
+          "editionId": "journal",
+          "locator": "Abstract",
+          "paperId": "downey-et-al2003-k-cut",
+          "placement": "statement",
+          "role": "Original W[1]-hardness of weighted k-Cut by number of components"
         }
       ],
       "statement": "Under FPT ≠ W[1], no deterministic algorithm solves Minimum k-Cut within the stated running time.",

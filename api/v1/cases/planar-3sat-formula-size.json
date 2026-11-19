@@ -140,17 +140,17 @@
       "sources": [
         {
           "editionId": "v3",
-          "locator": "Table 1, Weak ETH row",
+          "locator": "§3, Table 1, fourth row, p. 5 (Cygan et al., Theorem 14.8)",
           "paperId": "szeider2026",
           "placement": "statement",
           "role": "benchmark"
         },
         {
-          "editionId": "oct30",
-          "locator": "Table 1, Weak ETH row",
-          "paperId": "szeider2026",
+          "editionId": "journal",
+          "locator": "Theorem 2, p. 333 (quadratic planarity reduction)",
+          "paperId": "lichtenstein1982",
           "placement": "statement",
-          "role": "benchmark"
+          "role": "underlying reduction"
         }
       ],
       "statement": "Under SH, no deterministic algorithm solves Planar 3SAT within the stated running time.",
@@ -205,14 +205,7 @@
         },
         {
           "editionId": "v3",
-          "locator": "Table 1, Weak ETH row",
-          "paperId": "szeider2026",
-          "placement": "statement",
-          "role": "benchmark"
-        },
-        {
-          "editionId": "oct30",
-          "locator": "Table 1, Weak ETH row",
+          "locator": "§3, Table 1, fourth row, p. 5 (Cygan et al., Theorem 14.8)",
           "paperId": "szeider2026",
           "placement": "statement",
           "role": "benchmark"
@@ -278,14 +271,7 @@
         },
         {
           "editionId": "v3",
-          "locator": "Table 1, Weak ETH row",
-          "paperId": "szeider2026",
-          "placement": "statement",
-          "role": "benchmark"
-        },
-        {
-          "editionId": "oct30",
-          "locator": "Table 1, Weak ETH row",
+          "locator": "§3, Table 1, fourth row, p. 5 (Cygan et al., Theorem 14.8)",
           "paperId": "szeider2026",
           "placement": "statement",
           "role": "benchmark"

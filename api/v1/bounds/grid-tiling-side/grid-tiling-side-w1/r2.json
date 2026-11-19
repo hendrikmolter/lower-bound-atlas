@@ -112,6 +112,13 @@
       "paperId": "cygan2015",
       "placement": "statement",
       "role": "benchmark"
+    },
+    {
+      "editionId": "journal",
+      "locator": "Theorem 3.1 and Corollary 3.2",
+      "paperId": "df1995",
+      "placement": "forward",
+      "role": "Original W[1]-completeness of Clique before the Grid Tiling reduction"
     }
   ],
   "statement": "Under FPT ≠ W[1], no deterministic algorithm solves Grid Tiling within the stated running time.",
