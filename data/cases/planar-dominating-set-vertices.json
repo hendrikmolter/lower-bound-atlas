@@ -37,6 +37,13 @@
           "locator": "Theorem 14.9 and Exercise 14.3(b), pp. 475, 516–517",
           "placement": "statement",
           "role": "lower-bound statement"
+        },
+        {
+          "paperId": "lichtenstein1982",
+          "editionId": "journal",
+          "locator": "Theorem 2, p. 333, invoking the planarization construction in §3",
+          "role": "quadratic Planar 3SAT reduction",
+          "placement": "forward"
         }
       ],
       "reader": {
@@ -72,10 +79,24 @@
       "sources": [
         {
           "paperId": "szeider2026",
-          "editionId": "oct30",
-          "locator": "Table 1, Weak ETH row",
+          "editionId": "v3",
+          "locator": "§3, Table 1, fourth row, p. 5 (Cygan et al., Theorem 14.9)",
           "placement": "statement",
           "role": "lower-bound statement"
+        },
+        {
+          "paperId": "cygan2015",
+          "editionId": "book",
+          "locator": "Theorem 14.9 and Exercise 14.3(b), pp. 475, 516–517",
+          "role": "underlying reduction",
+          "placement": "statement"
+        },
+        {
+          "paperId": "lichtenstein1982",
+          "editionId": "journal",
+          "locator": "Theorem 2, p. 333, invoking the planarization construction in §3",
+          "role": "quadratic Planar 3SAT reduction",
+          "placement": "forward"
         }
       ],
       "reader": {
@@ -156,8 +177,8 @@
         },
         {
           "paperId": "szeider2026",
-          "editionId": "oct30",
-          "locator": "Table 1, Weak ETH row",
+          "editionId": "v3",
+          "locator": "§3, Table 1, fourth row, p. 5 (Cygan et al., Theorem 14.9)",
           "placement": "statement",
           "role": "lower-bound statement"
         }

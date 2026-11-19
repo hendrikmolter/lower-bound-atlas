@@ -30,6 +30,13 @@
           "locator": "Theorem 14.11, p. 477",
           "placement": "statement",
           "role": "lower-bound statement"
+        },
+        {
+          "paperId": "lichtenstein1982",
+          "editionId": "journal",
+          "locator": "Theorems 2–3 and §4, pp. 333–335",
+          "role": "planarization and planar Vertex Cover gadgets",
+          "placement": "forward"
         }
       ],
       "reader": {
@@ -65,10 +72,24 @@
       "sources": [
         {
           "paperId": "szeider2026",
-          "editionId": "oct30",
-          "locator": "Table 1, Weak ETH row",
+          "editionId": "v3",
+          "locator": "§3, Table 1, fourth row, p. 5 (Cygan et al., Theorem 14.11)",
           "placement": "statement",
           "role": "lower-bound statement"
+        },
+        {
+          "paperId": "cygan2015",
+          "editionId": "book",
+          "locator": "Theorem 14.11, p. 477",
+          "role": "underlying reduction",
+          "placement": "statement"
+        },
+        {
+          "paperId": "lichtenstein1982",
+          "editionId": "journal",
+          "locator": "Theorems 2–3 and §4, pp. 333–335",
+          "role": "planarization and planar Vertex Cover gadgets",
+          "placement": "forward"
         }
       ],
       "reader": {
@@ -142,8 +163,8 @@
         },
         {
           "paperId": "szeider2026",
-          "editionId": "oct30",
-          "locator": "Table 1, Weak ETH row",
+          "editionId": "v3",
+          "locator": "§3, Table 1, fourth row, p. 5 (Cygan et al., Theorem 14.11)",
           "placement": "statement",
           "role": "lower-bound statement"
         }

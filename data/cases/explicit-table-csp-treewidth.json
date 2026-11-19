@@ -50,6 +50,13 @@
           "paperId": "lms2011",
           "placement": "statement",
           "role": "conditional lower bound"
+        },
+        {
+          "paperId": "fellows-et-al2011-colorful-treewidth",
+          "editionId": "journal",
+          "locator": "§2.1, Theorem 1 and its reduction, pp. 145–146",
+          "placement": "forward",
+          "role": "Original linear-treewidth List Coloring reduction, upstream of the CSP encoding"
         }
       ],
       "statement": "Under ETH, no deterministic algorithm solves the stated decision problem within the stated running time.",

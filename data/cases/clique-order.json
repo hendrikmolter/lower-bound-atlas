@@ -152,16 +152,16 @@
               {
                 "boundRevision": 2,
                 "hypothesisRevision": 1,
-                "reviewId": "clique-order-sh-converse-review",
+                "reviewId": "clique-order-sh-converse-review-r2",
                 "proof": {
                   "proofId": "clique-order-sh-converse",
-                  "revision": 1,
+                  "revision": 2,
                   "theorem": "clique-order-sh-converse"
                 },
                 "source": {
                   "paperId": "sh26",
-                  "editionId": "v1",
-                  "locator": "Lemma 2.2, pp. 5–6",
+                  "editionId": "v2",
+                  "locator": "Lemma 2.2, pp. 6–7 (decision interface)",
                   "role": "quantitative decision sparsification, preprint dependency",
                   "placement": "proof"
                 }
@@ -266,6 +266,23 @@
       },
       "independent": true,
       "sourceSha256": "27a3c3fd701f2d67594bb65240548386e79aa05f4d6f9816b66c056e5f176174"
+    },
+    {
+      "id": "clique-order-sh-converse-review-r2",
+      "type": "agent",
+      "date": "2026-11-19",
+      "reviewer": "Codex agent originals",
+      "verdict": "verified",
+      "scope": "Checked the v2 decision sparsification interface and fixed exponents, the graph encoding with linear variable count, and the full-input polynomial overhead.",
+      "evidence": "evidence/sh-preprint-v2-proof-review.md",
+      "object": {
+        "type": "proof",
+        "id": "clique-order-sh-converse",
+        "revision": 2,
+        "theorem": "clique-order-sh-converse"
+      },
+      "independent": true,
+      "sourceSha256": "6752db6a142276c113f292704e885725bbd3474c3694b8372e870d7aa5138969"
     }
   ],
   "recoveryAssessments": [

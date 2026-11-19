@@ -298,10 +298,14 @@ export function validateAtlas(load, { release = false, website = false } = {}) {
     }
   };
 
-  const citation = (ref, context) => {
-    const version = papers.get(ref.paperId)?.editions.find(entry => entry.id === ref.editionId);
+  const citation = (ref, context, current) => {
+    const paper = papers.get(ref.paperId);
+    const version = paper?.editions.find(entry => entry.id === ref.editionId);
     if (!version) fail(context + ': unknown paper edition ' + ref.paperId + '/' + ref.editionId);
     else if (release && !paperUrl(version)) fail(context + ': cited edition lacks an original source link');
+    if (version && current && version.id !== paper.preferredEditionId && !ref.editionReason?.trim()) {
+      fail(context + ': explain why this claim needs the nonpreferred edition ' + ref.paperId + '/' + version.id);
+    }
     return version;
   };
 
@@ -388,7 +392,7 @@ export function validateAtlas(load, { release = false, website = false } = {}) {
     checkHistory(assumption, 'assumption ' + assumption.id, fail);
     for (const version of [assumption, ...(assumption.history ?? [])]) {
       if (version.refutation && !urlOk(version.refutation)) fail('Invalid refutation URL for ' + assumption.id);
-      if (version.source) citation(version.source, 'assumption ' + assumption.id);
+      if (version.source) citation(version.source, 'assumption ' + assumption.id, version === assumption);
       else if (!version.access) fail('assumption ' + assumption.id + ': needs a defining citation or access note');
     }
   }
@@ -553,7 +557,7 @@ export function validateAtlas(load, { release = false, website = false } = {}) {
           for (const premise of snapshot.assumptions) {
             if (!findVersion(assumptions.get(premise.id), premise.revision)) fail(context + ': missing assumption revision ' + premise.id);
           }
-          for (const source of snapshot.sources) citation(source, context);
+          for (const source of snapshot.sources) citation(source, context, version === record && snapshot === bound);
           for (const link of snapshot.proofs) {
             const target = proofRef(link);
             objectLink(target, context);
@@ -581,7 +585,7 @@ export function validateAtlas(load, { release = false, website = false } = {}) {
                   fail(context + ': unknown reviewed ' + hypothesis + ' convention revision');
                 }
                 if (!evidence.source && !evidence.proof) fail(context + ': directional evidence must cite a paper theorem or proof');
-                if (evidence.source) citation(evidence.source, context + ' assessment');
+                if (evidence.source) citation(evidence.source, context + ' assessment', version === record && snapshot === bound);
                 if (evidence.proof) objectLink(proofRef(evidence.proof), context + ' assessment');
                 const review = reviews.get(evidence.reviewId);
                 const reviewedBound = { ...ref, revision: evidence.boundRevision };
@@ -678,7 +682,7 @@ export function validateAtlas(load, { release = false, website = false } = {}) {
           if (ref.proofId) {
             objectLink(proofRef(ref),context);
             if (release && !usable(proofRef(ref))) fail(context + ': unsupported proof');
-          } else citation(ref,context);
+          } else citation(ref, context, version === record);
         }
       }
       const declined = new Set();
@@ -709,7 +713,7 @@ export function validateAtlas(load, { release = false, website = false } = {}) {
         for (const link of matches) if (!get(link)) fail(context + ': unknown bound revision ' + link.id + '@' + link.revision);
         for (const ref of resolution.evidence) {
           if ('proofId' in ref) objectLink(proofRef(ref), context);
-          else citation(ref, context);
+          else citation(ref, context, current);
         }
         if (!['resolved', 'essentially-resolved'].includes(resolution.status)) continue;
         if (!resolution.rule || !resolution.benchmarks.length || !resolution.evidence.length) {

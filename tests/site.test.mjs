@@ -193,11 +193,13 @@ test('proof headings distinguish authorship from human verification', t => {
   const dir = readerFixture(t);
   const registry = join(dir,'data/atlas.json');
   const data = JSON.parse(readFileSync(registry));
-  const manuscript = id => data.proofs.find(proof => proof.id === id).revisions[0];
+  const manuscript = id => data.proofs.find(proof => proof.id === id).revisions
+    .reduce((latest, entry) => entry.revision > latest.revision ? entry : latest);
   const external = {origin:'external', kind:'human', authors:['Test Author']};
   manuscript('closest-string-balanced').authorship = external;
   manuscript('three-coloring-sh-converse').authorship = external;
-  const review = data.reviews.find(r => r.id === 'three-coloring-sh-converse-review');
+  const review = data.reviews.find(r => r.object.id === 'three-coloring-sh-converse' &&
+    r.object.revision === manuscript('three-coloring-sh-converse').revision && r.type === 'agent');
   data.reviews.push({...review, id:'fixture-human-review', type:'human'});
   delete manuscript('distinct-vectors-fixed-coefficient').authorship.authors;
   writeFileSync(registry,JSON.stringify(data));
@@ -205,7 +207,7 @@ test('proof headings distinguish authorship from human verification', t => {
   const output = path => readFileSync(join(dir,'dist/site',path),'utf8');
   for (const [id, reviewType] of [[review.id, 'Agent'], ['fixture-human-review', 'Human']]) {
     const html = output('reviews/' + id + '/index.html');
-    const title = 'Review of The 3-Coloring bound implies the Satisfiability Hypothesis · Theorem 1 · r1 · ' + reviewType + ' review';
+    const title = 'Review of The 3-Coloring bound implies the Satisfiability Hypothesis · Theorem 1 · r' + review.object.revision + ' · ' + reviewType + ' review';
     assert.ok(html.includes('<title>' + title));
     assert.ok(html.includes('<h1>' + mathText(title)));
     assert.ok(html.includes('<dt>Verdict</dt><dd><span class="status" data-status="' + review.verdict + '">'));
@@ -232,23 +234,24 @@ test('links the preferred publication and labels the exact edition inspected for
   const dir = readerFixture(t);
   const registry = join(dir, 'data/atlas.json');
   const data = JSON.parse(readFileSync(registry));
-  const paper = data.papers.find(p => p.id === 'chkx2005');
-  const inspected = paper.editions.find(edition => edition.id === 'manuscript');
-  inspected.title = 'Inspected manuscript title';
-  inspected.primaryUrl = 'https://example.org/manuscript';
-  paper.preferredEditionId = 'zz-test';
-  paper.editions.push({
-    id: 'zz-test', kind: 'journal', label: 'Fixture journal', title: 'Preferred publication title',
-    doi: '10.1234/atlas-test', primaryUrl: 'https://example.org/journal'
-  });
+  const paper = { id: 'edition-fixture', title: 'Preferred publication title', authors: ['Test author'],
+    preferredEditionId: 'zz-test', editions: [
+      {id: 'manuscript', kind: 'manuscript', title: 'Inspected manuscript title',
+        label: 'Fixture manuscript', primaryUrl: 'https://example.org/manuscript'},
+      {id: 'zz-test', kind: 'journal', label: 'Fixture journal', title: 'Preferred publication title',
+        doi: '10.1234/atlas-test', primaryUrl: 'https://example.org/journal'}
+    ]};
+  data.papers.push(paper);
   writeFileSync(registry, JSON.stringify(data));
   const casePath = join(dir, 'data/cases/weighted-normalized-depth-t-circuit-weight.json');
   const record = JSON.parse(readFileSync(casePath));
   const sources = record.bounds.find(bound => bound.id === 'nc-eth-full').sources;
   const source = sources[0];
+  source.paperId = paper.id;
   source.editionId = 'manuscript';
+  source.editionReason = 'The journal omits the proof for restricted circuits.';
   source.locator = 'Fixture manuscript theorem';
-  sources.push({ ...source, editionId: 'zz-test', locator: 'Fixture journal theorem', placement: 'forward' });
+  sources.push({ paperId: paper.id, role: source.role, editionId: 'zz-test', locator: 'Fixture journal theorem', placement: 'forward' });
   writeFileSync(casePath, JSON.stringify(record));
   execFileSync(process.execPath, ['website/build.mjs'], { cwd: dir });
   const read = path => readFileSync(join(dir, 'dist/site', path), 'utf8');
@@ -265,13 +268,14 @@ test('links the preferred publication and labels the exact edition inspected for
   assert.equal(forward.split(canonical).length - 1, 1);
   assert.equal(forward.split('>Fixture journal<').length - 1, 1);
   assert.match(forward, /Fixture journal theorem/);
+  assert.match(forward, /omits the proof for restricted circuits/);
   assert.ok(read('papers/index.html').includes(canonical));
-  const paperPage = read('papers/chkx2005/index.html');
+  const paperPage = read('papers/edition-fixture/index.html');
   assert.ok(paperPage.indexOf('id="zz-test"') < paperPage.indexOf('id="manuscript"'));
-  assert.match(read('papers/chkx2005/zz-test.bib'), /title = \{Preferred publication title\}/);
-  assert.match(read('papers/chkx2005/zz-test.txt'), /Preferred publication title/);
-  assert.match(read('papers/chkx2005/manuscript.bib'), /title = \{Inspected manuscript title\}/);
-  assert.match(read('papers/chkx2005/manuscript.txt'), /Inspected manuscript title/);
+  assert.match(read('papers/edition-fixture/zz-test.bib'), /title = \{Preferred publication title\}/);
+  assert.match(read('papers/edition-fixture/zz-test.txt'), /Preferred publication title/);
+  assert.match(read('papers/edition-fixture/manuscript.bib'), /title = \{Inspected manuscript title\}/);
+  assert.match(read('papers/edition-fixture/manuscript.txt'), /Inspected manuscript title/);
 });
 
 test('trial search indexes quantitative witnesses and keeps paper filters optional', t => {

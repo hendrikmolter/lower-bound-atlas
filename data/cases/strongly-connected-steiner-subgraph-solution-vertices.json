@@ -31,6 +31,13 @@
           "locator": "Theorem 14.26 and Exercise 14.12, pp. 489 and 517",
           "placement": "statement",
           "role": "lower-bound statement"
+        },
+        {
+          "paperId": "marx2010-treewidth",
+          "editionId": "journal",
+          "locator": "Corollary 1.6 and §6",
+          "placement": "forward",
+          "role": "Original ETH lower bound for Subgraph Isomorphism parameterized by pattern edges"
         }
       ],
       "reader": {
@@ -64,10 +71,17 @@
       "sources": [
         {
           "paperId": "szeider2026",
-          "editionId": "oct30",
-          "locator": "Section 3, Table 1 and Proposition 1",
+          "editionId": "v3",
+          "locator": "§3, Proposition 1, pp. 3–4, and Table 1, third row, p. 5; quadratic parameter transfer discussed on p. 4",
           "placement": "statement",
           "role": "lower-bound statement"
+        },
+        {
+          "paperId": "cygan2015",
+          "editionId": "book",
+          "locator": "Theorem 13.33 and its proof, pp. 457–459",
+          "role": "underlying reduction",
+          "placement": "statement"
         }
       ],
       "reader": {
@@ -199,8 +213,8 @@
         },
         {
           "paperId": "szeider2026",
-          "editionId": "oct30",
-          "locator": "Section 3, Table 1 and Proposition 1",
+          "editionId": "v3",
+          "locator": "§3, Proposition 1, pp. 3–4, and Table 1, third row, p. 5; quadratic parameter transfer discussed on p. 4",
           "placement": "statement",
           "role": "lower-bound statement"
         }

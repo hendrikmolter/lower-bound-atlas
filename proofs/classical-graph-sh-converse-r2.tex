@@ -1,0 +1,109 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=28mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\title{The Satisfiability Hypothesis from fixed-power graph bounds}
+\author{Atlas\thanks{The proof in this note was found using ChatGPT.}}
+\date{18 November 2026}
+\begin{document}
+\maketitle
+
+We consider finite simple undirected graphs with individually represented
+vertices and a nonnegative integer threshold \(k\) in binary. Let \(n\)
+denote the number of vertices and \(B\) the complete input length in bits.
+In \textsc{Independent Set} the question is whether at least \(k\)
+pairwise nonadjacent vertices exist. In \textsc{Vertex Cover} the question
+is whether at most \(k\) vertices suffice to meet every edge.
+The Satisfiability Hypothesis (SH) excludes deterministic CNF satisfiability
+algorithms in time \(2^{O(s^a)}s^{O(1)}\) for each fixed \(0<a<1\), where
+\(s\) is the normalized input length~\cite{sh}.
+
+\hypertarget{is-order-sh-converse}{}
+\hypertarget{vc-order-sh-converse}{}
+\hypertarget{vc-budget-sh-converse}{}
+\begin{theorem}\label{thm:classical-sh}
+Each of the following exclusions implies SH. In each exclusion \(a\)
+ranges over all fixed values \(0<a<1\).
+\begin{enumerate}
+\item No deterministic \(2^{O(n^a)}B^{O(1)}\)-time algorithm for
+\textsc{Independent Set}.
+\item No deterministic \(2^{O(n^a)}B^{O(1)}\)-time algorithm for
+\textsc{Vertex Cover}.
+\item No deterministic \(2^{O(k^a)}B^{O(1)}\)-time algorithm for
+\textsc{Vertex Cover}.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Suppose SH fails, and fix a deterministic CNF solver of time
+\(2^{O(s^b)}s^{O(1)}\) for some \(0<b<1\).
+We first obtain an algorithm whose exponent depends on the number of
+variables in a width-three formula. By quantitative
+sparsification~\cite[Lemma~2.2]{sh}, there is a constant \(D\ge1\) such
+that, for each fixed \(0<d<1\), a width-three formula on \(v\) variables
+can be expressed as a disjunction of at most \(2^{O(v^{1-d})}\)
+width-three formulas, each with at most \(v\) variables and
+\(O(v^{1+Dd})\) clauses. Generation takes deterministic time
+\(2^{O(v^{1-d})}\) times a polynomial in the complete formula input
+length. The width-three sparsification statement is a preprint dependency.
+Relabel the variables of each output formula consecutively so that its
+encoding uses \(O((v+1)^{1+Dd}\log(v+2))\) bits.
+Choose \(d\) small enough that \(b(1+Dd)<1\) and fix \(a\) strictly between
+\(\max\{1-d,b(1+Dd)\}\) and \(1\). The strict inequality absorbs the
+logarithmic factor in the encoding size. Running the CNF solver on
+every output formula, and taking the disjunction, gives a deterministic
+width-three solver with time \(2^{O(v^a)}\) times a polynomial in its
+complete input length.
+
+For the first two exclusions, we encode the graph problem in width-three
+CNF on \(O(n+1)\) variables. Thresholds larger than \(n\) and the case
+\(n=0\) admit direct decisions. Use one selection bit \(x_u\) per vertex.
+For \textsc{Independent Set}, add
+\(\neg x_u\lor \neg x_w\) for every edge \(uw\).
+For \textsc{Vertex Cover}, add \(x_u\lor x_w\) for every edge.
+The respective constraints on the number of selected vertices are
+enforced by a Boolean circuit summing the bits and comparing their sum
+with \(k\). Pad the bits to a power of two and sum them with a balanced
+tree of binary adders. Level \(j\) uses \(O(n/2^j)\) additions of
+\(O(j)\)-bit numbers. With ripple-carry adders, the whole circuit has
+\(O(n\sum_{j\ge1}j/2^j)=O(n)\) constant-fanin gates, including the
+final comparison. For every fanin-two gate use one variable for its
+output and clauses forbidding each input-output combination inconsistent
+with the gate. These clauses have width at most three. Force the final
+comparison output to be true. The formula is satisfiable exactly when
+the graph instance is a yes-instance, and its length and construction
+time are polynomial in \(B\). The width-three solver now runs in time
+\(2^{O(n^a)}B^{O(1)}\), contradicting either graph-order exclusion.
+
+For the third exclusion, we first use the polynomial-time
+\(2k\)-vertex kernel for \textsc{Vertex Cover} of Chen, Kanj, and
+Jia~\cite[Theorem~2.2]{ckj}, based on the decomposition of Nemhauser and
+Trotter~\cite{nt}. It either decides the input directly or produces an
+equivalent graph with at most \(2k\) vertices and an updated threshold.
+The same encoding uses \(O(k+1)\) variables and has length polynomial in
+\(B\). Bounded \(k\) can be handled in polynomial time on the kernel.
+The resulting running time is \(2^{O(k^a)}B^{O(1)}\), contradicting
+the budget exclusion.
+\end{proof}
+
+\begin{thebibliography}{9}
+\bibitem{sh}
+MIT Hardness Group, J.~Brunner, E.~D. Demaine, F.~Frei, T.~Gomez,
+M.~Hecher, J.~Li, and J.~Lynch.
+\emph{ETH is Dead, Long Live SH}.
+\href{https://arxiv.org/abs/2611.02650v2}{arXiv:2611.02650v2}, 2026.
+
+\bibitem{nt}
+G.~L. Nemhauser and L.~E. Trotter.
+Vertex packings: Structural properties and algorithms.
+\emph{Mathematical Programming}, 8:232--248, 1975.
+\href{https://doi.org/10.1007/BF01580444}{DOI}.
+
+\bibitem{ckj}
+J.~Chen, I.~A. Kanj, and W.~Jia.
+Vertex cover: Further observations and further improvements.
+\emph{Journal of Algorithms}, 41(2):280--301, 2001.
+\href{https://doi.org/10.1006/jagm.2001.1186}{DOI}.
+\end{thebibliography}
+\end{document}

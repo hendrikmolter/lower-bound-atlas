@@ -32,7 +32,7 @@
       "sources": [
         {
           "editionId": "focs",
-          "locator": "Theorem I.2 and Corollary I.4, p. 475",
+          "locator": "Theorem I.2, p. 475",
           "paperId": "marx-pilipczuk-pilipczuk2018-steiner",
           "placement": "statement",
           "role": "planar terminal-count lower bound"

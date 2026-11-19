@@ -34,13 +34,6 @@
           "locator": "Lemma 13 and proof, §3, p. 8",
           "placement": "statement",
           "role": "published linear-item ETH reduction"
-        },
-        {
-          "editionId": "journal",
-          "locator": "p. 2317 and Section 5",
-          "paperId": "nederlof-swennenhuis2022",
-          "placement": "context",
-          "role": "independent statement of the item-count benchmark"
         }
       ],
       "statement": "Under ETH, no deterministic algorithm decides Subset Sum within the stated running time.",
@@ -60,7 +53,7 @@
       "proofs": [
         {
           "proofId": "subset-sum-item-count-sh",
-          "revision": 1,
+          "revision": 2,
           "theorem": "subset-sum-item-count-sh"
         }
       ],
@@ -82,8 +75,8 @@
       ],
       "sources": [
         {
-          "editionId": "v1",
-          "locator": "Lemma 2.1, p. 5",
+          "editionId": "v2",
+          "locator": "Lemma 2.1, pp. 5–6",
           "paperId": "sh26",
           "placement": "proof",
           "role": "fixed-width SAT size formulation of SH"
@@ -185,6 +178,23 @@
         "theorem": "subset-sum-item-count-sh"
       },
       "sourceSha256": "58dea1b6ad3c5f4c594f78a99b1370a59b27f9c70750eb6b7cc6b31871914380"
+    },
+    {
+      "id": "subset-sum-item-count-sh-review-r2",
+      "type": "agent",
+      "date": "2026-11-19",
+      "reviewer": "Codex agent originals",
+      "verdict": "verified",
+      "scope": "Checked the v2 fixed-width size characterization of SH and the indexed positive binary Subset Sum reduction, including the no-carry property, linear item count, and polynomial output length.",
+      "evidence": "evidence/sh-preprint-v2-proof-review.md",
+      "object": {
+        "type": "proof",
+        "id": "subset-sum-item-count-sh",
+        "revision": 2,
+        "theorem": "subset-sum-item-count-sh"
+      },
+      "independent": true,
+      "sourceSha256": "11d89eb042394d4eb72c62becd3db4de44fa4d40c93f67524f477319900b2801"
     }
   ]
 }

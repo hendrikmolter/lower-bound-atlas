@@ -159,7 +159,8 @@
           "editionId": "arxiv-v1",
           "locator": "§8, Theorem 8.1",
           "placement": "forward",
-          "role": "partition-to-Bin Packing transfer deferred by the proceedings"
+          "role": "partition-to-Bin Packing transfer deferred by the proceedings",
+          "editionReason": "The proceedings proof explicitly defers the transfer from Multiset k-way Partition with targets to Theorem 8.1 of this full version."
         }
       ],
       "statement": "Under ETH, no deterministic algorithm solves Unary Bin Packing within the stated running time.",

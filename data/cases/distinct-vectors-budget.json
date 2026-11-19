@@ -95,21 +95,21 @@
         {
           "paperId": "df1995",
           "editionId": "journal",
-          "locator": "Independent Set completeness, with Clique by complementation",
+          "locator": "Corollary 3.2, with Clique by complementation",
           "role": "source completeness",
           "placement": "proof"
         },
         {
           "paperId": "lin2019",
           "editionId": "proceedings",
-          "locator": "Lemma 14",
+          "locator": "Lemma 14 and proof, pp. 81:11–81:12",
           "role": "source reduction",
           "placement": "proof"
         },
         {
           "paperId": "froese2012",
           "editionId": "thesis",
-          "locator": "Section 4.1.1, Theorem 4.1, pp. 33–34",
+          "locator": "Section 4.1.1, proof of Theorem 4.1, p. 33",
           "role": "address construction",
           "placement": "proof"
         }

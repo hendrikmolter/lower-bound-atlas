@@ -46,14 +46,14 @@
       "sources": [
         {
           "editionId": "proceedings",
-          "locator": "Theorem 2(ii) and Section 3, proof of statement (ii)",
+          "locator": "p. 67:2, Theorem 2(ii), p. 67:6, and discussion of statement (ii), p. 67:8",
           "paperId": "galby-et-al2024-directed-steiner",
           "placement": "statement",
-          "role": "conditional lower bound"
+          "role": "Published statement for out-star demands, using the earlier planar Steiner Tree lower bound"
         },
         {
           "editionId": "focs",
-          "locator": "Theorem I.2",
+          "locator": "Theorem I.2, p. 475",
           "paperId": "marx-pilipczuk-pilipczuk2018-steiner",
           "placement": "forward",
           "role": "underlying undirected planar Steiner Tree reduction"

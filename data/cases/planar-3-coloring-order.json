@@ -32,6 +32,20 @@
           "locator": "Theorem 14.9 and Exercise 14.3(d)",
           "role": "benchmark",
           "placement": "statement"
+        },
+        {
+          "paperId": "garey-johnson-stockmeyer1976",
+          "editionId": "journal",
+          "locator": "Theorems 2.1–2.2, pp. 248–251",
+          "role": "direct 3SAT and planar crossover reductions",
+          "placement": "forward"
+        },
+        {
+          "paperId": "lichtenstein1982",
+          "editionId": "journal",
+          "locator": "Theorem 2, p. 333, invoking the planarization construction in §3",
+          "role": "quadratic Planar 3SAT reduction",
+          "placement": "forward"
         }
       ],
       "proofs": [],

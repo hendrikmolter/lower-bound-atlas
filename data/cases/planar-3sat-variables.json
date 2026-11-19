@@ -129,6 +129,13 @@
           "paperId": "sh26",
           "placement": "statement",
           "role": "benchmark"
+        },
+        {
+          "paperId": "lichtenstein1982",
+          "editionId": "journal",
+          "locator": "Theorem 2, p. 333, invoking the planarization construction in §3",
+          "role": "quadratic Planar 3SAT reduction",
+          "placement": "forward"
         }
       ],
       "statement": "Under SH, no deterministic algorithm solves Planar 3SAT within the stated running time.",

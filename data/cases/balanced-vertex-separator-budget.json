@@ -50,6 +50,13 @@
           "paperId": "cygan2015",
           "placement": "statement",
           "role": "conditional lower bound"
+        },
+        {
+          "paperId": "chkx2006",
+          "editionId": "journal",
+          "locator": "Theorem 5.5, p. 1360",
+          "placement": "forward",
+          "role": "Original Clique lower bound under the subexponential-time SNP premise"
         }
       ],
       "statement": "Under ETH, no deterministic algorithm solves the stated decision problem within the stated running time.",

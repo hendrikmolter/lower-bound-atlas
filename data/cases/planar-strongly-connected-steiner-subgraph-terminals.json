@@ -35,8 +35,8 @@
       "sources": [
         {
           "paperId": "chitnis-feldmann-hajiaghayi-marx-scss",
-          "editionId": "accepted",
-          "locator": "Theorem 1.2 and §3",
+          "editionId": "journal",
+          "locator": "Theorem 1.2, p. 321, Remark 1.5, p. 323, and §3, pp. 328–337",
           "placement": "statement",
           "role": "ETH theorem and reduction"
         },
@@ -81,8 +81,8 @@
       "sources": [
         {
           "paperId": "chitnis-feldmann-hajiaghayi-marx-scss",
-          "editionId": "accepted",
-          "locator": "Theorem 1.2 and §3",
+          "editionId": "journal",
+          "locator": "Theorem 1.2, p. 321, Remark 1.5, p. 323, and §3, pp. 328–337",
           "placement": "statement",
           "role": "W[1]-hardness statement and reduction"
         }

@@ -37,6 +37,13 @@
           "locator": "Theorem 14.9 and Exercise 14.3(e), pp. 475, 516, 518",
           "placement": "statement",
           "role": "lower-bound statement"
+        },
+        {
+          "paperId": "garey-johnson-tarjan1976",
+          "editionId": "journal",
+          "locator": "Construction and crossing count, pp. 709–712",
+          "role": "original reduction from 3SAT",
+          "placement": "forward"
         }
       ],
       "reader": {
@@ -76,6 +83,13 @@
           "locator": "Table 1, Planar Hamiltonian Cycle, p. 4",
           "placement": "statement",
           "role": "lower-bound statement"
+        },
+        {
+          "paperId": "garey-johnson-tarjan1976",
+          "editionId": "journal",
+          "locator": "Construction and crossing count, pp. 709–712",
+          "role": "original reduction from 3SAT",
+          "placement": "forward"
         }
       ],
       "reader": {

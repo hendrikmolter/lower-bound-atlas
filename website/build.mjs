@@ -302,6 +302,10 @@ function inspectedEdition(page, paper, edition, locators) {
   return `<span class="source-edition">${preferred ? '' : 'Inspected edition · '}${original} · ${locators.map(escape).join(' · ')}${fullText}</span>`;
 }
 
+function sourceLocator(source) {
+  return source.locator + (source.editionReason ? ' · ' + source.editionReason : '');
+}
+
 function sourceLink(page, source, { authors = false, role = true } = {}) {
   const paper = registries.papers.get(source.paperId);
   const edition = paper.editions.find(item => item.id === source.editionId);
@@ -309,7 +313,7 @@ function sourceLink(page, source, { authors = false, role = true } = {}) {
   return preferredPaperLink(page, paper, splitEdition) +
     (authors ? ' · ' + escape(paper.authors.join(', ')) : '') +
     (role ? ' · ' + escape(source.role) : '') +
-    (splitEdition ? '<br>' : ' · ') + inspectedEdition(page, paper, edition, [source.locator]);
+    (splitEdition ? '<br>' : ' · ') + inspectedEdition(page, paper, edition, [sourceLocator(source)]);
 }
 
 function reviewLink(page, id) {
@@ -690,7 +694,7 @@ function paperReferences(page, sources, { roles = false } = {}) {
     if (!papers.has(source.paperId)) papers.set(source.paperId, new Map());
     const editions = papers.get(source.paperId);
     if (!editions.has(source.editionId)) editions.set(source.editionId, new Set());
-    editions.get(source.editionId).add(roles ? source.role + ' · ' + source.locator : source.locator);
+    editions.get(source.editionId).add((roles ? source.role + ' · ' : '') + sourceLocator(source));
   }
   return items([...papers].map(([paperId, editions]) => {
     const paper = registries.papers.get(paperId);
@@ -901,7 +905,7 @@ function assumptionPages() {
 }
 
 function paperUse(page, ref) {
-  const suffix = ' · ' + escape(ref.locator) + ' · ' + escape(ref.role);
+  const suffix = ' · ' + escape(sourceLocator(ref)) + ' · ' + escape(ref.role);
   if (ref.type === 'assumption') return premiseLink(page, ref, { exact: true }) + suffix;
   const record = registries.cases.get(ref.caseId);
   if (ref.type === 'resolution') return link(page, routes.case(ref.caseId), record.title + ' · ' + assumptionLabel(ref.id) + ' assessment',

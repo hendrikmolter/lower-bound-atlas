@@ -214,20 +214,12 @@
       ],
       "editions": [
         {
-          "id": "v1",
-          "kind": "preprint",
-          "label": "arXiv:2611.02650v1, 2 November 2026",
-          "primaryUrl": "https://arxiv.org/abs/2611.02650v1",
-          "openUrl": "https://arxiv.org/pdf/2611.02650v1",
-          "access": "Exact arXiv v1. The quantitative sparsification proof is a preprint-only dependency."
-        },
-        {
           "id": "v2",
           "kind": "preprint",
           "label": "arXiv:2611.02650v2, 16 November 2026",
           "primaryUrl": "https://arxiv.org/abs/2611.02650v2",
           "openUrl": "https://arxiv.org/pdf/2611.02650v2",
-          "access": "Preprint. Table 1, its footnotes and Theorem 3.1 were checked in this version."
+          "access": "Preprint. Decision portions of Lemmas 2.1 (pp. 5–6) and 2.2 (pp. 6–7), Table 1 and its footnotes (p. 4), and Theorem 3.1 (p. 8) checked. Quantitative sparsification is a preprint-only dependency."
         }
       ],
       "preferredEditionId": "v2"
@@ -248,14 +240,6 @@
           "primaryUrl": "https://doi.org/10.1137/16M1104834",
           "access": "Checked the relevant published-format theorem statements and reductions.",
           "doi": "10.1137/16M1104834"
-        },
-        {
-          "id": "manuscript",
-          "kind": "manuscript",
-          "label": "Public journal author manuscript",
-          "primaryUrl": "https://sites.cs.ucsb.edu/~daniello/papers/slightlySuperexpSICOMP18.pdf",
-          "openUrl": "https://sites.cs.ucsb.edu/~daniello/papers/slightlySuperexpSICOMP18.pdf",
-          "access": "Open author manuscript used for theorem and reduction interfaces."
         }
       ],
       "preferredEditionId": "journal"
@@ -298,22 +282,6 @@
           "doi": "10.1007/s10878-006-7137-6",
           "primaryUrl": "https://doi.org/10.1007/s10878-006-7137-6",
           "access": "Published text checked for Theorems 2.2–2.3, 3.2, 4.1 and 5.1, the linear-reduction definition, and the complexity-function convention."
-        },
-        {
-          "id": "cocoon",
-          "kind": "proceedings",
-          "label": "COCOON 2005, LNCS 3595, 975–984",
-          "primaryUrl": "https://doi.org/10.1007/11533719_98",
-          "access": "Published conference edition.",
-          "doi": "10.1007/11533719_98"
-        },
-        {
-          "id": "manuscript",
-          "kind": "manuscript",
-          "label": "Inspected 2005 conference author manuscript",
-          "primaryUrl": "https://www.cs.lafayette.edu/~gexia/research/jcombopt.pdf",
-          "openUrl": "https://www.cs.lafayette.edu/~gexia/research/jcombopt.pdf",
-          "access": "Several technical proofs are omitted and deferred to a technical report."
         }
       ],
       "preferredEditionId": "journal"
@@ -335,14 +303,6 @@
           "primaryUrl": "https://doi.org/10.1016/j.jcss.2006.04.007",
           "access": "Published text checked for DS-Core and Theorems 5.4–5.8 in §5, pp. 1358–1361.",
           "doi": "10.1016/j.jcss.2006.04.007"
-        },
-        {
-          "id": "jan17",
-          "kind": "manuscript",
-          "label": "Inspected author manuscript, 17 January 2006",
-          "primaryUrl": "https://www.cs.lafayette.edu/~gexia/research/jcss72_8.pdf",
-          "openUrl": "https://www.cs.lafayette.edu/~gexia/research/jcss72_8.pdf",
-          "access": "Inspected author manuscript with the DS-Core definition and Theorem 5.4. Retained for earlier citations and their pagination."
         }
       ],
       "preferredEditionId": "journal"
@@ -367,14 +327,6 @@
           "primaryUrl": "https://doi.org/10.1016/j.ic.2005.05.001",
           "access": "Published text checked for the circuit definitions and Theorems 3.3, 3.5, and 4.3, including the Clique-to-k-Cut reduction cited in its proof.",
           "doi": "10.1016/j.ic.2005.05.001"
-        },
-        {
-          "id": "manuscript",
-          "kind": "manuscript",
-          "label": "Inspected author manuscript",
-          "primaryUrl": "https://people.csail.mit.edu/rrw/presentations/w1-vs-eth.pdf",
-          "openUrl": "https://people.csail.mit.edu/rrw/presentations/w1-vs-eth.pdf",
-          "access": "Author manuscript retained for earlier citations and their numbering."
         }
       ],
       "preferredEditionId": "journal"
@@ -387,21 +339,13 @@
       ],
       "editions": [
         {
-          "id": "oct30",
-          "kind": "preprint",
-          "label": "Zenodo preprint v1, 30 October 2026",
-          "doi": "10.5281/zenodo.23797197",
-          "primaryUrl": "https://doi.org/10.5281/zenodo.23797197",
-          "access": "Inspected original version."
-        },
-        {
           "id": "v3",
           "kind": "preprint",
           "label": "Zenodo preprint v3, 9 November 2026",
           "doi": "10.5281/zenodo.24088151",
           "primaryUrl": "https://doi.org/10.5281/zenodo.24088151",
           "openUrl": "https://zenodo.org/api/records/24088151/files/kxk_note.pdf/content",
-          "access": "Checked the exact Zenodo PDF for the hypothesis and the transfers in Table 1."
+          "access": "Official Zenodo version 3 PDF inspected. The latest-version endpoint identifies v3. Section 2, Propositions 1–2 and Table 1 checked for the cited hypothesis and transfers. These are preprint results."
         }
       ],
       "preferredEditionId": "v3"
@@ -441,14 +385,6 @@
           "doi": "10.1145/3373718.3394756",
           "primaryUrl": "https://doi.org/10.1145/3373718.3394756",
           "access": "Published text checked for Theorem 13, its proof, and the source definitions of ETH and normalized QBF."
-        },
-        {
-          "id": "full",
-          "kind": "preprint",
-          "label": "Full version (arXiv:1910.01047v2)",
-          "primaryUrl": "https://arxiv.org/abs/1910.01047v2",
-          "openUrl": "https://arxiv.org/pdf/1910.01047v2",
-          "access": "Inspected arXiv version retained for earlier citations and their pagination."
         }
       ],
       "preferredEditionId": "proceedings"
@@ -541,7 +477,8 @@
           "id": "thesis",
           "kind": "thesis",
           "label": "Master’s thesis, Technische Universität Berlin (2012)",
-          "primaryUrl": "https://fpt.akt.tu-berlin.de/publications/theses/MA-vincent-froese.pdf"
+          "primaryUrl": "https://fpt.akt.tu-berlin.de/publications/theses/MA-vincent-froese.pdf",
+          "access": "Theorem 4.1 in §4.1.1, p. 33, gives the paired binary row-address construction. The later MFCS and JCSS Hitting Set reductions use an unbounded alphabet. Chapter 4 of Froese’s 2018 doctoral thesis treats binary Hamming-distance restrictions using a different construction."
         }
       ],
       "preferredEditionId": "thesis"
@@ -563,14 +500,6 @@
           "doi": "10.1137/130947076",
           "primaryUrl": "https://doi.org/10.1137/130947076",
           "access": "Published text checked for Theorem 1 and Corollaries 2–3 on p. 70, and their proofs."
-        },
-        {
-          "id": "v2",
-          "kind": "preprint",
-          "label": "arXiv:1203.1754v2, 26 September 2012",
-          "primaryUrl": "https://arxiv.org/abs/1203.1754v2",
-          "openUrl": "https://arxiv.org/pdf/1203.1754v2",
-          "access": "Checked the reduction statement and lower-bound corollary in the full text."
         }
       ]
     },
@@ -611,15 +540,6 @@
           "doi": "10.1145/3417759",
           "primaryUrl": "https://doi.org/10.1145/3417759",
           "access": "Published text checked for the subexponential-time convention in §2.2 and the Dominating Set equivalence in Corollary 3.8."
-        },
-        {
-          "id": "mfcs",
-          "kind": "proceedings",
-          "label": "MFCS 2016, LIPIcs 58, 42:1–42:14",
-          "doi": "10.4230/LIPIcs.MFCS.2016.42",
-          "primaryUrl": "https://doi.org/10.4230/LIPIcs.MFCS.2016.42",
-          "openUrl": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol058-mfcs2016/LIPIcs.MFCS.2016.42/LIPIcs.MFCS.2016.42.pdf",
-          "access": "Proceedings full text inspected for the single-algorithm definition and Dominating Set corollary."
         }
       ]
     },
@@ -640,8 +560,7 @@
           "label": "ACM Journal of Experimental Algorithmics 13 (2009), Article 2.2",
           "doi": "10.1145/1412228.1412236",
           "primaryUrl": "https://doi.org/10.1145/1412228.1412236",
-          "openUrl": "https://hueffner.de/falk/clique-cover-jea07.pdf",
-          "access": "Published text checked for §2, Rules 1 and 3′, and Theorem 1, pp. 2.2:4–2.2:7. The linked author manuscript is also available."
+          "access": "Published text checked for §2, Rules 1 and 3′, and Theorem 1, pp. 2.2:4–2.2:7."
         }
       ]
     },
@@ -675,7 +594,8 @@
           "kind": "journal",
           "label": "Journal of the ACM 73(5), article 35 (2026)",
           "primaryUrl": "https://doi.org/10.1145/3833387",
-          "access": "Journal publication and Theorem 1.2 locator confirmed in publisher-indexed text. Direct full-text access returned 403."
+          "access": "Journal publication and Theorem 1.2 locator confirmed in publisher-indexed text. Direct full-text access returned 403.",
+          "doi": "10.1145/3833387"
         },
         {
           "id": "arxiv-v2",
@@ -724,33 +644,6 @@
           "label": "Journal of Computer and System Sciences 84 (2017), pp. 1–10",
           "primaryUrl": "https://doi.org/10.1016/j.jcss.2016.06.004",
           "access": "Published text checked for §3, Lemma 13, p. 8, including the linear-item reduction."
-        },
-        {
-          "id": "arxiv",
-          "kind": "preprint",
-          "label": "arXiv:1507.03439",
-          "primaryUrl": "https://arxiv.org/abs/1507.03439",
-          "openUrl": "https://arxiv.org/pdf/1507.03439",
-          "access": "Lemma 3 and the detailed positive-item no-carry reduction were inspected."
-        }
-      ]
-    },
-    {
-      "id": "nederlof-swennenhuis2022",
-      "title": "On the Fine-grained Parameterized Complexity of Partial Scheduling to Minimize the Makespan",
-      "authors": [
-        "Jesper Nederlof",
-        "Céline M. F. Swennenhuis"
-      ],
-      "preferredEditionId": "journal",
-      "editions": [
-        {
-          "id": "journal",
-          "kind": "journal",
-          "label": "Algorithmica 84(8) (2022), pp. 2309–2334",
-          "primaryUrl": "https://doi.org/10.1007/s00453-022-00970-8",
-          "openUrl": "https://pure.tue.nl/ws/files/215115935/s00453_022_00970_8.pdf",
-          "access": "Published PDF inspected for the ETH item-count statement on p. 2317 and its attribution in Section 5."
         }
       ]
     },
@@ -770,14 +663,6 @@
           "doi": "10.1007/978-3-642-31594-7_57",
           "access": "Published ICALP text checked for Theorem 3 and Corollary 5.",
           "title": "A Tight Lower Bound for Planar Multiway Cut"
-        },
-        {
-          "id": "author",
-          "kind": "preprint",
-          "label": "Inspected author version",
-          "primaryUrl": "https://www.cs.bme.hu/~dmarx/papers/marx-mway-icalp2012.pdf",
-          "openUrl": "https://www.cs.bme.hu/~dmarx/papers/marx-mway-icalp2012.pdf",
-          "access": "Public version used where the published full text was unavailable."
         }
       ]
     },
@@ -797,14 +682,6 @@
           "primaryUrl": "https://doi.org/10.1145/3483425",
           "doi": "10.1145/3483425",
           "access": "Published text checked for the planar d-Scattered Set lower-bound paragraph in §1, p. 13:6, and its textbook reduction reference."
-        },
-        {
-          "id": "author",
-          "kind": "preprint",
-          "label": "Inspected author version",
-          "primaryUrl": "https://arxiv.org/abs/1504.05476",
-          "openUrl": "https://arxiv.org/abs/1504.05476",
-          "access": "Public version used where the published full text was unavailable."
         }
       ]
     },
@@ -825,23 +702,7 @@
           "label": "SIAM Journal on Computing 49(2) (2020)",
           "primaryUrl": "https://doi.org/10.1137/18M122371X",
           "doi": "10.1137/18M122371X",
-          "access": "Journal DOI and theorem checked against the institutional peer-reviewed accepted manuscript. Publisher pagination was not checked."
-        },
-        {
-          "id": "author",
-          "kind": "preprint",
-          "label": "Inspected author version",
-          "primaryUrl": "https://arxiv.org/abs/1911.13161",
-          "openUrl": "https://arxiv.org/abs/1911.13161",
-          "access": "Public version used where the published full text was unavailable."
-        },
-        {
-          "id": "accepted",
-          "kind": "manuscript",
-          "label": "Journal accepted manuscript",
-          "primaryUrl": "https://pure-oai.bham.ac.uk/ws/portalfiles/portal/84854624/J10_Tight_Bounds_for_Planar.pdf",
-          "openUrl": "https://pure-oai.bham.ac.uk/ws/portalfiles/portal/84854624/J10_Tight_Bounds_for_Planar.pdf",
-          "access": "University of Birmingham peer-reviewed manuscript checked for Theorem 1.2 and §3, including §3.6."
+          "access": "Published text checked for Theorem 1.2, p. 321, Remark 1.5, p. 323, and §3, pp. 328–337, including the final reduction argument in §3.6, p. 337."
         }
       ]
     },
@@ -877,7 +738,8 @@
           "label": "IWPEC 2006, LNCS 4169, 154–165",
           "primaryUrl": "https://doi.org/10.1007/11847250_14",
           "doi": "10.1007/11847250_14",
-          "access": "Published edition."
+          "access": "Published IWPEC edition. Theorem 1 and unit-disk transfer paragraph immediately before Theorem 2 checked in the author copy. The heading for Theorem 2 in this copy says Maximum Independent Set, while the abstract and surrounding construction concern Dominating Set.",
+          "openUrl": "https://www.cs.bme.hu/~dmarx/papers/marx-iwpec2006.pdf"
         }
       ]
     },
@@ -1050,7 +912,8 @@
           "label": "SIAM J. Comput. 11(2), 329–343 (1982)",
           "primaryUrl": "https://doi.org/10.1137/0211025",
           "doi": "10.1137/0211025",
-          "access": "Published reduction. The quantitative crossover size is also stated in the cited textbook."
+          "access": "Published reduction. The quantitative crossover size is also stated in the cited textbook.",
+          "openUrl": "https://www.math.ucdavis.edu/~deloera/MISC/LA-BIBLIO/trunk/Lichtens.pdf"
         }
       ]
     },
@@ -1077,8 +940,8 @@
           "kind": "proceedings",
           "label": "FOCS 2020, 798–809",
           "primaryUrl": "https://doi.org/10.1109/FOCS46700.2020.00079",
-          "openUrl": "https://sites.cs.ucsb.edu/~daniello/papers/minkcutFOCS20.pdf",
-          "access": "Published proceedings PDF, introduction, p. 798.",
+          "openUrl": "https://ieee-focs.org/FOCS-2020-Papers/pdfs/FOCS2020-SFPLmbQgSLgOwZlanGgzq/962100a798/962100a798.pdf",
+          "access": "Published IEEE proceedings, §I, p. 798, restates the exact ETH exclusion and attributes it to earlier work.",
           "doi": "10.1109/FOCS46700.2020.00079"
         }
       ]
@@ -1120,15 +983,6 @@
           "primaryUrl": "https://doi.org/10.1145/3397484",
           "openUrl": "https://doi.org/10.1145/3397484",
           "access": "Published text checked for Theorem 1, §2.3, and the distinction from Corollary 2."
-        },
-        {
-          "id": "stacs",
-          "kind": "proceedings",
-          "label": "STACS 2019, LIPIcs 126, pp. 44:1–44:15",
-          "primaryUrl": "https://doi.org/10.4230/LIPIcs.STACS.2019.44",
-          "openUrl": "https://doi.org/10.4230/LIPIcs.STACS.2019.44",
-          "access": "Full text inspected.",
-          "doi": "10.4230/LIPIcs.STACS.2019.44"
         }
       ]
     },
@@ -1151,14 +1005,6 @@
           "primaryUrl": "https://doi.org/10.1016/j.jcss.2012.04.004",
           "openUrl": "https://doi.org/10.1016/j.jcss.2012.04.004",
           "access": "Published text checked for the unary decision formulation and Theorems 2–3."
-        },
-        {
-          "id": "author",
-          "kind": "preprint",
-          "label": "Authors’ full manuscript",
-          "primaryUrl": "https://www.cs.bme.hu/~dmarx/papers/jansen-binpacking-algo.pdf",
-          "openUrl": "https://www.cs.bme.hu/~dmarx/papers/jansen-binpacking-algo.pdf",
-          "access": "Full text inspected."
         }
       ]
     },
@@ -1208,14 +1054,6 @@
           "primaryUrl": "https://doi.org/10.1016/j.ic.2020.104514",
           "openUrl": "https://doi.org/10.1016/j.ic.2020.104514",
           "access": "Published text checked for Theorem 1.3 and the proof of Theorem 1.2 that yields it."
-        },
-        {
-          "id": "arxiv-v1",
-          "kind": "preprint",
-          "label": "arXiv:1606.08141v1",
-          "primaryUrl": "https://arxiv.org/abs/1606.08141v1",
-          "openUrl": "https://arxiv.org/abs/1606.08141v1",
-          "access": "Full text inspected."
         }
       ]
     },
@@ -1258,23 +1096,6 @@
           "primaryUrl": "https://doi.org/10.1016/j.jcss.2026.103817",
           "openUrl": "https://doi.org/10.1016/j.jcss.2026.103817",
           "access": "Published text checked for Theorem 3 and §§3–4, and for Corollary 1 and the full §5 ETH reduction."
-        },
-        {
-          "id": "esa",
-          "kind": "proceedings",
-          "label": "ESA 2024, LIPIcs 308, pp. 68:1–68:14",
-          "primaryUrl": "https://doi.org/10.4230/LIPIcs.ESA.2024.68",
-          "openUrl": "https://doi.org/10.4230/LIPIcs.ESA.2024.68",
-          "access": "Full text inspected.",
-          "doi": "10.4230/LIPIcs.ESA.2024.68"
-        },
-        {
-          "id": "arxiv",
-          "kind": "preprint",
-          "label": "arXiv:2401.01740",
-          "primaryUrl": "https://arxiv.org/abs/2401.01740",
-          "openUrl": "https://arxiv.org/html/2401.01740",
-          "access": "Full manuscript inspected for the ETH reduction and bit sizes."
         }
       ]
     },
@@ -1295,14 +1116,6 @@
           "primaryUrl": "https://doi.org/10.1016/j.dam.2012.05.019",
           "openUrl": "https://www.sciencedirect.com/science/article/pii/S0166218X12002259",
           "access": "Published text checked for Theorem 2 and its reduction in §2, including the maximum-degree-six restriction."
-        },
-        {
-          "id": "author",
-          "kind": "preprint",
-          "label": "Authors’ full manuscript",
-          "primaryUrl": "https://www.uni-marburg.de/de/fb12/arbeitsgruppen/algorith/paper/ce-bounded-degree.pdf",
-          "openUrl": "https://www.uni-marburg.de/de/fb12/arbeitsgruppen/algorith/paper/ce-bounded-degree.pdf",
-          "access": "Full text inspected."
         }
       ]
     },
@@ -1324,14 +1137,6 @@
           "primaryUrl": "https://doi.org/10.1016/j.tcs.2017.07.010",
           "openUrl": "https://doi.org/10.1016/j.tcs.2017.07.010",
           "access": "Published text checked for Theorem 12 and Corollary 13, with the sum of the two intrinsic vertex-cover numbers."
-        },
-        {
-          "id": "author",
-          "kind": "preprint",
-          "label": "Authors’ full manuscript",
-          "primaryUrl": "https://perso.ens-lyon.fr/edouard.bonnet/publi/tcs2017.pdf",
-          "openUrl": "https://perso.ens-lyon.fr/edouard.bonnet/publi/tcs2017.pdf",
-          "access": "Full text inspected."
         }
       ]
     },
@@ -1375,14 +1180,6 @@
           "primaryUrl": "https://doi.org/10.1016/j.dam.2016.11.016",
           "openUrl": "https://www.sciencedirect.com/science/article/pii/S0166218X1630539X",
           "access": "Published text checked for both parts of Theorem 14 and their proof in §3.4."
-        },
-        {
-          "id": "arxiv-v3",
-          "kind": "preprint",
-          "label": "arXiv:1503.05110v3",
-          "primaryUrl": "https://arxiv.org/abs/1503.05110v3",
-          "openUrl": "https://arxiv.org/abs/1503.05110v3",
-          "access": "Full text inspected."
         }
       ]
     },
@@ -1483,6 +1280,190 @@
           "access": "Author-hosted copy of the published article inspected for Theorem 4.1 and Proposition 4.3."
         }
       ]
+    },
+    {
+      "id": "fellows-hermelin-rosamond-vialette2009",
+      "title": "On the parameterized complexity of multiple-interval graph problems",
+      "authors": [
+        "Michael R. Fellows",
+        "Danny Hermelin",
+        "Frances Rosamond",
+        "Stéphane Vialette"
+      ],
+      "preferredEditionId": "journal",
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "journal",
+          "label": "Theoretical Computer Science 410(1) (2009), 53–61",
+          "doi": "10.1016/j.tcs.2008.09.065",
+          "primaryUrl": "https://doi.org/10.1016/j.tcs.2008.09.065",
+          "access": "Published text checked for §2, Lemma 1 and deletion of edges within color classes, p. 56."
+        }
+      ]
+    },
+    {
+      "id": "fellows-et-al2011-colorful-treewidth",
+      "title": "On the Complexity of Some Colorful Problems Parameterized by Treewidth",
+      "authors": [
+        "Michael R. Fellows",
+        "Fedor V. Fomin",
+        "Daniel Lokshtanov",
+        "Frances Rosamond",
+        "Saket Saurabh",
+        "Stefan Szeider",
+        "Carsten Thomassen"
+      ],
+      "preferredEditionId": "journal",
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "journal",
+          "label": "Information and Computation 209(2) (2011), 143–153",
+          "doi": "10.1016/j.ic.2010.11.026",
+          "primaryUrl": "https://doi.org/10.1016/j.ic.2010.11.026",
+          "openUrl": "https://fedorvf.github.io/articles/2011/2011b.pdf",
+          "access": "Journal-layout author copy. Theorem 1 and §2.1 give a reduction with treewidth at most the number of color classes."
+        }
+      ]
+    },
+    {
+      "id": "marx2007-geometric-ptas",
+      "title": "On the Optimality of Planar and Geometric Approximation Schemes",
+      "authors": [
+        "Dániel Marx"
+      ],
+      "preferredEditionId": "focs",
+      "editions": [
+        {
+          "id": "focs",
+          "kind": "proceedings",
+          "label": "FOCS 2007, pp. 338–348",
+          "doi": "10.1109/FOCS.2007.26",
+          "primaryUrl": "https://doi.org/10.1109/FOCS.2007.26",
+          "openUrl": "https://www.cs.bme.hu/~dmarx/papers/marx-focs2007-ptas.pdf",
+          "access": "The author copy gives Matrix Tiling in §2, the exact-size square construction in §4, and the disk adaptation after the proof of Theorem 4.1. The atlas cites the textbook for the exact decision-time exclusions."
+        }
+      ]
+    },
+    {
+      "id": "garey-johnson-stockmeyer1976",
+      "title": "Some simplified NP-complete graph problems",
+      "authors": [
+        "Michael R. Garey",
+        "David S. Johnson",
+        "Larry Stockmeyer"
+      ],
+      "preferredEditionId": "journal",
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "journal",
+          "label": "Theoretical Computer Science 1(3) (1976), 237–267",
+          "doi": "10.1016/0304-3975(76)90059-1",
+          "primaryUrl": "https://doi.org/10.1016/0304-3975(76)90059-1",
+          "openUrl": "https://www.math.ucdavis.edu/~deloera/MISC/LA-BIBLIO/trunk/JohnsonDavid2.pdf",
+          "access": "Published scan checked for Theorems 2.1 and 2.2, including the direct planar crossover. The textbook also credits Stockmeyer’s 1973 precursor."
+        }
+      ]
+    },
+    {
+      "id": "garey-johnson-tarjan1976",
+      "title": "The Planar Hamiltonian Circuit Problem is NP-Complete",
+      "authors": [
+        "Michael R. Garey",
+        "David S. Johnson",
+        "Robert Endre Tarjan"
+      ],
+      "preferredEditionId": "journal",
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "journal",
+          "label": "SIAM Journal on Computing 5(4) (1976), 704–714",
+          "doi": "10.1137/0205049",
+          "primaryUrl": "https://doi.org/10.1137/0205049",
+          "openUrl": "https://www.cs.princeton.edu/courses/archive/spr04/cos423/handouts/the%20planar%20hamiltonian.pdf",
+          "access": "Published scan checked for the construction, crossover analysis and correctness on pp. 709–712. Its crossing count is the source used in Lokshtanov, Marx and Saurabh, Proposition 3.4."
+        }
+      ]
+    },
+    {
+      "id": "guha-khuller1998-connected-dominating-set",
+      "title": "Approximation Algorithms for Connected Dominating Sets",
+      "authors": [
+        "Sudipto Guha",
+        "Samir Khuller"
+      ],
+      "preferredEditionId": "journal",
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "journal",
+          "label": "Algorithmica 20(4) (1998), 374–387",
+          "doi": "10.1007/PL00009201",
+          "primaryUrl": "https://doi.org/10.1007/PL00009201",
+          "openUrl": "https://cgi.di.uoa.gr/~istavrak/Group-Presentations/DomSet/guha98_cds.pdf",
+          "access": "Journal-layout PDF checked for the optimum-preserving reduction with additive offset one in §5.1."
+        }
+      ]
+    },
+    {
+      "id": "downey-et-al2003-k-cut",
+      "title": "Cutting Up Is Hard To Do: The Parameterised Complexity of k-Cut and Related Problems",
+      "authors": [
+        "Rodney G. Downey",
+        "Vladimir Estivill-Castro",
+        "Michael R. Fellows",
+        "Elena Prieto",
+        "Frances A. Rosamond"
+      ],
+      "preferredEditionId": "journal",
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "journal",
+          "label": "Electronic Notes in Theoretical Computer Science 78 (2003), 209–222",
+          "doi": "10.1016/S1571-0661(04)81014-4",
+          "primaryUrl": "https://doi.org/10.1016/S1571-0661(04)81014-4",
+          "access": "Published abstract checked for the decision variant and W[1]-hardness."
+        },
+        {
+          "id": "manuscript",
+          "kind": "manuscript",
+          "label": "Author manuscript, Universitat Pompeu Fabra repository",
+          "primaryUrl": "https://repositori-api.upf.edu/api/core/bitstreams/37d8507d-555e-4dbb-9f08-d589e6cbc3ca/content",
+          "access": "Theorem 1 and its proof in §3 verify the k+1 component threshold and unit-cost graph construction."
+        }
+      ]
+    },
+    {
+      "id": "downey-fellows-vardy-whittle1999-coding",
+      "title": "The Parametrized Complexity of Some Fundamental Problems in Coding Theory",
+      "authors": [
+        "Rod G. Downey",
+        "Michael R. Fellows",
+        "Alexander Vardy",
+        "Geoff Whittle"
+      ],
+      "preferredEditionId": "journal",
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "journal",
+          "label": "SIAM Journal on Computing 29(2) (1999), 545–570",
+          "doi": "10.1137/S0097539797323571",
+          "primaryUrl": "https://doi.org/10.1137/S0097539797323571",
+          "access": "Publisher metadata verified. The full journal text and the locator of the at-most-k Odd Set theorem in that edition remain unverified."
+        },
+        {
+          "id": "manuscript",
+          "kind": "manuscript",
+          "label": "Authors’ manuscript",
+          "primaryUrl": "https://www.academia.edu/125868710/The_Parametrized_Complexity_of_Some_Fundamental_Problems_in_Coding_Theory",
+          "access": "Section 2 explicitly defines the at-most-k red/blue Odd Set problem and proves its W[1]-hardness in Theorem 2."
+        }
+      ]
     }
   ],
   "proofs": [
@@ -1550,6 +1531,28 @@
           "revision": 1,
           "source": "proofs/three-coloring-sh-converse.tex",
           "pdf": "proofs/three-coloring-sh-converse.pdf",
+          "theorems": [
+            {
+              "label": "color-sh-converse",
+              "number": "1",
+              "destination": "color-sh-converse",
+              "statement": "If for every fixed 0<a<1 there is no deterministic 3-Coloring algorithm in 2^{O(n^a)} B^{O(1)}, then SH holds."
+            }
+          ],
+          "dependencyCoverage": "complete",
+          "dependencies": [],
+          "authorship": {
+            "origin": "atlas",
+            "kind": "ai",
+            "authors": [
+              "Atlas"
+            ]
+          }
+        },
+        {
+          "revision": 2,
+          "source": "proofs/three-coloring-sh-converse-r2.tex",
+          "pdf": "proofs/three-coloring-sh-converse-r2.pdf",
           "theorems": [
             {
               "label": "color-sh-converse",
@@ -1691,6 +1694,40 @@
               "Atlas"
             ]
           }
+        },
+        {
+          "revision": 2,
+          "source": "proofs/classical-graph-sh-converse-r2.tex",
+          "pdf": "proofs/classical-graph-sh-converse-r2.pdf",
+          "theorems": [
+            {
+              "label": "is-order-sh-converse",
+              "number": "1(a)",
+              "destination": "is-order-sh-converse",
+              "statement": "The fixed-power exclusion for Independent Set parameterized by the number of vertices implies SH."
+            },
+            {
+              "label": "vc-order-sh-converse",
+              "number": "1(b)",
+              "destination": "vc-order-sh-converse",
+              "statement": "The fixed-power exclusion for Vertex Cover parameterized by the number of vertices implies SH."
+            },
+            {
+              "label": "vc-budget-sh-converse",
+              "number": "1(c)",
+              "destination": "vc-budget-sh-converse",
+              "statement": "The fixed-power exclusion for Vertex Cover parameterized by the solution budget implies SH."
+            }
+          ],
+          "dependencyCoverage": "complete",
+          "dependencies": [],
+          "authorship": {
+            "origin": "atlas",
+            "kind": "ai",
+            "authors": [
+              "Atlas"
+            ]
+          }
         }
       ]
     },
@@ -1747,6 +1784,28 @@
               "Atlas"
             ]
           }
+        },
+        {
+          "revision": 2,
+          "source": "proofs/subset-sum-item-count-sh-r2.tex",
+          "pdf": "proofs/subset-sum-item-count-sh-r2.pdf",
+          "theorems": [
+            {
+              "label": "subset-sum-item-count-sh",
+              "number": "1",
+              "destination": "subset-sum-item-count-sh",
+              "statement": "Under SH, for each fixed 0 < ε < 1 there is no deterministic 2^(O(p^(1−ε))) B^(O(1))-time algorithm for positive binary Subset Sum by indexed item count."
+            }
+          ],
+          "dependencyCoverage": "partial",
+          "dependencies": [],
+          "authorship": {
+            "origin": "atlas",
+            "kind": "ai",
+            "authors": [
+              "Atlas"
+            ]
+          }
         }
       ]
     },
@@ -1758,6 +1817,28 @@
           "revision": 1,
           "source": "proofs/clique-order-sh-converse.tex",
           "pdf": "proofs/clique-order-sh-converse.pdf",
+          "theorems": [
+            {
+              "label": "clique-order-sh-converse",
+              "number": "1",
+              "destination": "clique-order-sh-converse",
+              "statement": "The whole fixed-power exclusion family for Clique by number of vertices implies SH."
+            }
+          ],
+          "dependencyCoverage": "complete",
+          "dependencies": [],
+          "authorship": {
+            "origin": "atlas",
+            "kind": "ai",
+            "authors": [
+              "Atlas"
+            ]
+          }
+        },
+        {
+          "revision": 2,
+          "source": "proofs/clique-order-sh-converse-r2.tex",
+          "pdf": "proofs/clique-order-sh-converse-r2.pdf",
           "theorems": [
             {
               "label": "clique-order-sh-converse",
@@ -1966,6 +2047,28 @@
       "revisions": [
         {
           "revision": 2,
+          "source": "proofs/ilp-equations-w1-all-ones-r2.tex",
+          "pdf": "proofs/ilp-equations-w1-all-ones-r2.pdf",
+          "theorems": [
+            {
+              "label": "ilp-equations-w1-effective",
+              "number": "1",
+              "destination": "ilp-equations-w1-effective",
+              "statement": "Assuming deterministic FPT ≠ W[1], for every fixed C ≥ 0 and every finite nonnegative function h admitting a computable threshold T(j) with h(k) ≤ k/j for every positive integer j and all k ≥ T(j), no deterministic algorithm decides feasibility of Ax=1 over nonnegative integers for a binary k-row matrix A in O(2^(h(k)) N^C) time, with complete binary input length N and unrestricted column count. The exclusion holds even when all columns are nonzero, in which case every feasible coordinate is at most one."
+            }
+          ],
+          "dependencyCoverage": "complete",
+          "dependencies": [],
+          "authorship": {
+            "origin": "atlas",
+            "kind": "ai",
+            "authors": [
+              "Atlas"
+            ]
+          }
+        },
+        {
+          "revision": 3,
           "source": "proofs/ilp-equations-w1-all-ones.tex",
           "pdf": "proofs/ilp-equations-w1-all-ones.pdf",
           "theorems": [
@@ -2517,6 +2620,40 @@
       },
       "independent": true,
       "sourceSha256": "7384d8597eead558b47b321294814f5bb88a7192d24fd90499a343f02919f015"
+    },
+    {
+      "id": "ilp-equations-w1-all-ones-r3-citation-review",
+      "type": "agent",
+      "date": "2026-11-19",
+      "reviewer": "Codex agent /root/remaining",
+      "verdict": "verified",
+      "scope": "Theorem 1, revision 3. Checked the journal locator and exact scope of the comparison statement and verified that the theorem and its proof match the independently reviewed revision 2.",
+      "evidence": "evidence/ilp-equations-w1-all-ones-r3-citation-review.md",
+      "object": {
+        "type": "proof",
+        "id": "ilp-equations-w1-effective",
+        "revision": 3,
+        "theorem": "ilp-equations-w1-effective"
+      },
+      "independent": true,
+      "sourceSha256": "bcfd01fdc4de9b242960aa6d4fa251898a4e0b31a38289fbbd69a8514e0a6baf"
+    },
+    {
+      "id": "three-coloring-sh-converse-review-r2",
+      "type": "agent",
+      "date": "2026-11-19",
+      "reviewer": "Codex agent originals",
+      "verdict": "verified",
+      "scope": "Checked the v2 decision sparsification interface and fixed exponents, the three-variable-per-vertex coloring encoding, and the full-input polynomial overhead.",
+      "evidence": "evidence/sh-preprint-v2-proof-review.md",
+      "object": {
+        "type": "proof",
+        "id": "three-coloring-sh-converse",
+        "revision": 2,
+        "theorem": "color-sh-converse"
+      },
+      "independent": true,
+      "sourceSha256": "37e81a7db845fdff77e451dafc10866b3da9f9e1ad26f8f7424b414feb24de81"
     }
   ],
   "challenges": [],

@@ -72,10 +72,17 @@
       "sources": [
         {
           "paperId": "szeider2026",
-          "editionId": "oct30",
-          "locator": "Table 1, Weak ETH row",
+          "editionId": "v3",
+          "locator": "§3, Table 1, fourth row, p. 5 (Cygan et al., Theorem 14.11)",
           "placement": "statement",
           "role": "lower-bound statement"
+        },
+        {
+          "paperId": "cai-juedes2003",
+          "editionId": "journal",
+          "locator": "Corollary 5.1 and the reduction it invokes, p. 805",
+          "role": "underlying reduction",
+          "placement": "statement"
         }
       ],
       "reader": {
@@ -156,8 +163,8 @@
         },
         {
           "paperId": "szeider2026",
-          "editionId": "oct30",
-          "locator": "Table 1, Weak ETH row",
+          "editionId": "v3",
+          "locator": "§3, Table 1, fourth row, p. 5 (Cygan et al., Theorem 14.11)",
           "placement": "statement",
           "role": "lower-bound statement"
         }

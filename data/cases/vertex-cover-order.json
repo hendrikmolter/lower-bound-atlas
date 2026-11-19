@@ -140,16 +140,16 @@
             "evidence": [
               {
                 "boundRevision": 2,
-                "reviewId": "vc-order-sh-converse-review",
+                "reviewId": "vc-order-sh-converse-review-r2",
                 "proof": {
                   "proofId": "classical-graph-sh-converse",
-                  "revision": 1,
+                  "revision": 2,
                   "theorem": "vc-order-sh-converse"
                 },
                 "source": {
                   "paperId": "sh26",
-                  "editionId": "v1",
-                  "locator": "Lemma 2.2, pp. 5–6",
+                  "editionId": "v2",
+                  "locator": "Lemma 2.2, pp. 6–7 (decision interface)",
                   "role": "quantitative decision sparsification, preprint dependency",
                   "placement": "proof"
                 }
@@ -255,6 +255,23 @@
         "revision": 2
       },
       "independent": true
+    },
+    {
+      "id": "vc-order-sh-converse-review-r2",
+      "type": "agent",
+      "date": "2026-11-19",
+      "reviewer": "Codex agent originals",
+      "verdict": "verified",
+      "scope": "Checked the v2 decision sparsification interface and fixed exponents, the linear-variable Independent Set and Vertex Cover encodings, and the use of the 2k-vertex kernel for the budget bound.",
+      "evidence": "evidence/sh-preprint-v2-proof-review.md",
+      "object": {
+        "type": "proof",
+        "id": "classical-graph-sh-converse",
+        "revision": 2,
+        "theorem": "vc-order-sh-converse"
+      },
+      "independent": true,
+      "sourceSha256": "1ae47f381036213689fc8c8b1b1b14d3d32094dda9482e2f2966f53657c97d52"
     }
   ],
   "recoveryAssessments": [

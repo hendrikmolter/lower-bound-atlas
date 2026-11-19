@@ -10,7 +10,7 @@ import { problemDefinition, problemDefinitionHash } from '../scripts/problems.mj
 
 const command = fileURLToPath(new URL('../scripts/atlas.mjs', import.meta.url));
 const direction = (status = 'unassessed', evidence = []) => ({ status, evidence });
-const cited = { paperId: 'test-piece', editionId: 'preprint', locator: 'Theorem 3', role: 'establishes' };
+const cited = { paperId: 'test-piece', editionId: 'preprint', editionReason: 'The journal omits the proof of Theorem 3.', locator: 'Theorem 3', role: 'establishes' };
 const link = (id, revision = 1, theorem = 'claim') => ({ proofId: id, revision, theorem });
 const fixtureSource = 'A fixture of authoritative source.\n';
 const review = (id, proofId, revision = 1, type = 'agent', theorem = 'claim') => ({
@@ -441,6 +441,18 @@ test('rejects unresolved artifact references and invalid PDF headers', t => {
   data.proofs[0].revisions[0].source = '../source.tex';
   h.write();
   assert.match(h.failed('INVALID_ATLAS', 'validate').error.details.join(), /unsafe evidence path/);
+});
+
+test('requires a claim-specific reason for citing a nonpreferred edition', t => {
+  const record = caseRecord();
+  const source = { ...cited };
+  delete source.editionReason;
+  record.bounds[0].sources = [source];
+  const h = harness(t, fixture(), record);
+  assert.match(h.failed('INVALID_ATLAS', 'validate').error.details.join(), /explain why this claim needs the nonpreferred edition/);
+  source.editionId = 'journal';
+  h.write();
+  h.call('validate');
 });
 
 test('requires a preferred edition that belongs to its paper', t => {

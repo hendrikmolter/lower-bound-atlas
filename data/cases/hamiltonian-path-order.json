@@ -131,7 +131,7 @@
         },
         {
           "editionId": "journal",
-          "locator": "Section 3, p. 525, following Theorem 5",
+          "locator": "§3, p. 526, following Theorem 5",
           "paperId": "ipz2001",
           "placement": "proof",
           "role": "linear-size reduction to Hamiltonian Circuit"

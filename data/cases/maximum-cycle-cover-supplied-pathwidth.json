@@ -159,7 +159,8 @@
           "editionId": "arxiv-v1",
           "locator": "Appendix C.2–C.4",
           "placement": "proof",
-          "role": "predecessor constructions"
+          "role": "predecessor constructions",
+          "editionReason": "The journal states the lower bounds but omits the pathwidth constructions in Appendix C.2–C.4 that the Atlas proof uses."
         }
       ],
       "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Maximum Cycle Cover within the stated running time.",
@@ -242,7 +243,8 @@
           "locator": "Appendix C.4, Lemma C.22, p. 70",
           "paperId": "cygan-cut-count",
           "placement": "statement",
-          "role": "Packing-to-cover reduction with width increase at most three"
+          "role": "Packing-to-cover reduction with width increase at most three",
+          "editionReason": "The journal gives the pathwidth lower bound but omits Lemma C.22, which gives the transfer that adds at most three to the supplied pathwidth."
         }
       ],
       "statement": "Under the k × k Clique Hypothesis, no deterministic algorithm decides Maximum Cycle Cover within the stated running time.",
@@ -384,7 +386,8 @@
           "editionId": "arxiv-v1",
           "locator": "Appendix C.4, Lemma C.22, p. 70",
           "role": "Packing-to-cover reduction with width increase at most three",
-          "placement": "statement"
+          "placement": "statement",
+          "editionReason": "The journal gives the pathwidth lower bound but omits Lemma C.22, which gives the transfer that adds at most three to the supplied pathwidth."
         }
       ]
     }
