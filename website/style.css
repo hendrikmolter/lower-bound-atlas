@@ -411,17 +411,18 @@ section:target { scroll-margin-top: 1rem; }
   .case-card, .status, tr { break-inside: avoid; }
 }
 
-.link-math { position: relative; white-space: nowrap; }
-.link-math::after {
-  content: "";
-  position: absolute;
-  inset-inline: 0;
-  bottom: -0.08em;
-  border-bottom: 1px solid currentColor;
-  pointer-events: none;
+/* Native text decoration stops at MathML. Paint each mixed link as one line. */
+a:has(math) {
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 100% 1px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
-a:hover .link-math::after { border-bottom-width: 2px; }
-:is(.site-brand, .nav-links a, .actions a):not(:hover) .link-math::after { display: none; }
+a:has(math):hover { background-size: 100% 2px; }
+:is(.site-brand, .nav-links a, .actions a):has(math):not(:hover) { background-size: 0 0; }
 
 math {
   font-family: "Atlas STIX Math", "STIX Two Math", "Cambria Math", math;

@@ -121,8 +121,7 @@ function link(page, target, label, hash) {
 }
 
 function anchor(url, label, attributes = '') {
-  const text = mathText(label).replaceAll('<math ', '<span class="link-math"><math ').replaceAll('</math>', '</math></span>');
-  return `<a href="${escape(url)}"${attributes}>${text}</a>`;
+  return `<a href="${escape(url)}"${attributes}>${mathText(label)}</a>`;
 }
 
 function write(path, content) {
