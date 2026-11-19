@@ -5,6 +5,7 @@
   "assumptions": [
     {
       "id": "eth",
+      "researchStatus": "historical",
       "name": "Exponential Time Hypothesis",
       "aliases": [
         "ETH",
@@ -25,6 +26,7 @@
     },
     {
       "id": "sh",
+      "researchStatus": "active",
       "name": "Satisfiability Hypothesis",
       "aliases": [
         "SH",
@@ -45,6 +47,7 @@
     },
     {
       "id": "w1",
+      "researchStatus": "active",
       "name": "FPT ≠ W[1]",
       "aliases": [
         "deterministic W[1] separation"
@@ -63,6 +66,7 @@
     },
     {
       "id": "np_qp",
+      "researchStatus": "active",
       "name": "NP ⊈ QP",
       "aliases": [
         "NP outside quasipolynomial time"
@@ -76,6 +80,7 @@
     },
     {
       "id": "kxk",
+      "researchStatus": "active",
       "revision": 1,
       "name": "k × k Clique Hypothesis",
       "aliases": [

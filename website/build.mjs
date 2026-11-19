@@ -422,21 +422,63 @@ function optionsFor(records, field) {
   return [...new Set(records.map(item => item[field]).filter(Boolean))].sort();
 }
 
-function filters(label, selects) {
-  const select = ([name, label, options]) =>
-    `<label><span>${escape(label)}</span><select name="${name}">${optionList([['', 'Any'], ...options])}</select></label>`;
+const comparisonHypothesis = 'eth';
+const hypothesisOptions = db.assumptions.map(h => [h.id, assumptionLabel(h.id)]).sort((a,b) => byName(a[1],b[1]));
+const sortBounds = ['bounds', 'Most recorded lower bounds'];
+const currentStatements = new Map();
+const paperUses = new Map();
+const hypothesisCounts = new Map();
+for (const record of db.cases) {
+  const statements = [];
+  for (const bound of record.bounds) {
+    if (bound.hardnessBaseline || !bound.supported || bound.status !== 'established') continue;
+    const hypotheses = bound.assumptions.map(h => h.id).filter(id =>
+      !supersessions(record.id, id, record.bounds, record.supersessions).has(bound.id));
+    if (hypotheses.length) statements.push({id:bound.id, hypotheses});
+    for (const id of hypotheses) hypothesisCounts.set(id,(hypothesisCounts.get(id) ?? 0)+1);
+    for (const {id} of bound.assumptions) {
+      const directions = [id,...db.formulations.filter(f => f.hypothesisId === id).map(f => f.id)];
+      const sources = [...statementSources(bound), ...bound.sources.filter(s => s.placement === 'proof'), ...directions.flatMap(key =>
+        (bound.assessments?.[key]?.forward?.evidence ?? []).flatMap(e => e.source ? [e.source] : []))];
+      for (const paperId of new Set(sources.map(source => source.paperId))) {
+        if (!paperUses.has(paperId)) paperUses.set(paperId,new Set());
+        paperUses.get(paperId).add(id);
+      }
+    }
+  }
+  currentStatements.set(record.id,statements);
+}
+
+function searchComparisons(record) {
+  const statements = currentStatements.get(record.id);
+  return record.recoveryComparisons.filter(e => statements.some(b =>
+    b.hypotheses.includes(e.hypothesis.id) && (!e.recovery || b.id === e.recovery.id)));
+}
+
+function filters(label, selects, sortOptions = []) {
+  selects = [...selects,['sort','Sort by',[['','Alphabetical (A–Z)'], ...sortOptions]]];
+  const select = ([name, label, options]) => {
+    if (['assumption','status'].includes(name)) {
+      const summary = name === 'status' ? 'Any recovery status' : label === 'Cited for a lower bound under' ? 'All papers' : 'All hypotheses';
+      return `<fieldset class="multi-filter" data-field="${name}"><legend>${escape(label)}</legend>
+        <details><summary data-default="${summary}">${summary}</summary><div class="choices">
+        ${options.map(([id,text]) => `<label><input type="checkbox" name="${name}" value="${escape(id)}"><span>${escape(text)}</span></label>`).join('')}
+        </div></details></fieldset>`;
+    }
+    return `<label><span>${escape(label)}</span><select name="${name}">${optionList(name === 'sort' ? options : [['', 'Any'], ...options])}</select></label>`;
+  };
   const first = selects.filter(([name]) => !['rule', 'family', 'kind'].includes(name));
   const more = selects.filter(([name]) => ['rule', 'family', 'kind'].includes(name));
-  return `<form class="filters" data-atlas-filters role="search" aria-label="${escape(label)}" hidden>
+  return `<form class="filters" data-atlas-filters data-target="${comparisonHypothesis}" role="search" aria-label="${escape(label)}" hidden>
     <label><span>${escape(label)}</span><input type="search" name="q" autocomplete="off" placeholder="Name, ID, alias, or keyword"></label>
     ${first.length ? '<div class="filter-grid">' + first.map(select).join('') + '</div>' : ''}
     ${selects.some(([name]) => name === 'status') ? '<p data-recovery-help>Compare each current historical ETH bound with the bounds under another hypothesis.</p>' +
       '<details><summary>What do these recovery statuses mean?</summary><dl>' + Object.values(recoveryStatuses).map(([name, definition]) =>
-        detail(name, mathText(definition))).join('') + '</dl><p>A partial recovery can also require ' +
+        detail(name, mathText(name === 'Unresolved' ? 'A lower bound is recorded under the alternative hypothesis, but the comparison with this historical target is unresolved. A hardness-only notice does not qualify.' : definition))).join('') + '</dl><p>A partial recovery can also require ' +
         link('index.html','notation/index.html','effective little-o','effective-little-o') +
         '. An equivalence barrier can coexist with partial recovery. Problems without a historical ETH target do not match this filter.</p></details>' : ''}
     ${more.length ? '<details><summary>More filters</summary><div class="filter-grid">' + more.map(select).join('') + '</div></details>' : ''}
-    <button type="reset">Clear filters</button>
+    <div class="search-actions"><button type="reset">Clear filters</button><button type="button" data-copy-search>Copy search link</button><span role="status" data-copy-feedback></span></div>
   </form>`;
 }
 
@@ -474,8 +516,8 @@ function browseIndex() {
     return {
       id: record.id, name: record.title, aliases: record.aliases, search,
       family: record.family ?? '', kind: record.kind,
-      assumptions: assumptionIds, recoveries: record.recoveryComparisons.map(e => ({
-        hypothesis: e.hypothesis.id, target: e.target.id, status: e.status
+      assumptions: assumptionIds, statements: currentStatements.get(record.id), recoveries: searchComparisons(record).map(e => ({
+        hypothesis: e.hypothesis.id, target: e.target.id, status: e.status, bound: e.recovery?.id
       }))
     };
   });
@@ -490,19 +532,19 @@ function browseIndex() {
   const cardMarkup = [...groups].map(([id, entries]) =>
     `<article class="case-card" data-atlas-group><h3>${link(page,problems.has(id) ? routes.problem(id) : entries[0].path, problemLabels(registries.cases.get(entries[0].index.id))[0])}</h3>
       <strong>Recorded parameterizations</strong><ul>${entries.map(({ index, path, parameter }) =>
-        `<li data-atlas-case${searchAttributes(index)}>${link(page,path,parameter,'bounds')}
-          ${registries.cases.get(index.id).recoveryComparisons.map(e =>
-            '<div data-recovery-outcome="' + escape(e.status) + '" data-hypothesis="' + escape(e.hypothesis.id) + '" hidden>' +
+        `<li data-atlas-case${searchAttributes(index)}>${link(page,path,parameter,'bounds')} <span class="match-info" data-matching-hypotheses hidden></span>
+          ${searchComparisons(registries.cases.get(index.id)).map(e =>
+            '<div data-recovery-outcome="' + escape(e.status) + '" data-target="' + escape(e.target.id) + '" data-hypothesis="' + escape(e.hypothesis.id) + '" hidden>' +
             mathText(assumptionLabel(e.hypothesis.id)) + ' · ' + escape(recoveryLabel(e)) + ' · ETH target: ' +
             recoveryTarget(page,registries.cases.get(index.id),e) + '</div>').join('')}</li>`).join('')}</ul></article>`);
   const selects = [
-    ['assumption', 'Hypothesis', db.assumptions.map(item => [item.id, assumptionLabel(item.id)])],
+    ['assumption', 'Hypothesis', hypothesisOptions],
     ['status', 'Recovery status of the historical ETH bound', Object.entries(recoveryStatuses).map(([id,[label]]) => [id,label])],
     ['family', 'Family', optionsFor(db.cases, 'family')],
     ['kind', 'Case kind', optionsFor(db.cases, 'kind').map(item => [item, humanize(item)])]
   ].filter(([name, , options]) => options.length > (['family', 'kind'].includes(name) ? 1 : 0));
   catalogPage(page, 'Browse lower bounds', 'Find conditional lower bounds by problem, parameter or hypothesis.',
-    filters('Search problems', selects) + results(cardMarkup, 'problem', 'problems', 'Problems', 'No problems match these filters.'),
+    filters('Search problems', selects, [sortBounds,['parameters','Most parameterizations']]) + results(cardMarkup, 'problem', 'problems', 'Problems', 'No problems match these filters.'),
     { active: 'Problems', browse: true });
   write('search.json', json(cards));
 }
@@ -615,7 +657,7 @@ function casePage(record, page) {
       const current = bounds.filter(b => !witnesses.has(b.id));
       const label = assumptionLabel(id);
       const comment = copy.comments?.[id];
-      return `<article class="hypothesis-card" id="assessment-${escape(id)}"><h3>${premiseLink(page, {id, revision: registries.assumptions.get(id).revision})}${id === 'eth' ? ' (historical)' : ''}</h3>
+      return `<article class="hypothesis-card" id="assessment-${escape(id)}"><h3>${premiseLink(page, {id, revision: registries.assumptions.get(id).revision})}${registries.assumptions.get(id).researchStatus === 'historical' ? ' (historical)' : ''}</h3>
         ${current.map(b => row(b,id)).join('')}${!bounds.length ? paragraphs('No lower bound recorded for this parameterization.') : ''}
         ${paragraphs(comment)}
         ${earlier.length ? '<details class="reader-details" data-earlier-bounds><summary>Earlier ' + escape(label) + (earlier.length === 1 ? ' bound' : ' bounds') + '</summary>' + earlier.map(b => row(b,id,witnesses.get(b.id))).join('') + '</details>' : ''}</article>`;
@@ -781,7 +823,7 @@ function applicationCards(page, hypothesis, revision) {
   }
   return [...groups.values()].sort((a,b) => compareCases(a.record,b.record)).map(({ record, bounds }) => {
     const [name, parameter] = problemLabels(record);
-    const attributes = searchAttributes({ id: record.id, name, aliases: record.aliases,
+    const attributes = searchAttributes({ id: record.id, name: name + ' · ' + parameter, total: currentStatements.get(record.id).filter(b => b.hypotheses.includes(hypothesis.id)).length, aliases: record.aliases,
       search: [name, parameter, record.title, record.task, record.parameter,
         ...bounds.flatMap(({ version }) => [version.id, boundCopy(version).label, version.runtime, version.statement,
           ...(version.hardnessBaseline ? [version.hardnessBaseline + '-hardness'] : [])])],
@@ -808,12 +850,12 @@ function assumptionPages() {
   const ordered = [...db.assumptions].sort((a, b) => rank(a.id) - rank(b.id));
   const intro = ordered.map(record => {
     const text = hypothesisText(record);
-    const attributes = searchAttributes({ id: record.id, name: record.name, aliases: record.aliases,
+    const attributes = searchAttributes({ id: record.id, name: text?.title ?? record.name, aliases: record.aliases, lifecycle: record.researchStatus ?? 'active', total: hypothesisCounts.get(record.id) ?? 0,
       search: [record.name, record.definition, record.model, text?.summary, ...record.aliases] });
     return `<article class="case-card" data-atlas-case${attributes}><h3>${link(index, routes.assumption(record.id), text?.title ?? record.name)}</h3>
       ${paragraphs(text?.summary ?? record.definition)}</article>`;
   });
-  catalogPage(index, 'Hypotheses', '', filters('Search hypotheses', []) +
+  catalogPage(index, 'Hypotheses', '', filters('Search hypotheses', [['lifecycle','Hypothesis status',[['active','Active'],['historical','Historical']]]], [sortBounds]) +
     results(intro, 'hypothesis', 'hypotheses', 'Definitions', 'No hypotheses match this search.'), { active: 'Hypotheses', browse: true });
   for (const record of ordered) {
     for (const version of [record, ...(record.history ?? [])]) {
@@ -830,7 +872,7 @@ function assumptionPages() {
             ${sourceLink(page, version.source, { authors: true, role: false })}</p></section>`;
         }
         const definition = paragraphs(text?.statement ?? version.definition);
-        const catalog = applications.length ? filters('Find a recorded bound', selections) +
+        const catalog = applications.length ? filters('Find a recorded bound', selections, [sortBounds]) +
           results(applications.map(item => item.markup), 'parameterization', 'parameterizations', 'Lower bounds by problem', 'No matching lower bounds.')
           : '<section><h2>Lower bounds by problem</h2><p>No lower bounds recorded under this hypothesis.</p></section>';
         const formulations = (db.formulations ?? []).filter(f => f.hypothesisId === record.id && f.hypothesisRevision === version.revision);
@@ -887,13 +929,13 @@ function paperPages() {
   const index = 'papers/index.html';
   const cards = db.papers.map(paper => {
     const edition = preferredEdition(paper);
-    const attributes = searchAttributes({ id: paper.id, name: edition.title ?? paper.title, aliases: [],
+    const attributes = searchAttributes({ id: paper.id, name: edition.title ?? paper.title, aliases: [], assumptions: [...(paperUses.get(paper.id) ?? [])], year: edition.label.match(/\b(?:19|20)\d{2}\b/)?.[0] ?? "",
       search: [paper.title, ...paper.authors, ...paper.editions.flatMap(item => [item.title, item.label, item.doi].filter(Boolean))] });
     return `<article class="case-card" data-atlas-case${attributes}><h3>${preferredPaperLink(index, paper)}</h3>
       ${paragraphs(paper.authors.join(', ') + ' · ' + edition.label, 'muted')}<p>${link(index, routes.paper(paper.id), 'Editions and recorded uses', edition.id)}</p></article>`;
   });
   catalogPage(index, 'Original papers', 'Find the inspected editions and the statements that cite them.',
-    filters('Search papers', []) + results(cards, 'paper', 'papers', 'Papers', 'No papers match this search.'), { active: 'Papers', browse: true });
+    filters('Search papers', [['assumption','Cited for a lower bound under',hypothesisOptions]], [['newest','Newest publication first'],['oldest','Oldest publication first']]) + results(cards, 'paper', 'papers', 'Papers', 'No papers match this search.'), { active: 'Papers', browse: true });
   for (const paper of db.papers) {
     const page = routes.paper(paper.id);
     const uses = db.reverse.papers[paper.id] ?? [];

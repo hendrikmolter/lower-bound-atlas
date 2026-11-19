@@ -273,3 +273,21 @@ test('links the preferred publication and labels the exact edition inspected for
   assert.match(read('papers/chkx2005/manuscript.bib'), /title = \{Inspected manuscript title\}/);
   assert.match(read('papers/chkx2005/manuscript.txt'), /Inspected manuscript title/);
 });
+
+test('trial search indexes quantitative witnesses and keeps paper filters optional', t => {
+  const dir = readerFixture(t);
+  execFileSync(process.execPath, ['website/build.mjs'], {cwd:dir});
+  const output = name => readFileSync(join(dir,'dist/site',name),'utf8');
+  const records = JSON.parse(output('search.json'));
+  const grid = records.find(r => r.id === 'grid-tiling-side');
+  assert.ok(grid.statements.some(b => b.hypotheses.includes('kxk')));
+  assert.ok(!grid.statements.some(b => b.hypotheses.includes('w1')));
+  assert.ok(!grid.recoveries.some(r => r.hypothesis === 'w1'));
+  const coloring = records.find(r => r.id === 'lms-3color-order');
+  assert.ok(coloring.recoveries.some(r => r.hypothesis === 'sh' && r.status === 'degree' && r.bound === 'color-sh-fixed-power'));
+  assert.ok(coloring.recoveries.some(r => r.hypothesis === 'sh' && r.status === 'equivalence'));
+  assert.match(output('papers/index.html'), /data-default="All papers"/);
+  assert.match(output('papers/index.html'), /data-assumptions="\[\]"/);
+  assert.match(output('assumptions/index.html'), /data-lifecycle="historical"/);
+  assert.match(output('index.html'), /name="status" value="unresolved"/);
+});

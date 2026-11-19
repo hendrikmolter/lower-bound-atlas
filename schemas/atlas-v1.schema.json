@@ -303,6 +303,7 @@
           "type": "integer",
           "minimum": 1
         },
+        "researchStatus": { "enum": ["active", "historical"] },
         "name": {
           "type": "string",
           "minLength": 1

@@ -454,3 +454,15 @@ math {
 @media (max-width: 42rem) {
   .implication { grid-template-columns: minmax(0, 1fr); }
 }
+
+.filter-grid { align-items: start; grid-template-columns: repeat(auto-fit,minmax(min(100%,14rem),1fr)); }
+.multi-filter { padding: 0; border: 0; margin: 0; min-width: 0; }
+.multi-filter legend { font: 650 .81rem/1.5 var(--sans); margin-bottom: .25rem; padding: 0; }
+.multi-filter details { border: 1px solid var(--border); border-radius: .35rem; background: white; }
+.multi-filter summary { padding: .66rem .75rem; cursor: pointer; font-size: .9rem; }
+.multi-filter[disabled] details { color: var(--muted); background: #f4f3f4; }
+.choices { padding: 0 .65rem .55rem; }
+.filters .choices label { display: flex; align-items: baseline; gap: .5rem; padding: .25rem 0; font-weight: 400; cursor: pointer; }
+.filters .choices input { width: 1rem; height: 1rem; min-height: 0; padding: 0; accent-color: var(--accent); flex: none; }
+.match-info { color: var(--muted); font-size: .875rem; margin: .25rem 0; }
+.search-actions { display: flex; align-items: center; flex-wrap: wrap; gap: .65rem; }
