@@ -1,0 +1,20 @@
+{
+  "applicable": true,
+  "date": "2026-11-18",
+  "evidence": "evidence/classical-graph-sh-converse-independent.md",
+  "id": "is-order-sh-converse-review",
+  "independent": true,
+  "label": "Agent verified",
+  "object": {
+    "id": "classical-graph-sh-converse",
+    "revision": 1,
+    "theorem": "is-order-sh-converse",
+    "type": "proof"
+  },
+  "reviewer": "Codex agent secondary_natural",
+  "scope": "Checks the converse for Independent Set parameterized by the number of vertices, including the exponent after quantitative sparsification, the linear-variable selection encoding, and the kernel when parameterized by the budget.",
+  "sourceSha256": "a45124649155337293a6ef01825717af11a995de79ac2463cceb640c22ee646c",
+  "stale": false,
+  "type": "agent",
+  "verdict": "verified"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "subset-sum",
+  "input": "An explicitly listed sequence of p positive binary integers and a positive binary target T.",
+  "name": "Subset Sum",
+  "parameterizations": [
+    "subset-sum-item-count"
+  ],
+  "question": "Does a subset of the item indices have values summing to T?",
+  "revision": 1
+}

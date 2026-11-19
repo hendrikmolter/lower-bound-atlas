@@ -1,0 +1,52 @@
+{
+  "assessments": {},
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "multicolored-clique-colors-eth",
+  "inputConditions": [],
+  "inputFactor": "n is the base of the exponent",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [
+    "The bound excludes every computable prefactor f."
+  ],
+  "reader": {
+    "explanation": "The hard instances given by the source have equal-sized color classes and the same number of edges between each pair of classes.",
+    "label": "Exponent sublinear in the number of color classes",
+    "revision": 1,
+    "title": "Multicolored Clique by number of color classes under ETH"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "f(k) n^(o(k))",
+  "runtimeSymbols": [
+    "f",
+    "k",
+    "n"
+  ],
+  "sources": [
+    {
+      "editionId": "bulletin",
+      "locator": "Theorem 5.2, p. 58",
+      "paperId": "lms2011",
+      "placement": "statement",
+      "role": "parameter-preserving color-copy reduction"
+    },
+    {
+      "editionId": "bulletin",
+      "locator": "Theorem 5.2, p. 58",
+      "paperId": "lms2011",
+      "placement": "statement",
+      "role": "benchmark"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm decides Multicolored Clique within the stated running time.",
+  "status": "established",
+  "supported": true
+}

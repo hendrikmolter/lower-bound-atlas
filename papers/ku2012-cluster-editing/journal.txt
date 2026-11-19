@@ -1,0 +1,1 @@
+Christian Komusiewicz, Johannes Uhlmann. Cluster Editing with Locally Bounded Modifications. Discrete Applied Mathematics 160(15) (2012), pp. 2259–2270. https://doi.org/10.1016/j.dam.2012.05.019

@@ -1,0 +1,16 @@
+{
+  "id": "weighted-fixed-width-cnf-sat",
+  "input": "For a separately fixed integer q ≥ 2, an explicit CNF formula over a declared finite variable set and a nonnegative integer k. Each clause has at most q literals.",
+  "name": "Weighted Fixed-Width CNF SAT",
+  "parameterizations": [
+    "weighted-fixed-width-cnf-sat-weight"
+  ],
+  "question": "Can exactly k variables be set to true in a satisfying assignment?",
+  "restrictionOf": [
+    {
+      "condition": "Clause width at most separately fixed q ≥ 2",
+      "problemId": "weighted-cnf-sat"
+    }
+  ],
+  "revision": 1
+}

@@ -1,0 +1,110 @@
+{
+  "assessments": {
+    "uniform-eth": {
+      "converse": {
+        "effectiveStatus": "established",
+        "evidence": [
+          {
+            "boundRevision": 2,
+            "hypothesisRevision": 4,
+            "reviewId": "vc-budget-eth-equivalence-review",
+            "source": {
+              "editionId": "journal",
+              "locator": "Theorem 5, p. 526",
+              "paperId": "ipz2001",
+              "placement": "proof",
+              "role": "linear-variable reduction to 3-SAT"
+            }
+          },
+          {
+            "boundRevision": 2,
+            "hypothesisRevision": 4,
+            "reviewId": "vc-budget-eth-equivalence-review",
+            "source": {
+              "editionId": "journal",
+              "locator": "Proposition 4.1, p. 803",
+              "paperId": "cai-juedes2003",
+              "placement": "proof",
+              "role": "2k-vertex kernel for general Vertex Cover, credited to Chen et al."
+            }
+          }
+        ],
+        "status": "established"
+      },
+      "forward": {
+        "effectiveStatus": "established",
+        "evidence": [
+          {
+            "boundRevision": 2,
+            "hypothesisRevision": 4,
+            "reviewId": "vc-budget-eth-equivalence-review",
+            "source": {
+              "editionId": "journal",
+              "locator": "Theorem 4.2, pp. 801–802, and Corollary 4.3, p. 803",
+              "paperId": "cai-juedes2003",
+              "placement": "forward",
+              "role": "single-algorithm 3-SAT implication"
+            }
+          }
+        ],
+        "status": "established"
+      },
+      "hypothesisRevision": 4,
+      "verdict": "established-equivalent"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "vc-budget-eth",
+  "inputConditions": [],
+  "inputFactor": "n^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [],
+  "reader": {
+    "label": "Exponential in the solution budget",
+    "revision": 2,
+    "title": "Vertex Cover by solution size under ETH"
+  },
+  "reviewIds": [
+    "vc-budget-eth-equivalence-review"
+  ],
+  "revision": 2,
+  "runtime": "2^(o(k)) n^(O(1))",
+  "runtimeSymbols": [
+    "k",
+    "n"
+  ],
+  "sources": [
+    {
+      "editionId": "journal",
+      "locator": "Corollary 4.3, p. 803",
+      "paperId": "cai-juedes2003",
+      "placement": "statement",
+      "role": "benchmark"
+    },
+    {
+      "editionId": "bulletin",
+      "locator": "Theorem 4.1, p. 53",
+      "paperId": "lms2011",
+      "placement": "statement",
+      "role": "benchmark"
+    },
+    {
+      "editionId": "book",
+      "locator": "Section 14.3.1, p. 476",
+      "paperId": "cygan2015",
+      "placement": "statement",
+      "role": "benchmark"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm decides Vertex Cover within the stated running time.",
+  "status": "established",
+  "supported": true
+}

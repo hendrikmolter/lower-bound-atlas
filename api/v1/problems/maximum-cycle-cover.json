@@ -1,0 +1,10 @@
+{
+  "id": "maximum-cycle-cover",
+  "input": "A finite simple undirected graph G and a nonnegative integer r in binary.",
+  "name": "Maximum Cycle Cover",
+  "parameterizations": [
+    "maximum-cycle-cover-supplied-pathwidth"
+  ],
+  "question": "Can all vertices be partitioned into at least r pairwise vertex-disjoint simple cycles?",
+  "revision": 1
+}

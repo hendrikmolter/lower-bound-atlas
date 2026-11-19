@@ -1,0 +1,89 @@
+{
+  "assessments": {
+    "np_qp": {
+      "converse": {
+        "effectiveStatus": "established",
+        "evidence": [
+          {
+            "boundRevision": 2,
+            "hypothesisRevision": 1,
+            "proof": {
+              "proofId": "ecc-np-qp-converse",
+              "revision": 1,
+              "theorem": "ecc-np-qp-converse"
+            },
+            "reviewId": "ecc-np-qp-converse-independent",
+            "source": {
+              "editionId": "journal",
+              "locator": "§2, Rules 1 and 3′, and Theorem 1, pp. 2.2:4–2.2:7",
+              "paperId": "gramm-guo-hueffner-niedermeier2009",
+              "placement": "proof",
+              "role": "exponential kernel argument"
+            }
+          }
+        ],
+        "status": "established"
+      },
+      "forward": {
+        "effectiveStatus": "established",
+        "evidence": [
+          {
+            "boundRevision": 2,
+            "hypothesisRevision": 1,
+            "reviewId": "ecc-budget-np-qp-equivalence-review",
+            "source": {
+              "editionId": "journal",
+              "locator": "Theorem 1 and Corollary 3, p. 70",
+              "paperId": "cygan-pilipczuk-pilipczuk-ecc",
+              "placement": "forward",
+              "role": "reduction with logarithmic clique budget"
+            }
+          }
+        ],
+        "status": "established"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "established-equivalent"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "np_qp",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "ecc-budget-np-qp",
+  "inputConditions": [],
+  "inputFactor": "n^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [],
+  "reader": {
+    "explanation": "The reduction from 3-SAT uses a clique budget logarithmic in the number of variables and produces a graph of polynomial size. A solver within the stated time would give a quasipolynomial-time algorithm for 3-SAT.",
+    "label": "Polynomial powers in the exponent",
+    "revision": 2
+  },
+  "reviewIds": [
+    "ecc-budget-np-qp-equivalence-review"
+  ],
+  "revision": 2,
+  "runtime": "2^(k^(O(1))) n^(O(1))",
+  "runtimeSymbols": [
+    "k",
+    "n"
+  ],
+  "sources": [
+    {
+      "editionId": "journal",
+      "locator": "Theorem 1 and Corollary 3, p. 70",
+      "paperId": "cygan-pilipczuk-pilipczuk-ecc",
+      "placement": "statement",
+      "role": "published lower bound"
+    }
+  ],
+  "statement": "Under NP ⊈ QP, no deterministic algorithm decides Edge Clique Cover within the stated running time.",
+  "status": "established",
+  "supported": true
+}

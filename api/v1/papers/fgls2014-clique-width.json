@@ -1,0 +1,24 @@
+{
+  "authors": [
+    "Fedor V. Fomin",
+    "Petr A. Golovach",
+    "Daniel Lokshtanov",
+    "Saket Saurabh"
+  ],
+  "editions": [
+    {
+      "access": "Journal-layout text inspected.",
+      "doi": "10.1137/130910932",
+      "id": "journal",
+      "kind": "journal",
+      "label": "SIAM Journal on Computing 43(5) (2014), pp. 1541–1563",
+      "openUrl": "https://fedorvf.github.io/articles/2014/2014b.pdf",
+      "preferredUrl": "https://doi.org/10.1137/130910932",
+      "primaryUrl": "https://doi.org/10.1137/130910932"
+    }
+  ],
+  "id": "fgls2014-clique-width",
+  "preferredEditionId": "journal",
+  "preferredUrl": "https://doi.org/10.1137/130910932",
+  "title": "Almost Optimal Lower Bounds for Problems Parameterized by Clique-Width"
+}

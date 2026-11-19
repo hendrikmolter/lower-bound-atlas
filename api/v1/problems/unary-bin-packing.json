@@ -1,0 +1,10 @@
+{
+  "id": "unary-bin-packing",
+  "input": "A list of positive integer item sizes, a positive bin capacity T and a positive bin limit k. Sizes and capacity are written in unary.",
+  "name": "Unary Bin Packing",
+  "parameterizations": [
+    "unary-bin-packing-bins"
+  ],
+  "question": "Can all items be assigned to at most k bins so that the sum of sizes in each bin is at most T?",
+  "revision": 1
+}

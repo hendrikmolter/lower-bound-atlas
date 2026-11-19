@@ -1,0 +1,41 @@
+{
+  "authors": [
+    "Rajesh H. Chitnis",
+    "Andreas E. Feldmann",
+    "MohammadTaghi HajiAghayi",
+    "Dániel Marx"
+  ],
+  "editions": [
+    {
+      "access": "University of Birmingham peer-reviewed manuscript checked for Theorem 1.2 and §3, including §3.6.",
+      "id": "accepted",
+      "kind": "manuscript",
+      "label": "Journal accepted manuscript",
+      "openUrl": "https://pure-oai.bham.ac.uk/ws/portalfiles/portal/84854624/J10_Tight_Bounds_for_Planar.pdf",
+      "preferredUrl": "https://pure-oai.bham.ac.uk/ws/portalfiles/portal/84854624/J10_Tight_Bounds_for_Planar.pdf",
+      "primaryUrl": "https://pure-oai.bham.ac.uk/ws/portalfiles/portal/84854624/J10_Tight_Bounds_for_Planar.pdf"
+    },
+    {
+      "access": "Public version used where the published full text was unavailable.",
+      "id": "author",
+      "kind": "preprint",
+      "label": "Inspected author version",
+      "openUrl": "https://arxiv.org/abs/1911.13161",
+      "preferredUrl": "https://arxiv.org/abs/1911.13161",
+      "primaryUrl": "https://arxiv.org/abs/1911.13161"
+    },
+    {
+      "access": "Journal DOI and theorem checked against the institutional peer-reviewed accepted manuscript. Publisher pagination was not checked.",
+      "doi": "10.1137/18M122371X",
+      "id": "journal",
+      "kind": "journal",
+      "label": "SIAM Journal on Computing 49(2) (2020)",
+      "preferredUrl": "https://doi.org/10.1137/18M122371X",
+      "primaryUrl": "https://doi.org/10.1137/18M122371X"
+    }
+  ],
+  "id": "chitnis-feldmann-hajiaghayi-marx-scss",
+  "preferredEditionId": "journal",
+  "preferredUrl": "https://doi.org/10.1137/18M122371X",
+  "title": "Tight Bounds for Planar Strongly Connected Steiner Subgraph with Fixed Number of Terminals (and Extensions)"
+}

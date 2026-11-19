@@ -1,0 +1,253 @@
+{
+  "aliases": [],
+  "bounds": [
+    {
+      "assessments": {},
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "planar-hamiltonian-cycle-vertices-eth",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "label": "Square-root exponent",
+        "revision": 1
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "2^(o(n^(1/2))) B^(O(1))",
+      "runtimeSymbols": [
+        "n",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "bulletin",
+          "locator": "Theorem 3.5, p. 52",
+          "paperId": "lms2011",
+          "placement": "statement",
+          "role": "lower-bound statement"
+        },
+        {
+          "editionId": "book",
+          "locator": "Theorem 14.9 and Exercise 14.3(e), pp. 475, 516, 518",
+          "paperId": "cygan2015",
+          "placement": "statement",
+          "role": "lower-bound statement"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm solves Planar Hamiltonian Cycle within the stated running time.",
+      "status": "established",
+      "supported": true
+    },
+    {
+      "assessments": {},
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "sh",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "planar-hamiltonian-cycle-vertices-sh",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [
+        "Separately for each fixed 0 < ε < 1/2."
+      ],
+      "reader": {
+        "label": "Every fixed power below one half",
+        "revision": 1
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "2^(O(n^(1/2−ε))) B^(O(1))",
+      "runtimeSymbols": [
+        "n",
+        "B",
+        "ε"
+      ],
+      "sources": [
+        {
+          "editionId": "v2",
+          "locator": "Table 1, Planar Hamiltonian Cycle, p. 4",
+          "paperId": "sh26",
+          "placement": "statement",
+          "role": "lower-bound statement"
+        }
+      ],
+      "statement": "Under SH, no deterministic algorithm solves Planar Hamiltonian Cycle within the stated running time.",
+      "status": "established",
+      "supported": true
+    }
+  ],
+  "coverage": "Literature bounds.",
+  "encoding": "An explicitly encoded finite simple undirected planar graph G.",
+  "id": "planar-hamiltonian-cycle-vertices",
+  "inputConditions": [],
+  "kind": "lower-bound-case",
+  "parameter": "The number of vertices n.",
+  "problemDefinitionHash": "59623b6274717310c77a466f0c467b71dc9a83708f08ce11d6128b1824caeb01",
+  "problemId": "planar-hamiltonian-cycle",
+  "problemRevision": 1,
+  "reader": {
+    "anchor": "vertices",
+    "boundContext": "The number of vertices n. Here B denotes complete input length in bits, ε denotes fixed exponent loss.",
+    "parameter": "The number of vertices n.",
+    "parameterLabel": "Number of vertices",
+    "parameterSymbols": [
+      {
+        "meaning": "number of vertices",
+        "symbol": "n"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "complete input length in bits",
+        "symbol": "B"
+      },
+      {
+        "meaning": "fixed exponent loss",
+        "symbol": "ε"
+      }
+    ]
+  },
+  "recoveryAssessments": [
+    {
+      "comparison": "The SH bound excludes every fixed positive power below one half in the exponent of the same parameter.",
+      "effective": false,
+      "evidence": [
+        {
+          "editionId": "bulletin",
+          "locator": "Theorem 3.5, p. 52",
+          "paperId": "lms2011",
+          "placement": "statement",
+          "role": "lower-bound statement"
+        },
+        {
+          "editionId": "book",
+          "locator": "Theorem 14.9 and Exercise 14.3(e), pp. 475, 516, 518",
+          "paperId": "cygan2015",
+          "placement": "statement",
+          "role": "lower-bound statement"
+        },
+        {
+          "editionId": "v2",
+          "locator": "Table 1, Planar Hamiltonian Cycle, p. 4",
+          "paperId": "sh26",
+          "placement": "statement",
+          "role": "lower-bound statement"
+        }
+      ],
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "recoveredScale": "n^(1/2−ε)",
+      "recovery": {
+        "id": "planar-hamiltonian-cycle-vertices-sh",
+        "revision": 1
+      },
+      "scale": "degree",
+      "target": {
+        "id": "planar-hamiltonian-cycle-vertices-eth",
+        "revision": 1
+      },
+      "targetScale": "n^(1/2)"
+    }
+  ],
+  "recoveryComparisons": [
+    {
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "planar-hamiltonian-cycle-vertices-eth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "np_qp",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "planar-hamiltonian-cycle-vertices-eth",
+        "revision": 1
+      }
+    },
+    {
+      "comparison": "The SH bound excludes every fixed positive power below one half in the exponent of the same parameter.",
+      "effective": false,
+      "evidence": [
+        {
+          "editionId": "bulletin",
+          "locator": "Theorem 3.5, p. 52",
+          "paperId": "lms2011",
+          "placement": "statement",
+          "role": "lower-bound statement"
+        },
+        {
+          "editionId": "book",
+          "locator": "Theorem 14.9 and Exercise 14.3(e), pp. 475, 516, 518",
+          "paperId": "cygan2015",
+          "placement": "statement",
+          "role": "lower-bound statement"
+        },
+        {
+          "editionId": "v2",
+          "locator": "Table 1, Planar Hamiltonian Cycle, p. 4",
+          "paperId": "sh26",
+          "placement": "statement",
+          "role": "lower-bound statement"
+        }
+      ],
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "recoveredScale": "n^(1/2−ε)",
+      "recovery": {
+        "id": "planar-hamiltonian-cycle-vertices-sh",
+        "revision": 1
+      },
+      "scale": "degree",
+      "status": "degree",
+      "target": {
+        "id": "planar-hamiltonian-cycle-vertices-eth",
+        "revision": 1
+      },
+      "targetScale": "n^(1/2)"
+    },
+    {
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "planar-hamiltonian-cycle-vertices-eth",
+        "revision": 1
+      }
+    }
+  ],
+  "resolutions": [],
+  "revision": 1,
+  "task": "Does G contain a cycle through every vertex?",
+  "title": "Planar Hamiltonian Cycle by number of vertices",
+  "variant": "Planar Hamiltonian Cycle"
+}

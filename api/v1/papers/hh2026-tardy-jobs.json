@@ -1,0 +1,41 @@
+{
+  "authors": [
+    "Klaus Heeger",
+    "Danny Hermelin"
+  ],
+  "editions": [
+    {
+      "access": "Full manuscript inspected for the ETH reduction and bit sizes.",
+      "id": "arxiv",
+      "kind": "preprint",
+      "label": "arXiv:2401.01740",
+      "openUrl": "https://arxiv.org/html/2401.01740",
+      "preferredUrl": "https://arxiv.org/abs/2401.01740",
+      "primaryUrl": "https://arxiv.org/abs/2401.01740"
+    },
+    {
+      "access": "Full text inspected.",
+      "doi": "10.4230/LIPIcs.ESA.2024.68",
+      "id": "esa",
+      "kind": "proceedings",
+      "label": "ESA 2024, LIPIcs 308, pp. 68:1–68:14",
+      "openUrl": "https://doi.org/10.4230/LIPIcs.ESA.2024.68",
+      "preferredUrl": "https://doi.org/10.4230/LIPIcs.ESA.2024.68",
+      "primaryUrl": "https://doi.org/10.4230/LIPIcs.ESA.2024.68"
+    },
+    {
+      "access": "Published text checked for Theorem 3 and §§3–4, and for Corollary 1 and the full §5 ETH reduction.",
+      "doi": "10.1016/j.jcss.2026.103817",
+      "id": "journal",
+      "kind": "journal",
+      "label": "Journal of Computer and System Sciences 161 (2026), Article 103817",
+      "openUrl": "https://doi.org/10.1016/j.jcss.2026.103817",
+      "preferredUrl": "https://doi.org/10.1016/j.jcss.2026.103817",
+      "primaryUrl": "https://doi.org/10.1016/j.jcss.2026.103817"
+    }
+  ],
+  "id": "hh2026-tardy-jobs",
+  "preferredEditionId": "journal",
+  "preferredUrl": "https://doi.org/10.1016/j.jcss.2026.103817",
+  "title": "Minimizing the Weighted Number of Tardy Jobs is W[1]-hard"
+}

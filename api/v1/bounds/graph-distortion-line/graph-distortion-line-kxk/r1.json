@@ -1,0 +1,65 @@
+{
+  "assessments": {
+    "kxk": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unassessed"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "kxk",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "graph-distortion-line-kxk",
+  "inputConditions": [
+    "integer-line"
+  ],
+  "inputFactor": "n^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [],
+  "reader": {
+    "label": "Subexponential-time bound in d log d",
+    "revision": 1,
+    "title": "Graph Distortion into a line under the k × k Clique Hypothesis: Subexponential-time bound in d log d"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "2^(o(d log₂ d)) n^(O(1))",
+  "runtimeSymbols": [
+    "d",
+    "n"
+  ],
+  "sources": [
+    {
+      "editionId": "v3",
+      "locator": "Section 3, Table 1, first row, p. 5",
+      "paperId": "szeider2026",
+      "placement": "statement",
+      "role": "conditional lower bound"
+    },
+    {
+      "editionId": "journal",
+      "locator": "Theorems 4.1–4.2, pp. 687–692",
+      "paperId": "lms2018",
+      "placement": "proof",
+      "role": "reduction to integer line distortion"
+    }
+  ],
+  "statement": "Under the k × k Clique Hypothesis, no deterministic algorithm solves the stated decision problem within the stated running time.",
+  "status": "established",
+  "supported": true
+}

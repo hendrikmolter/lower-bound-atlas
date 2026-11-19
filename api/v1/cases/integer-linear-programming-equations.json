@@ -1,0 +1,401 @@
+{
+  "aliases": [],
+  "bounds": [
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unassessed"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "ilp-equations-eth-klogk",
+      "inputConditions": [
+        "binary-coefficients",
+        "small-right-hand-side-and-column-count"
+      ],
+      "inputFactor": "N^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "explanation": "On the hard instances the explicit input length is polynomial in k, so a fixed polynomial factor is absorbed in the exponent.",
+        "label": "Subexponential bound in k log k",
+        "revision": 1,
+        "title": "Subexponential bound in k log k under ETH"
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "2^(o(k log₂ k)) N^(O(1))",
+      "runtimeSymbols": [
+        "k",
+        "N"
+      ],
+      "sources": [
+        {
+          "editionId": "journal",
+          "locator": "Theorem 1, p. 19:4, and proof in §2.3, pp. 19:9–19:10",
+          "paperId": "kpw2020-ilp",
+          "placement": "statement",
+          "role": "published lower bound"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm solves Integer Linear Programming Feasibility within the stated running time.",
+      "status": "established",
+      "supported": true
+    },
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unassessed"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "ilp-equations-eth-klogk-binary-coefficients",
+      "inputConditions": [
+        "binary-coefficients"
+      ],
+      "inputFactor": "N^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "explanation": "The source excludes this running time already when the number of columns and the largest right-hand side entry are O(k log₂ k), with a nonnegative right-hand side. These instances are valid inputs to the general binary-coefficient task, so the same running time is excluded for an algorithm on that task.",
+        "label": "Subexponential bound in k log k for binary coefficients",
+        "revision": 1,
+        "title": "Binary-coefficient integer linear programming under ETH"
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "2^(o(k log₂ k)) N^(O(1))",
+      "runtimeSymbols": [
+        "k",
+        "N"
+      ],
+      "sources": [
+        {
+          "editionId": "journal",
+          "locator": "Theorem 1, p. 19:4, and proof in §2.3, pp. 19:9–19:10",
+          "paperId": "kpw2020-ilp",
+          "placement": "statement",
+          "role": "published lower bound"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm decides the reported binary-coefficient feasibility problem within the stated running time.",
+      "status": "established",
+      "supported": true
+    },
+    {
+      "assessments": {
+        "w1": {
+          "converse": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "effectiveStatus": "established",
+            "evidence": [
+              {
+                "boundRevision": 2,
+                "hypothesisRevision": 1,
+                "proof": {
+                  "proofId": "ilp-equations-w1-effective",
+                  "revision": 2,
+                  "theorem": "ilp-equations-w1-effective"
+                },
+                "reviewId": "ilp-equations-w1-all-ones-review"
+              }
+            ],
+            "status": "established"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "hypothesis-implies-bound"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "w1",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "ilp-equations-w1-effective",
+      "inputConditions": [
+        "binary-coefficients",
+        "all-ones-right-hand-side",
+        "nonzero-columns"
+      ],
+      "inputFactor": "N^C",
+      "proofs": [
+        {
+          "proofId": "ilp-equations-w1-effective",
+          "revision": 2,
+          "theorem": "ilp-equations-w1-effective"
+        }
+      ],
+      "provenance": "atlas",
+      "qualifications": [
+        "For every fixed C ≥ 0 and every finite nonnegative function h, assume there is a computable threshold function T with h(k) ≤ k/j for every positive integer j and every k ≥ T(j).",
+        "The function h itself need not be computable."
+      ],
+      "reader": {
+        "explanation": "The column count is unrestricted. The proof uses Lin’s incidence matrix with exact-one rows in place of covering constraints.",
+        "label": "Effective sublinear exponent with an all-ones right-hand side",
+        "revision": 2,
+        "title": "All-ones right-hand-side integer programming under FPT ≠ W[1]"
+      },
+      "reviewIds": [],
+      "revision": 2,
+      "runtime": "2^(h(k)) N^C",
+      "runtimeSymbols": [
+        "k",
+        "h",
+        "N",
+        "C"
+      ],
+      "sources": [
+        {
+          "editionId": "proceedings",
+          "locator": "Lemma 14, pp. 81:11–81:12",
+          "paperId": "lin2019",
+          "placement": "forward",
+          "role": "incidence construction and compatibility rows from Multicolored Clique"
+        }
+      ],
+      "statement": "Under FPT ≠ W[1], no deterministic algorithm decides feasibility of Ax=b for the stated all-ones right-hand side within the stated running time.",
+      "status": "established",
+      "supported": true
+    }
+  ],
+  "coverage": "Published lower bounds.",
+  "encoding": "A signed integer matrix A with k rows and ℓ columns and a signed integer vector b of length k, all entries encoded in binary.",
+  "id": "integer-linear-programming-equations",
+  "inputConditions": [
+    {
+      "condition": "Every entry of A is either zero or one.",
+      "id": "binary-coefficients",
+      "level": "bound"
+    },
+    {
+      "condition": "The vector b is nonnegative, and both the number of columns ℓ and the maximum entry of b are O(k log₂ k).",
+      "id": "small-right-hand-side-and-column-count",
+      "level": "bound"
+    },
+    {
+      "condition": "Every entry of the right-hand side b equals one.",
+      "id": "all-ones-right-hand-side",
+      "level": "bound"
+    },
+    {
+      "condition": "Every column of A has a nonzero entry. Consequently every feasible coordinate of x is zero or one.",
+      "id": "nonzero-columns",
+      "level": "bound"
+    }
+  ],
+  "kind": "lower-bound-case",
+  "parameter": "The number of rows of A k.",
+  "problemDefinitionHash": "065069d84477bfdf208ba5ef813158dbf4f0536db79f6a626cd0e2b25314df6a",
+  "problemId": "integer-linear-programming-feasibility",
+  "problemRevision": 1,
+  "reader": {
+    "anchor": "integer-linear-programming-equations",
+    "parameter": "The number of rows of A k.",
+    "parameterLabel": "Number of equality constraints",
+    "parameterSymbols": [
+      {
+        "meaning": "number of rows of A",
+        "symbol": "k"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "total bit length of the input",
+        "symbol": "N"
+      },
+      {
+        "meaning": "finite nonnegative exponent function with the stated computable convergence cutoff",
+        "symbol": "h"
+      },
+      {
+        "meaning": "fixed nonnegative exponent of the complete input length",
+        "symbol": "C"
+      }
+    ]
+  },
+  "recoveryAssessments": [
+    {
+      "comparison": "The new bound applies to the subclass with all-ones right-hand side and nonzero columns. Any solver for the general binary-coefficient task must handle this subclass. The W[1] exclusion is therefore a logarithmic recovery for the general task, using a computable convergence cutoff and an arbitrary fixed polynomial in the complete input length. The ETH k log₂ k exclusion concerns general right-hand sides. The all-ones subclass has a 2^k N^(O(1)) subset algorithm.",
+      "effective": true,
+      "evidence": [
+        {
+          "proofId": "ilp-equations-w1-effective",
+          "revision": 2,
+          "theorem": "ilp-equations-w1-effective"
+        }
+      ],
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "recoveredScale": "k",
+      "recovery": {
+        "id": "ilp-equations-w1-effective",
+        "revision": 2
+      },
+      "scale": "logarithmic",
+      "target": {
+        "id": "ilp-equations-eth-klogk-binary-coefficients",
+        "revision": 1
+      },
+      "targetScale": "k log₂ k"
+    }
+  ],
+  "recoveryComparisons": [
+    {
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "ilp-equations-eth-klogk",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "np_qp",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "ilp-equations-eth-klogk",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "ilp-equations-eth-klogk",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "ilp-equations-eth-klogk",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "ilp-equations-eth-klogk-binary-coefficients",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "np_qp",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "ilp-equations-eth-klogk-binary-coefficients",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "ilp-equations-eth-klogk-binary-coefficients",
+        "revision": 1
+      }
+    },
+    {
+      "comparison": "The new bound applies to the subclass with all-ones right-hand side and nonzero columns. Any solver for the general binary-coefficient task must handle this subclass. The W[1] exclusion is therefore a logarithmic recovery for the general task, using a computable convergence cutoff and an arbitrary fixed polynomial in the complete input length. The ETH k log₂ k exclusion concerns general right-hand sides. The all-ones subclass has a 2^k N^(O(1)) subset algorithm.",
+      "effective": true,
+      "evidence": [
+        {
+          "proofId": "ilp-equations-w1-effective",
+          "revision": 2,
+          "theorem": "ilp-equations-w1-effective"
+        }
+      ],
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "recoveredScale": "k",
+      "recovery": {
+        "id": "ilp-equations-w1-effective",
+        "revision": 2
+      },
+      "scale": "logarithmic",
+      "status": "logarithmic",
+      "target": {
+        "id": "ilp-equations-eth-klogk-binary-coefficients",
+        "revision": 1
+      },
+      "targetScale": "k log₂ k"
+    }
+  ],
+  "resolutions": [],
+  "revision": 4,
+  "task": "Does there exist a vector x of ℓ nonnegative integers satisfying Ax=b?",
+  "title": "Integer Linear Programming Feasibility by number of equality constraints",
+  "variant": "Integer Linear Programming Feasibility"
+}

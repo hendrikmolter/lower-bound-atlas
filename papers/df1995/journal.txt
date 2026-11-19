@@ -1,0 +1,1 @@
+Rod G. Downey, Michael R. Fellows. Fixed-parameter tractability and completeness II: On completeness for W[1]. Theoretical Computer Science 141(1–2) (1995), 109–131. https://doi.org/10.1016/0304-3975(94)00097-3

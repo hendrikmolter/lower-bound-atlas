@@ -1,0 +1,33 @@
+{
+  "authors": [
+    "Dušan Knop",
+    "Michał Pilipczuk",
+    "Marcin Wrochna"
+  ],
+  "editions": [
+    {
+      "access": "Published text checked for Theorem 1, §2.3, and the distinction from Corollary 2.",
+      "doi": "10.1145/3397484",
+      "id": "journal",
+      "kind": "journal",
+      "label": "ACM Transactions on Computation Theory 12(3) (2020), Article 19",
+      "openUrl": "https://doi.org/10.1145/3397484",
+      "preferredUrl": "https://doi.org/10.1145/3397484",
+      "primaryUrl": "https://doi.org/10.1145/3397484"
+    },
+    {
+      "access": "Full text inspected.",
+      "doi": "10.4230/LIPIcs.STACS.2019.44",
+      "id": "stacs",
+      "kind": "proceedings",
+      "label": "STACS 2019, LIPIcs 126, pp. 44:1–44:15",
+      "openUrl": "https://doi.org/10.4230/LIPIcs.STACS.2019.44",
+      "preferredUrl": "https://doi.org/10.4230/LIPIcs.STACS.2019.44",
+      "primaryUrl": "https://doi.org/10.4230/LIPIcs.STACS.2019.44"
+    }
+  ],
+  "id": "kpw2020-ilp",
+  "preferredEditionId": "journal",
+  "preferredUrl": "https://doi.org/10.1145/3397484",
+  "title": "Tight Complexity Lower Bounds for Integer Linear Programming with Few Constraints"
+}

@@ -1,0 +1,71 @@
+{
+  "assessments": {
+    "sh": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "established",
+        "evidence": [
+          {
+            "boundRevision": 1,
+            "hypothesisRevision": 1,
+            "proof": {
+              "proofId": "independent-set-rankwidth",
+              "revision": 1,
+              "theorem": "independent-set-rankwidth-sh"
+            },
+            "reviewId": "independent-set-rankwidth-sh-review"
+          }
+        ],
+        "status": "established"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "hypothesis-implies-bound"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "sh",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "independent-set-supplied-rank-decomposition-sh-degree",
+  "inputConditions": [
+    "triangle-free",
+    "optimal-certificate"
+  ],
+  "inputFactor": "N^(O(1))",
+  "proofs": [
+    {
+      "proofId": "independent-set-rankwidth",
+      "revision": 1,
+      "theorem": "independent-set-rankwidth-sh"
+    }
+  ],
+  "provenance": "atlas",
+  "qualifications": [
+    "For every fixed 0<ε<2."
+  ],
+  "reader": {
+    "label": "Fixed-power bound below squared width on triangle-free graphs",
+    "revision": 1,
+    "title": "Fixed-power bound below squared width on triangle-free graphs under SH"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "2^(O(p^(2−ε))) N^(O(1))",
+  "runtimeSymbols": [
+    "p",
+    "ε",
+    "N"
+  ],
+  "sources": [],
+  "statement": "Under SH, no deterministic algorithm decides Independent Set within the stated running time.",
+  "status": "established",
+  "supported": true
+}

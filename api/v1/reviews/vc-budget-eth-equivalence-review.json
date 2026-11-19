@@ -1,0 +1,19 @@
+{
+  "applicable": true,
+  "date": "2026-11-18",
+  "evidence": "evidence/current-equivalences-independent.md",
+  "id": "vc-budget-eth-equivalence-review",
+  "independent": true,
+  "label": "Agent verified",
+  "object": {
+    "caseId": "vertex-cover-budget",
+    "id": "vc-budget-eth",
+    "revision": 2,
+    "type": "bound"
+  },
+  "reviewer": "Codex parent agent",
+  "scope": "The unrestricted cover problem inherits the SAT implication from degree-three graphs. The general 2k-vertex kernel followed by the linear-variable reduction supplies the other direction.",
+  "stale": false,
+  "type": "agent",
+  "verdict": "verified"
+}

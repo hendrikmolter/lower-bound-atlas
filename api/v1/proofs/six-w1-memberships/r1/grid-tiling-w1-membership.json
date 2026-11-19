@@ -1,0 +1,24 @@
+{
+  "authorship": {
+    "authors": [
+      "Atlas"
+    ],
+    "kind": "ai",
+    "origin": "atlas"
+  },
+  "dependencies": [],
+  "pdf": "proofs/six-w1-memberships.pdf",
+  "proofId": "six-w1-memberships",
+  "revision": 1,
+  "source": "proofs/six-w1-memberships.tex",
+  "theorem": {
+    "destination": "grid-tiling-w1-membership",
+    "label": "grid-tiling-w1-membership",
+    "number": "1",
+    "reviewIds": [
+      "grid-tiling-w1-membership-independent"
+    ],
+    "statement": "Equality Grid Tiling on explicit tables is in W[1] by grid side k.",
+    "supports": true
+  }
+}

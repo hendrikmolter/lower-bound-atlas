@@ -1,0 +1,1 @@
+Johannes K. Fichte, Markus Hecher, Andreas Pfandler. Lower Bounds for QBFs of Bounded Treewidth. Full version (arXiv:1910.01047v2). https://arxiv.org/abs/1910.01047v2

@@ -1,0 +1,72 @@
+{
+  "assessments": {
+    "eth": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unassessed"
+    },
+    "sh": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unassessed"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "dv-eth-column-budget",
+  "inputConditions": [],
+  "inputFactor": "(m+n)^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [
+    "For every fixed ε > 0, let c = 1/2 − ε."
+  ],
+  "reader": {
+    "label": "Double-exponential bound",
+    "revision": 1
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "2^(O(2^(c k))) (m+n)^(O(1))",
+  "runtimeSymbols": [
+    "k",
+    "m",
+    "n"
+  ],
+  "sources": [
+    {
+      "editionId": "journal",
+      "locator": "Theorem 1, p. 1",
+      "paperId": "ps2020",
+      "placement": "statement",
+      "role": "benchmark"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm decides Distinct Vectors within the stated running time.",
+  "status": "established",
+  "supported": true
+}

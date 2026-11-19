@@ -1,0 +1,1 @@
+Marek Cygan, Alexander S. Kulikov, Ivan Mihajlin, Maksim Nikolaev, Grigory Reznikov. Minimum Common String Partition: Exact Algorithms. ESA 2021, LIPIcs 204, pp. 35:1–35:16. https://doi.org/10.4230/LIPIcs.ESA.2021.35

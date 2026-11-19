@@ -1,0 +1,18 @@
+{
+  "applicable": true,
+  "date": "2026-11-18",
+  "evidence": "evidence/three-coloring-independent.md",
+  "id": "color-eth-historical-review",
+  "label": "Agent verified",
+  "object": {
+    "caseId": "lms-3color-order",
+    "id": "color-eth-historical",
+    "revision": 1,
+    "type": "bound"
+  },
+  "reviewer": "Independent atlas proof reviewer",
+  "scope": "ETH implies the historical rate family by domination by the exact positive-rate exclusion. The literal older converse remains unknown.",
+  "stale": false,
+  "type": "agent",
+  "verdict": "verified"
+}

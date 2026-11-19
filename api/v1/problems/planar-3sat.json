@@ -1,0 +1,17 @@
+{
+  "id": "planar-3sat",
+  "input": "An explicitly listed CNF formula with at most three literals per clause and a planar variable–clause incidence graph.",
+  "name": "Planar 3SAT",
+  "parameterizations": [
+    "planar-3sat-variables",
+    "planar-3sat-formula-size"
+  ],
+  "question": "Does the formula have a satisfying assignment?",
+  "restrictionOf": [
+    {
+      "condition": "The variable–clause incidence graph is planar",
+      "problemId": "three-sat"
+    }
+  ],
+  "revision": 1
+}

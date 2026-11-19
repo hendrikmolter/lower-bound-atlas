@@ -1,0 +1,67 @@
+{
+  "assessments": {
+    "w1": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unassessed"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "w1",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "hardnessBaseline": "W[1]",
+  "id": "minimum-bisection-clique-width-w1-baseline",
+  "inputConditions": [],
+  "inputFactor": "B^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [
+    "The parameter factor f is an arbitrary computable function and the exponent of B is an arbitrary fixed constant."
+  ],
+  "reader": {
+    "explanation": "The parameterized reduction to Max-Cut constructs a clique-width expression. Adding as many isolated vertices as the Max-Cut graph has vertices converts the instance to Maximum Bisection. Complementation then sends a lower threshold b on the resulting 2n-vertex graph to the upper threshold n²−b. The complement expression is constructible from the original expression with at most twice as many labels. An algorithm for intrinsic clique-width can ignore the expression. Its parameter factor can be replaced by a computable nondecreasing majorant because intrinsic width is at most the expression width.",
+    "label": "Fixed-parameter tractability",
+    "revision": 1,
+    "title": "Minimum Bisection under FPT ≠ W[1]: Fixed-parameter tractability"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "f(t) B^(O(1))",
+  "runtimeSymbols": [
+    "t",
+    "B"
+  ],
+  "sources": [
+    {
+      "editionId": "journal",
+      "locator": "Theorem 4.1 and §4.1, Corollary 4.8, and §6, pp. 1548–1557 and 1562",
+      "paperId": "fgls2014-clique-width",
+      "placement": "statement",
+      "role": "parameterized Max-Cut reduction and bisection transfers"
+    },
+    {
+      "editionId": "journal",
+      "locator": "Theorem 4.1 and Proposition 4.3 with its constructive proof, §4, pp. 90–93",
+      "paperId": "courcelle-olariu2000",
+      "placement": "statement",
+      "role": "construction of a complement expression"
+    }
+  ],
+  "statement": "Under FPT ≠ W[1], no deterministic algorithm solves this decision problem within the stated running time.",
+  "status": "established",
+  "supported": true
+}

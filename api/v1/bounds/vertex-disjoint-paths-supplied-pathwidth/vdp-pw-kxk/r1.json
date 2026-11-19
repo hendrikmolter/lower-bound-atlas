@@ -1,0 +1,54 @@
+{
+  "assessments": {},
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "kxk",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "vdp-pw-kxk",
+  "inputConditions": [],
+  "inputFactor": "B^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [],
+  "reader": {
+    "label": "Bound in the supplied path width",
+    "revision": 1
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "2^(o(p log₂ p)) B^(O(1))",
+  "runtimeSymbols": [
+    "p",
+    "B"
+  ],
+  "sources": [
+    {
+      "editionId": "v3",
+      "locator": "Section 3, Table 1, first row, p. 5, covering Theorem 14.19 of Parameterized Algorithms",
+      "paperId": "szeider2026",
+      "placement": "statement",
+      "role": "preprint transfer"
+    },
+    {
+      "editionId": "book",
+      "locator": "Theorem 14.19, p. 484",
+      "paperId": "cygan2015",
+      "placement": "statement",
+      "role": "textbook benchmark"
+    },
+    {
+      "editionId": "journal",
+      "locator": "Section 5, Theorem 5.4, pp. 696–697",
+      "paperId": "lms2018",
+      "placement": "statement",
+      "role": "published reduction"
+    }
+  ],
+  "statement": "Under the k × k Clique Hypothesis, no deterministic algorithm decides Vertex-Disjoint Paths within the stated running time.",
+  "status": "established",
+  "supported": true
+}

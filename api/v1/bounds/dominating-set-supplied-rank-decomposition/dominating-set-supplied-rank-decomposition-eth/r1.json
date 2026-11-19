@@ -1,0 +1,44 @@
+{
+  "assessments": {},
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "dominating-set-supplied-rank-decomposition-eth",
+  "inputConditions": [
+    "monopolar"
+  ],
+  "inputFactor": "n^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [],
+  "reader": {
+    "explanation": "The cited preprint states these width interfaces. Its monopolar hard family is the scope used here.",
+    "label": "Subexponential bound in squared width",
+    "revision": 1,
+    "title": "Subexponential bound in squared width under ETH"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "2^(o(p^2)) n^(O(1))",
+  "runtimeSymbols": [
+    "p",
+    "n"
+  ],
+  "sources": [
+    {
+      "editionId": "v1",
+      "locator": "Theorem 3.1 and §§3.1–3.2",
+      "paperId": "liu-meng2026-rankwidth",
+      "placement": "statement",
+      "role": "historical lower bound"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm decides Dominating Set within the stated running time.",
+  "status": "established",
+  "supported": true
+}

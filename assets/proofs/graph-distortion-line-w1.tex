@@ -1,0 +1,133 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\title{An effective lower bound for bipartite line distortion}
+\author{Atlas}
+\date{18 November 2026}
+\begin{document}
+\maketitle
+
+For a connected unweighted graph $G$, let $\operatorname{dist}_G$ denote its shortest-path metric.
+A map $x\colon V(G)\to\mathbb Z$ has distortion at most $d$ if
+\[
+ \operatorname{dist}_G(v,w)\le |x(v)-x(w)|\le d\operatorname{dist}_G(v,w)
+ \qquad\text{for all }v,w\in V(G).
+\]
+It suffices to check the upper bound on edges, by the triangle inequality. A real embedding satisfying these inequalities also gives an integer embedding. In coordinate order, replace each consecutive gap by the graph distance between its endpoints. The gaps shrink, so the upper inequalities persist, and the triangle inequality in the graph proves the lower inequalities. Conversely, integer coordinates are real coordinates.
+
+\hypertarget{graph-distortion-line-w1}{}
+\begin{theorem}\label{graph-distortion-line-w1}
+Assume $\mathrm{FPT}\ne\mathrm{W}[1]$. On connected simple unweighted bipartite graphs, no deterministic algorithm decides whether there is an embedding of distortion at most $d$ in time $2^{h(d)}B^{O(1)}$ when $h$ is a finite nonnegative effectively $o(d\log_2 d)$ exponent and $B$ is the complete explicit binary input length. This holds for embeddings into the integer line and into the real line.
+\end{theorem}
+
+Here effective convergence means that a computable modulus bounds $h(d)/\max\{1,d\log_2(\max\{2,d\})\}$ at any prescribed rational tolerance. We first reduce Clique to a family of permutation hitting instances. We then encode each such instance by a bipartite graph in which the order of a distinguished vertex set determines the permutation.
+
+\section{From Clique to permutation hitting}
+
+We use the \(\mathrm{W[1]}\)-hardness of Clique parameterized by the requested
+size \(k\)~\cite{df}. For a graph with \(n\ge 2\) vertices, use \(k\) blocks of
+\(\lceil\log_2 n\rceil\) Boolean variables to encode the chosen vertices.
+Forbid each unused code in each block, and for each pair of blocks forbid every
+pair of valid codes representing equal or nonadjacent vertices. Each prohibition
+is a clause on the affected blocks, falsified exactly by the forbidden pattern.
+The formula is satisfiable exactly when the graph has a \(k\)-clique. It has
+\(m=k\lceil\log_2 n\rceil\) variables, and its complete length and construction
+time are both bounded by \(F(k)n^a\) for computable \(F\) and a fixed \(a\).
+We decide trivial Clique inputs directly.
+
+Take an explicit CNF over \(m\) listed variables. Decide instances with fewer
+than \(16\) variables or an empty clause directly, and likewise decide a
+formula with no clauses. Let
+\[
+ b=\lfloor (\log_2 m)/2\rfloor,\qquad
+ q=2^b,\qquad s=\lceil m/b\rceil,\qquad a=\max\{s,q\}.
+\]
+Pad the variable list to \(sb\) and partition it into \(s\) groups of size
+\(b\). In row \(i\) of a \(a\times a\) table, the first \(q\) columns encode
+assignments to group \(i\), for each \(i\le s\). Require a row selection to
+hit the set of these \(q\) cells for each real row. For each clause, require
+it to hit the set of all real cells whose group assignment satisfies a
+literal of the clause. Thus a mapping selecting one column per row hits all
+sets exactly when its real rows encode a satisfying assignment. Dummy
+rows have no domain constraint. The set family is explicit and has polynomial
+size in the formula length and \(m\). We have \(a=O(m/\log m)\).
+
+Use the deterministic constructive coloring family of Lokshtanov, Marx, and
+Saurabh~\cite[Lemma 2.8 and its proof]{lms}. It enumerates maps
+\(f\colon[a]\times[a]\to[a+1]\) in time
+\(2^{O(a\log\log(\max\{a,4\}))}a^{O(1)}\). For any mapping selecting one cell
+per row, some \(f\) gives the selected cells distinct colors and gives each
+selected cell a color absent from the other cells of its row. Indeed, the
+graph formed by a clique on the selected cells and the stars joining each
+selection to its row is the cactus-grid graph of that lemma.
+
+For each \(f\), retain the cells whose colors are unique within their rows, and
+replace the column of every retained cell by its color. Apply this operation to
+every set and additionally require a hit on the retained cells of each row.
+Add one unconstrained row to make a square of size \(K=a+1\).
+For any permutation hitting these new sets, the row-color choice in each
+original row has a unique preimage, which gives an original selection hitting
+all old sets. Conversely, for a selection hitting all old sets, the map
+\(f\) guaranteed by the coloring family retains every chosen cell and assigns
+them distinct colors. Assign the unused color to the new dummy row. This
+gives a permutation hitting all new sets. The number of queries and the time
+to enumerate the family are \(2^{o(m)}\) up to a fixed polynomial factor in
+the explicit formula length, with a computable sublinear exponent bound
+\(O(m\log\log m/\log m)\).
+
+
+\section{Orders and consecutive pairs}
+
+Let $K$ be the order of a permutation hitting instance, with table sets $S_1,\ldots,S_H\subseteq[K]\times[K]$. We construct layers of tests on the same universe of $u=5K+2$ symbols. Given an order of the symbols, a test is a subset of symbols that must contain both endpoints of a consecutive pair in the order. The assignments to pairs must be injective within each layer.
+
+Use symbols $r_i,R_i,c_i,C_i$ for $i\in[K]$ and the chain of distinct symbols $g_L,z_1,\ldots,z_K,g_R$. Impose every pair $\{r_i,R_i\}$, $\{c_i,C_i\}$, and every consecutive pair of the chain as a separate layer containing a single test. In a satisfying order the chain appears contiguously, in either orientation. Add a layer with tests $\{R_i\}\cup\{c_j:j\in[K]\}$ for all $i\in[K]$. The $K$ distinct assigned pairs each consume at least one $c_j$. Each $c_j$ can be used at most once, since the pair with $C_j$ already consumes one of its neighbors and cannot be assigned in this layer. Hence each assigned pair uses one $c_j$ and the other endpoint must be $R_i$ for test $i$. This defines a permutation $\rho$ by pairing $R_i$ with $c_{\rho(i)}$. In particular, no pair of symbols of the form $c_j$ is consecutive.
+
+For each table $S_h$ add a layer with the $K$ tests
+\[
+ \{z_1,\ldots,z_K\}\cup\{R_i\}\cup\{c_j:(i,j)\in S_h\},
+ \qquad i\in[K].
+\]
+Each assigned pair must be internal to the $z$ chain or be the pair joining $R_i$ to $c_{\rho(i)}$, provided $(i,\rho(i))\in S_h$. The guards prevent a pair between a $z$ symbol and a symbol outside the chain. There are only $K-1$ internal pairs, so the permutation hits $S_h$. Conversely, given a permutation that hits every table, concatenate the blocks $r_i,R_i,c_{\rho(i)},C_{\rho(i)}$ and append the guarded chain. For each table use the partner pair for one hit and the $K-1$ internal pairs for the remaining tests. This satisfies all layers. Pad each layer to exactly $u-1$ tests using the full symbol universe, which allows assignment to all previously unused pairs.
+
+\section{Encoding the order by line distortion}
+
+Let $M$ denote the number of padded layers, let $r=u+1$, and let $d=2r-1=2u+1$. We construct two parallel paths with vertices $v_0,\ldots,v_M$ and $w_0,\ldots,w_M$ and add edges $v_iw_i$ for each $i$. In layer $a\in[M]$ use one vertex $x_{a,s}$ per symbol $s$, adjacent to $v_{a-1}$ and $w_a$. Join corresponding symbol vertices between consecutive layers. A test in layer $a$ has its own vertex adjacent exactly to the layer's symbol vertices belonging to its subset. Call this connected graph the core.
+
+Attach two disjoint copies of $K_{r,r+1}$ at opposite ends of the core. For the first copy, join $w_0$ to $r$ vertices of the larger side and $v_0$ to $r-1$ vertices of the smaller side. For the second copy, do the same with $v_M$ and $w_M$, respectively. The graph is bipartite. Give $v_i$ color $i\bmod 2$ and $w_i$ the other color. The vertices for symbols of layer $a$ have the opposite color to $v_{a-1}$, and the vertices for tests in that layer have its color. Each added complete bipartite graph has its larger side opposite its neighbor $w_0$ or $v_M$. All test sets are nonempty, so the resulting simple unweighted graph is connected.
+
+Suppose first there is a satisfying order and assignment of tests to consecutive pairs. Place $v_i$ at $id$ and $w_i$ at $id-1$. In the interval $(v_{a-1},w_a)$ place the $u$ symbols at the odd offsets from $v_{a-1}$ in order and the tests at the even offsets of their assigned pairs. At each end, immediately outside the core, place the vertices of the attached complete bipartite graph so they alternate between sides, with larger-side vertices at both ends. Within each side choose the order so the vertices attached to the core are nearest the core. Consecutive positions are adjacent, so the embedding is noncontracting. Edges along either path and edges joining corresponding symbols span $d$. The other core edges have span at most $d$, as do all edges within either complete bipartite graph since its opposite-side vertices have opposite parity. The farthest of the $r$ larger-side neighbors of the first attached core vertex is at distance $1+2(r-1)=d$. The farthest of the $r-1$ smaller-side neighbors of the second attached core vertex is at distance $2+1+2(r-2)=d$. Thus every edge respects the threshold.
+
+Conversely, suppose an integer embedding meets threshold $d$. Each attached complete bipartite graph spans at least $2r$ since it has $2r+1$ vertices. Its extremes must be on the same side, as otherwise their edge would exceed $d$. If they were both on the smaller side, the $r+1$ larger-side vertices would lie within distance $d$ of both extremes and would be separated by gaps of at least two. The span could then be at most $2d-2r=2r-2$, which is impossible. With extremes on the larger side, applying the same estimate to the $r$ smaller-side vertices bounds the span by $2d-2(r-1)=2r$. Thus every integer position in the interval is occupied and the smaller-side vertices fill the alternating interior positions.
+
+No edge between exterior vertices can cross an attached interval because it would span at least $2r+2$. Since the core is connected it lies on one side of each such interval. Its vertex adjacent to $r$ larger-side vertices is at distance at most one from the nearest extreme, since its furthest larger-side neighbor is at least $2(r-1)$ farther away than that extreme. The second attached core vertex is at distance at most two, using the analogous lower bound $1+2(r-2)$ on its furthest smaller-side neighbor's offset from the extreme. The two core vertices therefore occupy the first two exterior coordinates. As $w_0$ and $v_M$ are distinct and are each a core extreme, they occupy opposite extremes. Reflect and translate to set $w_0=-1$ and $v_0=0$ at the left end. The core has
+\[
+ 2(M+1)+M(2u-1)=Md+2
+\]
+vertices. Its span is at least $Md+1$. Its span is at most $Md+1$ by following the edge $w_0v_0$ and the $M$ edges of the $v$ path to $v_M$. Equality forces every $v_i=id$. The second attached core vertex at the right end is $w_M=Md-1$, so equality in the span of the $w$ path forces $w_i=id-1$.
+
+Every symbol vertex in layer $a$ lies in $[v_{a-1}-1,w_a+1]$ by its two attachments. The four boundary positions are occupied by path vertices. The $u$ independent symbol vertices must fit in the remaining $2u-1$ positions, with gaps of at least two. They therefore occupy the odd offsets. The edges between corresponding symbols force their offsets to be nonincreasing over the layers. Because the sum of all offsets is fixed, all layers have the same order. Each even offset must contain a test vertex adjacent to the two flanking symbols, by noncontraction at distance one. Such a vertex belongs to the same layer as the symbols, and thus the embedding assigns every test to a valid consecutive pair. This recovers a permutation hitting all tables.
+
+The construction has $O((M+1)u)$ vertices and $O((M+1)u^2)$ edges. It takes time polynomial in the listed table size and $K$, and its threshold is $d=10K+5$.
+
+\section{Running time}
+
+The Clique encoding uses $m=\ell\lceil\log_2 n\rceil$ bits on graphs of order $n\ge2$, parameterized by the requested clique size $\ell$. The grouping and recoloring give $K=O(m/\log m)$ for $m\ge16$ and cost effectively $2^{o(m)}$ times a fixed polynomial in the encoding length. Consequently $d\log_2 d=O(m)$ with a computable uniform bound. If a solver as in the theorem existed, choose a computable threshold in $m$ beyond which both the enumeration exponent and the solver exponent are at most $m/(4\ell)$. This uses the computable modulus and the fact that $d$ tends to infinity with $m$. Finite prefixes are absorbed by a computable function of $\ell$: the thresholds and the possible values of $d$ on such prefixes have computable bounds, and a fixed integer upper bound on the finitely many exceptional ratios $h(d)/\max\{1,d\log_2 d\}$ can be hard-coded as a constant. The total exponential overhead is at most this computable factor times $2^{m/(2\ell)}\le 2n$. Each query has size polynomial in the encoding length, and the encoding length is bounded by a computable function of $\ell$ times a fixed polynomial in $n$. This yields a deterministic FPT algorithm for Clique by clique size, contradicting its W[1]-hardness under the assumed separation.
+
+\paragraph{Acknowledgment.} The proof in this note was found using ChatGPT.
+
+\begin{thebibliography}{9}
+\bibitem{df}
+R. G. Downey and M. R. Fellows.
+Fixed-parameter tractability and completeness II: On completeness for W[1].
+\emph{Theoretical Computer Science}, 141(1--2):109--131, 1995.
+\href{https://doi.org/10.1016/0304-3975(94)00097-3}{doi:10.1016/0304-3975(94)00097-3}.
+
+\bibitem{lms}
+D. Lokshtanov, D. Marx, and S. Saurabh.
+Slightly superexponential parameterized problems.
+\emph{SIAM Journal on Computing}, 47(3):675--702, 2018.
+\href{https://doi.org/10.1137/16M1104834}{doi:10.1137/16M1104834}.
+\end{thebibliography}
+\end{document}

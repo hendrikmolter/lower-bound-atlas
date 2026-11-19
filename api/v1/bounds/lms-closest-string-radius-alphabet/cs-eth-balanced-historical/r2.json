@@ -1,0 +1,72 @@
+{
+  "assessments": {
+    "eth": {
+      "converse": {
+        "effectiveStatus": "unknown",
+        "evidence": [],
+        "status": "unknown"
+      },
+      "forward": {
+        "effectiveStatus": "unknown",
+        "evidence": [],
+        "status": "unknown"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unknown"
+    },
+    "sh": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unassessed"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "cs-eth-balanced-historical",
+  "inputConditions": [
+    "one-agreement",
+    "balanced-alphabet"
+  ],
+  "inputFactor": "N^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [],
+  "reader": {
+    "label": "Subexponential-time bound with a balanced alphabet",
+    "revision": 2
+  },
+  "reviewIds": [],
+  "revision": 2,
+  "runtime": "2^(o(d log₂ d)) N^(O(1))",
+  "runtimeSymbols": [
+    "d",
+    "N"
+  ],
+  "sources": [
+    {
+      "editionId": "journal",
+      "locator": "Theorems 2.12 and 3.1, pp. 685–686 and 687",
+      "paperId": "lms2018",
+      "placement": "statement",
+      "role": "benchmark interface"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm decides Closest String within the stated running time.",
+  "status": "established",
+  "supported": true
+}

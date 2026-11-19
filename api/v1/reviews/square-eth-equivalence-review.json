@@ -1,0 +1,19 @@
+{
+  "applicable": true,
+  "date": "2026-11-18",
+  "evidence": "evidence/current-equivalences-independent.md",
+  "id": "square-eth-equivalence-review",
+  "independent": true,
+  "label": "Agent verified",
+  "object": {
+    "caseId": "lms-square-clique",
+    "id": "square-eth",
+    "revision": 2,
+    "type": "bound"
+  },
+  "reviewer": "Codex parent agent",
+  "scope": "The historical ETH statement excludes exactly the algorithm family in the defining hypothesis, for the same decision problem and model.",
+  "stale": false,
+  "type": "agent",
+  "verdict": "verified"
+}

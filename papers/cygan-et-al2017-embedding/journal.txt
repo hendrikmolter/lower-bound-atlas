@@ -1,0 +1,1 @@
+Marek Cygan, Fedor V. Fomin, Alexander Golovnev, Alexander S. Kulikov, Ivan Mihajlin, Jakub Pachocki, Arkadiusz Socała. Tight Lower Bounds on Graph Embedding Problems. Journal of the ACM 64(3) (2017), Article 18. https://doi.org/10.1145/3051094

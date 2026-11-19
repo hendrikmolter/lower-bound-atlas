@@ -1,0 +1,59 @@
+{
+  "assessments": {
+    "w1": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unassessed"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "w1",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "hardnessBaseline": "W[1]",
+  "id": "edge-dominating-set-clique-width-w1",
+  "inputConditions": [],
+  "inputFactor": "B^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [
+    "For every computable f."
+  ],
+  "reader": {
+    "label": "W[1]-hardness",
+    "revision": 1,
+    "title": "Edge Dominating Set under FPT ≠ W[1]: W[1]-hardness"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "f(t) B^(O(1))",
+  "runtimeSymbols": [
+    "t",
+    "B"
+  ],
+  "sources": [
+    {
+      "editionId": "journal",
+      "locator": "Theorem 4.6",
+      "paperId": "fgls2010-clique-width",
+      "placement": "statement",
+      "role": "conditional lower bound"
+    }
+  ],
+  "statement": "Under FPT ≠ W[1], no deterministic algorithm solves the stated decision problem within the stated running time.",
+  "status": "established",
+  "supported": true
+}

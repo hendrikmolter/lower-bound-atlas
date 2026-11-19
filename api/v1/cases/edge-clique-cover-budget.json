@@ -1,0 +1,219 @@
+{
+  "aliases": [],
+  "bounds": [
+    {
+      "assessments": {},
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "ecc-budget-eth",
+      "inputConditions": [],
+      "inputFactor": "n^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "label": "Double-exponential dependence on the clique budget",
+        "revision": 1
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "2^(2^(o(k))) n^(O(1))",
+      "runtimeSymbols": [
+        "k",
+        "n"
+      ],
+      "sources": [
+        {
+          "editionId": "journal",
+          "locator": "Theorem 1 and Corollary 2, p. 70",
+          "paperId": "cygan-pilipczuk-pilipczuk-ecc",
+          "placement": "statement",
+          "role": "published lower bound"
+        },
+        {
+          "editionId": "book",
+          "locator": "Theorem 14.20, p. 485",
+          "paperId": "cygan2015",
+          "placement": "statement",
+          "role": "textbook benchmark"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm decides Edge Clique Cover within the stated running time.",
+      "status": "established",
+      "supported": true
+    },
+    {
+      "assessments": {
+        "np_qp": {
+          "converse": {
+            "effectiveStatus": "established",
+            "evidence": [
+              {
+                "boundRevision": 2,
+                "hypothesisRevision": 1,
+                "proof": {
+                  "proofId": "ecc-np-qp-converse",
+                  "revision": 1,
+                  "theorem": "ecc-np-qp-converse"
+                },
+                "reviewId": "ecc-np-qp-converse-independent",
+                "source": {
+                  "editionId": "journal",
+                  "locator": "§2, Rules 1 and 3′, and Theorem 1, pp. 2.2:4–2.2:7",
+                  "paperId": "gramm-guo-hueffner-niedermeier2009",
+                  "placement": "proof",
+                  "role": "exponential kernel argument"
+                }
+              }
+            ],
+            "status": "established"
+          },
+          "forward": {
+            "effectiveStatus": "established",
+            "evidence": [
+              {
+                "boundRevision": 2,
+                "hypothesisRevision": 1,
+                "reviewId": "ecc-budget-np-qp-equivalence-review",
+                "source": {
+                  "editionId": "journal",
+                  "locator": "Theorem 1 and Corollary 3, p. 70",
+                  "paperId": "cygan-pilipczuk-pilipczuk-ecc",
+                  "placement": "forward",
+                  "role": "reduction with logarithmic clique budget"
+                }
+              }
+            ],
+            "status": "established"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "established-equivalent"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "np_qp",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "ecc-budget-np-qp",
+      "inputConditions": [],
+      "inputFactor": "n^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "explanation": "The reduction from 3-SAT uses a clique budget logarithmic in the number of variables and produces a graph of polynomial size. A solver within the stated time would give a quasipolynomial-time algorithm for 3-SAT.",
+        "label": "Polynomial powers in the exponent",
+        "revision": 2
+      },
+      "reviewIds": [
+        "ecc-budget-np-qp-equivalence-review"
+      ],
+      "revision": 2,
+      "runtime": "2^(k^(O(1))) n^(O(1))",
+      "runtimeSymbols": [
+        "k",
+        "n"
+      ],
+      "sources": [
+        {
+          "editionId": "journal",
+          "locator": "Theorem 1 and Corollary 3, p. 70",
+          "paperId": "cygan-pilipczuk-pilipczuk-ecc",
+          "placement": "statement",
+          "role": "published lower bound"
+        }
+      ],
+      "statement": "Under NP ⊈ QP, no deterministic algorithm decides Edge Clique Cover within the stated running time.",
+      "status": "established",
+      "supported": true
+    }
+  ],
+  "coverage": "Literature bounds.",
+  "encoding": "A finite simple undirected graph G and a nonnegative integer k.",
+  "id": "edge-clique-cover-budget",
+  "inputConditions": [],
+  "kind": "lower-bound-case",
+  "parameter": "The allowed number k of covering cliques.",
+  "problemDefinitionHash": "8285317033cb35c10ae857cd307f3f7058bf623a8ccf6f711d97884776b1d4b7",
+  "problemId": "edge-clique-cover",
+  "problemRevision": 1,
+  "reader": {
+    "anchor": "budget",
+    "boundContext": "The allowed number k of covering cliques. Here n is the number of vertices of G.",
+    "parameter": "The allowed number k of covering cliques.",
+    "parameterLabel": "Clique budget",
+    "parameterSymbols": [
+      {
+        "meaning": "allowed number of covering cliques",
+        "symbol": "k"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "the number of vertices of G",
+        "symbol": "n"
+      }
+    ]
+  },
+  "recoveryComparisons": [
+    {
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "ecc-budget-eth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "np_qp",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "ecc-budget-eth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "ecc-budget-eth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "ecc-budget-eth",
+        "revision": 1
+      }
+    }
+  ],
+  "resolutions": [],
+  "revision": 5,
+  "task": "Can every edge of G be covered by a family of at most k cliques of G?",
+  "title": "Edge Clique Cover by clique budget",
+  "variant": "Edge Clique Cover with overlapping cliques allowed"
+}

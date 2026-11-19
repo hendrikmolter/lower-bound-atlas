@@ -1,0 +1,1 @@
+Russell Impagliazzo, Ramamohan Paturi, Francis Zane. Which Problems Have Strongly Exponential Complexity?. JCSS 63(4) (2001), 512–530. https://doi.org/10.1006/jcss.2001.1774

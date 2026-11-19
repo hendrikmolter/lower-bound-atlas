@@ -1,0 +1,64 @@
+{
+  "assessments": {
+    "eth": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unassessed"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "connected-vertex-cover-budget-eth",
+  "inputConditions": [],
+  "inputFactor": "n^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [],
+  "reader": {
+    "explanation": "The proof first gives the linear-budget reduction to Connected Vertex Cover and then uses it for an edge-domination result.",
+    "label": "Subexponential-time bound",
+    "revision": 1,
+    "title": "Connected Vertex Cover under ETH: Subexponential-time bound"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "2^(o(k)) n^(O(1))",
+  "runtimeSymbols": [
+    "k",
+    "n"
+  ],
+  "sources": [
+    {
+      "editionId": "journal",
+      "locator": "Proof of Theorem 10.8",
+      "paperId": "hermelin-et-al2019-domination",
+      "placement": "statement",
+      "role": "published SAT and Vertex Cover transfer to Connected Vertex Cover"
+    },
+    {
+      "editionId": "journal",
+      "locator": "Corollary 1",
+      "paperId": "ipz2001",
+      "placement": "forward",
+      "role": "decision sparsification"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm solves the stated decision problem within the stated running time.",
+  "status": "established",
+  "supported": true
+}

@@ -1,0 +1,10 @@
+{
+  "id": "weighted-normalized-circuit-satisfiability",
+  "input": "A circuit and an integer k.",
+  "name": "Weighted normalized circuit satisfiability",
+  "parameterizations": [
+    "weighted-normalized-depth-t-circuit-weight"
+  ],
+  "question": "Decide whether exactly k input variables can be set to true to satisfy the circuit.",
+  "revision": 1
+}

@@ -1,0 +1,60 @@
+{
+  "assessments": {
+    "eth": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unassessed"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "ilp-equations-eth-klogk",
+  "inputConditions": [
+    "binary-coefficients",
+    "small-right-hand-side-and-column-count"
+  ],
+  "inputFactor": "N^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [],
+  "reader": {
+    "explanation": "On the hard instances the explicit input length is polynomial in k, so a fixed polynomial factor is absorbed in the exponent.",
+    "label": "Subexponential bound in k log k",
+    "revision": 1,
+    "title": "Subexponential bound in k log k under ETH"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "2^(o(k log₂ k)) N^(O(1))",
+  "runtimeSymbols": [
+    "k",
+    "N"
+  ],
+  "sources": [
+    {
+      "editionId": "journal",
+      "locator": "Theorem 1, p. 19:4, and proof in §2.3, pp. 19:9–19:10",
+      "paperId": "kpw2020-ilp",
+      "placement": "statement",
+      "role": "published lower bound"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm solves Integer Linear Programming Feasibility within the stated running time.",
+  "status": "established",
+  "supported": true
+}

@@ -1,0 +1,19 @@
+{
+  "applicable": true,
+  "date": "2026-11-18",
+  "evidence": "evidence/current-equivalences-independent.md",
+  "id": "square-kxk-equivalence-review",
+  "independent": true,
+  "label": "Agent verified",
+  "object": {
+    "caseId": "lms-square-clique",
+    "id": "square-kxk",
+    "revision": 2,
+    "type": "bound"
+  },
+  "reviewer": "Codex parent agent",
+  "scope": "The input representation has polynomial size in k, so the polynomial input factor is absorbed in the little-o exponent.",
+  "stale": false,
+  "type": "agent",
+  "verdict": "verified"
+}

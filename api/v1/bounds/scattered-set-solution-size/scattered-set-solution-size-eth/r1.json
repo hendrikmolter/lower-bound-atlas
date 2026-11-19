@@ -1,0 +1,43 @@
+{
+  "assessments": {},
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "scattered-set-solution-size-eth",
+  "inputConditions": [
+    "distance-two"
+  ],
+  "inputFactor": "n is the base of the exponent",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [],
+  "reader": {
+    "label": "Sublinear exponent in the parameter",
+    "revision": 1
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "f(k) n^(o(k))",
+  "runtimeSymbols": [
+    "f",
+    "k",
+    "n"
+  ],
+  "sources": [
+    {
+      "editionId": "book",
+      "locator": "Section 14.4.1, p. 496",
+      "paperId": "cygan2015",
+      "placement": "statement",
+      "role": "lower-bound statement"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm solves Scattered Set within the stated running time.",
+  "status": "established",
+  "supported": true
+}

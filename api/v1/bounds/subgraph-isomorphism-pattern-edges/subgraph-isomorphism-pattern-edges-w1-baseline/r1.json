@@ -1,0 +1,67 @@
+{
+  "assessments": {
+    "w1": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unassessed"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "w1",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "hardnessBaseline": "W[1]",
+  "id": "subgraph-isomorphism-pattern-edges-w1-baseline",
+  "inputConditions": [],
+  "inputFactor": "B^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [
+    "The parameter factor f is an arbitrary computable function and the exponent of B is an arbitrary fixed constant."
+  ],
+  "reader": {
+    "explanation": "Use a complete graph on ℓ vertices as the pattern for a Clique instance with target ℓ. An injective edge-preserving image is an ℓ-clique, and the pattern has exactly ℓ(ℓ−1)/2 edges. Cases with ℓ greater than the host order can be answered directly.",
+    "label": "Fixed-parameter tractability",
+    "revision": 1,
+    "title": "Subgraph Isomorphism under FPT ≠ W[1]: Fixed-parameter tractability"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "f(k) B^(O(1))",
+  "runtimeSymbols": [
+    "k",
+    "B"
+  ],
+  "sources": [
+    {
+      "editionId": "journal",
+      "locator": "§1, discussion following Theorem 1.5, pp. 88–89, and §6",
+      "paperId": "marx2010-treewidth",
+      "placement": "statement",
+      "role": "clique-pattern reduction and quadratic parameter growth"
+    },
+    {
+      "editionId": "book",
+      "locator": "Theorem 13.25, p. 444",
+      "paperId": "cygan2015",
+      "placement": "statement",
+      "role": "W[1]-completeness of Clique"
+    }
+  ],
+  "statement": "Under FPT ≠ W[1], no deterministic algorithm solves this decision problem within the stated running time.",
+  "status": "established",
+  "supported": true
+}

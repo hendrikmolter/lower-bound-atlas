@@ -1,0 +1,1 @@
+Jianer Chen, Xiuzhen Huang, Iyad A. Kanj, Ge Xia. On the computational hardness based on linear FPT-reductions. Journal of Combinatorial Optimization 11(2) (2006), 231–247. https://doi.org/10.1007/s10878-006-7137-6

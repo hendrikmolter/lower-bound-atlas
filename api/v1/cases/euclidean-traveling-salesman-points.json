@@ -1,0 +1,266 @@
+{
+  "aliases": [
+    "survey-sh14"
+  ],
+  "bounds": [
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unassessed"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "euclidean-traveling-salesman-points-eth",
+      "inputConditions": [
+        "integer-grid"
+      ],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [
+        "Separately for each fixed integer d ≥ 2."
+      ],
+      "reader": {
+        "explanation": "On the integer-grid instances a tour of length at most n exists exactly when the induced grid graph has a Hamiltonian cycle. This also excludes an exact optimal-tour algorithm.",
+        "label": "Dimension-dependent subexponential bound",
+        "revision": 1,
+        "title": "Euclidean Traveling Salesman under ETH: Dimension-dependent subexponential bound"
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "2^(o(n^(1−1/d))) B^(O(1))",
+      "runtimeSymbols": [
+        "n",
+        "d",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "journal",
+          "locator": "Corollary 4.8 via Theorem 4.7",
+          "paperId": "deberg-et-al2020-geometric",
+          "placement": "statement",
+          "role": "conditional lower bound"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm solves the stated decision problem within the stated running time.",
+      "status": "established",
+      "supported": true
+    },
+    {
+      "assessments": {
+        "sh": {
+          "converse": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unassessed"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "sh",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "euclidean-traveling-salesman-points-sh",
+      "inputConditions": [
+        "integer-grid"
+      ],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [
+        "Separately for each fixed integer d≥2 and fixed 0<ε<1−1/d."
+      ],
+      "reader": {
+        "explanation": "The original source reduction produces integer-grid inputs with threshold n.",
+        "label": "Fixed-power exclusion",
+        "revision": 1,
+        "title": "Euclidean Traveling Salesman under SH: Fixed-power exclusion"
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "2^(O(n^(1−1/d−ε))) B^(O(1))",
+      "runtimeSymbols": [
+        "n",
+        "d",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "v2",
+          "locator": "Table 1, Euclidean TSP row and note b",
+          "paperId": "sh26",
+          "placement": "statement",
+          "role": "conditional lower bound"
+        }
+      ],
+      "statement": "Under SH, no deterministic algorithm solves the stated decision problem within the stated running time.",
+      "status": "established",
+      "supported": true
+    }
+  ],
+  "coverage": "Lower bounds for number of points.",
+  "encoding": "A set P of n points with explicitly encoded rational coordinates in fixed dimension d and a nonnegative rational threshold T.",
+  "id": "euclidean-traveling-salesman-points",
+  "inputConditions": [
+    {
+      "condition": "The point coordinates are integers and T=n.",
+      "id": "integer-grid",
+      "level": "bound"
+    }
+  ],
+  "kind": "lower-bound-case",
+  "parameter": "The number of input points n.",
+  "problemDefinitionHash": "9424fb63226a4f42451135cf554456cdb2684652155aa204d63348264367fcca",
+  "problemId": "euclidean-traveling-salesman",
+  "problemRevision": 1,
+  "reader": {
+    "anchor": "euclidean-traveling-salesman-points",
+    "parameter": "The number of input points n.",
+    "parameterLabel": "Number of points",
+    "parameterSymbols": [
+      {
+        "meaning": "number of input points",
+        "symbol": "n"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "complete explicit binary input length",
+        "symbol": "B"
+      },
+      {
+        "meaning": "the fixed dimension",
+        "symbol": "d"
+      }
+    ]
+  },
+  "recoveryAssessments": [
+    {
+      "comparison": "The cited fixed-power exclusion preserves the task and input-polynomial factor, with the recorded power loss in the exponent.",
+      "effective": false,
+      "evidence": [
+        {
+          "editionId": "v2",
+          "locator": "Table 1, Euclidean TSP row and note b",
+          "paperId": "sh26",
+          "placement": "statement",
+          "role": "conditional lower bound"
+        }
+      ],
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "recoveredScale": "n^(1−1/d−ε)",
+      "recovery": {
+        "id": "euclidean-traveling-salesman-points-sh",
+        "revision": 1
+      },
+      "scale": "degree",
+      "target": {
+        "id": "euclidean-traveling-salesman-points-eth",
+        "revision": 1
+      },
+      "targetScale": "n^(1−1/d)"
+    }
+  ],
+  "recoveryComparisons": [
+    {
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "euclidean-traveling-salesman-points-eth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "np_qp",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "euclidean-traveling-salesman-points-eth",
+        "revision": 1
+      }
+    },
+    {
+      "comparison": "The cited fixed-power exclusion preserves the task and input-polynomial factor, with the recorded power loss in the exponent.",
+      "effective": false,
+      "evidence": [
+        {
+          "editionId": "v2",
+          "locator": "Table 1, Euclidean TSP row and note b",
+          "paperId": "sh26",
+          "placement": "statement",
+          "role": "conditional lower bound"
+        }
+      ],
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "recoveredScale": "n^(1−1/d−ε)",
+      "recovery": {
+        "id": "euclidean-traveling-salesman-points-sh",
+        "revision": 1
+      },
+      "scale": "degree",
+      "status": "degree",
+      "target": {
+        "id": "euclidean-traveling-salesman-points-eth",
+        "revision": 1
+      },
+      "targetScale": "n^(1−1/d)"
+    },
+    {
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "euclidean-traveling-salesman-points-eth",
+        "revision": 1
+      }
+    }
+  ],
+  "resolutions": [],
+  "revision": 3,
+  "task": "Is there a cycle visiting every point of total Euclidean length at most T?",
+  "title": "Euclidean Traveling Salesman by number of points",
+  "variant": "Euclidean Traveling Salesman"
+}

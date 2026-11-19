@@ -1,0 +1,159 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\title{An effective quadratic lower bound for unweighted Dominating Set}
+\author{Atlas}
+\date{18 November 2026}
+\begin{document}
+\maketitle
+
+A dominating set of a graph $G$ is a set $D\subseteq V(G)$ such that every
+vertex outside $D$ has a neighbor in $D$. The input to \textsc{Dominating
+Set} is an explicit simple undirected graph and a nonnegative binary budget.
+The question is whether there is a dominating set of size at most the
+budget. A graph is monopolar if its vertex set is the union of an
+independent set and a disjoint union of cliques.
+
+For $X\subseteq V(G)$, the cut rank is the rank over $\mathbb F_2$ of
+the adjacency matrix between $X$ and $V(G)\setminus X$. The width of a
+vertex order is the largest cut rank of any prefix, and linear rank-width
+is the minimum such width. A rank decomposition is a subcubic tree whose
+leaves correspond bijectively to the vertices. Each edge induces a cut,
+and the width of the decomposition is the largest cut rank of those cuts.
+Rank-width is the minimum width of such a tree. A supplied order or
+decomposition is measured by its actual width.
+
+For a computable nonnegative integer function $h$, write
+$h(p)=o_{\mathrm{eff}}(p^2)$ when there is a computable function $T$
+such that $h(p)\le\eta\max(1,p)^2$ for all integers $p\ge T(\eta)$,
+for each positive rational $\eta$.
+
+Liu and Meng~\cite[Theorem~3.1 and Corollary~3.10]{lm} prove a quadratic
+lower bound for unweighted \textsc{Dominating Set} under ETH. The theorem
+below is a direct consequence of their monopolar construction in
+Section~3.2. Appendix~C of~\cite{lm} observes that the construction
+works for clauses of unrestricted length. This lets us start from a
+CNF formula encoding a Multicolored Clique witness with $O(\log n)$ bits
+per color, where $n$ is the source graph order. The resulting width is
+linear in the square root of the number of formula variables, including
+for the supplied order and decomposition. The effective convergence
+cutoff then turns a hypothetical solver into a fixed-parameter algorithm
+for Multicolored Clique.
+
+\hypertarget{dominating-set-rankwidth}{}
+\begin{theorem}\label{dominating-set-rankwidth}
+Assume deterministic $\mathrm{FPT}\ne\mathrm W[1]$. For every fixed
+$C\ge0$ and every computable $h(p)=o_{\mathrm{eff}}(p^2)$, no deterministic
+algorithm decides \textsc{Dominating Set} in $O(2^{h(p)}N^C)$ time on
+monopolar graphs. This holds for rank-width and linear rank-width, and
+separately for the width of a supplied rank decomposition or vertex order.
+Here $N$ is the complete binary input length, including the certificate
+when supplied.
+\end{theorem}
+
+\section{A compact formula for Multicolored Clique}
+
+Let a Multicolored Clique instance have $\ell$ colors and $n\ge2$ vertices.
+We may decide cases with empty colors or fewer than two colors directly.
+Use a block of $b=\lceil\log_2 n\rceil$ variables to encode one vertex of
+each color. Forbid unused codes by adding one clause for each unused code.
+For every nonedge with endpoints of different colors add a clause forbidding
+the pair of codes. A forbidden bit pattern is represented by the disjunction
+of the literals that disagree with it. A satisfying assignment is therefore
+equivalent to a multicolored clique. This uses $\ell b$ variables and at most
+$\ell 2^b+\ell^2 n^2$ clauses of length at most $2b$. Both the construction
+and the full encoding take $F(\ell)n^{O(1)}$ time for a computable $F$.
+
+An empty conjunction is satisfiable and can be decided directly. Let
+$C_1,\ldots,C_m$ denote the clauses, where $m\ge1$. Pad with unused
+variables to obtain a $k\times k$ array of variables with
+$k=\lceil\sqrt{\ell b}\rceil$. An assignment is now a binary matrix
+whose $a$th row assigns the variables in row $a$.
+
+\section{The reduction to domination}
+
+Use one layer per clause. For each layer $i$ and row $a$ create a clique
+$A_{i,a}$ with one vertex $v_{i,a,x}$ for each $x\in\mathbb F_2^k$.
+Add two nonadjacent vertices adjacent to every vertex of $A_{i,a}$ and
+with no other neighbors. These force a choice from each clique at the
+budget $km$. In layer $i$ add a clause vertex adjacent to $v_{i,a,x}$
+exactly when $x$ satisfies a literal of $C_i$ from row $a$.
+
+To make consecutive layer assignments agree, for each $i<m$ and
+each $t,p,r\in\mathbb F_2^k$ with $r\ne0$ add a vertex $e_{i,t,p,r}$.
+Join it to $v_{i,a,x}$ if $x\cdot t\ne p_a$, and to $v_{i+1,a,x}$ if
+$x\cdot t\ne p_a+r_a$. There are no further edges. The choice cliques
+and the independent set of remaining vertices give a monopolar partition.
+
+Every dominating set contains at least one vertex per choice clique and
+its two guards taken together. If it contains no choice vertex in such
+a group, it must contain both guards. Thus a solution of size at most
+$km$ selects exactly one vertex from every choice clique and no other
+vertices. Write $X$ and $Y$ for the selected assignments at two consecutive
+layers. The test vertex indexed by $(t,p,r)$ is undominated exactly when
+$Xt=p$ and $Yt=p+r$. If $X=Y$, this never occurs. If $X\ne Y$, choose a
+unit vector $t$ at a column on which they differ, and let $p=Xt$ and
+$r=(X+Y)t$. The resulting test vertex is undominated. Hence all layer
+assignments agree in a solution. Every clause vertex must have a selected
+neighbor, so this common assignment satisfies the formula. Conversely, a
+satisfying assignment used in all layers dominates the choice cliques,
+guards, clause vertices and test vertices.
+
+\section{Width and running time}
+
+Order the vertices in layer order, with the tests between layers $i$ and
+$i+1$ in one block between the layers. Within each layer put its clause
+vertex first, followed by consecutive row groups with the guards before
+the assignment vertices. Across a left test interface the entry for
+$(a,x)$ and $(t,p,r)$ is $x\cdot t+p_a$. Every row is in the span of the
+$2k$ coordinate functions $t_j$ and $p_a$. Across a right interface use
+$t_j$ and $p_a+r_a$ in the same way. The rank of either interface, or any
+submatrix, is therefore at most $2k$.
+
+A cut inside a test block splits only its two test interfaces. A cut
+inside a layer splits at most the preceding and succeeding test interfaces,
+one row group and the clause adjacency. For the split row group, every
+nonzero row toward the unprocessed portion of the clique is the all-ones
+row, and the unprocessed guards have no processed clique vertex preceding
+them. This adds at most one to the rank, and the clause vertex adds at most
+one. Thus the supplied order has width at most $4k+2$. A rank decomposition
+of width at most $4k+2$ follows by placing one leaf per vertex along a
+path, since its remaining cuts isolate a vertex. Both intrinsic widths
+also satisfy this bound.
+
+The layers use $mk(2^k+2)+m$ vertices and the intervening blocks use
+$(m-1)2^{2k}(2^k-1)$. The complete explicit graph, budget and either
+certificate can be constructed in $2^{O(k)}$ times a fixed polynomial in
+the formula length. This bound allows dense edge output. Because
+$\sqrt{\ell\log_2 n}\le(\ell+\log_2 n)/2$, the construction takes
+$F'(\ell)n^{O(1)}$ time for a computable $F'$. The output parameter
+satisfies $\max(1,p)^2\le A(\ell)\log_2 n$ for a computable positive
+integer $A(\ell)$.
+
+Suppose the algorithm from the theorem exists. At
+$p\ge T(1/A(\ell))$ we have $2^{h(p)}\le n$. Below the cutoff its
+contribution has a computable parameter-only bound obtained by taking the
+maximum over the finite prefix of $h$. The complete composition then
+solves Multicolored Clique in deterministic fixed-parameter time by
+number of colors. This contradicts its $\mathrm W[1]$-hardness, which
+follows by copying each vertex into each color and joining distinct-color
+copies exactly when their originals are adjacent~\cite{df}.
+
+\paragraph{Acknowledgment.}
+The proof was found using ChatGPT.
+
+\begin{thebibliography}{9}
+\bibitem{df}
+R. G. Downey and M. R. Fellows.
+Fixed-parameter tractability and completeness II: On completeness for
+$\mathrm W[1]$. \emph{Theoretical Computer Science}, 141(1--2):109--131,
+1995. \href{https://doi.org/10.1016/0304-3975(94)00097-3}{DOI}.
+\bibitem{lm}
+C. Liu and B. Meng.
+Lower bounds for domination-type problems parameterized by rank-width.
+\href{https://arxiv.org/abs/2608.18854v1}{arXiv:2608.18854v1}, 2026.
+See Section 3.2 and Appendix C for the construction and its arbitrary-CNF extension.
+\end{thebibliography}
+\end{document}

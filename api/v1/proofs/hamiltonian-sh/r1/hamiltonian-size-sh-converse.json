@@ -1,0 +1,24 @@
+{
+  "authorship": {
+    "authors": [
+      "Atlas"
+    ],
+    "kind": "ai",
+    "origin": "atlas"
+  },
+  "dependencies": [],
+  "pdf": "proofs/hamiltonian-sh.pdf",
+  "proofId": "hamiltonian-sh",
+  "revision": 1,
+  "source": "proofs/hamiltonian-sh.tex",
+  "theorem": {
+    "destination": "hamiltonian-size-sh-converse",
+    "label": "hamiltonian-size-sh-converse",
+    "number": "2",
+    "reviewIds": [
+      "hamiltonian-size-sh-converse-independent"
+    ],
+    "statement": "The fixed-power exclusion family for Hamiltonian Cycle by number of vertices plus edges implies SH.",
+    "supports": true
+  }
+}

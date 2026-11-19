@@ -1,0 +1,10 @@
+{
+  "id": "scattered-set",
+  "input": "An explicitly encoded finite simple undirected graph G and positive integers k and d.",
+  "name": "Scattered Set",
+  "parameterizations": [
+    "scattered-set-solution-size"
+  ],
+  "question": "Are there k vertices whose pairwise graph distances are at least d?",
+  "revision": 1
+}

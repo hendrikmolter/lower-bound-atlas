@@ -1,0 +1,108 @@
+{
+  "assessments": {
+    "w1": {
+      "converse": {
+        "effectiveStatus": "established",
+        "evidence": [
+          {
+            "boundRevision": 2,
+            "hypothesisRevision": 1,
+            "reviewId": "multicolored-clique-colors-w1-equivalence-review",
+            "source": {
+              "editionId": "notes",
+              "locator": "Definition immediately before Theorem 1",
+              "paperId": "koutecky2026-hard-side",
+              "placement": "proof",
+              "role": "deletion of same-color edges followed by Clique membership"
+            }
+          },
+          {
+            "boundRevision": 2,
+            "hypothesisRevision": 1,
+            "reviewId": "multicolored-clique-colors-w1-equivalence-review",
+            "source": {
+              "editionId": "journal",
+              "locator": "Corollary 3.2",
+              "paperId": "df1995",
+              "placement": "proof",
+              "role": "Clique membership in W[1]"
+            }
+          }
+        ],
+        "status": "established"
+      },
+      "forward": {
+        "effectiveStatus": "established",
+        "evidence": [
+          {
+            "boundRevision": 2,
+            "hypothesisRevision": 1,
+            "reviewId": "multicolored-clique-colors-w1-equivalence-review",
+            "source": {
+              "editionId": "notes",
+              "locator": "Theorem 1",
+              "paperId": "koutecky2026-hard-side",
+              "placement": "forward",
+              "role": "parameter-preserving hardness reduction from Clique"
+            }
+          }
+        ],
+        "status": "established"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "established-equivalent"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "w1",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "hardnessBaseline": "W[1]",
+  "id": "multicolored-clique-colors-w1",
+  "inputConditions": [],
+  "inputFactor": "B^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [
+    "The bound excludes every computable prefactor f."
+  ],
+  "reader": {
+    "explanation": "The color-copy reduction proves hardness from Clique. Deleting same-color edges and asking for a clique of size k proves membership in W[1].",
+    "label": "Fixed-parameter tractability",
+    "revision": 2,
+    "title": "Multicolored Clique by number of color classes under FPT ≠ W[1]"
+  },
+  "reviewIds": [
+    "multicolored-clique-colors-w1-equivalence-review"
+  ],
+  "revision": 2,
+  "runtime": "f(k) B^(O(1))",
+  "runtimeSymbols": [
+    "f",
+    "k",
+    "B"
+  ],
+  "sources": [
+    {
+      "editionId": "journal",
+      "locator": "Corollary 3.2 and Theorem 3.1",
+      "paperId": "df1995",
+      "placement": "statement",
+      "role": "W[1]-completeness"
+    },
+    {
+      "editionId": "notes",
+      "locator": "Theorem 1",
+      "paperId": "koutecky2026-hard-side",
+      "placement": "statement",
+      "role": "hardness by a parameter-preserving reduction"
+    }
+  ],
+  "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Multicolored Clique within the stated running time.",
+  "status": "established",
+  "supported": true
+}

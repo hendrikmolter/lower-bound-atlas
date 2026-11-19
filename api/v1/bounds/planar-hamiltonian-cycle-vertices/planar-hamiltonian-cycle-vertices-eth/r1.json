@@ -1,0 +1,47 @@
+{
+  "assessments": {},
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "planar-hamiltonian-cycle-vertices-eth",
+  "inputConditions": [],
+  "inputFactor": "B^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [],
+  "reader": {
+    "label": "Square-root exponent",
+    "revision": 1
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "2^(o(n^(1/2))) B^(O(1))",
+  "runtimeSymbols": [
+    "n",
+    "B"
+  ],
+  "sources": [
+    {
+      "editionId": "bulletin",
+      "locator": "Theorem 3.5, p. 52",
+      "paperId": "lms2011",
+      "placement": "statement",
+      "role": "lower-bound statement"
+    },
+    {
+      "editionId": "book",
+      "locator": "Theorem 14.9 and Exercise 14.3(e), pp. 475, 516, 518",
+      "paperId": "cygan2015",
+      "placement": "statement",
+      "role": "lower-bound statement"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm solves Planar Hamiltonian Cycle within the stated running time.",
+  "status": "established",
+  "supported": true
+}

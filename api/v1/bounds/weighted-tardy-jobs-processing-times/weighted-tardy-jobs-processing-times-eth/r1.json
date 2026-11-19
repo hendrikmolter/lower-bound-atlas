@@ -1,0 +1,58 @@
+{
+  "assessments": {
+    "eth": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unassessed"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "weighted-tardy-jobs-processing-times-eth",
+  "inputConditions": [],
+  "inputFactor": "N^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [],
+  "reader": {
+    "explanation": "The paper states its lower bound in the job count. On the constructed instances the scheduling numbers have polynomial bit length in the source graph size, so a fixed polynomial in the total bit length is absorbed by the source lower bound.",
+    "label": "Exponent sublinear in k / log k",
+    "revision": 1,
+    "title": "Exponent sublinear in k / log k under ETH"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "n^(o(k / log₂ k)) N^(O(1))",
+  "runtimeSymbols": [
+    "k",
+    "n",
+    "N"
+  ],
+  "sources": [
+    {
+      "editionId": "journal",
+      "locator": "Corollary 1, pp. 3 and 18, and §5",
+      "paperId": "hh2026-tardy-jobs",
+      "placement": "statement",
+      "role": "published lower bound and the reduction for distinct processing times"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm solves Weighted Number of Tardy Jobs on One Machine within the stated running time.",
+  "status": "established",
+  "supported": true
+}

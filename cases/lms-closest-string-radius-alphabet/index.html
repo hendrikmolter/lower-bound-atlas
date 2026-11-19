@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Closest String | Lower Bound Atlas</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header"><nav class="site-nav" aria-label="Main">
+    <a href="../../index.html" class="site-brand">Lower Bound Atlas</a>
+    <div class="nav-links"><a href="../../index.html">Problems</a><a href="../../assumptions/index.html">Hypotheses</a><a href="../../papers/index.html">Papers</a><a href="../../notation/index.html">Notation</a><a href="../../about/index.html">About &amp; guide</a></div>
+  </nav></header>
+  <main id="main-content" tabindex="-1">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../../index.html">Problems</a><span aria-hidden="true"> / </span><a href="../../problems/closest-string/index.html">Closest String</a></nav>
+    <header class="hero">
+      <h1>Closest String</h1>
+      
+    </header>
+    <nav class="param-nav" aria-label="Recorded parameterizations"><strong>Recorded parameterizations</strong><a href="../lms-closest-string-radius/index.html#radius">Radius d</a> <a href="#radius-alphabet" aria-current="location">Radius d and used alphabet size q</a></nav>
+      <section id="radius-alphabet" class="problem-box" aria-label="Problem definition"><dl>
+      <dt>Input</dt><dd>A list of strings and a Hamming radius d.</dd>
+      <dt>Parameter</dt><dd>The radius d and the number q of distinct symbols occurring in the strings.</dd>
+      <dt>Question</dt><dd>Is there a string of length L at Hamming distance at most d from every input string?</dd></dl><div class="input-restrictions"><strong>Input restrictions</strong><ul><li>All input strings have the same length L.</li></ul></div></section>
+      
+      <section id="comparisons"><h2 id="bounds">Lower bounds by hypothesis</h2>
+      <h3>Notation</h3><ul class="runtime-symbols"><li><i>N</i> — input length in bits</li><li><i>C</i> — fixed nonnegative constant</li></ul>
+      <p>When <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>=</mo><mi>d</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="text/plain">L=d+1</annotation></semantics></math>, the center must agree with each input string in at least one position.</p><article class="hypothesis-card" id="assessment-eth"><h3><a href="../../assumptions/eth/index.html">ETH</a> (historical)</h3>
+        <section class="bound-row" id="cs-eth-balanced-historical"><h4>Subexponential-time bound with a balanced alphabet</h4>
+        
+        <div class="input-restrictions"><strong>Input restrictions</strong><ul><li><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>=</mo><mi>d</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="text/plain">L=d+1</annotation></semantics></math></li><li><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mo>=</mo><mn>2</mn><mo>&#x2062;</mo><mi>d</mi><mo>+</mo><mn>3</mn></mrow><annotation encoding="text/plain">q=2d+3</annotation></semantics></math></li></ul></div>
+        <div class="excluded-time"><span>Running time excluded under ETH</span><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mrow><mrow><mi>o</mi><mrow><mo>(</mo><mi>d</mi><mo>&#x2062;</mo><mspace width="0.14em"/><msub><mi>log</mi><mn>2</mn></msub><mo>&#x2062;</mo><mi>d</mi><mo>)</mo></mrow></mrow></mrow></msup><mo>&#x2062;</mo><msup><mi>N</mi><mrow><mrow><mi>𝒪</mi><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></mrow></msup></mrow><annotation encoding="text/plain">2^(o(d log₂ d)) N^(O(1))</annotation></semantics></math></div>
+        <div class="bound-links"><div class="actions"><a href="../../bounds/lms-closest-string-radius-alphabet/cs-eth-balanced-historical/index.html">Full statement</a></div>
+    </div><ul class="bound-citations"><li><a href="https://doi.org/10.1137/16M1104834">Slightly Superexponential Parameterized Problems</a></li></ul>
+        </section>
+        
+        <details class="reader-details" data-earlier-bounds><summary>Earlier ETH bound</summary><section class="bound-row" id="cs-eth-historical" data-superseded-by="cs-eth-balanced-historical"><h4>Subexponential-time bound</h4>
+        
+        
+        <div class="excluded-time"><span>Running time excluded under ETH</span><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mrow><mrow><mi>o</mi><mrow><mo>(</mo><mi>d</mi><mo>&#x2062;</mo><mspace width="0.14em"/><msub><mi>log</mi><mn>2</mn></msub><mo>&#x2062;</mo><mi>q</mi><mo>)</mo></mrow></mrow></mrow></msup><mo>&#x2062;</mo><msup><mi>N</mi><mrow><mrow><mi>𝒪</mi><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></mrow></msup></mrow><annotation encoding="text/plain">2^(o(d log₂ q)) N^(O(1))</annotation></semantics></math></div>
+        <div class="bound-links"><div class="actions"><a href="../../bounds/lms-closest-string-radius-alphabet/cs-eth-historical/index.html">Full statement</a></div>
+    </div><ul class="bound-citations"><li><a href="https://bulletin.eatcs.org/index.php/beatcs/article/view/92">Lower bounds based on the Exponential Time Hypothesis</a></li></ul>
+        <p><a href="#cs-eth-balanced-historical">Superseding bound</a>. An algorithm on unrestricted inputs at exponent scale <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>&#x2062;</mo><mspace width="0.14em"/><msub><mi>log</mi><mn>2</mn></msub><mo>&#x2062;</mo><mi>q</mi></mrow><annotation encoding="text/plain">d log₂ q</annotation></semantics></math> would work on the promised slice at scale <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>&#x2062;</mo><mspace width="0.14em"/><msub><mi>log</mi><mn>2</mn></msub><mo>&#x2062;</mo><mi>d</mi></mrow><annotation encoding="text/plain">d log₂ d</annotation></semantics></math>, since <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mo>=</mo><mn>2</mn><mo>&#x2062;</mo><mi>d</mi><mo>+</mo><mn>3</mn></mrow><annotation encoding="text/plain">q=2d+3</annotation></semantics></math> there. The exclusion on the slice therefore implies the unrestricted exclusion with its polynomial factor unchanged.</p></section></details></article><article class="hypothesis-card" id="assessment-sh"><h3><a href="../../assumptions/sh/index.html">SH</a></h3>
+        <p>No lower bound recorded for this parameterization.</p>
+        
+        </article><article class="hypothesis-card" id="assessment-w1"><h3><a href="../../assumptions/w1/index.html">FPT ≠ W[1]</a></h3>
+        <section class="bound-row" id="cs-w1-balanced"><h4>One agreement with a balanced alphabet</h4>
+        
+        <div class="input-restrictions"><strong>Input restrictions</strong><ul><li><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>=</mo><mi>d</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="text/plain">L=d+1</annotation></semantics></math></li><li><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mo>=</mo><mn>2</mn><mo>&#x2062;</mo><mi>d</mi><mo>+</mo><mn>3</mn></mrow><annotation encoding="text/plain">q=2d+3</annotation></semantics></math></li></ul></div>
+        <div class="excluded-time"><span>Excluded running time</span><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mrow><mrow><msub><mi>o</mi><mtext>eff</mtext></msub><mrow><mo>(</mo><mi>d</mi><mo>)</mo></mrow></mrow></mrow></msup><mo>&#x2062;</mo><msup><mi>N</mi><mi>C</mi></msup></mrow><annotation encoding="text/plain">2^(o_eff(d)) N^C</annotation></semantics></math></div><p class="runtime-qualification">The nonnegative integer exponent has a computable upper bound and is effectively sublinear in d. The running time allows no additional factor depending on q.</p>
+        <p>Recovered up to a logarithmic factor in the exponent (effective little-o) · ETH target: <a href="../../bounds/lms-closest-string-radius-alphabet/cs-eth-balanced-historical/r2/index.html" aria-label="Subexponential-time bound with a balanced alphabet">Subexponential-time bound with a balanced alphabet</a>.</p><div class="bound-links"><div class="actions"><a href="../../bounds/lms-closest-string-radius-alphabet/cs-w1-balanced/index.html">Full statement</a></div>
+    <a href="../../notation/index.html#effective-little-o">Effective little-o</a></div>
+        </section>
+        
+        </article><article class="hypothesis-card" id="assessment-np_qp"><h3><a href="../../assumptions/np_qp/index.html">NP ⊈ QP</a></h3>
+        <p>No lower bound recorded for this parameterization.</p>
+        
+        </article><article class="hypothesis-card" id="assessment-kxk"><h3><a href="../../assumptions/kxk/index.html"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>×</mo><mi>k</mi></mrow><annotation encoding="text/plain">k × k</annotation></semantics></math> Clique Hypothesis</a></h3>
+        <section class="bound-row" id="cs-kxk-balanced"><h4>Subexponential-time bound with a balanced alphabet</h4>
+        
+        <div class="input-restrictions"><strong>Input restrictions</strong><ul><li><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>=</mo><mi>d</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="text/plain">L=d+1</annotation></semantics></math></li><li><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mo>=</mo><mn>2</mn><mo>&#x2062;</mo><mi>d</mi><mo>+</mo><mn>3</mn></mrow><annotation encoding="text/plain">q=2d+3</annotation></semantics></math></li></ul></div>
+        <div class="excluded-time"><span>Excluded running time</span><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mrow><mrow><mi>o</mi><mrow><mo>(</mo><mi>d</mi><mo>&#x2062;</mo><mspace width="0.14em"/><msub><mi>log</mi><mn>2</mn></msub><mo>&#x2062;</mo><mi>d</mi><mo>)</mo></mrow></mrow></mrow></msup><mo>&#x2062;</mo><msup><mi>N</mi><mrow><mrow><mi>𝒪</mi><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></mrow></msup></mrow><annotation encoding="text/plain">2^(o(d log₂ d)) N^(O(1))</annotation></semantics></math></div>
+        <p>Recovered · ETH target: <a href="../../bounds/lms-closest-string-radius-alphabet/cs-eth-balanced-historical/r2/index.html" aria-label="Subexponential-time bound with a balanced alphabet">Subexponential-time bound with a balanced alphabet</a>.</p><div class="bound-links"><div class="actions"><a href="../../bounds/lms-closest-string-radius-alphabet/cs-kxk-balanced/index.html">Full statement</a></div>
+    </div>
+        </section>
+        
+        <details class="reader-details" data-earlier-bounds><summary>Earlier k × k Clique Hypothesis bound</summary><section class="bound-row" id="cs-kxk-product" data-superseded-by="cs-kxk-balanced"><h4>Subexponential-time bound</h4>
+        
+        
+        <div class="excluded-time"><span>Excluded running time</span><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mrow><mrow><mi>o</mi><mrow><mo>(</mo><mi>d</mi><mo>&#x2062;</mo><mspace width="0.14em"/><msub><mi>log</mi><mn>2</mn></msub><mo>&#x2062;</mo><mi>q</mi><mo>)</mo></mrow></mrow></mrow></msup><mo>&#x2062;</mo><msup><mi>N</mi><mrow><mrow><mi>𝒪</mi><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></mrow></msup></mrow><annotation encoding="text/plain">2^(o(d log₂ q)) N^(O(1))</annotation></semantics></math></div>
+        <div class="bound-links"><div class="actions"><a href="../../bounds/lms-closest-string-radius-alphabet/cs-kxk-product/index.html">Full statement</a></div>
+    </div><ul class="bound-citations"><li><a href="https://doi.org/10.5281/zenodo.24088151">After ETH: the <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>×</mo><mi>k</mi></mrow><annotation encoding="text/plain">k×k</annotation></semantics></math> Clique Hypothesis</a></li><li><a href="https://doi.org/10.1007/978-3-319-21275-3">Parameterized Algorithms</a></li><li><a href="https://doi.org/10.1137/16M1104834">Slightly Superexponential Parameterized Problems</a></li></ul>
+        <p><a href="#cs-kxk-balanced">Superseding bound</a>. An algorithm on unrestricted inputs at exponent scale <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>&#x2062;</mo><mspace width="0.14em"/><msub><mi>log</mi><mn>2</mn></msub><mo>&#x2062;</mo><mi>q</mi></mrow><annotation encoding="text/plain">d log₂ q</annotation></semantics></math> would work on the promised slice at scale <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>&#x2062;</mo><mspace width="0.14em"/><msub><mi>log</mi><mn>2</mn></msub><mo>&#x2062;</mo><mi>d</mi></mrow><annotation encoding="text/plain">d log₂ d</annotation></semantics></math>, since <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mo>=</mo><mn>2</mn><mo>&#x2062;</mo><mi>d</mi><mo>+</mo><mn>3</mn></mrow><annotation encoding="text/plain">q=2d+3</annotation></semantics></math> there. The exclusion on the slice therefore implies the unrestricted exclusion with its polynomial factor unchanged.</p></section></details></article></section>
+      <details class="reader-details"><summary>Record details</summary><dl class="details-grid"><div><dt>Identifier</dt><dd>lms-closest-string-radius-alphabet</dd></div><div><dt>Revision</dt><dd>19</dd></div><div><dt>Aliases</dt><dd>LMS2011-4.5</dd></div></dl>
+      <a href="index.html">Permalink</a> · <a href="../../api/v1/cases/lms-closest-string-radius-alphabet.json">JSON record</a></details>
+  </main>
+  <footer class="site-footer">
+    <span>Release · v1.0.0</span>
+    <a href="../../api/v1/atlas.json">JSON export</a>
+    <a href="../../manifest.json">Build manifest</a>
+  </footer>
+</body>
+</html>

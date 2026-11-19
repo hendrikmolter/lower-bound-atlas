@@ -1,0 +1,57 @@
+{
+  "assessments": {
+    "w1": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unassessed"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "w1",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "feature-set-budget-w1-fixed",
+  "inputConditions": [],
+  "inputFactor": "M^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [],
+  "reader": {
+    "label": "Sublinear exponent in the feature count",
+    "revision": 1,
+    "title": "Feature Set under FPT ≠ W[1]: Sublinear exponent in the feature count"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "N^(o(k)) M^(O(1))",
+  "runtimeSymbols": [
+    "k",
+    "N",
+    "M"
+  ],
+  "sources": [
+    {
+      "editionId": "journal",
+      "locator": "Theorem 3.5 and Feature Set definition, pp. 225–227",
+      "paperId": "ccfhjkx2005",
+      "placement": "statement",
+      "role": "published candidate-space bound without a parameter factor"
+    }
+  ],
+  "statement": "Under FPT ≠ W[1], no deterministic algorithm solves the stated decision problem within the stated running time.",
+  "status": "established",
+  "supported": true
+}

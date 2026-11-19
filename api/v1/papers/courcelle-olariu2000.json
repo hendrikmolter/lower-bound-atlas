@@ -1,0 +1,22 @@
+{
+  "authors": [
+    "Bruno Courcelle",
+    "Stephan Olariu"
+  ],
+  "editions": [
+    {
+      "access": "Author-hosted copy of the published article inspected for Theorem 4.1 and Proposition 4.3.",
+      "doi": "10.1016/S0166-218X(99)00184-5",
+      "id": "journal",
+      "kind": "journal",
+      "label": "Discrete Applied Mathematics 101(1–3) (2000), 77–114",
+      "openUrl": "https://www.labri.fr/perso/courcell/CoursMaster/BC-Olariu%282000%29.pdf",
+      "preferredUrl": "https://doi.org/10.1016/S0166-218X(99)00184-5",
+      "primaryUrl": "https://doi.org/10.1016/S0166-218X(99)00184-5"
+    }
+  ],
+  "id": "courcelle-olariu2000",
+  "preferredEditionId": "journal",
+  "preferredUrl": "https://doi.org/10.1016/S0166-218X(99)00184-5",
+  "title": "Upper Bounds to the Clique Width of Graphs"
+}

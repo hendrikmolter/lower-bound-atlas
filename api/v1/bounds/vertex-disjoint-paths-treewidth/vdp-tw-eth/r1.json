@@ -1,0 +1,48 @@
+{
+  "assessments": {},
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "vdp-tw-eth",
+  "inputConditions": [],
+  "inputFactor": "B^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [],
+  "reader": {
+    "explanation": "The sources use a polynomial factor in graph order. The reductions use explicit instances with distinct endpoints, so their demand lists and complete encodings have length polynomial in graph order.",
+    "label": "Bound in the treewidth",
+    "revision": 1
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "2^(o(t log₂ t)) B^(O(1))",
+  "runtimeSymbols": [
+    "t",
+    "B"
+  ],
+  "sources": [
+    {
+      "editionId": "journal",
+      "locator": "Section 5, Theorem 5.4, pp. 696–697",
+      "paperId": "lms2018",
+      "placement": "statement",
+      "role": "published reduction"
+    },
+    {
+      "editionId": "bulletin",
+      "locator": "Theorem 6.3, PDF p. 22",
+      "paperId": "lms2011",
+      "placement": "statement",
+      "role": "published lower bound"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm decides Vertex-Disjoint Paths within the stated running time.",
+  "status": "established",
+  "supported": true
+}

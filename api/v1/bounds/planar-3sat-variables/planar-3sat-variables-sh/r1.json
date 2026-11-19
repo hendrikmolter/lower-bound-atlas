@@ -1,0 +1,72 @@
+{
+  "assessments": {
+    "eth": {
+      "converse": {
+        "effectiveStatus": "unknown",
+        "evidence": [],
+        "status": "unknown"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unknown"
+    },
+    "sh": {
+      "converse": {
+        "effectiveStatus": "unknown",
+        "evidence": [],
+        "status": "unknown"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unknown"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "sh",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "planar-3sat-variables-sh",
+  "inputConditions": [],
+  "inputFactor": "B^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [
+    "The exclusion holds separately for every fixed 0 < ε < 1/2."
+  ],
+  "reader": {
+    "label": "Fixed-power savings",
+    "revision": 1,
+    "title": "Fixed-power savings under SH"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "2^(O(n^(1/2−ε))) B^(O(1))",
+  "runtimeSymbols": [
+    "n",
+    "B"
+  ],
+  "sources": [
+    {
+      "editionId": "v2",
+      "locator": "Table 1, Planar 3-SAT row",
+      "paperId": "sh26",
+      "placement": "statement",
+      "role": "benchmark"
+    }
+  ],
+  "statement": "Under SH, no deterministic algorithm solves Planar 3SAT within the stated running time.",
+  "status": "established",
+  "supported": true
+}

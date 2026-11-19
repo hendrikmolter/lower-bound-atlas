@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Euclidean Traveling Salesman | Lower Bound Atlas</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header"><nav class="site-nav" aria-label="Main">
+    <a href="../../index.html" class="site-brand">Lower Bound Atlas</a>
+    <div class="nav-links"><a href="../../index.html">Problems</a><a href="../../assumptions/index.html">Hypotheses</a><a href="../../papers/index.html">Papers</a><a href="../../notation/index.html">Notation</a><a href="../../about/index.html">About &amp; guide</a></div>
+  </nav></header>
+  <main id="main-content" tabindex="-1">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../../index.html">Problems</a><span aria-hidden="true"> / </span><a href="../../problems/euclidean-traveling-salesman/index.html">Euclidean Traveling Salesman</a></nav>
+    <header class="hero">
+      <h1>Euclidean Traveling Salesman</h1>
+      
+    </header>
+    <nav class="param-nav" aria-label="Recorded parameterizations"><strong>Recorded parameterizations</strong><a href="#euclidean-traveling-salesman-points" aria-current="location">Number of points</a></nav>
+      <section id="euclidean-traveling-salesman-points" class="problem-box" aria-label="Problem definition"><dl>
+      <dt>Input</dt><dd>A set P of n points with explicitly encoded rational coordinates in fixed dimension d and a nonnegative rational threshold T.</dd>
+      <dt>Parameter</dt><dd>The number of input points n.</dd>
+      <dt>Question</dt><dd>Is there a cycle visiting every point of total Euclidean length at most T?</dd></dl></section>
+      
+      <section id="comparisons"><h2 id="bounds">Lower bounds by hypothesis</h2>
+      <h3>Notation</h3><ul class="runtime-symbols"><li><i>B</i> — complete explicit binary input length</li><li><i>d</i> — the fixed dimension</li></ul>
+      <article class="hypothesis-card" id="assessment-eth"><h3><a href="../../assumptions/eth/index.html">ETH</a> (historical)</h3>
+        <section class="bound-row" id="euclidean-traveling-salesman-points-eth"><h4>Dimension-dependent subexponential bound</h4>
+        
+        <div class="input-restrictions"><strong>Input restrictions</strong><ul><li>The point coordinates are integers and <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo>=</mo><mi>n</mi></mrow><annotation encoding="text/plain">T=n</annotation></semantics></math>.</li></ul></div>
+        <div class="excluded-time"><span>Running time excluded under ETH</span><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mrow><mrow><mi>o</mi><mrow><mo>(</mo><msup><mi>n</mi><mrow><mn>1</mn><mo>−</mo><mn>1</mn><mo>/</mo><mi>d</mi></mrow></msup><mo>)</mo></mrow></mrow></mrow></msup><mo>&#x2062;</mo><msup><mi>B</mi><mrow><mrow><mi>𝒪</mi><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></mrow></msup></mrow><annotation encoding="text/plain">2^(o(n^(1−1/d))) B^(O(1))</annotation></semantics></math></div><p class="runtime-qualification">Separately for each fixed integer <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>≥</mo><mn>2</mn></mrow><annotation encoding="text/plain">d ≥ 2</annotation></semantics></math>.</p>
+        <div class="bound-links"><div class="actions"><a href="../../bounds/euclidean-traveling-salesman-points/euclidean-traveling-salesman-points-eth/index.html">Full statement</a></div>
+    </div><ul class="bound-citations"><li><a href="https://doi.org/10.1137/20M1320870">A Framework for Exponential-Time-Hypothesis–Tight Algorithms and Lower Bounds in Geometric Intersection Graphs</a></li></ul>
+        </section>
+        
+        </article><article class="hypothesis-card" id="assessment-sh"><h3><a href="../../assumptions/sh/index.html">SH</a></h3>
+        <section class="bound-row" id="euclidean-traveling-salesman-points-sh"><h4>Fixed-power exclusion</h4>
+        
+        <div class="input-restrictions"><strong>Input restrictions</strong><ul><li>The point coordinates are integers and <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo>=</mo><mi>n</mi></mrow><annotation encoding="text/plain">T=n</annotation></semantics></math>.</li></ul></div>
+        <div class="excluded-time"><span>Excluded running time</span><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mrow><mrow><mi>𝒪</mi><mrow><mo>(</mo><msup><mi>n</mi><mrow><mn>1</mn><mo>−</mo><mn>1</mn><mo>/</mo><mi>d</mi><mo>−</mo><mi>ε</mi></mrow></msup><mo>)</mo></mrow></mrow></mrow></msup><mo>&#x2062;</mo><msup><mi>B</mi><mrow><mrow><mi>𝒪</mi><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></mrow></msup></mrow><annotation encoding="text/plain">2^(O(n^(1−1/d−ε))) B^(O(1))</annotation></semantics></math></div><p class="runtime-qualification">Separately for each fixed integer <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>≥</mo><mn>2</mn></mrow><annotation encoding="text/plain">d≥2</annotation></semantics></math> and fixed <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>&lt;</mo><mi>ε</mi><mo>&lt;</mo><mn>1</mn><mo>−</mo><mn>1</mn><mo>/</mo><mi>d</mi></mrow><annotation encoding="text/plain">0&lt;ε&lt;1−1/d</annotation></semantics></math>.</p>
+        <p>Exponent degree recovered · ETH target: <a href="../../bounds/euclidean-traveling-salesman-points/euclidean-traveling-salesman-points-eth/r1/index.html" aria-label="Dimension-dependent subexponential bound">Dimension-dependent subexponential bound</a>.</p><div class="bound-links"><div class="actions"><a href="../../bounds/euclidean-traveling-salesman-points/euclidean-traveling-salesman-points-sh/index.html">Full statement</a></div>
+    </div><ul class="bound-citations"><li><a href="https://arxiv.org/abs/2611.02650v2">ETH is Dead, Long Live SH</a></li></ul>
+        </section>
+        
+        </article><article class="hypothesis-card" id="assessment-w1"><h3><a href="../../assumptions/w1/index.html">FPT ≠ W[1]</a></h3>
+        <p>No lower bound recorded for this parameterization.</p>
+        
+        </article><article class="hypothesis-card" id="assessment-np_qp"><h3><a href="../../assumptions/np_qp/index.html">NP ⊈ QP</a></h3>
+        <p>No lower bound recorded for this parameterization.</p>
+        
+        </article><article class="hypothesis-card" id="assessment-kxk"><h3><a href="../../assumptions/kxk/index.html"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>×</mo><mi>k</mi></mrow><annotation encoding="text/plain">k × k</annotation></semantics></math> Clique Hypothesis</a></h3>
+        <p>No lower bound recorded for this parameterization.</p>
+        
+        </article></section>
+      <details class="reader-details"><summary>Record details</summary><dl class="details-grid"><div><dt>Identifier</dt><dd>euclidean-traveling-salesman-points</dd></div><div><dt>Revision</dt><dd>3</dd></div><div><dt>Aliases</dt><dd>survey-sh14</dd></div></dl>
+      <a href="index.html">Permalink</a> · <a href="../../api/v1/cases/euclidean-traveling-salesman-points.json">JSON record</a></details>
+  </main>
+  <footer class="site-footer">
+    <span>Release · v1.0.0</span>
+    <a href="../../api/v1/atlas.json">JSON export</a>
+    <a href="../../manifest.json">Build manifest</a>
+  </footer>
+</body>
+</html>

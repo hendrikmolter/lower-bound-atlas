@@ -1,0 +1,21 @@
+{
+  "authors": [
+    "Richard E. Stearns",
+    "Harry B. Hunt III"
+  ],
+  "editions": [
+    {
+      "access": "Published text checked for Definition 2.1 (p. 210) and the Satisfiability Hypothesis (§2, p. 213). The current normalized convention is stated in arXiv:2611.02650v2.",
+      "doi": "10.1007/BF02090776",
+      "id": "journal",
+      "kind": "journal",
+      "label": "Mathematical Systems Theory 23(4) (1990), 209–225",
+      "preferredUrl": "https://doi.org/10.1007/BF02090776",
+      "primaryUrl": "https://doi.org/10.1007/BF02090776"
+    }
+  ],
+  "id": "sh1990",
+  "preferredEditionId": "journal",
+  "preferredUrl": "https://doi.org/10.1007/BF02090776",
+  "title": "Power indices and easier hard problems"
+}

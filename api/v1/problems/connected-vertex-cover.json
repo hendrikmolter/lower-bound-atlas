@@ -1,0 +1,10 @@
+{
+  "id": "connected-vertex-cover",
+  "input": "A finite simple undirected graph G and a nonnegative integer budget k.",
+  "name": "Connected Vertex Cover",
+  "parameterizations": [
+    "connected-vertex-cover-budget"
+  ],
+  "question": "Is there a vertex cover of size at most k inducing a connected subgraph?",
+  "revision": 1
+}

@@ -1,0 +1,27 @@
+{
+  "authors": [
+    "Marek Cygan",
+    "Fedor V. Fomin",
+    "Alexander Golovnev",
+    "Alexander S. Kulikov",
+    "Ivan Mihajlin",
+    "Jakub Pachocki",
+    "Arkadiusz Socała"
+  ],
+  "editions": [
+    {
+      "access": "Published-layout text inspected for Theorems 1.1 and 4.1.",
+      "doi": "10.1145/3051094",
+      "id": "journal",
+      "kind": "journal",
+      "label": "Journal of the ACM 64(3) (2017), Article 18",
+      "openUrl": "https://fedorvf.github.io/articles/2017/2017d.pdf",
+      "preferredUrl": "https://doi.org/10.1145/3051094",
+      "primaryUrl": "https://doi.org/10.1145/3051094"
+    }
+  ],
+  "id": "cygan-et-al2017-embedding",
+  "preferredEditionId": "journal",
+  "preferredUrl": "https://doi.org/10.1145/3051094",
+  "title": "Tight Lower Bounds on Graph Embedding Problems"
+}

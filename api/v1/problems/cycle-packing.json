@@ -1,0 +1,11 @@
+{
+  "id": "cycle-packing",
+  "input": "A finite simple undirected graph G and a nonnegative integer r.",
+  "name": "Cycle Packing",
+  "parameterizations": [
+    "cycle-packing-treewidth",
+    "cycle-packing-supplied-pathwidth"
+  ],
+  "question": "Does G contain at least r pairwise vertex-disjoint cycles?",
+  "revision": 1
+}

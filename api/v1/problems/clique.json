@@ -1,0 +1,11 @@
+{
+  "id": "clique",
+  "input": "A finite simple undirected graph G and a nonnegative integer k.",
+  "name": "Clique",
+  "parameterizations": [
+    "clique-order",
+    "clique-budget"
+  ],
+  "question": "Does G contain at least k pairwise adjacent vertices?",
+  "revision": 1
+}

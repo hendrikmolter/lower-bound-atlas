@@ -1,0 +1,19 @@
+{
+  "applicable": true,
+  "date": "2026-11-18",
+  "evidence": "evidence/clique-literature-equivalences.md",
+  "id": "clique-order-eth-equivalence-review",
+  "independent": true,
+  "label": "Agent verified",
+  "object": {
+    "caseId": "clique-order",
+    "id": "clique-order-eth",
+    "revision": 2,
+    "type": "bound"
+  },
+  "reviewer": "Codex parent agent",
+  "scope": "Both directions for Uniform ETH and the little-o exclusion in graph order.",
+  "stale": false,
+  "type": "agent",
+  "verdict": "verified"
+}

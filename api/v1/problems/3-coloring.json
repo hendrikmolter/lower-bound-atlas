@@ -1,0 +1,16 @@
+{
+  "id": "3-coloring",
+  "input": "A graph G.",
+  "name": "3-Coloring",
+  "parameterizations": [
+    "lms-3color-order"
+  ],
+  "question": "Can the vertices of G be colored with at most three colors so that adjacent vertices have different colors?",
+  "restrictionOf": [
+    {
+      "condition": "color budget ℓ = 3",
+      "problemId": "chromatic-number"
+    }
+  ],
+  "revision": 1
+}

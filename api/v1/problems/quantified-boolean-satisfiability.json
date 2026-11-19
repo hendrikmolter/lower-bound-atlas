@@ -1,0 +1,10 @@
+{
+  "id": "quantified-boolean-satisfiability",
+  "input": "A closed prenex Boolean formula with q alternating quantifier blocks, for a fixed q≥1.",
+  "name": "Quantified Boolean satisfiability",
+  "parameterizations": [
+    "qbf-fixed-block-width"
+  ],
+  "question": "Is the quantified formula true?",
+  "revision": 1
+}

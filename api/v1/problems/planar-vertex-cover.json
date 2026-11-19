@@ -1,0 +1,17 @@
+{
+  "id": "planar-vertex-cover",
+  "input": "A finite, simple, undirected, unweighted graph G that is planar and a nonnegative integer k.",
+  "name": "Planar Vertex Cover",
+  "parameterizations": [
+    "planar-vertex-cover-order",
+    "planar-vertex-cover-budget"
+  ],
+  "question": "Does G have a set of at most k vertices that includes an endpoint of every edge?",
+  "restrictionOf": [
+    {
+      "condition": "G is planar",
+      "problemId": "vertex-cover"
+    }
+  ],
+  "revision": 1
+}

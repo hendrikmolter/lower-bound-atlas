@@ -1,0 +1,19 @@
+{
+  "applicable": true,
+  "date": "2026-11-18",
+  "evidence": "evidence/current-equivalences-independent.md",
+  "id": "ds-order-eth-equivalence-review",
+  "independent": true,
+  "label": "Agent verified",
+  "object": {
+    "caseId": "dominating-set-order",
+    "id": "ds-order-eth",
+    "revision": 2,
+    "type": "bound"
+  },
+  "reviewer": "Codex parent agent",
+  "scope": "The published correspondence uses the number of vertices and the single-algorithm convention.",
+  "stale": false,
+  "type": "agent",
+  "verdict": "verified"
+}

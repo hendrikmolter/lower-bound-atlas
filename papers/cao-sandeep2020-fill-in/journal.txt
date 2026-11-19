@@ -1,0 +1,1 @@
+Yixin Cao, R. B. Sandeep. Minimum Fill-In: Inapproximability and Almost Tight Lower Bounds. Information and Computation 271 (2020), Article 104514. https://doi.org/10.1016/j.ic.2020.104514

@@ -1,0 +1,10 @@
+{
+  "id": "hamiltonian-path",
+  "input": "A finite simple undirected graph G.",
+  "name": "Hamiltonian Path",
+  "parameterizations": [
+    "hamiltonian-path-order"
+  ],
+  "question": "Does G contain a simple path through all vertices?",
+  "revision": 1
+}

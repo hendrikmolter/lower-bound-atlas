@@ -1,0 +1,1 @@
+Atlas. The 3-Coloring bound implies the Satisfiability Hypothesis · Theorem 1. three-coloring-sh-converse, theorem color-sh-converse, proof revision 1. Edition v1.0.0, Git commit 5c6c72747978446d3f7009e6a5cf32d496b1d5ac. https://github.com/hendrikmolter/lower-bound-atlas/blob/5c6c72747978446d3f7009e6a5cf32d496b1d5ac/proofs/three-coloring-sh-converse.tex

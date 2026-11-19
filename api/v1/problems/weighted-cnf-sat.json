@@ -1,0 +1,10 @@
+{
+  "id": "weighted-cnf-sat",
+  "input": "An explicit CNF formula over a declared finite variable set and a nonnegative integer k.",
+  "name": "Weighted CNF SAT",
+  "parameterizations": [
+    "weighted-cnf-sat-weight"
+  ],
+  "question": "Can exactly k variables be set to true in a satisfying assignment?",
+  "revision": 1
+}

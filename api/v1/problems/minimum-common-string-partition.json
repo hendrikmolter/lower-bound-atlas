@@ -1,0 +1,10 @@
+{
+  "id": "minimum-common-string-partition",
+  "input": "Two explicit strings of the same length n over a common alphabet and a nonnegative integer block budget b.",
+  "name": "Minimum Common String Partition",
+  "parameterizations": [
+    "minimum-common-string-partition-length"
+  ],
+  "question": "Can the first string be partitioned into at most b nonempty contiguous blocks that can be permuted and concatenated to form the second string?",
+  "revision": 1
+}

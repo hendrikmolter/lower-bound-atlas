@@ -1,0 +1,241 @@
+{
+  "aliases": [
+    "minimum-k-cut-component-count"
+  ],
+  "bounds": [
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "effectiveStatus": "unknown",
+            "evidence": [],
+            "status": "unknown"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unknown"
+        },
+        "sh": {
+          "converse": {
+            "effectiveStatus": "unknown",
+            "evidence": [],
+            "status": "unknown"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unknown"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "minimum-k-cut-components-eth",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [
+        "The parameter factor f is an arbitrary computable function."
+      ],
+      "reader": {
+        "label": "Exponent in number of required components",
+        "revision": 1,
+        "title": "Exponent in number of required components under ETH"
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "f(k) n^(o(k)) B^(O(1))",
+      "runtimeSymbols": [
+        "k",
+        "n",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "focs",
+          "locator": "Introduction, p. 798",
+          "paperId": "lss2022-min-k-cut",
+          "placement": "statement",
+          "role": "historical exact lower bound"
+        },
+        {
+          "editionId": "journal",
+          "locator": "Theorem 4.3 and its k-Cut proof, pp. 228–230",
+          "paperId": "ccfhjkx2005",
+          "placement": "statement",
+          "role": "earlier weighted k-Cut lower bound and Clique reduction"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm solves Minimum k-Cut within the stated running time.",
+      "status": "established",
+      "supported": true
+    },
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "effectiveStatus": "unknown",
+            "evidence": [],
+            "status": "unknown"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unknown"
+        },
+        "sh": {
+          "converse": {
+            "effectiveStatus": "unknown",
+            "evidence": [],
+            "status": "unknown"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unknown"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "w1",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "hardnessBaseline": "W[1]",
+      "id": "minimum-k-cut-components-w1",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [
+        "The parameter factor f is an arbitrary computable function."
+      ],
+      "reader": {
+        "label": "Fixed-parameter tractability",
+        "revision": 1,
+        "title": "Fixed-parameter tractability under FPT ≠ W[1]"
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "f(k) B^(O(1))",
+      "runtimeSymbols": [
+        "k",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "journal",
+          "locator": "W[1]-hardness discussion, p. 228, and the cited Clique reduction in the proof of Theorem 4.3, p. 230",
+          "paperId": "ccfhjkx2005",
+          "placement": "statement",
+          "role": "weighted k-Cut W[1]-hardness"
+        }
+      ],
+      "statement": "Under FPT ≠ W[1], no deterministic algorithm solves Minimum k-Cut within the stated running time.",
+      "status": "established",
+      "supported": true
+    }
+  ],
+  "coverage": "Published lower bounds for number of required components.",
+  "encoding": "A finite simple undirected graph G with nonnegative integer edge weights and a weight threshold b in binary.",
+  "id": "minimum-k-cut-components",
+  "inputConditions": [],
+  "kind": "lower-bound-case",
+  "parameter": "Number of required components.",
+  "problemDefinitionHash": "4d926888fe2b4cca663bf6f36f5e258cae5f126ba52761b01b91a8fc6b600440",
+  "problemId": "minimum-k-cut",
+  "problemRevision": 1,
+  "reader": {
+    "anchor": "number-of-required-components",
+    "parameter": "Number of required components.",
+    "parameterLabel": "Number of required components",
+    "parameterSymbols": [
+      {
+        "meaning": "required number of connected components",
+        "symbol": "k"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "number of vertices of the input graph",
+        "symbol": "n"
+      },
+      {
+        "meaning": "complete explicit binary input length",
+        "symbol": "B"
+      }
+    ]
+  },
+  "recoveryComparisons": [
+    {
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "minimum-k-cut-components-eth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "np_qp",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "minimum-k-cut-components-eth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "minimum-k-cut-components-eth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "minimum-k-cut-components-eth",
+        "revision": 1
+      }
+    }
+  ],
+  "resolutions": [],
+  "revision": 3,
+  "task": "Can edges of total weight at most b be deleted so that at least k connected components remain?",
+  "title": "Minimum k-Cut by number of required components",
+  "variant": "Minimum k-Cut"
+}

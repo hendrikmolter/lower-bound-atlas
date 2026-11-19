@@ -1,0 +1,62 @@
+{
+  "assessments": {
+    "sh": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unassessed"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "sh",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "euclidean-traveling-salesman-points-sh",
+  "inputConditions": [
+    "integer-grid"
+  ],
+  "inputFactor": "B^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [
+    "Separately for each fixed integer d≥2 and fixed 0<ε<1−1/d."
+  ],
+  "reader": {
+    "explanation": "The original source reduction produces integer-grid inputs with threshold n.",
+    "label": "Fixed-power exclusion",
+    "revision": 1,
+    "title": "Euclidean Traveling Salesman under SH: Fixed-power exclusion"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "2^(O(n^(1−1/d−ε))) B^(O(1))",
+  "runtimeSymbols": [
+    "n",
+    "d",
+    "B"
+  ],
+  "sources": [
+    {
+      "editionId": "v2",
+      "locator": "Table 1, Euclidean TSP row and note b",
+      "paperId": "sh26",
+      "placement": "statement",
+      "role": "conditional lower bound"
+    }
+  ],
+  "statement": "Under SH, no deterministic algorithm solves the stated decision problem within the stated running time.",
+  "status": "established",
+  "supported": true
+}

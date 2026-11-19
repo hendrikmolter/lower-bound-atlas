@@ -1,0 +1,33 @@
+{
+  "currentRevision": 1,
+  "id": "dominating-set-order-sh",
+  "revisions": [
+    {
+      "authorship": {
+        "authors": [
+          "Atlas"
+        ],
+        "kind": "ai",
+        "origin": "atlas"
+      },
+      "dependencies": [],
+      "dependencyCoverage": "complete",
+      "pdf": "proofs/dominating-set-order-sh.pdf",
+      "revision": 1,
+      "source": "proofs/dominating-set-order-sh.tex",
+      "theorems": [
+        {
+          "destination": "dominating-set-order-sh",
+          "label": "dominating-set-order-sh",
+          "number": "1",
+          "reviewIds": [
+            "dominating-set-order-sh-review"
+          ],
+          "statement": "SH is equivalent to the following exclusion: for every fixed 0 < ε < 1, no deterministic Dominating Set algorithm runs in 2^(O(n^(1−ε))) B^(O(1)) time, where n counts vertices and B is the complete binary input length.",
+          "supports": true
+        }
+      ]
+    }
+  ],
+  "title": "Dominating Set by number of vertices is equivalent to the Satisfiability Hypothesis"
+}

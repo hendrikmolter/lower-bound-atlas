@@ -1,0 +1,29 @@
+{
+  "authors": [
+    "Marek Cygan",
+    "Fedor V. Fomin",
+    "Łukasz Kowalik",
+    "Daniel Lokshtanov",
+    "Dániel Marx",
+    "Marcin Pilipczuk",
+    "Michał Pilipczuk",
+    "Saket Saurabh"
+  ],
+  "editions": [
+    {
+      "access": "Springer lists the 2015 first edition. The open PDF is the authors’ copy.",
+      "doi": "10.1007/978-3-319-21275-3",
+      "editionNumber": 1,
+      "id": "book",
+      "kind": "book",
+      "label": "Springer Cham, 1st edition (2015)",
+      "openUrl": "https://parameterized-algorithms.mimuw.edu.pl/parameterized-algorithms.pdf",
+      "preferredUrl": "https://doi.org/10.1007/978-3-319-21275-3",
+      "primaryUrl": "https://doi.org/10.1007/978-3-319-21275-3"
+    }
+  ],
+  "id": "cygan2015",
+  "preferredEditionId": "book",
+  "preferredUrl": "https://doi.org/10.1007/978-3-319-21275-3",
+  "title": "Parameterized Algorithms"
+}

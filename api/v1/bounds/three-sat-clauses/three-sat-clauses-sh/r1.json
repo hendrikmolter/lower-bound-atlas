@@ -1,0 +1,59 @@
+{
+  "assessments": {
+    "sh": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unassessed"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "sh",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "three-sat-clauses-sh",
+  "inputConditions": [],
+  "inputFactor": "B^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [
+    "For each fixed 0<ε<1."
+  ],
+  "reader": {
+    "explanation": "Deleting unused variables gives at most 3m occurring variables. The reverse bound uses the sparse clause-count comparison in Corollary 2.3.",
+    "label": "Fixed-power exclusion",
+    "revision": 1,
+    "title": "3SAT under SH: Fixed-power exclusion"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "2^(O(m^(1−ε))) B^(O(1))",
+  "runtimeSymbols": [
+    "m",
+    "B"
+  ],
+  "sources": [
+    {
+      "editionId": "v2",
+      "locator": "Corollary 2.3 and Theorem 2.4",
+      "paperId": "sh26",
+      "placement": "statement",
+      "role": "conditional lower bound"
+    }
+  ],
+  "statement": "Under SH, no deterministic algorithm solves the stated decision problem within the stated running time.",
+  "status": "established",
+  "supported": true
+}

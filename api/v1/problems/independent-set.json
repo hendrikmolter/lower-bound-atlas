@@ -1,0 +1,16 @@
+{
+  "id": "independent-set",
+  "input": "A finite, simple, undirected, unweighted graph G and a nonnegative integer k.",
+  "name": "Independent Set",
+  "parameterizations": [
+    "independent-set-linear-rank-width",
+    "independent-set-order",
+    "independent-set-rank-width",
+    "independent-set-budget",
+    "independent-set-treewidth",
+    "independent-set-supplied-rank-decomposition",
+    "independent-set-supplied-linear-layout"
+  ],
+  "question": "Does G have at least k pairwise nonadjacent vertices?",
+  "revision": 1
+}

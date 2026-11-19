@@ -1,0 +1,1 @@
+Klaus Jansen, Stefan Kratsch, Dániel Marx, Ildikó Schlotter. Bin Packing with Fixed Number of Bins Revisited. Journal of Computer and System Sciences 79(1) (2013), pp. 39–49. https://doi.org/10.1016/j.jcss.2012.04.004

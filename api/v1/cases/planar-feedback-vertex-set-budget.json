@@ -1,0 +1,232 @@
+{
+  "aliases": [],
+  "bounds": [
+    {
+      "assessments": {},
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "planar-feedback-vertex-set-budget-eth",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "label": "Square-root exponent in the solution budget",
+        "revision": 1
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "2^(o(k^(1/2))) B^(O(1))",
+      "runtimeSymbols": [
+        "k",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "book",
+          "locator": "Theorem 14.11, p. 477",
+          "paperId": "cygan2015",
+          "placement": "statement",
+          "role": "lower-bound statement"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm solves Planar Feedback Vertex Set within the stated running time.",
+      "status": "established",
+      "supported": true
+    },
+    {
+      "assessments": {},
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "sh",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "planar-feedback-vertex-set-budget-sh",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [
+        "Separately for each fixed 0 < ε < 1/2."
+      ],
+      "reader": {
+        "label": "Every fixed power below one half",
+        "revision": 1
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "2^(O(k^(1/2−ε))) B^(O(1))",
+      "runtimeSymbols": [
+        "k",
+        "B",
+        "ε"
+      ],
+      "sources": [
+        {
+          "editionId": "oct30",
+          "locator": "Table 1, Weak ETH row",
+          "paperId": "szeider2026",
+          "placement": "statement",
+          "role": "lower-bound statement"
+        }
+      ],
+      "statement": "Under SH, no deterministic algorithm solves Planar Feedback Vertex Set within the stated running time.",
+      "status": "established",
+      "supported": true
+    }
+  ],
+  "coverage": "Literature bounds.",
+  "encoding": "An explicitly encoded finite simple undirected planar graph G and a nonnegative integer k.",
+  "id": "planar-feedback-vertex-set-budget",
+  "inputConditions": [],
+  "kind": "lower-bound-case",
+  "parameter": "The deletion budget k.",
+  "problemDefinitionHash": "ef0e8f626cc73883c5794764be68f646c8b4477b44be5da4b885717787f97e70",
+  "problemId": "planar-feedback-vertex-set",
+  "problemRevision": 1,
+  "reader": {
+    "anchor": "budget",
+    "boundContext": "The deletion budget k. Here B denotes complete input length in bits, ε denotes fixed exponent loss.",
+    "parameter": "The deletion budget k.",
+    "parameterLabel": "Deletion budget",
+    "parameterSymbols": [
+      {
+        "meaning": "deletion budget",
+        "symbol": "k"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "complete input length in bits",
+        "symbol": "B"
+      },
+      {
+        "meaning": "fixed exponent loss",
+        "symbol": "ε"
+      }
+    ]
+  },
+  "recoveryAssessments": [
+    {
+      "comparison": "The SH bound excludes every fixed positive power below one half in the exponent of the same parameter.",
+      "effective": false,
+      "evidence": [
+        {
+          "editionId": "book",
+          "locator": "Theorem 14.11, p. 477",
+          "paperId": "cygan2015",
+          "placement": "statement",
+          "role": "lower-bound statement"
+        },
+        {
+          "editionId": "oct30",
+          "locator": "Table 1, Weak ETH row",
+          "paperId": "szeider2026",
+          "placement": "statement",
+          "role": "lower-bound statement"
+        }
+      ],
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "recoveredScale": "k^(1/2−ε)",
+      "recovery": {
+        "id": "planar-feedback-vertex-set-budget-sh",
+        "revision": 1
+      },
+      "scale": "degree",
+      "target": {
+        "id": "planar-feedback-vertex-set-budget-eth",
+        "revision": 1
+      },
+      "targetScale": "k^(1/2)"
+    }
+  ],
+  "recoveryComparisons": [
+    {
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "planar-feedback-vertex-set-budget-eth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "np_qp",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "planar-feedback-vertex-set-budget-eth",
+        "revision": 1
+      }
+    },
+    {
+      "comparison": "The SH bound excludes every fixed positive power below one half in the exponent of the same parameter.",
+      "effective": false,
+      "evidence": [
+        {
+          "editionId": "book",
+          "locator": "Theorem 14.11, p. 477",
+          "paperId": "cygan2015",
+          "placement": "statement",
+          "role": "lower-bound statement"
+        },
+        {
+          "editionId": "oct30",
+          "locator": "Table 1, Weak ETH row",
+          "paperId": "szeider2026",
+          "placement": "statement",
+          "role": "lower-bound statement"
+        }
+      ],
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "recoveredScale": "k^(1/2−ε)",
+      "recovery": {
+        "id": "planar-feedback-vertex-set-budget-sh",
+        "revision": 1
+      },
+      "scale": "degree",
+      "status": "degree",
+      "target": {
+        "id": "planar-feedback-vertex-set-budget-eth",
+        "revision": 1
+      },
+      "targetScale": "k^(1/2)"
+    },
+    {
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "planar-feedback-vertex-set-budget-eth",
+        "revision": 1
+      }
+    }
+  ],
+  "resolutions": [],
+  "revision": 1,
+  "task": "Can at most k vertices be deleted to make G acyclic?",
+  "title": "Planar Feedback Vertex Set by deletion budget",
+  "variant": "Planar Feedback Vertex Set"
+}

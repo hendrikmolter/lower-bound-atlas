@@ -1,0 +1,1 @@
+Mark de Berg, Hans L. Bodlaender, Sándor Kisfaludi-Bak, Dániel Marx, Tom C. van der Zanden. A Framework for Exponential-Time-Hypothesis–Tight Algorithms and Lower Bounds in Geometric Intersection Graphs. SIAM Journal on Computing 49(6) (2020), pp. 1291–1331. https://doi.org/10.1137/20M1320870

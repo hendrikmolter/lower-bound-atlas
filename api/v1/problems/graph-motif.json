@@ -1,0 +1,10 @@
+{
+  "id": "graph-motif",
+  "input": "An explicitly encoded finite simple undirected graph G with a color on each vertex, and a multiset M of colors.",
+  "name": "Graph Motif",
+  "parameterizations": [
+    "graph-motif-order"
+  ],
+  "question": "Is there a set of vertices that induces a connected subgraph and whose colors, counted with multiplicity, form M?",
+  "revision": 1
+}

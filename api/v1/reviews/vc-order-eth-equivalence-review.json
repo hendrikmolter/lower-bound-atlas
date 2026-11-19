@@ -1,0 +1,19 @@
+{
+  "applicable": true,
+  "date": "2026-11-18",
+  "evidence": "evidence/current-equivalences-independent.md",
+  "id": "vc-order-eth-equivalence-review",
+  "independent": true,
+  "label": "Agent verified",
+  "object": {
+    "caseId": "vertex-cover-order",
+    "id": "vc-order-eth",
+    "revision": 2,
+    "type": "bound"
+  },
+  "reviewer": "Codex parent agent",
+  "scope": "The two reductions preserve ordinary subexponential time by graph order and SAT variable count.",
+  "stale": false,
+  "type": "agent",
+  "verdict": "verified"
+}

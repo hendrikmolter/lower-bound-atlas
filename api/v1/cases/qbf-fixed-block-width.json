@@ -1,0 +1,173 @@
+{
+  "aliases": [
+    "QBF",
+    "QSAT"
+  ],
+  "bounds": [
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unassessed"
+        },
+        "sh": {
+          "converse": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unassessed"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "qbf-eth-primal-treewidth",
+      "inputConditions": [],
+      "inputFactor": "n^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [
+        "For each fixed integer q ≥ 1."
+      ],
+      "reader": {
+        "explanation": "The source treats the matrix as a set of clauses or terms and uses positive-rate variable-3SAT ETH. The polynomial factor counts the variables in the matrix.",
+        "label": "Tower bound at fixed quantifier depth",
+        "revision": 1
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "T(q,o(t)) n^(O(1))",
+      "runtimeSymbols": [
+        "q",
+        "t",
+        "n",
+        "T(q,x)"
+      ],
+      "sources": [
+        {
+          "editionId": "proceedings",
+          "locator": "Theorem 13, proceedings pp. 417 and 421 (PDF pp. 8 and 12)",
+          "paperId": "fhp2020",
+          "placement": "statement",
+          "role": "benchmark"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm decides Quantified Boolean satisfiability within the stated running time.",
+      "status": "established",
+      "supported": true
+    }
+  ],
+  "coverage": "The fixed-block primal-treewidth lower bound of Fichte, Hecher, and Pfandler.",
+  "encoding": "Explicit quantifier prefix and matrix. n counts variables occurring in the matrix.",
+  "id": "qbf-fixed-block-width",
+  "inputConditions": [
+    {
+      "condition": "The matrix is in 3-CNF if the last quantifier is existential and in 3-DNF if it is universal.",
+      "id": "matrix-form",
+      "level": "problem"
+    }
+  ],
+  "kind": "lower-bound-case",
+  "parameter": "Treewidth t of the primal graph",
+  "problemDefinitionHash": "b2da30ef392eee8092ecd9983cb81c1b6e8fba0f6fb5ee48d14c09384e9870af",
+  "problemId": "quantified-boolean-satisfiability",
+  "problemRevision": 1,
+  "reader": {
+    "boundContext": "Here q is the fixed number of quantifier blocks, t is the primal treewidth, and n is the number of variables in the matrix. T(q,x) is a tower of q powers of two with x at the top, so T(1,x)=2^x and T(2,x)=2^(2^x).",
+    "parameter": "The treewidth t of the primal graph. Its vertices are the variables, and two variables are adjacent if they occur together in a clause or term.",
+    "parameterLabel": "Primal treewidth at fixed quantifier depth",
+    "parameterSymbols": [
+      {
+        "meaning": "treewidth of the primal graph",
+        "symbol": "t"
+      },
+      {
+        "meaning": "number of alternating quantifier blocks",
+        "symbol": "q"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "number of variables in the matrix",
+        "symbol": "n"
+      },
+      {
+        "meaning": "a tower of q powers of two with x at the top, so T(1,x)=2^x and T(2,x)=2^(2^x)",
+        "symbol": "T(q,x)"
+      }
+    ]
+  },
+  "recoveryComparisons": [
+    {
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "qbf-eth-primal-treewidth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "np_qp",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "qbf-eth-primal-treewidth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "qbf-eth-primal-treewidth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "qbf-eth-primal-treewidth",
+        "revision": 1
+      }
+    }
+  ],
+  "resolutions": [],
+  "revision": 3,
+  "task": "Decide whether the formula is true.",
+  "title": "Quantified Boolean satisfiability",
+  "variant": "Closed prenex quantified Boolean formulas with a fixed number of alternating quantifier blocks"
+}

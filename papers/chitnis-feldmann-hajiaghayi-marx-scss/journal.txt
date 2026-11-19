@@ -1,0 +1,1 @@
+Rajesh H. Chitnis, Andreas E. Feldmann, MohammadTaghi HajiAghayi, Dániel Marx. Tight Bounds for Planar Strongly Connected Steiner Subgraph with Fixed Number of Terminals (and Extensions). SIAM Journal on Computing 49(2) (2020). https://doi.org/10.1137/18M122371X

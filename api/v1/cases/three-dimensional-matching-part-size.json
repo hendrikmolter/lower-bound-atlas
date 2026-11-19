@@ -1,0 +1,139 @@
+{
+  "aliases": [],
+  "bounds": [
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unassessed"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "three-dimensional-matching-eth",
+      "inputConditions": [],
+      "inputFactor": "m^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "explanation": "The reduction gives q=6M for a formula with M clauses. The set of distinct triples has size at most q³, so the displayed polynomial factor can be absorbed into the exponent.",
+        "label": "Subexponential bound in the common part size",
+        "revision": 1,
+        "title": "Subexponential bound in the common part size under ETH"
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "2^(o(q)) m^(O(1))",
+      "runtimeSymbols": [
+        "q",
+        "m"
+      ],
+      "sources": [
+        {
+          "editionId": "journal",
+          "locator": "§3, p. 1082, immediately before §3.1",
+          "paperId": "bovz2016-vector",
+          "placement": "statement",
+          "role": "published lower bound"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm solves Three-Dimensional Matching within the stated running time.",
+      "status": "established",
+      "supported": true
+    }
+  ],
+  "coverage": "Published lower bounds.",
+  "encoding": "Three disjoint sets X, Y and Z each of size q, and an explicit set T of triples in X × Y × Z.",
+  "id": "three-dimensional-matching-part-size",
+  "inputConditions": [],
+  "kind": "lower-bound-case",
+  "parameter": "The number of elements in each of the three sets q.",
+  "problemDefinitionHash": "e985e911481ad64b86d9ce13d26ac94545f33edfbbd0629f0edd9d1ec83f20bf",
+  "problemId": "three-dimensional-matching",
+  "problemRevision": 1,
+  "reader": {
+    "anchor": "three-dimensional-matching-part-size",
+    "parameter": "The number of elements in each of the three sets q.",
+    "parameterLabel": "Common part size",
+    "parameterSymbols": [
+      {
+        "meaning": "number of elements in each of the three sets",
+        "symbol": "q"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "number of allowed triples",
+        "symbol": "m"
+      }
+    ]
+  },
+  "recoveryComparisons": [
+    {
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "three-dimensional-matching-eth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "np_qp",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "three-dimensional-matching-eth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "three-dimensional-matching-eth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "three-dimensional-matching-eth",
+        "revision": 1
+      }
+    }
+  ],
+  "resolutions": [],
+  "revision": 2,
+  "task": "Are there q triples in T that together use every element of X, Y and Z exactly once?",
+  "title": "Three-Dimensional Matching by common part size",
+  "variant": "Three-Dimensional Matching"
+}

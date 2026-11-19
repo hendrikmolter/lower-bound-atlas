@@ -1,0 +1,70 @@
+{
+  "assessments": {
+    "eth": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unassessed"
+    },
+    "sh": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unassessed"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "color-eth-planar",
+  "inputConditions": [],
+  "inputFactor": "B^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [],
+  "reader": {
+    "label": "Square-root exponent",
+    "revision": 2,
+    "title": "Square-root exponent on planar graphs under ETH"
+  },
+  "reviewIds": [],
+  "revision": 2,
+  "runtime": "2^(o(n^(1/2))) B^(O(1))",
+  "runtimeSymbols": [
+    "n",
+    "B"
+  ],
+  "sources": [
+    {
+      "editionId": "book",
+      "locator": "Theorem 14.9 and Exercise 14.3(d)",
+      "paperId": "cygan2015",
+      "placement": "statement",
+      "role": "benchmark"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm decides Planar 3-Coloring within the stated running time.",
+  "status": "established",
+  "supported": true
+}

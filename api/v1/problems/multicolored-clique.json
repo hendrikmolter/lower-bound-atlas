@@ -1,0 +1,10 @@
+{
+  "id": "multicolored-clique",
+  "input": "A finite simple undirected graph G and a partition of its vertices into k color classes.",
+  "name": "Multicolored Clique",
+  "parameterizations": [
+    "multicolored-clique-colors"
+  ],
+  "question": "Is there a clique containing exactly one vertex from each color class?",
+  "revision": 1
+}

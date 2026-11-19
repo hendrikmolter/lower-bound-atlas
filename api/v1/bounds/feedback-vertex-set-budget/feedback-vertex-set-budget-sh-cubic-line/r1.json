@@ -1,0 +1,94 @@
+{
+  "assessments": {
+    "sh": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "established",
+        "evidence": [
+          {
+            "boundRevision": 1,
+            "hypothesisRevision": 1,
+            "reviewId": "feedback-vertex-set-budget-sh-cubic-line-source-review",
+            "source": {
+              "editionId": "v2",
+              "locator": "Lemma 2.1 and Theorem 3.1, pp. 5–6 and 8",
+              "paperId": "sh26",
+              "placement": "forward",
+              "role": "fixed-width size formulation and exponent transfer for the composed reduction"
+            }
+          }
+        ],
+        "status": "established"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "hypothesis-implies-bound"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "sh",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "feedback-vertex-set-budget-sh-cubic-line",
+  "inputConditions": [
+    "cubic-bipartite-root"
+  ],
+  "inputFactor": "N^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [
+    "For every fixed 0<ε<1."
+  ],
+  "reader": {
+    "explanation": "The same construction keeps both the deletion budget and the sum of graph order and size linear in the variable-plus-clause count of the source formula.",
+    "historicalNote": [
+      "This bound follows by composing the cited reductions with the SH exponent transfer. The cubic bipartite graph before crossing replacement has linear size in the formula. The local path reduction adds a constant number of vertices, and the final line graph is four-regular with deletion budget one plus a third of its order."
+    ],
+    "label": "Fixed-power bound on cubic bipartite line graphs",
+    "revision": 1,
+    "title": "Fixed-power bound on cubic bipartite line graphs under SH"
+  },
+  "reviewIds": [
+    "feedback-vertex-set-budget-sh-cubic-line-source-review"
+  ],
+  "revision": 1,
+  "runtime": "2^(O(k^(1−ε))) N^(O(1))",
+  "runtimeSymbols": [
+    "k",
+    "ε",
+    "N"
+  ],
+  "sources": [
+    {
+      "editionId": "journal",
+      "locator": "Section 2 and Figures 1–5, pp. 73–75, before crossing replacement",
+      "paperId": "akiyama-nishizeki-saito1980",
+      "placement": "forward",
+      "role": "source reduction from 3-SAT to cubic bipartite Hamiltonian Cycle with a required edge"
+    },
+    {
+      "editionId": "journal",
+      "locator": "Theorems 21, 23 and 24 and Figure 5 (open author copy, §5, pp. 13–15)",
+      "paperId": "munaro2017-line-graphs",
+      "placement": "forward",
+      "role": "local Hamiltonian Path reduction and line-graph budget identity"
+    },
+    {
+      "editionId": "v2",
+      "locator": "Lemma 2.1 and Theorem 3.1, pp. 5–6 and 8",
+      "paperId": "sh26",
+      "placement": "forward",
+      "role": "fixed-width size formulation and exponent transfer for the composed reduction"
+    }
+  ],
+  "statement": "Under SH, no deterministic algorithm decides Feedback Vertex Set within the stated running time.",
+  "status": "established",
+  "supported": true
+}

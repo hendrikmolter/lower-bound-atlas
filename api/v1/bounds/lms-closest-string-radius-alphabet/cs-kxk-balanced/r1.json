@@ -1,0 +1,76 @@
+{
+  "assessments": {
+    "kxk": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "established",
+        "evidence": [
+          {
+            "boundRevision": 1,
+            "hypothesisRevision": 1,
+            "proof": {
+              "proofId": "closest-string-balanced-kxk",
+              "revision": 1,
+              "theorem": "closest-string-balanced-kxk"
+            },
+            "reviewId": "closest-string-balanced-kxk-review"
+          }
+        ],
+        "status": "established"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "hypothesis-implies-bound"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "kxk",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "cs-kxk-balanced",
+  "inputConditions": [
+    "one-agreement",
+    "balanced-alphabet"
+  ],
+  "inputFactor": "N^(O(1))",
+  "proofs": [
+    {
+      "proofId": "closest-string-balanced-kxk",
+      "revision": 1,
+      "theorem": "closest-string-balanced-kxk"
+    }
+  ],
+  "provenance": "atlas",
+  "qualifications": [],
+  "reader": {
+    "label": "Subexponential-time bound with a balanced alphabet",
+    "revision": 1,
+    "title": "Balanced-alphabet bound under the k × k Clique Hypothesis"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "2^(o(d log₂ d)) N^(O(1))",
+  "runtimeSymbols": [
+    "d",
+    "N"
+  ],
+  "sources": [
+    {
+      "editionId": "journal",
+      "locator": "Corollary 2.6, Lemma 2.8 and Theorems 2.11, 2.12 and 3.1, pp. 681–687",
+      "paperId": "lms2018",
+      "placement": "proof",
+      "role": "deterministic disjunction and reduction chain"
+    }
+  ],
+  "statement": "Under the k × k Clique Hypothesis, no deterministic algorithm decides Closest String within the stated running time.",
+  "status": "established",
+  "supported": true
+}

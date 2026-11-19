@@ -1,0 +1,33 @@
+{
+  "authors": [
+    "Klaus Jansen",
+    "Stefan Kratsch",
+    "Dániel Marx",
+    "Ildikó Schlotter"
+  ],
+  "editions": [
+    {
+      "access": "Full text inspected.",
+      "id": "author",
+      "kind": "preprint",
+      "label": "Authors’ full manuscript",
+      "openUrl": "https://www.cs.bme.hu/~dmarx/papers/jansen-binpacking-algo.pdf",
+      "preferredUrl": "https://www.cs.bme.hu/~dmarx/papers/jansen-binpacking-algo.pdf",
+      "primaryUrl": "https://www.cs.bme.hu/~dmarx/papers/jansen-binpacking-algo.pdf"
+    },
+    {
+      "access": "Published text checked for the unary decision formulation and Theorems 2–3.",
+      "doi": "10.1016/j.jcss.2012.04.004",
+      "id": "journal",
+      "kind": "journal",
+      "label": "Journal of Computer and System Sciences 79(1) (2013), pp. 39–49",
+      "openUrl": "https://doi.org/10.1016/j.jcss.2012.04.004",
+      "preferredUrl": "https://doi.org/10.1016/j.jcss.2012.04.004",
+      "primaryUrl": "https://doi.org/10.1016/j.jcss.2012.04.004"
+    }
+  ],
+  "id": "jkms2013-bin-packing",
+  "preferredEditionId": "journal",
+  "preferredUrl": "https://doi.org/10.1016/j.jcss.2012.04.004",
+  "title": "Bin Packing with Fixed Number of Bins Revisited"
+}

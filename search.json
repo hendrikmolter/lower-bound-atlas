@@ -1,0 +1,7102 @@
+[
+  {
+    "aliases": [
+      "LMS2011-3.2",
+      "SH04",
+      "survey-sh04"
+    ],
+    "assumptions": [
+      "eth",
+      "sh"
+    ],
+    "family": "",
+    "id": "lms-3color-order",
+    "kind": "lower-bound-case",
+    "name": "3-Coloring by graph order",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "equivalence",
+        "target": "color-eth-historical"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "equivalence",
+        "target": "color-eth-historical"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "degree",
+        "target": "color-eth-historical"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "equivalence",
+        "target": "color-eth-historical"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "equivalence",
+        "target": "color-eth-historical"
+      }
+    ],
+    "search": [
+      "3-Coloring",
+      "Number of vertices",
+      "3-Coloring by graph order",
+      "Ordinary unweighted 3-Coloring",
+      "Number of vertices n",
+      "Decide whether the graph admits a proper coloring with at most three colors.",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "sh",
+      "Satisfiability Hypothesis",
+      "SH",
+      "SAT power index one",
+      "lms2011",
+      "Lower bounds based on the Exponential Time Hypothesis",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Saket Saurabh",
+      "sh26",
+      "ETH is Dead, Long Live SH",
+      "MIT Hardness Group",
+      "Josh Brunner",
+      "Erik D. Demaine",
+      "Fabian Frei",
+      "Timothy Gomez",
+      "Markus Hecher",
+      "Jeffery Li",
+      "Jayson Lynch"
+    ]
+  },
+  {
+    "aliases": [
+      "lms-three-sat-clauses"
+    ],
+    "assumptions": [
+      "eth",
+      "sh"
+    ],
+    "family": "",
+    "id": "three-sat-clauses",
+    "kind": "lower-bound-case",
+    "name": "3SAT by clause count",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "equivalence",
+        "target": "three-sat-clauses-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "equivalence",
+        "target": "three-sat-clauses-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "degree",
+        "target": "three-sat-clauses-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "equivalence",
+        "target": "three-sat-clauses-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "equivalence",
+        "target": "three-sat-clauses-eth"
+      }
+    ],
+    "search": [
+      "3SAT",
+      "Clause count",
+      "3SAT by clause count",
+      "3SAT",
+      "The number of clauses m.",
+      "Does the formula have a satisfying assignment?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "sh",
+      "Satisfiability Hypothesis",
+      "SH",
+      "SAT power index one",
+      "lms2011",
+      "Lower bounds based on the Exponential Time Hypothesis",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Saket Saurabh",
+      "ipz2001",
+      "Which Problems Have Strongly Exponential Complexity?",
+      "Russell Impagliazzo",
+      "Ramamohan Paturi",
+      "Francis Zane",
+      "sh26",
+      "ETH is Dead, Long Live SH",
+      "MIT Hardness Group",
+      "Josh Brunner",
+      "Erik D. Demaine",
+      "Fabian Frei",
+      "Timothy Gomez",
+      "Markus Hecher",
+      "Jeffery Li",
+      "Jayson Lynch"
+    ]
+  },
+  {
+    "aliases": [
+      "survey-sh01"
+    ],
+    "assumptions": [
+      "eth",
+      "kxk",
+      "sh"
+    ],
+    "family": "",
+    "id": "three-sat-variables",
+    "kind": "lower-bound-case",
+    "name": "3SAT by variable count",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "degree",
+        "target": "three-sat-variables-eth"
+      },
+      {
+        "hypothesis": "kxk",
+        "status": "equivalence",
+        "target": "three-sat-variables-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "equivalence",
+        "target": "three-sat-variables-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "degree",
+        "target": "three-sat-variables-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "equivalence",
+        "target": "three-sat-variables-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "equivalence",
+        "target": "three-sat-variables-eth"
+      }
+    ],
+    "search": [
+      "3SAT",
+      "Variable count",
+      "3SAT by variable count",
+      "3SAT",
+      "The number of declared variables n.",
+      "Does the formula have a satisfying assignment?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "kxk",
+      "k × k Clique Hypothesis",
+      "Square Clique Hypothesis",
+      "k-by-k Clique Hypothesis",
+      "sh",
+      "Satisfiability Hypothesis",
+      "SH",
+      "SAT power index one",
+      "ipz2001",
+      "Which Problems Have Strongly Exponential Complexity?",
+      "Russell Impagliazzo",
+      "Ramamohan Paturi",
+      "Francis Zane",
+      "szeider2026",
+      "After ETH: the k×k Clique Hypothesis",
+      "Stefan Szeider",
+      "sh26",
+      "ETH is Dead, Long Live SH",
+      "MIT Hardness Group",
+      "Josh Brunner",
+      "Erik D. Demaine",
+      "Fabian Frei",
+      "Timothy Gomez",
+      "Markus Hecher",
+      "Jeffery Li",
+      "Jayson Lynch"
+    ]
+  },
+  {
+    "aliases": [
+      "book-balanced-vertex-separator-budget"
+    ],
+    "assumptions": [
+      "eth",
+      "kxk",
+      "w1"
+    ],
+    "family": "",
+    "id": "balanced-vertex-separator-budget",
+    "kind": "lower-bound-case",
+    "name": "Balanced Vertex Separator by solution budget",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "recovered",
+        "target": "balanced-vertex-separator-budget-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "balanced-vertex-separator-budget-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "balanced-vertex-separator-budget-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "balanced-vertex-separator-budget-eth"
+      }
+    ],
+    "search": [
+      "Balanced Vertex Separator",
+      "Solution budget",
+      "Balanced Vertex Separator by solution budget",
+      "Balanced Vertex Separator",
+      "The solution budget k.",
+      "Does G have a set of at most k vertices whose removal leaves all components with at most half the original vertices?",
+      "W[1]-hardness",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "kxk",
+      "k × k Clique Hypothesis",
+      "Square Clique Hypothesis",
+      "k-by-k Clique Hypothesis",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "cygan2015",
+      "Parameterized Algorithms",
+      "Marek Cygan",
+      "Fedor V. Fomin",
+      "Łukasz Kowalik",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Marcin Pilipczuk",
+      "Michał Pilipczuk",
+      "Saket Saurabh",
+      "szeider2026",
+      "After ETH: the k×k Clique Hypothesis",
+      "Stefan Szeider"
+    ]
+  },
+  {
+    "aliases": [
+      "Chromatic Number parameterized by treewidth"
+    ],
+    "assumptions": [
+      "eth",
+      "sh",
+      "w1"
+    ],
+    "family": "",
+    "id": "chromatic-number-treewidth",
+    "kind": "lower-bound-case",
+    "name": "Chromatic Number by treewidth",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "chromatic-tw-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "chromatic-tw-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "degree",
+        "target": "chromatic-tw-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "effective",
+        "target": "chromatic-tw-eth"
+      }
+    ],
+    "search": [
+      "Chromatic Number",
+      "Treewidth",
+      "Chromatic Number by treewidth",
+      "Undirected graph coloring with an input color budget",
+      "The treewidth t of G.",
+      "Can the vertices of G be colored with at most ℓ colors so that adjacent vertices have different colors?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "sh",
+      "Satisfiability Hypothesis",
+      "SH",
+      "SAT power index one",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "lms2018",
+      "Slightly Superexponential Parameterized Problems",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Saket Saurabh",
+      "lms2011",
+      "Lower bounds based on the Exponential Time Hypothesis",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Saket Saurabh",
+      "sh26",
+      "ETH is Dead, Long Live SH",
+      "MIT Hardness Group",
+      "Josh Brunner",
+      "Erik D. Demaine",
+      "Fabian Frei",
+      "Timothy Gomez",
+      "Markus Hecher",
+      "Jeffery Li",
+      "Jayson Lynch",
+      "df1995",
+      "Fixed-parameter tractability and completeness II: On completeness for W[1]",
+      "Rod G. Downey",
+      "Michael R. Fellows"
+    ]
+  },
+  {
+    "aliases": [
+      "Chromatic Number parameterized by vertex cover number"
+    ],
+    "assumptions": [
+      "eth",
+      "sh",
+      "w1"
+    ],
+    "family": "",
+    "id": "chromatic-number-vertex-cover",
+    "kind": "lower-bound-case",
+    "name": "Chromatic Number by vertex cover number",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "chromatic-vc-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "chromatic-vc-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "degree",
+        "target": "chromatic-vc-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "logarithmic",
+        "target": "chromatic-vc-eth"
+      }
+    ],
+    "search": [
+      "Chromatic Number",
+      "Vertex cover number",
+      "Chromatic Number by vertex cover number",
+      "Undirected graph coloring with an input color budget",
+      "The vertex cover number k of G.",
+      "Can the vertices of G be colored with at most ℓ colors so that adjacent vertices have different colors?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "sh",
+      "Satisfiability Hypothesis",
+      "SH",
+      "SAT power index one",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "lms2018",
+      "Slightly Superexponential Parameterized Problems",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Saket Saurabh",
+      "sh26",
+      "ETH is Dead, Long Live SH",
+      "MIT Hardness Group",
+      "Josh Brunner",
+      "Erik D. Demaine",
+      "Fabian Frei",
+      "Timothy Gomez",
+      "Markus Hecher",
+      "Jeffery Li",
+      "Jayson Lynch",
+      "df1995",
+      "Fixed-parameter tractability and completeness II: On completeness for W[1]",
+      "Rod G. Downey",
+      "Michael R. Fellows"
+    ]
+  },
+  {
+    "aliases": [
+      "lms-clique-order"
+    ],
+    "assumptions": [
+      "eth",
+      "sh"
+    ],
+    "family": "",
+    "id": "clique-order",
+    "kind": "lower-bound-case",
+    "name": "Clique by number of vertices",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "equivalence",
+        "target": "clique-order-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "equivalence",
+        "target": "clique-order-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "degree",
+        "target": "clique-order-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "equivalence",
+        "target": "clique-order-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "equivalence",
+        "target": "clique-order-eth"
+      }
+    ],
+    "search": [
+      "Clique",
+      "Number of vertices",
+      "Clique by number of vertices",
+      "Clique",
+      "The number of vertices n of G.",
+      "Does G contain at least k pairwise adjacent vertices?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "sh",
+      "Satisfiability Hypothesis",
+      "SH",
+      "SAT power index one",
+      "ipz2001",
+      "Which Problems Have Strongly Exponential Complexity?",
+      "Russell Impagliazzo",
+      "Ramamohan Paturi",
+      "Francis Zane",
+      "sh26",
+      "ETH is Dead, Long Live SH",
+      "MIT Hardness Group",
+      "Josh Brunner",
+      "Erik D. Demaine",
+      "Fabian Frei",
+      "Timothy Gomez",
+      "Markus Hecher",
+      "Jeffery Li",
+      "Jayson Lynch"
+    ]
+  },
+  {
+    "aliases": [
+      "lms-clique-xp"
+    ],
+    "assumptions": [
+      "eth",
+      "kxk",
+      "sh",
+      "w1"
+    ],
+    "family": "",
+    "id": "clique-budget",
+    "kind": "lower-bound-case",
+    "name": "Clique by solution size",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "recovered",
+        "target": "clique-budget-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "clique-budget-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "clique-budget-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "clique-budget-eth"
+      }
+    ],
+    "search": [
+      "Clique",
+      "Solution size",
+      "Clique by solution size",
+      "Clique",
+      "The requested clique size k.",
+      "Does G contain at least k pairwise adjacent vertices?",
+      "W[1]-hardness",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "kxk",
+      "k × k Clique Hypothesis",
+      "Square Clique Hypothesis",
+      "k-by-k Clique Hypothesis",
+      "sh",
+      "Satisfiability Hypothesis",
+      "SH",
+      "SAT power index one",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "chkx2006",
+      "Strong Computational Lower Bounds via Parameterized Complexity",
+      "Jianer Chen",
+      "Xiuzhen Huang",
+      "Iyad A. Kanj",
+      "Ge Xia",
+      "lms2011",
+      "Lower bounds based on the Exponential Time Hypothesis",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Saket Saurabh",
+      "cygan2015",
+      "Parameterized Algorithms",
+      "Marek Cygan",
+      "Fedor V. Fomin",
+      "Łukasz Kowalik",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Marcin Pilipczuk",
+      "Michał Pilipczuk",
+      "Saket Saurabh",
+      "szeider2026",
+      "After ETH: the k×k Clique Hypothesis",
+      "Stefan Szeider",
+      "koutecky2026-hard-side",
+      "Lecture 2 – Proving the hard side",
+      "Martin Koutecký",
+      "df1995",
+      "Fixed-parameter tractability and completeness II: On completeness for W[1]",
+      "Rod G. Downey",
+      "Michael R. Fellows"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "kxk"
+    ],
+    "family": "",
+    "id": "lms-closest-string-radius",
+    "kind": "lower-bound-case",
+    "name": "Closest String by radius",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "recovered",
+        "target": "cs-radius-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "cs-radius-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "cs-radius-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "cs-radius-eth"
+      }
+    ],
+    "search": [
+      "Closest String",
+      "Radius d",
+      "Closest String by radius",
+      "Explicit Closest String over a finite alphabet",
+      "Hamming radius d",
+      "Decide whether one center word is within Hamming distance d of every word in the explicit list.",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "kxk",
+      "k × k Clique Hypothesis",
+      "Square Clique Hypothesis",
+      "k-by-k Clique Hypothesis",
+      "lms2018",
+      "Slightly Superexponential Parameterized Problems",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Saket Saurabh",
+      "cygan2015",
+      "Parameterized Algorithms",
+      "Marek Cygan",
+      "Fedor V. Fomin",
+      "Łukasz Kowalik",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Marcin Pilipczuk",
+      "Michał Pilipczuk",
+      "Saket Saurabh",
+      "szeider2026",
+      "After ETH: the k×k Clique Hypothesis",
+      "Stefan Szeider"
+    ]
+  },
+  {
+    "aliases": [
+      "LMS2011-4.5"
+    ],
+    "assumptions": [
+      "eth",
+      "kxk",
+      "w1"
+    ],
+    "family": "",
+    "id": "lms-closest-string-radius-alphabet",
+    "kind": "lower-bound-case",
+    "name": "Closest String by radius and used alphabet",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "recovered",
+        "target": "cs-eth-balanced-historical"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "cs-eth-balanced-historical"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "cs-eth-balanced-historical"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "logarithmic",
+        "target": "cs-eth-balanced-historical"
+      }
+    ],
+    "search": [
+      "Closest String",
+      "Radius d and used alphabet size q",
+      "Closest String by radius and used alphabet",
+      "Closest String, radius and used-alphabet product scale",
+      "Radius d and used alphabet size q",
+      "Decide whether one center word is within Hamming distance d of every word in the explicit list.",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "kxk",
+      "k × k Clique Hypothesis",
+      "Square Clique Hypothesis",
+      "k-by-k Clique Hypothesis",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "lms2018",
+      "Slightly Superexponential Parameterized Problems",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Saket Saurabh",
+      "lms2011",
+      "Lower bounds based on the Exponential Time Hypothesis",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Saket Saurabh",
+      "szeider2026",
+      "After ETH: the k×k Clique Hypothesis",
+      "Stefan Szeider",
+      "cygan2015",
+      "Parameterized Algorithms",
+      "Marek Cygan",
+      "Fedor V. Fomin",
+      "Łukasz Kowalik",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Marcin Pilipczuk",
+      "Michał Pilipczuk",
+      "Saket Saurabh",
+      "df1995",
+      "Fixed-parameter tractability and completeness II: On completeness for W[1]",
+      "Rod G. Downey",
+      "Michael R. Fellows"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth"
+    ],
+    "family": "",
+    "id": "cluster-editing-budget",
+    "kind": "lower-bound-case",
+    "name": "Cluster Editing by edge-edit budget",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "cluster-editing-budget-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "cluster-editing-budget-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "cluster-editing-budget-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "cluster-editing-budget-eth"
+      }
+    ],
+    "search": [
+      "Cluster Editing",
+      "Edge-edit budget",
+      "Cluster Editing by edge-edit budget",
+      "Cluster Editing",
+      "The maximum number of edge additions and deletions k.",
+      "Can G be turned into a disjoint union of cliques by adding or deleting a total of at most k edges?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "ku2012-cluster-editing",
+      "Cluster Editing with Locally Bounded Modifications",
+      "Christian Komusiewicz",
+      "Johannes Uhlmann"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth"
+    ],
+    "family": "",
+    "id": "cluster-editing-size",
+    "kind": "lower-bound-case",
+    "name": "Cluster Editing by number of edges",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "cluster-editing-size-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "cluster-editing-size-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "cluster-editing-size-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "cluster-editing-size-eth"
+      }
+    ],
+    "search": [
+      "Cluster Editing",
+      "Number of edges",
+      "Cluster Editing by number of edges",
+      "Cluster Editing",
+      "The number of edges in the input graph m.",
+      "Can G be turned into a disjoint union of cliques by adding or deleting a total of at most k edges?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "ku2012-cluster-editing",
+      "Cluster Editing with Locally Bounded Modifications",
+      "Christian Komusiewicz",
+      "Johannes Uhlmann"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth"
+    ],
+    "family": "",
+    "id": "cluster-editing-order",
+    "kind": "lower-bound-case",
+    "name": "Cluster Editing by number of vertices",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "cluster-editing-order-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "cluster-editing-order-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "cluster-editing-order-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "cluster-editing-order-eth"
+      }
+    ],
+    "search": [
+      "Cluster Editing",
+      "Number of vertices",
+      "Cluster Editing by number of vertices",
+      "Cluster Editing",
+      "The number of vertices in the input graph n.",
+      "Can G be turned into a disjoint union of cliques by adding or deleting a total of at most k edges?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "ku2012-cluster-editing",
+      "Cluster Editing with Locally Bounded Modifications",
+      "Christian Komusiewicz",
+      "Johannes Uhlmann"
+    ]
+  },
+  {
+    "aliases": [
+      "book-connected-dominating-set-budget"
+    ],
+    "assumptions": [
+      "eth",
+      "kxk",
+      "w1"
+    ],
+    "family": "",
+    "id": "connected-dominating-set-budget",
+    "kind": "lower-bound-case",
+    "name": "Connected Dominating Set by solution budget",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "recovered",
+        "target": "connected-dominating-set-budget-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "connected-dominating-set-budget-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "connected-dominating-set-budget-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "connected-dominating-set-budget-eth"
+      }
+    ],
+    "search": [
+      "Connected Dominating Set",
+      "Solution budget",
+      "Connected Dominating Set by solution budget",
+      "Connected Dominating Set",
+      "The solution budget k.",
+      "Does G have a set of at most k vertices inducing a connected subgraph such that every vertex is in the set or has a neighbor in it?",
+      "W[2]-hardness",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "kxk",
+      "k × k Clique Hypothesis",
+      "Square Clique Hypothesis",
+      "k-by-k Clique Hypothesis",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "cygan2015",
+      "Parameterized Algorithms",
+      "Marek Cygan",
+      "Fedor V. Fomin",
+      "Łukasz Kowalik",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Marcin Pilipczuk",
+      "Michał Pilipczuk",
+      "Saket Saurabh",
+      "szeider2026",
+      "After ETH: the k×k Clique Hypothesis",
+      "Stefan Szeider"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth"
+    ],
+    "family": "",
+    "id": "connected-vertex-cover-budget",
+    "kind": "lower-bound-case",
+    "name": "Connected Vertex Cover by solution budget",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "connected-vertex-cover-budget-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "connected-vertex-cover-budget-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "connected-vertex-cover-budget-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "connected-vertex-cover-budget-eth"
+      }
+    ],
+    "search": [
+      "Connected Vertex Cover",
+      "Solution budget",
+      "Connected Vertex Cover by solution budget",
+      "Connected Vertex Cover",
+      "The solution budget k.",
+      "Is there a vertex cover of size at most k inducing a connected subgraph?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "hermelin-et-al2019-domination",
+      "Domination When the Stars Are Out",
+      "Danny Hermelin",
+      "Matthias Mnich",
+      "Erik Jan van Leeuwen",
+      "Gerhard J. Woeginger",
+      "ipz2001",
+      "Which Problems Have Strongly Exponential Complexity?",
+      "Russell Impagliazzo",
+      "Ramamohan Paturi",
+      "Francis Zane"
+    ]
+  },
+  {
+    "aliases": [
+      "lms-closest-substring-d"
+    ],
+    "assumptions": [
+      "eth",
+      "kxk",
+      "w1"
+    ],
+    "family": "",
+    "id": "closest-substring-constant-alphabet",
+    "kind": "lower-bound-case",
+    "name": "Constant-alphabet Closest Substring by distance threshold and string count",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "recovered",
+        "target": "closest-substring-constant-alphabet-distance-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "closest-substring-constant-alphabet-distance-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "closest-substring-constant-alphabet-distance-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "closest-substring-constant-alphabet-distance-eth"
+      },
+      {
+        "hypothesis": "kxk",
+        "status": "recovered",
+        "target": "closest-substring-constant-alphabet-strings-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "closest-substring-constant-alphabet-strings-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "closest-substring-constant-alphabet-strings-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "closest-substring-constant-alphabet-strings-eth"
+      }
+    ],
+    "search": [
+      "Constant-alphabet Closest Substring",
+      "Distance threshold and string count",
+      "Constant-alphabet Closest Substring by distance threshold and string count",
+      "Constant-alphabet Closest Substring",
+      "The Hamming-distance threshold d and The number of input strings r.",
+      "Is there a string of the requested length whose Hamming distance from some substring of each input string is at most d?",
+      "W[1]-hardness",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "kxk",
+      "k × k Clique Hypothesis",
+      "Square Clique Hypothesis",
+      "k-by-k Clique Hypothesis",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "lms2011",
+      "Lower bounds based on the Exponential Time Hypothesis",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Saket Saurabh",
+      "marx2008-closest-substring",
+      "Closest Substring Problems with Small Distances",
+      "Dániel Marx",
+      "szeider2026",
+      "After ETH: the k×k Clique Hypothesis",
+      "Stefan Szeider",
+      "cygan2015",
+      "Parameterized Algorithms",
+      "Marek Cygan",
+      "Fedor V. Fomin",
+      "Łukasz Kowalik",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Marcin Pilipczuk",
+      "Michał Pilipczuk",
+      "Saket Saurabh"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "w1"
+    ],
+    "family": "",
+    "id": "cycle-packing-treewidth",
+    "kind": "lower-bound-case",
+    "name": "Cycle Packing by treewidth",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "cp-tw-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "cp-tw-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "cp-tw-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "effective",
+        "target": "cp-tw-eth"
+      }
+    ],
+    "search": [
+      "Cycle Packing",
+      "Treewidth",
+      "Cycle Packing by treewidth",
+      "Undirected Cycle Packing",
+      "The treewidth t of G.",
+      "Does G contain at least r pairwise vertex-disjoint cycles?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "lms2011",
+      "Lower bounds based on the Exponential Time Hypothesis",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Saket Saurabh",
+      "cygan-cut-count",
+      "Solving Connectivity Problems Parameterized by Treewidth in Single Exponential Time",
+      "Marek Cygan",
+      "Jesper Nederlof",
+      "Marcin Pilipczuk",
+      "Michał Pilipczuk",
+      "Johan M. M. van Rooij",
+      "Jakub Onufry Wojtaszczyk"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "kxk",
+      "w1"
+    ],
+    "family": "",
+    "id": "cycle-packing-supplied-pathwidth",
+    "kind": "lower-bound-case",
+    "name": "Cycle Packing by width of a supplied path decomposition",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "recovered",
+        "target": "cp-pw-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "cp-pw-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "cp-pw-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "effective",
+        "target": "cp-pw-eth"
+      }
+    ],
+    "search": [
+      "Cycle Packing",
+      "Width of the supplied path decomposition",
+      "Cycle Packing by width of a supplied path decomposition",
+      "Undirected Cycle Packing",
+      "The width p of the supplied path decomposition.",
+      "Does G contain at least r pairwise vertex-disjoint cycles?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "kxk",
+      "k × k Clique Hypothesis",
+      "Square Clique Hypothesis",
+      "k-by-k Clique Hypothesis",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "cygan-cut-count",
+      "Solving Connectivity Problems Parameterized by Treewidth in Single Exponential Time",
+      "Marek Cygan",
+      "Jesper Nederlof",
+      "Marcin Pilipczuk",
+      "Michał Pilipczuk",
+      "Johan M. M. van Rooij",
+      "Jakub Onufry Wojtaszczyk",
+      "cygan2015",
+      "Parameterized Algorithms",
+      "Marek Cygan",
+      "Fedor V. Fomin",
+      "Łukasz Kowalik",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Marcin Pilipczuk",
+      "Michał Pilipczuk",
+      "Saket Saurabh",
+      "szeider2026",
+      "After ETH: the k×k Clique Hypothesis",
+      "Stefan Szeider"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth"
+    ],
+    "family": "",
+    "id": "directed-steiner-tree-terminals",
+    "kind": "lower-bound-case",
+    "name": "Directed Steiner Tree by number of terminals",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "directed-steiner-tree-terminals-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "directed-steiner-tree-terminals-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "directed-steiner-tree-terminals-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "directed-steiner-tree-terminals-eth"
+      }
+    ],
+    "search": [
+      "Directed Steiner Tree",
+      "Number of terminals",
+      "Directed Steiner Tree by number of terminals",
+      "Directed Steiner Tree",
+      "The number of terminals other than the root p.",
+      "Is there a subgraph of cost at most the budget with a directed path from the root to every terminal?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "galby-et-al2024-directed-steiner",
+      "Subexponential Parameterized Directed Steiner Network Problems on Planar Graphs: A Complete Classification",
+      "Esther Galby",
+      "Sándor Kisfaludi-Bak",
+      "Dániel Marx",
+      "Roohani Sharma",
+      "marx-pilipczuk-pilipczuk2018-steiner",
+      "On Subexponential Parameterized Algorithms for Steiner Tree and Directed Subset TSP on Planar Graphs",
+      "Dániel Marx",
+      "Marcin Pilipczuk",
+      "Michał Pilipczuk"
+    ]
+  },
+  {
+    "aliases": [
+      "Binary Distinct Vectors",
+      "Binary Test Cover"
+    ],
+    "assumptions": [
+      "eth",
+      "w1"
+    ],
+    "family": "",
+    "id": "distinct-vectors-budget",
+    "kind": "lower-bound-case",
+    "name": "Distinct Vectors",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "dv-eth-column-budget"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "dv-eth-column-budget"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "dv-eth-column-budget"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "recovered",
+        "target": "dv-eth-column-budget"
+      }
+    ],
+    "search": [
+      "Distinct Vectors",
+      "Number of selected columns",
+      "Distinct Vectors",
+      "Selecting columns of a binary matrix",
+      "Number of selected columns k",
+      "Decide whether at most k columns distinguish all pairs of rows.",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "ps2020",
+      "A Double-Exponential Lower Bound for the Distinct Vectors Problem",
+      "Marcin Pilipczuk",
+      "Manuel Sorge",
+      "df1995",
+      "Fixed-parameter tractability and completeness II: On completeness for W[1]",
+      "Rod G. Downey",
+      "Michael R. Fellows",
+      "lin2019",
+      "A Simple Gap-Producing Reduction for the Parameterized Set Cover Problem",
+      "Bingkai Lin",
+      "froese2012",
+      "Combinatorial Feature Selection: Parameterized Algorithms and Complexity",
+      "Vincent Froese"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "w1"
+    ],
+    "family": "",
+    "id": "dominating-set-linear-rank-width",
+    "kind": "lower-bound-case",
+    "name": "Dominating Set by linear rank-width",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "dominating-set-linear-rank-width-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "dominating-set-linear-rank-width-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "dominating-set-linear-rank-width-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "effective",
+        "target": "dominating-set-linear-rank-width-eth"
+      }
+    ],
+    "search": [
+      "Dominating Set",
+      "Linear rank-width",
+      "Dominating Set by linear rank-width",
+      "Dominating Set",
+      "The linear rank-width of G, denoted by p. Cut rank is computed over the binary field.",
+      "Does G have a set of at most k vertices such that every vertex either belongs to the set or has a neighbor in the set?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "liu-meng2026-rankwidth",
+      "Lower Bounds for Domination-Type Problems Parameterized by Rank-Width",
+      "Chenghua Liu",
+      "Boning Meng"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "sh"
+    ],
+    "family": "",
+    "id": "dominating-set-order",
+    "kind": "lower-bound-case",
+    "name": "Dominating Set by graph order",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "equivalence",
+        "target": "ds-order-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "equivalence",
+        "target": "ds-order-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "degree",
+        "target": "ds-order-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "equivalence",
+        "target": "ds-order-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "equivalence",
+        "target": "ds-order-eth"
+      }
+    ],
+    "search": [
+      "Dominating Set",
+      "Number of vertices",
+      "Dominating Set by graph order",
+      "Dominating Set",
+      "The number of vertices n of G.",
+      "Does G have a set of at most k vertices such that every vertex either belongs to the set or has a neighbor in the set?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "sh",
+      "Satisfiability Hypothesis",
+      "SH",
+      "SAT power index one",
+      "lms2011",
+      "Lower bounds based on the Exponential Time Hypothesis",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Saket Saurabh",
+      "sh26",
+      "ETH is Dead, Long Live SH",
+      "MIT Hardness Group",
+      "Josh Brunner",
+      "Erik D. Demaine",
+      "Fabian Frei",
+      "Timothy Gomez",
+      "Markus Hecher",
+      "Jeffery Li",
+      "Jayson Lynch"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "w1"
+    ],
+    "family": "",
+    "id": "dominating-set-rank-width",
+    "kind": "lower-bound-case",
+    "name": "Dominating Set by rank-width",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "dominating-set-rank-width-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "dominating-set-rank-width-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "dominating-set-rank-width-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "effective",
+        "target": "dominating-set-rank-width-eth"
+      }
+    ],
+    "search": [
+      "Dominating Set",
+      "Rank-width",
+      "Dominating Set by rank-width",
+      "Dominating Set",
+      "The rank-width of G, denoted by p. Cut rank is computed over the binary field.",
+      "Does G have a set of at most k vertices such that every vertex either belongs to the set or has a neighbor in the set?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "liu-meng2026-rankwidth",
+      "Lower Bounds for Domination-Type Problems Parameterized by Rank-Width",
+      "Chenghua Liu",
+      "Boning Meng"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "kxk",
+      "w1"
+    ],
+    "family": "",
+    "id": "dominating-set-budget",
+    "kind": "lower-bound-case",
+    "name": "Dominating Set by solution size",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "recovered",
+        "target": "ds-budget-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "ds-budget-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "ds-budget-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "ds-budget-eth"
+      }
+    ],
+    "search": [
+      "Dominating Set",
+      "Solution size",
+      "Dominating Set by solution size",
+      "Dominating Set",
+      "The input threshold k.",
+      "Does G have a set of at most k vertices such that every vertex either belongs to the set or has a neighbor in the set?",
+      "W[2]-hardness",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "kxk",
+      "k × k Clique Hypothesis",
+      "Square Clique Hypothesis",
+      "k-by-k Clique Hypothesis",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "lms2011",
+      "Lower bounds based on the Exponential Time Hypothesis",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Saket Saurabh",
+      "cygan2015",
+      "Parameterized Algorithms",
+      "Marek Cygan",
+      "Fedor V. Fomin",
+      "Łukasz Kowalik",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Marcin Pilipczuk",
+      "Michał Pilipczuk",
+      "Saket Saurabh",
+      "szeider2026",
+      "After ETH: the k×k Clique Hypothesis",
+      "Stefan Szeider",
+      "chkx2006",
+      "Strong Computational Lower Bounds via Parameterized Complexity",
+      "Jianer Chen",
+      "Xiuzhen Huang",
+      "Iyad A. Kanj",
+      "Ge Xia"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "w1"
+    ],
+    "family": "",
+    "id": "dominating-set-treewidth",
+    "kind": "lower-bound-case",
+    "name": "Dominating Set by treewidth",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "ds-tw-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "ds-tw-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "ds-tw-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "effective",
+        "target": "ds-tw-eth"
+      }
+    ],
+    "search": [
+      "Dominating Set",
+      "Treewidth",
+      "Dominating Set by treewidth",
+      "Dominating Set",
+      "The intrinsic treewidth t of G.",
+      "Does G have a set of at most k vertices such that every vertex either belongs to the set or has a neighbor in the set?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "lms2011",
+      "Lower bounds based on the Exponential Time Hypothesis",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Saket Saurabh",
+      "df1995",
+      "Fixed-parameter tractability and completeness II: On completeness for W[1]",
+      "Rod G. Downey",
+      "Michael R. Fellows",
+      "lin2019",
+      "A Simple Gap-Producing Reduction for the Parameterized Set Cover Problem",
+      "Bingkai Lin"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "w1"
+    ],
+    "family": "",
+    "id": "dominating-set-supplied-rank-decomposition",
+    "kind": "lower-bound-case",
+    "name": "Dominating Set by width of a supplied rank decomposition",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "dominating-set-supplied-rank-decomposition-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "dominating-set-supplied-rank-decomposition-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "dominating-set-supplied-rank-decomposition-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "effective",
+        "target": "dominating-set-supplied-rank-decomposition-eth"
+      }
+    ],
+    "search": [
+      "Dominating Set",
+      "Width of a supplied rank decomposition",
+      "Dominating Set by width of a supplied rank decomposition",
+      "Dominating Set",
+      "The actual width of the supplied rank decomposition, denoted by p. Cut rank is computed over the binary field.",
+      "Does G have a set of at most k vertices such that every vertex either belongs to the set or has a neighbor in the set?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "liu-meng2026-rankwidth",
+      "Lower Bounds for Domination-Type Problems Parameterized by Rank-Width",
+      "Chenghua Liu",
+      "Boning Meng"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "w1"
+    ],
+    "family": "",
+    "id": "dominating-set-supplied-linear-layout",
+    "kind": "lower-bound-case",
+    "name": "Dominating Set by width of a supplied vertex order",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "dominating-set-supplied-linear-layout-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "dominating-set-supplied-linear-layout-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "dominating-set-supplied-linear-layout-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "effective",
+        "target": "dominating-set-supplied-linear-layout-eth"
+      }
+    ],
+    "search": [
+      "Dominating Set",
+      "Width of a supplied vertex order",
+      "Dominating Set by width of a supplied vertex order",
+      "Dominating Set",
+      "The maximum cut rank over prefixes of the supplied vertex order, denoted by p. Cut rank is computed over the binary field.",
+      "Does G have a set of at most k vertices such that every vertex either belongs to the set or has a neighbor in the set?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "liu-meng2026-rankwidth",
+      "Lower Bounds for Domination-Type Problems Parameterized by Rank-Width",
+      "Chenghua Liu",
+      "Boning Meng"
+    ]
+  },
+  {
+    "aliases": [
+      "book-tournament-dominating-set-budget"
+    ],
+    "assumptions": [
+      "eth",
+      "kxk",
+      "w1"
+    ],
+    "family": "",
+    "id": "tournament-dominating-set-budget",
+    "kind": "lower-bound-case",
+    "name": "Dominating Set on tournaments by solution budget",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "recovered",
+        "target": "tournament-dominating-set-budget-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "tournament-dominating-set-budget-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "tournament-dominating-set-budget-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "tournament-dominating-set-budget-eth"
+      }
+    ],
+    "search": [
+      "Dominating Set on tournaments",
+      "Solution budget",
+      "Dominating Set on tournaments by solution budget",
+      "Dominating Set on tournaments",
+      "The solution budget k.",
+      "Does the tournament have a set of at most k vertices such that every vertex outside the set has an incoming arc from a vertex in it?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "kxk",
+      "k × k Clique Hypothesis",
+      "Square Clique Hypothesis",
+      "k-by-k Clique Hypothesis",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "cygan2015",
+      "Parameterized Algorithms",
+      "Marek Cygan",
+      "Fedor V. Fomin",
+      "Łukasz Kowalik",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Marcin Pilipczuk",
+      "Michał Pilipczuk",
+      "Saket Saurabh",
+      "szeider2026",
+      "After ETH: the k×k Clique Hypothesis",
+      "Stefan Szeider",
+      "chkx2005",
+      "W-Hardness under Linear FPT-Reductions: Structural Properties and Further Applications",
+      "Jianer Chen",
+      "Xiuzhen Huang",
+      "Iyad A. Kanj",
+      "Ge Xia"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "np_qp"
+    ],
+    "family": "",
+    "id": "edge-clique-cover-budget",
+    "kind": "lower-bound-case",
+    "name": "Edge Clique Cover by clique budget",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "ecc-budget-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "ecc-budget-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "ecc-budget-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "ecc-budget-eth"
+      }
+    ],
+    "search": [
+      "Edge Clique Cover",
+      "Clique budget",
+      "Edge Clique Cover by clique budget",
+      "Edge Clique Cover with overlapping cliques allowed",
+      "The allowed number k of covering cliques.",
+      "Can every edge of G be covered by a family of at most k cliques of G?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "np_qp",
+      "NP ⊈ QP",
+      "NP outside quasipolynomial time",
+      "cygan-pilipczuk-pilipczuk-ecc",
+      "Known Algorithms for Edge Clique Cover Are Probably Optimal",
+      "Marek Cygan",
+      "Marcin Pilipczuk",
+      "Michał Pilipczuk",
+      "cygan2015",
+      "Parameterized Algorithms",
+      "Marek Cygan",
+      "Fedor V. Fomin",
+      "Łukasz Kowalik",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Marcin Pilipczuk",
+      "Michał Pilipczuk",
+      "Saket Saurabh"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "w1"
+    ],
+    "family": "",
+    "id": "edge-dominating-set-intrinsic-clique-width",
+    "kind": "lower-bound-case",
+    "name": "Edge Dominating Set by intrinsic clique-width",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "edge-dominating-set-intrinsic-clique-width-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "edge-dominating-set-intrinsic-clique-width-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "edge-dominating-set-intrinsic-clique-width-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "edge-dominating-set-intrinsic-clique-width-eth"
+      }
+    ],
+    "search": [
+      "Edge Dominating Set",
+      "Intrinsic clique-width",
+      "Edge Dominating Set by intrinsic clique-width",
+      "Edge Dominating Set",
+      "The intrinsic clique-width t of the graph G.",
+      "Is there a set of at most k edges such that every edge shares an endpoint with an edge in the set?",
+      "W[1]-hardness",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "fgls2014-clique-width",
+      "Almost Optimal Lower Bounds for Problems Parameterized by Clique-Width",
+      "Fedor V. Fomin",
+      "Petr A. Golovach",
+      "Daniel Lokshtanov",
+      "Saket Saurabh",
+      "fgls2010-clique-width",
+      "Intractability of Clique-Width Parameterizations",
+      "Fedor V. Fomin",
+      "Petr A. Golovach",
+      "Daniel Lokshtanov",
+      "Saket Saurabh"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth"
+    ],
+    "family": "",
+    "id": "edge-dominating-set-budget",
+    "kind": "lower-bound-case",
+    "name": "Edge Dominating Set by solution budget",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "edge-dominating-set-budget-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "edge-dominating-set-budget-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "edge-dominating-set-budget-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "edge-dominating-set-budget-eth"
+      }
+    ],
+    "search": [
+      "Edge Dominating Set",
+      "Solution budget",
+      "Edge Dominating Set by solution budget",
+      "Edge Dominating Set",
+      "The solution budget k.",
+      "Is there a set of at most k edges such that every edge shares an endpoint with an edge in the set?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "hermelin-et-al2019-domination",
+      "Domination When the Stars Are Out",
+      "Danny Hermelin",
+      "Matthias Mnich",
+      "Erik Jan van Leeuwen",
+      "Gerhard J. Woeginger"
+    ]
+  },
+  {
+    "aliases": [
+      "lms-eds-cliquewidth"
+    ],
+    "assumptions": [
+      "eth",
+      "w1"
+    ],
+    "family": "",
+    "id": "edge-dominating-set-clique-width",
+    "kind": "lower-bound-case",
+    "name": "Edge Dominating Set by width of a supplied clique-width expression",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "edge-dominating-set-clique-width-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "edge-dominating-set-clique-width-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "edge-dominating-set-clique-width-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "edge-dominating-set-clique-width-eth"
+      }
+    ],
+    "search": [
+      "Edge Dominating Set",
+      "Width of a supplied clique-width expression",
+      "Edge Dominating Set by width of a supplied clique-width expression",
+      "Edge Dominating Set",
+      "The width of the supplied expression t.",
+      "Is there a set of at most k edges such that every edge shares an endpoint with an edge in the set?",
+      "W[1]-hardness",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "fgls2014-clique-width",
+      "Almost Optimal Lower Bounds for Problems Parameterized by Clique-Width",
+      "Fedor V. Fomin",
+      "Petr A. Golovach",
+      "Daniel Lokshtanov",
+      "Saket Saurabh",
+      "fgls2010-clique-width",
+      "Intractability of Clique-Width Parameterizations",
+      "Fedor V. Fomin",
+      "Petr A. Golovach",
+      "Daniel Lokshtanov",
+      "Saket Saurabh"
+    ]
+  },
+  {
+    "aliases": [
+      "survey-sh14"
+    ],
+    "assumptions": [
+      "eth",
+      "sh"
+    ],
+    "family": "",
+    "id": "euclidean-traveling-salesman-points",
+    "kind": "lower-bound-case",
+    "name": "Euclidean Traveling Salesman by number of points",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "euclidean-traveling-salesman-points-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "euclidean-traveling-salesman-points-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "degree",
+        "target": "euclidean-traveling-salesman-points-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "euclidean-traveling-salesman-points-eth"
+      }
+    ],
+    "search": [
+      "Euclidean Traveling Salesman",
+      "Number of points",
+      "Euclidean Traveling Salesman by number of points",
+      "Euclidean Traveling Salesman",
+      "The number of input points n.",
+      "Is there a cycle visiting every point of total Euclidean length at most T?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "sh",
+      "Satisfiability Hypothesis",
+      "SH",
+      "SAT power index one",
+      "deberg-et-al2020-geometric",
+      "A Framework for Exponential-Time-Hypothesis–Tight Algorithms and Lower Bounds in Geometric Intersection Graphs",
+      "Mark de Berg",
+      "Hans L. Bodlaender",
+      "Sándor Kisfaludi-Bak",
+      "Dániel Marx",
+      "Tom C. van der Zanden",
+      "sh26",
+      "ETH is Dead, Long Live SH",
+      "MIT Hardness Group",
+      "Josh Brunner",
+      "Erik D. Demaine",
+      "Fabian Frei",
+      "Timothy Gomez",
+      "Markus Hecher",
+      "Jeffery Li",
+      "Jayson Lynch"
+    ]
+  },
+  {
+    "aliases": [
+      "lms-csp-tw"
+    ],
+    "assumptions": [
+      "eth",
+      "w1"
+    ],
+    "family": "",
+    "id": "explicit-table-csp-treewidth",
+    "kind": "lower-bound-case",
+    "name": "Explicit-table CSP by primal treewidth",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "explicit-table-csp-treewidth-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "explicit-table-csp-treewidth-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "explicit-table-csp-treewidth-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "explicit-table-csp-treewidth-eth"
+      }
+    ],
+    "search": [
+      "Explicit-table CSP",
+      "Primal treewidth",
+      "Explicit-table CSP by primal treewidth",
+      "Explicit-table CSP",
+      "The treewidth of the primal graph t.",
+      "Can all variables be assigned domain values so that each constraint has an allowed tuple?",
+      "W[1]-hardness",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "lms2011",
+      "Lower bounds based on the Exponential Time Hypothesis",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Saket Saurabh",
+      "marx2010-treewidth",
+      "Can You Beat Treewidth?",
+      "Dániel Marx",
+      "cygan2015",
+      "Parameterized Algorithms",
+      "Marek Cygan",
+      "Fedor V. Fomin",
+      "Łukasz Kowalik",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Marcin Pilipczuk",
+      "Michał Pilipczuk",
+      "Saket Saurabh"
+    ]
+  },
+  {
+    "aliases": [
+      "feature-set-selected-features"
+    ],
+    "assumptions": [
+      "eth",
+      "w1"
+    ],
+    "family": "",
+    "id": "feature-set-budget",
+    "kind": "lower-bound-case",
+    "name": "Feature Set by number of selected features",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "feature-set-budget-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "feature-set-budget-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "feature-set-budget-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "feature-set-budget-eth"
+      },
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "feature-set-budget-eth-fixed"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "feature-set-budget-eth-fixed"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "feature-set-budget-eth-fixed"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "recovered",
+        "target": "feature-set-budget-eth-fixed"
+      }
+    ],
+    "search": [
+      "Feature Set",
+      "Number of selected features",
+      "Feature Set by number of selected features",
+      "Feature Set",
+      "The number of selected features k.",
+      "Can exactly k features be selected so that each pair of examples with different labels differs on a selected feature?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "chkx2005",
+      "W-Hardness under Linear FPT-Reductions: Structural Properties and Further Applications",
+      "Jianer Chen",
+      "Xiuzhen Huang",
+      "Iyad A. Kanj",
+      "Ge Xia",
+      "ccfhjkx2005",
+      "Tight Lower Bounds for Certain Parameterized NP-Hard Problems",
+      "Jianer Chen",
+      "Benny Chor",
+      "Mike Fellows",
+      "Xiuzhen Huang",
+      "David Juedes",
+      "Iyad A. Kanj",
+      "Ge Xia"
+    ]
+  },
+  {
+    "aliases": [
+      "lms-fvs-budget"
+    ],
+    "assumptions": [
+      "eth",
+      "sh"
+    ],
+    "family": "",
+    "id": "feedback-vertex-set-budget",
+    "kind": "lower-bound-case",
+    "name": "Feedback Vertex Set by solution budget",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "feedback-vertex-set-budget-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "feedback-vertex-set-budget-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "degree",
+        "target": "feedback-vertex-set-budget-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "feedback-vertex-set-budget-eth"
+      }
+    ],
+    "search": [
+      "Feedback Vertex Set",
+      "Solution budget",
+      "Feedback Vertex Set by solution budget",
+      "Feedback Vertex Set",
+      "The solution budget k.",
+      "Can at most k vertices be deleted so that the remaining graph is a forest?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "sh",
+      "Satisfiability Hypothesis",
+      "SH",
+      "SAT power index one",
+      "lms2011",
+      "Lower bounds based on the Exponential Time Hypothesis",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Saket Saurabh",
+      "akiyama-nishizeki-saito1980",
+      "NP-Completeness of the Hamiltonian Cycle Problem for Bipartite Graphs",
+      "Takanori Akiyama",
+      "Takao Nishizeki",
+      "Nobuji Saito",
+      "munaro2017-line-graphs",
+      "On Line Graphs of Subcubic Triangle-Free Graphs",
+      "Andrea Munaro",
+      "sh26",
+      "ETH is Dead, Long Live SH",
+      "MIT Hardness Group",
+      "Josh Brunner",
+      "Erik D. Demaine",
+      "Fabian Frei",
+      "Timothy Gomez",
+      "Markus Hecher",
+      "Jeffery Li",
+      "Jayson Lynch"
+    ]
+  },
+  {
+    "aliases": [
+      "book-fvs-graph-size"
+    ],
+    "assumptions": [
+      "eth",
+      "sh"
+    ],
+    "family": "",
+    "id": "feedback-vertex-set-graph-size",
+    "kind": "lower-bound-case",
+    "name": "Feedback Vertex Set by vertex-plus-edge count",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "feedback-vertex-set-graph-size-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "feedback-vertex-set-graph-size-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "degree",
+        "target": "feedback-vertex-set-graph-size-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "feedback-vertex-set-graph-size-eth"
+      }
+    ],
+    "search": [
+      "Feedback Vertex Set",
+      "Vertex-plus-edge count",
+      "Feedback Vertex Set by vertex-plus-edge count",
+      "Feedback Vertex Set",
+      "The sum of the numbers of vertices and edges s.",
+      "Can at most k vertices be deleted so that the remaining graph is a forest?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "sh",
+      "Satisfiability Hypothesis",
+      "SH",
+      "SAT power index one",
+      "cygan2015",
+      "Parameterized Algorithms",
+      "Marek Cygan",
+      "Fedor V. Fomin",
+      "Łukasz Kowalik",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Marcin Pilipczuk",
+      "Michał Pilipczuk",
+      "Saket Saurabh",
+      "akiyama-nishizeki-saito1980",
+      "NP-Completeness of the Hamiltonian Cycle Problem for Bipartite Graphs",
+      "Takanori Akiyama",
+      "Takao Nishizeki",
+      "Nobuji Saito",
+      "munaro2017-line-graphs",
+      "On Line Graphs of Subcubic Triangle-Free Graphs",
+      "Andrea Munaro",
+      "sh26",
+      "ETH is Dead, Long Live SH",
+      "MIT Hardness Group",
+      "Josh Brunner",
+      "Erik D. Demaine",
+      "Fabian Frei",
+      "Timothy Gomez",
+      "Markus Hecher",
+      "Jeffery Li",
+      "Jayson Lynch"
+    ]
+  },
+  {
+    "aliases": [
+      "fixed-sat-size"
+    ],
+    "assumptions": [
+      "eth",
+      "sh"
+    ],
+    "family": "",
+    "id": "fixed-width-sat-formula-size",
+    "kind": "lower-bound-case",
+    "name": "Fixed-width SAT by total formula size",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "equivalence",
+        "target": "fixed-width-sat-formula-size-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "equivalence",
+        "target": "fixed-width-sat-formula-size-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "degree",
+        "target": "fixed-width-sat-formula-size-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "equivalence",
+        "target": "fixed-width-sat-formula-size-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "equivalence",
+        "target": "fixed-width-sat-formula-size-eth"
+      }
+    ],
+    "search": [
+      "Fixed-width SAT",
+      "Total formula size",
+      "Fixed-width SAT by total formula size",
+      "Fixed-width SAT",
+      "The sum of the numbers of declared variables and clauses s.",
+      "Does the formula have a satisfying assignment?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "sh",
+      "Satisfiability Hypothesis",
+      "SH",
+      "SAT power index one",
+      "ipz2001",
+      "Which Problems Have Strongly Exponential Complexity?",
+      "Russell Impagliazzo",
+      "Ramamohan Paturi",
+      "Francis Zane",
+      "cygan2015",
+      "Parameterized Algorithms",
+      "Marek Cygan",
+      "Fedor V. Fomin",
+      "Łukasz Kowalik",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Marcin Pilipczuk",
+      "Michał Pilipczuk",
+      "Saket Saurabh",
+      "sh26",
+      "ETH is Dead, Long Live SH",
+      "MIT Hardness Group",
+      "Josh Brunner",
+      "Erik D. Demaine",
+      "Fabian Frei",
+      "Timothy Gomez",
+      "Markus Hecher",
+      "Jeffery Li",
+      "Jayson Lynch"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "kxk",
+      "sh"
+    ],
+    "family": "",
+    "id": "fixed-width-sat-variables",
+    "kind": "lower-bound-case",
+    "name": "Fixed-width SAT by variable count",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "degree",
+        "target": "fixed-width-sat-variables-eth"
+      },
+      {
+        "hypothesis": "kxk",
+        "status": "equivalence",
+        "target": "fixed-width-sat-variables-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "equivalence",
+        "target": "fixed-width-sat-variables-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "degree",
+        "target": "fixed-width-sat-variables-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "equivalence",
+        "target": "fixed-width-sat-variables-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "equivalence",
+        "target": "fixed-width-sat-variables-eth"
+      }
+    ],
+    "search": [
+      "Fixed-width SAT",
+      "Variable count",
+      "Fixed-width SAT by variable count",
+      "Fixed-width SAT",
+      "The number n of declared variables.",
+      "Does the formula have a satisfying assignment?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "kxk",
+      "k × k Clique Hypothesis",
+      "Square Clique Hypothesis",
+      "k-by-k Clique Hypothesis",
+      "sh",
+      "Satisfiability Hypothesis",
+      "SH",
+      "SAT power index one",
+      "ipz2001",
+      "Which Problems Have Strongly Exponential Complexity?",
+      "Russell Impagliazzo",
+      "Ramamohan Paturi",
+      "Francis Zane",
+      "lms2011",
+      "Lower bounds based on the Exponential Time Hypothesis",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Saket Saurabh",
+      "szeider2026",
+      "After ETH: the k×k Clique Hypothesis",
+      "Stefan Szeider",
+      "sh26",
+      "ETH is Dead, Long Live SH",
+      "MIT Hardness Group",
+      "Josh Brunner",
+      "Erik D. Demaine",
+      "Fabian Frei",
+      "Timothy Gomez",
+      "Markus Hecher",
+      "Jeffery Li",
+      "Jayson Lynch"
+    ]
+  },
+  {
+    "aliases": [
+      "lms-distortion-line"
+    ],
+    "assumptions": [
+      "eth",
+      "kxk",
+      "w1"
+    ],
+    "family": "",
+    "id": "graph-distortion-line",
+    "kind": "lower-bound-case",
+    "name": "Graph Distortion into a line by distortion threshold",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "recovered",
+        "target": "graph-distortion-line-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "graph-distortion-line-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "graph-distortion-line-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "effective",
+        "target": "graph-distortion-line-eth"
+      }
+    ],
+    "search": [
+      "Graph Distortion into a line",
+      "Distortion threshold",
+      "Graph Distortion into a line by distortion threshold",
+      "Graph Distortion into a line",
+      "The allowed distortion d.",
+      "Does the shortest-path metric of G admit a noncontracting embedding into the line that expands no distance by more than a factor d?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "kxk",
+      "k × k Clique Hypothesis",
+      "Square Clique Hypothesis",
+      "k-by-k Clique Hypothesis",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "lms2018",
+      "Slightly Superexponential Parameterized Problems",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Saket Saurabh",
+      "cygan2015",
+      "Parameterized Algorithms",
+      "Marek Cygan",
+      "Fedor V. Fomin",
+      "Łukasz Kowalik",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Marcin Pilipczuk",
+      "Michał Pilipczuk",
+      "Saket Saurabh",
+      "lms2011",
+      "Lower bounds based on the Exponential Time Hypothesis",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Saket Saurabh",
+      "szeider2026",
+      "After ETH: the k×k Clique Hypothesis",
+      "Stefan Szeider",
+      "df1995",
+      "Fixed-parameter tractability and completeness II: On completeness for W[1]",
+      "Rod G. Downey",
+      "Michael R. Fellows"
+    ]
+  },
+  {
+    "aliases": [
+      "survey-sh06"
+    ],
+    "assumptions": [
+      "eth",
+      "sh"
+    ],
+    "family": "",
+    "id": "graph-homomorphism-total-order",
+    "kind": "lower-bound-case",
+    "name": "Graph Homomorphism by total graph order",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "graph-homomorphism-total-order-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "graph-homomorphism-total-order-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "degree",
+        "target": "graph-homomorphism-total-order-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "graph-homomorphism-total-order-eth"
+      }
+    ],
+    "search": [
+      "Graph Homomorphism",
+      "Total graph order",
+      "Graph Homomorphism by total graph order",
+      "Graph Homomorphism",
+      "The sum of the orders of G and H p.",
+      "Is there a map from V(G) to V(H) taking every edge of G to an edge of H?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "sh",
+      "Satisfiability Hypothesis",
+      "SH",
+      "SAT power index one",
+      "cygan-et-al2017-embedding",
+      "Tight Lower Bounds on Graph Embedding Problems",
+      "Marek Cygan",
+      "Fedor V. Fomin",
+      "Alexander Golovnev",
+      "Alexander S. Kulikov",
+      "Ivan Mihajlin",
+      "Jakub Pachocki",
+      "Arkadiusz Socała",
+      "sh26",
+      "ETH is Dead, Long Live SH",
+      "MIT Hardness Group",
+      "Josh Brunner",
+      "Erik D. Demaine",
+      "Fabian Frei",
+      "Timothy Gomez",
+      "Markus Hecher",
+      "Jeffery Li",
+      "Jayson Lynch"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth"
+    ],
+    "family": "",
+    "id": "graph-motif-order",
+    "kind": "lower-bound-case",
+    "name": "Graph Motif by number of vertices",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "graph-motif-cluster-distance-order-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "graph-motif-cluster-distance-order-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "graph-motif-cluster-distance-order-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "graph-motif-cluster-distance-order-eth"
+      },
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "graph-motif-tree-order-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "graph-motif-tree-order-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "graph-motif-tree-order-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "graph-motif-tree-order-eth"
+      }
+    ],
+    "search": [
+      "Graph Motif",
+      "Number of vertices",
+      "Graph Motif by number of vertices",
+      "Graph Motif",
+      "The number of vertices in the input graph n.",
+      "Is there a set of vertices that induces a connected subgraph and whose colors, counted with multiplicity, form M?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "bs2017-graph-motif",
+      "The Graph Motif Problem Parameterized by the Structure of the Input Graph",
+      "Édouard Bonnet",
+      "Florian Sikora"
+    ]
+  },
+  {
+    "aliases": [
+      "book-grid-tiling"
+    ],
+    "assumptions": [
+      "eth",
+      "kxk",
+      "w1"
+    ],
+    "family": "",
+    "id": "grid-tiling-side",
+    "kind": "lower-bound-case",
+    "name": "Grid Tiling by grid side",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "recovered",
+        "target": "grid-tiling-side-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "grid-tiling-side-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "grid-tiling-side-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "grid-tiling-side-eth"
+      }
+    ],
+    "search": [
+      "Grid Tiling",
+      "Grid side",
+      "Grid Tiling by grid side",
+      "Grid Tiling",
+      "Grid side.",
+      "Can one choose one allowed pair per cell so that first coordinates agree along each row and second coordinates agree along each column?",
+      "W[1]-hardness",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "kxk",
+      "k × k Clique Hypothesis",
+      "Square Clique Hypothesis",
+      "k-by-k Clique Hypothesis",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "cygan2015",
+      "Parameterized Algorithms",
+      "Marek Cygan",
+      "Fedor V. Fomin",
+      "Łukasz Kowalik",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Marcin Pilipczuk",
+      "Michał Pilipczuk",
+      "Saket Saurabh",
+      "szeider2026",
+      "After ETH: the k×k Clique Hypothesis",
+      "Stefan Szeider"
+    ]
+  },
+  {
+    "aliases": [
+      "lms-hamiltonian-cycle-order"
+    ],
+    "assumptions": [
+      "eth",
+      "sh"
+    ],
+    "family": "",
+    "id": "hamiltonian-cycle-order",
+    "kind": "lower-bound-case",
+    "name": "Hamiltonian Cycle by number of vertices",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "hamiltonian-cycle-order-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "hamiltonian-cycle-order-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "degree",
+        "target": "hamiltonian-cycle-order-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "hamiltonian-cycle-order-eth"
+      }
+    ],
+    "search": [
+      "Hamiltonian Cycle",
+      "Number of vertices",
+      "Hamiltonian Cycle by number of vertices",
+      "Hamiltonian Cycle",
+      "Number of vertices.",
+      "Does G contain a simple cycle through all vertices?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "sh",
+      "Satisfiability Hypothesis",
+      "SH",
+      "SAT power index one",
+      "cygan2015",
+      "Parameterized Algorithms",
+      "Marek Cygan",
+      "Fedor V. Fomin",
+      "Łukasz Kowalik",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Marcin Pilipczuk",
+      "Michał Pilipczuk",
+      "Saket Saurabh",
+      "sh26",
+      "ETH is Dead, Long Live SH",
+      "MIT Hardness Group",
+      "Josh Brunner",
+      "Erik D. Demaine",
+      "Fabian Frei",
+      "Timothy Gomez",
+      "Markus Hecher",
+      "Jeffery Li",
+      "Jayson Lynch",
+      "ipz2001",
+      "Which Problems Have Strongly Exponential Complexity?",
+      "Russell Impagliazzo",
+      "Ramamohan Paturi",
+      "Francis Zane"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "sh"
+    ],
+    "family": "",
+    "id": "hamiltonian-cycle-graph-size",
+    "kind": "lower-bound-case",
+    "name": "Hamiltonian Cycle by number of vertices plus edges",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "hamiltonian-cycle-graph-size-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "hamiltonian-cycle-graph-size-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "degree",
+        "target": "hamiltonian-cycle-graph-size-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "hamiltonian-cycle-graph-size-eth"
+      }
+    ],
+    "search": [
+      "Hamiltonian Cycle",
+      "Number of vertices plus edges",
+      "Hamiltonian Cycle by number of vertices plus edges",
+      "Hamiltonian Cycle",
+      "Number of vertices plus edges.",
+      "Does G contain a simple cycle through all vertices?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "sh",
+      "Satisfiability Hypothesis",
+      "SH",
+      "SAT power index one",
+      "cygan2015",
+      "Parameterized Algorithms",
+      "Marek Cygan",
+      "Fedor V. Fomin",
+      "Łukasz Kowalik",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Marcin Pilipczuk",
+      "Michał Pilipczuk",
+      "Saket Saurabh",
+      "sh26",
+      "ETH is Dead, Long Live SH",
+      "MIT Hardness Group",
+      "Josh Brunner",
+      "Erik D. Demaine",
+      "Fabian Frei",
+      "Timothy Gomez",
+      "Markus Hecher",
+      "Jeffery Li",
+      "Jayson Lynch",
+      "ipz2001",
+      "Which Problems Have Strongly Exponential Complexity?",
+      "Russell Impagliazzo",
+      "Ramamohan Paturi",
+      "Francis Zane"
+    ]
+  },
+  {
+    "aliases": [
+      "lms-hp-order"
+    ],
+    "assumptions": [
+      "eth",
+      "sh"
+    ],
+    "family": "",
+    "id": "hamiltonian-path-order",
+    "kind": "lower-bound-case",
+    "name": "Hamiltonian Path by number of vertices",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "hamiltonian-path-order-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "hamiltonian-path-order-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "degree",
+        "target": "hamiltonian-path-order-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "hamiltonian-path-order-eth"
+      }
+    ],
+    "search": [
+      "Hamiltonian Path",
+      "Number of vertices",
+      "Hamiltonian Path by number of vertices",
+      "Hamiltonian Path",
+      "Number of vertices.",
+      "Does G contain a simple path through all vertices?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "sh",
+      "Satisfiability Hypothesis",
+      "SH",
+      "SAT power index one",
+      "lms2011",
+      "Lower bounds based on the Exponential Time Hypothesis",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Saket Saurabh",
+      "sh26",
+      "ETH is Dead, Long Live SH",
+      "MIT Hardness Group",
+      "Josh Brunner",
+      "Erik D. Demaine",
+      "Fabian Frei",
+      "Timothy Gomez",
+      "Markus Hecher",
+      "Jeffery Li",
+      "Jayson Lynch",
+      "ipz2001",
+      "Which Problems Have Strongly Exponential Complexity?",
+      "Russell Impagliazzo",
+      "Ramamohan Paturi",
+      "Francis Zane"
+    ]
+  },
+  {
+    "aliases": [
+      "historical-chkx06-hitting-set"
+    ],
+    "assumptions": [
+      "eth",
+      "w1"
+    ],
+    "family": "",
+    "id": "hitting-set-budget",
+    "kind": "lower-bound-case",
+    "name": "Hitting Set by solution budget",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "hitting-set-budget-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "hitting-set-budget-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "hitting-set-budget-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "recovered",
+        "target": "hitting-set-budget-eth"
+      },
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "hitting-set-budget-eth-complete-input"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "hitting-set-budget-eth-complete-input"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "hitting-set-budget-eth-complete-input"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "recovered",
+        "target": "hitting-set-budget-eth-complete-input"
+      }
+    ],
+    "search": [
+      "Hitting Set",
+      "Solution budget",
+      "Hitting Set by solution budget",
+      "Hitting Set",
+      "Solution budget.",
+      "Is there a set of at most k ground elements intersecting every listed subset?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "chkx2006",
+      "Strong Computational Lower Bounds via Parameterized Complexity",
+      "Jianer Chen",
+      "Xiuzhen Huang",
+      "Iyad A. Kanj",
+      "Ge Xia"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "sh",
+      "w1"
+    ],
+    "family": "",
+    "id": "independent-set-linear-rank-width",
+    "kind": "lower-bound-case",
+    "name": "Independent Set by linear rank-width",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "independent-set-linear-rank-width-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "independent-set-linear-rank-width-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "degree",
+        "target": "independent-set-linear-rank-width-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "effective",
+        "target": "independent-set-linear-rank-width-eth"
+      }
+    ],
+    "search": [
+      "Independent Set",
+      "Linear rank-width",
+      "Independent Set by linear rank-width",
+      "Independent Set",
+      "The linear rank-width of G, denoted by p. Cut rank is computed over the binary field.",
+      "Does G have at least k pairwise nonadjacent vertices?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "sh",
+      "Satisfiability Hypothesis",
+      "SH",
+      "SAT power index one",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "bkn2023-rankwidth",
+      "Tight Lower Bounds for Problems Parameterized by Rank-Width",
+      "Benjamin Bergougnoux",
+      "Tuukka Korhonen",
+      "Jesper Nederlof"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "sh"
+    ],
+    "family": "",
+    "id": "independent-set-order",
+    "kind": "lower-bound-case",
+    "name": "Independent Set by graph order",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "equivalence",
+        "target": "is-order-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "equivalence",
+        "target": "is-order-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "degree",
+        "target": "is-order-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "equivalence",
+        "target": "is-order-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "equivalence",
+        "target": "is-order-eth"
+      }
+    ],
+    "search": [
+      "Independent Set",
+      "Number of vertices",
+      "Independent Set by graph order",
+      "Independent Set",
+      "The number of vertices n of G.",
+      "Does G have at least k pairwise nonadjacent vertices?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "sh",
+      "Satisfiability Hypothesis",
+      "SH",
+      "SAT power index one",
+      "lms2011",
+      "Lower bounds based on the Exponential Time Hypothesis",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Saket Saurabh",
+      "sh26",
+      "ETH is Dead, Long Live SH",
+      "MIT Hardness Group",
+      "Josh Brunner",
+      "Erik D. Demaine",
+      "Fabian Frei",
+      "Timothy Gomez",
+      "Markus Hecher",
+      "Jeffery Li",
+      "Jayson Lynch"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "sh",
+      "w1"
+    ],
+    "family": "",
+    "id": "independent-set-rank-width",
+    "kind": "lower-bound-case",
+    "name": "Independent Set by rank-width",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "independent-set-rank-width-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "independent-set-rank-width-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "degree",
+        "target": "independent-set-rank-width-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "effective",
+        "target": "independent-set-rank-width-eth"
+      }
+    ],
+    "search": [
+      "Independent Set",
+      "Rank-width",
+      "Independent Set by rank-width",
+      "Independent Set",
+      "The rank-width of G, denoted by p. Cut rank is computed over the binary field.",
+      "Does G have at least k pairwise nonadjacent vertices?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "sh",
+      "Satisfiability Hypothesis",
+      "SH",
+      "SAT power index one",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "bkn2023-rankwidth",
+      "Tight Lower Bounds for Problems Parameterized by Rank-Width",
+      "Benjamin Bergougnoux",
+      "Tuukka Korhonen",
+      "Jesper Nederlof"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "kxk",
+      "w1"
+    ],
+    "family": "",
+    "id": "independent-set-budget",
+    "kind": "lower-bound-case",
+    "name": "Independent Set by solution size",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "recovered",
+        "target": "is-budget-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "is-budget-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "is-budget-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "is-budget-eth"
+      }
+    ],
+    "search": [
+      "Independent Set",
+      "Solution size",
+      "Independent Set by solution size",
+      "Independent Set",
+      "The input threshold k.",
+      "Does G have at least k pairwise nonadjacent vertices?",
+      "W[1]-hardness",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "kxk",
+      "k × k Clique Hypothesis",
+      "Square Clique Hypothesis",
+      "k-by-k Clique Hypothesis",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "lms2011",
+      "Lower bounds based on the Exponential Time Hypothesis",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Saket Saurabh",
+      "cygan2015",
+      "Parameterized Algorithms",
+      "Marek Cygan",
+      "Fedor V. Fomin",
+      "Łukasz Kowalik",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Marcin Pilipczuk",
+      "Michał Pilipczuk",
+      "Saket Saurabh",
+      "chkx2006",
+      "Strong Computational Lower Bounds via Parameterized Complexity",
+      "Jianer Chen",
+      "Xiuzhen Huang",
+      "Iyad A. Kanj",
+      "Ge Xia",
+      "szeider2026",
+      "After ETH: the k×k Clique Hypothesis",
+      "Stefan Szeider",
+      "df1995",
+      "Fixed-parameter tractability and completeness II: On completeness for W[1]",
+      "Rod G. Downey",
+      "Michael R. Fellows"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "w1"
+    ],
+    "family": "",
+    "id": "independent-set-treewidth",
+    "kind": "lower-bound-case",
+    "name": "Independent Set by treewidth",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "is-tw-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "is-tw-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "is-tw-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "effective",
+        "target": "is-tw-eth"
+      }
+    ],
+    "search": [
+      "Independent Set",
+      "Treewidth",
+      "Independent Set by treewidth",
+      "Independent Set",
+      "The intrinsic treewidth t of G.",
+      "Does G have at least k pairwise nonadjacent vertices?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "lms2011",
+      "Lower bounds based on the Exponential Time Hypothesis",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Saket Saurabh",
+      "df1995",
+      "Fixed-parameter tractability and completeness II: On completeness for W[1]",
+      "Rod G. Downey",
+      "Michael R. Fellows"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "sh",
+      "w1"
+    ],
+    "family": "",
+    "id": "independent-set-supplied-rank-decomposition",
+    "kind": "lower-bound-case",
+    "name": "Independent Set by width of a supplied rank decomposition",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "independent-set-supplied-rank-decomposition-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "independent-set-supplied-rank-decomposition-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "degree",
+        "target": "independent-set-supplied-rank-decomposition-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "effective",
+        "target": "independent-set-supplied-rank-decomposition-eth"
+      }
+    ],
+    "search": [
+      "Independent Set",
+      "Width of a supplied rank decomposition",
+      "Independent Set by width of a supplied rank decomposition",
+      "Independent Set",
+      "The actual width of the supplied rank decomposition, denoted by p. Cut rank is computed over the binary field.",
+      "Does G have at least k pairwise nonadjacent vertices?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "sh",
+      "Satisfiability Hypothesis",
+      "SH",
+      "SAT power index one",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "bkn2023-rankwidth",
+      "Tight Lower Bounds for Problems Parameterized by Rank-Width",
+      "Benjamin Bergougnoux",
+      "Tuukka Korhonen",
+      "Jesper Nederlof"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "sh",
+      "w1"
+    ],
+    "family": "",
+    "id": "independent-set-supplied-linear-layout",
+    "kind": "lower-bound-case",
+    "name": "Independent Set by width of a supplied vertex order",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "independent-set-supplied-linear-layout-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "independent-set-supplied-linear-layout-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "degree",
+        "target": "independent-set-supplied-linear-layout-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "effective",
+        "target": "independent-set-supplied-linear-layout-eth"
+      }
+    ],
+    "search": [
+      "Independent Set",
+      "Width of a supplied vertex order",
+      "Independent Set by width of a supplied vertex order",
+      "Independent Set",
+      "The maximum cut rank over prefixes of the supplied vertex order, denoted by p. Cut rank is computed over the binary field.",
+      "Does G have at least k pairwise nonadjacent vertices?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "sh",
+      "Satisfiability Hypothesis",
+      "SH",
+      "SAT power index one",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "bkn2023-rankwidth",
+      "Tight Lower Bounds for Problems Parameterized by Rank-Width",
+      "Benjamin Bergougnoux",
+      "Tuukka Korhonen",
+      "Jesper Nederlof"
+    ]
+  },
+  {
+    "aliases": [
+      "book-unit-square-independent-set-budget"
+    ],
+    "assumptions": [
+      "eth",
+      "kxk",
+      "w1"
+    ],
+    "family": "",
+    "id": "unit-square-independent-set-budget",
+    "kind": "lower-bound-case",
+    "name": "Independent Set of axis-parallel unit squares by solution budget",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "recovered",
+        "target": "unit-square-independent-set-budget-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "unit-square-independent-set-budget-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "unit-square-independent-set-budget-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "unit-square-independent-set-budget-eth"
+      }
+    ],
+    "search": [
+      "Independent Set of axis-parallel unit squares",
+      "Solution budget",
+      "Independent Set of axis-parallel unit squares by solution budget",
+      "Independent Set of axis-parallel unit squares",
+      "Solution budget.",
+      "Are there k listed objects that are pairwise disjoint?",
+      "W[1]-hardness",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "kxk",
+      "k × k Clique Hypothesis",
+      "Square Clique Hypothesis",
+      "k-by-k Clique Hypothesis",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "cygan2015",
+      "Parameterized Algorithms",
+      "Marek Cygan",
+      "Fedor V. Fomin",
+      "Łukasz Kowalik",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Marcin Pilipczuk",
+      "Michał Pilipczuk",
+      "Saket Saurabh",
+      "szeider2026",
+      "After ETH: the k×k Clique Hypothesis",
+      "Stefan Szeider",
+      "marx2005-geometric",
+      "Efficient Approximation Schemes for Geometric Problems?",
+      "Dániel Marx"
+    ]
+  },
+  {
+    "aliases": [
+      "book-unit-disk-independent-set-budget"
+    ],
+    "assumptions": [
+      "eth",
+      "kxk",
+      "w1"
+    ],
+    "family": "",
+    "id": "unit-disk-independent-set-budget",
+    "kind": "lower-bound-case",
+    "name": "Independent Set of unit disks by solution budget",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "recovered",
+        "target": "unit-disk-independent-set-budget-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "unit-disk-independent-set-budget-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "unit-disk-independent-set-budget-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "unit-disk-independent-set-budget-eth"
+      }
+    ],
+    "search": [
+      "Independent Set of unit disks",
+      "Solution budget",
+      "Independent Set of unit disks by solution budget",
+      "Independent Set of unit disks",
+      "Solution budget.",
+      "Are there k listed objects that are pairwise disjoint?",
+      "W[1]-hardness",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "kxk",
+      "k × k Clique Hypothesis",
+      "Square Clique Hypothesis",
+      "k-by-k Clique Hypothesis",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "cygan2015",
+      "Parameterized Algorithms",
+      "Marek Cygan",
+      "Fedor V. Fomin",
+      "Łukasz Kowalik",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Marcin Pilipczuk",
+      "Michał Pilipczuk",
+      "Saket Saurabh",
+      "szeider2026",
+      "After ETH: the k×k Clique Hypothesis",
+      "Stefan Szeider",
+      "marx2005-geometric",
+      "Efficient Approximation Schemes for Geometric Problems?",
+      "Dániel Marx"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "w1"
+    ],
+    "family": "",
+    "id": "integer-linear-programming-equations",
+    "kind": "lower-bound-case",
+    "name": "Integer Linear Programming Feasibility by number of equality constraints",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "ilp-equations-eth-klogk"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "ilp-equations-eth-klogk"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "ilp-equations-eth-klogk"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "ilp-equations-eth-klogk"
+      },
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "ilp-equations-eth-klogk-binary-coefficients"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "ilp-equations-eth-klogk-binary-coefficients"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "ilp-equations-eth-klogk-binary-coefficients"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "logarithmic",
+        "target": "ilp-equations-eth-klogk-binary-coefficients"
+      }
+    ],
+    "search": [
+      "Integer Linear Programming Feasibility",
+      "Number of equality constraints",
+      "Integer Linear Programming Feasibility by number of equality constraints",
+      "Integer Linear Programming Feasibility",
+      "The number of rows of A k.",
+      "Does there exist a vector x of ℓ nonnegative integers satisfying Ax=b?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "kpw2020-ilp",
+      "Tight Complexity Lower Bounds for Integer Linear Programming with Few Constraints",
+      "Dušan Knop",
+      "Michał Pilipczuk",
+      "Marcin Wrochna",
+      "lin2019",
+      "A Simple Gap-Producing Reduction for the Parameterized Set Cover Problem",
+      "Bingkai Lin"
+    ]
+  },
+  {
+    "aliases": [
+      "Square Clique",
+      "k-by-k Clique"
+    ],
+    "assumptions": [
+      "eth",
+      "kxk",
+      "sh"
+    ],
+    "family": "",
+    "id": "lms-square-clique",
+    "kind": "lower-bound-case",
+    "name": "k × k Clique",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "recovered",
+        "target": "square-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "square-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "degree",
+        "target": "square-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "square-eth"
+      }
+    ],
+    "search": [
+      "k × k Clique",
+      "Number of rows",
+      "k × k Clique",
+      "One vertex per row",
+      "Number of rows k",
+      "Does the graph contain a clique with one vertex from each row?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "kxk",
+      "k × k Clique Hypothesis",
+      "Square Clique Hypothesis",
+      "k-by-k Clique Hypothesis",
+      "sh",
+      "Satisfiability Hypothesis",
+      "SH",
+      "SAT power index one",
+      "lms2018",
+      "Slightly Superexponential Parameterized Problems",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Saket Saurabh",
+      "lms2011",
+      "Lower bounds based on the Exponential Time Hypothesis",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Saket Saurabh",
+      "szeider2026",
+      "After ETH: the k×k Clique Hypothesis",
+      "Stefan Szeider",
+      "sh26",
+      "ETH is Dead, Long Live SH",
+      "MIT Hardness Group",
+      "Josh Brunner",
+      "Erik D. Demaine",
+      "Fabian Frei",
+      "Timothy Gomez",
+      "Markus Hecher",
+      "Jeffery Li",
+      "Jayson Lynch"
+    ]
+  },
+  {
+    "aliases": [
+      "lms-listcolor-tw"
+    ],
+    "assumptions": [
+      "eth",
+      "kxk",
+      "w1"
+    ],
+    "family": "",
+    "id": "list-coloring-treewidth",
+    "kind": "lower-bound-case",
+    "name": "List Coloring by treewidth",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "recovered",
+        "target": "list-coloring-treewidth-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "list-coloring-treewidth-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "list-coloring-treewidth-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "list-coloring-treewidth-eth"
+      }
+    ],
+    "search": [
+      "List Coloring",
+      "Treewidth",
+      "List Coloring by treewidth",
+      "List Coloring",
+      "Treewidth.",
+      "Can each vertex be assigned a color from its list so that adjacent vertices receive distinct colors?",
+      "W[1]-hardness",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "kxk",
+      "k × k Clique Hypothesis",
+      "Square Clique Hypothesis",
+      "k-by-k Clique Hypothesis",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "cygan2015",
+      "Parameterized Algorithms",
+      "Marek Cygan",
+      "Fedor V. Fomin",
+      "Łukasz Kowalik",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Marcin Pilipczuk",
+      "Michał Pilipczuk",
+      "Saket Saurabh",
+      "lms2011",
+      "Lower bounds based on the Exponential Time Hypothesis",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Saket Saurabh",
+      "szeider2026",
+      "After ETH: the k×k Clique Hypothesis",
+      "Stefan Szeider"
+    ]
+  },
+  {
+    "aliases": [
+      "lms-longest-path-budget"
+    ],
+    "assumptions": [
+      "eth",
+      "sh"
+    ],
+    "family": "",
+    "id": "longest-path-budget",
+    "kind": "lower-bound-case",
+    "name": "Longest Path by path length",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "longest-path-budget-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "longest-path-budget-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "degree",
+        "target": "longest-path-budget-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "longest-path-budget-eth"
+      }
+    ],
+    "search": [
+      "Longest Path",
+      "Path length",
+      "Longest Path by path length",
+      "Longest Path",
+      "Path length.",
+      "Does G contain a path on at least k distinct vertices?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "sh",
+      "Satisfiability Hypothesis",
+      "SH",
+      "SAT power index one",
+      "lms2011",
+      "Lower bounds based on the Exponential Time Hypothesis",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Saket Saurabh",
+      "sh26",
+      "ETH is Dead, Long Live SH",
+      "MIT Hardness Group",
+      "Josh Brunner",
+      "Erik D. Demaine",
+      "Fabian Frei",
+      "Timothy Gomez",
+      "Markus Hecher",
+      "Jeffery Li",
+      "Jayson Lynch",
+      "ipz2001",
+      "Which Problems Have Strongly Exponential Complexity?",
+      "Russell Impagliazzo",
+      "Ramamohan Paturi",
+      "Francis Zane"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "w1"
+    ],
+    "family": "",
+    "id": "max-cut-clique-width",
+    "kind": "lower-bound-case",
+    "name": "Max Cut by clique-width",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "max-cut-clique-width-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "max-cut-clique-width-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "max-cut-clique-width-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "max-cut-clique-width-eth"
+      }
+    ],
+    "search": [
+      "Max Cut",
+      "Clique-width",
+      "Max Cut by clique-width",
+      "Max Cut",
+      "Clique-width.",
+      "Is there a bipartition of the vertices with at least b edges between its parts?",
+      "W[1]-hardness",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "fgls2014-clique-width",
+      "Almost Optimal Lower Bounds for Problems Parameterized by Clique-Width",
+      "Fedor V. Fomin",
+      "Petr A. Golovach",
+      "Daniel Lokshtanov",
+      "Saket Saurabh"
+    ]
+  },
+  {
+    "aliases": [
+      "lms-maxcut-cliquewidth"
+    ],
+    "assumptions": [
+      "eth",
+      "w1"
+    ],
+    "family": "",
+    "id": "max-cut-supplied-clique-width",
+    "kind": "lower-bound-case",
+    "name": "Max Cut by supplied expression width",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "max-cut-supplied-clique-width-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "max-cut-supplied-clique-width-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "max-cut-supplied-clique-width-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "max-cut-supplied-clique-width-eth"
+      }
+    ],
+    "search": [
+      "Max Cut",
+      "Supplied expression width",
+      "Max Cut by supplied expression width",
+      "Max Cut",
+      "Supplied expression width.",
+      "Is there a bipartition of the vertices with at least b edges between its parts?",
+      "W[1]-hardness",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "fgls2014-clique-width",
+      "Almost Optimal Lower Bounds for Problems Parameterized by Clique-Width",
+      "Fedor V. Fomin",
+      "Petr A. Golovach",
+      "Daniel Lokshtanov",
+      "Saket Saurabh"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth"
+    ],
+    "family": "",
+    "id": "maximum-common-induced-subgraph-vertex-cover",
+    "kind": "lower-bound-case",
+    "name": "Maximum Common Induced Subgraph by sum of the two vertex-cover sizes",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "maximum-common-induced-subgraph-vc-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "maximum-common-induced-subgraph-vc-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "maximum-common-induced-subgraph-vc-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "maximum-common-induced-subgraph-vc-eth"
+      }
+    ],
+    "search": [
+      "Maximum Common Induced Subgraph",
+      "Sum of the two vertex-cover sizes",
+      "Maximum Common Induced Subgraph by sum of the two vertex-cover sizes",
+      "Maximum Common Induced Subgraph",
+      "The sum of the minimum vertex-cover sizes of G₁ and G₂ k.",
+      "Do G₁ and G₂ have isomorphic induced subgraphs on at least r vertices?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "abs2017-mcis",
+      "On the Complexity of Various Parameterizations of Common Induced Subgraph Isomorphism",
+      "Faisal N. Abu-Khzam",
+      "Édouard Bonnet",
+      "Florian Sikora"
+    ]
+  },
+  {
+    "aliases": [
+      "book-maximum-cycle-cover-pw"
+    ],
+    "assumptions": [
+      "eth",
+      "kxk",
+      "w1"
+    ],
+    "family": "",
+    "id": "maximum-cycle-cover-supplied-pathwidth",
+    "kind": "lower-bound-case",
+    "name": "Maximum Cycle Cover by supplied pathwidth",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "recovered",
+        "target": "maximum-cycle-cover-supplied-pathwidth-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "maximum-cycle-cover-supplied-pathwidth-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "maximum-cycle-cover-supplied-pathwidth-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "effective",
+        "target": "maximum-cycle-cover-supplied-pathwidth-eth"
+      }
+    ],
+    "search": [
+      "Maximum Cycle Cover",
+      "Supplied pathwidth",
+      "Maximum Cycle Cover by supplied pathwidth",
+      "Maximum Cycle Cover",
+      "Supplied pathwidth.",
+      "Can all vertices be partitioned into at least r pairwise vertex-disjoint simple cycles?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "kxk",
+      "k × k Clique Hypothesis",
+      "Square Clique Hypothesis",
+      "k-by-k Clique Hypothesis",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "cygan2015",
+      "Parameterized Algorithms",
+      "Marek Cygan",
+      "Fedor V. Fomin",
+      "Łukasz Kowalik",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Marcin Pilipczuk",
+      "Michał Pilipczuk",
+      "Saket Saurabh",
+      "cygan-cut-count",
+      "Solving Connectivity Problems Parameterized by Treewidth in Single Exponential Time",
+      "Marek Cygan",
+      "Jesper Nederlof",
+      "Marcin Pilipczuk",
+      "Michał Pilipczuk",
+      "Johan M. M. van Rooij",
+      "Jakub Onufry Wojtaszczyk",
+      "szeider2026",
+      "After ETH: the k×k Clique Hypothesis",
+      "Stefan Szeider",
+      "df1995",
+      "Fixed-parameter tractability and completeness II: On completeness for W[1]",
+      "Rod G. Downey",
+      "Michael R. Fellows",
+      "lms2018",
+      "Slightly Superexponential Parameterized Problems",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Saket Saurabh"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "w1"
+    ],
+    "family": "",
+    "id": "minimum-bisection-clique-width",
+    "kind": "lower-bound-case",
+    "name": "Minimum Bisection by clique-width",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "minimum-bisection-clique-width-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "minimum-bisection-clique-width-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "minimum-bisection-clique-width-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "minimum-bisection-clique-width-eth"
+      }
+    ],
+    "search": [
+      "Minimum Bisection",
+      "Clique-width",
+      "Minimum Bisection by clique-width",
+      "Minimum Bisection",
+      "The clique-width of the input graph t.",
+      "Can the vertices be partitioned into two equally large parts with at most b edges between the parts?",
+      "W[1]-hardness",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "fgls2014-clique-width",
+      "Almost Optimal Lower Bounds for Problems Parameterized by Clique-Width",
+      "Fedor V. Fomin",
+      "Petr A. Golovach",
+      "Daniel Lokshtanov",
+      "Saket Saurabh",
+      "courcelle-olariu2000",
+      "Upper Bounds to the Clique Width of Graphs",
+      "Bruno Courcelle",
+      "Stephan Olariu"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "w1"
+    ],
+    "family": "",
+    "id": "minimum-bisection-supplied-clique-width",
+    "kind": "lower-bound-case",
+    "name": "Minimum Bisection by width of a supplied clique-width expression",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "minimum-bisection-supplied-clique-width-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "minimum-bisection-supplied-clique-width-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "minimum-bisection-supplied-clique-width-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "minimum-bisection-supplied-clique-width-eth"
+      }
+    ],
+    "search": [
+      "Minimum Bisection",
+      "Width of a supplied clique-width expression",
+      "Minimum Bisection by width of a supplied clique-width expression",
+      "Minimum Bisection",
+      "The width of the supplied clique-width expression t.",
+      "Can the vertices be partitioned into two equally large parts with at most b edges between the parts?",
+      "W[1]-hardness",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "fgls2014-clique-width",
+      "Almost Optimal Lower Bounds for Problems Parameterized by Clique-Width",
+      "Fedor V. Fomin",
+      "Petr A. Golovach",
+      "Daniel Lokshtanov",
+      "Saket Saurabh",
+      "courcelle-olariu2000",
+      "Upper Bounds to the Clique Width of Graphs",
+      "Bruno Courcelle",
+      "Stephan Olariu"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth"
+    ],
+    "family": "",
+    "id": "minimum-common-string-partition-length",
+    "kind": "lower-bound-case",
+    "name": "Minimum Common String Partition by common string length",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "minimum-common-string-partition-binary-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "minimum-common-string-partition-binary-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "minimum-common-string-partition-binary-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "minimum-common-string-partition-binary-eth"
+      },
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "minimum-common-string-partition-general-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "minimum-common-string-partition-general-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "minimum-common-string-partition-general-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "minimum-common-string-partition-general-eth"
+      }
+    ],
+    "search": [
+      "Minimum Common String Partition",
+      "Common string length",
+      "Minimum Common String Partition by common string length",
+      "Minimum Common String Partition",
+      "The length of either input string n.",
+      "Can the first string be partitioned into at most b nonempty contiguous blocks that can be permuted and concatenated to form the second string?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "cygan-et-al2021-mcsp",
+      "Minimum Common String Partition: Exact Algorithms",
+      "Marek Cygan",
+      "Alexander S. Kulikov",
+      "Ivan Mihajlin",
+      "Maksim Nikolaev",
+      "Grigory Reznikov"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth"
+    ],
+    "family": "",
+    "id": "minimum-fill-in-budget",
+    "kind": "lower-bound-case",
+    "name": "Minimum Fill-In by edge-addition budget",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "minimum-fill-in-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "minimum-fill-in-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "minimum-fill-in-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "minimum-fill-in-eth"
+      }
+    ],
+    "search": [
+      "Minimum Fill-In",
+      "Edge-addition budget",
+      "Minimum Fill-In by edge-addition budget",
+      "Minimum Fill-In",
+      "The maximum number of edges that may be added k.",
+      "Can at most k edges be added to G to make it chordal, so that every cycle on at least four vertices has a chord?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "cao-sandeep2020-fill-in",
+      "Minimum Fill-In: Inapproximability and Almost Tight Lower Bounds",
+      "Yixin Cao",
+      "R. B. Sandeep"
+    ]
+  },
+  {
+    "aliases": [
+      "minimum-k-cut-component-count"
+    ],
+    "assumptions": [
+      "eth",
+      "w1"
+    ],
+    "family": "",
+    "id": "minimum-k-cut-components",
+    "kind": "lower-bound-case",
+    "name": "Minimum k-Cut by number of required components",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "minimum-k-cut-components-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "minimum-k-cut-components-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "minimum-k-cut-components-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "minimum-k-cut-components-eth"
+      }
+    ],
+    "search": [
+      "Minimum k-Cut",
+      "Number of required components",
+      "Minimum k-Cut by number of required components",
+      "Minimum k-Cut",
+      "Number of required components.",
+      "Can edges of total weight at most b be deleted so that at least k connected components remain?",
+      "W[1]-hardness",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "lss2022-min-k-cut",
+      "A Parameterized Approximation Scheme for Min k-Cut",
+      "Daniel Lokshtanov",
+      "Saket Saurabh",
+      "Vaishali Surianarayanan",
+      "ccfhjkx2005",
+      "Tight Lower Bounds for Certain Parameterized NP-Hard Problems",
+      "Jianer Chen",
+      "Benny Chor",
+      "Mike Fellows",
+      "Xiuzhen Huang",
+      "David Juedes",
+      "Iyad A. Kanj",
+      "Ge Xia"
+    ]
+  },
+  {
+    "aliases": [
+      "lms-mc-clique-xp"
+    ],
+    "assumptions": [
+      "eth",
+      "kxk",
+      "sh",
+      "w1"
+    ],
+    "family": "",
+    "id": "multicolored-clique-colors",
+    "kind": "lower-bound-case",
+    "name": "Multicolored Clique by number of color classes",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "recovered",
+        "target": "multicolored-clique-colors-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "multicolored-clique-colors-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "multicolored-clique-colors-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "multicolored-clique-colors-eth"
+      }
+    ],
+    "search": [
+      "Multicolored Clique",
+      "Number of color classes",
+      "Multicolored Clique by number of color classes",
+      "Multicolored Clique",
+      "The number of color classes k.",
+      "Is there a clique containing exactly one vertex from each color class?",
+      "W[1]-hardness",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "kxk",
+      "k × k Clique Hypothesis",
+      "Square Clique Hypothesis",
+      "k-by-k Clique Hypothesis",
+      "sh",
+      "Satisfiability Hypothesis",
+      "SH",
+      "SAT power index one",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "lms2011",
+      "Lower bounds based on the Exponential Time Hypothesis",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Saket Saurabh",
+      "szeider2026",
+      "After ETH: the k×k Clique Hypothesis",
+      "Stefan Szeider",
+      "koutecky2026-hard-side",
+      "Lecture 2 – Proving the hard side",
+      "Martin Koutecký",
+      "df1995",
+      "Fixed-parameter tractability and completeness II: On completeness for W[1]",
+      "Rod G. Downey",
+      "Michael R. Fellows"
+    ]
+  },
+  {
+    "aliases": [
+      "lms-oct-tw"
+    ],
+    "assumptions": [
+      "eth",
+      "w1"
+    ],
+    "family": "",
+    "id": "odd-cycle-transversal-treewidth",
+    "kind": "lower-bound-case",
+    "name": "Odd Cycle Transversal by treewidth",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "odd-cycle-transversal-treewidth-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "odd-cycle-transversal-treewidth-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "odd-cycle-transversal-treewidth-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "effective",
+        "target": "odd-cycle-transversal-treewidth-eth"
+      }
+    ],
+    "search": [
+      "Odd Cycle Transversal",
+      "Treewidth",
+      "Odd Cycle Transversal by treewidth",
+      "Odd Cycle Transversal",
+      "Treewidth.",
+      "Can at most b vertices be deleted to make G bipartite?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "lms2011",
+      "Lower bounds based on the Exponential Time Hypothesis",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Saket Saurabh",
+      "df1995",
+      "Fixed-parameter tractability and completeness II: On completeness for W[1]",
+      "Rod G. Downey",
+      "Michael R. Fellows"
+    ]
+  },
+  {
+    "aliases": [
+      "book-odd-set-budget"
+    ],
+    "assumptions": [
+      "eth",
+      "kxk",
+      "w1"
+    ],
+    "family": "",
+    "id": "odd-set-budget",
+    "kind": "lower-bound-case",
+    "name": "Odd Set by solution budget",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "degree",
+        "target": "odd-set-budget-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "odd-set-budget-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "odd-set-budget-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "odd-set-budget-eth"
+      }
+    ],
+    "search": [
+      "Odd Set",
+      "Solution budget",
+      "Odd Set by solution budget",
+      "Odd Set",
+      "Solution budget.",
+      "Is there a set of at most k elements with odd intersection size with every listed subset?",
+      "W[1]-hardness",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "kxk",
+      "k × k Clique Hypothesis",
+      "Square Clique Hypothesis",
+      "k-by-k Clique Hypothesis",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "cygan2015",
+      "Parameterized Algorithms",
+      "Marek Cygan",
+      "Fedor V. Fomin",
+      "Łukasz Kowalik",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Marcin Pilipczuk",
+      "Michał Pilipczuk",
+      "Saket Saurabh",
+      "szeider2026",
+      "After ETH: the k×k Clique Hypothesis",
+      "Stefan Szeider"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth"
+    ],
+    "family": "",
+    "id": "planar-3-coloring-order",
+    "kind": "lower-bound-case",
+    "name": "Planar 3-Coloring by graph order",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "color-eth-planar"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "color-eth-planar"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "color-eth-planar"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "color-eth-planar"
+      }
+    ],
+    "search": [
+      "Planar 3-Coloring",
+      "Number of vertices",
+      "Planar 3-Coloring by graph order",
+      "Proper 3-colorability of a planar graph",
+      "Number of vertices n",
+      "Decide whether the graph admits a proper coloring with at most three colors.",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "cygan2015",
+      "Parameterized Algorithms",
+      "Marek Cygan",
+      "Fedor V. Fomin",
+      "Łukasz Kowalik",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Marcin Pilipczuk",
+      "Michał Pilipczuk",
+      "Saket Saurabh"
+    ]
+  },
+  {
+    "aliases": [
+      "survey-sh07"
+    ],
+    "assumptions": [
+      "eth",
+      "sh"
+    ],
+    "family": "",
+    "id": "planar-3sat-variables",
+    "kind": "lower-bound-case",
+    "name": "Planar 3SAT by number of variables",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "planar-3sat-variables-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "planar-3sat-variables-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "degree",
+        "target": "planar-3sat-variables-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "planar-3sat-variables-eth"
+      }
+    ],
+    "search": [
+      "Planar 3SAT",
+      "Number of variables",
+      "Planar 3SAT by number of variables",
+      "Planar 3SAT",
+      "Number of variables.",
+      "Does the formula have a satisfying assignment?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "sh",
+      "Satisfiability Hypothesis",
+      "SH",
+      "SAT power index one",
+      "lichtenstein1982",
+      "Planar Formulae and Their Uses",
+      "David Lichtenstein",
+      "cygan2015",
+      "Parameterized Algorithms",
+      "Marek Cygan",
+      "Fedor V. Fomin",
+      "Łukasz Kowalik",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Marcin Pilipczuk",
+      "Michał Pilipczuk",
+      "Saket Saurabh",
+      "sh26",
+      "ETH is Dead, Long Live SH",
+      "MIT Hardness Group",
+      "Josh Brunner",
+      "Erik D. Demaine",
+      "Fabian Frei",
+      "Timothy Gomez",
+      "Markus Hecher",
+      "Jeffery Li",
+      "Jayson Lynch"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "sh"
+    ],
+    "family": "",
+    "id": "planar-3sat-formula-size",
+    "kind": "lower-bound-case",
+    "name": "Planar 3SAT by number of variables plus clauses",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "planar-3sat-formula-size-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "planar-3sat-formula-size-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "degree",
+        "target": "planar-3sat-formula-size-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "planar-3sat-formula-size-eth"
+      }
+    ],
+    "search": [
+      "Planar 3SAT",
+      "Number of variables plus clauses",
+      "Planar 3SAT by number of variables plus clauses",
+      "Planar 3SAT",
+      "Number of variables plus clauses.",
+      "Does the formula have a satisfying assignment?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "sh",
+      "Satisfiability Hypothesis",
+      "SH",
+      "SAT power index one",
+      "cygan2015",
+      "Parameterized Algorithms",
+      "Marek Cygan",
+      "Fedor V. Fomin",
+      "Łukasz Kowalik",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Marcin Pilipczuk",
+      "Michał Pilipczuk",
+      "Saket Saurabh",
+      "lichtenstein1982",
+      "Planar Formulae and Their Uses",
+      "David Lichtenstein",
+      "szeider2026",
+      "After ETH: the k×k Clique Hypothesis",
+      "Stefan Szeider"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "sh"
+    ],
+    "family": "",
+    "id": "planar-dominating-set-budget",
+    "kind": "lower-bound-case",
+    "name": "Planar Dominating Set by dominating-set budget",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "planar-dominating-set-budget-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "planar-dominating-set-budget-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "degree",
+        "target": "planar-dominating-set-budget-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "planar-dominating-set-budget-eth"
+      }
+    ],
+    "search": [
+      "Planar Dominating Set",
+      "Dominating-set budget",
+      "Planar Dominating Set by dominating-set budget",
+      "Planar Dominating Set",
+      "The dominating-set budget k.",
+      "Is there a set of at most k vertices that meets the closed neighborhood of every vertex?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "sh",
+      "Satisfiability Hypothesis",
+      "SH",
+      "SAT power index one",
+      "cai-juedes2003",
+      "On the Existence of Subexponential Parameterized Algorithms",
+      "Liming Cai",
+      "David Juedes",
+      "cygan2015",
+      "Parameterized Algorithms",
+      "Marek Cygan",
+      "Fedor V. Fomin",
+      "Łukasz Kowalik",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Marcin Pilipczuk",
+      "Michał Pilipczuk",
+      "Saket Saurabh",
+      "szeider2026",
+      "After ETH: the k×k Clique Hypothesis",
+      "Stefan Szeider"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "sh"
+    ],
+    "family": "",
+    "id": "planar-dominating-set-vertices",
+    "kind": "lower-bound-case",
+    "name": "Planar Dominating Set by number of vertices",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "planar-dominating-set-vertices-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "planar-dominating-set-vertices-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "degree",
+        "target": "planar-dominating-set-vertices-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "planar-dominating-set-vertices-eth"
+      }
+    ],
+    "search": [
+      "Planar Dominating Set",
+      "Number of vertices",
+      "Planar Dominating Set by number of vertices",
+      "Planar Dominating Set",
+      "The number of vertices n.",
+      "Is there a set of at most k vertices that meets the closed neighborhood of every vertex?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "sh",
+      "Satisfiability Hypothesis",
+      "SH",
+      "SAT power index one",
+      "lms2011",
+      "Lower bounds based on the Exponential Time Hypothesis",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Saket Saurabh",
+      "cygan2015",
+      "Parameterized Algorithms",
+      "Marek Cygan",
+      "Fedor V. Fomin",
+      "Łukasz Kowalik",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Marcin Pilipczuk",
+      "Michał Pilipczuk",
+      "Saket Saurabh",
+      "szeider2026",
+      "After ETH: the k×k Clique Hypothesis",
+      "Stefan Szeider"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "w1"
+    ],
+    "family": "",
+    "id": "planar-edge-multiway-cut-terminals",
+    "kind": "lower-bound-case",
+    "name": "Planar Edge Multiway Cut by number of terminals",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "planar-edge-multiway-cut-terminals-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "planar-edge-multiway-cut-terminals-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "planar-edge-multiway-cut-terminals-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "planar-edge-multiway-cut-terminals-eth"
+      }
+    ],
+    "search": [
+      "Planar Edge Multiway Cut",
+      "Number of terminals",
+      "Planar Edge Multiway Cut by number of terminals",
+      "Planar Edge Multiway Cut",
+      "The number of terminals k.",
+      "Can edges of total weight at most the threshold be deleted so that no two terminals are connected?",
+      "W[1]-hardness",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "marx2012-multiway",
+      "A Tight Lower Bound for Planar Multiway Cut with Fixed Number of Terminals",
+      "Dániel Marx",
+      "cygan2015",
+      "Parameterized Algorithms",
+      "Marek Cygan",
+      "Fedor V. Fomin",
+      "Łukasz Kowalik",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Marcin Pilipczuk",
+      "Michał Pilipczuk",
+      "Saket Saurabh"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "sh"
+    ],
+    "family": "",
+    "id": "planar-feedback-vertex-set-budget",
+    "kind": "lower-bound-case",
+    "name": "Planar Feedback Vertex Set by deletion budget",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "planar-feedback-vertex-set-budget-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "planar-feedback-vertex-set-budget-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "degree",
+        "target": "planar-feedback-vertex-set-budget-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "planar-feedback-vertex-set-budget-eth"
+      }
+    ],
+    "search": [
+      "Planar Feedback Vertex Set",
+      "Deletion budget",
+      "Planar Feedback Vertex Set by deletion budget",
+      "Planar Feedback Vertex Set",
+      "The deletion budget k.",
+      "Can at most k vertices be deleted to make G acyclic?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "sh",
+      "Satisfiability Hypothesis",
+      "SH",
+      "SAT power index one",
+      "cygan2015",
+      "Parameterized Algorithms",
+      "Marek Cygan",
+      "Fedor V. Fomin",
+      "Łukasz Kowalik",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Marcin Pilipczuk",
+      "Michał Pilipczuk",
+      "Saket Saurabh",
+      "szeider2026",
+      "After ETH: the k×k Clique Hypothesis",
+      "Stefan Szeider"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "sh"
+    ],
+    "family": "",
+    "id": "planar-feedback-vertex-set-vertices",
+    "kind": "lower-bound-case",
+    "name": "Planar Feedback Vertex Set by number of vertices",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "planar-feedback-vertex-set-vertices-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "planar-feedback-vertex-set-vertices-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "degree",
+        "target": "planar-feedback-vertex-set-vertices-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "planar-feedback-vertex-set-vertices-eth"
+      }
+    ],
+    "search": [
+      "Planar Feedback Vertex Set",
+      "Number of vertices",
+      "Planar Feedback Vertex Set by number of vertices",
+      "Planar Feedback Vertex Set",
+      "The number of vertices n.",
+      "Can at most k vertices be deleted to make G acyclic?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "sh",
+      "Satisfiability Hypothesis",
+      "SH",
+      "SAT power index one",
+      "cygan2015",
+      "Parameterized Algorithms",
+      "Marek Cygan",
+      "Fedor V. Fomin",
+      "Łukasz Kowalik",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Marcin Pilipczuk",
+      "Michał Pilipczuk",
+      "Saket Saurabh",
+      "szeider2026",
+      "After ETH: the k×k Clique Hypothesis",
+      "Stefan Szeider"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "sh"
+    ],
+    "family": "",
+    "id": "planar-hamiltonian-cycle-vertices",
+    "kind": "lower-bound-case",
+    "name": "Planar Hamiltonian Cycle by number of vertices",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "planar-hamiltonian-cycle-vertices-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "planar-hamiltonian-cycle-vertices-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "degree",
+        "target": "planar-hamiltonian-cycle-vertices-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "planar-hamiltonian-cycle-vertices-eth"
+      }
+    ],
+    "search": [
+      "Planar Hamiltonian Cycle",
+      "Number of vertices",
+      "Planar Hamiltonian Cycle by number of vertices",
+      "Planar Hamiltonian Cycle",
+      "The number of vertices n.",
+      "Does G contain a cycle through every vertex?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "sh",
+      "Satisfiability Hypothesis",
+      "SH",
+      "SAT power index one",
+      "lms2011",
+      "Lower bounds based on the Exponential Time Hypothesis",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Saket Saurabh",
+      "cygan2015",
+      "Parameterized Algorithms",
+      "Marek Cygan",
+      "Fedor V. Fomin",
+      "Łukasz Kowalik",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Marcin Pilipczuk",
+      "Michał Pilipczuk",
+      "Saket Saurabh",
+      "sh26",
+      "ETH is Dead, Long Live SH",
+      "MIT Hardness Group",
+      "Josh Brunner",
+      "Erik D. Demaine",
+      "Fabian Frei",
+      "Timothy Gomez",
+      "Markus Hecher",
+      "Jeffery Li",
+      "Jayson Lynch"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "w1"
+    ],
+    "family": "",
+    "id": "planar-list-coloring-treewidth",
+    "kind": "lower-bound-case",
+    "name": "Planar List Coloring by intrinsic treewidth",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "planar-list-coloring-treewidth-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "planar-list-coloring-treewidth-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "planar-list-coloring-treewidth-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "planar-list-coloring-treewidth-eth"
+      }
+    ],
+    "search": [
+      "Planar List Coloring",
+      "Intrinsic treewidth",
+      "Planar List Coloring by intrinsic treewidth",
+      "Planar List Coloring",
+      "The intrinsic treewidth t.",
+      "Can each vertex be assigned a color from its list so that adjacent vertices have different colors?",
+      "W[1]-hardness",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "cygan2015",
+      "Parameterized Algorithms",
+      "Marek Cygan",
+      "Fedor V. Fomin",
+      "Łukasz Kowalik",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Marcin Pilipczuk",
+      "Michał Pilipczuk",
+      "Saket Saurabh"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "kxk",
+      "w1"
+    ],
+    "family": "",
+    "id": "planar-scattered-set-solution-size",
+    "kind": "lower-bound-case",
+    "name": "Planar Scattered Set by number of selected vertices",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "recovered",
+        "target": "planar-scattered-set-solution-size-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "planar-scattered-set-solution-size-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "planar-scattered-set-solution-size-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "planar-scattered-set-solution-size-eth"
+      }
+    ],
+    "search": [
+      "Planar Scattered Set",
+      "Number of selected vertices",
+      "Planar Scattered Set by number of selected vertices",
+      "Planar Scattered Set",
+      "The number of selected vertices k.",
+      "Are there k vertices whose pairwise graph distances are at least d?",
+      "W[1]-hardness",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "kxk",
+      "k × k Clique Hypothesis",
+      "Square Clique Hypothesis",
+      "k-by-k Clique Hypothesis",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "cygan2015",
+      "Parameterized Algorithms",
+      "Marek Cygan",
+      "Fedor V. Fomin",
+      "Łukasz Kowalik",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Marcin Pilipczuk",
+      "Michał Pilipczuk",
+      "Saket Saurabh",
+      "marx-pilipczuk-scattered",
+      "Optimal Parameterized Algorithms for Planar Facility Location Problems Using Voronoi Diagrams",
+      "Dániel Marx",
+      "Michał Pilipczuk",
+      "szeider2026",
+      "After ETH: the k×k Clique Hypothesis",
+      "Stefan Szeider"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "w1"
+    ],
+    "family": "",
+    "id": "planar-strongly-connected-steiner-subgraph-terminals",
+    "kind": "lower-bound-case",
+    "name": "Planar Strongly Connected Steiner Subgraph by number of terminals",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "planar-strongly-connected-steiner-subgraph-terminals-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "planar-strongly-connected-steiner-subgraph-terminals-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "planar-strongly-connected-steiner-subgraph-terminals-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "planar-strongly-connected-steiner-subgraph-terminals-eth"
+      }
+    ],
+    "search": [
+      "Planar Strongly Connected Steiner Subgraph",
+      "Number of terminals",
+      "Planar Strongly Connected Steiner Subgraph by number of terminals",
+      "Planar Strongly Connected Steiner Subgraph",
+      "The number of terminals k.",
+      "Is there a strongly connected subgraph containing the terminals whose total arc weight is at most the threshold?",
+      "W[1]-hardness",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "chitnis-feldmann-hajiaghayi-marx-scss",
+      "Tight Bounds for Planar Strongly Connected Steiner Subgraph with Fixed Number of Terminals (and Extensions)",
+      "Rajesh H. Chitnis",
+      "Andreas E. Feldmann",
+      "MohammadTaghi HajiAghayi",
+      "Dániel Marx",
+      "cygan2015",
+      "Parameterized Algorithms",
+      "Marek Cygan",
+      "Fedor V. Fomin",
+      "Łukasz Kowalik",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Marcin Pilipczuk",
+      "Michał Pilipczuk",
+      "Saket Saurabh"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "sh"
+    ],
+    "family": "",
+    "id": "planar-vertex-cover-order",
+    "kind": "lower-bound-case",
+    "name": "Planar Vertex Cover by graph order",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "pvc-order-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "pvc-order-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "degree",
+        "target": "pvc-order-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "pvc-order-eth"
+      }
+    ],
+    "search": [
+      "Planar Vertex Cover",
+      "Number of vertices",
+      "Planar Vertex Cover by graph order",
+      "Planar Vertex Cover",
+      "The number of vertices n of G.",
+      "Does G have a set of at most k vertices that includes an endpoint of every edge?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "sh",
+      "Satisfiability Hypothesis",
+      "SH",
+      "SAT power index one",
+      "cygan2015",
+      "Parameterized Algorithms",
+      "Marek Cygan",
+      "Fedor V. Fomin",
+      "Łukasz Kowalik",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Marcin Pilipczuk",
+      "Michał Pilipczuk",
+      "Saket Saurabh",
+      "lms2011",
+      "Lower bounds based on the Exponential Time Hypothesis",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Saket Saurabh",
+      "szeider2026",
+      "After ETH: the k×k Clique Hypothesis",
+      "Stefan Szeider"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "sh"
+    ],
+    "family": "",
+    "id": "planar-vertex-cover-budget",
+    "kind": "lower-bound-case",
+    "name": "Planar Vertex Cover by solution size",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "pvc-budget-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "pvc-budget-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "degree",
+        "target": "pvc-budget-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "pvc-budget-eth"
+      }
+    ],
+    "search": [
+      "Planar Vertex Cover",
+      "Solution size",
+      "Planar Vertex Cover by solution size",
+      "Planar Vertex Cover",
+      "The input threshold k.",
+      "Does G have a set of at most k vertices that includes an endpoint of every edge?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "sh",
+      "Satisfiability Hypothesis",
+      "SH",
+      "SAT power index one",
+      "cai-juedes2003",
+      "On the Existence of Subexponential Parameterized Algorithms",
+      "Liming Cai",
+      "David Juedes",
+      "lms2011",
+      "Lower bounds based on the Exponential Time Hypothesis",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Saket Saurabh",
+      "cygan2015",
+      "Parameterized Algorithms",
+      "Marek Cygan",
+      "Fedor V. Fomin",
+      "Łukasz Kowalik",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Marcin Pilipczuk",
+      "Michał Pilipczuk",
+      "Saket Saurabh",
+      "sh26",
+      "ETH is Dead, Long Live SH",
+      "MIT Hardness Group",
+      "Josh Brunner",
+      "Erik D. Demaine",
+      "Fabian Frei",
+      "Timothy Gomez",
+      "Markus Hecher",
+      "Jeffery Li",
+      "Jayson Lynch"
+    ]
+  },
+  {
+    "aliases": [
+      "QBF",
+      "QSAT"
+    ],
+    "assumptions": [
+      "eth"
+    ],
+    "family": "",
+    "id": "qbf-fixed-block-width",
+    "kind": "lower-bound-case",
+    "name": "Quantified Boolean satisfiability",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "qbf-eth-primal-treewidth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "qbf-eth-primal-treewidth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "qbf-eth-primal-treewidth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "qbf-eth-primal-treewidth"
+      }
+    ],
+    "search": [
+      "Quantified Boolean satisfiability",
+      "Primal treewidth at fixed quantifier depth",
+      "Quantified Boolean satisfiability",
+      "Closed prenex quantified Boolean formulas with a fixed number of alternating quantifier blocks",
+      "Treewidth t of the primal graph",
+      "Decide whether the formula is true.",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "fhp2020",
+      "Lower Bounds for QBFs of Bounded Treewidth",
+      "Johannes K. Fichte",
+      "Markus Hecher",
+      "Andreas Pfandler"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "kxk",
+      "w1"
+    ],
+    "family": "",
+    "id": "scattered-set-solution-size",
+    "kind": "lower-bound-case",
+    "name": "Scattered Set by number of selected vertices",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "recovered",
+        "target": "scattered-set-solution-size-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "scattered-set-solution-size-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "scattered-set-solution-size-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "scattered-set-solution-size-eth"
+      }
+    ],
+    "search": [
+      "Scattered Set",
+      "Number of selected vertices",
+      "Scattered Set by number of selected vertices",
+      "Scattered Set",
+      "The number of selected vertices k.",
+      "Are there k vertices whose pairwise graph distances are at least d?",
+      "W[1]-hardness",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "kxk",
+      "k × k Clique Hypothesis",
+      "Square Clique Hypothesis",
+      "k-by-k Clique Hypothesis",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "cygan2015",
+      "Parameterized Algorithms",
+      "Marek Cygan",
+      "Fedor V. Fomin",
+      "Łukasz Kowalik",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Marcin Pilipczuk",
+      "Michał Pilipczuk",
+      "Saket Saurabh",
+      "szeider2026",
+      "After ETH: the k×k Clique Hypothesis",
+      "Stefan Szeider",
+      "df1995",
+      "Fixed-parameter tractability and completeness II: On completeness for W[1]",
+      "Rod G. Downey",
+      "Michael R. Fellows"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "w1"
+    ],
+    "family": "",
+    "id": "set-cover-budget",
+    "kind": "lower-bound-case",
+    "name": "Set Cover by cover budget",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "set-cover-budget-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "set-cover-budget-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "set-cover-budget-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "set-cover-budget-eth"
+      }
+    ],
+    "search": [
+      "Set Cover",
+      "Cover budget",
+      "Set Cover by cover budget",
+      "Set Cover",
+      "The cover budget k.",
+      "Can at most k of the given sets cover U?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "chkx2006",
+      "Strong Computational Lower Bounds via Parameterized Complexity",
+      "Jianer Chen",
+      "Xiuzhen Huang",
+      "Iyad A. Kanj",
+      "Ge Xia",
+      "ccfhjkx2005",
+      "Tight Lower Bounds for Certain Parameterized NP-Hard Problems",
+      "Jianer Chen",
+      "Benny Chor",
+      "Mike Fellows",
+      "Xiuzhen Huang",
+      "David Juedes",
+      "Iyad A. Kanj",
+      "Ge Xia"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth"
+    ],
+    "family": "",
+    "id": "steiner-tree-terminals",
+    "kind": "lower-bound-case",
+    "name": "Steiner Tree by terminal count",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "steiner-tree-terminals-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "steiner-tree-terminals-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "steiner-tree-terminals-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "steiner-tree-terminals-eth"
+      }
+    ],
+    "search": [
+      "Steiner Tree",
+      "Number of terminals",
+      "Steiner Tree by terminal count",
+      "Steiner Tree",
+      "The number k of distinct vertices in the terminal set T.",
+      "Does G have a tree spanning all terminals in T that uses at most b edges?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "marx-pilipczuk-pilipczuk2018-steiner",
+      "On Subexponential Parameterized Algorithms for Steiner Tree and Directed Subset TSP on Planar Graphs",
+      "Dániel Marx",
+      "Marcin Pilipczuk",
+      "Michał Pilipczuk"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "kxk",
+      "w1"
+    ],
+    "family": "",
+    "id": "strongly-connected-steiner-subgraph-solution-vertices",
+    "kind": "lower-bound-case",
+    "name": "Strongly Connected Steiner Subgraph by solution vertex budget",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "degree",
+        "target": "strongly-connected-steiner-subgraph-solution-vertices-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "strongly-connected-steiner-subgraph-solution-vertices-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "strongly-connected-steiner-subgraph-solution-vertices-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "strongly-connected-steiner-subgraph-solution-vertices-eth"
+      }
+    ],
+    "search": [
+      "Strongly Connected Steiner Subgraph",
+      "Solution vertex budget",
+      "Strongly Connected Steiner Subgraph by solution vertex budget",
+      "Strongly Connected Steiner Subgraph",
+      "The solution vertex budget k.",
+      "Is there a strongly connected subgraph containing the terminals with at most k vertices in total?",
+      "W[1]-hardness",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "kxk",
+      "k × k Clique Hypothesis",
+      "Square Clique Hypothesis",
+      "k-by-k Clique Hypothesis",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "cygan2015",
+      "Parameterized Algorithms",
+      "Marek Cygan",
+      "Fedor V. Fomin",
+      "Łukasz Kowalik",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Marcin Pilipczuk",
+      "Michał Pilipczuk",
+      "Saket Saurabh",
+      "szeider2026",
+      "After ETH: the k×k Clique Hypothesis",
+      "Stefan Szeider"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "kxk",
+      "w1"
+    ],
+    "family": "",
+    "id": "subgraph-isomorphism-pattern-edges",
+    "kind": "lower-bound-case",
+    "name": "Subgraph Isomorphism by number of pattern edges",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "degree",
+        "target": "subgraph-isomorphism-pattern-edges-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "subgraph-isomorphism-pattern-edges-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "subgraph-isomorphism-pattern-edges-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "subgraph-isomorphism-pattern-edges-eth"
+      }
+    ],
+    "search": [
+      "Subgraph Isomorphism",
+      "Number of pattern edges",
+      "Subgraph Isomorphism by number of pattern edges",
+      "Subgraph Isomorphism",
+      "The number of pattern edges k.",
+      "Does an injective vertex map from H to G preserve every edge of H?",
+      "W[1]-hardness",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "kxk",
+      "k × k Clique Hypothesis",
+      "Square Clique Hypothesis",
+      "k-by-k Clique Hypothesis",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "marx2010-treewidth",
+      "Can You Beat Treewidth?",
+      "Dániel Marx",
+      "lms2011",
+      "Lower bounds based on the Exponential Time Hypothesis",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Saket Saurabh",
+      "cygan2015",
+      "Parameterized Algorithms",
+      "Marek Cygan",
+      "Fedor V. Fomin",
+      "Łukasz Kowalik",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Marcin Pilipczuk",
+      "Michał Pilipczuk",
+      "Saket Saurabh",
+      "szeider2026",
+      "After ETH: the k×k Clique Hypothesis",
+      "Stefan Szeider"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "sh"
+    ],
+    "family": "",
+    "id": "subset-sum-item-count",
+    "kind": "lower-bound-case",
+    "name": "Subset Sum by item count",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "subset-sum-item-count-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "subset-sum-item-count-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "degree",
+        "target": "subset-sum-item-count-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "subset-sum-item-count-eth"
+      }
+    ],
+    "search": [
+      "Subset Sum",
+      "Number of items",
+      "Subset Sum by item count",
+      "Subset Sum",
+      "The number p of indexed input items.",
+      "Does a subset of the item indices have values summing to T?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "sh",
+      "Satisfiability Hypothesis",
+      "SH",
+      "SAT power index one",
+      "etscheid-kratsch-mnich-rog-lin2017",
+      "Polynomial kernels for weighted problems",
+      "Michael Etscheid",
+      "Stefan Kratsch",
+      "Matthias Mnich",
+      "Heiko Röglin",
+      "nederlof-swennenhuis2022",
+      "On the Fine-grained Parameterized Complexity of Partial Scheduling to Minimize the Makespan",
+      "Jesper Nederlof",
+      "Céline M. F. Swennenhuis",
+      "sh26",
+      "ETH is Dead, Long Live SH",
+      "MIT Hardness Group",
+      "Josh Brunner",
+      "Erik D. Demaine",
+      "Fabian Frei",
+      "Timothy Gomez",
+      "Markus Hecher",
+      "Jeffery Li",
+      "Jayson Lynch"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth"
+    ],
+    "family": "",
+    "id": "three-dimensional-matching-part-size",
+    "kind": "lower-bound-case",
+    "name": "Three-Dimensional Matching by common part size",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "three-dimensional-matching-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "three-dimensional-matching-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "three-dimensional-matching-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "three-dimensional-matching-eth"
+      }
+    ],
+    "search": [
+      "Three-Dimensional Matching",
+      "Common part size",
+      "Three-Dimensional Matching by common part size",
+      "Three-Dimensional Matching",
+      "The number of elements in each of the three sets q.",
+      "Are there q triples in T that together use every element of X, Y and Z exactly once?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "bovz2016-vector",
+      "Approximating Vector Scheduling: Almost Matching Upper and Lower Bounds",
+      "Nikhil Bansal",
+      "Tim Oosterwijk",
+      "Tjark Vredeveld",
+      "Ruben van der Zwaan"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "sh"
+    ],
+    "family": "",
+    "id": "treewidth-computation-order",
+    "kind": "lower-bound-case",
+    "name": "Treewidth computation by graph order",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "treewidth-order-eth-positive-rate"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "treewidth-order-eth-positive-rate"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "degree",
+        "target": "treewidth-order-eth-positive-rate"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "treewidth-order-eth-positive-rate"
+      }
+    ],
+    "search": [
+      "Treewidth computation",
+      "Number of vertices",
+      "Treewidth computation by graph order",
+      "Treewidth computation",
+      "The number of vertices n of G.",
+      "Does G have treewidth at most k?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "sh",
+      "Satisfiability Hypothesis",
+      "SH",
+      "SAT power index one",
+      "bonnet2026-treewidth",
+      "Treewidth Inapproximability and Tight ETH Lower Bound",
+      "Édouard Bonnet",
+      "sh26",
+      "ETH is Dead, Long Live SH",
+      "MIT Hardness Group",
+      "Josh Brunner",
+      "Erik D. Demaine",
+      "Fabian Frei",
+      "Timothy Gomez",
+      "Markus Hecher",
+      "Jeffery Li",
+      "Jayson Lynch"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "w1"
+    ],
+    "family": "",
+    "id": "unary-bin-packing-bins",
+    "kind": "lower-bound-case",
+    "name": "Unary Bin Packing by number of bins",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "unary-bin-packing-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "unary-bin-packing-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "unary-bin-packing-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "unary-bin-packing-eth"
+      },
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "unary-bin-packing-eth-items-capacity"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "unary-bin-packing-eth-items-capacity"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "unary-bin-packing-eth-items-capacity"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "unary-bin-packing-eth-items-capacity"
+      }
+    ],
+    "search": [
+      "Unary Bin Packing",
+      "Number of bins",
+      "Unary Bin Packing by number of bins",
+      "Unary Bin Packing",
+      "The maximum number of available bins k.",
+      "Can all items be assigned to at most k bins so that the sum of sizes in each bin is at most T?",
+      "W[1]-hardness",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "jkms2013-bin-packing",
+      "Bin Packing with Fixed Number of Bins Revisited",
+      "Klaus Jansen",
+      "Stefan Kratsch",
+      "Dániel Marx",
+      "Ildikó Schlotter",
+      "bdw2026-bin-packing",
+      "Tight (S)ETH-Based Lower Bounds for Pseudopolynomial Algorithms for Bin Packing and Multi-machine Scheduling",
+      "Karl Bringmann",
+      "Anita Dürr",
+      "Karol Węgrzycki"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "w1"
+    ],
+    "family": "",
+    "id": "unit-disk-dominating-set-budget",
+    "kind": "lower-bound-case",
+    "name": "Unit Disk Dominating Set by dominating-set budget",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "unit-disk-dominating-set-budget-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "unit-disk-dominating-set-budget-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "unit-disk-dominating-set-budget-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "unit-disk-dominating-set-budget-eth"
+      }
+    ],
+    "search": [
+      "Unit Disk Dominating Set",
+      "Dominating-set budget",
+      "Unit Disk Dominating Set by dominating-set budget",
+      "Unit Disk Dominating Set",
+      "The dominating-set budget k.",
+      "Is there a set of at most k vertices that meets every closed neighborhood?",
+      "W[1]-hardness",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "lms2011",
+      "Lower bounds based on the Exponential Time Hypothesis",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Saket Saurabh",
+      "marx2006-geometric",
+      "Parameterized Complexity of Independence and Domination on Geometric Graphs",
+      "Dániel Marx"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "sh"
+    ],
+    "family": "",
+    "id": "vertex-cover-order",
+    "kind": "lower-bound-case",
+    "name": "Vertex Cover by graph order",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "equivalence",
+        "target": "vc-order-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "equivalence",
+        "target": "vc-order-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "degree",
+        "target": "vc-order-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "equivalence",
+        "target": "vc-order-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "equivalence",
+        "target": "vc-order-eth"
+      }
+    ],
+    "search": [
+      "Vertex Cover",
+      "Number of vertices",
+      "Vertex Cover by graph order",
+      "Vertex Cover",
+      "The number of vertices n of G.",
+      "Does G have a set of at most k vertices that includes an endpoint of every edge?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "sh",
+      "Satisfiability Hypothesis",
+      "SH",
+      "SAT power index one",
+      "lms2011",
+      "Lower bounds based on the Exponential Time Hypothesis",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Saket Saurabh",
+      "sh26",
+      "ETH is Dead, Long Live SH",
+      "MIT Hardness Group",
+      "Josh Brunner",
+      "Erik D. Demaine",
+      "Fabian Frei",
+      "Timothy Gomez",
+      "Markus Hecher",
+      "Jeffery Li",
+      "Jayson Lynch"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "sh"
+    ],
+    "family": "",
+    "id": "vertex-cover-budget",
+    "kind": "lower-bound-case",
+    "name": "Vertex Cover by solution size",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "equivalence",
+        "target": "vc-budget-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "equivalence",
+        "target": "vc-budget-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "degree",
+        "target": "vc-budget-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "equivalence",
+        "target": "vc-budget-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "equivalence",
+        "target": "vc-budget-eth"
+      }
+    ],
+    "search": [
+      "Vertex Cover",
+      "Solution size",
+      "Vertex Cover by solution size",
+      "Vertex Cover",
+      "The input threshold k.",
+      "Does G have a set of at most k vertices that includes an endpoint of every edge?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "sh",
+      "Satisfiability Hypothesis",
+      "SH",
+      "SAT power index one",
+      "cai-juedes2003",
+      "On the Existence of Subexponential Parameterized Algorithms",
+      "Liming Cai",
+      "David Juedes",
+      "lms2011",
+      "Lower bounds based on the Exponential Time Hypothesis",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Saket Saurabh",
+      "cygan2015",
+      "Parameterized Algorithms",
+      "Marek Cygan",
+      "Fedor V. Fomin",
+      "Łukasz Kowalik",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Marcin Pilipczuk",
+      "Michał Pilipczuk",
+      "Saket Saurabh",
+      "sh26",
+      "ETH is Dead, Long Live SH",
+      "MIT Hardness Group",
+      "Josh Brunner",
+      "Erik D. Demaine",
+      "Fabian Frei",
+      "Timothy Gomez",
+      "Markus Hecher",
+      "Jeffery Li",
+      "Jayson Lynch"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "sh",
+      "w1"
+    ],
+    "family": "",
+    "id": "vertex-disjoint-paths-treewidth",
+    "kind": "lower-bound-case",
+    "name": "Vertex-Disjoint Paths by treewidth",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "vdp-tw-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "vdp-tw-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "degree",
+        "target": "vdp-tw-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "effective",
+        "target": "vdp-tw-eth"
+      }
+    ],
+    "search": [
+      "Vertex-Disjoint Paths",
+      "Treewidth",
+      "Vertex-Disjoint Paths by treewidth",
+      "Undirected Vertex-Disjoint Paths",
+      "The intrinsic treewidth t of G.",
+      "Is there one path joining the endpoints of each demand pair, with all the paths pairwise vertex-disjoint?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "sh",
+      "Satisfiability Hypothesis",
+      "SH",
+      "SAT power index one",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "lms2018",
+      "Slightly Superexponential Parameterized Problems",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Saket Saurabh",
+      "lms2011",
+      "Lower bounds based on the Exponential Time Hypothesis",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Saket Saurabh",
+      "sh26",
+      "ETH is Dead, Long Live SH",
+      "MIT Hardness Group",
+      "Josh Brunner",
+      "Erik D. Demaine",
+      "Fabian Frei",
+      "Timothy Gomez",
+      "Markus Hecher",
+      "Jeffery Li",
+      "Jayson Lynch",
+      "df1995",
+      "Fixed-parameter tractability and completeness II: On completeness for W[1]",
+      "Rod G. Downey",
+      "Michael R. Fellows"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "kxk",
+      "w1"
+    ],
+    "family": "",
+    "id": "vertex-disjoint-paths-supplied-pathwidth",
+    "kind": "lower-bound-case",
+    "name": "Vertex-Disjoint Paths by width of a supplied path decomposition",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "recovered",
+        "target": "vdp-pw-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "vdp-pw-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "vdp-pw-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "effective",
+        "target": "vdp-pw-eth"
+      }
+    ],
+    "search": [
+      "Vertex-Disjoint Paths",
+      "Width of a supplied path decomposition",
+      "Vertex-Disjoint Paths by width of a supplied path decomposition",
+      "Undirected Vertex-Disjoint Paths",
+      "The width p of the supplied path decomposition.",
+      "Is there one path joining the endpoints of each demand pair, with all the paths pairwise vertex-disjoint?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "kxk",
+      "k × k Clique Hypothesis",
+      "Square Clique Hypothesis",
+      "k-by-k Clique Hypothesis",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "lms2018",
+      "Slightly Superexponential Parameterized Problems",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Saket Saurabh",
+      "cygan2015",
+      "Parameterized Algorithms",
+      "Marek Cygan",
+      "Fedor V. Fomin",
+      "Łukasz Kowalik",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Marcin Pilipczuk",
+      "Michał Pilipczuk",
+      "Saket Saurabh",
+      "szeider2026",
+      "After ETH: the k×k Clique Hypothesis",
+      "Stefan Szeider",
+      "df1995",
+      "Fixed-parameter tractability and completeness II: On completeness for W[1]",
+      "Rod G. Downey",
+      "Michael R. Fellows"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "w1"
+    ],
+    "family": "",
+    "id": "weighted-cnf-sat-weight",
+    "kind": "lower-bound-case",
+    "name": "Weighted CNF SAT by required satisfying weight",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "weighted-cnf-sat-weight-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "weighted-cnf-sat-weight-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "weighted-cnf-sat-weight-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "weighted-cnf-sat-weight-eth"
+      }
+    ],
+    "search": [
+      "Weighted CNF SAT",
+      "Required satisfying weight",
+      "Weighted CNF SAT by required satisfying weight",
+      "Weighted CNF SAT",
+      "The required satisfying weight k.",
+      "Can exactly k variables be set to true in a satisfying assignment?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "chkx2006",
+      "Strong Computational Lower Bounds via Parameterized Complexity",
+      "Jianer Chen",
+      "Xiuzhen Huang",
+      "Iyad A. Kanj",
+      "Ge Xia",
+      "ccfhjkx2005",
+      "Tight Lower Bounds for Certain Parameterized NP-Hard Problems",
+      "Jianer Chen",
+      "Benny Chor",
+      "Mike Fellows",
+      "Xiuzhen Huang",
+      "David Juedes",
+      "Iyad A. Kanj",
+      "Ge Xia"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "w1"
+    ],
+    "family": "",
+    "id": "weighted-fixed-width-cnf-sat-weight",
+    "kind": "lower-bound-case",
+    "name": "Weighted Fixed-Width CNF SAT by required satisfying weight",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "weighted-fixed-width-cnf-sat-weight-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "weighted-fixed-width-cnf-sat-weight-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "weighted-fixed-width-cnf-sat-weight-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "weighted-fixed-width-cnf-sat-weight-eth"
+      }
+    ],
+    "search": [
+      "Weighted Fixed-Width CNF SAT",
+      "Required satisfying weight",
+      "Weighted Fixed-Width CNF SAT by required satisfying weight",
+      "Weighted Fixed-Width CNF SAT",
+      "The required satisfying weight k.",
+      "Can exactly k variables be set to true in a satisfying assignment?",
+      "W[1]-hardness",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "chkx2006",
+      "Strong Computational Lower Bounds via Parameterized Complexity",
+      "Jianer Chen",
+      "Xiuzhen Huang",
+      "Iyad A. Kanj",
+      "Ge Xia",
+      "ccfhjkx2005",
+      "Tight Lower Bounds for Certain Parameterized NP-Hard Problems",
+      "Jianer Chen",
+      "Benny Chor",
+      "Mike Fellows",
+      "Xiuzhen Huang",
+      "David Juedes",
+      "Iyad A. Kanj",
+      "Ge Xia"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "w1"
+    ],
+    "family": "",
+    "id": "weighted-normalized-depth-t-circuit-weight",
+    "kind": "lower-bound-case",
+    "name": "Weighted normalized circuit SAT by weight",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "nc-eth-full"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "nc-eth-full"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "nc-eth-full"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "nc-eth-full"
+      }
+    ],
+    "search": [
+      "Weighted normalized circuit satisfiability",
+      "Assignment weight at fixed depth",
+      "Weighted normalized circuit SAT by weight",
+      "Weighted satisfiability of Π_t circuits at every separately fixed t≥2",
+      "Exact assignment weight k, with fixed normalized depth t",
+      "Decide whether exactly k input variables can be set to true to satisfy the circuit.",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "chkx2005",
+      "W-Hardness under Linear FPT-Reductions: Structural Properties and Further Applications",
+      "Jianer Chen",
+      "Xiuzhen Huang",
+      "Iyad A. Kanj",
+      "Ge Xia",
+      "ccfhjkx2005",
+      "Tight Lower Bounds for Certain Parameterized NP-Hard Problems",
+      "Jianer Chen",
+      "Benny Chor",
+      "Mike Fellows",
+      "Xiuzhen Huang",
+      "David Juedes",
+      "Iyad A. Kanj",
+      "Ge Xia"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "w1"
+    ],
+    "family": "",
+    "id": "weighted-tardy-jobs-processing-times",
+    "kind": "lower-bound-case",
+    "name": "Weighted Number of Tardy Jobs on One Machine by number of distinct processing times",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "weighted-tardy-jobs-processing-times-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "weighted-tardy-jobs-processing-times-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "weighted-tardy-jobs-processing-times-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "weighted-tardy-jobs-processing-times-eth"
+      }
+    ],
+    "search": [
+      "Weighted Number of Tardy Jobs on One Machine",
+      "Number of distinct processing times",
+      "Weighted Number of Tardy Jobs on One Machine by number of distinct processing times",
+      "Weighted Number of Tardy Jobs on One Machine",
+      "The number of distinct processing times in the input k.",
+      "Can all jobs be run without preemption on one machine starting at time zero, so that the total weight of jobs finishing after their due dates is at most the threshold?",
+      "W[1]-hardness",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "hh2026-tardy-jobs",
+      "Minimizing the Weighted Number of Tardy Jobs is W[1]-hard",
+      "Klaus Heeger",
+      "Danny Hermelin"
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "w1"
+    ],
+    "family": "",
+    "id": "weighted-tardy-jobs-weights",
+    "kind": "lower-bound-case",
+    "name": "Weighted Number of Tardy Jobs on One Machine by number of distinct weights",
+    "recoveries": [
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "weighted-tardy-jobs-weights-eth"
+      },
+      {
+        "hypothesis": "np_qp",
+        "status": "unresolved",
+        "target": "weighted-tardy-jobs-weights-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "weighted-tardy-jobs-weights-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "weighted-tardy-jobs-weights-eth"
+      }
+    ],
+    "search": [
+      "Weighted Number of Tardy Jobs on One Machine",
+      "Number of distinct weights",
+      "Weighted Number of Tardy Jobs on One Machine by number of distinct weights",
+      "Weighted Number of Tardy Jobs on One Machine",
+      "The number of distinct weights in the input k.",
+      "Can all jobs be run without preemption on one machine starting at time zero, so that the total weight of jobs finishing after their due dates is at most the threshold?",
+      "W[1]-hardness",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "hh2026-tardy-jobs",
+      "Minimizing the Weighted Number of Tardy Jobs is W[1]-hard",
+      "Klaus Heeger",
+      "Danny Hermelin"
+    ]
+  }
+]

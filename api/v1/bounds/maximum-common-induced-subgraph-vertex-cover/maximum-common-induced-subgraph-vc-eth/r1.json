@@ -1,0 +1,57 @@
+{
+  "assessments": {
+    "eth": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unassessed"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "maximum-common-induced-subgraph-vc-eth",
+  "inputConditions": [],
+  "inputFactor": "N^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [],
+  "reader": {
+    "explanation": "Corollary 13 gives the parameter dependence. Theorem 12 uses a reduction of polynomial size in the source clique parameter, so adding a fixed polynomial input factor preserves the contradiction.",
+    "label": "Subexponential bound in k log k",
+    "revision": 1,
+    "title": "Subexponential bound in k log k under ETH"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "2^(o(k log₂ k)) N^(O(1))",
+  "runtimeSymbols": [
+    "k",
+    "N"
+  ],
+  "sources": [
+    {
+      "editionId": "journal",
+      "locator": "Theorem 12, pp. 74–75, and Corollary 13, p. 76",
+      "paperId": "abs2017-mcis",
+      "placement": "statement",
+      "role": "published lower bound"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm solves Maximum Common Induced Subgraph within the stated running time.",
+  "status": "established",
+  "supported": true
+}

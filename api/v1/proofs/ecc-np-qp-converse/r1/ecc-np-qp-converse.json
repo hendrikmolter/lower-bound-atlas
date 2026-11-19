@@ -1,0 +1,24 @@
+{
+  "authorship": {
+    "authors": [
+      "Atlas"
+    ],
+    "kind": "ai",
+    "origin": "atlas"
+  },
+  "dependencies": [],
+  "pdf": "proofs/ecc-np-qp-converse.pdf",
+  "proofId": "ecc-np-qp-converse",
+  "revision": 1,
+  "source": "proofs/ecc-np-qp-converse.tex",
+  "theorem": {
+    "destination": "ecc-np-qp-converse",
+    "label": "ecc-np-qp-converse",
+    "number": "1",
+    "reviewIds": [
+      "ecc-np-qp-converse-independent"
+    ],
+    "statement": "If Edge Clique Cover has no deterministic algorithm running in time 2^(k^(O(1))) n^(O(1)), then NP ⊈ QP.",
+    "supports": true
+  }
+}

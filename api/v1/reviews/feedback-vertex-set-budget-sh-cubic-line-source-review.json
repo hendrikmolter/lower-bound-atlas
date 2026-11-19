@@ -1,0 +1,18 @@
+{
+  "applicable": true,
+  "date": "2026-11-18",
+  "evidence": "evidence/fvs-cubic-line-source-transfer.md",
+  "id": "feedback-vertex-set-budget-sh-cubic-line-source-review",
+  "label": "Agent verified",
+  "object": {
+    "caseId": "feedback-vertex-set-budget",
+    "id": "feedback-vertex-set-budget-sh-cubic-line",
+    "revision": 1,
+    "type": "bound"
+  },
+  "reviewer": "Codex agent /root/apply_novelty",
+  "scope": "Checked the SH consequence of the cited published reductions by deletion budget. Checked the connected simple cubic bipartite root, the linear parameter blowup, and polynomial complete encoding length.",
+  "stale": false,
+  "type": "agent",
+  "verdict": "verified"
+}

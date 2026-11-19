@@ -1,0 +1,10 @@
+{
+  "id": "closest-substring-constant-alphabet",
+  "input": "A collection of r strings over a fixed finite alphabet, a requested substring length, and an integer distance threshold d.",
+  "name": "Constant-alphabet Closest Substring",
+  "parameterizations": [
+    "closest-substring-constant-alphabet"
+  ],
+  "question": "Is there a string of the requested length whose Hamming distance from some substring of each input string is at most d?",
+  "revision": 1
+}

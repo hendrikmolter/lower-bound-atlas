@@ -1,0 +1,495 @@
+{
+  "aliases": [
+    "book-maximum-cycle-cover-pw"
+  ],
+  "bounds": [
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "effectiveStatus": "unknown",
+            "evidence": [],
+            "status": "unknown"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unknown"
+        },
+        "sh": {
+          "converse": {
+            "effectiveStatus": "unknown",
+            "evidence": [],
+            "status": "unknown"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unknown"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "maximum-cycle-cover-supplied-pathwidth-eth",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "label": "Exponent in supplied pathwidth",
+        "revision": 1,
+        "title": "Exponent in supplied pathwidth under ETH"
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "2^(o(p log₂(p+2))) B^(O(1))",
+      "runtimeSymbols": [
+        "p",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "book",
+          "locator": "Exercise 14.8, p. 516, and bibliographic notes",
+          "paperId": "cygan2015",
+          "placement": "statement",
+          "role": "benchmark"
+        },
+        {
+          "editionId": "journal",
+          "locator": "Theorem 1.3 and Table 1, Max Cycle Cover, p. 17:4",
+          "paperId": "cygan-cut-count",
+          "placement": "statement",
+          "role": "benchmark"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm solves Maximum Cycle Cover within the stated running time.",
+      "status": "established",
+      "supported": true
+    },
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "effectiveStatus": "unknown",
+            "evidence": [],
+            "status": "unknown"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unknown"
+        },
+        "sh": {
+          "converse": {
+            "effectiveStatus": "unknown",
+            "evidence": [],
+            "status": "unknown"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unknown"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "kxk",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "maximum-cycle-cover-supplied-pathwidth-kxk",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "explanation": "The Cycle Packing lower bound under this hypothesis combines with the reduction in Lemma C.22. The reduction attaches a private three-vertex path and its closing edges at each vertex. A spanning cycle cover uses either a private triangle or a private four-cycle through the attachment vertex. The threshold increases by the original number of vertices, the complete output size grows polynomially, and the supplied width increases by at most three.",
+        "label": "Sublinear exponent at the p log p scale",
+        "revision": 1,
+        "title": "Maximum Cycle Cover under the k × k Clique Hypothesis"
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "2^(o(p log₂(p+2))) B^(O(1))",
+      "runtimeSymbols": [
+        "p",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "v3",
+          "locator": "§3, Table 1, first row, p. 5, covering Theorem 14.19 of Parameterized Algorithms",
+          "paperId": "szeider2026",
+          "placement": "statement",
+          "role": "Cycle Packing lower bound"
+        },
+        {
+          "editionId": "book",
+          "locator": "Theorem 14.19 and Exercise 14.8",
+          "paperId": "cygan2015",
+          "placement": "statement",
+          "role": "Cycle Packing and Max Cycle Cover"
+        },
+        {
+          "editionId": "journal",
+          "locator": "Theorem 1.3, p. 17:4",
+          "paperId": "cygan-cut-count",
+          "placement": "statement",
+          "role": "Historical bound for both problems"
+        },
+        {
+          "editionId": "arxiv-v1",
+          "locator": "Appendix C.4, Lemma C.22, p. 70",
+          "paperId": "cygan-cut-count",
+          "placement": "statement",
+          "role": "Packing-to-cover reduction with width increase at most three"
+        }
+      ],
+      "statement": "Under the k × k Clique Hypothesis, no deterministic algorithm decides Maximum Cycle Cover within the stated running time.",
+      "status": "established",
+      "supported": true
+    },
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "effectiveStatus": "unknown",
+            "evidence": [],
+            "status": "unknown"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unknown"
+        },
+        "sh": {
+          "converse": {
+            "effectiveStatus": "unknown",
+            "evidence": [],
+            "status": "unknown"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unknown"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "w1",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "maximum-cycle-cover-supplied-pathwidth-w1",
+      "inputConditions": [
+        "connected-bipartite-degree-eight"
+      ],
+      "inputFactor": "B^(O(1))",
+      "proofs": [
+        {
+          "proofId": "maximum-cycle-cover-supplied-pathwidth-w1-proof",
+          "revision": 1,
+          "theorem": "maximum-cycle-cover-supplied-pathwidth-w1"
+        }
+      ],
+      "provenance": "atlas",
+      "qualifications": [
+        "The exponent h(p) is finite and nonnegative and the ratio h(p) / max(1, p log₂(p+2)) converges to zero with a computable modulus.",
+        "The supplied path decomposition and binary threshold count in the complete input length."
+      ],
+      "reader": {
+        "label": "Effective little-o bound in the supplied pathwidth",
+        "notation": "effective-little-o",
+        "notationLabel": "Effective little-o",
+        "revision": 1
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "2^(o_eff(p log₂(p+2))) B^(O(1))",
+      "runtimeSymbols": [
+        "p",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "journal",
+          "locator": "W[1]-completeness of Independent Set, with Clique by complementation",
+          "paperId": "df1995",
+          "placement": "proof",
+          "role": "source hardness"
+        },
+        {
+          "editionId": "journal",
+          "locator": "Lemma 2.8 (constructive coloring family)",
+          "paperId": "lms2018",
+          "placement": "proof",
+          "role": "reduction ingredient"
+        },
+        {
+          "editionId": "journal",
+          "locator": "Table 1 and Theorem 1.3, p. 17:4",
+          "paperId": "cygan-cut-count",
+          "placement": "proof",
+          "role": "historical benchmark"
+        },
+        {
+          "editionId": "arxiv-v1",
+          "locator": "Appendix C.2–C.4",
+          "paperId": "cygan-cut-count",
+          "placement": "proof",
+          "role": "predecessor constructions"
+        }
+      ],
+      "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Maximum Cycle Cover within the stated running time.",
+      "status": "established",
+      "supported": true
+    }
+  ],
+  "coverage": "Published lower bounds for supplied pathwidth.",
+  "encoding": "A finite simple undirected graph G and a nonnegative integer r in binary.",
+  "id": "maximum-cycle-cover-supplied-pathwidth",
+  "inputConditions": [
+    {
+      "condition": "The graph is connected, bipartite, and has maximum degree at most eight.",
+      "id": "connected-bipartite-degree-eight",
+      "level": "bound"
+    }
+  ],
+  "kind": "lower-bound-case",
+  "parameter": "Supplied pathwidth.",
+  "problemDefinitionHash": "0ba78b9cbabd77e4baaa2a3e97495e36fb6bc5276f7fb59b5297acf085d6d54d",
+  "problemId": "maximum-cycle-cover",
+  "problemRevision": 1,
+  "reader": {
+    "additionalInput": "A path decomposition of G of width p.",
+    "anchor": "supplied-pathwidth",
+    "parameter": "Supplied pathwidth.",
+    "parameterLabel": "Supplied pathwidth",
+    "parameterSymbols": [
+      {
+        "meaning": "width of the supplied path decomposition",
+        "symbol": "p"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "complete explicit binary input length",
+        "symbol": "B"
+      }
+    ]
+  },
+  "recoveryAssessments": [
+    {
+      "comparison": "The exclusion reaches the historical supplied-pathwidth exponent scale with computable convergence. The hard inputs are connected and bipartite and have maximum degree eight.",
+      "effective": true,
+      "evidence": [
+        {
+          "proofId": "maximum-cycle-cover-supplied-pathwidth-w1-proof",
+          "revision": 1,
+          "theorem": "maximum-cycle-cover-supplied-pathwidth-w1"
+        }
+      ],
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "recoveredScale": "p log₂(p+2)",
+      "recovery": {
+        "id": "maximum-cycle-cover-supplied-pathwidth-w1",
+        "revision": 1
+      },
+      "scale": "full",
+      "target": {
+        "id": "maximum-cycle-cover-supplied-pathwidth-eth",
+        "revision": 1
+      },
+      "targetScale": "p log₂(p+2)"
+    },
+    {
+      "comparison": "The packing-to-cover reduction preserves the historical supplied-width exponent scale, the unrestricted little-o rate and the polynomial factor in complete input length.",
+      "effective": false,
+      "evidence": [
+        {
+          "editionId": "v3",
+          "locator": "§3, Table 1, first row, p. 5, covering Theorem 14.19 of Parameterized Algorithms",
+          "paperId": "szeider2026",
+          "placement": "statement",
+          "role": "Cycle Packing lower bound"
+        },
+        {
+          "editionId": "book",
+          "locator": "Theorem 14.19 and Exercise 14.8",
+          "paperId": "cygan2015",
+          "placement": "statement",
+          "role": "Cycle Packing and Max Cycle Cover"
+        },
+        {
+          "editionId": "journal",
+          "locator": "Theorem 1.3, p. 17:4",
+          "paperId": "cygan-cut-count",
+          "placement": "statement",
+          "role": "Historical bound for both problems"
+        },
+        {
+          "editionId": "arxiv-v1",
+          "locator": "Appendix C.4, Lemma C.22, p. 70",
+          "paperId": "cygan-cut-count",
+          "placement": "statement",
+          "role": "Packing-to-cover reduction with width increase at most three"
+        }
+      ],
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "recoveredScale": "p log₂(p+2)",
+      "recovery": {
+        "id": "maximum-cycle-cover-supplied-pathwidth-kxk",
+        "revision": 1
+      },
+      "scale": "full",
+      "target": {
+        "id": "maximum-cycle-cover-supplied-pathwidth-eth",
+        "revision": 1
+      },
+      "targetScale": "p log₂(p+2)"
+    }
+  ],
+  "recoveryComparisons": [
+    {
+      "comparison": "The packing-to-cover reduction preserves the historical supplied-width exponent scale, the unrestricted little-o rate and the polynomial factor in complete input length.",
+      "effective": false,
+      "evidence": [
+        {
+          "editionId": "v3",
+          "locator": "§3, Table 1, first row, p. 5, covering Theorem 14.19 of Parameterized Algorithms",
+          "paperId": "szeider2026",
+          "placement": "statement",
+          "role": "Cycle Packing lower bound"
+        },
+        {
+          "editionId": "book",
+          "locator": "Theorem 14.19 and Exercise 14.8",
+          "paperId": "cygan2015",
+          "placement": "statement",
+          "role": "Cycle Packing and Max Cycle Cover"
+        },
+        {
+          "editionId": "journal",
+          "locator": "Theorem 1.3, p. 17:4",
+          "paperId": "cygan-cut-count",
+          "placement": "statement",
+          "role": "Historical bound for both problems"
+        },
+        {
+          "editionId": "arxiv-v1",
+          "locator": "Appendix C.4, Lemma C.22, p. 70",
+          "paperId": "cygan-cut-count",
+          "placement": "statement",
+          "role": "Packing-to-cover reduction with width increase at most three"
+        }
+      ],
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "recoveredScale": "p log₂(p+2)",
+      "recovery": {
+        "id": "maximum-cycle-cover-supplied-pathwidth-kxk",
+        "revision": 1
+      },
+      "scale": "full",
+      "status": "recovered",
+      "target": {
+        "id": "maximum-cycle-cover-supplied-pathwidth-eth",
+        "revision": 1
+      },
+      "targetScale": "p log₂(p+2)"
+    },
+    {
+      "hypothesis": {
+        "id": "np_qp",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "maximum-cycle-cover-supplied-pathwidth-eth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "maximum-cycle-cover-supplied-pathwidth-eth",
+        "revision": 1
+      }
+    },
+    {
+      "comparison": "The exclusion reaches the historical supplied-pathwidth exponent scale with computable convergence. The hard inputs are connected and bipartite and have maximum degree eight.",
+      "effective": true,
+      "evidence": [
+        {
+          "proofId": "maximum-cycle-cover-supplied-pathwidth-w1-proof",
+          "revision": 1,
+          "theorem": "maximum-cycle-cover-supplied-pathwidth-w1"
+        }
+      ],
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "recoveredScale": "p log₂(p+2)",
+      "recovery": {
+        "id": "maximum-cycle-cover-supplied-pathwidth-w1",
+        "revision": 1
+      },
+      "scale": "full",
+      "status": "effective",
+      "target": {
+        "id": "maximum-cycle-cover-supplied-pathwidth-eth",
+        "revision": 1
+      },
+      "targetScale": "p log₂(p+2)"
+    }
+  ],
+  "resolutions": [],
+  "revision": 4,
+  "task": "Can all vertices be partitioned into at least r pairwise vertex-disjoint simple cycles?",
+  "title": "Maximum Cycle Cover by supplied pathwidth",
+  "variant": "Maximum Cycle Cover"
+}

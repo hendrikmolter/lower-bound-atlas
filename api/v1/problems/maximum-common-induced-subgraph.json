@@ -1,0 +1,10 @@
+{
+  "id": "maximum-common-induced-subgraph",
+  "input": "Two explicitly encoded finite simple undirected graphs G₁ and G₂ and a nonnegative integer threshold r.",
+  "name": "Maximum Common Induced Subgraph",
+  "parameterizations": [
+    "maximum-common-induced-subgraph-vertex-cover"
+  ],
+  "question": "Do G₁ and G₂ have isomorphic induced subgraphs on at least r vertices?",
+  "revision": 1
+}

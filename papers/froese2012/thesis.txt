@@ -1,0 +1,1 @@
+Vincent Froese. Combinatorial Feature Selection: Parameterized Algorithms and Complexity. Master’s thesis, Technische Universität Berlin (2012). https://fpt.akt.tu-berlin.de/publications/theses/MA-vincent-froese.pdf

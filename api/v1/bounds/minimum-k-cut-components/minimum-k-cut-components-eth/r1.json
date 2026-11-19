@@ -1,0 +1,80 @@
+{
+  "assessments": {
+    "eth": {
+      "converse": {
+        "effectiveStatus": "unknown",
+        "evidence": [],
+        "status": "unknown"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unknown"
+    },
+    "sh": {
+      "converse": {
+        "effectiveStatus": "unknown",
+        "evidence": [],
+        "status": "unknown"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unknown"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "minimum-k-cut-components-eth",
+  "inputConditions": [],
+  "inputFactor": "B^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [
+    "The parameter factor f is an arbitrary computable function."
+  ],
+  "reader": {
+    "label": "Exponent in number of required components",
+    "revision": 1,
+    "title": "Exponent in number of required components under ETH"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "f(k) n^(o(k)) B^(O(1))",
+  "runtimeSymbols": [
+    "k",
+    "n",
+    "B"
+  ],
+  "sources": [
+    {
+      "editionId": "focs",
+      "locator": "Introduction, p. 798",
+      "paperId": "lss2022-min-k-cut",
+      "placement": "statement",
+      "role": "historical exact lower bound"
+    },
+    {
+      "editionId": "journal",
+      "locator": "Theorem 4.3 and its k-Cut proof, pp. 228–230",
+      "paperId": "ccfhjkx2005",
+      "placement": "statement",
+      "role": "earlier weighted k-Cut lower bound and Clique reduction"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm solves Minimum k-Cut within the stated running time.",
+  "status": "established",
+  "supported": true
+}

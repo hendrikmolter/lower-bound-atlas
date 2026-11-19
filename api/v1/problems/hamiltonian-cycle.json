@@ -1,0 +1,11 @@
+{
+  "id": "hamiltonian-cycle",
+  "input": "A finite simple undirected graph G.",
+  "name": "Hamiltonian Cycle",
+  "parameterizations": [
+    "hamiltonian-cycle-order",
+    "hamiltonian-cycle-graph-size"
+  ],
+  "question": "Does G contain a simple cycle through all vertices?",
+  "revision": 1
+}

@@ -1,0 +1,1 @@
+Nikhil Bansal, Tim Oosterwijk, Tjark Vredeveld, Ruben van der Zwaan. Approximating Vector Scheduling: Almost Matching Upper and Lower Bounds. Algorithmica 76 (2016), pp. 1077–1096. https://doi.org/10.1007/s00453-016-0116-0

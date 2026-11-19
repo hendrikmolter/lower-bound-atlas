@@ -1,0 +1,11 @@
+{
+  "id": "minimum-bisection",
+  "input": "An explicitly encoded finite simple undirected graph G and a nonnegative integer cut budget b.",
+  "name": "Minimum Bisection",
+  "parameterizations": [
+    "minimum-bisection-clique-width",
+    "minimum-bisection-supplied-clique-width"
+  ],
+  "question": "Can the vertices be partitioned into two equally large parts with at most b edges between the parts?",
+  "revision": 1
+}

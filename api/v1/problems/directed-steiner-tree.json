@@ -1,0 +1,10 @@
+{
+  "id": "directed-steiner-tree",
+  "input": "An explicit directed graph G with nonnegative integer arc costs, a root, a terminal set disjoint from the root and an integer budget.",
+  "name": "Directed Steiner Tree",
+  "parameterizations": [
+    "directed-steiner-tree-terminals"
+  ],
+  "question": "Is there a subgraph of cost at most the budget with a directed path from the root to every terminal?",
+  "revision": 1
+}

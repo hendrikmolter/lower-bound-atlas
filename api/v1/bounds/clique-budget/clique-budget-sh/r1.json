@@ -1,0 +1,45 @@
+{
+  "assessments": {},
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "sh",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "clique-budget-sh",
+  "inputConditions": [],
+  "inputFactor": "n is the base of the data-dependent factor",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [
+    "For each fixed ε strictly between zero and 1."
+  ],
+  "reader": {
+    "explanation": "The fixed-power savings apply with a prefactor bounded by an exponential of a fixed polynomial in k.",
+    "label": "Fixed power saving in the solution size",
+    "revision": 1,
+    "title": "Clique by solution size under SH"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "2^(k^(O(1))) n^(O(k^(1−ε)))",
+  "runtimeSymbols": [
+    "k",
+    "n",
+    "ε"
+  ],
+  "sources": [
+    {
+      "editionId": "notes",
+      "locator": "Theorem 3",
+      "paperId": "koutecky2026-hard-side",
+      "placement": "statement",
+      "role": "SH lower bound"
+    }
+  ],
+  "statement": "Under SH, no deterministic algorithm decides Clique within the stated running time.",
+  "status": "established",
+  "supported": true
+}

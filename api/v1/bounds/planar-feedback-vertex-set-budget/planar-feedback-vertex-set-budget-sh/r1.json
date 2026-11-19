@@ -1,0 +1,43 @@
+{
+  "assessments": {},
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "sh",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "planar-feedback-vertex-set-budget-sh",
+  "inputConditions": [],
+  "inputFactor": "B^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [
+    "Separately for each fixed 0 < ε < 1/2."
+  ],
+  "reader": {
+    "label": "Every fixed power below one half",
+    "revision": 1
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "2^(O(k^(1/2−ε))) B^(O(1))",
+  "runtimeSymbols": [
+    "k",
+    "B",
+    "ε"
+  ],
+  "sources": [
+    {
+      "editionId": "oct30",
+      "locator": "Table 1, Weak ETH row",
+      "paperId": "szeider2026",
+      "placement": "statement",
+      "role": "lower-bound statement"
+    }
+  ],
+  "statement": "Under SH, no deterministic algorithm solves Planar Feedback Vertex Set within the stated running time.",
+  "status": "established",
+  "supported": true
+}

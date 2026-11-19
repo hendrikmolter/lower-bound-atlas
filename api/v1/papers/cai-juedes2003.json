@@ -1,0 +1,21 @@
+{
+  "authors": [
+    "Liming Cai",
+    "David Juedes"
+  ],
+  "editions": [
+    {
+      "access": "Journal text inspected for Theorem 4.2, Proposition 4.1, and Corollaries 4.3 and 5.1.",
+      "doi": "10.1016/S0022-0000(03)00074-6",
+      "id": "journal",
+      "kind": "journal",
+      "label": "JCSS 67(4) (2003), 789–807",
+      "preferredUrl": "https://doi.org/10.1016/S0022-0000(03)00074-6",
+      "primaryUrl": "https://doi.org/10.1016/S0022-0000(03)00074-6"
+    }
+  ],
+  "id": "cai-juedes2003",
+  "preferredEditionId": "journal",
+  "preferredUrl": "https://doi.org/10.1016/S0022-0000(03)00074-6",
+  "title": "On the Existence of Subexponential Parameterized Algorithms"
+}

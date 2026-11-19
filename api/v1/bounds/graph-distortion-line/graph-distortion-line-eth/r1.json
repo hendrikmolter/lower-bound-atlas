@@ -1,0 +1,72 @@
+{
+  "assessments": {
+    "eth": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unassessed"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "graph-distortion-line-eth",
+  "inputConditions": [
+    "integer-line"
+  ],
+  "inputFactor": "n^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [],
+  "reader": {
+    "label": "Subexponential-time bound in d log d",
+    "revision": 1,
+    "title": "Graph Distortion into a line under ETH: Subexponential-time bound in d log d"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "2^(o(d log₂ d)) n^(O(1))",
+  "runtimeSymbols": [
+    "d",
+    "n"
+  ],
+  "sources": [
+    {
+      "editionId": "journal",
+      "locator": "Theorem 4.2, p. 690",
+      "paperId": "lms2018",
+      "placement": "statement",
+      "role": "conditional lower bound"
+    },
+    {
+      "editionId": "book",
+      "locator": "Theorem 14.18, p. 483",
+      "paperId": "cygan2015",
+      "placement": "context",
+      "role": "textbook statement"
+    },
+    {
+      "editionId": "bulletin",
+      "locator": "Theorem 4.6, p. 56",
+      "paperId": "lms2011",
+      "placement": "context",
+      "role": "earlier natural-coordinate statement"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm solves the stated decision problem within the stated running time.",
+  "status": "established",
+  "supported": true
+}

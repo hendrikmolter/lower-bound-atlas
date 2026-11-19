@@ -1,0 +1,1 @@
+Atlas. Cycle Packing at bounded degree and large girth · Theorem 1. cycle-packing-degree-six, theorem cycle-packing-degree-six, proof revision 1. Edition v1.0.0, Git commit 5c6c72747978446d3f7009e6a5cf32d496b1d5ac. https://github.com/hendrikmolter/lower-bound-atlas/blob/5c6c72747978446d3f7009e6a5cf32d496b1d5ac/proofs/cycle-packing-degree-six.tex

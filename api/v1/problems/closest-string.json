@@ -1,0 +1,11 @@
+{
+  "id": "closest-string",
+  "input": "A list of strings and a Hamming radius d.",
+  "name": "Closest String",
+  "parameterizations": [
+    "lms-closest-string-radius",
+    "lms-closest-string-radius-alphabet"
+  ],
+  "question": "Is there a string of length L at Hamming distance at most d from every input string?",
+  "revision": 1
+}

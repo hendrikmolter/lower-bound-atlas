@@ -1,0 +1,10 @@
+{
+  "id": "unit-disk-dominating-set",
+  "input": "An explicitly encoded finite simple undirected graph G promised to be a unit disk graph, and a nonnegative integer k.",
+  "name": "Unit Disk Dominating Set",
+  "parameterizations": [
+    "unit-disk-dominating-set-budget"
+  ],
+  "question": "Is there a set of at most k vertices that meets every closed neighborhood?",
+  "revision": 1
+}

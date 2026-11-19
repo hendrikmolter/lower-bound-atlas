@@ -1,0 +1,33 @@
+{
+  "authors": [
+    "Robert Ganian",
+    "Ronald de Haan",
+    "Iyad Kanj",
+    "Stefan Szeider"
+  ],
+  "editions": [
+    {
+      "access": "Published text checked for the subexponential-time convention in §2.2 and the Dominating Set equivalence in Corollary 3.8.",
+      "doi": "10.1145/3417759",
+      "id": "journal",
+      "kind": "journal",
+      "label": "ACM Transactions on Computation Theory 12(4) (2020), Article 22",
+      "preferredUrl": "https://doi.org/10.1145/3417759",
+      "primaryUrl": "https://doi.org/10.1145/3417759"
+    },
+    {
+      "access": "Proceedings full text inspected for the single-algorithm definition and Dominating Set corollary.",
+      "doi": "10.4230/LIPIcs.MFCS.2016.42",
+      "id": "mfcs",
+      "kind": "proceedings",
+      "label": "MFCS 2016, LIPIcs 58, 42:1–42:14",
+      "openUrl": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol058-mfcs2016/LIPIcs.MFCS.2016.42/LIPIcs.MFCS.2016.42.pdf",
+      "preferredUrl": "https://doi.org/10.4230/LIPIcs.MFCS.2016.42",
+      "primaryUrl": "https://doi.org/10.4230/LIPIcs.MFCS.2016.42"
+    }
+  ],
+  "id": "ganian-dehaan-kanj-szeider2020",
+  "preferredEditionId": "journal",
+  "preferredUrl": "https://doi.org/10.1145/3417759",
+  "title": "On Existential MSO and Its Relation to ETH"
+}

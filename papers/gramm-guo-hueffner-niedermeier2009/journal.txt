@@ -1,0 +1,1 @@
+Jens Gramm, Jiong Guo, Falk Hüffner, Rolf Niedermeier. Data Reduction and Exact Algorithms for Clique Cover. ACM Journal of Experimental Algorithmics 13 (2009), Article 2.2. https://doi.org/10.1145/1412228.1412236

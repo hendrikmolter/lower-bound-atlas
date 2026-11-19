@@ -1,0 +1,10 @@
+{
+  "id": "subgraph-isomorphism",
+  "input": "Two explicitly encoded finite simple undirected graphs H and G.",
+  "name": "Subgraph Isomorphism",
+  "parameterizations": [
+    "subgraph-isomorphism-pattern-edges"
+  ],
+  "question": "Does an injective vertex map from H to G preserve every edge of H?",
+  "revision": 1
+}

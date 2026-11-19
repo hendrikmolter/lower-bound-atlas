@@ -1,0 +1,67 @@
+{
+  "assessments": {
+    "eth": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unassessed"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "directed-steiner-tree-terminals-eth",
+  "inputConditions": [
+    "planar",
+    "unit-cost"
+  ],
+  "inputFactor": "n^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [],
+  "reader": {
+    "explanation": "A rooted out-star demand counts one more vertex than the nonroot terminal set. The underlying unweighted Steiner Tree bound transfers by replacing each undirected edge by both unit-cost orientations.",
+    "label": "Subexponential-time bound",
+    "revision": 1,
+    "title": "Directed Steiner Tree under ETH: Subexponential-time bound"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "2^(o(p)) n^(O(1))",
+  "runtimeSymbols": [
+    "p",
+    "n"
+  ],
+  "sources": [
+    {
+      "editionId": "proceedings",
+      "locator": "Theorem 2(ii) and Section 3, proof of statement (ii)",
+      "paperId": "galby-et-al2024-directed-steiner",
+      "placement": "statement",
+      "role": "conditional lower bound"
+    },
+    {
+      "editionId": "focs",
+      "locator": "Theorem I.2",
+      "paperId": "marx-pilipczuk-pilipczuk2018-steiner",
+      "placement": "forward",
+      "role": "underlying undirected planar Steiner Tree reduction"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm solves the stated decision problem within the stated running time.",
+  "status": "established",
+  "supported": true
+}

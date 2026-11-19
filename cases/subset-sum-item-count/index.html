@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Subset Sum | Lower Bound Atlas</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header"><nav class="site-nav" aria-label="Main">
+    <a href="../../index.html" class="site-brand">Lower Bound Atlas</a>
+    <div class="nav-links"><a href="../../index.html">Problems</a><a href="../../assumptions/index.html">Hypotheses</a><a href="../../papers/index.html">Papers</a><a href="../../notation/index.html">Notation</a><a href="../../about/index.html">About &amp; guide</a></div>
+  </nav></header>
+  <main id="main-content" tabindex="-1">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../../index.html">Problems</a><span aria-hidden="true"> / </span><a href="../../problems/subset-sum/index.html">Subset Sum</a></nav>
+    <header class="hero">
+      <h1>Subset Sum</h1>
+      
+    </header>
+    <nav class="param-nav" aria-label="Recorded parameterizations"><strong>Recorded parameterizations</strong><a href="#items" aria-current="location">Number of items</a></nav>
+      <section id="items" class="problem-box" aria-label="Problem definition"><dl>
+      <dt>Input</dt><dd>An explicitly listed sequence of p positive binary integers and a positive binary target T.</dd>
+      <dt>Parameter</dt><dd>The number p of indexed input items.</dd>
+      <dt>Question</dt><dd>Does a subset of the item indices have values summing to T?</dd></dl><div class="input-restrictions"><strong>Input restrictions</strong><ul><li>Each item and the target is strictly positive. Equal item values may occur at different indices.</li></ul></div></section>
+      
+      <section id="comparisons"><h2 id="bounds">Lower bounds by hypothesis</h2>
+      <h3>Notation</h3><ul class="runtime-symbols"><li><i>B</i> — complete input length in bits</li><li><i>ε</i> — a fixed positive saving in the exponent</li><li><i>T</i> — target sum</li></ul>
+      <article class="hypothesis-card" id="assessment-eth"><h3><a href="../../assumptions/eth/index.html">ETH</a> (historical)</h3>
+        <section class="bound-row" id="subset-sum-item-count-eth"><h4>Sublinear exponent in the number of items</h4>
+        
+        
+        <div class="excluded-time"><span>Running time excluded under ETH</span><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mrow><mrow><mi>o</mi><mrow><mo>(</mo><mi>p</mi><mo>)</mo></mrow></mrow></mrow></msup><mo>&#x2062;</mo><msup><mi>B</mi><mrow><mrow><mi>𝒪</mi><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></mrow></msup></mrow><annotation encoding="text/plain">2^(o(p)) B^(O(1))</annotation></semantics></math></div>
+        <div class="bound-links"><div class="actions"><a href="../../bounds/subset-sum-item-count/subset-sum-item-count-eth/index.html">Full statement</a></div>
+    </div><ul class="bound-citations"><li><a href="https://doi.org/10.1016/j.jcss.2016.06.004">Polynomial kernels for weighted problems</a></li></ul>
+        </section>
+        
+        </article><article class="hypothesis-card" id="assessment-sh"><h3><a href="../../assumptions/sh/index.html">SH</a></h3>
+        <section class="bound-row" id="subset-sum-item-count-sh"><h4>Fixed power saving in the exponent</h4>
+        
+        
+        <div class="excluded-time"><span>Excluded running time</span><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mrow><mrow><mi>𝒪</mi><mrow><mo>(</mo><msup><mi>p</mi><mrow><mn>1</mn><mo>−</mo><mi>ε</mi></mrow></msup><mo>)</mo></mrow></mrow></mrow></msup><mo>&#x2062;</mo><msup><mi>B</mi><mrow><mrow><mi>𝒪</mi><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></mrow></msup></mrow><annotation encoding="text/plain">2^(O(p^(1−ε))) B^(O(1))</annotation></semantics></math></div><p class="runtime-qualification">For each fixed ε strictly between zero and 1.</p>
+        <p>Exponent degree recovered · ETH target: <a href="../../bounds/subset-sum-item-count/subset-sum-item-count-eth/r1/index.html" aria-label="Sublinear exponent in the number of items">Sublinear exponent in the number of items</a>.</p><div class="bound-links"><div class="actions"><a href="../../bounds/subset-sum-item-count/subset-sum-item-count-sh/index.html">Full statement</a></div>
+    </div>
+        </section>
+        
+        </article><article class="hypothesis-card" id="assessment-w1"><h3><a href="../../assumptions/w1/index.html">FPT ≠ W[1]</a></h3>
+        <p>No lower bound recorded for this parameterization.</p>
+        
+        </article><article class="hypothesis-card" id="assessment-np_qp"><h3><a href="../../assumptions/np_qp/index.html">NP ⊈ QP</a></h3>
+        <p>No lower bound recorded for this parameterization.</p>
+        
+        </article><article class="hypothesis-card" id="assessment-kxk"><h3><a href="../../assumptions/kxk/index.html"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>×</mo><mi>k</mi></mrow><annotation encoding="text/plain">k × k</annotation></semantics></math> Clique Hypothesis</a></h3>
+        <p>No lower bound recorded for this parameterization.</p>
+        
+        </article></section>
+      <details class="reader-details"><summary>Record details</summary><dl class="details-grid"><div><dt>Identifier</dt><dd>subset-sum-item-count</dd></div><div><dt>Revision</dt><dd>4</dd></div></dl>
+      <a href="index.html">Permalink</a> · <a href="../../api/v1/cases/subset-sum-item-count.json">JSON record</a></details>
+  </main>
+  <footer class="site-footer">
+    <span>Release · v1.0.0</span>
+    <a href="../../api/v1/atlas.json">JSON export</a>
+    <a href="../../manifest.json">Build manifest</a>
+  </footer>
+</body>
+</html>

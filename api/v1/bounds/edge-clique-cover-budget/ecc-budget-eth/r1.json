@@ -1,0 +1,47 @@
+{
+  "assessments": {},
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "ecc-budget-eth",
+  "inputConditions": [],
+  "inputFactor": "n^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [],
+  "reader": {
+    "label": "Double-exponential dependence on the clique budget",
+    "revision": 1
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "2^(2^(o(k))) n^(O(1))",
+  "runtimeSymbols": [
+    "k",
+    "n"
+  ],
+  "sources": [
+    {
+      "editionId": "journal",
+      "locator": "Theorem 1 and Corollary 2, p. 70",
+      "paperId": "cygan-pilipczuk-pilipczuk-ecc",
+      "placement": "statement",
+      "role": "published lower bound"
+    },
+    {
+      "editionId": "book",
+      "locator": "Theorem 14.20, p. 485",
+      "paperId": "cygan2015",
+      "placement": "statement",
+      "role": "textbook benchmark"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm decides Edge Clique Cover within the stated running time.",
+  "status": "established",
+  "supported": true
+}

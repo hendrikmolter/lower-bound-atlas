@@ -1,0 +1,1 @@
+Daniel Lokshtanov, Dániel Marx, Saket Saurabh. Lower bounds based on the Exponential Time Hypothesis. Bulletin of the EATCS 105 (2011), 41–71. https://bulletin.eatcs.org/index.php/beatcs/article/view/92

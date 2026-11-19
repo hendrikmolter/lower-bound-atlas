@@ -1,0 +1,42 @@
+{
+  "authors": [
+    "Jianer Chen",
+    "Xiuzhen Huang",
+    "Iyad A. Kanj",
+    "Ge Xia"
+  ],
+  "editions": [
+    {
+      "access": "Published conference edition.",
+      "doi": "10.1007/11533719_98",
+      "id": "cocoon",
+      "kind": "proceedings",
+      "label": "COCOON 2005, LNCS 3595, 975–984",
+      "preferredUrl": "https://doi.org/10.1007/11533719_98",
+      "primaryUrl": "https://doi.org/10.1007/11533719_98"
+    },
+    {
+      "access": "Published text checked for Theorems 2.2–2.3, 3.2, 4.1 and 5.1, the linear-reduction definition, and the complexity-function convention.",
+      "doi": "10.1007/s10878-006-7137-6",
+      "id": "journal",
+      "kind": "journal",
+      "label": "Journal of Combinatorial Optimization 11(2) (2006), 231–247",
+      "preferredUrl": "https://doi.org/10.1007/s10878-006-7137-6",
+      "primaryUrl": "https://doi.org/10.1007/s10878-006-7137-6",
+      "title": "On the computational hardness based on linear FPT-reductions"
+    },
+    {
+      "access": "Several technical proofs are omitted and deferred to a technical report.",
+      "id": "manuscript",
+      "kind": "manuscript",
+      "label": "Inspected 2005 conference author manuscript",
+      "openUrl": "https://www.cs.lafayette.edu/~gexia/research/jcombopt.pdf",
+      "preferredUrl": "https://www.cs.lafayette.edu/~gexia/research/jcombopt.pdf",
+      "primaryUrl": "https://www.cs.lafayette.edu/~gexia/research/jcombopt.pdf"
+    }
+  ],
+  "id": "chkx2005",
+  "preferredEditionId": "journal",
+  "preferredUrl": "https://doi.org/10.1007/s10878-006-7137-6",
+  "title": "W-Hardness under Linear FPT-Reductions: Structural Properties and Further Applications"
+}

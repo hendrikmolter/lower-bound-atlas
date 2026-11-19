@@ -1,0 +1,30 @@
+{
+  "authors": [
+    "Dániel Marx"
+  ],
+  "editions": [
+    {
+      "access": "Public version used where the published full text was unavailable.",
+      "id": "author",
+      "kind": "preprint",
+      "label": "Inspected author version",
+      "openUrl": "https://www.cs.bme.hu/~dmarx/papers/marx-mway-icalp2012.pdf",
+      "preferredUrl": "https://www.cs.bme.hu/~dmarx/papers/marx-mway-icalp2012.pdf",
+      "primaryUrl": "https://www.cs.bme.hu/~dmarx/papers/marx-mway-icalp2012.pdf"
+    },
+    {
+      "access": "Published ICALP text checked for Theorem 3 and Corollary 5.",
+      "doi": "10.1007/978-3-642-31594-7_57",
+      "id": "journal",
+      "kind": "proceedings",
+      "label": "ICALP 2012, Part I, LNCS 7391, pp. 677–688",
+      "preferredUrl": "https://doi.org/10.1007/978-3-642-31594-7_57",
+      "primaryUrl": "https://doi.org/10.1007/978-3-642-31594-7_57",
+      "title": "A Tight Lower Bound for Planar Multiway Cut"
+    }
+  ],
+  "id": "marx2012-multiway",
+  "preferredEditionId": "journal",
+  "preferredUrl": "https://doi.org/10.1007/978-3-642-31594-7_57",
+  "title": "A Tight Lower Bound for Planar Multiway Cut with Fixed Number of Terminals"
+}

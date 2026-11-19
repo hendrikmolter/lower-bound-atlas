@@ -1,0 +1,10 @@
+{
+  "id": "explicit-table-csp",
+  "input": "An explicit finite-domain constraint satisfaction instance with a table of allowed tuples for each constraint.",
+  "name": "Explicit-table CSP",
+  "parameterizations": [
+    "explicit-table-csp-treewidth"
+  ],
+  "question": "Can all variables be assigned domain values so that each constraint has an allowed tuple?",
+  "revision": 1
+}

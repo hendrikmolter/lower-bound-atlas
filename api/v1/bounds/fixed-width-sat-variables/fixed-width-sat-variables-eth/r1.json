@@ -1,0 +1,67 @@
+{
+  "assessments": {
+    "eth": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unassessed"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "fixed-width-sat-variables-eth",
+  "inputConditions": [],
+  "inputFactor": "B^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [
+    "For every fixed integer r≥3."
+  ],
+  "reader": {
+    "explanation": "Width is fixed separately before the input.",
+    "label": "Subexponential-time bound",
+    "revision": 1,
+    "title": "Fixed-width SAT under ETH: Subexponential-time bound"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "2^(o(n)) B^(O(1))",
+  "runtimeSymbols": [
+    "n",
+    "r",
+    "B"
+  ],
+  "sources": [
+    {
+      "editionId": "journal",
+      "locator": "Corollary 1 and Theorem 3",
+      "paperId": "ipz2001",
+      "placement": "statement",
+      "role": "fixed-width comparison"
+    },
+    {
+      "editionId": "bulletin",
+      "locator": "Section 2",
+      "paperId": "lms2011",
+      "placement": "context",
+      "role": "subexponential convention"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm solves the stated decision problem within the stated running time.",
+  "status": "established",
+  "supported": true
+}

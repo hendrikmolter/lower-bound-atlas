@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Feature Set | Lower Bound Atlas</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header"><nav class="site-nav" aria-label="Main">
+    <a href="../../index.html" class="site-brand">Lower Bound Atlas</a>
+    <div class="nav-links"><a href="../../index.html">Problems</a><a href="../../assumptions/index.html">Hypotheses</a><a href="../../papers/index.html">Papers</a><a href="../../notation/index.html">Notation</a><a href="../../about/index.html">About &amp; guide</a></div>
+  </nav></header>
+  <main id="main-content" tabindex="-1">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../../index.html">Problems</a></nav>
+    <header class="hero">
+      <h1>Feature Set</h1>
+      
+    </header>
+    <nav class="param-nav" aria-label="Recorded parameterizations"><strong>Recorded parameterizations</strong><a href="../../cases/feature-set-budget/index.html#feature-set-budget">Number of selected features</a></nav>
+      <section id="feature-set-budget" class="problem-box" aria-label="Problem definition"><dl>
+      <dt>Input</dt><dd>A binary example-by-feature matrix, one of two class labels per row, and a number k of features to select.</dd>
+      <dt>Parameter</dt><dd>The number of selected features k.</dd>
+      <dt>Question</dt><dd>Can exactly k features be selected so that each pair of examples with different labels differs on a selected feature?</dd></dl></section>
+      
+      <section id="comparisons"><h2 id="bounds">Lower bounds by hypothesis</h2>
+      <h3>Notation</h3><ul class="runtime-symbols"><li><i>N</i> — number of available features</li><li><i>M</i> — complete encoding size</li></ul>
+      <article class="hypothesis-card" id="assessment-eth"><h3><a href="../../assumptions/eth/index.html">ETH</a> (historical)</h3>
+        <section class="bound-row" id="feature-set-budget-eth"><h4>Sublinear exponent in the solution budget</h4>
+        
+        
+        <div class="excluded-time"><span>Running time excluded under ETH</span><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>k</mi><mo>)</mo></mrow></mrow><mo>&#x2062;</mo><msup><mi>M</mi><mrow><mrow><mi>o</mi><mrow><mo>(</mo><mi>k</mi><mo>)</mo></mrow></mrow></mrow></msup></mrow><annotation encoding="text/plain">f(k) M^(o(k))</annotation></semantics></math></div><p class="runtime-qualification">For source-admissible recursive f.</p>
+        <div class="bound-links"><div class="actions"><a href="../../bounds/feature-set-budget/feature-set-budget-eth/index.html">Full statement</a></div>
+    </div><ul class="bound-citations"><li><a href="https://doi.org/10.1007/s10878-006-7137-6">On the computational hardness based on linear FPT-reductions</a></li></ul>
+        </section><section class="bound-row" id="feature-set-budget-eth-fixed"><h4>Sublinear exponent in the feature count</h4>
+        
+        
+        <div class="excluded-time"><span>Running time excluded under ETH</span><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>N</mi><mrow><mrow><mi>o</mi><mrow><mo>(</mo><mi>k</mi><mo>)</mo></mrow></mrow></mrow></msup><mo>&#x2062;</mo><msup><mi>M</mi><mrow><mrow><mi>𝒪</mi><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></mrow></msup></mrow><annotation encoding="text/plain">N^(o(k)) M^(O(1))</annotation></semantics></math></div>
+        <div class="bound-links"><div class="actions"><a href="../../bounds/feature-set-budget/feature-set-budget-eth-fixed/index.html">Full statement</a></div>
+    </div><ul class="bound-citations"><li><a href="https://doi.org/10.1016/j.ic.2005.05.001">Tight Lower Bounds for Certain Parameterized NP-Hard Problems</a></li><li><a href="https://doi.org/10.1007/s10878-006-7137-6">On the computational hardness based on linear FPT-reductions</a></li></ul>
+        </section>
+        
+        </article><article class="hypothesis-card" id="assessment-sh"><h3><a href="../../assumptions/sh/index.html">SH</a></h3>
+        <p>No lower bound recorded for this parameterization.</p>
+        
+        </article><article class="hypothesis-card" id="assessment-w1"><h3><a href="../../assumptions/w1/index.html">FPT ≠ W[1]</a></h3>
+        <section class="bound-row" id="feature-set-budget-w1"><h4>Linear-reduction lower bound</h4>
+        
+        
+        <div class="excluded-time"><span>Excluded running time</span><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>k</mi><mo>)</mo></mrow></mrow><mo>&#x2062;</mo><msup><mi>N</mi><mrow><mrow><mi>o</mi><mrow><mo>(</mo><mi>k</mi><mo>)</mo></mrow></mrow></mrow></msup><mo>&#x2062;</mo><msup><mi>M</mi><mrow><mrow><mi>𝒪</mi><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></mrow></msup></mrow><annotation encoding="text/plain">f(k) N^(o(k)) M^(O(1))</annotation></semantics></math></div><p class="runtime-qualification">For any recursive f subject to the source convention that the complexity functions and their inverses be easily computable.</p>
+        <div class="bound-links"><div class="actions"><a href="../../bounds/feature-set-budget/feature-set-budget-w1/index.html">Full statement</a></div>
+    </div><ul class="bound-citations"><li><a href="https://doi.org/10.1007/s10878-006-7137-6">On the computational hardness based on linear FPT-reductions</a></li></ul>
+        </section><section class="bound-row" id="feature-set-budget-w1-fixed"><h4>Sublinear exponent in the feature count</h4>
+        
+        
+        <div class="excluded-time"><span>Excluded running time</span><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>N</mi><mrow><mrow><mi>o</mi><mrow><mo>(</mo><mi>k</mi><mo>)</mo></mrow></mrow></mrow></msup><mo>&#x2062;</mo><msup><mi>M</mi><mrow><mrow><mi>𝒪</mi><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></mrow></msup></mrow><annotation encoding="text/plain">N^(o(k)) M^(O(1))</annotation></semantics></math></div>
+        <p>Recovered · ETH target: <a href="../../bounds/feature-set-budget/feature-set-budget-eth-fixed/r1/index.html" aria-label="Sublinear exponent in the feature count">Sublinear exponent in the feature count</a>.</p><div class="bound-links"><div class="actions"><a href="../../bounds/feature-set-budget/feature-set-budget-w1-fixed/index.html">Full statement</a></div>
+    </div><ul class="bound-citations"><li><a href="https://doi.org/10.1016/j.ic.2005.05.001">Tight Lower Bounds for Certain Parameterized NP-Hard Problems</a></li></ul>
+        </section>
+        
+        </article><article class="hypothesis-card" id="assessment-np_qp"><h3><a href="../../assumptions/np_qp/index.html">NP ⊈ QP</a></h3>
+        <p>No lower bound recorded for this parameterization.</p>
+        
+        </article><article class="hypothesis-card" id="assessment-kxk"><h3><a href="../../assumptions/kxk/index.html"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>×</mo><mi>k</mi></mrow><annotation encoding="text/plain">k × k</annotation></semantics></math> Clique Hypothesis</a></h3>
+        <p>No lower bound recorded for this parameterization.</p>
+        
+        </article></section>
+      <details class="reader-details"><summary>Record details</summary><dl class="details-grid"><div><dt>Identifier</dt><dd>feature-set-budget</dd></div><div><dt>Revision</dt><dd>5</dd></div><div><dt>Aliases</dt><dd>feature-set-selected-features</dd></div></dl>
+      <a href="index.html">Permalink</a> · <a href="../../api/v1/cases/feature-set-budget.json">JSON record</a></details>
+  </main>
+  <footer class="site-footer">
+    <span>Release · v1.0.0</span>
+    <a href="../../api/v1/atlas.json">JSON export</a>
+    <a href="../../manifest.json">Build manifest</a>
+  </footer>
+</body>
+</html>

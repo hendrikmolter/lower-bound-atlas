@@ -1,0 +1,30 @@
+{
+  "authors": [
+    "Dániel Marx",
+    "Michał Pilipczuk"
+  ],
+  "editions": [
+    {
+      "access": "Public version used where the published full text was unavailable.",
+      "id": "author",
+      "kind": "preprint",
+      "label": "Inspected author version",
+      "openUrl": "https://arxiv.org/abs/1504.05476",
+      "preferredUrl": "https://arxiv.org/abs/1504.05476",
+      "primaryUrl": "https://arxiv.org/abs/1504.05476"
+    },
+    {
+      "access": "Published text checked for the planar d-Scattered Set lower-bound paragraph in §1, p. 13:6, and its textbook reduction reference.",
+      "doi": "10.1145/3483425",
+      "id": "journal",
+      "kind": "journal",
+      "label": "ACM Transactions on Algorithms 18(2) (2022), Article 13",
+      "preferredUrl": "https://doi.org/10.1145/3483425",
+      "primaryUrl": "https://doi.org/10.1145/3483425"
+    }
+  ],
+  "id": "marx-pilipczuk-scattered",
+  "preferredEditionId": "journal",
+  "preferredUrl": "https://doi.org/10.1145/3483425",
+  "title": "Optimal Parameterized Algorithms for Planar Facility Location Problems Using Voronoi Diagrams"
+}

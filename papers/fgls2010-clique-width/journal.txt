@@ -1,0 +1,1 @@
+Fedor V. Fomin, Petr A. Golovach, Daniel Lokshtanov, Saket Saurabh. Intractability of Clique-Width Parameterizations. SIAM Journal on Computing 39(5) (2010), pp. 1941–1956. https://doi.org/10.1137/080742270

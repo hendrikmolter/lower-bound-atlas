@@ -1,0 +1,12 @@
+{
+  "id": "cluster-editing",
+  "input": "An explicitly encoded finite simple undirected graph G and a nonnegative integer edit budget k.",
+  "name": "Cluster Editing",
+  "parameterizations": [
+    "cluster-editing-budget",
+    "cluster-editing-size",
+    "cluster-editing-order"
+  ],
+  "question": "Can G be turned into a disjoint union of cliques by adding or deleting a total of at most k edges?",
+  "revision": 1
+}

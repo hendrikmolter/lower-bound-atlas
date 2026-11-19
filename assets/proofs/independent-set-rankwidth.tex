@@ -1,0 +1,272 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\title{Quadratic lower bounds for Independent Set on triangle-free graphs}
+\author{Atlas}
+\date{18 November 2026}
+\begin{document}
+\maketitle
+
+In \textsc{Independent Set}, we are given a simple undirected graph
+and a nonnegative binary threshold and ask if there is an independent
+set of at least that size. The cut rank of a vertex set is the rank over
+\(\mathbb F_2\) of its adjacency matrix to the complement. The width of a
+vertex order is the maximum cut rank of a prefix, and linear rank-width
+is the minimum such width. A rank decomposition is a subcubic tree
+whose leaves correspond to graph vertices. Its width is the maximum cut
+rank of a split induced by a tree edge. Rank-width is the minimum such
+width. An order gives a caterpillar rank decomposition with no larger
+width except for the harmless bound of one on pendant cuts.
+
+Let \(N\) be the complete binary input length including the certificate
+when supplied. A computable nonnegative integer function \(h\) is
+effectively \(o(p^2)\) if a computable function \(T\) satisfies
+\(h(p)\le \eta\max(1,p)^2\) for \(p\ge T(\eta)\) for every positive rational
+\(\eta\).
+
+\hypertarget{independent-set-rankwidth-w1}{}
+\begin{theorem}\label{independent-set-rankwidth-w1}
+Assume deterministic \(\mathrm{FPT}\ne\mathrm W[1]\).
+For every fixed \(C\ge0\) and computable effectively \(o(p^2)\) function
+\(h\), no deterministic algorithm decides \textsc{Independent Set} on
+triangle-free graphs in \(O(2^{h(p)}N^C)\) time. This holds separately for
+rank-width and linear rank-width, with or without an optimal certificate
+of the corresponding type.
+\end{theorem}
+
+The same graph construction also gives the following fixed-power
+exclusion under deterministic SH.
+
+\hypertarget{independent-set-rankwidth-sh}{}
+\begin{theorem}\label{independent-set-rankwidth-sh}
+Assume deterministic SH. For every fixed \(0<\epsilon<2\), no deterministic
+algorithm decides \textsc{Independent Set} on triangle-free graphs
+in \(2^{O(p^{2-\epsilon})}N^{O(1)}\) time. This holds separately for
+rank-width and linear rank-width, with or without an optimal certificate
+of the corresponding type.
+\end{theorem}
+
+Bergougnoux, Korhonen and Nederlof~\cite[Theorem 1.1]{bkn} establish
+the quadratic ETH lower bound, parameterized by linear rank-width.
+We adapt their construction to arbitrary clause lengths by changing
+the order of the literal vertices. Paths replace selection cliques to
+remove triangles, and a small graph of large rank-width allows us to
+supply an optimal certificate.
+
+\section{Encoding assignments in an independent set}
+
+Take a CNF formula with \(v\) occurring variables and \(m\) clauses.
+Normalize names and remove duplicate literals and tautologies.
+Handle formulas with a constant answer directly. With
+\(k=\lceil\sqrt{v}\rceil\), pad with unused variables to make \(k\) rows
+of \(k\) variables each. Let \(B\) be an independent set with one
+vertex for each \(z\in\mathbb F_2^{2k}\). For each clause \(i\) and
+row \(j\) make a clique \(A_{i,j}\) with one vertex per assignment
+\(a\in\mathbb F_2^k\). Its vector is \((e_j,a)\), with \(e_j\) the
+unit vector at \(j\). Join it to \(z\) exactly when the dot product
+is one. Make a clique \(T_i\) of the literals of each clause. Join a
+literal vertex to assignments of its own row of that clause on
+which it is false. There are no other edges. Use weight \(M=2^{2k}\)
+on assignment vertices and weight one elsewhere. The threshold is
+\(W=Mkm+2^k+m\).
+
+The chosen vectors of one assignment matrix are linearly independent
+by their first coordinates. Their common nonneighbors in \(B\) form
+the orthogonal complement of their span and have size \(2^k\). This
+subspace determines the assignment matrix, because in its orthogonal
+complement the unique vector starting with \(e_j\) encodes row \(j\).
+A satisfying assignment therefore gives an independent set of weight
+\(W\) by selecting its row vertices in all layers, its common
+nonneighbors in \(B\), and a true literal in each \(T_i\).
+Conversely, any maximum-weight independent set hits every assignment
+clique. Inserting a vertex of an unhit clique loses at most \(M/2\)
+from \(B\) and one from the relevant \(T_i\), strictly less than \(M\).
+After these forced choices, reaching \(W\) requires \(2^k\) vertices
+of \(B\) and a literal in every \(T_i\). Thus all layers have the same
+common nonneighbors in \(B\) and the same assignment. Its selected
+literal in each clause is true.
+
+\section{Removing triangles without increasing width}
+
+Process \(B\) first, then, clause by clause and row by row, list
+the vertices of \(A_{i,j}\) followed by the literals of that row of
+\(T_i\). Remove the edges of each selection clique and retain its
+vertices as markers in that order. For a clique of \(r\) markers
+add a private path on \(2q\) sites with \(q=2r+2\). Marker \(j\)
+is adjacent to sites \(4j\) and \(4j+3\). Give all path sites weight
+\(U=1+\sum_{j=1}^{r}w_j\), where \(w_j\) are the original marker
+weights. Keep the original intergroup edges and marker weights.
+
+An optimum uses \(q\) sites on each path, since replacing fewer
+sites and all selected markers by a maximum path set gains at
+least \(U\) and loses at most \(U-1\). A maximum path set uses one
+site in each pair \((2i-1,2i)\). It takes odd sites up to a split
+\(t\) and even sites thereafter, because an even site followed
+by an odd site in the next pair is forbidden. Marker \(j\) is
+available exactly when \(2j\le t\le 2j+1\), and these intervals
+are disjoint. Therefore at most one marker per former clique is
+chosen, and any particular marker is permitted by some split.
+The optimum increases by exactly \(\sum qU\) across all gadgets.
+The graph is triangle-free because the old intergroup graph is
+bipartite, each site touches at most one marker, and a marker's
+two sites are three edges apart.
+
+Before each marker \(j\), insert its path's as yet unplaced sites
+through \(4j+3\). Insert the last site after the last marker.
+For any cut in the resulting order, the intergroup edges among
+old vertices have rank at most \(3k+1\). The parity edges between
+\(B\) and assignment groups factor through \(2k\) coordinates.
+Assignment-to-literal edges can cross only in the current row of
+the current clause, and their columns are spanned by the \(k\)
+coordinates and the all-ones column. At most two private paths
+are split, one for the current assignment group and one for the
+literal clique of the current clause. Each contributes at most
+one path edge. Marker-to-site edges can cross only in the current
+marker block, contributing at most two edges. Thus the width is
+at most \(3k+5\).
+
+Replace each vertex of weight \(w\) by \(w\) independent false twins,
+and replace each edge by the complete join of its two classes.
+The independent-set optimum is unchanged as a number after
+interpreting the old objective as weight. Triangle-freeness is
+preserved. Keep the twins consecutive. Cuts between classes repeat
+rows and columns. A cut within a class introduces at most one
+extra column type relative to the cut just after the class, so
+the width is at most \(b=3k+6\). Site weights are \(1+2^{3k}\)
+for assignment groups and at most \(1+v\) for literal groups.
+All sizes and construction times, including writing the dense
+graph and its certificate, are \(2^{O(k)}\) times a fixed polynomial
+in the normalized formula length.
+
+\section{Providing an optimal certificate}
+
+We first construct a simple graph \(P\) on \(a=51200b\) vertices
+with degree at most 16 and rank-width at least \(b\). For the
+existence argument choose eight independent uniform permutations
+and join every vertex to its image under each, omitting loops and
+duplicates. For a fixed set \(S\) of size \(a/3\le r\le a/2\), let
+\(t=\lfloor a/100\rfloor\). The probability that at most \(t\) of
+its vertices map out under one permutation is at most
+\[
+ \binom rt(r/a)^{r-t}
+ \le (50e)^{a/100}2^{-(a/3-a/100)}<2^{-a/5}.
+\]
+Indeed, one of the \(\binom rt\) subsets of size \(r-t\) must
+map into \(S\), and its distinct images can be exposed in order.
+The binomial bound uses the increase of \(x\ln(ea/(2x))\) up to
+\(a/100\). A union bound over all sets for all eight permutations
+gives failure probability at most \(2^a2^{-8a/5}<1\). Thus
+every balanced cut has more than \(a/100\) edges. Its crossing
+graph has an induced matching of size at least \(a/51200\):
+greedily keeping one edge and removing the neighborhoods of its
+endpoints removes at most \(2\cdot16^2\) edges per choice.
+The corresponding submatrix is a permutation matrix.
+Every subcubic decomposition tree has an edge separating between
+one third and one half of its leaves. Follow a branch with more
+than half of the leaves as long as one exists. At the first
+vertex with no such branch, a largest branch provides the cut.
+Hence the rank-width is at least \(b\).
+Enumerate tuples of permutations and test the stated cut condition
+to find \(P\) deterministically in \(2^{O(b\log(b+2))}\) time.
+
+Subdivide each edge of \(P\) once to obtain a bipartite graph \(P'\)
+on \(O(b)\) vertices. Locally complement at each subdivision
+vertex and delete it to restore the original edge. Local
+complementation preserves cut ranks by adding the complemented
+vertex's row to the rows of its neighbors on its own side, or
+using columns if it is on the other side. Deletion cannot increase
+either minimum width, by restricting an order or pruning a
+decomposition tree. Therefore \(P'\) has rank-width at least \(b\).
+Its linear rank-width is also at least \(b\), since a linear order
+gives a caterpillar decomposition.
+
+Enumerate subsets to compute \(\alpha(P')\) and every cut rank
+\(\rho(S)\). To compute an optimum order, define \(D(\emptyset)=0\)
+and \(D(S)=\max(\rho(S),\min_{x\in S}D(S\setminus\{x\}))\).
+Choosing the last vertex of each prefix justifies the recurrence.
+The optimum is \(D(V(P'))\), and minimizers recover an order.
+For rank-width let \(E(\{x\})=\rho(\{x\})\), and for larger sets let
+\[
+ E(S)=\max\bigl(\rho(S),
+       \min_{\emptyset\ne U\subsetneq S}\max(E(U),E(S\setminus U))\bigr).
+\]
+This is the optimum over rooted binary trees on the leaves \(S\):
+choose the two child sets and use the cut rank of \(S\) at its root.
+At the full set, forgetting the root and suppressing its
+degree-two vertex gives a subcubic tree of the same width.
+Conversely a subcubic decomposition can be rooted by subdividing
+an edge and suppressing remaining degree-two vertices. The
+split minimizers recover an optimum tree. Subset enumeration
+and these recurrences take \(3^{O(b)}\) times a fixed polynomial.
+
+Take the disjoint union with the triangle-free hard graph and
+increase the threshold by \(\alpha(P')\). Concatenate the orders
+or join the decomposition trees at subdivided edges. Each cut
+then splits at most one graph. Because the optimum width of \(P'\)
+is at least \(b\), the assembled certificate is optimal, by
+induced-subgraph monotonicity. Its width is \(O(k)\). The total
+construction costs \(2^{O(k\log(k+2))}\) times a fixed polynomial
+in formula length, and the complete output length is
+\(2^{O(k)}\) times a fixed polynomial.
+
+\section{Transferring the running-time bounds}
+
+For the \(\mathrm W[1]\) comparison, encode a Multicolored Clique
+instance with \(\ell\) colors and \(n\ge 2\) vertices by blocks of
+\(\lceil\log_2 n\rceil\) bits. Each block names a vertex of its color.
+Forbid unused names and nonedge pairs by clauses that disagree with
+the corresponding bit patterns. Empty color classes and trivial
+cases can be answered directly. The CNF has
+\(v\le\ell\lceil\log_2 n\rceil\) variables and polynomial length and
+construction time with an absolute exponent. It is satisfiable
+exactly when there is a multicolored clique. This problem is
+\(\mathrm W[1]\)-hard by number of colors~\cite{df}, by copying the
+original Clique vertices to each color and respecting adjacency
+between copies in different colors.
+
+Let \(x=\log_2 n\). The padding cost in the exponent is bounded by
+\(C(\ell)x^{3/4}\) for computable \(C\), since
+\(k=O(\sqrt{\ell x})\) and \(\log(k+2)=O(\sqrt{k})\).
+Above \(C(\ell)^4\) it is at most \(x\); below this cutoff it is
+bounded by a computable function of \(\ell\).
+For the hypothetical solver, take a computable integer \(A(\ell)\)
+bounding \(\max(1,p)^2/x\) and use the modulus at \(1/A(\ell)\).
+The exponent is at most \(x\) beyond the cutoff, and the
+computable finite prefix of \(h\) bounds it otherwise.
+The resulting deterministic fixed-parameter algorithm by color
+count contradicts \(\mathrm{FPT}\ne\mathrm W[1]\).
+
+For SH take a 3-CNF formula of variable-plus-clause count \(s\).
+The deterministic 3-CNF formulation of SH excludes every
+fixed positive saving below the linear power in \(s\) with
+a fixed polynomial input factor~\cite[Lemma 2.1]{sh}.
+Here \(k=O(\sqrt{s})\) and \(p=O(\sqrt{s})\), and the
+construction cost exponent is \(O(s^{3/4})\).
+A solver for any fixed \(0<\epsilon<2\) would therefore give a
+solver in \(2^{O(s^{1-\gamma})}\) times a fixed polynomial in
+complete input length, with \(\gamma=\min(1/4,\epsilon/2)>0\).
+This proves both exclusions.
+
+\paragraph{Acknowledgment.}
+The proof was found using ChatGPT.
+
+\begin{thebibliography}{9}
+\bibitem{bkn}
+B. Bergougnoux, T. Korhonen, and J. Nederlof.
+Tight lower bounds for problems parameterized by rank-width.
+\emph{STACS}, LIPIcs 254, 11:1--11:17, 2023.
+\href{https://doi.org/10.4230/LIPIcs.STACS.2023.11}{DOI}.
+\bibitem{df}
+R. G. Downey and M. R. Fellows. Fixed-parameter tractability and
+completeness II: On completeness for \(\mathrm W[1]\).
+\emph{Theoretical Computer Science}, 141(1--2):109--131, 1995.
+\href{https://doi.org/10.1016/0304-3975(94)00097-3}{DOI}.
+\bibitem{sh}
+MIT Hardness Group et al. ETH is dead, long live SH.
+\href{https://arxiv.org/abs/2611.02650v2}{arXiv:2611.02650v2}, 2026.
+\end{thebibliography}
+\end{document}
+
+

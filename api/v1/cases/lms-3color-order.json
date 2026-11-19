@@ -1,0 +1,419 @@
+{
+  "aliases": [
+    "LMS2011-3.2",
+    "SH04",
+    "survey-sh04"
+  ],
+  "bounds": [
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "effectiveStatus": "unknown",
+            "evidence": [],
+            "status": "unknown"
+          },
+          "forward": {
+            "effectiveStatus": "established",
+            "evidence": [
+              {
+                "boundRevision": 1,
+                "reviewId": "color-eth-historical-review",
+                "source": {
+                  "editionId": "bulletin",
+                  "locator": "Theorem 3.2, PDF p. 12",
+                  "paperId": "lms2011",
+                  "role": "benchmark"
+                }
+              }
+            ],
+            "status": "established"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "hypothesis-implies-bound"
+        },
+        "sh": {
+          "converse": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unassessed"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "color-eth-historical",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "historicalNote": [
+          "The ",
+          {
+            "text": "2026 algorithm for 3-SAT",
+            "url": "https://github.com/openai/math/tree/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026"
+          },
+          " refutes ",
+          {
+            "fragment": "strongly-uniform-eth",
+            "path": "assumptions/eth/r1/index.html",
+            "text": "strongly uniform ETH"
+          },
+          ". Encoding each vertex with three variables therefore gives a 3-Coloring algorithm whose exponent is ",
+          {
+            "fragment": "effective-little-o",
+            "path": "notation/index.html",
+            "text": "effectively sublinear"
+          },
+          " in the number of vertices."
+        ],
+        "label": "Subexponential-time bound",
+        "revision": 1,
+        "title": "Subexponential-time bound under ETH"
+      },
+      "reviewIds": [
+        "color-eth-historical-review"
+      ],
+      "revision": 1,
+      "runtime": "2^(o(n)) B^(O(1))",
+      "runtimeSymbols": [
+        "n",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "bulletin",
+          "locator": "Theorem 3.2, PDF p. 12",
+          "paperId": "lms2011",
+          "placement": "statement",
+          "role": "benchmark"
+        },
+        {
+          "editionId": "v2",
+          "locator": "Table 1, 3-Coloring row, p. 4, and Theorem 3.1, p. 8",
+          "paperId": "sh26",
+          "placement": "context",
+          "role": "benchmark"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm decides 3-Coloring within the stated running time.",
+      "status": "established",
+      "supported": true
+    },
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unassessed"
+        },
+        "sh": {
+          "converse": {
+            "effectiveStatus": "established",
+            "evidence": [
+              {
+                "boundRevision": 1,
+                "proof": {
+                  "proofId": "three-coloring-sh-converse",
+                  "revision": 1,
+                  "theorem": "color-sh-converse"
+                },
+                "reviewId": "three-coloring-sh-converse-review",
+                "source": {
+                  "editionId": "v1",
+                  "locator": "Lemma 2.2, printed pp. 5–6",
+                  "paperId": "sh26",
+                  "role": "preprint dependency"
+                }
+              }
+            ],
+            "status": "established"
+          },
+          "forward": {
+            "effectiveStatus": "established",
+            "evidence": [
+              {
+                "boundRevision": 1,
+                "reviewId": "color-sh-review",
+                "source": {
+                  "editionId": "v1",
+                  "locator": "Table 1 and Theorem 3.1",
+                  "paperId": "sh26",
+                  "role": "preprint implication"
+                }
+              }
+            ],
+            "status": "established"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "established-equivalent"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "sh",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "color-sh-fixed-power",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [
+        "For every fixed 0 < a < 1."
+      ],
+      "reader": {
+        "label": "Fixed-power bounds",
+        "revision": 1,
+        "subject": "The full family of bounds",
+        "title": "Fixed-power bounds under SH"
+      },
+      "reviewIds": [
+        "color-sh-review"
+      ],
+      "revision": 1,
+      "runtime": "2^(O(n^a)) B^(O(1))",
+      "runtimeSymbols": [
+        "n",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "v2",
+          "locator": "Table 1, 3-Coloring row, p. 4, and Theorem 3.1, p. 8",
+          "paperId": "sh26",
+          "placement": "forward",
+          "role": "benchmark"
+        },
+        {
+          "editionId": "v1",
+          "locator": "Lemma 2.2, printed pp. 5–6",
+          "paperId": "sh26",
+          "placement": "proof",
+          "role": "preprint dependency"
+        }
+      ],
+      "statement": "Under SH, no deterministic algorithm decides 3-Coloring within the stated running time.",
+      "status": "established",
+      "supported": true
+    }
+  ],
+  "coverage": "Exact ETH and SH benchmark families. The source audit was targeted. The preprint quantitative sparsification proof is imported.",
+  "encoding": "Explicit binary graph encoding with individually represented vertices. B includes the complete graph input.",
+  "id": "lms-3color-order",
+  "inputConditions": [
+    {
+      "condition": "The graph is finite, simple, undirected, and unweighted.",
+      "id": "graph-class",
+      "level": "problem"
+    }
+  ],
+  "kind": "lower-bound-case",
+  "parameter": "Number of vertices n",
+  "problemDefinitionHash": "cb2d7d5306bea1214e39349bb9aa3cc330bd40aa880f922d1d02dbeaf9b383d6",
+  "problemId": "3-coloring",
+  "problemRevision": 1,
+  "reader": {
+    "anchor": "vertices",
+    "boundContext": "Let n be the number of vertices and B the input length in bits.",
+    "notation": "These bounds concern deterministic algorithms.",
+    "parameter": "The number of vertices n = |V(G)|.",
+    "parameterLabel": "Number of vertices",
+    "parameterSymbols": [
+      {
+        "meaning": "number of vertices",
+        "symbol": "n"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "input length in bits",
+        "symbol": "B"
+      }
+    ]
+  },
+  "recoveryAssessments": [
+    {
+      "comparison": "The SH bound covers every fixed exponent below 1 in the number of vertices.",
+      "effective": false,
+      "evidence": [
+        {
+          "editionId": "v1",
+          "locator": "Table 1 and Theorem 3.1",
+          "paperId": "sh26",
+          "placement": "forward",
+          "role": "benchmark"
+        }
+      ],
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "recoveredScale": "n^(1−ε)",
+      "recovery": {
+        "id": "color-sh-fixed-power",
+        "revision": 1
+      },
+      "scale": "degree",
+      "target": {
+        "id": "color-eth-historical",
+        "revision": 1
+      },
+      "targetScale": "n"
+    }
+  ],
+  "recoveryComparisons": [
+    {
+      "formulation": {
+        "id": "uniform-eth",
+        "revision": 4
+      },
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "status": "equivalence",
+      "target": {
+        "id": "color-eth-historical",
+        "revision": 1
+      }
+    },
+    {
+      "formulation": {
+        "id": "uniform-eth",
+        "revision": 4
+      },
+      "hypothesis": {
+        "id": "np_qp",
+        "revision": 1
+      },
+      "status": "equivalence",
+      "target": {
+        "id": "color-eth-historical",
+        "revision": 1
+      }
+    },
+    {
+      "comparison": "The SH bound covers every fixed exponent below 1 in the number of vertices.",
+      "effective": false,
+      "evidence": [
+        {
+          "editionId": "v1",
+          "locator": "Table 1 and Theorem 3.1",
+          "paperId": "sh26",
+          "placement": "forward",
+          "role": "benchmark"
+        }
+      ],
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "recoveredScale": "n^(1−ε)",
+      "recovery": {
+        "id": "color-sh-fixed-power",
+        "revision": 1
+      },
+      "scale": "degree",
+      "status": "degree",
+      "target": {
+        "id": "color-eth-historical",
+        "revision": 1
+      },
+      "targetScale": "n"
+    },
+    {
+      "formulation": {
+        "id": "uniform-eth",
+        "revision": 4
+      },
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "status": "equivalence",
+      "target": {
+        "id": "color-eth-historical",
+        "revision": 1
+      }
+    },
+    {
+      "formulation": {
+        "id": "uniform-eth",
+        "revision": 4
+      },
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "status": "equivalence",
+      "target": {
+        "id": "color-eth-historical",
+        "revision": 1
+      }
+    }
+  ],
+  "resolutions": [
+    {
+      "assumptionId": "w1",
+      "benchmarks": [
+        {
+          "id": "color-eth-historical",
+          "revision": 1
+        },
+        {
+          "id": "color-sh-fixed-power",
+          "revision": 1
+        }
+      ],
+      "evidence": [
+        {
+          "editionId": "bulletin",
+          "locator": "Theorem 3.2, PDF p. 12",
+          "paperId": "lms2011",
+          "role": "benchmark"
+        },
+        {
+          "proofId": "three-coloring-sh-converse",
+          "revision": 1,
+          "theorem": "color-sh-converse"
+        }
+      ],
+      "reason": "The historical ETH bound implies uniform ETH. The SH comparison depends on the cited preprint.",
+      "recovered": [],
+      "remainingGap": "Benchmark recovery under deterministic FPT ≠ W[1] is unestablished.",
+      "status": "open"
+    }
+  ],
+  "revision": 18,
+  "task": "Decide whether the graph admits a proper coloring with at most three colors.",
+  "title": "3-Coloring by graph order",
+  "variant": "Ordinary unweighted 3-Coloring"
+}

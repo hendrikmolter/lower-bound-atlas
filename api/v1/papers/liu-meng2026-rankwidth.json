@@ -1,0 +1,21 @@
+{
+  "authors": [
+    "Chenghua Liu",
+    "Boning Meng"
+  ],
+  "editions": [
+    {
+      "access": "Preprint only. Checked Theorem 3.1, Corollary 3.10, the monopolar construction in §3.2, and the observation on clause length in the proof of Theorem C.1.",
+      "id": "v1",
+      "kind": "preprint",
+      "label": "arXiv:2608.18854v1, 19 August 2026",
+      "openUrl": "https://arxiv.org/html/2608.18854v1",
+      "preferredUrl": "https://arxiv.org/abs/2608.18854v1",
+      "primaryUrl": "https://arxiv.org/abs/2608.18854v1"
+    }
+  ],
+  "id": "liu-meng2026-rankwidth",
+  "preferredEditionId": "v1",
+  "preferredUrl": "https://arxiv.org/abs/2608.18854v1",
+  "title": "Lower Bounds for Domination-Type Problems Parameterized by Rank-Width"
+}

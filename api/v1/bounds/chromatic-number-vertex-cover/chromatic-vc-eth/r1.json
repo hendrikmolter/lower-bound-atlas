@@ -1,0 +1,40 @@
+{
+  "assessments": {},
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "chromatic-vc-eth",
+  "inputConditions": [],
+  "inputFactor": "n^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [],
+  "reader": {
+    "label": "Slightly superexponential bound",
+    "revision": 1
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "2^(o(k log₂ k)) n^(O(1))",
+  "runtimeSymbols": [
+    "k",
+    "n"
+  ],
+  "sources": [
+    {
+      "editionId": "journal",
+      "locator": "Theorem 6.1, p. 698",
+      "paperId": "lms2018",
+      "placement": "statement",
+      "role": "published lower bound"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm decides Chromatic Number within the stated running time.",
+  "status": "established",
+  "supported": true
+}

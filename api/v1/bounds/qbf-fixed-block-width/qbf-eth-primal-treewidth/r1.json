@@ -1,0 +1,74 @@
+{
+  "assessments": {
+    "eth": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unassessed"
+    },
+    "sh": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unassessed"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "qbf-eth-primal-treewidth",
+  "inputConditions": [],
+  "inputFactor": "n^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [
+    "For each fixed integer q ≥ 1."
+  ],
+  "reader": {
+    "explanation": "The source treats the matrix as a set of clauses or terms and uses positive-rate variable-3SAT ETH. The polynomial factor counts the variables in the matrix.",
+    "label": "Tower bound at fixed quantifier depth",
+    "revision": 1
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "T(q,o(t)) n^(O(1))",
+  "runtimeSymbols": [
+    "q",
+    "t",
+    "n",
+    "T(q,x)"
+  ],
+  "sources": [
+    {
+      "editionId": "proceedings",
+      "locator": "Theorem 13, proceedings pp. 417 and 421 (PDF pp. 8 and 12)",
+      "paperId": "fhp2020",
+      "placement": "statement",
+      "role": "benchmark"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm decides Quantified Boolean satisfiability within the stated running time.",
+  "status": "established",
+  "supported": true
+}

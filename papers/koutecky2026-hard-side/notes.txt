@@ -1,0 +1,1 @@
+Martin Koutecký. Lecture 2 – Proving the hard side. Parameterized Algorithms 2026–27, lecture notes, 13 November 2026. https://iuuk.mff.cuni.cz/~koutecky/paralg2627-graph/lecture-2-proving-the-hard-side.html

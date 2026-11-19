@@ -1,0 +1,57 @@
+{
+  "assessments": {
+    "eth": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unassessed"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "minimum-common-string-partition-binary-eth",
+  "inputConditions": [
+    "binary-alphabet"
+  ],
+  "inputFactor": "Included in the displayed running time",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [],
+  "reader": {
+    "label": "Binary-alphabet bound in n / log n",
+    "revision": 1,
+    "title": "Binary-alphabet bound in n / log n under ETH"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "2^(o(n / log₂ n))",
+  "runtimeSymbols": [
+    "n"
+  ],
+  "sources": [
+    {
+      "editionId": "proceedings",
+      "locator": "Theorem 10 and proof, pp. 35:14–35:15",
+      "paperId": "cygan-et-al2021-mcsp",
+      "placement": "statement",
+      "role": "published lower bound"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm solves Minimum Common String Partition within the stated running time.",
+  "status": "established",
+  "supported": true
+}

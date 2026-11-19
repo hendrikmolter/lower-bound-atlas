@@ -1,0 +1,10 @@
+{
+  "id": "planar-edge-multiway-cut",
+  "input": "An explicitly encoded finite simple undirected planar graph G with nonnegative integer edge weights, k specified distinct terminals, and a nonnegative integer threshold.",
+  "name": "Planar Edge Multiway Cut",
+  "parameterizations": [
+    "planar-edge-multiway-cut-terminals"
+  ],
+  "question": "Can edges of total weight at most the threshold be deleted so that no two terminals are connected?",
+  "revision": 1
+}

@@ -1,0 +1,9 @@
+# Independent agent review of Hamiltonian fixed-power bounds
+
+Codex agent /root/population_a independently checked the arguments in the original manuscript on 18 November 2026. Its LF-normalized source SHA-256 was `740e164e0e5f6d6d8bc3608b5f7968261930bd09771c828a4eadbdec53fafb30`.
+
+For Theorem 1, the review checked the clause splitting, the linear edge parameter in Impagliazzo, Paturi and Zane (JCSS, p. 525 after Theorem 5), the passage to simple undirected graphs, the leaf endpoints in the Hamiltonian Path construction, and the Longest Path budget conversion. These maps preserve polynomial full bit length and bound the stated parameters linearly in the source formula length.
+
+For Theorem 2, the review checked the incidence constraints, bounded binary positions and modular increments for selected arcs. A cycle of selected arcs has length divisible by the graph order, so the cover consists of one spanning cycle. The circuit gives a CNF with O(p log²(p+2)) bits for p = |V| + |E|. A fixed increase in the exponent below one absorbs the logarithmic factor. This checks the converse for the vertices-plus-edges measure.
+
+Codex agent /root/derived_shortlist independently reviewed the narrowed manuscript on 18 November 2026. The updated LF-normalized source SHA-256 is `d4ef120a878f319e07c2844d228affc11af663e74ff6b5e9ee63d223dcf432cc`. The reviewer verified that the four retained lower bounds and the graph-size converse preserve their original arguments. The reviewer also checked the added attribution to SH v2, Table 1, and de Berg et al., Theorem 4.7. For each forbidden power below one, a sufficiently large fixed grid dimension gives the claimed Hamiltonian Cycle bound. At fixed dimension the edge count is linear in the order, and the path and budget reductions transfer the exclusion to the other retained problems.

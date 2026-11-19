@@ -1,0 +1,22 @@
+{
+  "authors": [
+    "Dániel Marx",
+    "Marcin Pilipczuk",
+    "Michał Pilipczuk"
+  ],
+  "editions": [
+    {
+      "access": "Published proceedings PDF inspected. The 2022 SIAM Journal on Computing article under a different title addresses Directed Subset TSP.",
+      "id": "focs",
+      "kind": "proceedings",
+      "label": "FOCS 2018, pp. 474–484",
+      "openUrl": "https://ieee-focs.org/FOCS-2018-Papers/pdfs/59f474.pdf",
+      "preferredUrl": "https://doi.org/10.1109/FOCS.2018.00052",
+      "primaryUrl": "https://doi.org/10.1109/FOCS.2018.00052"
+    }
+  ],
+  "id": "marx-pilipczuk-pilipczuk2018-steiner",
+  "preferredEditionId": "focs",
+  "preferredUrl": "https://doi.org/10.1109/FOCS.2018.00052",
+  "title": "On Subexponential Parameterized Algorithms for Steiner Tree and Directed Subset TSP on Planar Graphs"
+}

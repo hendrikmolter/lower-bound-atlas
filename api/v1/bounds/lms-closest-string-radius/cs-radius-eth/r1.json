@@ -1,0 +1,76 @@
+{
+  "assessments": {
+    "eth": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unassessed"
+    },
+    "sh": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unassessed"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "cs-radius-eth",
+  "inputConditions": [],
+  "inputFactor": "N^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [],
+  "reader": {
+    "label": "Subexponential-time bound",
+    "revision": 1
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "2^(o(d log₂ d)) N^(O(1))",
+  "runtimeSymbols": [
+    "d",
+    "N"
+  ],
+  "sources": [
+    {
+      "editionId": "journal",
+      "locator": "Theorem 3.1, p. 687",
+      "paperId": "lms2018",
+      "placement": "statement",
+      "role": "original lower bound"
+    },
+    {
+      "editionId": "book",
+      "locator": "Theorem 14.17",
+      "paperId": "cygan2015",
+      "placement": "statement",
+      "role": "lower bound"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm decides Closest String within the stated running time.",
+  "status": "established",
+  "supported": true
+}

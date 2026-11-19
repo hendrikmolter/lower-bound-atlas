@@ -1,0 +1,122 @@
+{
+  "assessments": {
+    "eth": {
+      "converse": {
+        "effectiveStatus": "unknown",
+        "evidence": [],
+        "status": "unknown"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unknown"
+    },
+    "kxk": {
+      "converse": {
+        "effectiveStatus": "unknown",
+        "evidence": [],
+        "status": "unknown"
+      },
+      "forward": {
+        "effectiveStatus": "established",
+        "evidence": [
+          {
+            "boundRevision": 2,
+            "hypothesisRevision": 1,
+            "proof": {
+              "proofId": "six-w1-memberships",
+              "revision": 1,
+              "theorem": "open-to-closed-regions"
+            },
+            "reviewId": "unit-square-independent-set-budget-kxk-closed-scope",
+            "source": {
+              "editionId": "v3",
+              "locator": "Proposition 1 and Table 1",
+              "paperId": "szeider2026",
+              "placement": "statement",
+              "role": "benchmark"
+            }
+          }
+        ],
+        "status": "established"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "hypothesis-implies-bound"
+    },
+    "sh": {
+      "converse": {
+        "effectiveStatus": "unknown",
+        "evidence": [],
+        "status": "unknown"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unknown"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "kxk",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "unit-square-independent-set-budget-kxk",
+  "inputConditions": [],
+  "inputFactor": "B^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [
+    "The parameter factor f is an arbitrary computable function.",
+    "The hard instances have coordinates of polynomial bit length in the number of objects."
+  ],
+  "reader": {
+    "label": "Exponent in solution budget",
+    "revision": 2,
+    "title": "Exponent in solution budget under the k × k Clique Hypothesis"
+  },
+  "reviewIds": [
+    "unit-square-independent-set-budget-kxk-closed-scope"
+  ],
+  "revision": 2,
+  "runtime": "f(k) n^(o(k^(1/2))) B^(O(1))",
+  "runtimeSymbols": [
+    "k",
+    "n",
+    "B"
+  ],
+  "sources": [
+    {
+      "editionId": "v3",
+      "locator": "Proposition 1 and Table 1",
+      "paperId": "szeider2026",
+      "placement": "statement",
+      "role": "benchmark"
+    },
+    {
+      "editionId": "oct30",
+      "locator": "§3, geometric transfers from Grid Tiling",
+      "paperId": "szeider2026",
+      "placement": "statement",
+      "role": "benchmark"
+    },
+    {
+      "editionId": "book",
+      "locator": "Exercise 14.13 and bibliographic notes, pp. 517 and 520",
+      "paperId": "cygan2015",
+      "placement": "statement",
+      "role": "benchmark"
+    }
+  ],
+  "statement": "Under the k × k Clique Hypothesis, no deterministic algorithm solves Independent Set of axis-parallel unit squares within the stated running time.",
+  "status": "established",
+  "supported": true
+}

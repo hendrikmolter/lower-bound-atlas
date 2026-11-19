@@ -1,0 +1,42 @@
+{
+  "assessments": {},
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "w1",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "hardnessBaseline": "W[1]",
+  "id": "planar-edge-multiway-cut-terminals-w1",
+  "inputConditions": [],
+  "inputFactor": "B^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [],
+  "reader": {
+    "label": "Fixed-parameter tractability",
+    "revision": 1
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "f(k) B^(O(1))",
+  "runtimeSymbols": [
+    "f",
+    "k",
+    "B"
+  ],
+  "sources": [
+    {
+      "editionId": "journal",
+      "locator": "Theorem 3, pp. 679–680",
+      "paperId": "marx2012-multiway",
+      "placement": "statement",
+      "role": "published W[1]-hardness"
+    }
+  ],
+  "statement": "Under FPT ≠ W[1], no deterministic algorithm solves Planar Edge Multiway Cut within the stated running time.",
+  "status": "established",
+  "supported": true
+}

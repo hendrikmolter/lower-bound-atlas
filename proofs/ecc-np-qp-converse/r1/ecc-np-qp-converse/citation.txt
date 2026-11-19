@@ -1,0 +1,1 @@
+Atlas. A converse for the Edge Clique Cover bound under NP ⊈ QP · Theorem 1. ecc-np-qp-converse, theorem ecc-np-qp-converse, proof revision 1. Edition v1.0.0, Git commit 5c6c72747978446d3f7009e6a5cf32d496b1d5ac. https://github.com/hendrikmolter/lower-bound-atlas/blob/5c6c72747978446d3f7009e6a5cf32d496b1d5ac/proofs/ecc-np-qp-converse.tex

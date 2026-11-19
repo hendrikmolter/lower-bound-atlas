@@ -1,0 +1,67 @@
+{
+  "assessments": {
+    "kxk": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unassessed"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "kxk",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "fixed-width-sat-variables-kxk",
+  "inputConditions": [],
+  "inputFactor": "B^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [
+    "Separately for each fixed integer a≥2, with the fixed clause-width bound r=2a."
+  ],
+  "reader": {
+    "explanation": "The statement concerns formulas of width at most 2a.",
+    "label": "Bound for fixed even clause width",
+    "revision": 1,
+    "title": "Fixed-width SAT under the k × k Clique Hypothesis: Bound for fixed even clause width"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "2^(o(n^(a/(a+1)) log₂ n)) B^(O(1))",
+  "runtimeSymbols": [
+    "n",
+    "r",
+    "B"
+  ],
+  "sources": [
+    {
+      "editionId": "oct30",
+      "locator": "Proposition 2(b), p. 3",
+      "paperId": "szeider2026",
+      "placement": "statement",
+      "role": "theorem"
+    },
+    {
+      "editionId": "v3",
+      "locator": "November 9 revision",
+      "paperId": "szeider2026",
+      "placement": "context",
+      "role": "preferred edition"
+    }
+  ],
+  "statement": "Under the k × k Clique Hypothesis, no deterministic algorithm solves the stated decision problem within the stated running time.",
+  "status": "established",
+  "supported": true
+}

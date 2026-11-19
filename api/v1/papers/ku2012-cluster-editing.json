@@ -1,0 +1,31 @@
+{
+  "authors": [
+    "Christian Komusiewicz",
+    "Johannes Uhlmann"
+  ],
+  "editions": [
+    {
+      "access": "Full text inspected.",
+      "id": "author",
+      "kind": "preprint",
+      "label": "Authors’ full manuscript",
+      "openUrl": "https://www.uni-marburg.de/de/fb12/arbeitsgruppen/algorith/paper/ce-bounded-degree.pdf",
+      "preferredUrl": "https://www.uni-marburg.de/de/fb12/arbeitsgruppen/algorith/paper/ce-bounded-degree.pdf",
+      "primaryUrl": "https://www.uni-marburg.de/de/fb12/arbeitsgruppen/algorith/paper/ce-bounded-degree.pdf"
+    },
+    {
+      "access": "Published text checked for Theorem 2 and its reduction in §2, including the maximum-degree-six restriction.",
+      "doi": "10.1016/j.dam.2012.05.019",
+      "id": "journal",
+      "kind": "journal",
+      "label": "Discrete Applied Mathematics 160(15) (2012), pp. 2259–2270",
+      "openUrl": "https://www.sciencedirect.com/science/article/pii/S0166218X12002259",
+      "preferredUrl": "https://doi.org/10.1016/j.dam.2012.05.019",
+      "primaryUrl": "https://doi.org/10.1016/j.dam.2012.05.019"
+    }
+  ],
+  "id": "ku2012-cluster-editing",
+  "preferredEditionId": "journal",
+  "preferredUrl": "https://doi.org/10.1016/j.dam.2012.05.019",
+  "title": "Cluster Editing with Locally Bounded Modifications"
+}

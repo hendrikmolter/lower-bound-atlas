@@ -1,0 +1,290 @@
+{
+  "aliases": [],
+  "bounds": [
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "effectiveStatus": "unknown",
+            "evidence": [],
+            "status": "unknown"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unknown"
+        },
+        "sh": {
+          "converse": {
+            "effectiveStatus": "unknown",
+            "evidence": [],
+            "status": "unknown"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unknown"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "hamiltonian-cycle-graph-size-eth",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "label": "Exponent in number of vertices plus edges",
+        "revision": 1,
+        "title": "Exponent in number of vertices plus edges under ETH"
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "2^(o(s)) B^(O(1))",
+      "runtimeSymbols": [
+        "s",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "book",
+          "locator": "Theorem 14.6 and Exercise 14.2(e)",
+          "paperId": "cygan2015",
+          "placement": "statement",
+          "role": "benchmark"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm solves Hamiltonian Cycle within the stated running time.",
+      "status": "established",
+      "supported": true
+    },
+    {
+      "assessments": {
+        "sh": {
+          "converse": {
+            "effectiveStatus": "established",
+            "evidence": [
+              {
+                "boundRevision": 1,
+                "hypothesisRevision": 1,
+                "proof": {
+                  "proofId": "hamiltonian-sh",
+                  "revision": 1,
+                  "theorem": "hamiltonian-size-sh-converse"
+                },
+                "reviewId": "hamiltonian-size-sh-converse-independent"
+              }
+            ],
+            "status": "established"
+          },
+          "forward": {
+            "effectiveStatus": "established",
+            "evidence": [
+              {
+                "boundRevision": 1,
+                "hypothesisRevision": 1,
+                "proof": {
+                  "proofId": "hamiltonian-sh",
+                  "revision": 1,
+                  "theorem": "hamiltonian-sh-forward"
+                },
+                "reviewId": "hamiltonian-sh-forward-independent"
+              }
+            ],
+            "status": "established"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "established-equivalent"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "sh",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "hamiltonian-cycle-graph-size-sh",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [
+        {
+          "proofId": "hamiltonian-sh",
+          "revision": 1,
+          "theorem": "hamiltonian-sh-forward"
+        }
+      ],
+      "provenance": "atlas",
+      "qualifications": [
+        "Separately for every fixed 0 < a < 1."
+      ],
+      "reader": {
+        "explanation": "The forward direction uses a linear-size reduction from satisfiability. The converse encodes a cycle traversal in a CNF of near-linear bit length in the number of vertices plus edges.",
+        "label": "Fixed-power exponent in the number of vertices plus edges",
+        "revision": 1,
+        "title": "Fixed-power bounds under SH"
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "2^(O(s^a)) B^(O(1))",
+      "runtimeSymbols": [
+        "s",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "v2",
+          "locator": "Definition of SH and footnotes 1–2, pp. 1–2",
+          "paperId": "sh26",
+          "placement": "context",
+          "role": "hypothesis and encoding conventions"
+        },
+        {
+          "editionId": "journal",
+          "locator": "Section 3, p. 525, following Theorem 5",
+          "paperId": "ipz2001",
+          "placement": "proof",
+          "role": "linear-size reduction to Hamiltonian Circuit"
+        }
+      ],
+      "statement": "Under SH, no deterministic algorithm can decide Hamiltonian Cycle within the stated running time.",
+      "status": "established",
+      "supported": true
+    }
+  ],
+  "coverage": "Published lower bounds for number of vertices plus edges.",
+  "encoding": "A finite simple undirected graph G.",
+  "id": "hamiltonian-cycle-graph-size",
+  "inputConditions": [],
+  "kind": "lower-bound-case",
+  "parameter": "Number of vertices plus edges.",
+  "problemDefinitionHash": "cc2ec38becd58c12ca35a8f8b3c9318fd076a4c257b08e6e26b354ee341748b5",
+  "problemId": "hamiltonian-cycle",
+  "problemRevision": 1,
+  "reader": {
+    "anchor": "number-of-vertices-plus-edges",
+    "parameter": "Number of vertices plus edges.",
+    "parameterLabel": "Number of vertices plus edges",
+    "parameterSymbols": [
+      {
+        "meaning": "number of vertices plus number of edges of G",
+        "symbol": "s"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "complete explicit binary input length",
+        "symbol": "B"
+      }
+    ]
+  },
+  "recoveryAssessments": [
+    {
+      "comparison": "The SH result excludes every fixed power below one in the exponent of the number of vertices plus edges.",
+      "effective": false,
+      "evidence": [
+        {
+          "proofId": "hamiltonian-sh",
+          "revision": 1,
+          "theorem": "hamiltonian-sh-forward"
+        }
+      ],
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "recoveredScale": "s^a",
+      "recovery": {
+        "id": "hamiltonian-cycle-graph-size-sh",
+        "revision": 1
+      },
+      "scale": "degree",
+      "target": {
+        "id": "hamiltonian-cycle-graph-size-eth",
+        "revision": 1
+      },
+      "targetScale": "s"
+    }
+  ],
+  "recoveryComparisons": [
+    {
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "hamiltonian-cycle-graph-size-eth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "np_qp",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "hamiltonian-cycle-graph-size-eth",
+        "revision": 1
+      }
+    },
+    {
+      "comparison": "The SH result excludes every fixed power below one in the exponent of the number of vertices plus edges.",
+      "effective": false,
+      "evidence": [
+        {
+          "proofId": "hamiltonian-sh",
+          "revision": 1,
+          "theorem": "hamiltonian-sh-forward"
+        }
+      ],
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "recoveredScale": "s^a",
+      "recovery": {
+        "id": "hamiltonian-cycle-graph-size-sh",
+        "revision": 1
+      },
+      "scale": "degree",
+      "status": "degree",
+      "target": {
+        "id": "hamiltonian-cycle-graph-size-eth",
+        "revision": 1
+      },
+      "targetScale": "s"
+    },
+    {
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "hamiltonian-cycle-graph-size-eth",
+        "revision": 1
+      }
+    }
+  ],
+  "resolutions": [],
+  "revision": 3,
+  "task": "Does G contain a simple cycle through all vertices?",
+  "title": "Hamiltonian Cycle by number of vertices plus edges",
+  "variant": "Hamiltonian Cycle"
+}

@@ -1,0 +1,435 @@
+{
+  "aliases": [
+    "feature-set-selected-features"
+  ],
+  "bounds": [
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unassessed"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "feature-set-budget-eth",
+      "inputConditions": [],
+      "inputFactor": "M^(o(k))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [
+        "For source-admissible recursive f."
+      ],
+      "reader": {
+        "explanation": "The input-size clock uses the complete representation.",
+        "label": "Sublinear exponent in the solution budget",
+        "revision": 1,
+        "title": "Feature Set under ETH: Sublinear exponent in the solution budget"
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "f(k) M^(o(k))",
+      "runtimeSymbols": [
+        "k",
+        "M"
+      ],
+      "sources": [
+        {
+          "editionId": "journal",
+          "locator": "Theorem 4.1(1), pp. 239–240 and admissible function convention",
+          "paperId": "chkx2005",
+          "placement": "statement",
+          "role": "conditional lower bound"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm solves the stated decision problem within the stated running time.",
+      "status": "established",
+      "supported": true
+    },
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unassessed"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "feature-set-budget-eth-fixed",
+      "inputConditions": [],
+      "inputFactor": "M^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "explanation": "This follows from the earlier W[1] bound and the source implication from ordinary ETH, with the same candidate space and without a parameter-dependent prefactor.",
+        "label": "Sublinear exponent in the feature count",
+        "revision": 1,
+        "title": "Feature Set under ETH: Sublinear exponent in the feature count"
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "N^(o(k)) M^(O(1))",
+      "runtimeSymbols": [
+        "k",
+        "N",
+        "M"
+      ],
+      "sources": [
+        {
+          "editionId": "journal",
+          "locator": "Theorem 3.5 and Feature Set definition, pp. 225–227",
+          "paperId": "ccfhjkx2005",
+          "placement": "statement",
+          "role": "published candidate-space bound without a parameter factor"
+        },
+        {
+          "editionId": "journal",
+          "locator": "§6, discussion preceding Theorem 6.2, p. 246",
+          "paperId": "chkx2005",
+          "placement": "forward",
+          "role": "ETH implies FPT ≠ W[1] via the intermediate class M[1]"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm solves the stated decision problem within the stated running time.",
+      "status": "established",
+      "supported": true
+    },
+    {
+      "assessments": {
+        "w1": {
+          "converse": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unassessed"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "w1",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "feature-set-budget-w1",
+      "inputConditions": [],
+      "inputFactor": "M^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [
+        "For any recursive f subject to the source convention that the complexity functions and their inverses be easily computable."
+      ],
+      "reader": {
+        "explanation": "The source gives hardness for the second level of the linear-reduction hierarchy and thereby the stated consequence under FPT ≠ W[1]. Standard W[2]-hardness alone does not supply this exponent.",
+        "label": "Linear-reduction lower bound",
+        "revision": 1,
+        "title": "Feature Set under FPT ≠ W[1]: Linear-reduction lower bound"
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "f(k) N^(o(k)) M^(O(1))",
+      "runtimeSymbols": [
+        "k",
+        "N",
+        "M"
+      ],
+      "sources": [
+        {
+          "editionId": "journal",
+          "locator": "Theorems 2.2 and 4.1(1), pp. 235 and 239–240, and footnote 1, p. 231",
+          "paperId": "chkx2005",
+          "placement": "statement",
+          "role": "published linear W[2]-hardness and its conditional lower bound"
+        }
+      ],
+      "statement": "Under FPT ≠ W[1], no deterministic algorithm solves the stated decision problem within the stated running time.",
+      "status": "established",
+      "supported": true
+    },
+    {
+      "assessments": {
+        "w1": {
+          "converse": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unassessed"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "w1",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "feature-set-budget-w1-fixed",
+      "inputConditions": [],
+      "inputFactor": "M^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "label": "Sublinear exponent in the feature count",
+        "revision": 1,
+        "title": "Feature Set under FPT ≠ W[1]: Sublinear exponent in the feature count"
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "N^(o(k)) M^(O(1))",
+      "runtimeSymbols": [
+        "k",
+        "N",
+        "M"
+      ],
+      "sources": [
+        {
+          "editionId": "journal",
+          "locator": "Theorem 3.5 and Feature Set definition, pp. 225–227",
+          "paperId": "ccfhjkx2005",
+          "placement": "statement",
+          "role": "published candidate-space bound without a parameter factor"
+        }
+      ],
+      "statement": "Under FPT ≠ W[1], no deterministic algorithm solves the stated decision problem within the stated running time.",
+      "status": "established",
+      "supported": true
+    }
+  ],
+  "coverage": "Lower bounds for number of selected features.",
+  "encoding": "A binary example-by-feature matrix, one of two class labels per row, and a number k of features to select.",
+  "id": "feature-set-budget",
+  "inputConditions": [],
+  "kind": "lower-bound-case",
+  "parameter": "The number of selected features k.",
+  "problemDefinitionHash": "9f3cd7009578b84f897f9aaa4bad4ffc0d370bcb5d223486429b5a0736ecf950",
+  "problemId": "feature-set",
+  "problemRevision": 1,
+  "reader": {
+    "anchor": "feature-set-budget",
+    "parameter": "The number of selected features k.",
+    "parameterLabel": "Number of selected features",
+    "parameterSymbols": [
+      {
+        "meaning": "number of selected features",
+        "symbol": "k"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "number of available features",
+        "symbol": "N"
+      },
+      {
+        "meaning": "complete encoding size",
+        "symbol": "M"
+      }
+    ]
+  },
+  "recoveryAssessments": [
+    {
+      "comparison": "The direct published W[1] bound and its ETH consequence are the same algorithm family.",
+      "effective": false,
+      "evidence": [
+        {
+          "editionId": "journal",
+          "locator": "Theorem 3.5 and Feature Set definition, pp. 225–227",
+          "paperId": "ccfhjkx2005",
+          "placement": "statement",
+          "role": "published candidate-space bound without a parameter factor"
+        },
+        {
+          "editionId": "journal",
+          "locator": "§6, discussion preceding Theorem 6.2, p. 246",
+          "paperId": "chkx2005",
+          "placement": "forward",
+          "role": "ETH implies FPT ≠ W[1] via the intermediate class M[1]"
+        }
+      ],
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "recoveredScale": "k",
+      "recovery": {
+        "id": "feature-set-budget-w1-fixed",
+        "revision": 1
+      },
+      "scale": "full",
+      "target": {
+        "id": "feature-set-budget-eth-fixed",
+        "revision": 1
+      },
+      "targetScale": "k"
+    }
+  ],
+  "recoveryComparisons": [
+    {
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "feature-set-budget-eth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "np_qp",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "feature-set-budget-eth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "feature-set-budget-eth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "feature-set-budget-eth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "feature-set-budget-eth-fixed",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "np_qp",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "feature-set-budget-eth-fixed",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "feature-set-budget-eth-fixed",
+        "revision": 1
+      }
+    },
+    {
+      "comparison": "The direct published W[1] bound and its ETH consequence are the same algorithm family.",
+      "effective": false,
+      "evidence": [
+        {
+          "editionId": "journal",
+          "locator": "Theorem 3.5 and Feature Set definition, pp. 225–227",
+          "paperId": "ccfhjkx2005",
+          "placement": "statement",
+          "role": "published candidate-space bound without a parameter factor"
+        },
+        {
+          "editionId": "journal",
+          "locator": "§6, discussion preceding Theorem 6.2, p. 246",
+          "paperId": "chkx2005",
+          "placement": "forward",
+          "role": "ETH implies FPT ≠ W[1] via the intermediate class M[1]"
+        }
+      ],
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "recoveredScale": "k",
+      "recovery": {
+        "id": "feature-set-budget-w1-fixed",
+        "revision": 1
+      },
+      "scale": "full",
+      "status": "recovered",
+      "target": {
+        "id": "feature-set-budget-eth-fixed",
+        "revision": 1
+      },
+      "targetScale": "k"
+    }
+  ],
+  "resolutions": [],
+  "revision": 5,
+  "task": "Can exactly k features be selected so that each pair of examples with different labels differs on a selected feature?",
+  "title": "Feature Set by number of selected features",
+  "variant": "Feature Set"
+}

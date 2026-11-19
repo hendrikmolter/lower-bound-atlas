@@ -1,0 +1,21 @@
+{
+  "authors": [
+    "Marcin Pilipczuk",
+    "Manuel Sorge"
+  ],
+  "editions": [
+    {
+      "doi": "10.23638/DMTCS-22-4-7",
+      "id": "journal",
+      "kind": "journal",
+      "label": "Discrete Mathematics & Theoretical Computer Science 22(4), no. 7 (2020)",
+      "openUrl": "https://dmtcs.episciences.org/6789/pdf",
+      "preferredUrl": "https://doi.org/10.23638/DMTCS-22-4-7",
+      "primaryUrl": "https://doi.org/10.23638/DMTCS-22-4-7"
+    }
+  ],
+  "id": "ps2020",
+  "preferredEditionId": "journal",
+  "preferredUrl": "https://doi.org/10.23638/DMTCS-22-4-7",
+  "title": "A Double-Exponential Lower Bound for the Distinct Vectors Problem"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "planar-scattered-set",
+  "input": "An explicitly encoded finite simple undirected planar graph G and positive integers k and d.",
+  "name": "Planar Scattered Set",
+  "parameterizations": [
+    "planar-scattered-set-solution-size"
+  ],
+  "question": "Are there k vertices whose pairwise graph distances are at least d?",
+  "restrictionOf": [
+    {
+      "condition": "G is planar",
+      "problemId": "scattered-set"
+    }
+  ],
+  "revision": 1
+}

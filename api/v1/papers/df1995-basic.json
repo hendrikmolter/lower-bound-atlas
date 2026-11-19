@@ -1,0 +1,21 @@
+{
+  "authors": [
+    "Rod G. Downey",
+    "Michael R. Fellows"
+  ],
+  "editions": [
+    {
+      "doi": "10.1137/S0097539792228228",
+      "id": "journal",
+      "kind": "journal",
+      "label": "SIAM Journal on Computing 24(4) (1995), 873–921",
+      "openUrl": "https://homepages.ecs.vuw.ac.nz/~downey/publications/1.pdf",
+      "preferredUrl": "https://doi.org/10.1137/S0097539792228228",
+      "primaryUrl": "https://doi.org/10.1137/S0097539792228228"
+    }
+  ],
+  "id": "df1995-basic",
+  "preferredEditionId": "journal",
+  "preferredUrl": "https://doi.org/10.1137/S0097539792228228",
+  "title": "Fixed-Parameter Tractability and Completeness I: Basic Results"
+}

@@ -1,0 +1,35 @@
+{
+  "authors": [
+    "Marek Cygan",
+    "Jesper Nederlof",
+    "Marcin Pilipczuk",
+    "Michał Pilipczuk",
+    "Johan M. M. van Rooij",
+    "Jakub Onufry Wojtaszczyk"
+  ],
+  "editions": [
+    {
+      "access": "The full Appendix C is available here. Appendix C.4 gives the width-plus-three reduction used for the Max Cycle Cover consequence.",
+      "id": "arxiv-v1",
+      "kind": "preprint",
+      "label": "arXiv:1103.0534v1, 2 March 2011",
+      "openUrl": "https://arxiv.org/pdf/1103.0534v1",
+      "preferredUrl": "https://arxiv.org/abs/1103.0534v1",
+      "primaryUrl": "https://arxiv.org/abs/1103.0534v1"
+    },
+    {
+      "access": "Published text checked for Table 1 and Theorem 1.3, p. 17:4. The journal refers to earlier work for the full lower-bound constructions.",
+      "doi": "10.1145/3506707",
+      "id": "journal",
+      "kind": "journal",
+      "label": "ACM Transactions on Algorithms 18(2), Article 17 (2022)",
+      "openUrl": "https://dspace.library.uu.nl/bitstream/handle/1874/430283/3506707.pdf?sequence=1",
+      "preferredUrl": "https://doi.org/10.1145/3506707",
+      "primaryUrl": "https://doi.org/10.1145/3506707"
+    }
+  ],
+  "id": "cygan-cut-count",
+  "preferredEditionId": "journal",
+  "preferredUrl": "https://doi.org/10.1145/3506707",
+  "title": "Solving Connectivity Problems Parameterized by Treewidth in Single Exponential Time"
+}

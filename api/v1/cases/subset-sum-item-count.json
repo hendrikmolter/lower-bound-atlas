@@ -1,0 +1,243 @@
+{
+  "aliases": [],
+  "bounds": [
+    {
+      "assessments": {},
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "subset-sum-item-count-eth",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "explanation": "The reduction has a linear number of items in the combined number of variables and clauses. Its item bit lengths are polynomial, so the ETH argument also excludes a fixed polynomial factor in the complete input length.",
+        "label": "Sublinear exponent in the number of items",
+        "revision": 1,
+        "title": "Subset Sum by item count under ETH"
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "2^(o(p)) B^(O(1))",
+      "runtimeSymbols": [
+        "p",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "journal",
+          "locator": "Lemma 13 and proof, §3, p. 8",
+          "paperId": "etscheid-kratsch-mnich-rog-lin2017",
+          "placement": "statement",
+          "role": "published linear-item ETH reduction"
+        },
+        {
+          "editionId": "journal",
+          "locator": "p. 2317 and Section 5",
+          "paperId": "nederlof-swennenhuis2022",
+          "placement": "context",
+          "role": "independent statement of the item-count benchmark"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm decides Subset Sum within the stated running time.",
+      "status": "established",
+      "supported": true
+    },
+    {
+      "assessments": {},
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "sh",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "subset-sum-item-count-sh",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [
+        {
+          "proofId": "subset-sum-item-count-sh",
+          "revision": 1,
+          "theorem": "subset-sum-item-count-sh"
+        }
+      ],
+      "provenance": "atlas",
+      "qualifications": [
+        "For each fixed ε strictly between zero and 1."
+      ],
+      "reader": {
+        "label": "Fixed power saving in the exponent",
+        "revision": 1,
+        "title": "Subset Sum by item count under SH"
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "2^(O(p^(1−ε))) B^(O(1))",
+      "runtimeSymbols": [
+        "p",
+        "ε",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "v1",
+          "locator": "Lemma 2.1, p. 5",
+          "paperId": "sh26",
+          "placement": "proof",
+          "role": "fixed-width SAT size formulation of SH"
+        }
+      ],
+      "statement": "Under SH, no deterministic algorithm decides Subset Sum within the stated running time.",
+      "status": "established",
+      "supported": true
+    }
+  ],
+  "coverage": "Selected lower bounds for this parameterization.",
+  "encoding": "Explicit list of positive integers and a positive target, all encoded in binary.",
+  "id": "subset-sum-item-count",
+  "inputConditions": [
+    {
+      "condition": "Each item and the target is strictly positive. Equal item values may occur at different indices.",
+      "id": "positive",
+      "level": "problem"
+    }
+  ],
+  "kind": "lower-bound-case",
+  "parameter": "The number p of indexed input items.",
+  "problemDefinitionHash": "0983c28f0806828dd112971d3f47f69920f8be6b0280245b79858376f2fc21b5",
+  "problemId": "subset-sum",
+  "problemRevision": 1,
+  "reader": {
+    "anchor": "items",
+    "parameter": "The number p of indexed input items.",
+    "parameterLabel": "Number of items",
+    "parameterSymbols": [
+      {
+        "meaning": "number of indexed input items",
+        "symbol": "p"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "complete input length in bits",
+        "symbol": "B"
+      },
+      {
+        "meaning": "a fixed positive saving in the exponent",
+        "symbol": "ε"
+      },
+      {
+        "meaning": "target sum",
+        "symbol": "T"
+      }
+    ]
+  },
+  "recoveryAssessments": [
+    {
+      "comparison": "The SH bound excludes every fixed power below one in the exponent of the item count.",
+      "effective": false,
+      "evidence": [
+        {
+          "editionId": "journal",
+          "locator": "Lemma 13 and proof, §3, p. 8",
+          "paperId": "etscheid-kratsch-mnich-rog-lin2017",
+          "placement": "statement",
+          "role": "published linear-item ETH reduction"
+        }
+      ],
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "recoveredScale": "p^(1−ε)",
+      "recovery": {
+        "id": "subset-sum-item-count-sh",
+        "revision": 1
+      },
+      "scale": "degree",
+      "target": {
+        "id": "subset-sum-item-count-eth",
+        "revision": 1
+      },
+      "targetScale": "p"
+    }
+  ],
+  "recoveryComparisons": [
+    {
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "subset-sum-item-count-eth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "np_qp",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "subset-sum-item-count-eth",
+        "revision": 1
+      }
+    },
+    {
+      "comparison": "The SH bound excludes every fixed power below one in the exponent of the item count.",
+      "effective": false,
+      "evidence": [
+        {
+          "editionId": "journal",
+          "locator": "Lemma 13 and proof, §3, p. 8",
+          "paperId": "etscheid-kratsch-mnich-rog-lin2017",
+          "placement": "statement",
+          "role": "published linear-item ETH reduction"
+        }
+      ],
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "recoveredScale": "p^(1−ε)",
+      "recovery": {
+        "id": "subset-sum-item-count-sh",
+        "revision": 1
+      },
+      "scale": "degree",
+      "status": "degree",
+      "target": {
+        "id": "subset-sum-item-count-eth",
+        "revision": 1
+      },
+      "targetScale": "p"
+    },
+    {
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "subset-sum-item-count-eth",
+        "revision": 1
+      }
+    }
+  ],
+  "resolutions": [],
+  "revision": 4,
+  "task": "Does a subset of the item indices have values summing to T?",
+  "title": "Subset Sum by item count",
+  "variant": "Subset Sum"
+}

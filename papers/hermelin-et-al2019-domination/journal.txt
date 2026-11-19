@@ -1,0 +1,1 @@
+Danny Hermelin, Matthias Mnich, Erik Jan van Leeuwen, Gerhard J. Woeginger. Domination When the Stars Are Out. ACM Transactions on Algorithms 15(2) (2019), Article 25. https://doi.org/10.1145/3301445

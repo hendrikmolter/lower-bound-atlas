@@ -1,0 +1,59 @@
+{
+  "assessments": {
+    "eth": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unassessed"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "edge-dominating-set-intrinsic-clique-width-eth",
+  "inputConditions": [],
+  "inputFactor": "n^(o(t))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [
+    "For every computable f."
+  ],
+  "reader": {
+    "explanation": "The source theorem excludes the graph-order clock even when an expression of bounded width is available. An intrinsic-clock algorithm would also accept those graphs, as intrinsic clique-width is at most the supplied width. A nondecreasing majorant of a sublinear exponent remains sublinear.",
+    "label": "Sublinear exponent in expression width",
+    "revision": 1,
+    "title": "Edge Dominating Set by intrinsic clique-width under ETH"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "f(t) n^(o(t))",
+  "runtimeSymbols": [
+    "t",
+    "n"
+  ],
+  "sources": [
+    {
+      "editionId": "journal",
+      "locator": "Theorem 5.1, p. 1558",
+      "paperId": "fgls2014-clique-width",
+      "placement": "statement",
+      "role": "conditional lower bound"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm solves Edge Dominating Set, measured by intrinsic clique-width, within the stated running time.",
+  "status": "established",
+  "supported": true
+}

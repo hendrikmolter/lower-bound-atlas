@@ -1,0 +1,20 @@
+{
+  "authors": [
+    "Bingkai Lin"
+  ],
+  "editions": [
+    {
+      "doi": "10.4230/LIPIcs.ICALP.2019.81",
+      "id": "proceedings",
+      "kind": "proceedings",
+      "label": "ICALP 2019, LIPIcs 132, 81:1–81:15",
+      "openUrl": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol132-icalp2019/LIPIcs.ICALP.2019.81/LIPIcs.ICALP.2019.81.pdf",
+      "preferredUrl": "https://doi.org/10.4230/LIPIcs.ICALP.2019.81",
+      "primaryUrl": "https://doi.org/10.4230/LIPIcs.ICALP.2019.81"
+    }
+  ],
+  "id": "lin2019",
+  "preferredEditionId": "proceedings",
+  "preferredUrl": "https://doi.org/10.4230/LIPIcs.ICALP.2019.81",
+  "title": "A Simple Gap-Producing Reduction for the Parameterized Set Cover Problem"
+}

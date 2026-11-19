@@ -1,0 +1,58 @@
+{
+  "assessments": {
+    "eth": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unassessed"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "cluster-editing-size-eth",
+  "inputConditions": [
+    "degree-six"
+  ],
+  "inputFactor": "Included in the displayed running time",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [],
+  "reader": {
+    "explanation": "The reduction produces normalized explicit instances whose encoding size is polynomial in the source formula size. Its hardness proof also excludes adding a fixed polynomial input factor.",
+    "label": "Subexponential bound in the number of edges",
+    "revision": 1,
+    "title": "Subexponential bound in the number of edges under ETH"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "2^(o(m))",
+  "runtimeSymbols": [
+    "m"
+  ],
+  "sources": [
+    {
+      "editionId": "journal",
+      "locator": "Theorem 2 and proof, §2, pp. 2263–2264",
+      "paperId": "ku2012-cluster-editing",
+      "placement": "statement",
+      "role": "published lower bound"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm solves Cluster Editing within the stated running time.",
+  "status": "established",
+  "supported": true
+}

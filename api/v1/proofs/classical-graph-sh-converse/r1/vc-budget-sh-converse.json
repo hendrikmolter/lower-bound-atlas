@@ -1,0 +1,24 @@
+{
+  "authorship": {
+    "authors": [
+      "Atlas"
+    ],
+    "kind": "ai",
+    "origin": "atlas"
+  },
+  "dependencies": [],
+  "pdf": "proofs/classical-graph-sh-converse.pdf",
+  "proofId": "classical-graph-sh-converse",
+  "revision": 1,
+  "source": "proofs/classical-graph-sh-converse.tex",
+  "theorem": {
+    "destination": "vc-budget-sh-converse",
+    "label": "vc-budget-sh-converse",
+    "number": "1(c)",
+    "reviewIds": [
+      "vc-budget-sh-converse-review"
+    ],
+    "statement": "The fixed-power exclusion for Vertex Cover parameterized by the solution budget implies SH.",
+    "supports": true
+  }
+}

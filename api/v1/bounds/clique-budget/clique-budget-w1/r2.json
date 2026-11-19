@@ -1,0 +1,89 @@
+{
+  "assessments": {
+    "w1": {
+      "converse": {
+        "effectiveStatus": "established",
+        "evidence": [
+          {
+            "boundRevision": 2,
+            "hypothesisRevision": 1,
+            "reviewId": "clique-budget-w1-equivalence-review",
+            "source": {
+              "editionId": "journal",
+              "locator": "Corollary 3.2",
+              "paperId": "df1995",
+              "placement": "proof",
+              "role": "membership in W[1]"
+            }
+          }
+        ],
+        "status": "established"
+      },
+      "forward": {
+        "effectiveStatus": "established",
+        "evidence": [
+          {
+            "boundRevision": 2,
+            "hypothesisRevision": 1,
+            "reviewId": "clique-budget-w1-equivalence-review",
+            "source": {
+              "editionId": "journal",
+              "locator": "Corollary 3.2",
+              "paperId": "df1995",
+              "placement": "forward",
+              "role": "W[1]-hardness"
+            }
+          }
+        ],
+        "status": "established"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "established-equivalent"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "w1",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "hardnessBaseline": "W[1]",
+  "id": "clique-budget-w1",
+  "inputConditions": [],
+  "inputFactor": "B^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [
+    "The bound excludes every computable prefactor f."
+  ],
+  "reader": {
+    "explanation": "W[1]-completeness applies to the threshold decision question because a clique of size at least k has a subset of exactly k vertices.",
+    "label": "Fixed-parameter tractability",
+    "revision": 2,
+    "title": "Clique by solution size under FPT ≠ W[1]"
+  },
+  "reviewIds": [
+    "clique-budget-w1-equivalence-review"
+  ],
+  "revision": 2,
+  "runtime": "f(k) B^(O(1))",
+  "runtimeSymbols": [
+    "f",
+    "k",
+    "B"
+  ],
+  "sources": [
+    {
+      "editionId": "journal",
+      "locator": "Corollary 3.2 and Theorem 3.1",
+      "paperId": "df1995",
+      "placement": "statement",
+      "role": "W[1]-completeness"
+    }
+  ],
+  "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Clique within the stated running time.",
+  "status": "established",
+  "supported": true
+}

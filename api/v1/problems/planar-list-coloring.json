@@ -1,0 +1,16 @@
+{
+  "id": "planar-list-coloring",
+  "input": "An explicitly encoded finite simple undirected planar graph G and an explicit list of allowed colors for each vertex.",
+  "name": "Planar List Coloring",
+  "parameterizations": [
+    "planar-list-coloring-treewidth"
+  ],
+  "question": "Can each vertex be assigned a color from its list so that adjacent vertices have different colors?",
+  "restrictionOf": [
+    {
+      "condition": "G is planar",
+      "problemId": "list-coloring"
+    }
+  ],
+  "revision": 1
+}

@@ -1,0 +1,10 @@
+{
+  "id": "square-clique",
+  "input": "A graph whose vertices are the cells of a k × k grid.",
+  "name": "k × k Clique",
+  "parameterizations": [
+    "lms-square-clique"
+  ],
+  "question": "Does the graph contain a clique with one vertex from each row?",
+  "revision": 1
+}

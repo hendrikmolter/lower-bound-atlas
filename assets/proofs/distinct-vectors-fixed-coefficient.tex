@@ -1,0 +1,99 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newcommand{\problem}[1]{\textsc{#1}}
+\title{A double-exponential lower bound for Distinct Vectors\\under \(\mathrm{FPT}\ne\mathrm{W[1]}\)}
+\author{Atlas\thanks{The proof in this note was found using ChatGPT.}}
+\date{}
+\begin{document}
+\maketitle
+
+An instance of \problem{Distinct Vectors} consists of an explicit binary
+matrix with pairwise distinct rows and a nonnegative integer \(k\). The
+question is whether we can select at most \(k\) columns such that the rows
+remain pairwise distinct when restricted to these columns. We measure the
+input length \(N\) in bits, including the binary encoding of \(k\).
+
+\hypertarget{dv-fixed-coefficient}{}\begin{theorem}\label{thm:dv}
+Assume \(\mathrm{FPT}\ne\mathrm{W[1]}\). For every fixed real number
+\(0<\gamma<1\), there is no deterministic algorithm for
+\problem{Distinct Vectors} running in time
+\(2^{\mathcal O(2^{\gamma k})}N^{\mathcal O(1)}\).
+\end{theorem}
+
+\begin{proof}
+Suppose that such an algorithm exists. We give a fixed-parameter algorithm
+for \problem{Clique} parameterized by the requested clique size \(\ell\),
+a \(\mathrm{W[1]}\)-complete problem~\cite{df}. All logarithms are to base two.
+Given a simple graph, we handle \(\ell<3\) and \(\ell\) exceeding the
+number of vertices directly. Otherwise, make \(\ell\) copies of the vertex
+set, with no edges inside a copy. Join vertices from different copies exactly
+when their originals are adjacent. The resulting graph has a clique with one
+vertex from each copy if and only if the original graph has an
+\(\ell\)-clique. Let \(n\) denote the number of vertices in this new graph.
+
+Apply Lin's reduction~\cite[Lemma~14]{lin} to this \(\ell\)-partite graph.
+In polynomial time it produces a family of \(m\le n^2\) sets on a universe
+of size \(u\le \ell^3\lceil\log n\rceil\). The graph contains an
+\(\ell\)-clique if and only if at most \(b=\binom{\ell}{2}\) of the sets
+cover the universe. We can answer yes immediately if the universe is empty,
+and no if some element belongs to no set.
+
+We adapt the binary address construction of Froese~\cite[Theorem~4.1]{froese}.
+Number the elements from \(1\) to \(u\), and let
+\(h=\lceil\log(u+1)\rceil\). We construct a matrix with \(h\) address
+columns followed by one column for each set. Include one all-zero row.
+For each element \(i\), let \(a_i\) be its \(h\)-bit binary representation
+and let \(v_i\) be its \(m\)-bit incidence vector in the set family.
+Add the two rows \((a_i,0^m)\) and \((a_i,v_i)\), and set \(k=h+b\).
+Different elements have different nonzero addresses, and each \(v_i\) is
+nonzero. Hence the full rows are pairwise distinct.
+
+We show that a feasible selection of columns exists if and only if there
+is a cover of size at most \(b\). For each \(0\le j<h\), the universe
+contains the element \(2^j\), since \(2^{h-1}\le u\). Its row with zero
+set entries differs from the all-zero row only in address column \(j\),
+numbering bits from zero. Thus every feasible selection contains all \(h\)
+address columns. To separate the two rows of each element, the remaining at
+most \(b\) columns must include a set containing that element. Conversely,
+select all address columns and the columns of a cover of size at most \(b\).
+The address columns distinguish rows of different addresses, and the cover
+distinguishes the two rows at each nonzero address.
+
+It remains to bound the running time. The matrix and its budget have
+polynomial length in \(n\). Since \(n\ge 2\) and
+\(u+1\le 3\ell^3\log n\), the budget satisfies
+\[
+ k\le g(\ell)+\log\log n,\qquad
+ g(\ell)=\binom{\ell}{2}+\lceil\log(3\ell^3)\rceil+1.
+\]
+Fix a rational \(\rho\) with \(\gamma<\rho<1\). Writing \(x=\log n\),
+the exponent hidden in the outer power of two is at most
+\(A(\ell)x^\rho\) for a computable integer function \(A\ge 1\):
+we can use an integer constant bounding the running-time coefficient
+times \(2^{g(\ell)}\). Choose an integer \(s\ge 1/(1-\rho)\).
+If \(x\ge A(\ell)^s\), then \(A(\ell)x^\rho\le x\).
+Otherwise \(A(\ell)x^\rho\le A(\ell)^{s+1}\).
+Thus the running time is at most
+\(2^{A(\ell)^{s+1}}n^{\mathcal O(1)}\). Since \(n\) is \(\ell\) times
+the original number of vertices, this decides \problem{Clique} in
+fixed-parameter time, a contradiction.
+\end{proof}
+
+\begin{thebibliography}{3}
+\bibitem{df} R.~G. Downey and M.~R. Fellows.
+Fixed-parameter tractability and completeness II: On completeness for W[1].
+\emph{Theoretical Computer Science} 141(1--2), 109--131, 1995.
+\href{https://doi.org/10.1016/0304-3975(94)00097-3}{doi:10.1016/0304-3975(94)00097-3}.
+\bibitem{froese} V.~Froese. \emph{Combinatorial Feature Selection:
+Parameterized Algorithms and Complexity}. Master's thesis, Technische
+Universit\"at Berlin, 2012, Section~4.1.1, pp.~33--34.
+\href{https://fpt.akt.tu-berlin.de/publications/theses/MA-vincent-froese.pdf}{Full text}.
+\bibitem{lin} B.~Lin. A simple gap-producing reduction for the parameterized
+Set Cover problem. In \emph{ICALP 2019}, LIPIcs 132, 81:1--81:15.
+\href{https://doi.org/10.4230/LIPIcs.ICALP.2019.81}{doi:10.4230/LIPIcs.ICALP.2019.81}.
+\end{thebibliography}
+\end{document}

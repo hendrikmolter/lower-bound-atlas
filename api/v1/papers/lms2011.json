@@ -1,0 +1,22 @@
+{
+  "authors": [
+    "Daniel Lokshtanov",
+    "Dániel Marx",
+    "Saket Saurabh"
+  ],
+  "editions": [
+    {
+      "access": "Published survey. Exact theorem locators checked.",
+      "id": "bulletin",
+      "kind": "periodical",
+      "label": "Bulletin of the EATCS 105 (2011), 41–71",
+      "openUrl": "https://bulletin.eatcs.org/index.php/beatcs/article/viewFile/92/88",
+      "preferredUrl": "https://bulletin.eatcs.org/index.php/beatcs/article/view/92",
+      "primaryUrl": "https://bulletin.eatcs.org/index.php/beatcs/article/view/92"
+    }
+  ],
+  "id": "lms2011",
+  "preferredEditionId": "bulletin",
+  "preferredUrl": "https://bulletin.eatcs.org/index.php/beatcs/article/view/92",
+  "title": "Lower bounds based on the Exponential Time Hypothesis"
+}

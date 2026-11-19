@@ -1,0 +1,10 @@
+{
+  "id": "set-cover",
+  "input": "An explicitly listed finite universe U, a family of subsets of U, and a nonnegative integer k.",
+  "name": "Set Cover",
+  "parameterizations": [
+    "set-cover-budget"
+  ],
+  "question": "Can at most k of the given sets cover U?",
+  "revision": 1
+}

@@ -1,0 +1,20 @@
+{
+  "aliases": [
+    "ETH",
+    "positive-rate ETH"
+  ],
+  "conventions": "Variable-count positive-rate convention. Solvers at different rates in the negation may be different algorithms.",
+  "definition": "There is a positive exponential rate below which deterministic variable-3SAT cannot be solved.",
+  "id": "eth",
+  "model": "Deterministic decision on explicit 3-CNF formulas. Let n be the number of variables and L the complete input length.",
+  "name": "Exponential Time Hypothesis",
+  "quantifiers": "There exists δ > 0 such that, for every fixed C ≥ 0, no correct algorithm runs in O(2^(δ n) L^C).",
+  "refutation": "https://github.com/openai/math/tree/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026",
+  "revision": 1,
+  "source": {
+    "editionId": "journal",
+    "locator": "Definition of s_k and Theorem 1, item 3, p. 368",
+    "paperId": "ip2001",
+    "role": "hypothesis origin"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "assessments": {},
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "clique-budget-eth",
+  "inputConditions": [],
+  "inputFactor": "n is the base of the exponent",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [
+    "The bound excludes every computable prefactor f."
+  ],
+  "reader": {
+    "explanation": "The original theorem uses the full instance measure and subexponential solvability of SNP. For explicit graphs after oversized thresholds are decided directly, the encoding length and graph order are polynomially related. The survey and textbook state the graph-order ETH form.",
+    "label": "Exponent sublinear in the solution size",
+    "revision": 1,
+    "title": "Clique by solution size under ETH"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "f(k) n^(o(k))",
+  "runtimeSymbols": [
+    "f",
+    "k",
+    "n"
+  ],
+  "sources": [
+    {
+      "editionId": "journal",
+      "locator": "Theorem 5.5, p. 1360",
+      "paperId": "chkx2006",
+      "placement": "statement",
+      "role": "SNP-based lower bound"
+    },
+    {
+      "editionId": "bulletin",
+      "locator": "Theorem 5.1, p. 57",
+      "paperId": "lms2011",
+      "placement": "statement",
+      "role": "explicit ETH formulation"
+    },
+    {
+      "editionId": "book",
+      "locator": "Theorem 14.21, pp. 485–487",
+      "paperId": "cygan2015",
+      "placement": "statement",
+      "role": "clause-grouping proof"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm decides Clique within the stated running time.",
+  "status": "established",
+  "supported": true
+}

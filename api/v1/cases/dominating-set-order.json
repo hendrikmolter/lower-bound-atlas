@@ -1,0 +1,334 @@
+{
+  "aliases": [],
+  "bounds": [
+    {
+      "assessments": {
+        "uniform-eth": {
+          "converse": {
+            "effectiveStatus": "established",
+            "evidence": [
+              {
+                "boundRevision": 2,
+                "hypothesisRevision": 4,
+                "reviewId": "ds-order-eth-equivalence-review",
+                "source": {
+                  "editionId": "journal",
+                  "locator": "§2.2, pp. 22:5–22:6, and Corollary 3.8, p. 22:16",
+                  "paperId": "ganian-dehaan-kanj-szeider2020",
+                  "placement": "proof",
+                  "role": "equivalence by the number of vertices, with the single-algorithm definition"
+                }
+              }
+            ],
+            "status": "established"
+          },
+          "forward": {
+            "effectiveStatus": "established",
+            "evidence": [
+              {
+                "boundRevision": 2,
+                "hypothesisRevision": 4,
+                "reviewId": "ds-order-eth-equivalence-review",
+                "source": {
+                  "editionId": "journal",
+                  "locator": "§2.2, pp. 22:5–22:6, and Corollary 3.8, p. 22:16",
+                  "paperId": "ganian-dehaan-kanj-szeider2020",
+                  "placement": "forward",
+                  "role": "equivalence by the number of vertices, with the single-algorithm definition"
+                }
+              }
+            ],
+            "status": "established"
+          },
+          "hypothesisRevision": 4,
+          "verdict": "established-equivalent"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "ds-order-eth",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "label": "Exponential in the number of vertices",
+        "revision": 2,
+        "title": "Dominating Set by graph order under ETH"
+      },
+      "reviewIds": [
+        "ds-order-eth-equivalence-review"
+      ],
+      "revision": 2,
+      "runtime": "2^(o(n)) B^(O(1))",
+      "runtimeSymbols": [
+        "n",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "bulletin",
+          "locator": "Theorem 3.3, p. 52",
+          "paperId": "lms2011",
+          "placement": "statement",
+          "role": "benchmark"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm decides Dominating Set within the stated running time.",
+      "status": "established",
+      "supported": true
+    },
+    {
+      "assessments": {
+        "sh": {
+          "converse": {
+            "effectiveStatus": "established",
+            "evidence": [
+              {
+                "boundRevision": 1,
+                "hypothesisRevision": 1,
+                "proof": {
+                  "proofId": "dominating-set-order-sh",
+                  "revision": 1,
+                  "theorem": "dominating-set-order-sh"
+                },
+                "reviewId": "dominating-set-order-sh-review"
+              }
+            ],
+            "status": "established"
+          },
+          "forward": {
+            "effectiveStatus": "established",
+            "evidence": [
+              {
+                "boundRevision": 1,
+                "hypothesisRevision": 1,
+                "proof": {
+                  "proofId": "dominating-set-order-sh",
+                  "revision": 1,
+                  "theorem": "dominating-set-order-sh"
+                },
+                "reviewId": "dominating-set-order-sh-review"
+              }
+            ],
+            "status": "established"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "established-equivalent"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "sh",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "ds-order-sh-fixed-power",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [
+        {
+          "proofId": "dominating-set-order-sh",
+          "revision": 1,
+          "theorem": "dominating-set-order-sh"
+        }
+      ],
+      "provenance": "atlas",
+      "qualifications": [
+        "For every fixed 0 < a < 1."
+      ],
+      "reader": {
+        "label": "Fixed-power bounds",
+        "revision": 1,
+        "title": "Fixed-power bounds under SH"
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "2^(O(n^a)) B^(O(1))",
+      "runtimeSymbols": [
+        "n",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "v2",
+          "locator": "Definition of SH and footnotes 1–2, pp. 1–2, and Lemma 2.1, pp. 5–6",
+          "paperId": "sh26",
+          "placement": "context",
+          "role": "hypothesis and encoding conventions"
+        }
+      ],
+      "statement": "Under SH, no deterministic algorithm decides Dominating Set within the stated running time.",
+      "status": "established",
+      "supported": true
+    }
+  ],
+  "coverage": "Selected literature bounds for this parameterization.",
+  "encoding": "Explicit binary graph encoding with individually represented vertices and a binary solution threshold. B is the complete input length.",
+  "id": "dominating-set-order",
+  "inputConditions": [
+    {
+      "condition": "The graph is finite, simple, undirected, and unweighted.",
+      "id": "graph-class",
+      "level": "problem"
+    }
+  ],
+  "kind": "lower-bound-case",
+  "parameter": "The number of vertices n of G.",
+  "problemDefinitionHash": "9d6636f7c27bc6ec224ccc8c59ffbe211599986218bc672f4bdb3a2b6405d3a1",
+  "problemId": "dominating-set",
+  "problemRevision": 1,
+  "reader": {
+    "anchor": "vertices",
+    "boundContext": "The number of vertices n of G. The letter B denotes the input length in bits.",
+    "parameter": "The number of vertices n of G.",
+    "parameterLabel": "Number of vertices",
+    "parameterSymbols": [
+      {
+        "meaning": "number of vertices",
+        "symbol": "n"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "solution threshold",
+        "symbol": "k"
+      },
+      {
+        "meaning": "complete input length in bits",
+        "symbol": "B"
+      }
+    ]
+  },
+  "recoveryAssessments": [
+    {
+      "comparison": "The SH bound excludes every fixed exponent below one in the number of vertices, with the same deterministic graph input and polynomial factor.",
+      "effective": false,
+      "evidence": [
+        {
+          "proofId": "dominating-set-order-sh",
+          "revision": 1,
+          "theorem": "dominating-set-order-sh"
+        }
+      ],
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "recoveredScale": "n^a",
+      "recovery": {
+        "id": "ds-order-sh-fixed-power",
+        "revision": 1
+      },
+      "scale": "degree",
+      "target": {
+        "id": "ds-order-eth",
+        "revision": 2
+      },
+      "targetScale": "n"
+    }
+  ],
+  "recoveryComparisons": [
+    {
+      "formulation": {
+        "id": "uniform-eth",
+        "revision": 4
+      },
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "status": "equivalence",
+      "target": {
+        "id": "ds-order-eth",
+        "revision": 2
+      }
+    },
+    {
+      "formulation": {
+        "id": "uniform-eth",
+        "revision": 4
+      },
+      "hypothesis": {
+        "id": "np_qp",
+        "revision": 1
+      },
+      "status": "equivalence",
+      "target": {
+        "id": "ds-order-eth",
+        "revision": 2
+      }
+    },
+    {
+      "comparison": "The SH bound excludes every fixed exponent below one in the number of vertices, with the same deterministic graph input and polynomial factor.",
+      "effective": false,
+      "evidence": [
+        {
+          "proofId": "dominating-set-order-sh",
+          "revision": 1,
+          "theorem": "dominating-set-order-sh"
+        }
+      ],
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "recoveredScale": "n^a",
+      "recovery": {
+        "id": "ds-order-sh-fixed-power",
+        "revision": 1
+      },
+      "scale": "degree",
+      "status": "degree",
+      "target": {
+        "id": "ds-order-eth",
+        "revision": 2
+      },
+      "targetScale": "n"
+    },
+    {
+      "formulation": {
+        "id": "uniform-eth",
+        "revision": 4
+      },
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "status": "equivalence",
+      "target": {
+        "id": "ds-order-eth",
+        "revision": 2
+      }
+    },
+    {
+      "formulation": {
+        "id": "uniform-eth",
+        "revision": 4
+      },
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "status": "equivalence",
+      "target": {
+        "id": "ds-order-eth",
+        "revision": 2
+      }
+    }
+  ],
+  "resolutions": [],
+  "revision": 4,
+  "task": "Does G have a set of at most k vertices such that every vertex either belongs to the set or has a neighbor in the set?",
+  "title": "Dominating Set by graph order",
+  "variant": "Dominating Set"
+}

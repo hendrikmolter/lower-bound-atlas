@@ -1,0 +1,31 @@
+{
+  "authors": [
+    "Daniel Lokshtanov",
+    "Dániel Marx",
+    "Saket Saurabh"
+  ],
+  "editions": [
+    {
+      "access": "Checked the relevant published-format theorem statements and reductions.",
+      "doi": "10.1137/16M1104834",
+      "id": "journal",
+      "kind": "journal",
+      "label": "SIAM J. Comput. 47(3) (2018), 675–702",
+      "preferredUrl": "https://doi.org/10.1137/16M1104834",
+      "primaryUrl": "https://doi.org/10.1137/16M1104834"
+    },
+    {
+      "access": "Open author manuscript used for theorem and reduction interfaces.",
+      "id": "manuscript",
+      "kind": "manuscript",
+      "label": "Public journal author manuscript",
+      "openUrl": "https://sites.cs.ucsb.edu/~daniello/papers/slightlySuperexpSICOMP18.pdf",
+      "preferredUrl": "https://sites.cs.ucsb.edu/~daniello/papers/slightlySuperexpSICOMP18.pdf",
+      "primaryUrl": "https://sites.cs.ucsb.edu/~daniello/papers/slightlySuperexpSICOMP18.pdf"
+    }
+  ],
+  "id": "lms2018",
+  "preferredEditionId": "journal",
+  "preferredUrl": "https://doi.org/10.1137/16M1104834",
+  "title": "Slightly Superexponential Parameterized Problems"
+}

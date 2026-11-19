@@ -1,0 +1,12 @@
+{
+  "id": "edge-dominating-set",
+  "input": "A finite simple undirected graph G and an integer k.",
+  "name": "Edge Dominating Set",
+  "parameterizations": [
+    "edge-dominating-set-intrinsic-clique-width",
+    "edge-dominating-set-budget",
+    "edge-dominating-set-clique-width"
+  ],
+  "question": "Is there a set of at most k edges such that every edge shares an endpoint with an edge in the set?",
+  "revision": 1
+}

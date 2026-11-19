@@ -1,0 +1,59 @@
+{
+  "assessments": {
+    "eth": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unassessed"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "ilp-equations-eth-klogk-binary-coefficients",
+  "inputConditions": [
+    "binary-coefficients"
+  ],
+  "inputFactor": "N^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [],
+  "reader": {
+    "explanation": "The source excludes this running time already when the number of columns and the largest right-hand side entry are O(k log₂ k), with a nonnegative right-hand side. These instances are valid inputs to the general binary-coefficient task, so the same running time is excluded for an algorithm on that task.",
+    "label": "Subexponential bound in k log k for binary coefficients",
+    "revision": 1,
+    "title": "Binary-coefficient integer linear programming under ETH"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "2^(o(k log₂ k)) N^(O(1))",
+  "runtimeSymbols": [
+    "k",
+    "N"
+  ],
+  "sources": [
+    {
+      "editionId": "journal",
+      "locator": "Theorem 1, p. 19:4, and proof in §2.3, pp. 19:9–19:10",
+      "paperId": "kpw2020-ilp",
+      "placement": "statement",
+      "role": "published lower bound"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm decides the reported binary-coefficient feasibility problem within the stated running time.",
+  "status": "established",
+  "supported": true
+}

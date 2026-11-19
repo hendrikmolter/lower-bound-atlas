@@ -1,0 +1,44 @@
+{
+  "assessments": {},
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "weighted-cnf-sat-weight-eth",
+  "inputConditions": [],
+  "inputFactor": "M^(o(k))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [
+    "The source states this bound under the positive-rate SNP premise, which follows from ETH by sparsification.",
+    "The theorem also holds under k ≤ μ(M) for each nondecreasing unbounded function μ as in the source."
+  ],
+  "reader": {
+    "label": "Sublinear exponent in the full encoding length",
+    "revision": 1
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "f(k) M^(o(k))",
+  "runtimeSymbols": [
+    "f",
+    "k",
+    "M"
+  ],
+  "sources": [
+    {
+      "editionId": "journal",
+      "locator": "Theorem 5.8, p. 1361",
+      "paperId": "chkx2006",
+      "placement": "statement",
+      "role": "lower-bound statement"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm solves Weighted CNF SAT within the stated running time.",
+  "status": "established",
+  "supported": true
+}

@@ -1,0 +1,266 @@
+{
+  "aliases": [],
+  "bounds": [
+    {
+      "assessments": {},
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "dominating-set-supplied-rank-decomposition-eth",
+      "inputConditions": [
+        "monopolar"
+      ],
+      "inputFactor": "n^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "explanation": "The cited preprint states these width interfaces. Its monopolar hard family is the scope used here.",
+        "label": "Subexponential bound in squared width",
+        "revision": 1,
+        "title": "Subexponential bound in squared width under ETH"
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "2^(o(p^2)) n^(O(1))",
+      "runtimeSymbols": [
+        "p",
+        "n"
+      ],
+      "sources": [
+        {
+          "editionId": "v1",
+          "locator": "Theorem 3.1 and §§3.1–3.2",
+          "paperId": "liu-meng2026-rankwidth",
+          "placement": "statement",
+          "role": "historical lower bound"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm decides Dominating Set within the stated running time.",
+      "status": "established",
+      "supported": true
+    },
+    {
+      "assessments": {
+        "w1": {
+          "converse": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "effectiveStatus": "established",
+            "evidence": [
+              {
+                "boundRevision": 1,
+                "hypothesisRevision": 1,
+                "proof": {
+                  "proofId": "dominating-set-rankwidth",
+                  "revision": 1,
+                  "theorem": "dominating-set-rankwidth"
+                },
+                "reviewId": "dominating-set-rankwidth-review"
+              }
+            ],
+            "status": "established"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "hypothesis-implies-bound"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "w1",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "dominating-set-supplied-rank-decomposition-w1-effective",
+      "inputConditions": [
+        "monopolar"
+      ],
+      "inputFactor": "N^(O(1))",
+      "proofs": [
+        {
+          "proofId": "dominating-set-rankwidth",
+          "revision": 1,
+          "theorem": "dominating-set-rankwidth"
+        }
+      ],
+      "provenance": "literature",
+      "qualifications": [
+        "The exponent is a computable nonnegative integer function and has computable convergence to little-o at scale p^2."
+      ],
+      "reader": {
+        "explanation": "The bound follows by applying the construction of Liu and Meng to a compact CNF encoding of Multicolored Clique and using the effective convergence cutoff.",
+        "historicalNote": [
+          "Liu and Meng state the quadratic lower bound under ETH in Theorem 3.1 and Corollary 3.10. The FPT ≠ W[1] exclusion is a direct consequence of their construction and the source-size calculation in the linked derivation."
+        ],
+        "label": "Effective quadratic-width bound on monopolar graphs",
+        "revision": 1,
+        "title": "Effective quadratic-width bound on monopolar graphs under FPT ≠ W[1]"
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "2^(o_eff(p^2)) N^(O(1))",
+      "runtimeSymbols": [
+        "p",
+        "N"
+      ],
+      "sources": [
+        {
+          "editionId": "v1",
+          "locator": "Section 3.2, Lemmas 3.5–3.6, and Appendix C, proof of Theorem C.1",
+          "paperId": "liu-meng2026-rankwidth",
+          "placement": "forward",
+          "role": "monopolar construction, width witnesses, and arbitrary-clause interface used for the effective FPT ≠ W[1] consequence"
+        }
+      ],
+      "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Dominating Set within the stated running time.",
+      "status": "established",
+      "supported": true
+    }
+  ],
+  "coverage": "Historical ETH and independently reviewed recoveries.",
+  "encoding": "A finite, simple, undirected, unweighted graph G and a nonnegative integer k.",
+  "id": "dominating-set-supplied-rank-decomposition",
+  "inputConditions": [
+    {
+      "condition": "The graph is monopolar, meaning that its vertices can be partitioned into an independent set and an induced disjoint union of cliques.",
+      "id": "monopolar",
+      "level": "bound"
+    }
+  ],
+  "kind": "lower-bound-case",
+  "parameter": "The actual width of the supplied rank decomposition, denoted by p. Cut rank is computed over the binary field.",
+  "problemDefinitionHash": "9d6636f7c27bc6ec224ccc8c59ffbe211599986218bc672f4bdb3a2b6405d3a1",
+  "problemId": "dominating-set",
+  "problemRevision": 1,
+  "reader": {
+    "additionalInput": "A rank decomposition of G.",
+    "anchor": "dominating-set-supplied-rank-decomposition",
+    "parameter": "The actual width of the supplied rank decomposition, denoted by p. Cut rank is computed over the binary field.",
+    "parameterLabel": "Width of a supplied rank decomposition",
+    "parameterSymbols": [
+      {
+        "meaning": "actual width of the supplied rank decomposition",
+        "symbol": "p"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "number of vertices of G",
+        "symbol": "n"
+      },
+      {
+        "meaning": "complete binary input length, including a supplied certificate if present",
+        "symbol": "N"
+      },
+      {
+        "meaning": "fixed positive exponent saving",
+        "symbol": "ε"
+      }
+    ]
+  },
+  "recoveryAssessments": [
+    {
+      "comparison": "Both bounds concern the same width interface and monopolar graphs. The W[1] recovery retains the quadratic scale with computable exponent and convergence. The explicit order and rank decomposition have polynomial length in graph order.",
+      "effective": true,
+      "evidence": [
+        {
+          "proofId": "dominating-set-rankwidth",
+          "revision": 1,
+          "theorem": "dominating-set-rankwidth"
+        }
+      ],
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "recoveredScale": "p^2",
+      "recovery": {
+        "id": "dominating-set-supplied-rank-decomposition-w1-effective",
+        "revision": 1
+      },
+      "scale": "full",
+      "target": {
+        "id": "dominating-set-supplied-rank-decomposition-eth",
+        "revision": 1
+      },
+      "targetScale": "p^2"
+    }
+  ],
+  "recoveryComparisons": [
+    {
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "dominating-set-supplied-rank-decomposition-eth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "np_qp",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "dominating-set-supplied-rank-decomposition-eth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "dominating-set-supplied-rank-decomposition-eth",
+        "revision": 1
+      }
+    },
+    {
+      "comparison": "Both bounds concern the same width interface and monopolar graphs. The W[1] recovery retains the quadratic scale with computable exponent and convergence. The explicit order and rank decomposition have polynomial length in graph order.",
+      "effective": true,
+      "evidence": [
+        {
+          "proofId": "dominating-set-rankwidth",
+          "revision": 1,
+          "theorem": "dominating-set-rankwidth"
+        }
+      ],
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "recoveredScale": "p^2",
+      "recovery": {
+        "id": "dominating-set-supplied-rank-decomposition-w1-effective",
+        "revision": 1
+      },
+      "scale": "full",
+      "status": "effective",
+      "target": {
+        "id": "dominating-set-supplied-rank-decomposition-eth",
+        "revision": 1
+      },
+      "targetScale": "p^2"
+    }
+  ],
+  "resolutions": [],
+  "revision": 2,
+  "task": "Does G have a set of at most k vertices such that every vertex either belongs to the set or has a neighbor in the set?",
+  "title": "Dominating Set by width of a supplied rank decomposition",
+  "variant": "Dominating Set"
+}

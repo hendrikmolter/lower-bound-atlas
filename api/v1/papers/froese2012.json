@@ -1,0 +1,18 @@
+{
+  "authors": [
+    "Vincent Froese"
+  ],
+  "editions": [
+    {
+      "id": "thesis",
+      "kind": "thesis",
+      "label": "Master’s thesis, Technische Universität Berlin (2012)",
+      "preferredUrl": "https://fpt.akt.tu-berlin.de/publications/theses/MA-vincent-froese.pdf",
+      "primaryUrl": "https://fpt.akt.tu-berlin.de/publications/theses/MA-vincent-froese.pdf"
+    }
+  ],
+  "id": "froese2012",
+  "preferredEditionId": "thesis",
+  "preferredUrl": "https://fpt.akt.tu-berlin.de/publications/theses/MA-vincent-froese.pdf",
+  "title": "Combinatorial Feature Selection: Parameterized Algorithms and Complexity"
+}

@@ -1,0 +1,42 @@
+{
+  "assessments": {},
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "sh",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "chromatic-tw-sh",
+  "inputConditions": [],
+  "inputFactor": "N^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [
+    "For every fixed 0 < ε < 1."
+  ],
+  "reader": {
+    "label": "Fixed-power bounds",
+    "revision": 1
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "2^(O(t^(1−ε))) N^(O(1))",
+  "runtimeSymbols": [
+    "t",
+    "N"
+  ],
+  "sources": [
+    {
+      "editionId": "v2",
+      "locator": "Table 1, Chromatic Number row and footnote d, p. 4, and Theorem 3.1, p. 8",
+      "paperId": "sh26",
+      "placement": "statement",
+      "role": "preprint lower bound"
+    }
+  ],
+  "statement": "Under SH, no deterministic algorithm decides Chromatic Number within the stated running time.",
+  "status": "established",
+  "supported": true
+}

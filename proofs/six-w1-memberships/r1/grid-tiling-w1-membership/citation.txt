@@ -1,0 +1,1 @@
+Atlas. Membership in W[1] for six parameterizations · Theorem 1. six-w1-memberships, theorem grid-tiling-w1-membership, proof revision 1. Edition v1.0.0, Git commit 5c6c72747978446d3f7009e6a5cf32d496b1d5ac. https://github.com/hendrikmolter/lower-bound-atlas/blob/5c6c72747978446d3f7009e6a5cf32d496b1d5ac/proofs/six-w1-memberships.tex

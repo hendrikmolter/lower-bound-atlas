@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>About &amp; guide | Lower Bound Atlas</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header"><nav class="site-nav" aria-label="Main">
+    <a href="../index.html" class="site-brand">Lower Bound Atlas</a>
+    <div class="nav-links"><a href="../index.html">Problems</a><a href="../assumptions/index.html">Hypotheses</a><a href="../papers/index.html">Papers</a><a href="../notation/index.html">Notation</a><a href="index.html" aria-current="page">About &amp; guide</a></div>
+  </nav></header>
+  <main id="main-content" tabindex="-1">
+    
+    <header class="hero">
+      <h1>About &amp; guide</h1>
+      
+    </header>
+    <nav aria-label="On this page"><ul class="toc"><li><a href="#using-the-atlas">Using the atlas</a></li><li><a href="#working-with-agents">Working with agents</a></li><li><a href="#how-to-contribute">How to contribute</a></li><li><a href="#background">Scientific background</a></li><li><a href="#maintainer">Creation and maintenance</a></li><li><a href="#licensing">Licensing and citation</a></li><li><a href="#version-history">Version history</a></li></ul></nav><div class="atlas-guide">
+    <section id="using-the-atlas"><h2>Using the atlas</h2>
+    <p>Start with a <a href="../index.html">problem</a> and choose a parameterization. On each hypothesis card, read the excluded running time together with its input restrictions and quantifiers. Open “Full statement” for the precise claim, the original paper and, for an atlas-derived result, the proof.</p>
+    <p>To find out what survives under another hypothesis, select that hypothesis and a recovery status in the problem list. Each match identifies the historical ETH bound being compared. When citing a result, cite its original paper or proof. The statement’s revision permalink identifies the exact atlas entry you consulted.</p></section>
+    <section id="working-with-agents"><h2>Working with agents</h2>
+    <p>Give your agent the <a href="../api/v1/atlas.json">JSON export</a> to explore the current edition. To prepare a contribution, give it a clone of the <a href="https://github.com/hendrikmolter/lower-bound-atlas">repository</a> with the <a href="https://github.com/hendrikmolter/lower-bound-atlas/blob/5c6c72747978446d3f7009e6a5cf32d496b1d5ac/AGENTS.md">agent README</a>.</p>
+    <h3>Look up a result</h3><p>You can paste this example prompt into your agent.</p><blockquote>Find the Distinct Vectors lower bound under FPT ≠ W[1]. Give the parameter, the excluded running time, and the range of its coefficient. Identify the historical ETH bound it recovers. Link to the original paper and the atlas proof.</blockquote>
+    <h3>Propose an entry</h3><p>To let your agent choose a result, use this prompt.</p><blockquote>Read AGENTS.md first. Propose one missing published lower bound for the atlas and show me the changes for review.</blockquote>
+    <p>If you already have a result in mind, replace the bracketed text below.</p><blockquote>Read AGENTS.md first. Add the [hypothesis] lower bound for [problem] parameterized by [parameter], from [paper link or DOI, theorem number]. Show me the proposed changes for review.</blockquote></section>
+    <section id="how-to-contribute"><h2>How to contribute</h2>
+    <ol><li>Search the atlas for the problem, parameterization and hypothesis. If the bound is missing or needs a correction, identify the precise statement and its source, preferably a DOI and theorem number.</li>
+    <li>Prepare the entry on a branch in your copy of the repository. External contributors can use a GitHub fork. Credit the contributor in the version history and run the atlas checks. For a new derivation, include the proof PDF and LaTeX source and obtain an independent correctness review.</li>
+    <li>Open a pull request against <code>main</code>. The maintainer reviews the proposal and merges accepted changes. Entries selected for publication appear when the website is next built and published.</li></ol>
+    <p>The <a href="https://github.com/hendrikmolter/lower-bound-atlas/blob/5c6c72747978446d3f7009e6a5cf32d496b1d5ac/CONTRIBUTING.md">contribution guide on GitHub</a> includes the commands and a worked example. To suggest an entry or report a correction without preparing an edit, <a href="https://github.com/hendrikmolter/lower-bound-atlas/issues/new">open a GitHub issue</a> with the statement and source.</p></section>
+    <section id="background"><h2>Scientific background</h2>
+    <p>Many published running-time lower bounds rely on the Exponential Time Hypothesis (ETH). A 2026 preprint reports a deterministic subexponential-time algorithm for 3-SAT. If the result holds, it refutes ETH. The atlas asks which historical lower bounds can be recovered under another hypothesis. <a href="../assumptions/eth/index.html">ETH formulations and the reported refutation</a>.</p>
+    <p>Recovery is assessed for a particular running time and input class. Sometimes another hypothesis yields the full exclusion; sometimes it yields a weaker exponent or requires effective convergence. When a bound itself implies ETH, an exact recovery would also prove ETH from the alternative hypothesis. <a href="../assumptions/index.html">Browse the hypotheses</a>.</p></section>
+    <section id="maintainer"><h2>Creation and maintenance</h2>
+    <p>Hendrik Molter (Hasso Plattner Institute, Potsdam) created the atlas and is currently its sole maintainer. It grew out of a research collection of published lower bounds, reductions and proof notes. ChatGPT agents assisted with source checks, proof drafting and independent reviews, and with building the database and website.</p>
+    <h3 id="responsibility">Disclaimer on correctness and attribution</h3>
+    <p>Hendrik Molter assumes no responsibility as maintainer for the accuracy of the atlas, including its mathematical statements, proofs, citations and attributions. He takes responsibility for a proof only when he is listed as one of its authors.</p>
+    <p>Some proofs have been checked only by AI agents. On each proof page, the “Verification” section identifies the reviews on record. “Agent verified” means an AI agent checked the proof. Human review and formal verification in Lean are indicated separately when recorded. <a href="../reviews/index.html">Browse the review records</a>.</p></section>
+    <section id="licensing"><h2>Licensing and citation</h2>
+    <p>The original reader software is available under the <a href="../assets/LICENSE-MIT.txt">MIT License</a>. Original Atlas content, including database entries, Atlas-authored proofs and review notes, is available under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. The bundled STIX fonts retain their <a href="../assets/fonts/LICENSE-STIX.txt">SIL Open Font License</a>. Cited publications retain their own terms.</p>
+    <p>When reusing Atlas content, credit Lower Bound Atlas and any named authors or contributors, link to the source and license, and indicate changes. Cite the original paper or proof for the result and use the statement’s revision permalink for the Atlas record. <a href="../assets/LICENSE-CONTENT.md">Licensing and attribution notice</a>.</p></section>
+    <section id="version-history"><h2>Version history</h2><p>This history starts with the private launch candidate. Subsequent entries record additions, revisions, reviews, challenges and corrections. For changes to the data, proofs and website, see the <a href="https://github.com/hendrikmolter/lower-bound-atlas/commits/main/">repository history</a>.</p>
+    <section class="change-day"><h3><time datetime="2026-11-19">19 November 2026</time></h3>
+      <ul><li><div><h4>Initial private launch candidate</h4>
+    <p>73 problems and 106 parameterizations.</p></div>
+    <div class="change-result"><p>Hendrik Molter</p></div></li></ul></section><button class="history-more" type="button" hidden></button></section><script defer src="../assets/history.js"></script></div>
+  </main>
+  <footer class="site-footer">
+    <span>Release · v1.0.0</span>
+    <a href="../api/v1/atlas.json">JSON export</a>
+    <a href="../manifest.json">Build manifest</a>
+  </footer>
+</body>
+</html>

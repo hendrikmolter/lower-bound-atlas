@@ -1,0 +1,281 @@
+{
+  "aliases": [
+    "lms-hamiltonian-cycle-order"
+  ],
+  "bounds": [
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "effectiveStatus": "unknown",
+            "evidence": [],
+            "status": "unknown"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unknown"
+        },
+        "sh": {
+          "converse": {
+            "effectiveStatus": "unknown",
+            "evidence": [],
+            "status": "unknown"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unknown"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "hamiltonian-cycle-order-eth",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "explanation": "Exercise 14.2(e) asks for a linear reduction from 3SAT to Hamiltonian Cycle. After sparsification, the source has linearly many variables and clauses, so the graph order is linear in the source variable count.",
+        "label": "Exponent in number of vertices",
+        "revision": 1,
+        "title": "Exponent in number of vertices under ETH"
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "2^(o(n)) B^(O(1))",
+      "runtimeSymbols": [
+        "n",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "book",
+          "locator": "Theorem 14.6 and Exercise 14.2(e), via the linear reduction on sparse formulas",
+          "paperId": "cygan2015",
+          "placement": "statement",
+          "role": "benchmark"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm solves Hamiltonian Cycle within the stated running time.",
+      "status": "established",
+      "supported": true
+    },
+    {
+      "assessments": {
+        "sh": {
+          "converse": {
+            "effectiveStatus": "unknown",
+            "evidence": [],
+            "status": "unknown"
+          },
+          "forward": {
+            "effectiveStatus": "established",
+            "evidence": [
+              {
+                "boundRevision": 1,
+                "hypothesisRevision": 1,
+                "proof": {
+                  "proofId": "hamiltonian-sh",
+                  "revision": 1,
+                  "theorem": "hamiltonian-sh-forward"
+                },
+                "reviewId": "hamiltonian-sh-forward-independent"
+              }
+            ],
+            "status": "established"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "hypothesis-implies-bound"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "sh",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "hamiltonian-cycle-order-sh",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [
+        {
+          "proofId": "hamiltonian-sh",
+          "revision": 1,
+          "theorem": "hamiltonian-sh-forward"
+        }
+      ],
+      "provenance": "atlas",
+      "qualifications": [
+        "Separately for every fixed 0 < a < 1."
+      ],
+      "reader": {
+        "label": "Fixed-power exponent in the number of vertices",
+        "revision": 1,
+        "title": "Fixed-power bounds under SH"
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "2^(O(n^a)) B^(O(1))",
+      "runtimeSymbols": [
+        "n",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "v2",
+          "locator": "Definition of SH and footnotes 1–2, pp. 1–2",
+          "paperId": "sh26",
+          "placement": "context",
+          "role": "hypothesis and encoding conventions"
+        },
+        {
+          "editionId": "journal",
+          "locator": "Section 3, p. 525, following Theorem 5",
+          "paperId": "ipz2001",
+          "placement": "proof",
+          "role": "linear-size reduction to Hamiltonian Circuit"
+        }
+      ],
+      "statement": "Under SH, no deterministic algorithm can decide Hamiltonian Cycle within the stated running time.",
+      "status": "established",
+      "supported": true
+    }
+  ],
+  "coverage": "Published lower bounds for number of vertices.",
+  "encoding": "A finite simple undirected graph G.",
+  "id": "hamiltonian-cycle-order",
+  "inputConditions": [],
+  "kind": "lower-bound-case",
+  "parameter": "Number of vertices.",
+  "problemDefinitionHash": "cc2ec38becd58c12ca35a8f8b3c9318fd076a4c257b08e6e26b354ee341748b5",
+  "problemId": "hamiltonian-cycle",
+  "problemRevision": 1,
+  "reader": {
+    "anchor": "number-of-vertices",
+    "parameter": "Number of vertices.",
+    "parameterLabel": "Number of vertices",
+    "parameterSymbols": [
+      {
+        "meaning": "number of vertices of the input graph",
+        "symbol": "n"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "complete explicit binary input length",
+        "symbol": "B"
+      }
+    ]
+  },
+  "recoveryAssessments": [
+    {
+      "comparison": "The SH result excludes every fixed power below one in the exponent of the number of vertices.",
+      "effective": false,
+      "evidence": [
+        {
+          "proofId": "hamiltonian-sh",
+          "revision": 1,
+          "theorem": "hamiltonian-sh-forward"
+        }
+      ],
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "recoveredScale": "n^a",
+      "recovery": {
+        "id": "hamiltonian-cycle-order-sh",
+        "revision": 1
+      },
+      "scale": "degree",
+      "target": {
+        "id": "hamiltonian-cycle-order-eth",
+        "revision": 1
+      },
+      "targetScale": "n"
+    }
+  ],
+  "recoveryComparisons": [
+    {
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "hamiltonian-cycle-order-eth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "np_qp",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "hamiltonian-cycle-order-eth",
+        "revision": 1
+      }
+    },
+    {
+      "comparison": "The SH result excludes every fixed power below one in the exponent of the number of vertices.",
+      "effective": false,
+      "evidence": [
+        {
+          "proofId": "hamiltonian-sh",
+          "revision": 1,
+          "theorem": "hamiltonian-sh-forward"
+        }
+      ],
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "recoveredScale": "n^a",
+      "recovery": {
+        "id": "hamiltonian-cycle-order-sh",
+        "revision": 1
+      },
+      "scale": "degree",
+      "status": "degree",
+      "target": {
+        "id": "hamiltonian-cycle-order-eth",
+        "revision": 1
+      },
+      "targetScale": "n"
+    },
+    {
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "hamiltonian-cycle-order-eth",
+        "revision": 1
+      }
+    }
+  ],
+  "resolutions": [],
+  "revision": 3,
+  "task": "Does G contain a simple cycle through all vertices?",
+  "title": "Hamiltonian Cycle by number of vertices",
+  "variant": "Hamiltonian Cycle"
+}

@@ -1,0 +1,426 @@
+{
+  "aliases": [],
+  "bounds": [
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unassessed"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "fixed-width-sat-variables-eth",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [
+        "For every fixed integer r≥3."
+      ],
+      "reader": {
+        "explanation": "Width is fixed separately before the input.",
+        "label": "Subexponential-time bound",
+        "revision": 1,
+        "title": "Fixed-width SAT under ETH: Subexponential-time bound"
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "2^(o(n)) B^(O(1))",
+      "runtimeSymbols": [
+        "n",
+        "r",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "journal",
+          "locator": "Corollary 1 and Theorem 3",
+          "paperId": "ipz2001",
+          "placement": "statement",
+          "role": "fixed-width comparison"
+        },
+        {
+          "editionId": "bulletin",
+          "locator": "Section 2",
+          "paperId": "lms2011",
+          "placement": "context",
+          "role": "subexponential convention"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm solves the stated decision problem within the stated running time.",
+      "status": "established",
+      "supported": true
+    },
+    {
+      "assessments": {
+        "kxk": {
+          "converse": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unassessed"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "kxk",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "fixed-width-sat-variables-kxk",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [
+        "Separately for each fixed integer a≥2, with the fixed clause-width bound r=2a."
+      ],
+      "reader": {
+        "explanation": "The statement concerns formulas of width at most 2a.",
+        "label": "Bound for fixed even clause width",
+        "revision": 1,
+        "title": "Fixed-width SAT under the k × k Clique Hypothesis: Bound for fixed even clause width"
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "2^(o(n^(a/(a+1)) log₂ n)) B^(O(1))",
+      "runtimeSymbols": [
+        "n",
+        "r",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "oct30",
+          "locator": "Proposition 2(b), p. 3",
+          "paperId": "szeider2026",
+          "placement": "statement",
+          "role": "theorem"
+        },
+        {
+          "editionId": "v3",
+          "locator": "November 9 revision",
+          "paperId": "szeider2026",
+          "placement": "context",
+          "role": "preferred edition"
+        }
+      ],
+      "statement": "Under the k × k Clique Hypothesis, no deterministic algorithm solves the stated decision problem within the stated running time.",
+      "status": "established",
+      "supported": true
+    },
+    {
+      "assessments": {
+        "sh": {
+          "converse": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unassessed"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "sh",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "fixed-width-sat-variables-sh",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [
+        "Separately for each fixed integer r≥3 and each fixed 0<ε<1."
+      ],
+      "reader": {
+        "explanation": "The whole fixed-power family is equivalent to SH for each separately fixed clause width.",
+        "label": "Fixed-power exclusion",
+        "revision": 1,
+        "title": "Fixed-width SAT under SH: Fixed-power exclusion"
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "2^(O(n^(1−ε))) B^(O(1))",
+      "runtimeSymbols": [
+        "n",
+        "r",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "v2",
+          "locator": "Corollary 2.5",
+          "paperId": "sh26",
+          "placement": "statement",
+          "role": "fixed-width variable-count equivalence"
+        }
+      ],
+      "statement": "Under SH, no deterministic algorithm solves the stated decision problem within the stated running time.",
+      "status": "established",
+      "supported": true
+    }
+  ],
+  "coverage": "Lower bounds by variable count for each separately fixed width.",
+  "encoding": "An explicit Boolean CNF formula with clauses of width at most r, for a separately fixed integer r ≥ 3.",
+  "id": "fixed-width-sat-variables",
+  "inputConditions": [],
+  "kind": "lower-bound-case",
+  "parameter": "The number n of declared variables.",
+  "problemDefinitionHash": "8424ac7d9705b6f6b387f27dd2bccac897639f5dcd7008cc58a6fc6617c7bc01",
+  "problemId": "fixed-width-sat-formula-size",
+  "problemRevision": 1,
+  "reader": {
+    "anchor": "fixed-width-sat-variables",
+    "parameter": "The number n of declared variables.",
+    "parameterLabel": "Variable count",
+    "parameterSymbols": [
+      {
+        "meaning": "number of declared variables",
+        "symbol": "n"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "complete explicit binary input length",
+        "symbol": "B"
+      },
+      {
+        "meaning": "the fixed width bound",
+        "symbol": "r"
+      }
+    ]
+  },
+  "recoveryAssessments": [
+    {
+      "comparison": "The square-Clique source gives this exponent for the even-width components of the historical target. The exponent has a degree loss and a logarithmic factor.",
+      "effective": false,
+      "evidence": [
+        {
+          "editionId": "oct30",
+          "locator": "Proposition 2(b), p. 3",
+          "paperId": "szeider2026",
+          "placement": "statement",
+          "role": "theorem"
+        },
+        {
+          "editionId": "v3",
+          "locator": "November 9 revision",
+          "paperId": "szeider2026",
+          "placement": "context",
+          "role": "preferred edition"
+        }
+      ],
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "recoveredScale": "n^(a/(a+1)) log₂ n",
+      "recovery": {
+        "id": "fixed-width-sat-variables-kxk",
+        "revision": 1
+      },
+      "scale": "degree",
+      "target": {
+        "id": "fixed-width-sat-variables-eth",
+        "revision": 1
+      },
+      "targetScale": "n"
+    },
+    {
+      "comparison": "The fixed-power statement preserves the task, variable-count parameter, width convention and input factor.",
+      "effective": false,
+      "evidence": [
+        {
+          "editionId": "v2",
+          "locator": "Corollary 2.5",
+          "paperId": "sh26",
+          "placement": "statement",
+          "role": "fixed-width variable-count equivalence"
+        }
+      ],
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "recoveredScale": "n^(1−ε)",
+      "recovery": {
+        "id": "fixed-width-sat-variables-sh",
+        "revision": 1
+      },
+      "scale": "degree",
+      "target": {
+        "id": "fixed-width-sat-variables-eth",
+        "revision": 1
+      },
+      "targetScale": "n"
+    }
+  ],
+  "recoveryComparisons": [
+    {
+      "comparison": "The square-Clique source gives this exponent for the even-width components of the historical target. The exponent has a degree loss and a logarithmic factor.",
+      "effective": false,
+      "evidence": [
+        {
+          "editionId": "oct30",
+          "locator": "Proposition 2(b), p. 3",
+          "paperId": "szeider2026",
+          "placement": "statement",
+          "role": "theorem"
+        },
+        {
+          "editionId": "v3",
+          "locator": "November 9 revision",
+          "paperId": "szeider2026",
+          "placement": "context",
+          "role": "preferred edition"
+        }
+      ],
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "recoveredScale": "n^(a/(a+1)) log₂ n",
+      "recovery": {
+        "id": "fixed-width-sat-variables-kxk",
+        "revision": 1
+      },
+      "scale": "degree",
+      "status": "degree",
+      "target": {
+        "id": "fixed-width-sat-variables-eth",
+        "revision": 1
+      },
+      "targetScale": "n"
+    },
+    {
+      "formulation": {
+        "id": "uniform-eth",
+        "revision": 4
+      },
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "status": "equivalence",
+      "target": {
+        "id": "fixed-width-sat-variables-eth",
+        "revision": 1
+      }
+    },
+    {
+      "formulation": {
+        "id": "uniform-eth",
+        "revision": 4
+      },
+      "hypothesis": {
+        "id": "np_qp",
+        "revision": 1
+      },
+      "status": "equivalence",
+      "target": {
+        "id": "fixed-width-sat-variables-eth",
+        "revision": 1
+      }
+    },
+    {
+      "comparison": "The fixed-power statement preserves the task, variable-count parameter, width convention and input factor.",
+      "effective": false,
+      "evidence": [
+        {
+          "editionId": "v2",
+          "locator": "Corollary 2.5",
+          "paperId": "sh26",
+          "placement": "statement",
+          "role": "fixed-width variable-count equivalence"
+        }
+      ],
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "recoveredScale": "n^(1−ε)",
+      "recovery": {
+        "id": "fixed-width-sat-variables-sh",
+        "revision": 1
+      },
+      "scale": "degree",
+      "status": "degree",
+      "target": {
+        "id": "fixed-width-sat-variables-eth",
+        "revision": 1
+      },
+      "targetScale": "n"
+    },
+    {
+      "formulation": {
+        "id": "uniform-eth",
+        "revision": 4
+      },
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "status": "equivalence",
+      "target": {
+        "id": "fixed-width-sat-variables-eth",
+        "revision": 1
+      }
+    },
+    {
+      "formulation": {
+        "id": "uniform-eth",
+        "revision": 4
+      },
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "status": "equivalence",
+      "target": {
+        "id": "fixed-width-sat-variables-eth",
+        "revision": 1
+      }
+    }
+  ],
+  "resolutions": [],
+  "revision": 4,
+  "task": "Does the formula have a satisfying assignment?",
+  "title": "Fixed-width SAT by variable count",
+  "variant": "Fixed-width SAT"
+}

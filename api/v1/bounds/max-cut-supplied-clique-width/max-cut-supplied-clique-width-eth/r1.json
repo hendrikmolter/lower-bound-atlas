@@ -1,0 +1,73 @@
+{
+  "assessments": {
+    "eth": {
+      "converse": {
+        "effectiveStatus": "unknown",
+        "evidence": [],
+        "status": "unknown"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unknown"
+    },
+    "sh": {
+      "converse": {
+        "effectiveStatus": "unknown",
+        "evidence": [],
+        "status": "unknown"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unknown"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "max-cut-supplied-clique-width-eth",
+  "inputConditions": [],
+  "inputFactor": "B^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [
+    "The parameter factor f is an arbitrary computable function."
+  ],
+  "reader": {
+    "label": "Exponent in supplied expression width",
+    "revision": 1,
+    "title": "Exponent in supplied expression width under ETH"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "f(t) n^(o(t)) B^(O(1))",
+  "runtimeSymbols": [
+    "t",
+    "n",
+    "B"
+  ],
+  "sources": [
+    {
+      "editionId": "journal",
+      "locator": "Theorem 4.1 and its reduction",
+      "paperId": "fgls2014-clique-width",
+      "placement": "statement",
+      "role": "benchmark"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm solves Max Cut within the stated running time.",
+  "status": "established",
+  "supported": true
+}

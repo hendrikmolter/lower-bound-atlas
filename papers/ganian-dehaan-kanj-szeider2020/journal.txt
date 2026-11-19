@@ -1,0 +1,1 @@
+Robert Ganian, Ronald de Haan, Iyad Kanj, Stefan Szeider. On Existential MSO and Its Relation to ETH. ACM Transactions on Computation Theory 12(4) (2020), Article 22. https://doi.org/10.1145/3417759

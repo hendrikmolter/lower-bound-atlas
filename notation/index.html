@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Notation | Lower Bound Atlas</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header"><nav class="site-nav" aria-label="Main">
+    <a href="../index.html" class="site-brand">Lower Bound Atlas</a>
+    <div class="nav-links"><a href="../index.html">Problems</a><a href="../assumptions/index.html">Hypotheses</a><a href="../papers/index.html">Papers</a><a href="index.html" aria-current="page">Notation</a><a href="../about/index.html">About &amp; guide</a></div>
+  </nav></header>
+  <main id="main-content" tabindex="-1">
+    
+    <header class="hero">
+      <h1>Notation</h1>
+      
+    </header>
+    
+    <section><h2>Default algorithmic model</h2><p>Uniform deterministic bit algorithm with worst-case running time. Individual bounds specify any exceptions.</p></section>
+    <section class="problem-box"><h2 id="effective-little-o">Effective little-o</h2>
+    <p>An exponent <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi>h</mi><mrow><mo>(</mo><mi>d</mi><mo>)</mo></mrow></mrow></mrow><annotation encoding="text/plain">h(d)</annotation></semantics></math> is effectively sublinear in d if there is a total computable function T such that for every integer <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi><mo>≥</mo><mn>1</mn></mrow><annotation encoding="text/plain">j ≥ 1</annotation></semantics></math> and all <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>≥</mo><mrow><mi>T</mi><mrow><mo>(</mo><mi>j</mi><mo>)</mo></mrow></mrow></mrow><annotation encoding="text/plain">d ≥ T(j)</annotation></semantics></math>, we have <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi>h</mi><mrow><mo>(</mo><mi>d</mi><mo>)</mo></mrow></mrow><mo>≤</mo><mi>d</mi><mo>/</mo><mi>j</mi></mrow><annotation encoding="text/plain">h(d) ≤ d/j</annotation></semantics></math>. Ordinary little-o requires such thresholds to exist. Effective little-o also requires a procedure that computes a threshold from j.</p>
+    <p>In an excluded running time, <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mrow><mrow><msub><mi>o</mi><mtext>eff</mtext></msub><mrow><mo>(</mo><mi>d</mi><mo>)</mo></mrow></mrow></mrow></msup></mrow><annotation encoding="text/plain">2^(o_eff(d))</annotation></semantics></math> allows any exponent bounded above by a computable effectively sublinear function.</p></section>
+    <section><h2 id="indexed-convergence">When the exponent also depends on a parameter</h2>
+    <p>For <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi>h</mi><mrow><mo>(</mo><mi>d</mi><mo>,</mo><mi>q</mi><mo>)</mo></mrow></mrow></mrow><annotation encoding="text/plain">h(d,q)</annotation></semantics></math>, one procedure computes <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi>T</mi><mrow><mo>(</mo><mi>q</mi><mo>,</mo><mi>j</mi><mo>)</mo></mrow></mrow></mrow><annotation encoding="text/plain">T(q,j)</annotation></semantics></math> from the parameter q and the accuracy index j. For every <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mo>≥</mo><mn>2</mn></mrow><annotation encoding="text/plain">q ≥ 2</annotation></semantics></math> and <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi><mo>≥</mo><mn>1</mn></mrow><annotation encoding="text/plain">j ≥ 1</annotation></semantics></math>, all <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>≥</mo><mrow><mi>T</mi><mrow><mo>(</mo><mi>q</mi><mo>,</mo><mi>j</mi><mo>)</mo></mrow></mrow></mrow><annotation encoding="text/plain">d ≥ T(q,j)</annotation></semantics></math> must satisfy <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi>h</mi><mrow><mo>(</mo><mi>d</mi><mo>,</mo><mi>q</mi><mo>)</mo></mrow></mrow><mo>≤</mo><mi>d</mi><mo>/</mo><mi>j</mi></mrow><annotation encoding="text/plain">h(d,q) ≤ d/j</annotation></semantics></math>. The threshold may depend on q.</p>
+    <p>A computable upper envelope is a total computable function H with <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi>h</mi><mrow><mo>(</mo><mi>d</mi><mo>,</mo><mi>q</mi><mo>)</mo></mrow></mrow><mo>≤</mo><mrow><mi>H</mi><mrow><mo>(</mo><mi>d</mi><mo>,</mo><mi>q</mi><mo>)</mo></mrow></mrow></mrow><annotation encoding="text/plain">h(d,q) ≤ H(d,q)</annotation></semantics></math> for every pair of arguments. In the Closest String theorem it also bounds the exponent below the convergence threshold. The exponent h itself need not be computable.</p></section>
+    <section><h2>Source</h2><a href="https://doi.org/10.1137/070687153">Chen and Grohe, An Isomorphism Between Subexponential and Parameterized Complexity Theory</a></section>
+  </main>
+  <footer class="site-footer">
+    <span>Release · v1.0.0</span>
+    <a href="../api/v1/atlas.json">JSON export</a>
+    <a href="../manifest.json">Build manifest</a>
+  </footer>
+</body>
+</html>

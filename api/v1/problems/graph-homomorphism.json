@@ -1,0 +1,10 @@
+{
+  "id": "graph-homomorphism",
+  "input": "Two explicitly given finite simple undirected graphs G and H.",
+  "name": "Graph Homomorphism",
+  "parameterizations": [
+    "graph-homomorphism-total-order"
+  ],
+  "question": "Is there a map from V(G) to V(H) taking every edge of G to an edge of H?",
+  "revision": 1
+}

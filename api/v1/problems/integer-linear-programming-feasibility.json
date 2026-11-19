@@ -1,0 +1,10 @@
+{
+  "id": "integer-linear-programming-feasibility",
+  "input": "A signed integer matrix A with k rows and ℓ columns and a signed integer vector b of length k, all entries encoded in binary.",
+  "name": "Integer Linear Programming Feasibility",
+  "parameterizations": [
+    "integer-linear-programming-equations"
+  ],
+  "question": "Does there exist a vector x of ℓ nonnegative integers satisfying Ax=b?",
+  "revision": 1
+}

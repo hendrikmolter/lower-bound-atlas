@@ -1,0 +1,1 @@
+Édouard Bonnet, Florian Sikora. The Graph Motif Problem Parameterized by the Structure of the Input Graph. Discrete Applied Mathematics 231 (2017), pp. 78–94. https://doi.org/10.1016/j.dam.2016.11.016

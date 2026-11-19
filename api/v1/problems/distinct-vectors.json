@@ -1,0 +1,10 @@
+{
+  "id": "distinct-vectors",
+  "input": "A binary matrix A and an integer k≥0.",
+  "name": "Distinct Vectors",
+  "parameterizations": [
+    "distinct-vectors-budget"
+  ],
+  "question": "Can we select at most k columns so that every pair of rows differs in at least one selected column?",
+  "revision": 1
+}

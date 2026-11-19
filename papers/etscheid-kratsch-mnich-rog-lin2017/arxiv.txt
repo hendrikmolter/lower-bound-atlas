@@ -1,0 +1,1 @@
+Michael Etscheid, Stefan Kratsch, Matthias Mnich, Heiko Röglin. Polynomial kernels for weighted problems. arXiv:1507.03439. https://arxiv.org/abs/1507.03439

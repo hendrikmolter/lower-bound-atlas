@@ -1,0 +1,633 @@
+{
+  "aliases": [
+    "LMS2011-4.5"
+  ],
+  "bounds": [
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "effectiveStatus": "unknown",
+            "evidence": [],
+            "status": "unknown"
+          },
+          "forward": {
+            "effectiveStatus": "unknown",
+            "evidence": [],
+            "status": "unknown"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unknown"
+        },
+        "sh": {
+          "converse": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unassessed"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "cs-eth-balanced-historical",
+      "inputConditions": [
+        "one-agreement",
+        "balanced-alphabet"
+      ],
+      "inputFactor": "N^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "label": "Subexponential-time bound with a balanced alphabet",
+        "revision": 2
+      },
+      "reviewIds": [],
+      "revision": 2,
+      "runtime": "2^(o(d log₂ d)) N^(O(1))",
+      "runtimeSymbols": [
+        "d",
+        "N"
+      ],
+      "sources": [
+        {
+          "editionId": "journal",
+          "locator": "Theorems 2.12 and 3.1, pp. 685–686 and 687",
+          "paperId": "lms2018",
+          "placement": "statement",
+          "role": "benchmark interface"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm decides Closest String within the stated running time.",
+      "status": "established",
+      "supported": true
+    },
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "effectiveStatus": "unknown",
+            "evidence": [],
+            "status": "unknown"
+          },
+          "forward": {
+            "effectiveStatus": "unknown",
+            "evidence": [],
+            "status": "unknown"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unknown"
+        },
+        "sh": {
+          "converse": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unassessed"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "cs-eth-historical",
+      "inputConditions": [],
+      "inputFactor": "N^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "label": "Subexponential-time bound",
+        "revision": 2
+      },
+      "reviewIds": [],
+      "revision": 2,
+      "runtime": "2^(o(d log₂ q)) N^(O(1))",
+      "runtimeSymbols": [
+        "d",
+        "q",
+        "N"
+      ],
+      "sources": [
+        {
+          "editionId": "bulletin",
+          "locator": "Theorem 4.5, PDF p. 16",
+          "paperId": "lms2011",
+          "placement": "statement",
+          "role": "benchmark"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm decides Closest String within the stated running time.",
+      "status": "established",
+      "supported": true
+    },
+    {
+      "assessments": {
+        "kxk": {
+          "converse": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "effectiveStatus": "established",
+            "evidence": [
+              {
+                "boundRevision": 1,
+                "hypothesisRevision": 1,
+                "proof": {
+                  "proofId": "closest-string-balanced-kxk",
+                  "revision": 1,
+                  "theorem": "closest-string-balanced-kxk"
+                },
+                "reviewId": "closest-string-balanced-kxk-review"
+              }
+            ],
+            "status": "established"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "hypothesis-implies-bound"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "kxk",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "cs-kxk-balanced",
+      "inputConditions": [
+        "one-agreement",
+        "balanced-alphabet"
+      ],
+      "inputFactor": "N^(O(1))",
+      "proofs": [
+        {
+          "proofId": "closest-string-balanced-kxk",
+          "revision": 1,
+          "theorem": "closest-string-balanced-kxk"
+        }
+      ],
+      "provenance": "atlas",
+      "qualifications": [],
+      "reader": {
+        "label": "Subexponential-time bound with a balanced alphabet",
+        "revision": 1,
+        "title": "Balanced-alphabet bound under the k × k Clique Hypothesis"
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "2^(o(d log₂ d)) N^(O(1))",
+      "runtimeSymbols": [
+        "d",
+        "N"
+      ],
+      "sources": [
+        {
+          "editionId": "journal",
+          "locator": "Corollary 2.6, Lemma 2.8 and Theorems 2.11, 2.12 and 3.1, pp. 681–687",
+          "paperId": "lms2018",
+          "placement": "proof",
+          "role": "deterministic disjunction and reduction chain"
+        }
+      ],
+      "statement": "Under the k × k Clique Hypothesis, no deterministic algorithm decides Closest String within the stated running time.",
+      "status": "established",
+      "supported": true
+    },
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unassessed"
+        },
+        "sh": {
+          "converse": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unassessed"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "kxk",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "cs-kxk-product",
+      "inputConditions": [],
+      "inputFactor": "N^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "label": "Subexponential-time bound",
+        "revision": 1
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "2^(o(d log₂ q)) N^(O(1))",
+      "runtimeSymbols": [
+        "d",
+        "q",
+        "N"
+      ],
+      "sources": [
+        {
+          "editionId": "v3",
+          "locator": "Section 3, Table 1, first row, p. 5, covering Theorem 14.17 of Parameterized Algorithms",
+          "paperId": "szeider2026",
+          "placement": "statement",
+          "role": "transfer under the k × k Clique Hypothesis"
+        },
+        {
+          "editionId": "book",
+          "locator": "Theorem 14.17",
+          "paperId": "cygan2015",
+          "placement": "statement",
+          "role": "lower bound"
+        },
+        {
+          "editionId": "journal",
+          "locator": "Theorem 3.1, p. 687",
+          "paperId": "lms2018",
+          "placement": "statement",
+          "role": "original lower bound"
+        }
+      ],
+      "statement": "Under the k × k Clique Hypothesis, no deterministic algorithm decides Closest String within the stated running time.",
+      "status": "established",
+      "supported": true
+    },
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "effectiveStatus": "unknown",
+            "evidence": [],
+            "status": "unknown"
+          },
+          "forward": {
+            "effectiveStatus": "unknown",
+            "evidence": [],
+            "status": "unknown"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unknown"
+        },
+        "sh": {
+          "converse": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unassessed"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "w1",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "cs-w1-balanced",
+      "inputConditions": [
+        "one-agreement",
+        "balanced-alphabet"
+      ],
+      "inputFactor": "N^C, C fixed",
+      "proofs": [
+        {
+          "proofId": "closest-string-balanced",
+          "revision": 1,
+          "theorem": "cs-balanced"
+        }
+      ],
+      "provenance": "atlas",
+      "qualifications": [
+        "The nonnegative integer exponent has a computable upper bound and is effectively sublinear in d. The running time allows no additional factor depending on q."
+      ],
+      "reader": {
+        "label": "One agreement with a balanced alphabet",
+        "notation": "effective-little-o",
+        "notationLabel": "Effective little-o",
+        "revision": 1
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "2^(o_eff(d)) N^C",
+      "runtimeSymbols": [
+        "d",
+        "N",
+        "C"
+      ],
+      "sources": [
+        {
+          "editionId": "journal",
+          "locator": "Independent Set is W[1]-complete, with Clique by complementation",
+          "paperId": "df1995",
+          "placement": "proof",
+          "role": "source completeness"
+        }
+      ],
+      "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Closest String within the stated running time.",
+      "status": "established",
+      "supported": true
+    }
+  ],
+  "coverage": "Selected pilot bounds cover the exact product benchmark and the two reviewed one-agreement recoveries. Other archived bounds for this case are outside this extract.",
+  "encoding": "N includes the word list, symbol identifiers, and all binary headers and radius fields.",
+  "id": "lms-closest-string-radius-alphabet",
+  "inputConditions": [
+    {
+      "condition": "All input strings have the same length L.",
+      "id": "common-length",
+      "level": "problem"
+    },
+    {
+      "condition": "L=d+1",
+      "id": "one-agreement",
+      "level": "bound"
+    },
+    {
+      "condition": "q=2d+3",
+      "id": "balanced-alphabet",
+      "level": "bound"
+    }
+  ],
+  "kind": "lower-bound-case",
+  "parameter": "Radius d and used alphabet size q",
+  "problemDefinitionHash": "d3113ccc1552ff74b4c27af56bd77d1b8e5cd2b4bdb8a65d6fc17be74dd84818",
+  "problemId": "closest-string",
+  "problemRevision": 1,
+  "reader": {
+    "anchor": "radius-alphabet",
+    "boundContext": "Let d be the Hamming radius, q the number of symbols in the input words, and N the input length in bits.",
+    "notation": "When L=d+1, the center must agree with each input string in at least one position.",
+    "parameter": "The radius d and the number q of distinct symbols occurring in the strings.",
+    "parameterLabel": "Radius d and used alphabet size q",
+    "parameterSymbols": [
+      {
+        "meaning": "Hamming radius",
+        "symbol": "d"
+      },
+      {
+        "meaning": "number of distinct symbols occurring in the input strings",
+        "symbol": "q"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "input length in bits",
+        "symbol": "N"
+      },
+      {
+        "meaning": "fixed nonnegative constant",
+        "symbol": "C"
+      }
+    ]
+  },
+  "recoveryAssessments": [
+    {
+      "comparison": "On the balanced inputs of the historical bound, dividing the exponent scale by log₂ d gives d. The exclusion at this scale requires effective convergence.",
+      "effective": true,
+      "evidence": [
+        {
+          "proofId": "closest-string-balanced",
+          "revision": 1,
+          "theorem": "cs-balanced"
+        }
+      ],
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "recoveredScale": "d",
+      "recovery": {
+        "id": "cs-w1-balanced",
+        "revision": 1
+      },
+      "scale": "logarithmic",
+      "target": {
+        "id": "cs-eth-balanced-historical",
+        "revision": 2
+      },
+      "targetScale": "d log₂ d"
+    },
+    {
+      "comparison": "The two exclusions have the same exponent, polynomial input factor, and promises on length and used alphabet size.",
+      "effective": false,
+      "evidence": [
+        {
+          "proofId": "closest-string-balanced-kxk",
+          "revision": 1,
+          "theorem": "closest-string-balanced-kxk"
+        }
+      ],
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "recoveredScale": "d log₂ d",
+      "recovery": {
+        "id": "cs-kxk-balanced",
+        "revision": 1
+      },
+      "scale": "full",
+      "target": {
+        "id": "cs-eth-balanced-historical",
+        "revision": 2
+      },
+      "targetScale": "d log₂ d"
+    }
+  ],
+  "recoveryComparisons": [
+    {
+      "comparison": "The two exclusions have the same exponent, polynomial input factor, and promises on length and used alphabet size.",
+      "effective": false,
+      "evidence": [
+        {
+          "proofId": "closest-string-balanced-kxk",
+          "revision": 1,
+          "theorem": "closest-string-balanced-kxk"
+        }
+      ],
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "recoveredScale": "d log₂ d",
+      "recovery": {
+        "id": "cs-kxk-balanced",
+        "revision": 1
+      },
+      "scale": "full",
+      "status": "recovered",
+      "target": {
+        "id": "cs-eth-balanced-historical",
+        "revision": 2
+      },
+      "targetScale": "d log₂ d"
+    },
+    {
+      "hypothesis": {
+        "id": "np_qp",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "cs-eth-balanced-historical",
+        "revision": 2
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "cs-eth-balanced-historical",
+        "revision": 2
+      }
+    },
+    {
+      "comparison": "On the balanced inputs of the historical bound, dividing the exponent scale by log₂ d gives d. The exclusion at this scale requires effective convergence.",
+      "effective": true,
+      "evidence": [
+        {
+          "proofId": "closest-string-balanced",
+          "revision": 1,
+          "theorem": "cs-balanced"
+        }
+      ],
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "recoveredScale": "d",
+      "recovery": {
+        "id": "cs-w1-balanced",
+        "revision": 1
+      },
+      "scale": "logarithmic",
+      "status": "logarithmic",
+      "target": {
+        "id": "cs-eth-balanced-historical",
+        "revision": 2
+      },
+      "targetScale": "d log₂ d"
+    }
+  ],
+  "resolutions": [
+    {
+      "assumptionId": "np_qp",
+      "benchmarks": [
+        {
+          "id": "cs-eth-historical",
+          "revision": 2
+        },
+        {
+          "id": "cs-eth-balanced-historical",
+          "revision": 2
+        }
+      ],
+      "evidence": [
+        {
+          "editionId": "bulletin",
+          "locator": "Theorem 4.5, PDF p. 16",
+          "paperId": "lms2011",
+          "role": "benchmark"
+        },
+        {
+          "editionId": "journal",
+          "locator": "Theorems 2.12 and 3.1, pp. 685–686 and 687",
+          "paperId": "lms2018",
+          "role": "benchmark interface"
+        }
+      ],
+      "reason": "Recovery of the published Closest String exclusions under NP ⊈ QP has not been established.",
+      "recovered": [],
+      "remainingGap": "No recovery of the published ETH bounds is recorded.",
+      "status": "open"
+    }
+  ],
+  "revision": 19,
+  "supersessions": [
+    {
+      "hypothesis": "eth",
+      "problem": "lms-closest-string-radius-alphabet",
+      "reason": "An algorithm on unrestricted inputs at exponent scale d log₂ q would work on the promised slice at scale d log₂ d, since q=2d+3 there. The exclusion on the slice therefore implies the unrestricted exclusion with its polynomial factor unchanged.",
+      "stronger": "cs-eth-balanced-historical",
+      "strongerRevision": 2,
+      "weaker": "cs-eth-historical",
+      "weakerRevision": 2
+    },
+    {
+      "hypothesis": "kxk",
+      "problem": "lms-closest-string-radius-alphabet",
+      "reason": "An algorithm on unrestricted inputs at exponent scale d log₂ q would work on the promised slice at scale d log₂ d, since q=2d+3 there. The exclusion on the slice therefore implies the unrestricted exclusion with its polynomial factor unchanged.",
+      "stronger": "cs-kxk-balanced",
+      "strongerRevision": 1,
+      "weaker": "cs-kxk-product",
+      "weakerRevision": 1
+    }
+  ],
+  "task": "Decide whether one center word is within Hamming distance d of every word in the explicit list.",
+  "title": "Closest String by radius and used alphabet",
+  "variant": "Closest String, radius and used-alphabet product scale"
+}

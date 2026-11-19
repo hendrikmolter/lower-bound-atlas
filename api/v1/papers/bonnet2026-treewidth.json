@@ -1,0 +1,28 @@
+{
+  "authors": [
+    "Édouard Bonnet"
+  ],
+  "editions": [
+    {
+      "access": "Theorem 2 and its proof were inspected in this version.",
+      "id": "arxiv-v2",
+      "kind": "preprint",
+      "label": "arXiv:2406.11628v2, 23 June 2025",
+      "openUrl": "https://arxiv.org/pdf/2406.11628v2",
+      "preferredUrl": "https://arxiv.org/abs/2406.11628v2",
+      "primaryUrl": "https://arxiv.org/abs/2406.11628v2"
+    },
+    {
+      "access": "Journal publication and Theorem 1.2 locator confirmed in publisher-indexed text. Direct full-text access returned 403.",
+      "id": "journal",
+      "kind": "journal",
+      "label": "Journal of the ACM 73(5), article 35 (2026)",
+      "preferredUrl": "https://doi.org/10.1145/3833387",
+      "primaryUrl": "https://doi.org/10.1145/3833387"
+    }
+  ],
+  "id": "bonnet2026-treewidth",
+  "preferredEditionId": "journal",
+  "preferredUrl": "https://doi.org/10.1145/3833387",
+  "title": "Treewidth Inapproximability and Tight ETH Lower Bound"
+}

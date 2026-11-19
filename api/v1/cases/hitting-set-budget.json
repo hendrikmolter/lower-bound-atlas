@@ -1,0 +1,460 @@
+{
+  "aliases": [
+    "historical-chkx06-hitting-set"
+  ],
+  "bounds": [
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "effectiveStatus": "unknown",
+            "evidence": [],
+            "status": "unknown"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unknown"
+        },
+        "sh": {
+          "converse": {
+            "effectiveStatus": "unknown",
+            "evidence": [],
+            "status": "unknown"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unknown"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "hitting-set-budget-eth",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [
+        "The parameter factor f is an arbitrary computable function.",
+        "The exclusion remains valid on k ≤ μ(r) for every fixed nondecreasing unbounded μ."
+      ],
+      "reader": {
+        "label": "Exponent in solution budget",
+        "revision": 1,
+        "title": "Exponent in solution budget under ETH"
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "f(k) r^(o(k)) B^(O(1))",
+      "runtimeSymbols": [
+        "k",
+        "r",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "journal",
+          "locator": "Theorems 5.4 and 5.6, pp. 1359–1361; ETH implies the required W[1] separation",
+          "paperId": "chkx2006",
+          "placement": "statement",
+          "role": "benchmark"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm solves Hitting Set within the stated running time.",
+      "status": "established",
+      "supported": true
+    },
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "effectiveStatus": "unknown",
+            "evidence": [],
+            "status": "unknown"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unknown"
+        },
+        "sh": {
+          "converse": {
+            "effectiveStatus": "unknown",
+            "evidence": [],
+            "status": "unknown"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unknown"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "hitting-set-budget-eth-complete-input",
+      "inputConditions": [],
+      "inputFactor": "B^(o(k))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [
+        "The parameter factor f is an arbitrary computable function."
+      ],
+      "reader": {
+        "label": "Exponent of complete input length",
+        "revision": 1,
+        "title": "Exponent of complete input length under ETH"
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "f(k) B^(o(k))",
+      "runtimeSymbols": [
+        "k",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "journal",
+          "locator": "Theorem 5.8, p. 1361, under the implied SNP premise",
+          "paperId": "chkx2006",
+          "placement": "statement",
+          "role": "benchmark"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm solves Hitting Set within the stated running time.",
+      "status": "established",
+      "supported": true
+    },
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "effectiveStatus": "unknown",
+            "evidence": [],
+            "status": "unknown"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unknown"
+        },
+        "sh": {
+          "converse": {
+            "effectiveStatus": "unknown",
+            "evidence": [],
+            "status": "unknown"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unknown"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "w1",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "hitting-set-budget-w1",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [
+        "The parameter factor f is an arbitrary computable function.",
+        "The exclusion remains valid on k ≤ μ(r) for every fixed nondecreasing unbounded μ."
+      ],
+      "reader": {
+        "label": "Exponent in solution budget",
+        "revision": 1,
+        "title": "Exponent in solution budget under FPT ≠ W[1]"
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "f(k) r^(o(k)) B^(O(1))",
+      "runtimeSymbols": [
+        "k",
+        "r",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "journal",
+          "locator": "Theorems 5.4 and 5.6, pp. 1359–1361",
+          "paperId": "chkx2006",
+          "placement": "statement",
+          "role": "benchmark"
+        }
+      ],
+      "statement": "Under FPT ≠ W[1], no deterministic algorithm solves Hitting Set within the stated running time.",
+      "status": "established",
+      "supported": true
+    }
+  ],
+  "coverage": "Published lower bounds for solution budget.",
+  "encoding": "An explicit finite ground set, an explicit family of its subsets, and a nonnegative integer k in binary.",
+  "id": "hitting-set-budget",
+  "inputConditions": [],
+  "kind": "lower-bound-case",
+  "parameter": "Solution budget.",
+  "problemDefinitionHash": "5eaf6820c0df78dc8a5e9ab97558acd62fab058691eb297001ce055b260cad42",
+  "problemId": "hitting-set",
+  "problemRevision": 1,
+  "reader": {
+    "anchor": "solution-budget",
+    "parameter": "Solution budget.",
+    "parameterLabel": "Solution budget",
+    "parameterSymbols": [
+      {
+        "meaning": "solution budget",
+        "symbol": "k"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "number of candidate elements in the ground set",
+        "symbol": "r"
+      },
+      {
+        "meaning": "complete explicit binary input length",
+        "symbol": "B"
+      }
+    ]
+  },
+  "recoveryAssessments": [
+    {
+      "comparison": "The same source reduction excludes the same deterministic runtime and retains the candidate-space restriction under FPT ≠ W[1].",
+      "effective": false,
+      "evidence": [
+        {
+          "editionId": "journal",
+          "locator": "Theorems 5.4 and 5.6, pp. 1359–1361",
+          "paperId": "chkx2006",
+          "placement": "statement",
+          "role": "benchmark"
+        }
+      ],
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "recoveredScale": "r^(o(k)) B^(O(1))",
+      "recovery": {
+        "id": "hitting-set-budget-w1",
+        "revision": 1
+      },
+      "scale": "full",
+      "target": {
+        "id": "hitting-set-budget-eth",
+        "revision": 1
+      },
+      "targetScale": "r^(o(k)) B^(O(1))"
+    },
+    {
+      "comparison": "The reduction in Theorem 5.4 outputs explicit hard instances of total length polynomial in the candidate-space measure times a factor depending on k. The construction and parameter-factor bounds preserve the little-o exponent. The complete-input clock is separately stated under the SNP premise in Theorem 5.8.",
+      "effective": false,
+      "evidence": [
+        {
+          "editionId": "journal",
+          "locator": "Theorem 5.8, p. 1361, under the implied SNP premise",
+          "paperId": "chkx2006",
+          "placement": "statement",
+          "role": "benchmark"
+        },
+        {
+          "editionId": "journal",
+          "locator": "Theorems 5.4 and 5.6, pp. 1359–1361",
+          "paperId": "chkx2006",
+          "placement": "statement",
+          "role": "benchmark"
+        }
+      ],
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "recoveredScale": "B^(o(k))",
+      "recovery": {
+        "id": "hitting-set-budget-w1",
+        "revision": 1
+      },
+      "scale": "full",
+      "target": {
+        "id": "hitting-set-budget-eth-complete-input",
+        "revision": 1
+      },
+      "targetScale": "B^(o(k))"
+    }
+  ],
+  "recoveryComparisons": [
+    {
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "hitting-set-budget-eth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "np_qp",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "hitting-set-budget-eth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "hitting-set-budget-eth",
+        "revision": 1
+      }
+    },
+    {
+      "comparison": "The same source reduction excludes the same deterministic runtime and retains the candidate-space restriction under FPT ≠ W[1].",
+      "effective": false,
+      "evidence": [
+        {
+          "editionId": "journal",
+          "locator": "Theorems 5.4 and 5.6, pp. 1359–1361",
+          "paperId": "chkx2006",
+          "placement": "statement",
+          "role": "benchmark"
+        }
+      ],
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "recoveredScale": "r^(o(k)) B^(O(1))",
+      "recovery": {
+        "id": "hitting-set-budget-w1",
+        "revision": 1
+      },
+      "scale": "full",
+      "status": "recovered",
+      "target": {
+        "id": "hitting-set-budget-eth",
+        "revision": 1
+      },
+      "targetScale": "r^(o(k)) B^(O(1))"
+    },
+    {
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "hitting-set-budget-eth-complete-input",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "np_qp",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "hitting-set-budget-eth-complete-input",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "hitting-set-budget-eth-complete-input",
+        "revision": 1
+      }
+    },
+    {
+      "comparison": "The reduction in Theorem 5.4 outputs explicit hard instances of total length polynomial in the candidate-space measure times a factor depending on k. The construction and parameter-factor bounds preserve the little-o exponent. The complete-input clock is separately stated under the SNP premise in Theorem 5.8.",
+      "effective": false,
+      "evidence": [
+        {
+          "editionId": "journal",
+          "locator": "Theorem 5.8, p. 1361, under the implied SNP premise",
+          "paperId": "chkx2006",
+          "placement": "statement",
+          "role": "benchmark"
+        },
+        {
+          "editionId": "journal",
+          "locator": "Theorems 5.4 and 5.6, pp. 1359–1361",
+          "paperId": "chkx2006",
+          "placement": "statement",
+          "role": "benchmark"
+        }
+      ],
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "recoveredScale": "B^(o(k))",
+      "recovery": {
+        "id": "hitting-set-budget-w1",
+        "revision": 1
+      },
+      "scale": "full",
+      "status": "recovered",
+      "target": {
+        "id": "hitting-set-budget-eth-complete-input",
+        "revision": 1
+      },
+      "targetScale": "B^(o(k))"
+    }
+  ],
+  "resolutions": [],
+  "revision": 4,
+  "task": "Is there a set of at most k ground elements intersecting every listed subset?",
+  "title": "Hitting Set by solution budget",
+  "variant": "Hitting Set"
+}

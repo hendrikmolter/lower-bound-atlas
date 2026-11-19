@@ -1,0 +1,10 @@
+{
+  "id": "tournament-dominating-set",
+  "input": "A tournament and a nonnegative integer budget k.",
+  "name": "Dominating Set on tournaments",
+  "parameterizations": [
+    "tournament-dominating-set-budget"
+  ],
+  "question": "Does the tournament have a set of at most k vertices such that every vertex outside the set has an incoming arc from a vertex in it?",
+  "revision": 1
+}

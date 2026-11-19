@@ -1,0 +1,24 @@
+{
+  "authorship": {
+    "authors": [
+      "Atlas"
+    ],
+    "kind": "ai",
+    "origin": "atlas"
+  },
+  "dependencies": [],
+  "pdf": "proofs/six-w1-memberships.pdf",
+  "proofId": "six-w1-memberships",
+  "revision": 1,
+  "source": "proofs/six-w1-memberships.tex",
+  "theorem": {
+    "destination": "planar-scattered-set-w1-membership",
+    "label": "planar-scattered-set-w1-membership",
+    "number": "5",
+    "reviewIds": [
+      "planar-scattered-set-w1-membership-independent"
+    ],
+    "statement": "Scattered Set on explicit unweighted planar graphs is in W[1] by the requested number of vertices.",
+    "supports": true
+  }
+}

@@ -1,0 +1,371 @@
+{
+  "aliases": [
+    "lms-clique-order"
+  ],
+  "bounds": [
+    {
+      "assessments": {
+        "uniform-eth": {
+          "converse": {
+            "effectiveStatus": "established",
+            "evidence": [
+              {
+                "boundRevision": 2,
+                "hypothesisRevision": 4,
+                "reviewId": "clique-order-eth-equivalence-review",
+                "source": {
+                  "editionId": "journal",
+                  "locator": "Theorem 5, p. 526",
+                  "paperId": "ipz2001",
+                  "placement": "proof",
+                  "role": "linear-variable width-three SAT encoding"
+                }
+              }
+            ],
+            "status": "established"
+          },
+          "forward": {
+            "effectiveStatus": "established",
+            "evidence": [
+              {
+                "boundRevision": 2,
+                "hypothesisRevision": 4,
+                "reviewId": "clique-order-eth-equivalence-review",
+                "source": {
+                  "editionId": "journal",
+                  "locator": "Corollary 2, p. 524, and Theorem 5, p. 526",
+                  "paperId": "ipz2001",
+                  "placement": "forward",
+                  "role": "deterministic sparsification and linear graph order"
+                }
+              }
+            ],
+            "status": "established"
+          },
+          "hypothesisRevision": 4,
+          "verdict": "established-equivalent"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "clique-order-eth",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "label": "Exponential in the number of vertices",
+        "revision": 2,
+        "title": "Clique by number of vertices under ETH"
+      },
+      "reviewIds": [
+        "clique-order-eth-equivalence-review"
+      ],
+      "revision": 2,
+      "runtime": "2^(o(n)) B^(O(1))",
+      "runtimeSymbols": [
+        "n",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "journal",
+          "locator": "Corollary 2, p. 524, and Theorem 5, p. 526",
+          "paperId": "ipz2001",
+          "placement": "statement",
+          "role": "benchmark"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm decides Clique within the stated running time.",
+      "status": "established",
+      "supported": true
+    },
+    {
+      "assessments": {
+        "sh": {
+          "converse": {
+            "effectiveStatus": "established",
+            "evidence": [
+              {
+                "boundRevision": 2,
+                "hypothesisRevision": 1,
+                "proof": {
+                  "proofId": "clique-order-sh-converse",
+                  "revision": 1,
+                  "theorem": "clique-order-sh-converse"
+                },
+                "reviewId": "clique-order-sh-converse-review",
+                "source": {
+                  "editionId": "v1",
+                  "locator": "Lemma 2.2, pp. 5–6",
+                  "paperId": "sh26",
+                  "placement": "proof",
+                  "role": "quantitative decision sparsification, preprint dependency"
+                }
+              }
+            ],
+            "status": "established"
+          },
+          "forward": {
+            "effectiveStatus": "established",
+            "evidence": [
+              {
+                "boundRevision": 2,
+                "hypothesisRevision": 1,
+                "reviewId": "clique-order-sh-equivalence-review",
+                "source": {
+                  "editionId": "v2",
+                  "locator": "Table 1, Independent Set, p. 4",
+                  "paperId": "sh26",
+                  "placement": "forward",
+                  "role": "graph-order benchmark transferred by complementation"
+                }
+              }
+            ],
+            "status": "established"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "established-equivalent"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "sh",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "clique-order-sh",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [
+        "For each fixed ε strictly between zero and 1."
+      ],
+      "reader": {
+        "explanation": "Complementing the graph turns a clique into an independent set of the same size and preserves the number of vertices. The complement can be constructed in time polynomial in the complete input length.",
+        "label": "Fixed power saving in the exponent",
+        "revision": 2,
+        "title": "Clique by number of vertices under SH"
+      },
+      "reviewIds": [
+        "clique-order-sh-equivalence-review"
+      ],
+      "revision": 2,
+      "runtime": "2^(O(n^(1−ε))) B^(O(1))",
+      "runtimeSymbols": [
+        "n",
+        "ε",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "v2",
+          "locator": "Table 1, Independent Set, p. 4",
+          "paperId": "sh26",
+          "placement": "forward",
+          "role": "graph-order benchmark for Independent Set"
+        },
+        {
+          "editionId": "journal",
+          "locator": "Theorem 5, p. 526",
+          "paperId": "ipz2001",
+          "placement": "forward",
+          "role": "graph complementation preserves the number of vertices"
+        }
+      ],
+      "statement": "Under SH, no deterministic algorithm decides Clique within the stated running time.",
+      "status": "established",
+      "supported": true
+    }
+  ],
+  "coverage": "Selected literature bounds for this parameterization.",
+  "encoding": "Explicit binary graph encoding with individually represented vertices and a binary solution threshold. B is the complete input length.",
+  "id": "clique-order",
+  "inputConditions": [
+    {
+      "condition": "The graph is finite, simple, undirected, and unweighted.",
+      "id": "graph-class",
+      "level": "problem"
+    }
+  ],
+  "kind": "lower-bound-case",
+  "parameter": "The number of vertices n of G.",
+  "problemDefinitionHash": "30ef1009ee1cd0125696d5790a6401bf89509b4d4df2fc689ee018aae1f571f0",
+  "problemId": "clique",
+  "problemRevision": 1,
+  "reader": {
+    "anchor": "vertices",
+    "parameter": "The number of vertices n of G.",
+    "parameterLabel": "Number of vertices",
+    "parameterSymbols": [
+      {
+        "meaning": "number of vertices",
+        "symbol": "n"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "requested clique size",
+        "symbol": "k"
+      },
+      {
+        "meaning": "complete input length in bits",
+        "symbol": "B"
+      },
+      {
+        "meaning": "a fixed positive saving in the exponent",
+        "symbol": "ε"
+      }
+    ]
+  },
+  "recoveryAssessments": [
+    {
+      "comparison": "The SH bound excludes every fixed power below one in the exponent of the graph order n. Complementation preserves n and incurs a polynomial input cost.",
+      "effective": false,
+      "evidence": [
+        {
+          "editionId": "v2",
+          "locator": "Table 1, Independent Set, p. 4",
+          "paperId": "sh26",
+          "placement": "forward",
+          "role": "graph-order fixed-power exclusion"
+        },
+        {
+          "editionId": "journal",
+          "locator": "Theorem 5, p. 526",
+          "paperId": "ipz2001",
+          "placement": "statement",
+          "role": "graph-order benchmark and graph complementation"
+        }
+      ],
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "recoveredScale": "n^(1−ε)",
+      "recovery": {
+        "id": "clique-order-sh",
+        "revision": 2
+      },
+      "scale": "degree",
+      "target": {
+        "id": "clique-order-eth",
+        "revision": 2
+      },
+      "targetScale": "n"
+    }
+  ],
+  "recoveryComparisons": [
+    {
+      "formulation": {
+        "id": "uniform-eth",
+        "revision": 4
+      },
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "status": "equivalence",
+      "target": {
+        "id": "clique-order-eth",
+        "revision": 2
+      }
+    },
+    {
+      "formulation": {
+        "id": "uniform-eth",
+        "revision": 4
+      },
+      "hypothesis": {
+        "id": "np_qp",
+        "revision": 1
+      },
+      "status": "equivalence",
+      "target": {
+        "id": "clique-order-eth",
+        "revision": 2
+      }
+    },
+    {
+      "comparison": "The SH bound excludes every fixed power below one in the exponent of the graph order n. Complementation preserves n and incurs a polynomial input cost.",
+      "effective": false,
+      "evidence": [
+        {
+          "editionId": "v2",
+          "locator": "Table 1, Independent Set, p. 4",
+          "paperId": "sh26",
+          "placement": "forward",
+          "role": "graph-order fixed-power exclusion"
+        },
+        {
+          "editionId": "journal",
+          "locator": "Theorem 5, p. 526",
+          "paperId": "ipz2001",
+          "placement": "statement",
+          "role": "graph-order benchmark and graph complementation"
+        }
+      ],
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "recoveredScale": "n^(1−ε)",
+      "recovery": {
+        "id": "clique-order-sh",
+        "revision": 2
+      },
+      "scale": "degree",
+      "status": "degree",
+      "target": {
+        "id": "clique-order-eth",
+        "revision": 2
+      },
+      "targetScale": "n"
+    },
+    {
+      "formulation": {
+        "id": "uniform-eth",
+        "revision": 4
+      },
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "status": "equivalence",
+      "target": {
+        "id": "clique-order-eth",
+        "revision": 2
+      }
+    },
+    {
+      "formulation": {
+        "id": "uniform-eth",
+        "revision": 4
+      },
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "status": "equivalence",
+      "target": {
+        "id": "clique-order-eth",
+        "revision": 2
+      }
+    }
+  ],
+  "resolutions": [],
+  "revision": 5,
+  "task": "Does G contain at least k pairwise adjacent vertices?",
+  "title": "Clique by number of vertices",
+  "variant": "Clique"
+}

@@ -1,0 +1,20 @@
+{
+  "applicable": true,
+  "date": "2026-11-18",
+  "evidence": "evidence/independent-set-treewidth-w1-independent.md",
+  "id": "independent-set-treewidth-w1-independent",
+  "independent": true,
+  "label": "Agent verified",
+  "object": {
+    "id": "independent-set-treewidth-w1-proof",
+    "revision": 1,
+    "theorem": "is-treewidth",
+    "type": "proof"
+  },
+  "reviewer": "Codex agent secondary_natural",
+  "scope": "Checks the Clique encoding, subcubic construction, exact width and optional optimal decomposition, noncomputable exponent envelope with computable convergence, and deterministic FPT transfer.",
+  "sourceSha256": "cbee40dd1d5b24db19ae7c6ec4a24f40b05a594993ddb4223282f0b387ba35f4",
+  "stale": false,
+  "type": "agent",
+  "verdict": "verified"
+}

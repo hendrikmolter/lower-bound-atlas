@@ -1,0 +1,24 @@
+{
+  "authorship": {
+    "authors": [
+      "Atlas"
+    ],
+    "kind": "ai",
+    "origin": "atlas"
+  },
+  "dependencies": [],
+  "pdf": "proofs/chromatic-number-treewidth-w1.pdf",
+  "proofId": "chromatic-number-treewidth-w1",
+  "revision": 1,
+  "source": "proofs/chromatic-number-treewidth-w1.tex",
+  "theorem": {
+    "destination": "tw-w1",
+    "label": "tw-w1",
+    "number": "1",
+    "reviewIds": [
+      "chromatic-number-treewidth-w1-review"
+    ],
+    "statement": "Under deterministic FPT ≠ W[1], there is no Chromatic Number algorithm in 2^{h(t)} N^C for a fixed C and a finite nonnegative h effectively little-o of t log₂(max(t,2)).",
+    "supports": true
+  }
+}

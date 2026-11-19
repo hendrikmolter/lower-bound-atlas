@@ -1,0 +1,51 @@
+{
+  "assessments": {},
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "kxk",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "is-budget-kxk",
+  "inputConditions": [],
+  "inputFactor": "n is the base of the exponent",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [
+    "The bound excludes every computable prefactor f."
+  ],
+  "reader": {
+    "label": "Exponent sublinear in the solution size",
+    "revision": 1,
+    "title": "Independent Set by solution size under the k × k Clique Hypothesis"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "f(k) n^(o(k))",
+  "runtimeSymbols": [
+    "f",
+    "k",
+    "n"
+  ],
+  "sources": [
+    {
+      "editionId": "v3",
+      "locator": "Proposition 1, Section 3 and Table 1, second row",
+      "paperId": "szeider2026",
+      "placement": "statement",
+      "role": "benchmark"
+    },
+    {
+      "editionId": "book",
+      "locator": "Theorem 14.21, via graph complementation",
+      "paperId": "cygan2015",
+      "placement": "statement",
+      "role": "benchmark"
+    }
+  ],
+  "statement": "Under the k × k Clique Hypothesis, no deterministic algorithm decides Independent Set within the stated running time.",
+  "status": "established",
+  "supported": true
+}

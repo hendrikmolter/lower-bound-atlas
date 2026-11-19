@@ -1,0 +1,112 @@
+{
+  "assessments": {
+    "eth": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unassessed"
+    },
+    "kxk": {
+      "converse": {
+        "effectiveStatus": "established",
+        "evidence": [
+          {
+            "boundRevision": 2,
+            "hypothesisRevision": 1,
+            "reviewId": "square-kxk-equivalence-review",
+            "source": {
+              "editionId": "v3",
+              "locator": "Section 2, hypothesis definition on p. 2 and deterministic convention on p. 3",
+              "paperId": "szeider2026",
+              "placement": "proof",
+              "role": "defining hypothesis"
+            }
+          }
+        ],
+        "status": "established"
+      },
+      "forward": {
+        "effectiveStatus": "established",
+        "evidence": [
+          {
+            "boundRevision": 2,
+            "hypothesisRevision": 1,
+            "reviewId": "square-kxk-equivalence-review",
+            "source": {
+              "editionId": "v3",
+              "locator": "Section 2, hypothesis definition on p. 2 and deterministic convention on p. 3",
+              "paperId": "szeider2026",
+              "placement": "statement",
+              "role": "defining hypothesis"
+            }
+          }
+        ],
+        "status": "established"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "established-equivalent"
+    },
+    "sh": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unassessed"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "kxk",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "square-kxk",
+  "inputConditions": [],
+  "inputFactor": "N^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [],
+  "reader": {
+    "explanation": "This exclusion is the defining statement of the k × k Clique Hypothesis.",
+    "label": "Defining lower bound",
+    "revision": 2
+  },
+  "reviewIds": [
+    "square-kxk-equivalence-review"
+  ],
+  "revision": 2,
+  "runtime": "2^(o(k log₂ k)) N^(O(1))",
+  "runtimeSymbols": [
+    "k",
+    "N"
+  ],
+  "sources": [
+    {
+      "editionId": "v3",
+      "locator": "Section 2, hypothesis definition on p. 2 and deterministic convention on p. 3",
+      "paperId": "szeider2026",
+      "placement": "statement",
+      "role": "defining hypothesis"
+    }
+  ],
+  "statement": "Under the k × k Clique Hypothesis, no deterministic algorithm decides k × k Clique within the stated running time.",
+  "status": "established",
+  "supported": true
+}

@@ -1,0 +1,74 @@
+{
+  "assessments": {
+    "eth": {
+      "converse": {
+        "effectiveStatus": "unknown",
+        "evidence": [],
+        "status": "unknown"
+      },
+      "forward": {
+        "effectiveStatus": "unknown",
+        "evidence": [],
+        "status": "unknown"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unknown"
+    },
+    "sh": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unassessed"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "w1",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "nc-w1-input-count",
+  "inputConditions": [],
+  "inputFactor": "B^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [
+    "The circuit depth t ≥ 2 is fixed.",
+    "The exponent is bounded by k/r(k) for an unbounded nondecreasing function r."
+  ],
+  "reader": {
+    "label": "Input-count bound without a parameter-dependent prefactor",
+    "revision": 1
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "n^(o(k)) B^(O(1))",
+  "runtimeSymbols": [
+    "t",
+    "k",
+    "n",
+    "B"
+  ],
+  "sources": [
+    {
+      "editionId": "journal",
+      "locator": "Theorem 3.3, p. 224, and the circuit definitions in Section 2, pp. 219–220",
+      "paperId": "ccfhjkx2005",
+      "placement": "statement",
+      "role": "benchmark"
+    }
+  ],
+  "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Weighted normalized circuit satisfiability within the stated running time.",
+  "status": "established",
+  "supported": true
+}

@@ -1,0 +1,63 @@
+{
+  "assessments": {
+    "eth": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unassessed"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "three-sat-clauses-eth",
+  "inputConditions": [],
+  "inputFactor": "B^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [],
+  "reader": {
+    "label": "Subexponential-time bound",
+    "revision": 1,
+    "title": "3SAT under ETH: Subexponential-time bound"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "2^(o(m)) B^(O(1))",
+  "runtimeSymbols": [
+    "m",
+    "B"
+  ],
+  "sources": [
+    {
+      "editionId": "bulletin",
+      "locator": "Proposition 2.9 and Section 2, p. 49",
+      "paperId": "lms2011",
+      "placement": "statement",
+      "role": "conditional lower bound"
+    },
+    {
+      "editionId": "journal",
+      "locator": "Corollary 1",
+      "paperId": "ipz2001",
+      "placement": "forward",
+      "role": "decision sparsification"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm solves the stated decision problem within the stated running time.",
+  "status": "established",
+  "supported": true
+}

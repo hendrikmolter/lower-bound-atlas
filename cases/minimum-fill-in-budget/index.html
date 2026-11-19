@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Minimum Fill-In | Lower Bound Atlas</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header"><nav class="site-nav" aria-label="Main">
+    <a href="../../index.html" class="site-brand">Lower Bound Atlas</a>
+    <div class="nav-links"><a href="../../index.html">Problems</a><a href="../../assumptions/index.html">Hypotheses</a><a href="../../papers/index.html">Papers</a><a href="../../notation/index.html">Notation</a><a href="../../about/index.html">About &amp; guide</a></div>
+  </nav></header>
+  <main id="main-content" tabindex="-1">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../../index.html">Problems</a><span aria-hidden="true"> / </span><a href="../../problems/minimum-fill-in/index.html">Minimum Fill-In</a></nav>
+    <header class="hero">
+      <h1>Minimum Fill-In</h1>
+      
+    </header>
+    <nav class="param-nav" aria-label="Recorded parameterizations"><strong>Recorded parameterizations</strong><a href="#minimum-fill-in-budget" aria-current="location">Edge-addition budget</a></nav>
+      <section id="minimum-fill-in-budget" class="problem-box" aria-label="Problem definition"><dl>
+      <dt>Input</dt><dd>An explicitly encoded finite simple undirected graph G and a nonnegative integer edge-addition budget k.</dd>
+      <dt>Parameter</dt><dd>The maximum number of edges that may be added k.</dd>
+      <dt>Question</dt><dd>Can at most k edges be added to G to make it chordal, so that every cycle on at least four vertices has a chord?</dd></dl></section>
+      
+      <section id="comparisons"><h2 id="bounds">Lower bounds by hypothesis</h2>
+      <h3>Notation</h3><ul class="runtime-symbols"><li><i>n</i> — number of vertices in the input graph</li><li><i>δ</i> — fixed positive exponent saving</li></ul>
+      <article class="hypothesis-card" id="assessment-eth"><h3><a href="../../assumptions/eth/index.html">ETH</a> (historical)</h3>
+        <section class="bound-row" id="minimum-fill-in-eth"><h4>Fixed-power bound below the square-root exponent</h4>
+        
+        
+        <div class="excluded-time"><span>Running time excluded under ETH</span><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mrow><mrow><mi>𝒪</mi><mrow><mo>(</mo><msup><mi>k</mi><mrow><mn>1</mn><mo>/</mo><mn>2</mn><mo>−</mo><mi>δ</mi></mrow></msup><mo>)</mo></mrow></mrow></mrow></msup><mo>&#x2062;</mo><msup><mi>n</mi><mrow><mrow><mi>𝒪</mi><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></mrow></msup></mrow><annotation encoding="text/plain">2^(O(k^(1/2−δ))) n^(O(1))</annotation></semantics></math></div><p class="runtime-qualification">For every fixed <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="text/plain">δ&gt;0</annotation></semantics></math>.</p>
+        <div class="bound-links"><div class="actions"><a href="../../bounds/minimum-fill-in-budget/minimum-fill-in-eth/index.html">Full statement</a></div>
+    </div><ul class="bound-citations"><li><a href="https://doi.org/10.1016/j.ic.2020.104514">Minimum Fill-In: Inapproximability and Almost Tight Lower Bounds</a></li></ul>
+        </section>
+        
+        </article><article class="hypothesis-card" id="assessment-sh"><h3><a href="../../assumptions/sh/index.html">SH</a></h3>
+        <p>No lower bound recorded for this parameterization.</p>
+        
+        </article><article class="hypothesis-card" id="assessment-w1"><h3><a href="../../assumptions/w1/index.html">FPT ≠ W[1]</a></h3>
+        <p>No lower bound recorded for this parameterization.</p>
+        
+        </article><article class="hypothesis-card" id="assessment-np_qp"><h3><a href="../../assumptions/np_qp/index.html">NP ⊈ QP</a></h3>
+        <p>No lower bound recorded for this parameterization.</p>
+        
+        </article><article class="hypothesis-card" id="assessment-kxk"><h3><a href="../../assumptions/kxk/index.html"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>×</mo><mi>k</mi></mrow><annotation encoding="text/plain">k × k</annotation></semantics></math> Clique Hypothesis</a></h3>
+        <p>No lower bound recorded for this parameterization.</p>
+        
+        </article></section>
+      <details class="reader-details"><summary>Record details</summary><dl class="details-grid"><div><dt>Identifier</dt><dd>minimum-fill-in-budget</dd></div><div><dt>Revision</dt><dd>2</dd></div></dl>
+      <a href="index.html">Permalink</a> · <a href="../../api/v1/cases/minimum-fill-in-budget.json">JSON record</a></details>
+  </main>
+  <footer class="site-footer">
+    <span>Release · v1.0.0</span>
+    <a href="../../api/v1/atlas.json">JSON export</a>
+    <a href="../../manifest.json">Build manifest</a>
+  </footer>
+</body>
+</html>

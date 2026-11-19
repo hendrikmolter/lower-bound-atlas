@@ -1,0 +1,48 @@
+{
+  "assessments": {},
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "planar-edge-multiway-cut-terminals-eth",
+  "inputConditions": [],
+  "inputFactor": "n is the base of the exponent",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [],
+  "reader": {
+    "label": "Exponent sublinear in the square root of the parameter",
+    "revision": 1
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "f(k) n^(o(k^(1/2)))",
+  "runtimeSymbols": [
+    "f",
+    "k",
+    "n"
+  ],
+  "sources": [
+    {
+      "editionId": "journal",
+      "locator": "Theorem 3 and Corollary 5, pp. 679–681",
+      "paperId": "marx2012-multiway",
+      "placement": "statement",
+      "role": "published ETH lower bound"
+    },
+    {
+      "editionId": "book",
+      "locator": "Bibliographic notes p. 520, reference [354]",
+      "paperId": "cygan2015",
+      "placement": "statement",
+      "role": "lower-bound statement"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm solves Planar Edge Multiway Cut within the stated running time.",
+  "status": "established",
+  "supported": true
+}

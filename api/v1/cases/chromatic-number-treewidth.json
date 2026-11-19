@@ -1,0 +1,329 @@
+{
+  "aliases": [
+    "Chromatic Number parameterized by treewidth"
+  ],
+  "bounds": [
+    {
+      "assessments": {},
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "chromatic-tw-eth",
+      "inputConditions": [],
+      "inputFactor": "n^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "label": "Slightly superexponential bound",
+        "revision": 1
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "2^(o(t log₂ t)) n^(O(1))",
+      "runtimeSymbols": [
+        "t",
+        "n"
+      ],
+      "sources": [
+        {
+          "editionId": "journal",
+          "locator": "Theorem 6.1 and its cover-size bound, pp. 698–699, with treewidth bounded by vertex cover number",
+          "paperId": "lms2018",
+          "placement": "statement",
+          "role": "published reduction"
+        },
+        {
+          "editionId": "bulletin",
+          "locator": "Theorem 6.3, PDF p. 22",
+          "paperId": "lms2011",
+          "placement": "statement",
+          "role": "published lower bound"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm decides Chromatic Number within the stated running time.",
+      "status": "established",
+      "supported": true
+    },
+    {
+      "assessments": {},
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "sh",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "chromatic-tw-sh",
+      "inputConditions": [],
+      "inputFactor": "N^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [
+        "For every fixed 0 < ε < 1."
+      ],
+      "reader": {
+        "label": "Fixed-power bounds",
+        "revision": 1
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "2^(O(t^(1−ε))) N^(O(1))",
+      "runtimeSymbols": [
+        "t",
+        "N"
+      ],
+      "sources": [
+        {
+          "editionId": "v2",
+          "locator": "Table 1, Chromatic Number row and footnote d, p. 4, and Theorem 3.1, p. 8",
+          "paperId": "sh26",
+          "placement": "statement",
+          "role": "preprint lower bound"
+        }
+      ],
+      "statement": "Under SH, no deterministic algorithm decides Chromatic Number within the stated running time.",
+      "status": "established",
+      "supported": true
+    },
+    {
+      "assessments": {},
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "w1",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "chromatic-tw-w1",
+      "inputConditions": [],
+      "inputFactor": "N^(O(1))",
+      "proofs": [
+        {
+          "proofId": "chromatic-number-treewidth-w1",
+          "revision": 1,
+          "theorem": "tw-w1"
+        }
+      ],
+      "provenance": "atlas",
+      "qualifications": [
+        "The exponent h(t) is finite and nonnegative. There is a computable function T such that, for every positive integer j, h(t)≤t log₂(t)/j whenever t≥T(j)."
+      ],
+      "reader": {
+        "label": "Effective little-o bound in the treewidth",
+        "notation": "effective-little-o",
+        "notationLabel": "Effective little-o",
+        "revision": 1
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "2^(o_eff(t log₂ t)) N^(O(1))",
+      "runtimeSymbols": [
+        "t",
+        "N"
+      ],
+      "sources": [
+        {
+          "editionId": "journal",
+          "locator": "W[1]-completeness of Independent Set, with Clique by complementation",
+          "paperId": "df1995",
+          "placement": "proof",
+          "role": "source completeness"
+        }
+      ],
+      "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Chromatic Number within the stated running time.",
+      "status": "established",
+      "supported": true
+    }
+  ],
+  "coverage": "Deterministic ETH and SH bounds.",
+  "encoding": "A finite simple undirected graph G and a positive integer ℓ.",
+  "id": "chromatic-number-treewidth",
+  "inputConditions": [],
+  "kind": "lower-bound-case",
+  "parameter": "The treewidth t of G.",
+  "problemDefinitionHash": "c8e3140a0aa9565f3bf5539eef4510570437e78f14e5838a5980852b66d1f794",
+  "problemId": "chromatic-number",
+  "problemRevision": 1,
+  "reader": {
+    "parameterLabel": "Treewidth",
+    "parameterSymbols": [
+      {
+        "meaning": "treewidth of G",
+        "symbol": "t"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "number of vertices of G",
+        "symbol": "n"
+      },
+      {
+        "meaning": "complete binary input length",
+        "symbol": "N"
+      }
+    ]
+  },
+  "recoveryAssessments": [
+    {
+      "comparison": "The exclusion reaches the historical exponent scale t log₂ t for exponents with effective convergence.",
+      "effective": true,
+      "evidence": [
+        {
+          "proofId": "chromatic-number-treewidth-w1",
+          "revision": 1,
+          "theorem": "tw-w1"
+        }
+      ],
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "recoveredScale": "t log₂ t",
+      "recovery": {
+        "id": "chromatic-tw-w1",
+        "revision": 1
+      },
+      "scale": "full",
+      "target": {
+        "id": "chromatic-tw-eth",
+        "revision": 1
+      },
+      "targetScale": "t log₂ t"
+    },
+    {
+      "comparison": "SH excludes every fixed exponent power below one in the treewidth t. This recovers degree one. The historical little-o family at t log₂ t remains unrecovered.",
+      "effective": false,
+      "evidence": [
+        {
+          "editionId": "v2",
+          "locator": "Table 1, Chromatic Number row and footnote d, p. 4, and Theorem 3.1, p. 8",
+          "paperId": "sh26",
+          "placement": "statement",
+          "role": "preprint lower bound"
+        },
+        {
+          "editionId": "journal",
+          "locator": "Theorem 6.1 and its cover-size bound, pp. 698–699, with treewidth bounded by vertex cover number",
+          "paperId": "lms2018",
+          "placement": "statement",
+          "role": "published reduction"
+        }
+      ],
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "recoveredScale": "t^(1−ε)",
+      "recovery": {
+        "id": "chromatic-tw-sh",
+        "revision": 1
+      },
+      "scale": "degree",
+      "target": {
+        "id": "chromatic-tw-eth",
+        "revision": 1
+      },
+      "targetScale": "t log₂ t"
+    }
+  ],
+  "recoveryComparisons": [
+    {
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "chromatic-tw-eth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "np_qp",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "chromatic-tw-eth",
+        "revision": 1
+      }
+    },
+    {
+      "comparison": "SH excludes every fixed exponent power below one in the treewidth t. This recovers degree one. The historical little-o family at t log₂ t remains unrecovered.",
+      "effective": false,
+      "evidence": [
+        {
+          "editionId": "v2",
+          "locator": "Table 1, Chromatic Number row and footnote d, p. 4, and Theorem 3.1, p. 8",
+          "paperId": "sh26",
+          "placement": "statement",
+          "role": "preprint lower bound"
+        },
+        {
+          "editionId": "journal",
+          "locator": "Theorem 6.1 and its cover-size bound, pp. 698–699, with treewidth bounded by vertex cover number",
+          "paperId": "lms2018",
+          "placement": "statement",
+          "role": "published reduction"
+        }
+      ],
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "recoveredScale": "t^(1−ε)",
+      "recovery": {
+        "id": "chromatic-tw-sh",
+        "revision": 1
+      },
+      "scale": "degree",
+      "status": "degree",
+      "target": {
+        "id": "chromatic-tw-eth",
+        "revision": 1
+      },
+      "targetScale": "t log₂ t"
+    },
+    {
+      "comparison": "The exclusion reaches the historical exponent scale t log₂ t for exponents with effective convergence.",
+      "effective": true,
+      "evidence": [
+        {
+          "proofId": "chromatic-number-treewidth-w1",
+          "revision": 1,
+          "theorem": "tw-w1"
+        }
+      ],
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "recoveredScale": "t log₂ t",
+      "recovery": {
+        "id": "chromatic-tw-w1",
+        "revision": 1
+      },
+      "scale": "full",
+      "status": "effective",
+      "target": {
+        "id": "chromatic-tw-eth",
+        "revision": 1
+      },
+      "targetScale": "t log₂ t"
+    }
+  ],
+  "resolutions": [],
+  "revision": 3,
+  "task": "Can the vertices of G be colored with at most ℓ colors so that adjacent vertices have different colors?",
+  "title": "Chromatic Number by treewidth",
+  "variant": "Undirected graph coloring with an input color budget"
+}

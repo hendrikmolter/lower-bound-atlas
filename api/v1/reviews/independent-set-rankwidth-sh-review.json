@@ -1,0 +1,20 @@
+{
+  "applicable": true,
+  "date": "2026-11-18",
+  "evidence": "evidence/independent-set-rankwidth-independent.md",
+  "id": "independent-set-rankwidth-sh-review",
+  "independent": true,
+  "label": "Agent verified",
+  "object": {
+    "id": "independent-set-rankwidth",
+    "revision": 1,
+    "theorem": "independent-set-rankwidth-sh",
+    "type": "proof"
+  },
+  "reviewer": "Codex agent derived_shortlist",
+  "scope": "Assuming deterministic SH, for every fixed 0<ε<2 there is no deterministic 2^(O(p^(2−ε))) N^(O(1)) Independent Set algorithm on triangle-free graphs by either intrinsic width, with or without an optimal corresponding certificate.",
+  "sourceSha256": "d7a6aba181a1f49669c6e55b562246aeedfc2b3a21760a7766f00250b0c1c80f",
+  "stale": false,
+  "type": "agent",
+  "verdict": "verified"
+}

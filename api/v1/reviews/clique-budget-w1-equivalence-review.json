@@ -1,0 +1,19 @@
+{
+  "applicable": true,
+  "date": "2026-11-18",
+  "evidence": "evidence/clique-literature-equivalences.md",
+  "id": "clique-budget-w1-equivalence-review",
+  "independent": true,
+  "label": "Agent verified",
+  "object": {
+    "caseId": "clique-budget",
+    "id": "clique-budget-w1",
+    "revision": 2,
+    "type": "bound"
+  },
+  "reviewer": "Codex parent agent",
+  "scope": "Both directions of the ordinary no-FPT exclusion with the exact budget parameter and full input factor.",
+  "stale": false,
+  "type": "agent",
+  "verdict": "verified"
+}

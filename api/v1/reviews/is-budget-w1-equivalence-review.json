@@ -1,0 +1,19 @@
+{
+  "applicable": true,
+  "date": "2026-11-18",
+  "evidence": "evidence/current-equivalences-independent.md",
+  "id": "is-budget-w1-equivalence-review",
+  "independent": true,
+  "label": "Agent verified",
+  "object": {
+    "caseId": "independent-set-budget",
+    "id": "is-budget-w1",
+    "revision": 2,
+    "type": "bound"
+  },
+  "reviewer": "Codex parent agent",
+  "scope": "The exact-size and at-least-size formulations agree because subsets of independent sets are independent.",
+  "stale": false,
+  "type": "agent",
+  "verdict": "verified"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "minimum-k-cut",
+  "input": "A finite simple undirected graph G with nonnegative integer edge weights and a weight threshold b in binary.",
+  "name": "Minimum k-Cut",
+  "parameterizations": [
+    "minimum-k-cut-components"
+  ],
+  "question": "Can edges of total weight at most b be deleted so that at least k connected components remain?",
+  "revision": 1
+}

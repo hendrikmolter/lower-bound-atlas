@@ -1,0 +1,24 @@
+{
+  "authorship": {
+    "authors": [
+      "Atlas"
+    ],
+    "kind": "ai",
+    "origin": "atlas"
+  },
+  "dependencies": [],
+  "pdf": "proofs/six-w1-memberships.pdf",
+  "proofId": "six-w1-memberships",
+  "revision": 1,
+  "source": "proofs/six-w1-memberships.tex",
+  "theorem": {
+    "destination": "unit-square-independent-set-w1-membership",
+    "label": "unit-square-independent-set-w1-membership",
+    "number": "3",
+    "reviewIds": [
+      "unit-square-independent-set-w1-membership-independent"
+    ],
+    "statement": "Independent Set of explicitly represented closed axis-parallel unit squares with rational coordinates is in W[1] by the requested number of squares.",
+    "supports": true
+  }
+}

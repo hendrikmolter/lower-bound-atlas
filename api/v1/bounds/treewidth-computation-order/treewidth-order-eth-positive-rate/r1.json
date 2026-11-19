@@ -1,0 +1,60 @@
+{
+  "assessments": {},
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "treewidth-order-eth-positive-rate",
+  "inputConditions": [],
+  "inputFactor": "B^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [
+    "There exists δ > 0 such that the exclusion holds for every fixed C ≥ 0."
+  ],
+  "reader": {
+    "explanation": "The proof distinguishes two adjacent treewidth thresholds on graphs with a linear number of vertices from bounded-occurrence 3-SAT. The journal and checked author version use different theorem numbers.",
+    "label": "Positive exponential rate in the number of vertices",
+    "revision": 1,
+    "title": "Treewidth computation by graph order under ETH"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "O(2^(δ n) B^C)",
+  "runtimeSymbols": [
+    "n",
+    "δ",
+    "C",
+    "B"
+  ],
+  "sources": [
+    {
+      "editionId": "journal",
+      "locator": "Theorem 1.2 and its proof",
+      "paperId": "bonnet2026-treewidth",
+      "placement": "statement",
+      "role": "original lower bound"
+    },
+    {
+      "editionId": "arxiv-v2",
+      "locator": "Theorem 2 and Section 3",
+      "paperId": "bonnet2026-treewidth",
+      "placement": "statement",
+      "role": "checked author version and decision threshold"
+    },
+    {
+      "editionId": "v2",
+      "locator": "Table 1, Treewidth, historical ETH column, p. 4",
+      "paperId": "sh26",
+      "placement": "context",
+      "role": "later little-o restatement"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm decides Treewidth computation within the stated running time.",
+  "status": "established",
+  "supported": true
+}

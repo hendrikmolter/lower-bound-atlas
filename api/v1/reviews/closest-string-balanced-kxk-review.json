@@ -1,0 +1,20 @@
+{
+  "applicable": true,
+  "date": "2026-11-18",
+  "evidence": "evidence/closest-string-balanced-kxk-independent.md",
+  "id": "closest-string-balanced-kxk-review",
+  "independent": true,
+  "label": "Agent verified",
+  "object": {
+    "id": "closest-string-balanced-kxk",
+    "revision": 1,
+    "theorem": "closest-string-balanced-kxk",
+    "type": "proof"
+  },
+  "reviewer": "Codex agent clique_batch",
+  "scope": "Forward implication. Checks the deterministic disjunction, reduction chain, used alphabet and common length, and the exact running time.",
+  "sourceSha256": "0a30765d590e30160fe5c774b6be5a37fbc94d456530cf463dc7ed42cc17c504",
+  "stale": false,
+  "type": "agent",
+  "verdict": "verified"
+}

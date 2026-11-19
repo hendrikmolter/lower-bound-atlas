@@ -1,0 +1,10 @@
+{
+  "id": "longest-path",
+  "input": "A finite simple undirected graph G and a nonnegative integer k in binary.",
+  "name": "Longest Path",
+  "parameterizations": [
+    "longest-path-budget"
+  ],
+  "question": "Does G contain a path on at least k distinct vertices?",
+  "revision": 1
+}

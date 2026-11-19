@@ -1,0 +1,110 @@
+{
+  "assessments": {
+    "eth": {
+      "converse": {
+        "effectiveStatus": "unknown",
+        "evidence": [],
+        "status": "unknown"
+      },
+      "forward": {
+        "effectiveStatus": "established",
+        "evidence": [
+          {
+            "boundRevision": 1,
+            "reviewId": "color-eth-historical-review",
+            "source": {
+              "editionId": "bulletin",
+              "locator": "Theorem 3.2, PDF p. 12",
+              "paperId": "lms2011",
+              "role": "benchmark"
+            }
+          }
+        ],
+        "status": "established"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "hypothesis-implies-bound"
+    },
+    "sh": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unassessed"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "color-eth-historical",
+  "inputConditions": [],
+  "inputFactor": "B^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [],
+  "reader": {
+    "historicalNote": [
+      "The ",
+      {
+        "text": "2026 algorithm for 3-SAT",
+        "url": "https://github.com/openai/math/tree/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026"
+      },
+      " refutes ",
+      {
+        "fragment": "strongly-uniform-eth",
+        "path": "assumptions/eth/r1/index.html",
+        "text": "strongly uniform ETH"
+      },
+      ". Encoding each vertex with three variables therefore gives a 3-Coloring algorithm whose exponent is ",
+      {
+        "fragment": "effective-little-o",
+        "path": "notation/index.html",
+        "text": "effectively sublinear"
+      },
+      " in the number of vertices."
+    ],
+    "label": "Subexponential-time bound",
+    "revision": 1,
+    "title": "Subexponential-time bound under ETH"
+  },
+  "reviewIds": [
+    "color-eth-historical-review"
+  ],
+  "revision": 1,
+  "runtime": "2^(o(n)) B^(O(1))",
+  "runtimeSymbols": [
+    "n",
+    "B"
+  ],
+  "sources": [
+    {
+      "editionId": "bulletin",
+      "locator": "Theorem 3.2, PDF p. 12",
+      "paperId": "lms2011",
+      "placement": "statement",
+      "role": "benchmark"
+    },
+    {
+      "editionId": "v2",
+      "locator": "Table 1, 3-Coloring row, p. 4, and Theorem 3.1, p. 8",
+      "paperId": "sh26",
+      "placement": "context",
+      "role": "benchmark"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm decides 3-Coloring within the stated running time.",
+  "status": "established",
+  "supported": true
+}

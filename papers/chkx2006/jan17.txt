@@ -1,0 +1,1 @@
+Jianer Chen, Xiuzhen Huang, Iyad A. Kanj, Ge Xia. Strong Computational Lower Bounds via Parameterized Complexity. Inspected author manuscript, 17 January 2006. https://www.cs.lafayette.edu/~gexia/research/jcss72_8.pdf

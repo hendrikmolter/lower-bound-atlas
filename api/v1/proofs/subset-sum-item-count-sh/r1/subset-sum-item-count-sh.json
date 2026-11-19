@@ -1,0 +1,24 @@
+{
+  "authorship": {
+    "authors": [
+      "Atlas"
+    ],
+    "kind": "ai",
+    "origin": "atlas"
+  },
+  "dependencies": [],
+  "pdf": "proofs/subset-sum-item-count-sh.pdf",
+  "proofId": "subset-sum-item-count-sh",
+  "revision": 1,
+  "source": "proofs/subset-sum-item-count-sh.tex",
+  "theorem": {
+    "destination": "subset-sum-item-count-sh",
+    "label": "subset-sum-item-count-sh",
+    "number": "1",
+    "reviewIds": [
+      "subset-sum-item-count-sh-review"
+    ],
+    "statement": "Under SH, for each fixed 0 < ε < 1 there is no deterministic 2^(O(p^(1−ε))) B^(O(1))-time algorithm for positive binary Subset Sum by indexed item count.",
+    "supports": true
+  }
+}

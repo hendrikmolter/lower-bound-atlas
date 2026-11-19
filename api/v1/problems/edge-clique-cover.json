@@ -1,0 +1,10 @@
+{
+  "id": "edge-clique-cover",
+  "input": "A finite simple undirected graph G and a nonnegative integer k.",
+  "name": "Edge Clique Cover",
+  "parameterizations": [
+    "edge-clique-cover-budget"
+  ],
+  "question": "Can every edge of G be covered by a family of at most k cliques of G?",
+  "revision": 1
+}

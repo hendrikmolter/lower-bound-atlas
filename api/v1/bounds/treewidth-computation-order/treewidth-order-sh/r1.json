@@ -1,0 +1,44 @@
+{
+  "assessments": {},
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "sh",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "treewidth-order-sh",
+  "inputConditions": [],
+  "inputFactor": "B^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [
+    "For each fixed ε strictly between zero and 1."
+  ],
+  "reader": {
+    "label": "Fixed power saving in the exponent",
+    "revision": 1,
+    "title": "Treewidth computation by graph order under SH"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "2^(O(n^(1−ε))) B^(O(1))",
+  "runtimeSymbols": [
+    "n",
+    "ε",
+    "B"
+  ],
+  "sources": [
+    {
+      "editionId": "v2",
+      "locator": "Table 1, Treewidth, SH column and note b, p. 4",
+      "paperId": "sh26",
+      "placement": "statement",
+      "role": "fixed-power lower bound"
+    }
+  ],
+  "statement": "Under SH, no deterministic algorithm decides Treewidth computation within the stated running time.",
+  "status": "established",
+  "supported": true
+}

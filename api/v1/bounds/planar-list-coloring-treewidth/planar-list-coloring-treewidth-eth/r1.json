@@ -1,0 +1,41 @@
+{
+  "assessments": {},
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "planar-list-coloring-treewidth-eth",
+  "inputConditions": [],
+  "inputFactor": "n is the base of the exponent",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [],
+  "reader": {
+    "label": "Sublinear exponent in the parameter",
+    "revision": 1
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "f(t) n^(o(t))",
+  "runtimeSymbols": [
+    "f",
+    "t",
+    "n"
+  ],
+  "sources": [
+    {
+      "editionId": "book",
+      "locator": "Theorem 14.29, pp. 492–493",
+      "paperId": "cygan2015",
+      "placement": "statement",
+      "role": "lower-bound statement"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm solves Planar List Coloring within the stated running time.",
+  "status": "established",
+  "supported": true
+}

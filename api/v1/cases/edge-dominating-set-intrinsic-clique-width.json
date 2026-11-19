@@ -1,0 +1,208 @@
+{
+  "aliases": [],
+  "bounds": [
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unassessed"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "edge-dominating-set-intrinsic-clique-width-eth",
+      "inputConditions": [],
+      "inputFactor": "n^(o(t))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [
+        "For every computable f."
+      ],
+      "reader": {
+        "explanation": "The source theorem excludes the graph-order clock even when an expression of bounded width is available. An intrinsic-clock algorithm would also accept those graphs, as intrinsic clique-width is at most the supplied width. A nondecreasing majorant of a sublinear exponent remains sublinear.",
+        "label": "Sublinear exponent in expression width",
+        "revision": 1,
+        "title": "Edge Dominating Set by intrinsic clique-width under ETH"
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "f(t) n^(o(t))",
+      "runtimeSymbols": [
+        "t",
+        "n"
+      ],
+      "sources": [
+        {
+          "editionId": "journal",
+          "locator": "Theorem 5.1, p. 1558",
+          "paperId": "fgls2014-clique-width",
+          "placement": "statement",
+          "role": "conditional lower bound"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm solves Edge Dominating Set, measured by intrinsic clique-width, within the stated running time.",
+      "status": "established",
+      "supported": true
+    },
+    {
+      "assessments": {
+        "w1": {
+          "converse": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unassessed"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "w1",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "hardnessBaseline": "W[1]",
+      "id": "edge-dominating-set-intrinsic-clique-width-w1",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [
+        "For every computable f."
+      ],
+      "reader": {
+        "label": "W[1]-hardness",
+        "revision": 1,
+        "title": "Edge Dominating Set by intrinsic clique-width under FPT ≠ W[1]"
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "f(t) B^(O(1))",
+      "runtimeSymbols": [
+        "t",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "journal",
+          "locator": "Theorem 4.6",
+          "paperId": "fgls2010-clique-width",
+          "placement": "statement",
+          "role": "conditional lower bound"
+        }
+      ],
+      "statement": "Under FPT ≠ W[1], no deterministic algorithm solves Edge Dominating Set, measured by intrinsic clique-width, within the stated running time.",
+      "status": "established",
+      "supported": true
+    }
+  ],
+  "coverage": "Bounds by intrinsic clique-width, with the graph and solution budget as input.",
+  "encoding": "A finite simple undirected graph G and a nonnegative integer budget k.",
+  "id": "edge-dominating-set-intrinsic-clique-width",
+  "inputConditions": [],
+  "kind": "lower-bound-case",
+  "parameter": "The intrinsic clique-width t of the graph G.",
+  "problemDefinitionHash": "62e138b3d4bd9e04709da2fb920583cc545ab429f46bc2a9a618921977eee9df",
+  "problemId": "edge-dominating-set",
+  "problemRevision": 1,
+  "reader": {
+    "anchor": "edge-dominating-set-intrinsic-clique-width",
+    "parameter": "The intrinsic clique-width t of the graph G.",
+    "parameterLabel": "Intrinsic clique-width",
+    "parameterSymbols": [
+      {
+        "meaning": "intrinsic clique-width of the graph",
+        "symbol": "t"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "number of vertices",
+        "symbol": "n"
+      },
+      {
+        "meaning": "complete explicit binary input length",
+        "symbol": "B"
+      },
+      {
+        "meaning": "solution budget",
+        "symbol": "k"
+      }
+    ]
+  },
+  "recoveryComparisons": [
+    {
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "edge-dominating-set-intrinsic-clique-width-eth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "np_qp",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "edge-dominating-set-intrinsic-clique-width-eth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "edge-dominating-set-intrinsic-clique-width-eth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "edge-dominating-set-intrinsic-clique-width-eth",
+        "revision": 1
+      }
+    }
+  ],
+  "resolutions": [],
+  "revision": 3,
+  "task": "Is there a set of at most k edges such that every edge shares an endpoint with an edge in the set?",
+  "title": "Edge Dominating Set by intrinsic clique-width",
+  "variant": "Edge Dominating Set"
+}

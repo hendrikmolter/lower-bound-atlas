@@ -1,0 +1,133 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\title{A single-exponential lower bound for Chromatic Number\\by vertex cover number}
+\author{Atlas\thanks{The proof in this note was found using ChatGPT.}}
+\date{}
+\begin{document}
+\maketitle
+
+Given a simple graph and a positive integer \(\ell\), Chromatic Number
+asks whether the graph admits a proper coloring with at most \(\ell\)
+colors. Let \(k\) be the minimum size of a vertex cover and \(N\) the
+binary input length.
+
+\hypertarget{cover-w1}{}\begin{theorem}\label{cover-w1}
+If \(\mathrm{FPT}\ne\mathrm{W[1]}\), then no deterministic algorithm
+decides Chromatic Number in time \(2^{\mathcal O(k)}N^{\mathcal O(1)}\).
+\end{theorem}
+
+\begin{proof}
+Suppose such an algorithm exists. We use it to decide Clique in
+fixed-parameter time with respect to the requested clique size \(h\).
+Clique is \(\mathrm{W[1]}\)-complete~\cite{df}. We may assume
+\(2\le h\le n\), where \(n\) is the number of vertices in the input
+graph. Make \(h\) copies of the vertex set, and join two vertices
+from different copies precisely when their originals are adjacent.
+A clique choosing one vertex per copy exists exactly when the input
+graph has an \(h\)-clique.
+
+\paragraph{Encoding vertex choices.}
+Put \(r=\lceil\log_2 n\rceil\), \(q=2^h\), \(b=4q^2\), and
+\(L=b\lceil r/b\rceil\). Pad each copy to \(2^L\) vertices with
+isolated vertices and assign its vertices distinct \(L\)-bit names.
+This preserves the answer since \(h\ge2\). Moreover, \(L<r+b\), so
+\(2^L<2^{b+1}n\). Choosing one name from each copy amounts to
+choosing a column in \(\{0,1\}^h\) at each of the \(L\) bit positions.
+
+Partition the positions into blocks of \(b\) consecutive positions.
+In each block, guess the number of occurrences of each of the \(q\)
+possible columns. These nonnegative counts must sum to \(b\).
+Since \(q\log_2(b+1)\le b\), there are at most
+\((b+1)^{qL/b}\le2^L\) guesses over all blocks, even if we enumerate
+all vectors of counts and discard invalid sums. We construct one
+instance of Chromatic Number per valid guess and accept if any answers
+yes. For a fixed guess and a block \(H\), prepare \(b\) labels
+indexed by \(1,\ldots,b\), each carrying one \(h\)-bit column, with the
+guessed multiplicities. Permuting these labels over the positions
+realizes precisely the sequences of columns with those counts.
+
+\paragraph{Encoding permutations by colors.}
+Our graph contains a clique with \(2L\) vertices, and we set the color
+budget to \(2L\). Thus its vertices name all available colors. To allow
+a vertex a specified set of colors, make it adjacent to the clique
+vertices for all other colors. For every block \(H\), reserve two sets
+of colors \(A_H=\{a_{H,1},\ldots,a_{H,b}\}\) and
+\(D_H=\{d_{H,1},\ldots,d_{H,b}\}\). All these sets are disjoint.
+For each position \(j\in H\) introduce vertices \(x_j,y_j\) with
+allowed sets \(A_H,D_H\), respectively. Within \(H\), make the
+\(x_j\) pairwise adjacent and make the \(y_j\) pairwise adjacent.
+Each set of vertices therefore uses a permutation of the \(b\) colors.
+
+We enforce the same permutation in both sets. For every \(j\in H\)
+and every ordered pair \(s\ne t\) of indices, give a new vertex the
+allowed colors \(\{a_{H,s},d_{H,t}\}\) and join it to \(x_j,y_j\).
+Both colors are blocked exactly when \(x_j,y_j\) choose indices
+\(s,t\), respectively. Once all these vertices can be colored, there
+is a single permutation \(\pi_H\) from the positions of \(H\) to the
+label indices, realized by both sets. Conversely, any such permutation
+allows every one of these vertices to be colored.
+
+\paragraph{Forbidding pairs of nonadjacent vertices.}
+For each nonedge between a vertex with name \(u\) in copy \(i\) and a
+vertex with name \(v\) in copy \(i'>i\), we want to forbid the
+simultaneous choice of \(u\) and \(v\). For each block \(H\), let
+\(R_H\) be the positions in \(H\) where \(u\) has a one, and
+\(T_H\) the label indices whose column has a one in coordinate \(i\).
+Define \(R'_H,T'_H\) in the same way for \(v,i'\).
+The encoded names agree with these two names on the whole block
+exactly when
+\[
+   \pi_H(R_H)=T_H \qquad\text{and}\qquad \pi_H(R'_H)=T'_H .
+\]
+If either equality of cardinalities fails in any block, the forbidden
+pair cannot be selected with this guess, and we skip the nonedge.
+
+Otherwise introduce one vertex \(z\) for this nonedge. Over all
+blocks \(H\), its allowed colors are the \(a_{H,t}\) for \(t\in T_H\)
+and the \(d_{H,t}\) for \(t\in T'_H\). Its neighbors outside the
+palette clique are the \(x_j\) for \(j\in R_H\) and the \(y_j\) for
+\(j\in R'_H\) over all blocks. Then \(z\) has no available color
+exactly when \(T_H\subseteq\pi_H(R_H)\) and
+\(T'_H\subseteq\pi_H(R'_H)\) in every block. Since the cardinalities
+match, these inclusions are exactly the two required equalities.
+Thus \(z\) has no available color exactly when both forbidden
+vertices are selected. This also covers empty sets, since the
+corresponding inclusion then holds for every permutation.
+
+All vertices added to test permutations or nonedges are mutually
+nonadjacent, so their colors can be chosen independently.
+A clique choosing one vertex per copy yields a valid guess and
+permutations that admit all test colors. Conversely, an accepting
+coloring determines one name per copy and all selected vertices are
+pairwise adjacent. Hence the original Clique instance is positive
+exactly when some guess admits a proper coloring.
+
+\paragraph{Size and running time.}
+The palette clique and all \(x_j,y_j\) form a vertex cover of size
+\(4L\). Each query has at most \(Lb^2\) permutation tests and
+\(\binom{h}{2}2^{2L}\) nonedge tests. Each test has at most \(4L\)
+neighbors. Since \(L<\lceil\log_2 n\rceil+b\) and \(b\) depends
+only on \(h\), all queries can be generated deterministically in
+\(f(h)n^{\mathcal O(1)}\) time for a computable \(f\), including
+the explicit binary encoding of all edges. In particular \(N\) has
+the same bound. For each query \(k\le4L\), so for any fixed constant
+\(c>0\),
+\[
+  2^{ck}\le 2^{4c(b+1)}n^{4c}.
+\]
+There are fewer than \(2^{b+1}n\) queries. Running the assumed
+algorithm on all of them gives a deterministic fixed-parameter
+algorithm for Clique, a contradiction.
+\end{proof}
+
+\begin{thebibliography}{1}
+\bibitem{df} R.~G. Downey and M.~R. Fellows.
+Fixed-parameter tractability and completeness II: On completeness for W[1].
+\emph{Theoretical Computer Science} 141(1--2), 109--131, 1995.
+\href{https://doi.org/10.1016/0304-3975(94)00097-3}{doi:10.1016/0304-3975(94)00097-3}.
+\end{thebibliography}
+\end{document}

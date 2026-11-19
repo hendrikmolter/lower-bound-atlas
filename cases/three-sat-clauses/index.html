@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>3SAT | Lower Bound Atlas</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header"><nav class="site-nav" aria-label="Main">
+    <a href="../../index.html" class="site-brand">Lower Bound Atlas</a>
+    <div class="nav-links"><a href="../../index.html">Problems</a><a href="../../assumptions/index.html">Hypotheses</a><a href="../../papers/index.html">Papers</a><a href="../../notation/index.html">Notation</a><a href="../../about/index.html">About &amp; guide</a></div>
+  </nav></header>
+  <main id="main-content" tabindex="-1">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../../index.html">Problems</a><span aria-hidden="true"> / </span><a href="../../problems/three-sat/index.html">3SAT</a></nav>
+    <header class="hero">
+      <h1>3SAT</h1>
+      
+    </header>
+    <nav class="param-nav" aria-label="Recorded parameterizations"><strong>Recorded parameterizations</strong><a href="#three-sat-clauses" aria-current="location">Clause count</a> <a href="../three-sat-variables/index.html#three-sat-variables">Variable count</a></nav>
+      <section id="three-sat-clauses" class="problem-box" aria-label="Problem definition"><dl>
+      <dt>Input</dt><dd>An explicit Boolean CNF formula with clauses of width at most three.</dd>
+      <dt>Parameter</dt><dd>The number of clauses m.</dd>
+      <dt>Question</dt><dd>Does the formula have a satisfying assignment?</dd></dl></section><section><h2>Restricted problems</h2><ul><li><a href="../../problems/planar-3sat/index.html">Planar 3SAT</a> (The variable–clause incidence graph is planar)</li></ul></section>
+      
+      <section id="comparisons"><h2 id="bounds">Lower bounds by hypothesis</h2>
+      <h3>Notation</h3><ul class="runtime-symbols"><li><i>B</i> — complete explicit binary input length</li></ul>
+      <article class="hypothesis-card" id="assessment-eth"><h3><a href="../../assumptions/eth/index.html">ETH</a> (historical)</h3>
+        <section class="bound-row" id="three-sat-clauses-eth"><h4>Subexponential-time bound</h4>
+        
+        
+        <div class="excluded-time"><span>Running time excluded under ETH</span><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mrow><mrow><mi>o</mi><mrow><mo>(</mo><mi>m</mi><mo>)</mo></mrow></mrow></mrow></msup><mo>&#x2062;</mo><msup><mi>B</mi><mrow><mrow><mi>𝒪</mi><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></mrow></msup></mrow><annotation encoding="text/plain">2^(o(m)) B^(O(1))</annotation></semantics></math></div>
+        <p><a href="../../bounds/three-sat-clauses/three-sat-clauses-eth/index.html#uniform-eth">Equivalent to Uniform ETH</a>.</p><div class="bound-links"><div class="actions"><a href="../../bounds/three-sat-clauses/three-sat-clauses-eth/index.html">Full statement</a></div>
+    </div><ul class="bound-citations"><li><a href="https://bulletin.eatcs.org/index.php/beatcs/article/view/92">Lower bounds based on the Exponential Time Hypothesis</a></li><li><a href="https://doi.org/10.1006/jcss.2001.1774">Which Problems Have Strongly Exponential Complexity?</a></li></ul>
+        </section>
+        
+        </article><article class="hypothesis-card" id="assessment-sh"><h3><a href="../../assumptions/sh/index.html">SH</a></h3>
+        <section class="bound-row" id="three-sat-clauses-sh"><h4>Fixed-power exclusion</h4>
+        
+        
+        <div class="excluded-time"><span>Excluded running time</span><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mrow><mrow><mi>𝒪</mi><mrow><mo>(</mo><msup><mi>m</mi><mrow><mn>1</mn><mo>−</mo><mi>ε</mi></mrow></msup><mo>)</mo></mrow></mrow></mrow></msup><mo>&#x2062;</mo><msup><mi>B</mi><mrow><mrow><mi>𝒪</mi><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></mrow></msup></mrow><annotation encoding="text/plain">2^(O(m^(1−ε))) B^(O(1))</annotation></semantics></math></div><p class="runtime-qualification">For each fixed <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>&lt;</mo><mi>ε</mi><mo>&lt;</mo><mn>1</mn></mrow><annotation encoding="text/plain">0&lt;ε&lt;1</annotation></semantics></math>.</p>
+        <p>Exponent degree recovered · ETH target: <a href="../../bounds/three-sat-clauses/three-sat-clauses-eth/r1/index.html" aria-label="Subexponential-time bound">Subexponential-time bound</a>.</p><div class="bound-links"><div class="actions"><a href="../../bounds/three-sat-clauses/three-sat-clauses-sh/index.html">Full statement</a></div>
+    </div><ul class="bound-citations"><li><a href="https://arxiv.org/abs/2611.02650v2">ETH is Dead, Long Live SH</a></li></ul>
+        </section>
+        
+        </article><article class="hypothesis-card" id="assessment-w1"><h3><a href="../../assumptions/w1/index.html">FPT ≠ W[1]</a></h3>
+        <p>No lower bound recorded for this parameterization.</p>
+        
+        </article><article class="hypothesis-card" id="assessment-np_qp"><h3><a href="../../assumptions/np_qp/index.html">NP ⊈ QP</a></h3>
+        <p>No lower bound recorded for this parameterization.</p>
+        
+        </article><article class="hypothesis-card" id="assessment-kxk"><h3><a href="../../assumptions/kxk/index.html"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>×</mo><mi>k</mi></mrow><annotation encoding="text/plain">k × k</annotation></semantics></math> Clique Hypothesis</a></h3>
+        <p>No lower bound recorded for this parameterization.</p>
+        
+        </article></section>
+      <details class="reader-details"><summary>Record details</summary><dl class="details-grid"><div><dt>Identifier</dt><dd>three-sat-clauses</dd></div><div><dt>Revision</dt><dd>3</dd></div><div><dt>Aliases</dt><dd>lms-three-sat-clauses</dd></div></dl>
+      <a href="index.html">Permalink</a> · <a href="../../api/v1/cases/three-sat-clauses.json">JSON record</a></details>
+  </main>
+  <footer class="site-footer">
+    <span>Release · v1.0.0</span>
+    <a href="../../api/v1/atlas.json">JSON export</a>
+    <a href="../../manifest.json">Build manifest</a>
+  </footer>
+</body>
+</html>

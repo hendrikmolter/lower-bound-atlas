@@ -1,0 +1,11 @@
+{
+  "id": "fixed-width-sat-formula-size",
+  "input": "An explicit Boolean CNF formula with clauses of width at most r, for a separately fixed integer r ≥ 3.",
+  "name": "Fixed-width SAT",
+  "parameterizations": [
+    "fixed-width-sat-formula-size",
+    "fixed-width-sat-variables"
+  ],
+  "question": "Does the formula have a satisfying assignment?",
+  "revision": 1
+}

@@ -1,0 +1,19 @@
+{
+  "authors": [
+    "Martin Koutecký"
+  ],
+  "editions": [
+    {
+      "access": "Original online lecture notes inspected, including Theorems 1 and 3 and the clause-grouping construction.",
+      "id": "notes",
+      "kind": "other",
+      "label": "Parameterized Algorithms 2026–27, lecture notes, 13 November 2026",
+      "preferredUrl": "https://iuuk.mff.cuni.cz/~koutecky/paralg2627-graph/lecture-2-proving-the-hard-side.html",
+      "primaryUrl": "https://iuuk.mff.cuni.cz/~koutecky/paralg2627-graph/lecture-2-proving-the-hard-side.html"
+    }
+  ],
+  "id": "koutecky2026-hard-side",
+  "preferredEditionId": "notes",
+  "preferredUrl": "https://iuuk.mff.cuni.cz/~koutecky/paralg2627-graph/lecture-2-proving-the-hard-side.html",
+  "title": "Lecture 2 – Proving the hard side"
+}

@@ -1,0 +1,372 @@
+{
+  "aliases": [],
+  "bounds": [
+    {
+      "assessments": {},
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "vdp-pw-eth",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "label": "Bound in the supplied path width",
+        "revision": 1
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "2^(o(p log₂ p)) B^(O(1))",
+      "runtimeSymbols": [
+        "p",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "journal",
+          "locator": "Section 5, Theorem 5.4, pp. 696–697",
+          "paperId": "lms2018",
+          "placement": "statement",
+          "role": "published reduction"
+        },
+        {
+          "editionId": "book",
+          "locator": "Theorem 14.19, p. 484",
+          "paperId": "cygan2015",
+          "placement": "statement",
+          "role": "textbook benchmark"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm decides Vertex-Disjoint Paths within the stated running time.",
+      "status": "established",
+      "supported": true
+    },
+    {
+      "assessments": {},
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "kxk",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "vdp-pw-kxk",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "label": "Bound in the supplied path width",
+        "revision": 1
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "2^(o(p log₂ p)) B^(O(1))",
+      "runtimeSymbols": [
+        "p",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "v3",
+          "locator": "Section 3, Table 1, first row, p. 5, covering Theorem 14.19 of Parameterized Algorithms",
+          "paperId": "szeider2026",
+          "placement": "statement",
+          "role": "preprint transfer"
+        },
+        {
+          "editionId": "book",
+          "locator": "Theorem 14.19, p. 484",
+          "paperId": "cygan2015",
+          "placement": "statement",
+          "role": "textbook benchmark"
+        },
+        {
+          "editionId": "journal",
+          "locator": "Section 5, Theorem 5.4, pp. 696–697",
+          "paperId": "lms2018",
+          "placement": "statement",
+          "role": "published reduction"
+        }
+      ],
+      "statement": "Under the k × k Clique Hypothesis, no deterministic algorithm decides Vertex-Disjoint Paths within the stated running time.",
+      "status": "established",
+      "supported": true
+    },
+    {
+      "assessments": {},
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "w1",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "vdp-pw-w1",
+      "inputConditions": [
+        "connected-bipartite-subcubic",
+        "distinct-leaf-endpoints",
+        "equal-widths",
+        "optimal-path-decomposition"
+      ],
+      "inputFactor": "B^(O(1))",
+      "proofs": [
+        {
+          "proofId": "vdp-width-w1",
+          "revision": 1,
+          "theorem": "vdp-width-w1"
+        }
+      ],
+      "provenance": "atlas",
+      "qualifications": [
+        "The exponent h(p) is finite and nonnegative. There is a computable function T such that h(p) ≤ max(1, p log₂(max(2, p)))/j for every positive integer j and every p ≥ T(j)."
+      ],
+      "reader": {
+        "label": "Effective little-o bound in the supplied path width",
+        "notation": "effective-little-o",
+        "notationLabel": "Effective little-o",
+        "revision": 1
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "2^(o_eff(p log₂ p)) B^(O(1))",
+      "runtimeSymbols": [
+        "p",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "journal",
+          "locator": "Lemma 2.8 and its proof",
+          "paperId": "lms2018",
+          "placement": "proof",
+          "role": "deterministic coloring family"
+        },
+        {
+          "editionId": "journal",
+          "locator": "W[1]-completeness of Independent Set, with Clique by complementation",
+          "paperId": "df1995",
+          "placement": "proof",
+          "role": "source completeness"
+        }
+      ],
+      "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Vertex-Disjoint Paths within the stated running time.",
+      "status": "established",
+      "supported": true
+    }
+  ],
+  "coverage": "Literature bounds.",
+  "encoding": "A finite simple undirected graph G and an explicit list of demand pairs of vertices. A path decomposition of G is supplied.",
+  "id": "vertex-disjoint-paths-supplied-pathwidth",
+  "inputConditions": [
+    {
+      "condition": "The graph is connected and bipartite, and its maximum degree is at most three.",
+      "id": "connected-bipartite-subcubic",
+      "level": "bound"
+    },
+    {
+      "condition": "All demand endpoints are distinct leaves.",
+      "id": "distinct-leaf-endpoints",
+      "level": "bound"
+    },
+    {
+      "condition": "The treewidth and pathwidth of G are equal.",
+      "id": "equal-widths",
+      "level": "bound"
+    },
+    {
+      "condition": "The supplied path decomposition is optimal.",
+      "id": "optimal-path-decomposition",
+      "level": "bound"
+    }
+  ],
+  "kind": "lower-bound-case",
+  "parameter": "The width p of the supplied path decomposition.",
+  "problemDefinitionHash": "286937faa1be2455a3fd97ccc36d2500371d4516bbc4094e397ecf42b1d09540",
+  "problemId": "vertex-disjoint-paths",
+  "problemRevision": 1,
+  "reader": {
+    "additionalInput": "A path decomposition of G is supplied.",
+    "anchor": "supplied-pathwidth",
+    "boundContext": "The width p of the supplied path decomposition. Here B is the complete input length in bits, including all demand pairs and the decomposition.",
+    "parameter": "The width p of the supplied path decomposition.",
+    "parameterLabel": "Width of a supplied path decomposition",
+    "parameterSymbols": [
+      {
+        "meaning": "width of the supplied path decomposition",
+        "symbol": "p"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "the complete input length in bits, including all demand pairs and the decomposition",
+        "symbol": "B"
+      }
+    ]
+  },
+  "recoveryAssessments": [
+    {
+      "comparison": "Both exclusions have unrestricted little-o exponents in p log₂ p and count the complete input including the supplied path decomposition.",
+      "effective": false,
+      "evidence": [
+        {
+          "editionId": "v3",
+          "locator": "Section 3, Table 1, first row, p. 5, covering Theorem 14.19 of Parameterized Algorithms",
+          "paperId": "szeider2026",
+          "placement": "statement",
+          "role": "preprint transfer"
+        },
+        {
+          "editionId": "book",
+          "locator": "Theorem 14.19, p. 484",
+          "paperId": "cygan2015",
+          "placement": "statement",
+          "role": "textbook benchmark"
+        }
+      ],
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "recoveredScale": "p log₂ p",
+      "recovery": {
+        "id": "vdp-pw-kxk",
+        "revision": 1
+      },
+      "scale": "full",
+      "target": {
+        "id": "vdp-pw-eth",
+        "revision": 1
+      },
+      "targetScale": "p log₂ p"
+    },
+    {
+      "comparison": "The recovery excludes the same scale with a computable convergence modulus. The proof obtains the exclusion on connected bipartite graphs of maximum degree three with distinct leaf terminals and equal widths.",
+      "effective": true,
+      "evidence": [
+        {
+          "proofId": "vdp-width-w1",
+          "revision": 1,
+          "theorem": "vdp-width-w1"
+        }
+      ],
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "recoveredScale": "p log₂ p",
+      "recovery": {
+        "id": "vdp-pw-w1",
+        "revision": 1
+      },
+      "scale": "full",
+      "target": {
+        "id": "vdp-pw-eth",
+        "revision": 1
+      },
+      "targetScale": "p log₂ p"
+    }
+  ],
+  "recoveryComparisons": [
+    {
+      "comparison": "Both exclusions have unrestricted little-o exponents in p log₂ p and count the complete input including the supplied path decomposition.",
+      "effective": false,
+      "evidence": [
+        {
+          "editionId": "v3",
+          "locator": "Section 3, Table 1, first row, p. 5, covering Theorem 14.19 of Parameterized Algorithms",
+          "paperId": "szeider2026",
+          "placement": "statement",
+          "role": "preprint transfer"
+        },
+        {
+          "editionId": "book",
+          "locator": "Theorem 14.19, p. 484",
+          "paperId": "cygan2015",
+          "placement": "statement",
+          "role": "textbook benchmark"
+        }
+      ],
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "recoveredScale": "p log₂ p",
+      "recovery": {
+        "id": "vdp-pw-kxk",
+        "revision": 1
+      },
+      "scale": "full",
+      "status": "recovered",
+      "target": {
+        "id": "vdp-pw-eth",
+        "revision": 1
+      },
+      "targetScale": "p log₂ p"
+    },
+    {
+      "hypothesis": {
+        "id": "np_qp",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "vdp-pw-eth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "vdp-pw-eth",
+        "revision": 1
+      }
+    },
+    {
+      "comparison": "The recovery excludes the same scale with a computable convergence modulus. The proof obtains the exclusion on connected bipartite graphs of maximum degree three with distinct leaf terminals and equal widths.",
+      "effective": true,
+      "evidence": [
+        {
+          "proofId": "vdp-width-w1",
+          "revision": 1,
+          "theorem": "vdp-width-w1"
+        }
+      ],
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "recoveredScale": "p log₂ p",
+      "recovery": {
+        "id": "vdp-pw-w1",
+        "revision": 1
+      },
+      "scale": "full",
+      "status": "effective",
+      "target": {
+        "id": "vdp-pw-eth",
+        "revision": 1
+      },
+      "targetScale": "p log₂ p"
+    }
+  ],
+  "resolutions": [],
+  "revision": 4,
+  "task": "Is there one path joining the endpoints of each demand pair, with all the paths pairwise vertex-disjoint?",
+  "title": "Vertex-Disjoint Paths by width of a supplied path decomposition",
+  "variant": "Undirected Vertex-Disjoint Paths"
+}

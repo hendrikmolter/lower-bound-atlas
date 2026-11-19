@@ -1,0 +1,1 @@
+Russell Impagliazzo, Ramamohan Paturi. On the Complexity of k-SAT. Journal of Computer and System Sciences 62(2) (2001), 367–375. https://doi.org/10.1006/jcss.2000.1727

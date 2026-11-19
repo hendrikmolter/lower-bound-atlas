@@ -1,0 +1,24 @@
+{
+  "authorship": {
+    "authors": [
+      "Atlas"
+    ],
+    "kind": "ai",
+    "origin": "atlas"
+  },
+  "dependencies": [],
+  "pdf": "proofs/closest-string-balanced-kxk.pdf",
+  "proofId": "closest-string-balanced-kxk",
+  "revision": 1,
+  "source": "proofs/closest-string-balanced-kxk.tex",
+  "theorem": {
+    "destination": "closest-string-balanced-kxk",
+    "label": "closest-string-balanced-kxk",
+    "number": "1",
+    "reviewIds": [
+      "closest-string-balanced-kxk-review"
+    ],
+    "statement": "Under the k × k Clique Hypothesis, no deterministic Closest String algorithm runs in 2^(o(d log₂ d)) N^(O(1)) time on instances of common length d+1 with exactly 2d+3 distinct symbols occurring in the input strings.",
+    "supports": true
+  }
+}

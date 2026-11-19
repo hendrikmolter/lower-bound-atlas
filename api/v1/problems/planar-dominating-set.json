@@ -1,0 +1,17 @@
+{
+  "id": "planar-dominating-set",
+  "input": "An explicitly encoded finite simple undirected planar graph G and a nonnegative integer k.",
+  "name": "Planar Dominating Set",
+  "parameterizations": [
+    "planar-dominating-set-budget",
+    "planar-dominating-set-vertices"
+  ],
+  "question": "Is there a set of at most k vertices that meets the closed neighborhood of every vertex?",
+  "restrictionOf": [
+    {
+      "condition": "G is planar",
+      "problemId": "dominating-set"
+    }
+  ],
+  "revision": 1
+}

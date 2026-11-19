@@ -1,0 +1,10 @@
+{
+  "id": "treewidth-computation",
+  "input": "A finite simple undirected graph G and a nonnegative integer width threshold k in binary.",
+  "name": "Treewidth computation",
+  "parameterizations": [
+    "treewidth-computation-order"
+  ],
+  "question": "Does G have treewidth at most k?",
+  "revision": 1
+}

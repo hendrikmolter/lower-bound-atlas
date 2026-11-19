@@ -1,0 +1,20 @@
+{
+  "applicable": true,
+  "date": "2026-11-18",
+  "evidence": "evidence/cycle-packing-degree-six-independent.md",
+  "id": "cycle-packing-degree-six-review",
+  "independent": true,
+  "label": "Agent verified",
+  "object": {
+    "id": "cycle-packing-degree-six",
+    "revision": 1,
+    "theorem": "cycle-packing-degree-six",
+    "type": "proof"
+  },
+  "reviewer": "Codex agent derived_shortlist",
+  "scope": "Assuming deterministic FPT ≠ W[1], for each fixed 0<γ<1 there is no deterministic effective 2^(o(t log₂ t)) N^(O(1)) Cycle Packing algorithm by treewidth or by supplied path-decomposition width, even on connected bipartite graphs of maximum degree six, girth at least n^(1−γ), and equal treewidth and pathwidth, with an optimal certificate if supplied.",
+  "sourceSha256": "746938c54f4a675284c033d8be3b1241a6f34333db571a9af583f6fb9580fa9d",
+  "stale": false,
+  "type": "agent",
+  "verdict": "verified"
+}

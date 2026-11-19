@@ -1,0 +1,90 @@
+{
+  "assessments": {
+    "sh": {
+      "converse": {
+        "effectiveStatus": "established",
+        "evidence": [
+          {
+            "boundRevision": 2,
+            "proof": {
+              "proofId": "classical-graph-sh-converse",
+              "revision": 1,
+              "theorem": "is-order-sh-converse"
+            },
+            "reviewId": "is-order-sh-converse-review",
+            "source": {
+              "editionId": "v1",
+              "locator": "Lemma 2.2, pp. 5–6",
+              "paperId": "sh26",
+              "placement": "proof",
+              "role": "quantitative decision sparsification, preprint dependency"
+            }
+          }
+        ],
+        "status": "established"
+      },
+      "forward": {
+        "effectiveStatus": "established",
+        "evidence": [
+          {
+            "boundRevision": 2,
+            "reviewId": "is-order-sh-source-review",
+            "source": {
+              "editionId": "v2",
+              "locator": "Table 1, Independent Set, p. 4",
+              "paperId": "sh26",
+              "placement": "statement",
+              "role": "benchmark"
+            }
+          }
+        ],
+        "status": "established"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "established-equivalent"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "sh",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "is-order-sh",
+  "inputConditions": [],
+  "inputFactor": "B^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [
+    "For each fixed ε strictly between zero and 1."
+  ],
+  "reader": {
+    "label": "Fixed power saving in the exponent",
+    "revision": 2,
+    "title": "Independent Set by graph order under SH"
+  },
+  "reviewIds": [
+    "is-order-sh-source-review"
+  ],
+  "revision": 2,
+  "runtime": "2^(O(n^(1−ε))) B^(O(1))",
+  "runtimeSymbols": [
+    "n",
+    "ε",
+    "B"
+  ],
+  "sources": [
+    {
+      "editionId": "v2",
+      "locator": "Table 1, Independent Set, p. 4",
+      "paperId": "sh26",
+      "placement": "statement",
+      "role": "benchmark"
+    }
+  ],
+  "statement": "Under SH, no deterministic algorithm decides Independent Set within the stated running time.",
+  "status": "established",
+  "supported": true
+}

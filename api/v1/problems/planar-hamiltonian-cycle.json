@@ -1,0 +1,16 @@
+{
+  "id": "planar-hamiltonian-cycle",
+  "input": "An explicitly encoded finite simple undirected planar graph G.",
+  "name": "Planar Hamiltonian Cycle",
+  "parameterizations": [
+    "planar-hamiltonian-cycle-vertices"
+  ],
+  "question": "Does G contain a cycle through every vertex?",
+  "restrictionOf": [
+    {
+      "condition": "G is planar",
+      "problemId": "hamiltonian-cycle"
+    }
+  ],
+  "revision": 1
+}

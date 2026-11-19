@@ -1,0 +1,165 @@
+{
+  "aliases": [],
+  "bounds": [
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unassessed"
+        },
+        "sh": {
+          "converse": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unassessed"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "color-eth-planar",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "label": "Square-root exponent",
+        "revision": 2,
+        "title": "Square-root exponent on planar graphs under ETH"
+      },
+      "reviewIds": [],
+      "revision": 2,
+      "runtime": "2^(o(n^(1/2))) B^(O(1))",
+      "runtimeSymbols": [
+        "n",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "book",
+          "locator": "Theorem 14.9 and Exercise 14.3(d)",
+          "paperId": "cygan2015",
+          "placement": "statement",
+          "role": "benchmark"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm decides Planar 3-Coloring within the stated running time.",
+      "status": "established",
+      "supported": true
+    }
+  ],
+  "coverage": "Historical ETH lower bound by the number of vertices.",
+  "encoding": "Explicit binary graph encoding with individually represented vertices. B includes the complete graph input.",
+  "id": "planar-3-coloring-order",
+  "inputConditions": [
+    {
+      "condition": "The graph is finite, simple, undirected, and unweighted.",
+      "id": "graph-class",
+      "level": "problem"
+    },
+    {
+      "condition": "The graph is planar.",
+      "id": "planar",
+      "level": "problem"
+    }
+  ],
+  "kind": "lower-bound-case",
+  "parameter": "Number of vertices n",
+  "problemDefinitionHash": "f4b5cc9670f279026a47b77bbb9fdedfe61a994491ecc8293c03b2106f85dd4c",
+  "problemId": "planar-3-coloring",
+  "problemRevision": 1,
+  "reader": {
+    "anchor": "vertices",
+    "boundContext": "Let n be the number of vertices and B the input length in bits.",
+    "notation": "These bounds concern deterministic algorithms.",
+    "parameter": "The number of vertices n = |V(G)|.",
+    "parameterLabel": "Number of vertices",
+    "parameterSymbols": [
+      {
+        "meaning": "number of vertices",
+        "symbol": "n"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "input length in bits",
+        "symbol": "B"
+      }
+    ]
+  },
+  "recoveryComparisons": [
+    {
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "color-eth-planar",
+        "revision": 2
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "np_qp",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "color-eth-planar",
+        "revision": 2
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "color-eth-planar",
+        "revision": 2
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "color-eth-planar",
+        "revision": 2
+      }
+    }
+  ],
+  "resolutions": [],
+  "revision": 1,
+  "task": "Decide whether the graph admits a proper coloring with at most three colors.",
+  "title": "Planar 3-Coloring by graph order",
+  "variant": "Proper 3-colorability of a planar graph"
+}

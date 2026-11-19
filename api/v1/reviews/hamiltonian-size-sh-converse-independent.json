@@ -1,0 +1,20 @@
+{
+  "applicable": true,
+  "date": "2026-11-18",
+  "evidence": "evidence/hamiltonian-sh-independent.md",
+  "id": "hamiltonian-size-sh-converse-independent",
+  "independent": true,
+  "label": "Agent verified",
+  "object": {
+    "id": "hamiltonian-sh",
+    "revision": 1,
+    "theorem": "hamiltonian-size-sh-converse",
+    "type": "proof"
+  },
+  "reviewer": "Codex agent derived_shortlist",
+  "scope": "Converse for Hamiltonian Cycle by vertices plus edges.",
+  "sourceSha256": "d4ef120a878f319e07c2844d228affc11af663e74ff6b5e9ee63d223dcf432cc",
+  "stale": false,
+  "type": "agent",
+  "verdict": "verified"
+}

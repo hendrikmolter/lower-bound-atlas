@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Set Cover | Lower Bound Atlas</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header"><nav class="site-nav" aria-label="Main">
+    <a href="../../index.html" class="site-brand">Lower Bound Atlas</a>
+    <div class="nav-links"><a href="../../index.html">Problems</a><a href="../../assumptions/index.html">Hypotheses</a><a href="../../papers/index.html">Papers</a><a href="../../notation/index.html">Notation</a><a href="../../about/index.html">About &amp; guide</a></div>
+  </nav></header>
+  <main id="main-content" tabindex="-1">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../../index.html">Problems</a></nav>
+    <header class="hero">
+      <h1>Set Cover</h1>
+      
+    </header>
+    <nav class="param-nav" aria-label="Recorded parameterizations"><strong>Recorded parameterizations</strong><a href="../../cases/set-cover-budget/index.html#budget">Cover budget</a></nav>
+      <section id="budget" class="problem-box" aria-label="Problem definition"><dl>
+      <dt>Input</dt><dd>An explicitly listed finite universe U, a family of subsets of U, and a nonnegative integer k.</dd>
+      <dt>Parameter</dt><dd>The cover budget k.</dd>
+      <dt>Question</dt><dd>Can at most k of the given sets cover U?</dd></dl></section>
+      
+      <section id="comparisons"><h2 id="bounds">Lower bounds by hypothesis</h2>
+      <h3>Notation</h3><ul class="runtime-symbols"><li><i>f</i> — arbitrary total computable parameter function</li><li><i>r</i> — number of sets</li><li><i>M</i> — complete source encoding length</li></ul>
+      <article class="hypothesis-card" id="assessment-eth"><h3><a href="../../assumptions/eth/index.html">ETH</a> (historical)</h3>
+        <section class="bound-row" id="set-cover-budget-eth"><h4>Sublinear exponent in the full encoding length</h4>
+        
+        
+        <div class="excluded-time"><span>Running time excluded under ETH</span><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>k</mi><mo>)</mo></mrow></mrow><mo>&#x2062;</mo><msup><mi>M</mi><mrow><mrow><mi>o</mi><mrow><mo>(</mo><mi>k</mi><mo>)</mo></mrow></mrow></mrow></msup></mrow><annotation encoding="text/plain">f(k) M^(o(k))</annotation></semantics></math></div><p class="runtime-qualification">The source states this bound under the positive-rate SNP premise, which follows from ETH by sparsification.</p><p class="runtime-qualification">The theorem also holds under <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>≤</mo><mrow><mi>μ</mi><mrow><mo>(</mo><mi>M</mi><mo>)</mo></mrow></mrow></mrow><annotation encoding="text/plain">k ≤ μ(M)</annotation></semantics></math> for each nondecreasing unbounded function μ as in the source.</p>
+        <div class="bound-links"><div class="actions"><a href="../../bounds/set-cover-budget/set-cover-budget-eth/index.html">Full statement</a></div>
+    </div><ul class="bound-citations"><li><a href="https://doi.org/10.1016/j.jcss.2006.04.007">Strong Computational Lower Bounds via Parameterized Complexity</a></li></ul>
+        </section>
+        
+        </article><article class="hypothesis-card" id="assessment-sh"><h3><a href="../../assumptions/sh/index.html">SH</a></h3>
+        <p>No lower bound recorded for this parameterization.</p>
+        
+        </article><article class="hypothesis-card" id="assessment-w1"><h3><a href="../../assumptions/w1/index.html">FPT ≠ W[1]</a></h3>
+        <section class="bound-row" id="set-cover-budget-w1"><h4>Sublinear exponent in the candidate count</h4>
+        
+        
+        <div class="excluded-time"><span>Excluded running time</span><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>k</mi><mo>)</mo></mrow></mrow><mo>&#x2062;</mo><msup><mi>r</mi><mrow><mrow><mi>o</mi><mrow><mo>(</mo><mi>k</mi><mo>)</mo></mrow></mrow></mrow></msup><mo>&#x2062;</mo><msup><mi>M</mi><mrow><mrow><mi>𝒪</mi><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></mrow></msup></mrow><annotation encoding="text/plain">f(k) r^(o(k)) M^(O(1))</annotation></semantics></math></div><p class="runtime-qualification">The theorem also holds under <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>≤</mo><mrow><mi>μ</mi><mrow><mo>(</mo><mi>r</mi><mo>)</mo></mrow></mrow></mrow><annotation encoding="text/plain">k ≤ μ(r)</annotation></semantics></math> for each nondecreasing unbounded function μ as in the source.</p>
+        <div class="bound-links"><div class="actions"><a href="../../bounds/set-cover-budget/set-cover-budget-w1/index.html">Full statement</a></div>
+    </div><ul class="bound-citations"><li><a href="https://doi.org/10.1016/j.jcss.2006.04.007">Strong Computational Lower Bounds via Parameterized Complexity</a></li><li><a href="https://doi.org/10.1016/j.ic.2005.05.001">Tight Lower Bounds for Certain Parameterized NP-Hard Problems</a></li></ul>
+        </section>
+        
+        </article><article class="hypothesis-card" id="assessment-np_qp"><h3><a href="../../assumptions/np_qp/index.html">NP ⊈ QP</a></h3>
+        <p>No lower bound recorded for this parameterization.</p>
+        
+        </article><article class="hypothesis-card" id="assessment-kxk"><h3><a href="../../assumptions/kxk/index.html"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>×</mo><mi>k</mi></mrow><annotation encoding="text/plain">k × k</annotation></semantics></math> Clique Hypothesis</a></h3>
+        <p>No lower bound recorded for this parameterization.</p>
+        
+        </article></section>
+      <details class="reader-details"><summary>Record details</summary><dl class="details-grid"><div><dt>Identifier</dt><dd>set-cover-budget</dd></div><div><dt>Revision</dt><dd>1</dd></div></dl>
+      <a href="index.html">Permalink</a> · <a href="../../api/v1/cases/set-cover-budget.json">JSON record</a></details>
+  </main>
+  <footer class="site-footer">
+    <span>Release · v1.0.0</span>
+    <a href="../../api/v1/atlas.json">JSON export</a>
+    <a href="../../manifest.json">Build manifest</a>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,65 @@
+{
+  "assessments": {
+    "eth": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unassessed"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "feature-set-budget-eth-fixed",
+  "inputConditions": [],
+  "inputFactor": "M^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [],
+  "reader": {
+    "explanation": "This follows from the earlier W[1] bound and the source implication from ordinary ETH, with the same candidate space and without a parameter-dependent prefactor.",
+    "label": "Sublinear exponent in the feature count",
+    "revision": 1,
+    "title": "Feature Set under ETH: Sublinear exponent in the feature count"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "N^(o(k)) M^(O(1))",
+  "runtimeSymbols": [
+    "k",
+    "N",
+    "M"
+  ],
+  "sources": [
+    {
+      "editionId": "journal",
+      "locator": "Theorem 3.5 and Feature Set definition, pp. 225–227",
+      "paperId": "ccfhjkx2005",
+      "placement": "statement",
+      "role": "published candidate-space bound without a parameter factor"
+    },
+    {
+      "editionId": "journal",
+      "locator": "§6, discussion preceding Theorem 6.2, p. 246",
+      "paperId": "chkx2005",
+      "placement": "forward",
+      "role": "ETH implies FPT ≠ W[1] via the intermediate class M[1]"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm solves the stated decision problem within the stated running time.",
+  "status": "established",
+  "supported": true
+}

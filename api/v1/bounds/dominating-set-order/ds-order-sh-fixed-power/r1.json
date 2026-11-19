@@ -1,0 +1,86 @@
+{
+  "assessments": {
+    "sh": {
+      "converse": {
+        "effectiveStatus": "established",
+        "evidence": [
+          {
+            "boundRevision": 1,
+            "hypothesisRevision": 1,
+            "proof": {
+              "proofId": "dominating-set-order-sh",
+              "revision": 1,
+              "theorem": "dominating-set-order-sh"
+            },
+            "reviewId": "dominating-set-order-sh-review"
+          }
+        ],
+        "status": "established"
+      },
+      "forward": {
+        "effectiveStatus": "established",
+        "evidence": [
+          {
+            "boundRevision": 1,
+            "hypothesisRevision": 1,
+            "proof": {
+              "proofId": "dominating-set-order-sh",
+              "revision": 1,
+              "theorem": "dominating-set-order-sh"
+            },
+            "reviewId": "dominating-set-order-sh-review"
+          }
+        ],
+        "status": "established"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "established-equivalent"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "sh",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "ds-order-sh-fixed-power",
+  "inputConditions": [],
+  "inputFactor": "B^(O(1))",
+  "proofs": [
+    {
+      "proofId": "dominating-set-order-sh",
+      "revision": 1,
+      "theorem": "dominating-set-order-sh"
+    }
+  ],
+  "provenance": "atlas",
+  "qualifications": [
+    "For every fixed 0 < a < 1."
+  ],
+  "reader": {
+    "label": "Fixed-power bounds",
+    "revision": 1,
+    "title": "Fixed-power bounds under SH"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "2^(O(n^a)) B^(O(1))",
+  "runtimeSymbols": [
+    "n",
+    "B"
+  ],
+  "sources": [
+    {
+      "editionId": "v2",
+      "locator": "Definition of SH and footnotes 1–2, pp. 1–2, and Lemma 2.1, pp. 5–6",
+      "paperId": "sh26",
+      "placement": "context",
+      "role": "hypothesis and encoding conventions"
+    }
+  ],
+  "statement": "Under SH, no deterministic algorithm decides Dominating Set within the stated running time.",
+  "status": "established",
+  "supported": true
+}

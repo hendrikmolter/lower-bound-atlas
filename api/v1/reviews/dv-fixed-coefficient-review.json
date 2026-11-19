@@ -1,0 +1,20 @@
+{
+  "applicable": true,
+  "date": "2026-11-18",
+  "evidence": "evidence/distinct-vectors-fixed-coefficient-independent.md",
+  "id": "dv-fixed-coefficient-review",
+  "independent": true,
+  "label": "Agent verified",
+  "object": {
+    "id": "distinct-vectors-fixed-coefficient",
+    "revision": 1,
+    "theorem": "dv-fixed-coefficient",
+    "type": "proof"
+  },
+  "reviewer": "Independent atlas proof reviewer",
+  "scope": "The fixed-coefficient bound, including the Set Cover construction, distinct-row promise, parameter accounting, deterministic running time and comparison to the published ETH bound.",
+  "sourceSha256": "89bf1663aa5be39d5b4396703a32b80af63dc554609d1b14dc65e4a2ef4e0584",
+  "stale": false,
+  "type": "agent",
+  "verdict": "verified"
+}

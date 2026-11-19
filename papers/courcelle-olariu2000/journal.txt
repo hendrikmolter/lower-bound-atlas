@@ -1,0 +1,1 @@
+Bruno Courcelle, Stephan Olariu. Upper Bounds to the Clique Width of Graphs. Discrete Applied Mathematics 101(1–3) (2000), 77–114. https://doi.org/10.1016/S0166-218X(99)00184-5

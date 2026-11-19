@@ -1,0 +1,139 @@
+{
+  "aliases": [],
+  "bounds": [
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unassessed"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "maximum-common-induced-subgraph-vc-eth",
+      "inputConditions": [],
+      "inputFactor": "N^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "explanation": "Corollary 13 gives the parameter dependence. Theorem 12 uses a reduction of polynomial size in the source clique parameter, so adding a fixed polynomial input factor preserves the contradiction.",
+        "label": "Subexponential bound in k log k",
+        "revision": 1,
+        "title": "Subexponential bound in k log k under ETH"
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "2^(o(k log₂ k)) N^(O(1))",
+      "runtimeSymbols": [
+        "k",
+        "N"
+      ],
+      "sources": [
+        {
+          "editionId": "journal",
+          "locator": "Theorem 12, pp. 74–75, and Corollary 13, p. 76",
+          "paperId": "abs2017-mcis",
+          "placement": "statement",
+          "role": "published lower bound"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm solves Maximum Common Induced Subgraph within the stated running time.",
+      "status": "established",
+      "supported": true
+    }
+  ],
+  "coverage": "Published lower bounds.",
+  "encoding": "Two explicitly encoded finite simple undirected graphs G₁ and G₂ and a nonnegative integer threshold r.",
+  "id": "maximum-common-induced-subgraph-vertex-cover",
+  "inputConditions": [],
+  "kind": "lower-bound-case",
+  "parameter": "The sum of the minimum vertex-cover sizes of G₁ and G₂ k.",
+  "problemDefinitionHash": "e8d7cf8ea6acb7623629a2d353baec7103761a9b7d96ee0e6370a5c02b90d681",
+  "problemId": "maximum-common-induced-subgraph",
+  "problemRevision": 1,
+  "reader": {
+    "anchor": "maximum-common-induced-subgraph-vertex-cover",
+    "parameter": "The sum of the minimum vertex-cover sizes of G₁ and G₂ k.",
+    "parameterLabel": "Sum of the two vertex-cover sizes",
+    "parameterSymbols": [
+      {
+        "meaning": "sum of the minimum vertex-cover sizes of G₁ and G₂",
+        "symbol": "k"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "total bit length of the input",
+        "symbol": "N"
+      }
+    ]
+  },
+  "recoveryComparisons": [
+    {
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "maximum-common-induced-subgraph-vc-eth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "np_qp",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "maximum-common-induced-subgraph-vc-eth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "maximum-common-induced-subgraph-vc-eth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "maximum-common-induced-subgraph-vc-eth",
+        "revision": 1
+      }
+    }
+  ],
+  "resolutions": [],
+  "revision": 2,
+  "task": "Do G₁ and G₂ have isomorphic induced subgraphs on at least r vertices?",
+  "title": "Maximum Common Induced Subgraph by sum of the two vertex-cover sizes",
+  "variant": "Maximum Common Induced Subgraph"
+}

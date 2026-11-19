@@ -1,0 +1,24 @@
+{
+  "authorship": {
+    "authors": [
+      "Atlas"
+    ],
+    "kind": "ai",
+    "origin": "atlas"
+  },
+  "dependencies": [],
+  "pdf": "proofs/chromatic-number-cover-w1.pdf",
+  "proofId": "chromatic-number-cover-w1",
+  "revision": 1,
+  "source": "proofs/chromatic-number-cover-w1.tex",
+  "theorem": {
+    "destination": "cover-w1",
+    "label": "cover-w1",
+    "number": "1",
+    "reviewIds": [
+      "chromatic-number-cover-w1-review"
+    ],
+    "statement": "Under deterministic FPT ≠ W[1], there is no Chromatic Number algorithm in 2^{O(k)} N^{O(1)} for vertex cover number k.",
+    "supports": true
+  }
+}

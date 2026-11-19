@@ -1,0 +1,93 @@
+{
+  "currentRevision": 1,
+  "id": "six-w1-memberships",
+  "revisions": [
+    {
+      "authorship": {
+        "authors": [
+          "Atlas"
+        ],
+        "kind": "ai",
+        "origin": "atlas"
+      },
+      "dependencies": [],
+      "dependencyCoverage": "complete",
+      "pdf": "proofs/six-w1-memberships.pdf",
+      "revision": 1,
+      "source": "proofs/six-w1-memberships.tex",
+      "theorems": [
+        {
+          "destination": "grid-tiling-w1-membership",
+          "label": "grid-tiling-w1-membership",
+          "number": "1",
+          "reviewIds": [
+            "grid-tiling-w1-membership-independent"
+          ],
+          "statement": "Equality Grid Tiling on explicit tables is in W[1] by grid side k.",
+          "supports": true
+        },
+        {
+          "destination": "unit-disk-independent-set-w1-membership",
+          "label": "unit-disk-independent-set-w1-membership",
+          "number": "2",
+          "reviewIds": [
+            "unit-disk-independent-set-w1-membership-independent"
+          ],
+          "statement": "Independent Set of explicitly represented closed unit disks with rational centers is in W[1] by the requested number of disks.",
+          "supports": true
+        },
+        {
+          "destination": "unit-square-independent-set-w1-membership",
+          "label": "unit-square-independent-set-w1-membership",
+          "number": "3",
+          "reviewIds": [
+            "unit-square-independent-set-w1-membership-independent"
+          ],
+          "statement": "Independent Set of explicitly represented closed axis-parallel unit squares with rational coordinates is in W[1] by the requested number of squares.",
+          "supports": true
+        },
+        {
+          "destination": "scattered-set-w1-membership",
+          "label": "scattered-set-w1-membership",
+          "number": "4",
+          "reviewIds": [
+            "scattered-set-w1-membership-independent"
+          ],
+          "statement": "Scattered Set on explicit unweighted undirected graphs is in W[1] by the requested number of vertices.",
+          "supports": true
+        },
+        {
+          "destination": "planar-scattered-set-w1-membership",
+          "label": "planar-scattered-set-w1-membership",
+          "number": "5",
+          "reviewIds": [
+            "planar-scattered-set-w1-membership-independent"
+          ],
+          "statement": "Scattered Set on explicit unweighted planar graphs is in W[1] by the requested number of vertices.",
+          "supports": true
+        },
+        {
+          "destination": "weighted-q-cnf-w1-membership",
+          "label": "weighted-q-cnf-w1-membership",
+          "number": "6",
+          "reviewIds": [
+            "weighted-q-cnf-w1-membership-independent"
+          ],
+          "statement": "For separately fixed q ≥ 2, explicit CNF of width at most q with exact satisfying weight k is in W[1] by k.",
+          "supports": true
+        },
+        {
+          "destination": "open-to-closed-regions",
+          "label": "open-to-closed-regions",
+          "number": "7",
+          "reviewIds": [
+            "open-to-closed-regions-independent"
+          ],
+          "statement": "Open rational unit disks and axis-parallel unit squares can be mapped in polynomial time to closed regions preserving every intersection, the number of regions, and the selection budget.",
+          "supports": true
+        }
+      ]
+    }
+  ],
+  "title": "Membership in W[1] for six parameterizations"
+}

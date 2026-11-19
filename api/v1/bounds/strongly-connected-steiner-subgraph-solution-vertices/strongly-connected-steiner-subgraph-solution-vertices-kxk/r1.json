@@ -1,0 +1,41 @@
+{
+  "assessments": {},
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "kxk",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "strongly-connected-steiner-subgraph-solution-vertices-kxk",
+  "inputConditions": [],
+  "inputFactor": "n is the base of the exponent",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [],
+  "reader": {
+    "label": "Exponent sublinear in the square root of the parameter",
+    "revision": 1
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "f(k) n^(o(k^(1/2)))",
+  "runtimeSymbols": [
+    "f",
+    "k",
+    "n"
+  ],
+  "sources": [
+    {
+      "editionId": "oct30",
+      "locator": "Section 3, Table 1 and Proposition 1",
+      "paperId": "szeider2026",
+      "placement": "statement",
+      "role": "lower-bound statement"
+    }
+  ],
+  "statement": "Under the k × k Clique Hypothesis, no deterministic algorithm solves Strongly Connected Steiner Subgraph within the stated running time.",
+  "status": "established",
+  "supported": true
+}

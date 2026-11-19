@@ -1,0 +1,19 @@
+{
+  "applicable": true,
+  "date": "2026-11-18",
+  "evidence": "evidence/six-w1-memberships-independent.md",
+  "id": "planar-scattered-set-solution-size-w1-hardness-scope",
+  "independent": true,
+  "label": "Agent verified",
+  "object": {
+    "caseId": "planar-scattered-set-solution-size",
+    "id": "planar-scattered-set-solution-size-w1",
+    "revision": 1,
+    "type": "bound"
+  },
+  "reviewer": "Codex agent /root/population_c",
+  "scope": "Theorem 14.32 gives a parameterized reduction from the hard inequality version of Grid Tiling to unweighted planar Scattered Set. The distance threshold is part of the target input and the desired selection size depends only on grid side.",
+  "stale": false,
+  "type": "agent",
+  "verdict": "verified"
+}

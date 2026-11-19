@@ -1,0 +1,48 @@
+{
+  "assessments": {},
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "pvc-order-eth",
+  "inputConditions": [],
+  "inputFactor": "B^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [],
+  "reader": {
+    "label": "Square-root exponent in the number of vertices",
+    "revision": 1,
+    "title": "Planar Vertex Cover by graph order under ETH"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "2^(o(n^(1/2))) B^(O(1))",
+  "runtimeSymbols": [
+    "n",
+    "B"
+  ],
+  "sources": [
+    {
+      "editionId": "book",
+      "locator": "Theorem 14.9 and Exercise 14.3(a)",
+      "paperId": "cygan2015",
+      "placement": "statement",
+      "role": "benchmark"
+    },
+    {
+      "editionId": "bulletin",
+      "locator": "Paragraph following Theorem 3.5, p. 52",
+      "paperId": "lms2011",
+      "placement": "statement",
+      "role": "benchmark"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm decides Planar Vertex Cover within the stated running time.",
+  "status": "established",
+  "supported": true
+}

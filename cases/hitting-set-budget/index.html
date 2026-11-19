@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Hitting Set | Lower Bound Atlas</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header"><nav class="site-nav" aria-label="Main">
+    <a href="../../index.html" class="site-brand">Lower Bound Atlas</a>
+    <div class="nav-links"><a href="../../index.html">Problems</a><a href="../../assumptions/index.html">Hypotheses</a><a href="../../papers/index.html">Papers</a><a href="../../notation/index.html">Notation</a><a href="../../about/index.html">About &amp; guide</a></div>
+  </nav></header>
+  <main id="main-content" tabindex="-1">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../../index.html">Problems</a><span aria-hidden="true"> / </span><a href="../../problems/hitting-set/index.html">Hitting Set</a></nav>
+    <header class="hero">
+      <h1>Hitting Set</h1>
+      
+    </header>
+    <nav class="param-nav" aria-label="Recorded parameterizations"><strong>Recorded parameterizations</strong><a href="#solution-budget" aria-current="location">Solution budget</a></nav>
+      <section id="solution-budget" class="problem-box" aria-label="Problem definition"><dl>
+      <dt>Input</dt><dd>An explicit finite ground set, an explicit family of its subsets, and a nonnegative integer k in binary.</dd>
+      <dt>Parameter</dt><dd>Solution budget.</dd>
+      <dt>Question</dt><dd>Is there a set of at most k ground elements intersecting every listed subset?</dd></dl></section>
+      
+      <section id="comparisons"><h2 id="bounds">Lower bounds by hypothesis</h2>
+      <h3>Notation</h3><ul class="runtime-symbols"><li><i>r</i> — number of candidate elements in the ground set</li><li><i>B</i> — complete explicit binary input length</li></ul>
+      <article class="hypothesis-card" id="assessment-eth"><h3><a href="../../assumptions/eth/index.html">ETH</a> (historical)</h3>
+        <section class="bound-row" id="hitting-set-budget-eth"><h4>Exponent in solution budget</h4>
+        
+        
+        <div class="excluded-time"><span>Running time excluded under ETH</span><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>k</mi><mo>)</mo></mrow></mrow><mo>&#x2062;</mo><msup><mi>r</mi><mrow><mrow><mi>o</mi><mrow><mo>(</mo><mi>k</mi><mo>)</mo></mrow></mrow></mrow></msup><mo>&#x2062;</mo><msup><mi>B</mi><mrow><mrow><mi>𝒪</mi><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></mrow></msup></mrow><annotation encoding="text/plain">f(k) r^(o(k)) B^(O(1))</annotation></semantics></math></div><p class="runtime-qualification">The parameter factor f is an arbitrary computable function.</p><p class="runtime-qualification">The exclusion remains valid on <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>≤</mo><mrow><mi>μ</mi><mrow><mo>(</mo><mi>r</mi><mo>)</mo></mrow></mrow></mrow><annotation encoding="text/plain">k ≤ μ(r)</annotation></semantics></math> for every fixed nondecreasing unbounded μ.</p>
+        <div class="bound-links"><div class="actions"><a href="../../bounds/hitting-set-budget/hitting-set-budget-eth/index.html">Full statement</a></div>
+    </div><ul class="bound-citations"><li><a href="https://doi.org/10.1016/j.jcss.2006.04.007">Strong Computational Lower Bounds via Parameterized Complexity</a></li></ul>
+        </section><section class="bound-row" id="hitting-set-budget-eth-complete-input"><h4>Exponent of complete input length</h4>
+        
+        
+        <div class="excluded-time"><span>Running time excluded under ETH</span><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>k</mi><mo>)</mo></mrow></mrow><mo>&#x2062;</mo><msup><mi>B</mi><mrow><mrow><mi>o</mi><mrow><mo>(</mo><mi>k</mi><mo>)</mo></mrow></mrow></mrow></msup></mrow><annotation encoding="text/plain">f(k) B^(o(k))</annotation></semantics></math></div><p class="runtime-qualification">The parameter factor f is an arbitrary computable function.</p>
+        <div class="bound-links"><div class="actions"><a href="../../bounds/hitting-set-budget/hitting-set-budget-eth-complete-input/index.html">Full statement</a></div>
+    </div><ul class="bound-citations"><li><a href="https://doi.org/10.1016/j.jcss.2006.04.007">Strong Computational Lower Bounds via Parameterized Complexity</a></li></ul>
+        </section>
+        
+        </article><article class="hypothesis-card" id="assessment-sh"><h3><a href="../../assumptions/sh/index.html">SH</a></h3>
+        <p>No lower bound recorded for this parameterization.</p>
+        
+        </article><article class="hypothesis-card" id="assessment-w1"><h3><a href="../../assumptions/w1/index.html">FPT ≠ W[1]</a></h3>
+        <section class="bound-row" id="hitting-set-budget-w1"><h4>Exponent in solution budget</h4>
+        
+        
+        <div class="excluded-time"><span>Excluded running time</span><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>k</mi><mo>)</mo></mrow></mrow><mo>&#x2062;</mo><msup><mi>r</mi><mrow><mrow><mi>o</mi><mrow><mo>(</mo><mi>k</mi><mo>)</mo></mrow></mrow></mrow></msup><mo>&#x2062;</mo><msup><mi>B</mi><mrow><mrow><mi>𝒪</mi><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></mrow></msup></mrow><annotation encoding="text/plain">f(k) r^(o(k)) B^(O(1))</annotation></semantics></math></div><p class="runtime-qualification">The parameter factor f is an arbitrary computable function.</p><p class="runtime-qualification">The exclusion remains valid on <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>≤</mo><mrow><mi>μ</mi><mrow><mo>(</mo><mi>r</mi><mo>)</mo></mrow></mrow></mrow><annotation encoding="text/plain">k ≤ μ(r)</annotation></semantics></math> for every fixed nondecreasing unbounded μ.</p>
+        <p>Recovered · ETH target: <a href="../../bounds/hitting-set-budget/hitting-set-budget-eth/r1/index.html" aria-label="Exponent in solution budget">Exponent in solution budget</a>.</p><p>Recovered · ETH target: <a href="../../bounds/hitting-set-budget/hitting-set-budget-eth-complete-input/r1/index.html" aria-label="Exponent of complete input length">Exponent of complete input length</a>.</p><div class="bound-links"><div class="actions"><a href="../../bounds/hitting-set-budget/hitting-set-budget-w1/index.html">Full statement</a></div>
+    </div><ul class="bound-citations"><li><a href="https://doi.org/10.1016/j.jcss.2006.04.007">Strong Computational Lower Bounds via Parameterized Complexity</a></li></ul>
+        </section>
+        
+        </article><article class="hypothesis-card" id="assessment-np_qp"><h3><a href="../../assumptions/np_qp/index.html">NP ⊈ QP</a></h3>
+        <p>No lower bound recorded for this parameterization.</p>
+        
+        </article><article class="hypothesis-card" id="assessment-kxk"><h3><a href="../../assumptions/kxk/index.html"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>×</mo><mi>k</mi></mrow><annotation encoding="text/plain">k × k</annotation></semantics></math> Clique Hypothesis</a></h3>
+        <p>No lower bound recorded for this parameterization.</p>
+        
+        </article></section>
+      <details class="reader-details"><summary>Record details</summary><dl class="details-grid"><div><dt>Identifier</dt><dd>hitting-set-budget</dd></div><div><dt>Revision</dt><dd>4</dd></div><div><dt>Aliases</dt><dd>historical-chkx06-hitting-set</dd></div></dl>
+      <a href="index.html">Permalink</a> · <a href="../../api/v1/cases/hitting-set-budget.json">JSON record</a></details>
+  </main>
+  <footer class="site-footer">
+    <span>Release · v1.0.0</span>
+    <a href="../../api/v1/atlas.json">JSON export</a>
+    <a href="../../manifest.json">Build manifest</a>
+  </footer>
+</body>
+</html>

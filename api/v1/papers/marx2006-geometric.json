@@ -1,0 +1,20 @@
+{
+  "authors": [
+    "Dániel Marx"
+  ],
+  "editions": [
+    {
+      "access": "Published edition.",
+      "doi": "10.1007/11847250_14",
+      "id": "journal",
+      "kind": "proceedings",
+      "label": "IWPEC 2006, LNCS 4169, 154–165",
+      "preferredUrl": "https://doi.org/10.1007/11847250_14",
+      "primaryUrl": "https://doi.org/10.1007/11847250_14"
+    }
+  ],
+  "id": "marx2006-geometric",
+  "preferredEditionId": "journal",
+  "preferredUrl": "https://doi.org/10.1007/11847250_14",
+  "title": "Parameterized Complexity of Independence and Domination on Geometric Graphs"
+}

@@ -1,0 +1,23 @@
+{
+  "authors": [
+    "Russell Impagliazzo",
+    "Ramamohan Paturi",
+    "Francis Zane"
+  ],
+  "editions": [
+    {
+      "access": "Published-layout text inspected for sparsification and the linear-variable reductions in Theorem 5.",
+      "doi": "10.1006/jcss.2001.1774",
+      "id": "journal",
+      "kind": "journal",
+      "label": "JCSS 63(4) (2001), 512–530",
+      "openUrl": "https://cseweb.ucsd.edu/~russell/ipz.pdf",
+      "preferredUrl": "https://doi.org/10.1006/jcss.2001.1774",
+      "primaryUrl": "https://doi.org/10.1006/jcss.2001.1774"
+    }
+  ],
+  "id": "ipz2001",
+  "preferredEditionId": "journal",
+  "preferredUrl": "https://doi.org/10.1006/jcss.2001.1774",
+  "title": "Which Problems Have Strongly Exponential Complexity?"
+}

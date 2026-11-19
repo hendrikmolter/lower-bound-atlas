@@ -1,0 +1,1 @@
+Faisal N. Abu-Khzam, Édouard Bonnet, Florian Sikora. On the Complexity of Various Parameterizations of Common Induced Subgraph Isomorphism. Authors’ full manuscript. https://perso.ens-lyon.fr/edouard.bonnet/publi/tcs2017.pdf

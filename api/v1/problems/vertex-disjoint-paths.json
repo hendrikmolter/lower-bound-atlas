@@ -1,0 +1,11 @@
+{
+  "id": "vertex-disjoint-paths",
+  "input": "A finite simple undirected graph G and an explicit list of demand pairs of vertices.",
+  "name": "Vertex-Disjoint Paths",
+  "parameterizations": [
+    "vertex-disjoint-paths-treewidth",
+    "vertex-disjoint-paths-supplied-pathwidth"
+  ],
+  "question": "Is there one path joining the endpoints of each demand pair, with all the paths pairwise vertex-disjoint?",
+  "revision": 1
+}

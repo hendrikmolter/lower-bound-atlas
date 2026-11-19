@@ -1,0 +1,79 @@
+{
+  "assessments": {
+    "eth": {
+      "converse": {
+        "effectiveStatus": "unknown",
+        "evidence": [],
+        "status": "unknown"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unknown"
+    },
+    "sh": {
+      "converse": {
+        "effectiveStatus": "unknown",
+        "evidence": [],
+        "status": "unknown"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unknown"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "kxk",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "list-coloring-treewidth-kxk",
+  "inputConditions": [],
+  "inputFactor": "B^(o(t))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [
+    "The parameter factor f is an arbitrary computable function."
+  ],
+  "reader": {
+    "label": "Exponent in treewidth",
+    "revision": 1,
+    "title": "Exponent in treewidth under the k × k Clique Hypothesis"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "f(t) B^(o(t))",
+  "runtimeSymbols": [
+    "t",
+    "B"
+  ],
+  "sources": [
+    {
+      "editionId": "v3",
+      "locator": "Proposition 1 and Table 1",
+      "paperId": "szeider2026",
+      "placement": "statement",
+      "role": "benchmark"
+    },
+    {
+      "editionId": "oct30",
+      "locator": "Proposition 1 and Table 1, second row; transfer in Cygan et al., Theorem 14.29",
+      "paperId": "szeider2026",
+      "placement": "statement",
+      "role": "benchmark"
+    }
+  ],
+  "statement": "Under the k × k Clique Hypothesis, no deterministic algorithm solves List Coloring within the stated running time.",
+  "status": "established",
+  "supported": true
+}

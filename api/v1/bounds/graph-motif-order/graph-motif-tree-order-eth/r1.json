@@ -1,0 +1,58 @@
+{
+  "assessments": {
+    "eth": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unassessed"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "graph-motif-tree-order-eth",
+  "inputConditions": [
+    "tree"
+  ],
+  "inputFactor": "Included in the displayed running time",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [],
+  "reader": {
+    "explanation": "The source construction produces trees of diameter at most four.",
+    "label": "Subexponential bound on trees",
+    "revision": 1,
+    "title": "Subexponential bound on trees under ETH"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "2^(o(n))",
+  "runtimeSymbols": [
+    "n"
+  ],
+  "sources": [
+    {
+      "editionId": "journal",
+      "locator": "Theorem 14(ii) and proof, §3.4, p. 87",
+      "paperId": "bs2017-graph-motif",
+      "placement": "statement",
+      "role": "published lower bound"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm solves Graph Motif within the stated running time.",
+  "status": "established",
+  "supported": true
+}

@@ -1,0 +1,11 @@
+{
+  "id": "chromatic-number",
+  "input": "A finite simple undirected graph G and a positive integer ℓ.",
+  "name": "Chromatic Number",
+  "parameterizations": [
+    "chromatic-number-treewidth",
+    "chromatic-number-vertex-cover"
+  ],
+  "question": "Can the vertices of G be colored with at most ℓ colors so that adjacent vertices have different colors?",
+  "revision": 1
+}

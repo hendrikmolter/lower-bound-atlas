@@ -1,0 +1,145 @@
+{
+  "aliases": [],
+  "bounds": [
+    {
+      "assessments": {},
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "steiner-tree-terminals-eth",
+      "inputConditions": [
+        "planar"
+      ],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "explanation": "The published theorem writes the polynomial factor in graph order n. On standard explicit unweighted inputs, one can normalize the budget to at most n − 1 and relabel vertices, so all threshold queries have length polynomial in n. Polynomially many such queries recover the minimum cost.",
+        "label": "Sublinear exponent in the number of terminals",
+        "revision": 1,
+        "title": "Steiner Tree by terminal count under ETH"
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "2^(o(k)) B^(O(1))",
+      "runtimeSymbols": [
+        "k",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "focs",
+          "locator": "Theorem I.2 and Corollary I.4, p. 475",
+          "paperId": "marx-pilipczuk-pilipczuk2018-steiner",
+          "placement": "statement",
+          "role": "planar terminal-count lower bound"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm decides Steiner Tree within the stated running time.",
+      "status": "established",
+      "supported": true
+    }
+  ],
+  "coverage": "Selected lower bounds for this parameterization.",
+  "encoding": "Explicit binary graph and terminal-set encoding with individually represented vertices and a binary budget.",
+  "id": "steiner-tree-terminals",
+  "inputConditions": [
+    {
+      "condition": "The graph is finite, simple, undirected and unweighted.",
+      "id": "graph-class",
+      "level": "problem"
+    },
+    {
+      "condition": "The graph is planar.",
+      "id": "planar",
+      "level": "bound"
+    }
+  ],
+  "kind": "lower-bound-case",
+  "parameter": "The number k of distinct vertices in the terminal set T.",
+  "problemDefinitionHash": "666c3f4e016d51b98f0c5d8000b300f8a540c97b755af6f8e0a9cf892f156ac3",
+  "problemId": "steiner-tree",
+  "problemRevision": 1,
+  "reader": {
+    "anchor": "terminals",
+    "parameter": "The number k of distinct vertices in the terminal set T.",
+    "parameterLabel": "Number of terminals",
+    "parameterSymbols": [
+      {
+        "meaning": "number of terminals",
+        "symbol": "k"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "number of vertices",
+        "symbol": "n"
+      },
+      {
+        "meaning": "complete input length in bits",
+        "symbol": "B"
+      },
+      {
+        "meaning": "edge budget",
+        "symbol": "b"
+      }
+    ]
+  },
+  "recoveryComparisons": [
+    {
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "steiner-tree-terminals-eth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "np_qp",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "steiner-tree-terminals-eth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "steiner-tree-terminals-eth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "steiner-tree-terminals-eth",
+        "revision": 1
+      }
+    }
+  ],
+  "resolutions": [],
+  "revision": 2,
+  "task": "Does G have a tree spanning all terminals in T that uses at most b edges?",
+  "title": "Steiner Tree by terminal count",
+  "variant": "Steiner Tree"
+}

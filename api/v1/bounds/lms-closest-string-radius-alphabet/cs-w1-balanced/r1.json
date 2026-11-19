@@ -1,0 +1,83 @@
+{
+  "assessments": {
+    "eth": {
+      "converse": {
+        "effectiveStatus": "unknown",
+        "evidence": [],
+        "status": "unknown"
+      },
+      "forward": {
+        "effectiveStatus": "unknown",
+        "evidence": [],
+        "status": "unknown"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unknown"
+    },
+    "sh": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unassessed"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "w1",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "cs-w1-balanced",
+  "inputConditions": [
+    "one-agreement",
+    "balanced-alphabet"
+  ],
+  "inputFactor": "N^C, C fixed",
+  "proofs": [
+    {
+      "proofId": "closest-string-balanced",
+      "revision": 1,
+      "theorem": "cs-balanced"
+    }
+  ],
+  "provenance": "atlas",
+  "qualifications": [
+    "The nonnegative integer exponent has a computable upper bound and is effectively sublinear in d. The running time allows no additional factor depending on q."
+  ],
+  "reader": {
+    "label": "One agreement with a balanced alphabet",
+    "notation": "effective-little-o",
+    "notationLabel": "Effective little-o",
+    "revision": 1
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "2^(o_eff(d)) N^C",
+  "runtimeSymbols": [
+    "d",
+    "N",
+    "C"
+  ],
+  "sources": [
+    {
+      "editionId": "journal",
+      "locator": "Independent Set is W[1]-complete, with Clique by complementation",
+      "paperId": "df1995",
+      "placement": "proof",
+      "role": "source completeness"
+    }
+  ],
+  "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Closest String within the stated running time.",
+  "status": "established",
+  "supported": true
+}

@@ -1,0 +1,10 @@
+{
+  "id": "odd-set",
+  "input": "A finite ground set, an explicitly listed family of its subsets and a nonnegative integer k in binary.",
+  "name": "Odd Set",
+  "parameterizations": [
+    "odd-set-budget"
+  ],
+  "question": "Is there a set of at most k elements with odd intersection size with every listed subset?",
+  "revision": 1
+}

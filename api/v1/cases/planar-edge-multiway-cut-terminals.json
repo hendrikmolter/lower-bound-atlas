@@ -1,0 +1,181 @@
+{
+  "aliases": [],
+  "bounds": [
+    {
+      "assessments": {},
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "planar-edge-multiway-cut-terminals-eth",
+      "inputConditions": [],
+      "inputFactor": "n is the base of the exponent",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "label": "Exponent sublinear in the square root of the parameter",
+        "revision": 1
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "f(k) n^(o(k^(1/2)))",
+      "runtimeSymbols": [
+        "f",
+        "k",
+        "n"
+      ],
+      "sources": [
+        {
+          "editionId": "journal",
+          "locator": "Theorem 3 and Corollary 5, pp. 679–681",
+          "paperId": "marx2012-multiway",
+          "placement": "statement",
+          "role": "published ETH lower bound"
+        },
+        {
+          "editionId": "book",
+          "locator": "Bibliographic notes p. 520, reference [354]",
+          "paperId": "cygan2015",
+          "placement": "statement",
+          "role": "lower-bound statement"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm solves Planar Edge Multiway Cut within the stated running time.",
+      "status": "established",
+      "supported": true
+    },
+    {
+      "assessments": {},
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "w1",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "hardnessBaseline": "W[1]",
+      "id": "planar-edge-multiway-cut-terminals-w1",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "label": "Fixed-parameter tractability",
+        "revision": 1
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "f(k) B^(O(1))",
+      "runtimeSymbols": [
+        "f",
+        "k",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "journal",
+          "locator": "Theorem 3, pp. 679–680",
+          "paperId": "marx2012-multiway",
+          "placement": "statement",
+          "role": "published W[1]-hardness"
+        }
+      ],
+      "statement": "Under FPT ≠ W[1], no deterministic algorithm solves Planar Edge Multiway Cut within the stated running time.",
+      "status": "established",
+      "supported": true
+    }
+  ],
+  "coverage": "Literature bounds.",
+  "encoding": "An explicitly encoded finite simple undirected planar graph G with nonnegative integer edge weights, k specified distinct terminals, and a nonnegative integer threshold.",
+  "id": "planar-edge-multiway-cut-terminals",
+  "inputConditions": [],
+  "kind": "lower-bound-case",
+  "parameter": "The number of terminals k.",
+  "problemDefinitionHash": "f1c70e343d24584a1c2843b7b7eaac44a3f60289fd321bb3cad4724558db910b",
+  "problemId": "planar-edge-multiway-cut",
+  "problemRevision": 1,
+  "reader": {
+    "anchor": "terminals",
+    "boundContext": "The number of terminals k. Here f denotes arbitrary total computable parameter function, n denotes number of vertices, B denotes complete input length in bits.",
+    "parameter": "The number of terminals k.",
+    "parameterLabel": "Number of terminals",
+    "parameterSymbols": [
+      {
+        "meaning": "number of terminals",
+        "symbol": "k"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "arbitrary total computable parameter function",
+        "symbol": "f"
+      },
+      {
+        "meaning": "number of vertices",
+        "symbol": "n"
+      },
+      {
+        "meaning": "complete input length in bits",
+        "symbol": "B"
+      }
+    ]
+  },
+  "recoveryComparisons": [
+    {
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "planar-edge-multiway-cut-terminals-eth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "np_qp",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "planar-edge-multiway-cut-terminals-eth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "planar-edge-multiway-cut-terminals-eth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "planar-edge-multiway-cut-terminals-eth",
+        "revision": 1
+      }
+    }
+  ],
+  "resolutions": [],
+  "revision": 1,
+  "task": "Can edges of total weight at most the threshold be deleted so that no two terminals are connected?",
+  "title": "Planar Edge Multiway Cut by number of terminals",
+  "variant": "Planar Edge Multiway Cut"
+}

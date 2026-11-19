@@ -1,0 +1,84 @@
+{
+  "assessments": {
+    "uniform-eth": {
+      "converse": {
+        "effectiveStatus": "established",
+        "evidence": [
+          {
+            "boundRevision": 2,
+            "hypothesisRevision": 4,
+            "reviewId": "ds-order-eth-equivalence-review",
+            "source": {
+              "editionId": "journal",
+              "locator": "§2.2, pp. 22:5–22:6, and Corollary 3.8, p. 22:16",
+              "paperId": "ganian-dehaan-kanj-szeider2020",
+              "placement": "proof",
+              "role": "equivalence by the number of vertices, with the single-algorithm definition"
+            }
+          }
+        ],
+        "status": "established"
+      },
+      "forward": {
+        "effectiveStatus": "established",
+        "evidence": [
+          {
+            "boundRevision": 2,
+            "hypothesisRevision": 4,
+            "reviewId": "ds-order-eth-equivalence-review",
+            "source": {
+              "editionId": "journal",
+              "locator": "§2.2, pp. 22:5–22:6, and Corollary 3.8, p. 22:16",
+              "paperId": "ganian-dehaan-kanj-szeider2020",
+              "placement": "forward",
+              "role": "equivalence by the number of vertices, with the single-algorithm definition"
+            }
+          }
+        ],
+        "status": "established"
+      },
+      "hypothesisRevision": 4,
+      "verdict": "established-equivalent"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "ds-order-eth",
+  "inputConditions": [],
+  "inputFactor": "B^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [],
+  "reader": {
+    "label": "Exponential in the number of vertices",
+    "revision": 2,
+    "title": "Dominating Set by graph order under ETH"
+  },
+  "reviewIds": [
+    "ds-order-eth-equivalence-review"
+  ],
+  "revision": 2,
+  "runtime": "2^(o(n)) B^(O(1))",
+  "runtimeSymbols": [
+    "n",
+    "B"
+  ],
+  "sources": [
+    {
+      "editionId": "bulletin",
+      "locator": "Theorem 3.3, p. 52",
+      "paperId": "lms2011",
+      "placement": "statement",
+      "role": "benchmark"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm decides Dominating Set within the stated running time.",
+  "status": "established",
+  "supported": true
+}

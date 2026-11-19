@@ -1,0 +1,20 @@
+{
+  "applicable": true,
+  "date": "2026-11-18",
+  "evidence": "evidence/dominating-set-order-sh-independent.md",
+  "id": "dominating-set-order-sh-review",
+  "independent": true,
+  "label": "Agent verified",
+  "object": {
+    "id": "dominating-set-order-sh",
+    "revision": 1,
+    "theorem": "dominating-set-order-sh",
+    "type": "proof"
+  },
+  "reviewer": "Codex agent natural_batch",
+  "scope": "Both implications. Checks the explicit CNF encoding, triangle construction, branching and residual queries, and deterministic whole fixed-power quantifiers.",
+  "sourceSha256": "bf1ae82b104cedd384facca43eb568e8c88fa5a00a4657d2baf596394cdb9d54",
+  "stale": false,
+  "type": "agent",
+  "verdict": "verified"
+}

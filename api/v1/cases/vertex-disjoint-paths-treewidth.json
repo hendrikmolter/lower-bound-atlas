@@ -1,0 +1,340 @@
+{
+  "aliases": [],
+  "bounds": [
+    {
+      "assessments": {},
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "vdp-tw-eth",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "explanation": "The sources use a polynomial factor in graph order. The reductions use explicit instances with distinct endpoints, so their demand lists and complete encodings have length polynomial in graph order.",
+        "label": "Bound in the treewidth",
+        "revision": 1
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "2^(o(t log₂ t)) B^(O(1))",
+      "runtimeSymbols": [
+        "t",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "journal",
+          "locator": "Section 5, Theorem 5.4, pp. 696–697",
+          "paperId": "lms2018",
+          "placement": "statement",
+          "role": "published reduction"
+        },
+        {
+          "editionId": "bulletin",
+          "locator": "Theorem 6.3, PDF p. 22",
+          "paperId": "lms2011",
+          "placement": "statement",
+          "role": "published lower bound"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm decides Vertex-Disjoint Paths within the stated running time.",
+      "status": "established",
+      "supported": true
+    },
+    {
+      "assessments": {},
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "sh",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "vdp-tw-sh",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [
+        "For every fixed 0 < ε < 1."
+      ],
+      "reader": {
+        "label": "Fixed-power bounds in the treewidth",
+        "revision": 1
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "2^(O(t^(1−ε))) B^(O(1))",
+      "runtimeSymbols": [
+        "t",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "v2",
+          "locator": "Table 1, Disjoint Paths row and footnote d, p. 4, and Theorem 3.1, p. 8",
+          "paperId": "sh26",
+          "placement": "statement",
+          "role": "preprint lower bound"
+        }
+      ],
+      "statement": "Under SH, no deterministic algorithm decides Vertex-Disjoint Paths within the stated running time.",
+      "status": "established",
+      "supported": true
+    },
+    {
+      "assessments": {},
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "w1",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "vdp-tw-w1",
+      "inputConditions": [
+        "connected-bipartite-subcubic",
+        "distinct-leaf-endpoints",
+        "equal-widths"
+      ],
+      "inputFactor": "B^(O(1))",
+      "proofs": [
+        {
+          "proofId": "vdp-width-w1",
+          "revision": 1,
+          "theorem": "vdp-width-w1"
+        }
+      ],
+      "provenance": "atlas",
+      "qualifications": [
+        "The exponent h(t) is finite and nonnegative. There is a computable function T such that h(t) ≤ max(1, t log₂(max(2, t)))/j for every positive integer j and every t ≥ T(j)."
+      ],
+      "reader": {
+        "label": "Effective little-o bound in the treewidth",
+        "notation": "effective-little-o",
+        "notationLabel": "Effective little-o",
+        "revision": 1
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "2^(o_eff(t log₂ t)) B^(O(1))",
+      "runtimeSymbols": [
+        "t",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "journal",
+          "locator": "Lemma 2.8 and its proof",
+          "paperId": "lms2018",
+          "placement": "proof",
+          "role": "deterministic coloring family"
+        },
+        {
+          "editionId": "journal",
+          "locator": "W[1]-completeness of Independent Set, with Clique by complementation",
+          "paperId": "df1995",
+          "placement": "proof",
+          "role": "source completeness"
+        }
+      ],
+      "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Vertex-Disjoint Paths within the stated running time.",
+      "status": "established",
+      "supported": true
+    }
+  ],
+  "coverage": "Literature bounds.",
+  "encoding": "A finite simple undirected graph G and an explicit list of demand pairs of vertices.",
+  "id": "vertex-disjoint-paths-treewidth",
+  "inputConditions": [
+    {
+      "condition": "The graph is connected and bipartite, and its maximum degree is at most three.",
+      "id": "connected-bipartite-subcubic",
+      "level": "bound"
+    },
+    {
+      "condition": "All demand endpoints are distinct leaves.",
+      "id": "distinct-leaf-endpoints",
+      "level": "bound"
+    },
+    {
+      "condition": "The treewidth and pathwidth of G are equal.",
+      "id": "equal-widths",
+      "level": "bound"
+    }
+  ],
+  "kind": "lower-bound-case",
+  "parameter": "The intrinsic treewidth t of G.",
+  "problemDefinitionHash": "286937faa1be2455a3fd97ccc36d2500371d4516bbc4094e397ecf42b1d09540",
+  "problemId": "vertex-disjoint-paths",
+  "problemRevision": 1,
+  "reader": {
+    "anchor": "treewidth",
+    "boundContext": "The intrinsic treewidth t of G. Here B is the complete input length in bits, including all demand pairs.",
+    "parameter": "The intrinsic treewidth t of G.",
+    "parameterLabel": "Treewidth",
+    "parameterSymbols": [
+      {
+        "meaning": "treewidth of the input graph",
+        "symbol": "t"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "the complete input length in bits, including all demand pairs",
+        "symbol": "B"
+      }
+    ]
+  },
+  "recoveryAssessments": [
+    {
+      "comparison": "SH excludes each fixed power below one in the exponent. The ETH benchmark excludes every little-o exponent at the larger logarithmically superlinear scale.",
+      "effective": false,
+      "evidence": [
+        {
+          "editionId": "v2",
+          "locator": "Table 1, Disjoint Paths row and footnote d, p. 4, and Theorem 3.1, p. 8",
+          "paperId": "sh26",
+          "placement": "statement",
+          "role": "preprint lower bound"
+        }
+      ],
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "recoveredScale": "t^(1−ε)",
+      "recovery": {
+        "id": "vdp-tw-sh",
+        "revision": 1
+      },
+      "scale": "degree",
+      "target": {
+        "id": "vdp-tw-eth",
+        "revision": 1
+      },
+      "targetScale": "t log₂ t"
+    },
+    {
+      "comparison": "The recovery excludes the same scale with a computable convergence modulus. The proof obtains the exclusion on connected bipartite graphs of maximum degree three with distinct leaf terminals and equal widths.",
+      "effective": true,
+      "evidence": [
+        {
+          "proofId": "vdp-width-w1",
+          "revision": 1,
+          "theorem": "vdp-width-w1"
+        }
+      ],
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "recoveredScale": "t log₂ t",
+      "recovery": {
+        "id": "vdp-tw-w1",
+        "revision": 1
+      },
+      "scale": "full",
+      "target": {
+        "id": "vdp-tw-eth",
+        "revision": 1
+      },
+      "targetScale": "t log₂ t"
+    }
+  ],
+  "recoveryComparisons": [
+    {
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "vdp-tw-eth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "np_qp",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "vdp-tw-eth",
+        "revision": 1
+      }
+    },
+    {
+      "comparison": "SH excludes each fixed power below one in the exponent. The ETH benchmark excludes every little-o exponent at the larger logarithmically superlinear scale.",
+      "effective": false,
+      "evidence": [
+        {
+          "editionId": "v2",
+          "locator": "Table 1, Disjoint Paths row and footnote d, p. 4, and Theorem 3.1, p. 8",
+          "paperId": "sh26",
+          "placement": "statement",
+          "role": "preprint lower bound"
+        }
+      ],
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "recoveredScale": "t^(1−ε)",
+      "recovery": {
+        "id": "vdp-tw-sh",
+        "revision": 1
+      },
+      "scale": "degree",
+      "status": "degree",
+      "target": {
+        "id": "vdp-tw-eth",
+        "revision": 1
+      },
+      "targetScale": "t log₂ t"
+    },
+    {
+      "comparison": "The recovery excludes the same scale with a computable convergence modulus. The proof obtains the exclusion on connected bipartite graphs of maximum degree three with distinct leaf terminals and equal widths.",
+      "effective": true,
+      "evidence": [
+        {
+          "proofId": "vdp-width-w1",
+          "revision": 1,
+          "theorem": "vdp-width-w1"
+        }
+      ],
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "recoveredScale": "t log₂ t",
+      "recovery": {
+        "id": "vdp-tw-w1",
+        "revision": 1
+      },
+      "scale": "full",
+      "status": "effective",
+      "target": {
+        "id": "vdp-tw-eth",
+        "revision": 1
+      },
+      "targetScale": "t log₂ t"
+    }
+  ],
+  "resolutions": [],
+  "revision": 4,
+  "task": "Is there one path joining the endpoints of each demand pair, with all the paths pairwise vertex-disjoint?",
+  "title": "Vertex-Disjoint Paths by treewidth",
+  "variant": "Undirected Vertex-Disjoint Paths"
+}

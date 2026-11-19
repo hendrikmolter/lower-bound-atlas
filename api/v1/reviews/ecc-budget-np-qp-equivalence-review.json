@@ -1,0 +1,19 @@
+{
+  "applicable": true,
+  "date": "2026-11-18",
+  "evidence": "evidence/ecc-np-qp-converse-independent.md",
+  "id": "ecc-budget-np-qp-equivalence-review",
+  "independent": true,
+  "label": "Agent verified",
+  "object": {
+    "caseId": "edge-clique-cover-budget",
+    "id": "ecc-budget-np-qp",
+    "revision": 2,
+    "type": "bound"
+  },
+  "reviewer": "Codex agent audit_tracks",
+  "scope": "The SAT reduction has logarithmic clique budget and polynomial graph size. The converse review checks the kernel and quasipolynomial-time transfer.",
+  "stale": false,
+  "type": "agent",
+  "verdict": "verified"
+}

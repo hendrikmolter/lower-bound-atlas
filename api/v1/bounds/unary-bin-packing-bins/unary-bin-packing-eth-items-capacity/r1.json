@@ -1,0 +1,65 @@
+{
+  "assessments": {
+    "eth": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unassessed"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "unary-bin-packing-eth-items-capacity",
+  "inputConditions": [],
+  "inputFactor": "Included in the displayed running time",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [],
+  "reader": {
+    "explanation": "The source measures the capacity T and the number of items n separately. Conversion of its normalized hard inputs to unary has time polynomial in n and T, which can be absorbed into the displayed little-o rates.",
+    "label": "Joint item-count and capacity bound",
+    "revision": 1,
+    "title": "Joint item-count and capacity bound under ETH"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "2^(o(n)) T^(o(k))",
+  "runtimeSymbols": [
+    "n",
+    "k",
+    "T"
+  ],
+  "sources": [
+    {
+      "editionId": "proceedings",
+      "locator": "Theorem 1.1, p. 2095, and §4, pp. 2100–2102",
+      "paperId": "bdw2026-bin-packing",
+      "placement": "statement",
+      "role": "published theorem and reduction to partition with targets"
+    },
+    {
+      "editionId": "arxiv-v1",
+      "locator": "§8, Theorem 8.1",
+      "paperId": "bdw2026-bin-packing",
+      "placement": "forward",
+      "role": "partition-to-Bin Packing transfer deferred by the proceedings"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm solves Unary Bin Packing within the stated running time.",
+  "status": "established",
+  "supported": true
+}

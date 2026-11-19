@@ -1,0 +1,213 @@
+{
+  "aliases": [
+    "lms-csp-tw"
+  ],
+  "bounds": [
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unassessed"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "explicit-table-csp-treewidth-eth",
+      "inputConditions": [],
+      "inputFactor": "N^(o(t))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [
+        "For every computable f."
+      ],
+      "reader": {
+        "label": "Sublinear exponent in treewidth",
+        "revision": 1,
+        "title": "Explicit-table CSP under ETH: Sublinear exponent in treewidth"
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "f(t) N^(o(t))",
+      "runtimeSymbols": [
+        "t",
+        "N"
+      ],
+      "sources": [
+        {
+          "editionId": "bulletin",
+          "locator": "Theorem 6.6, p. 66",
+          "paperId": "lms2011",
+          "placement": "statement",
+          "role": "conditional lower bound"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm solves the stated decision problem within the stated running time.",
+      "status": "established",
+      "supported": true
+    },
+    {
+      "assessments": {
+        "w1": {
+          "converse": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unassessed"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "w1",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "hardnessBaseline": "W[1]",
+      "id": "explicit-table-csp-treewidth-w1-baseline",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [
+        "The parameter factor f is an arbitrary computable function and the exponent of B is an arbitrary fixed constant."
+      ],
+      "reader": {
+        "explanation": "For a Clique instance with target ℓ, take one variable per position, with host vertices as values. For each pair of positions, list the ordered adjacent host pairs in a binary constraint table. These tables require distinct adjacent images and have a clique as the primal graph, so its treewidth is ℓ−1 for ℓ≥2. After answering targets ℓ below two or above the host order directly, the tables have size polynomial in the complete source encoding.",
+        "label": "Fixed-parameter tractability",
+        "revision": 1,
+        "title": "Explicit-table CSP under FPT ≠ W[1]: Fixed-parameter tractability"
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "f(t) B^(O(1))",
+      "runtimeSymbols": [
+        "t",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "journal",
+          "locator": "Theorem 1.1 and accompanying problem definition, pp. 85–86",
+          "paperId": "marx2010-treewidth",
+          "placement": "statement",
+          "role": "explicit-domain primal graph and parameterized hardness context"
+        },
+        {
+          "editionId": "book",
+          "locator": "Theorem 13.25, p. 444",
+          "paperId": "cygan2015",
+          "placement": "statement",
+          "role": "W[1]-completeness of Clique"
+        }
+      ],
+      "statement": "Under FPT ≠ W[1], no deterministic algorithm solves this decision problem within the stated running time.",
+      "status": "established",
+      "supported": true
+    }
+  ],
+  "coverage": "Lower bounds for primal treewidth.",
+  "encoding": "An explicit finite-domain constraint satisfaction instance with a table of allowed tuples for each constraint.",
+  "id": "explicit-table-csp-treewidth",
+  "inputConditions": [],
+  "kind": "lower-bound-case",
+  "parameter": "The treewidth of the primal graph t.",
+  "problemDefinitionHash": "a40dc8c918c4331d0c41ec165b7c0b968e76851ba8527d7cb52f66ecf6baedfd",
+  "problemId": "explicit-table-csp",
+  "problemRevision": 1,
+  "reader": {
+    "anchor": "explicit-table-csp-treewidth",
+    "parameter": "The treewidth of the primal graph t.",
+    "parameterLabel": "Primal treewidth",
+    "parameterSymbols": [
+      {
+        "meaning": "treewidth of the primal graph",
+        "symbol": "t"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "size of the explicit constraint instance",
+        "symbol": "N"
+      },
+      {
+        "meaning": "complete binary input length",
+        "symbol": "B"
+      }
+    ]
+  },
+  "recoveryComparisons": [
+    {
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "explicit-table-csp-treewidth-eth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "np_qp",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "explicit-table-csp-treewidth-eth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "explicit-table-csp-treewidth-eth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "explicit-table-csp-treewidth-eth",
+        "revision": 1
+      }
+    }
+  ],
+  "resolutions": [],
+  "revision": 3,
+  "task": "Can all variables be assigned domain values so that each constraint has an allowed tuple?",
+  "title": "Explicit-table CSP by primal treewidth",
+  "variant": "Explicit-table CSP"
+}

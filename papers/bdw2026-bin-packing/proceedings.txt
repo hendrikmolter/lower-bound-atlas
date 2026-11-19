@@ -1,0 +1,1 @@
+Karl Bringmann, Anita Dürr, Karol Węgrzycki. Tight (S)ETH-Based Lower Bounds for Pseudopolynomial Algorithms for Bin Packing and Multi-machine Scheduling. STOC 2026, pp. 2094–2105. https://doi.org/10.1145/3798129.3800913

@@ -1,0 +1,21 @@
+{
+  "authors": [
+    "Russell Impagliazzo",
+    "Ramamohan Paturi"
+  ],
+  "editions": [
+    {
+      "doi": "10.1006/jcss.2000.1727",
+      "id": "journal",
+      "kind": "journal",
+      "label": "Journal of Computer and System Sciences 62(2) (2001), 367–375",
+      "openUrl": "https://cseweb.ucsd.edu/~paturi/myPapers/pubs/ImpagliazzoPaturi_2001_jcss.pdf",
+      "preferredUrl": "https://doi.org/10.1006/jcss.2000.1727",
+      "primaryUrl": "https://doi.org/10.1006/jcss.2000.1727"
+    }
+  ],
+  "id": "ip2001",
+  "preferredEditionId": "journal",
+  "preferredUrl": "https://doi.org/10.1006/jcss.2000.1727",
+  "title": "On the Complexity of k-SAT"
+}

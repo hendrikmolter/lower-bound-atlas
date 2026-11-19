@@ -1,0 +1,75 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=28mm]{geometry}
+\usepackage{amsmath,amsthm}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\title{Subset Sum by item count under the Satisfiability Hypothesis}
+\author{Atlas\thanks{The proof in this note was found using ChatGPT.}}
+\date{18 November 2026}
+\begin{document}
+\maketitle
+
+An instance of \textsc{Subset Sum} is an indexed list of \(p\) positive
+integers and a positive target. All numbers are in binary. The question is
+whether some subset of the indices has values summing to the target.
+Let \(B\) be the complete input length in bits.
+
+\hypertarget{subset-sum-item-count-sh}{}
+\begin{theorem}\label{thm:subset-sum-sh}
+Assume the deterministic decision Satisfiability Hypothesis (SH) for
+CNF satisfiability by normalized input length. For each fixed
+\(0<\varepsilon<1\), there is no deterministic
+\(2^{O(p^{1-\varepsilon})}B^{O(1)}\)-time algorithm for \textsc{Subset Sum}.
+\end{theorem}
+
+\begin{proof}
+We use the consequence of SH for width-three CNF by the combined number
+of variables and clauses~\cite[Lemma~2.1]{sh}. The length measured in
+bits after renumbering occurring variables introduces at most a logarithmic
+factor in that measure, which preserves the existence of a fixed power
+saving in the exponent.
+
+Let the formula have \(v\) variables and \(m\) clauses, each listing at most
+three literal occurrences. Formulas with no clauses or with an empty clause
+can be decided directly. Use one base-eight digit position per variable and
+per clause. For each variable create two items, one for each assignment to
+that variable. Each has digit one in that variable's position and zero in
+the other variable positions. In a clause position its digit is the number
+of literal occurrences made true by the corresponding assignment to that
+variable. Create two additional indexed items per clause. Each has digit
+one in its own clause position and zeros elsewhere. Set the target digits
+to one at the variable positions and three at the clause positions.
+These are positive integers. The construction is a variant of the
+standard digit reduction~\cite[Section~3]{weighted}.
+
+There is no carry in any subset sum. A variable position has total at
+most two and a clause position has total at most five, since even when
+all assignment items are selected, each of the at most three occurrences
+contributes once. Equality to the target forces the choice of exactly one
+assignment item per variable. In a clause, the two extra items allow that
+assignment's digit sum to reach three precisely when at least one
+occurrence is true. Thus the formula is satisfiable exactly when the
+constructed instance is a yes-instance.
+
+There are \(p=2v+2m\) items and all numbers have at most \(3(v+m)\)
+bits, so construction and output length are polynomial in the complete
+formula input length. For any fixed \(0<\varepsilon<1\), the stated
+algorithm would solve width-three satisfiability in time
+\(2^{O((v+m)^{1-\varepsilon})}\) times a polynomial in that input length.
+This contradicts the cited consequence of SH.
+\end{proof}
+
+\begin{thebibliography}{9}
+\bibitem{sh}
+MIT Hardness Group, J.~Brunner, E.~D. Demaine, F.~Frei, T.~Gomez,
+M.~Hecher, J.~Li, and J.~Lynch.
+\emph{ETH is Dead, Long Live SH}.
+\href{https://arxiv.org/abs/2611.02650v1}{arXiv:2611.02650v1}, 2026.
+
+\bibitem{weighted}
+M.~Etscheid, S.~Kratsch, M.~Mnich, and H.~Röglin.
+Polynomial kernels for weighted problems.
+\emph{Journal of Computer and System Sciences}, 84:1--10, 2017.
+\href{https://doi.org/10.1016/j.jcss.2016.06.004}{DOI}.
+\end{thebibliography}
+\end{document}

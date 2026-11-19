@@ -1,0 +1,16 @@
+{
+  "id": "dominating-set",
+  "input": "A finite, simple, undirected, unweighted graph G and a nonnegative integer k.",
+  "name": "Dominating Set",
+  "parameterizations": [
+    "dominating-set-linear-rank-width",
+    "dominating-set-order",
+    "dominating-set-rank-width",
+    "dominating-set-budget",
+    "dominating-set-treewidth",
+    "dominating-set-supplied-rank-decomposition",
+    "dominating-set-supplied-linear-layout"
+  ],
+  "question": "Does G have a set of at most k vertices such that every vertex either belongs to the set or has a neighbor in the set?",
+  "revision": 1
+}

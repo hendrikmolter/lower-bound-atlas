@@ -1,0 +1,20 @@
+{
+  "applicable": true,
+  "date": "2026-11-18",
+  "evidence": "evidence/six-w1-memberships-independent.md",
+  "id": "scattered-set-w1-membership-independent",
+  "independent": true,
+  "label": "Agent verified",
+  "object": {
+    "id": "six-w1-memberships",
+    "revision": 1,
+    "theorem": "scattered-set-w1-membership",
+    "type": "proof"
+  },
+  "reviewer": "Codex agent /root",
+  "scope": "Scattered Set on explicit unweighted undirected graphs is in W[1] by the requested number of vertices.",
+  "sourceSha256": "f746b961e52ff19036f9e05aee729f20e4bf71d49d9c0eff9e19b4806aa94802",
+  "stale": false,
+  "type": "agent",
+  "verdict": "verified"
+}

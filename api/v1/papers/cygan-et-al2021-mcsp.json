@@ -1,0 +1,25 @@
+{
+  "authors": [
+    "Marek Cygan",
+    "Alexander S. Kulikov",
+    "Ivan Mihajlin",
+    "Maksim Nikolaev",
+    "Grigory Reznikov"
+  ],
+  "editions": [
+    {
+      "access": "Open full text inspected.",
+      "doi": "10.4230/LIPIcs.ESA.2021.35",
+      "id": "proceedings",
+      "kind": "proceedings",
+      "label": "ESA 2021, LIPIcs 204, pp. 35:1–35:16",
+      "openUrl": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol204-esa2021/LIPIcs.ESA.2021.35/LIPIcs.ESA.2021.35.pdf",
+      "preferredUrl": "https://doi.org/10.4230/LIPIcs.ESA.2021.35",
+      "primaryUrl": "https://doi.org/10.4230/LIPIcs.ESA.2021.35"
+    }
+  ],
+  "id": "cygan-et-al2021-mcsp",
+  "preferredEditionId": "proceedings",
+  "preferredUrl": "https://doi.org/10.4230/LIPIcs.ESA.2021.35",
+  "title": "Minimum Common String Partition: Exact Algorithms"
+}

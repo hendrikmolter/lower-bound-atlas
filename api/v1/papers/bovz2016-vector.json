@@ -1,0 +1,24 @@
+{
+  "authors": [
+    "Nikhil Bansal",
+    "Tim Oosterwijk",
+    "Tjark Vredeveld",
+    "Ruben van der Zwaan"
+  ],
+  "editions": [
+    {
+      "access": "Open full text inspected.",
+      "doi": "10.1007/s00453-016-0116-0",
+      "id": "journal",
+      "kind": "journal",
+      "label": "Algorithmica 76 (2016), pp. 1077–1096",
+      "openUrl": "https://link.springer.com/content/pdf/10.1007/s00453-016-0116-0.pdf",
+      "preferredUrl": "https://doi.org/10.1007/s00453-016-0116-0",
+      "primaryUrl": "https://doi.org/10.1007/s00453-016-0116-0"
+    }
+  ],
+  "id": "bovz2016-vector",
+  "preferredEditionId": "journal",
+  "preferredUrl": "https://doi.org/10.1007/s00453-016-0116-0",
+  "title": "Approximating Vector Scheduling: Almost Matching Upper and Lower Bounds"
+}

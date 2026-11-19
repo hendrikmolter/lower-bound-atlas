@@ -1,0 +1,20 @@
+{
+  "applicable": true,
+  "date": "2026-11-18",
+  "evidence": "evidence/graph-distortion-line-w1-independent.md",
+  "id": "graph-distortion-line-w1-review",
+  "independent": true,
+  "label": "Agent verified",
+  "object": {
+    "id": "graph-distortion-line-w1",
+    "revision": 1,
+    "theorem": "graph-distortion-line-w1",
+    "type": "proof"
+  },
+  "reviewer": "Codex agent population coordinator",
+  "scope": "Forward implication, including the integer and real coordinate interfaces, the deterministic coloring-family enumeration, the ordering and bipartite graph gadgets, and the effective convergence calculation.",
+  "sourceSha256": "3e4a4c93dd5e82dd5d7d366ab689f5a451020d3cc799191711a17311677b77c7",
+  "stale": false,
+  "type": "agent",
+  "verdict": "verified"
+}

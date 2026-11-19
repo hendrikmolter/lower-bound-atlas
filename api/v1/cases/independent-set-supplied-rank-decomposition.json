@@ -1,0 +1,372 @@
+{
+  "aliases": [],
+  "bounds": [
+    {
+      "assessments": {},
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "independent-set-supplied-rank-decomposition-eth",
+      "inputConditions": [],
+      "inputFactor": "n^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "explanation": "The source constructs a vertex order. The false-twin expansion preserves low supplied width, and a rank decomposition can be supplied by using the order along a caterpillar.",
+        "label": "Subexponential bound in squared width",
+        "revision": 1,
+        "title": "Subexponential bound in squared width under ETH"
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "2^(o(p^2)) n^(O(1))",
+      "runtimeSymbols": [
+        "p",
+        "n"
+      ],
+      "sources": [
+        {
+          "editionId": "proceedings",
+          "locator": "Theorem 1.1, p. 11:2, and Theorem 4.11 and Lemma 4.12, pp. 11:10–11:11",
+          "paperId": "bkn2023-rankwidth",
+          "placement": "statement",
+          "role": "historical lower bound"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm decides Independent Set within the stated running time.",
+      "status": "established",
+      "supported": true
+    },
+    {
+      "assessments": {
+        "sh": {
+          "converse": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "effectiveStatus": "established",
+            "evidence": [
+              {
+                "boundRevision": 1,
+                "hypothesisRevision": 1,
+                "proof": {
+                  "proofId": "independent-set-rankwidth",
+                  "revision": 1,
+                  "theorem": "independent-set-rankwidth-sh"
+                },
+                "reviewId": "independent-set-rankwidth-sh-review"
+              }
+            ],
+            "status": "established"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "hypothesis-implies-bound"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "sh",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "independent-set-supplied-rank-decomposition-sh-degree",
+      "inputConditions": [
+        "triangle-free",
+        "optimal-certificate"
+      ],
+      "inputFactor": "N^(O(1))",
+      "proofs": [
+        {
+          "proofId": "independent-set-rankwidth",
+          "revision": 1,
+          "theorem": "independent-set-rankwidth-sh"
+        }
+      ],
+      "provenance": "atlas",
+      "qualifications": [
+        "For every fixed 0<ε<2."
+      ],
+      "reader": {
+        "label": "Fixed-power bound below squared width on triangle-free graphs",
+        "revision": 1,
+        "title": "Fixed-power bound below squared width on triangle-free graphs under SH"
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "2^(O(p^(2−ε))) N^(O(1))",
+      "runtimeSymbols": [
+        "p",
+        "ε",
+        "N"
+      ],
+      "sources": [],
+      "statement": "Under SH, no deterministic algorithm decides Independent Set within the stated running time.",
+      "status": "established",
+      "supported": true
+    },
+    {
+      "assessments": {
+        "w1": {
+          "converse": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "effectiveStatus": "established",
+            "evidence": [
+              {
+                "boundRevision": 1,
+                "hypothesisRevision": 1,
+                "proof": {
+                  "proofId": "independent-set-rankwidth",
+                  "revision": 1,
+                  "theorem": "independent-set-rankwidth-w1"
+                },
+                "reviewId": "independent-set-rankwidth-w1-review"
+              }
+            ],
+            "status": "established"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "hypothesis-implies-bound"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "w1",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "independent-set-supplied-rank-decomposition-w1-effective",
+      "inputConditions": [
+        "triangle-free",
+        "optimal-certificate"
+      ],
+      "inputFactor": "N^(O(1))",
+      "proofs": [
+        {
+          "proofId": "independent-set-rankwidth",
+          "revision": 1,
+          "theorem": "independent-set-rankwidth-w1"
+        }
+      ],
+      "provenance": "atlas",
+      "qualifications": [
+        "The exponent is a computable nonnegative integer function and has computable convergence to little-o at scale p^2."
+      ],
+      "reader": {
+        "explanation": "The proof uses paths to replace selection cliques and a triangle-free padding graph to force optimal certificates.",
+        "label": "Effective quadratic-width bound on triangle-free graphs",
+        "revision": 1,
+        "title": "Effective quadratic-width bound on triangle-free graphs under FPT ≠ W[1]"
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "2^(o_eff(p^2)) N^(O(1))",
+      "runtimeSymbols": [
+        "p",
+        "N"
+      ],
+      "sources": [],
+      "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Independent Set within the stated running time.",
+      "status": "established",
+      "supported": true
+    }
+  ],
+  "coverage": "Historical ETH and independently reviewed recoveries.",
+  "encoding": "A finite, simple, undirected, unweighted graph G and a nonnegative integer k.",
+  "id": "independent-set-supplied-rank-decomposition",
+  "inputConditions": [
+    {
+      "condition": "The input graph has no triangle.",
+      "id": "triangle-free",
+      "level": "bound"
+    },
+    {
+      "condition": "The supplied rank decomposition has minimum width.",
+      "id": "optimal-certificate",
+      "level": "bound"
+    }
+  ],
+  "kind": "lower-bound-case",
+  "parameter": "The actual width of the supplied rank decomposition, denoted by p. Cut rank is computed over the binary field.",
+  "problemDefinitionHash": "6fe0108aa6b3df98d29b1ee8450fbb8ed4348f500e86e17718dd16c389a351d5",
+  "problemId": "independent-set",
+  "problemRevision": 1,
+  "reader": {
+    "additionalInput": "A rank decomposition of G.",
+    "anchor": "independent-set-supplied-rank-decomposition",
+    "parameter": "The actual width of the supplied rank decomposition, denoted by p. Cut rank is computed over the binary field.",
+    "parameterLabel": "Width of a supplied rank decomposition",
+    "parameterSymbols": [
+      {
+        "meaning": "actual width of the supplied rank decomposition",
+        "symbol": "p"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "number of vertices of G",
+        "symbol": "n"
+      },
+      {
+        "meaning": "complete binary input length, including a supplied certificate if present",
+        "symbol": "N"
+      },
+      {
+        "meaning": "fixed positive exponent saving",
+        "symbol": "ε"
+      }
+    ]
+  },
+  "recoveryAssessments": [
+    {
+      "comparison": "The recovered clock is the same squared-width scale with a computable exponent and modulus. The restricted instances are valid inputs of the historical task and the normalized full graph encoding, including any supplied certificate, is polynomial in its order.",
+      "effective": true,
+      "evidence": [
+        {
+          "proofId": "independent-set-rankwidth",
+          "revision": 1,
+          "theorem": "independent-set-rankwidth-w1"
+        }
+      ],
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "recoveredScale": "p^2",
+      "recovery": {
+        "id": "independent-set-supplied-rank-decomposition-w1-effective",
+        "revision": 1
+      },
+      "scale": "full",
+      "target": {
+        "id": "independent-set-supplied-rank-decomposition-eth",
+        "revision": 1
+      },
+      "targetScale": "p^2"
+    },
+    {
+      "comparison": "For every fixed positive exponent saving below two, the recovery excludes the corresponding power of the same width. The restricted instances are valid inputs of the historical task and the normalized full graph encoding, including any supplied certificate, is polynomial in its order.",
+      "effective": false,
+      "evidence": [
+        {
+          "proofId": "independent-set-rankwidth",
+          "revision": 1,
+          "theorem": "independent-set-rankwidth-sh"
+        }
+      ],
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "recoveredScale": "p^(2−ε)",
+      "recovery": {
+        "id": "independent-set-supplied-rank-decomposition-sh-degree",
+        "revision": 1
+      },
+      "scale": "degree",
+      "target": {
+        "id": "independent-set-supplied-rank-decomposition-eth",
+        "revision": 1
+      },
+      "targetScale": "p^2"
+    }
+  ],
+  "recoveryComparisons": [
+    {
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "independent-set-supplied-rank-decomposition-eth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "np_qp",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "independent-set-supplied-rank-decomposition-eth",
+        "revision": 1
+      }
+    },
+    {
+      "comparison": "For every fixed positive exponent saving below two, the recovery excludes the corresponding power of the same width. The restricted instances are valid inputs of the historical task and the normalized full graph encoding, including any supplied certificate, is polynomial in its order.",
+      "effective": false,
+      "evidence": [
+        {
+          "proofId": "independent-set-rankwidth",
+          "revision": 1,
+          "theorem": "independent-set-rankwidth-sh"
+        }
+      ],
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "recoveredScale": "p^(2−ε)",
+      "recovery": {
+        "id": "independent-set-supplied-rank-decomposition-sh-degree",
+        "revision": 1
+      },
+      "scale": "degree",
+      "status": "degree",
+      "target": {
+        "id": "independent-set-supplied-rank-decomposition-eth",
+        "revision": 1
+      },
+      "targetScale": "p^2"
+    },
+    {
+      "comparison": "The recovered clock is the same squared-width scale with a computable exponent and modulus. The restricted instances are valid inputs of the historical task and the normalized full graph encoding, including any supplied certificate, is polynomial in its order.",
+      "effective": true,
+      "evidence": [
+        {
+          "proofId": "independent-set-rankwidth",
+          "revision": 1,
+          "theorem": "independent-set-rankwidth-w1"
+        }
+      ],
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "recoveredScale": "p^2",
+      "recovery": {
+        "id": "independent-set-supplied-rank-decomposition-w1-effective",
+        "revision": 1
+      },
+      "scale": "full",
+      "status": "effective",
+      "target": {
+        "id": "independent-set-supplied-rank-decomposition-eth",
+        "revision": 1
+      },
+      "targetScale": "p^2"
+    }
+  ],
+  "resolutions": [],
+  "revision": 2,
+  "task": "Does G have at least k pairwise nonadjacent vertices?",
+  "title": "Independent Set by width of a supplied rank decomposition",
+  "variant": "Independent Set"
+}

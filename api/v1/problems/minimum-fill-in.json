@@ -1,0 +1,10 @@
+{
+  "id": "minimum-fill-in",
+  "input": "An explicitly encoded finite simple undirected graph G and a nonnegative integer edge-addition budget k.",
+  "name": "Minimum Fill-In",
+  "parameterizations": [
+    "minimum-fill-in-budget"
+  ],
+  "question": "Can at most k edges be added to G to make it chordal, so that every cycle on at least four vertices has a chord?",
+  "revision": 1
+}

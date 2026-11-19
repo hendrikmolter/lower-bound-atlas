@@ -1,0 +1,35 @@
+{
+  "authors": [
+    "Jianer Chen",
+    "Benny Chor",
+    "Mike Fellows",
+    "Xiuzhen Huang",
+    "David Juedes",
+    "Iyad A. Kanj",
+    "Ge Xia"
+  ],
+  "editions": [
+    {
+      "access": "Published text checked for the circuit definitions and Theorems 3.3, 3.5, and 4.3, including the Clique-to-k-Cut reduction cited in its proof.",
+      "doi": "10.1016/j.ic.2005.05.001",
+      "id": "journal",
+      "kind": "journal",
+      "label": "Information and Computation 201(2) (2005), 216–231",
+      "preferredUrl": "https://doi.org/10.1016/j.ic.2005.05.001",
+      "primaryUrl": "https://doi.org/10.1016/j.ic.2005.05.001"
+    },
+    {
+      "access": "Author manuscript retained for earlier citations and their numbering.",
+      "id": "manuscript",
+      "kind": "manuscript",
+      "label": "Inspected author manuscript",
+      "openUrl": "https://people.csail.mit.edu/rrw/presentations/w1-vs-eth.pdf",
+      "preferredUrl": "https://people.csail.mit.edu/rrw/presentations/w1-vs-eth.pdf",
+      "primaryUrl": "https://people.csail.mit.edu/rrw/presentations/w1-vs-eth.pdf"
+    }
+  ],
+  "id": "ccfhjkx2005",
+  "preferredEditionId": "journal",
+  "preferredUrl": "https://doi.org/10.1016/j.ic.2005.05.001",
+  "title": "Tight Lower Bounds for Certain Parameterized NP-Hard Problems"
+}

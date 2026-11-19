@@ -1,0 +1,20 @@
+{
+  "authors": [
+    "David Lichtenstein"
+  ],
+  "editions": [
+    {
+      "access": "Published reduction. The quantitative crossover size is also stated in the cited textbook.",
+      "doi": "10.1137/0211025",
+      "id": "journal",
+      "kind": "journal",
+      "label": "SIAM J. Comput. 11(2), 329–343 (1982)",
+      "preferredUrl": "https://doi.org/10.1137/0211025",
+      "primaryUrl": "https://doi.org/10.1137/0211025"
+    }
+  ],
+  "id": "lichtenstein1982",
+  "preferredEditionId": "journal",
+  "preferredUrl": "https://doi.org/10.1137/0211025",
+  "title": "Planar Formulae and Their Uses"
+}

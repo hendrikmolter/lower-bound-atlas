@@ -1,0 +1,10 @@
+{
+  "id": "odd-cycle-transversal",
+  "input": "A finite simple undirected graph G and a nonnegative integer b in binary.",
+  "name": "Odd Cycle Transversal",
+  "parameterizations": [
+    "odd-cycle-transversal-treewidth"
+  ],
+  "question": "Can at most b vertices be deleted to make G bipartite?",
+  "revision": 1
+}

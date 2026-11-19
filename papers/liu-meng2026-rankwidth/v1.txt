@@ -1,0 +1,1 @@
+Chenghua Liu, Boning Meng. Lower Bounds for Domination-Type Problems Parameterized by Rank-Width. arXiv:2608.18854v1, 19 August 2026. https://arxiv.org/abs/2608.18854v1

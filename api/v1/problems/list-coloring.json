@@ -1,0 +1,10 @@
+{
+  "id": "list-coloring",
+  "input": "A finite simple undirected graph G with one explicitly listed finite color set per vertex.",
+  "name": "List Coloring",
+  "parameterizations": [
+    "list-coloring-treewidth"
+  ],
+  "question": "Can each vertex be assigned a color from its list so that adjacent vertices receive distinct colors?",
+  "revision": 1
+}

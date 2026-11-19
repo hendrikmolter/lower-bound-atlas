@@ -1,0 +1,44 @@
+{
+  "assessments": {},
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "sh",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "pvc-budget-sh",
+  "inputConditions": [],
+  "inputFactor": "B^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [
+    "For each fixed ε strictly between zero and 1/2."
+  ],
+  "reader": {
+    "label": "Fixed power saving in the exponent",
+    "revision": 1,
+    "title": "Planar Vertex Cover by solution size under SH"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "2^(O(k^(1/2−ε))) B^(O(1))",
+  "runtimeSymbols": [
+    "k",
+    "ε",
+    "B"
+  ],
+  "sources": [
+    {
+      "editionId": "v2",
+      "locator": "Table 1, Planar Vertex Cover by solution budget, p. 4",
+      "paperId": "sh26",
+      "placement": "statement",
+      "role": "benchmark"
+    }
+  ],
+  "statement": "Under SH, no deterministic algorithm decides Planar Vertex Cover within the stated running time.",
+  "status": "established",
+  "supported": true
+}

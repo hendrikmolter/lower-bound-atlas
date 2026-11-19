@@ -1,0 +1,57 @@
+{
+  "assessments": {
+    "eth": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unassessed"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "three-dimensional-matching-eth",
+  "inputConditions": [],
+  "inputFactor": "m^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [],
+  "reader": {
+    "explanation": "The reduction gives q=6M for a formula with M clauses. The set of distinct triples has size at most q³, so the displayed polynomial factor can be absorbed into the exponent.",
+    "label": "Subexponential bound in the common part size",
+    "revision": 1,
+    "title": "Subexponential bound in the common part size under ETH"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "2^(o(q)) m^(O(1))",
+  "runtimeSymbols": [
+    "q",
+    "m"
+  ],
+  "sources": [
+    {
+      "editionId": "journal",
+      "locator": "§3, p. 1082, immediately before §3.1",
+      "paperId": "bovz2016-vector",
+      "placement": "statement",
+      "role": "published lower bound"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm solves Three-Dimensional Matching within the stated running time.",
+  "status": "established",
+  "supported": true
+}

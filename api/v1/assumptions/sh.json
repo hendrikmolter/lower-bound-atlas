@@ -1,0 +1,20 @@
+{
+  "access": "Stearns and Hunt introduced SH. For the normalized length convention, see the introduction and footnotes 1–2 in arXiv:2611.02650v2, pp. 1–2.",
+  "aliases": [
+    "SH",
+    "SAT power index one"
+  ],
+  "conventions": "Whole fixed-power exclusion family. Conversions to variable count, clause count or combinatorial length require the stated normalization or sparsification argument.",
+  "definition": "The deterministic decision power index of CNF-SAT is one.",
+  "id": "sh",
+  "model": "Explicit CNF-SAT with the source encoding length as the size measure.",
+  "name": "Satisfiability Hypothesis",
+  "quantifiers": "For each fixed 0 < a < 1 there is no deterministic 2^O(n^a) · poly(n) SAT algorithm, with n the normalized input length.",
+  "revision": 1,
+  "source": {
+    "editionId": "journal",
+    "locator": "Definition 2.1, p. 210, and Satisfiability Hypothesis, §2, p. 213",
+    "paperId": "sh1990",
+    "role": "hypothesis origin"
+  }
+}

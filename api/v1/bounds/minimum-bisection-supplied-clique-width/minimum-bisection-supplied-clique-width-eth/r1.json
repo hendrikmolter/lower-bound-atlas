@@ -1,0 +1,58 @@
+{
+  "assessments": {
+    "eth": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unassessed"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "minimum-bisection-supplied-clique-width-eth",
+  "inputConditions": [],
+  "inputFactor": "n^(o(t))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [
+    "For every computable function f."
+  ],
+  "reader": {
+    "label": "Sublinear exponent in the expression width",
+    "revision": 1,
+    "title": "Sublinear exponent in the expression width under ETH"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "f(t) n^(o(t))",
+  "runtimeSymbols": [
+    "t",
+    "n"
+  ],
+  "sources": [
+    {
+      "editionId": "journal",
+      "locator": "Corollary 4.8 and proof, p. 1557",
+      "paperId": "fgls2014-clique-width",
+      "placement": "statement",
+      "role": "published lower bound"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm solves Minimum Bisection within the stated running time.",
+  "status": "established",
+  "supported": true
+}

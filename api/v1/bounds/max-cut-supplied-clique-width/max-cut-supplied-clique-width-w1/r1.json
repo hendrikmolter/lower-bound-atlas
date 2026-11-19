@@ -1,0 +1,73 @@
+{
+  "assessments": {
+    "eth": {
+      "converse": {
+        "effectiveStatus": "unknown",
+        "evidence": [],
+        "status": "unknown"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unknown"
+    },
+    "sh": {
+      "converse": {
+        "effectiveStatus": "unknown",
+        "evidence": [],
+        "status": "unknown"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unknown"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "w1",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "hardnessBaseline": "W[1]",
+  "id": "max-cut-supplied-clique-width-w1",
+  "inputConditions": [],
+  "inputFactor": "B^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [
+    "The parameter factor f is an arbitrary computable function."
+  ],
+  "reader": {
+    "label": "Fixed-parameter tractability",
+    "revision": 1,
+    "title": "Fixed-parameter tractability under FPT ≠ W[1]"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "f(t) B^(O(1))",
+  "runtimeSymbols": [
+    "t",
+    "B"
+  ],
+  "sources": [
+    {
+      "editionId": "journal",
+      "locator": "§6, p. 1562, and the FPT reduction in Theorem 4.1",
+      "paperId": "fgls2014-clique-width",
+      "placement": "statement",
+      "role": "benchmark"
+    }
+  ],
+  "statement": "Under FPT ≠ W[1], no deterministic algorithm solves Max Cut within the stated running time.",
+  "status": "established",
+  "supported": true
+}

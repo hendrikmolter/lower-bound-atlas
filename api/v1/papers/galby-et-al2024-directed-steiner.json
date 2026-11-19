@@ -1,0 +1,24 @@
+{
+  "authors": [
+    "Esther Galby",
+    "Sándor Kisfaludi-Bak",
+    "Dániel Marx",
+    "Roohani Sharma"
+  ],
+  "editions": [
+    {
+      "access": "Published proceedings text inspected for Theorem 2(ii) and the out-star interface.",
+      "doi": "10.4230/LIPIcs.ICALP.2024.67",
+      "id": "proceedings",
+      "kind": "proceedings",
+      "label": "ICALP 2024, LIPIcs 297, Article 67",
+      "openUrl": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol297-icalp2024/LIPIcs.ICALP.2024.67/LIPIcs.ICALP.2024.67.pdf",
+      "preferredUrl": "https://doi.org/10.4230/LIPIcs.ICALP.2024.67",
+      "primaryUrl": "https://doi.org/10.4230/LIPIcs.ICALP.2024.67"
+    }
+  ],
+  "id": "galby-et-al2024-directed-steiner",
+  "preferredEditionId": "proceedings",
+  "preferredUrl": "https://doi.org/10.4230/LIPIcs.ICALP.2024.67",
+  "title": "Subexponential Parameterized Directed Steiner Network Problems on Planar Graphs: A Complete Classification"
+}

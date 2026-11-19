@@ -1,0 +1,1 @@
+Atlas. A single-exponential lower bound for Chromatic Number by vertex cover number · Theorem 1. chromatic-number-cover-w1, theorem cover-w1, proof revision 1. Edition v1.0.0, Git commit 5c6c72747978446d3f7009e6a5cf32d496b1d5ac. https://github.com/hendrikmolter/lower-bound-atlas/blob/5c6c72747978446d3f7009e6a5cf32d496b1d5ac/proofs/chromatic-number-cover-w1.tex

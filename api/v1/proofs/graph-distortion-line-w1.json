@@ -1,0 +1,33 @@
+{
+  "currentRevision": 1,
+  "id": "graph-distortion-line-w1",
+  "revisions": [
+    {
+      "authorship": {
+        "authors": [
+          "Atlas"
+        ],
+        "kind": "ai",
+        "origin": "atlas"
+      },
+      "dependencies": [],
+      "dependencyCoverage": "complete",
+      "pdf": "proofs/graph-distortion-line-w1.pdf",
+      "revision": 1,
+      "source": "proofs/graph-distortion-line-w1.tex",
+      "theorems": [
+        {
+          "destination": "graph-distortion-line-w1",
+          "label": "graph-distortion-line-w1",
+          "number": "1",
+          "reviewIds": [
+            "graph-distortion-line-w1-review"
+          ],
+          "statement": "Under FPT ≠ W[1], no deterministic algorithm decides integer or real line distortion in time 2^(h(d)) B^(O(1)) on connected simple unweighted bipartite graphs when h is finite, nonnegative, and effectively o(d log₂ d).",
+          "supports": true
+        }
+      ]
+    }
+  ],
+  "title": "An effective lower bound for bipartite line distortion"
+}

@@ -1,0 +1,150 @@
+{
+  "aliases": [],
+  "bounds": [
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unassessed"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "connected-vertex-cover-budget-eth",
+      "inputConditions": [],
+      "inputFactor": "n^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "explanation": "The proof first gives the linear-budget reduction to Connected Vertex Cover and then uses it for an edge-domination result.",
+        "label": "Subexponential-time bound",
+        "revision": 1,
+        "title": "Connected Vertex Cover under ETH: Subexponential-time bound"
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "2^(o(k)) n^(O(1))",
+      "runtimeSymbols": [
+        "k",
+        "n"
+      ],
+      "sources": [
+        {
+          "editionId": "journal",
+          "locator": "Proof of Theorem 10.8",
+          "paperId": "hermelin-et-al2019-domination",
+          "placement": "statement",
+          "role": "published SAT and Vertex Cover transfer to Connected Vertex Cover"
+        },
+        {
+          "editionId": "journal",
+          "locator": "Corollary 1",
+          "paperId": "ipz2001",
+          "placement": "forward",
+          "role": "decision sparsification"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm solves the stated decision problem within the stated running time.",
+      "status": "established",
+      "supported": true
+    }
+  ],
+  "coverage": "Lower bounds for solution budget.",
+  "encoding": "A finite simple undirected graph G and a nonnegative integer budget k.",
+  "id": "connected-vertex-cover-budget",
+  "inputConditions": [],
+  "kind": "lower-bound-case",
+  "parameter": "The solution budget k.",
+  "problemDefinitionHash": "681aa719408ee4444c5c3d6e60cd7f5b0b53ffb9ce115012528328e78d1f3b83",
+  "problemId": "connected-vertex-cover",
+  "problemRevision": 1,
+  "reader": {
+    "anchor": "connected-vertex-cover-budget",
+    "parameter": "The solution budget k.",
+    "parameterLabel": "Solution budget",
+    "parameterSymbols": [
+      {
+        "meaning": "solution budget",
+        "symbol": "k"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "number of vertices",
+        "symbol": "n"
+      },
+      {
+        "meaning": "complete explicit binary input length",
+        "symbol": "B"
+      }
+    ]
+  },
+  "recoveryComparisons": [
+    {
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "connected-vertex-cover-budget-eth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "np_qp",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "connected-vertex-cover-budget-eth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "connected-vertex-cover-budget-eth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "connected-vertex-cover-budget-eth",
+        "revision": 1
+      }
+    }
+  ],
+  "resolutions": [],
+  "revision": 2,
+  "task": "Is there a vertex cover of size at most k inducing a connected subgraph?",
+  "title": "Connected Vertex Cover by solution budget",
+  "variant": "Connected Vertex Cover"
+}

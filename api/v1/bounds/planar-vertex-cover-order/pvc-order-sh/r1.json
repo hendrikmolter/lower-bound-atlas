@@ -1,0 +1,51 @@
+{
+  "assessments": {},
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "sh",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "pvc-order-sh",
+  "inputConditions": [],
+  "inputFactor": "B^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [
+    "For each fixed ε strictly between zero and 1/2."
+  ],
+  "reader": {
+    "label": "Fixed power saving in the exponent",
+    "revision": 1,
+    "title": "Planar Vertex Cover by graph order under SH"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "2^(O(n^(1/2−ε))) B^(O(1))",
+  "runtimeSymbols": [
+    "n",
+    "ε",
+    "B"
+  ],
+  "sources": [
+    {
+      "editionId": "v3",
+      "locator": "Table 1, Weak ETH row",
+      "paperId": "szeider2026",
+      "placement": "statement",
+      "role": "Weak ETH formulation"
+    },
+    {
+      "editionId": "book",
+      "locator": "Theorem 14.9 and Exercise 14.3(a)",
+      "paperId": "cygan2015",
+      "placement": "statement",
+      "role": "benchmark"
+    }
+  ],
+  "statement": "Under SH, no deterministic algorithm decides Planar Vertex Cover within the stated running time.",
+  "status": "established",
+  "supported": true
+}

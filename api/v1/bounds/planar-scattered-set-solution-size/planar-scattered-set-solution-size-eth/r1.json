@@ -1,0 +1,48 @@
+{
+  "assessments": {},
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "planar-scattered-set-solution-size-eth",
+  "inputConditions": [],
+  "inputFactor": "n is the base of the exponent",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [],
+  "reader": {
+    "label": "Exponent sublinear in the square root of the parameter",
+    "revision": 1
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "f(k) n^(o(k^(1/2)))",
+  "runtimeSymbols": [
+    "f",
+    "k",
+    "n"
+  ],
+  "sources": [
+    {
+      "editionId": "book",
+      "locator": "Theorem 14.32, pp. 497–499",
+      "paperId": "cygan2015",
+      "placement": "statement",
+      "role": "lower-bound statement"
+    },
+    {
+      "editionId": "journal",
+      "locator": "§1, lower-bound paragraph, p. 13:6",
+      "paperId": "marx-pilipczuk-scattered",
+      "placement": "statement",
+      "role": "published statement of the planar d-Scattered Set lower bound"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm solves Planar Scattered Set within the stated running time.",
+  "status": "established",
+  "supported": true
+}

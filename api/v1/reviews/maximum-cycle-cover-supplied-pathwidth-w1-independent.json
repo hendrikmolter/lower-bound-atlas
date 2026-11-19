@@ -1,0 +1,20 @@
+{
+  "applicable": true,
+  "date": "2026-11-18",
+  "evidence": "evidence/maximum-cycle-cover-supplied-pathwidth-w1-independent.md",
+  "id": "maximum-cycle-cover-supplied-pathwidth-w1-independent",
+  "independent": true,
+  "label": "Agent verified",
+  "object": {
+    "id": "maximum-cycle-cover-supplied-pathwidth-w1-proof",
+    "revision": 1,
+    "theorem": "maximum-cycle-cover-supplied-pathwidth-w1",
+    "type": "proof"
+  },
+  "reviewer": "Codex agent population_c",
+  "scope": "Checks the Clique and permutation table reduction, arbitrary table cycle packing host, degree reduction, spanning cover construction, supplied pathwidth, size and deterministic FPT transfer with effective rates.",
+  "sourceSha256": "6af540c87cec7a6629b5c8dcaf56ac474f8cf1197632394464181fad0fc39c94",
+  "stale": false,
+  "type": "agent",
+  "verdict": "verified"
+}

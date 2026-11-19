@@ -1,0 +1,1 @@
+Marek Cygan, Marcin Pilipczuk, Michał Pilipczuk. Known Algorithms for Edge Clique Cover Are Probably Optimal. SIAM J. Comput. 45(1) (2016), 67–83. https://doi.org/10.1137/130947076

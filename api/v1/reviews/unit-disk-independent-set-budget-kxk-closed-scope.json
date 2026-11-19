@@ -1,0 +1,19 @@
+{
+  "applicable": true,
+  "date": "2026-11-18",
+  "evidence": "evidence/six-w1-memberships-independent.md",
+  "id": "unit-disk-independent-set-budget-kxk-closed-scope",
+  "independent": true,
+  "label": "Agent verified",
+  "object": {
+    "caseId": "unit-disk-independent-set-budget",
+    "id": "unit-disk-independent-set-budget-kxk",
+    "revision": 2,
+    "type": "bound"
+  },
+  "reviewer": "Codex agent /root/population_c",
+  "scope": "The boundary transfer preserves graph intersections, number of objects and selection budget. The polynomial growth in complete bit length is absorbed by the input factor.",
+  "stale": false,
+  "type": "agent",
+  "verdict": "verified"
+}

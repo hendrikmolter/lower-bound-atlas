@@ -1,0 +1,1 @@
+Benjamin Bergougnoux, Tuukka Korhonen, Jesper Nederlof. Tight Lower Bounds for Problems Parameterized by Rank-Width. STACS 2023, LIPIcs 254, pp. 11:1–11:17. https://doi.org/10.4230/LIPIcs.STACS.2023.11

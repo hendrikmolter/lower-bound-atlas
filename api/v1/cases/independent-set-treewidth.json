@@ -1,0 +1,247 @@
+{
+  "aliases": [],
+  "bounds": [
+    {
+      "assessments": {},
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "is-tw-eth",
+      "inputConditions": [],
+      "inputFactor": "n^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "label": "Exponential in the treewidth",
+        "revision": 1,
+        "title": "Independent Set by treewidth under ETH"
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "2^(o(t)) n^(O(1))",
+      "runtimeSymbols": [
+        "t",
+        "n"
+      ],
+      "sources": [
+        {
+          "editionId": "bulletin",
+          "locator": "Theorem 6.2, p. 62",
+          "paperId": "lms2011",
+          "placement": "statement",
+          "role": "benchmark"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm decides Independent Set within the stated running time.",
+      "status": "established",
+      "supported": true
+    },
+    {
+      "assessments": {},
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "w1",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "is-tw-w1",
+      "inputConditions": [
+        "maximum-degree-three",
+        "equal-pathwidth"
+      ],
+      "inputFactor": "B^(O(1))",
+      "proofs": [
+        {
+          "proofId": "independent-set-treewidth-w1-proof",
+          "revision": 1,
+          "theorem": "is-treewidth"
+        }
+      ],
+      "provenance": "atlas",
+      "qualifications": [
+        "The exponent h(t) is finite and nonnegative.",
+        "There is a computable function T such that h(t) ≤ η max(t, 1) whenever t ≥ T(η), for each positive rational η.",
+        "The proof also permits the solver to receive the exact width and an optimal path decomposition, counted in the complete input length."
+      ],
+      "reader": {
+        "label": "Effective little-o bound in the treewidth",
+        "notation": "effective-little-o",
+        "notationLabel": "Effective little-o",
+        "revision": 1
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "2^(o_eff(t)) B^(O(1))",
+      "runtimeSymbols": [
+        "t",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "journal",
+          "locator": "W[1]-completeness of Independent Set, with Clique by complementation",
+          "paperId": "df1995",
+          "placement": "proof",
+          "role": "source hardness"
+        }
+      ],
+      "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Independent Set within the stated running time.",
+      "status": "established",
+      "supported": true
+    }
+  ],
+  "coverage": "Selected literature bounds for this parameterization.",
+  "encoding": "Explicit binary graph encoding with individually represented vertices and a binary solution threshold. B is the complete input length.",
+  "id": "independent-set-treewidth",
+  "inputConditions": [
+    {
+      "condition": "The graph is finite, simple, undirected, and unweighted.",
+      "id": "graph-class",
+      "level": "problem"
+    },
+    {
+      "condition": "The maximum degree of G is at most three.",
+      "id": "maximum-degree-three",
+      "level": "bound"
+    },
+    {
+      "condition": "The pathwidth of G equals its treewidth.",
+      "id": "equal-pathwidth",
+      "level": "bound"
+    }
+  ],
+  "kind": "lower-bound-case",
+  "parameter": "The intrinsic treewidth t of G.",
+  "problemDefinitionHash": "6fe0108aa6b3df98d29b1ee8450fbb8ed4348f500e86e17718dd16c389a351d5",
+  "problemId": "independent-set",
+  "problemRevision": 1,
+  "reader": {
+    "anchor": "treewidth",
+    "boundContext": "The intrinsic treewidth t of G. A tree decomposition is optional for the decision problem and is absent from this input. The letter B denotes the input length in bits.",
+    "parameter": "The intrinsic treewidth t of G.",
+    "parameterLabel": "Treewidth",
+    "parameterSymbols": [
+      {
+        "meaning": "treewidth of the input graph",
+        "symbol": "t"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "number of vertices",
+        "symbol": "n"
+      },
+      {
+        "meaning": "solution threshold",
+        "symbol": "k"
+      },
+      {
+        "meaning": "complete input length in bits",
+        "symbol": "B"
+      }
+    ]
+  },
+  "recoveryAssessments": [
+    {
+      "comparison": "The exclusion reaches the historical treewidth exponent scale for effectively sublinear exponents. It holds on graphs of maximum degree three whose pathwidth equals their treewidth.",
+      "effective": true,
+      "evidence": [
+        {
+          "proofId": "independent-set-treewidth-w1-proof",
+          "revision": 1,
+          "theorem": "is-treewidth"
+        }
+      ],
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "recoveredScale": "t",
+      "recovery": {
+        "id": "is-tw-w1",
+        "revision": 1
+      },
+      "scale": "full",
+      "target": {
+        "id": "is-tw-eth",
+        "revision": 1
+      },
+      "targetScale": "t"
+    }
+  ],
+  "recoveryComparisons": [
+    {
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "is-tw-eth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "np_qp",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "is-tw-eth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "is-tw-eth",
+        "revision": 1
+      }
+    },
+    {
+      "comparison": "The exclusion reaches the historical treewidth exponent scale for effectively sublinear exponents. It holds on graphs of maximum degree three whose pathwidth equals their treewidth.",
+      "effective": true,
+      "evidence": [
+        {
+          "proofId": "independent-set-treewidth-w1-proof",
+          "revision": 1,
+          "theorem": "is-treewidth"
+        }
+      ],
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "recoveredScale": "t",
+      "recovery": {
+        "id": "is-tw-w1",
+        "revision": 1
+      },
+      "scale": "full",
+      "status": "effective",
+      "target": {
+        "id": "is-tw-eth",
+        "revision": 1
+      },
+      "targetScale": "t"
+    }
+  ],
+  "resolutions": [],
+  "revision": 3,
+  "task": "Does G have at least k pairwise nonadjacent vertices?",
+  "title": "Independent Set by treewidth",
+  "variant": "Independent Set"
+}

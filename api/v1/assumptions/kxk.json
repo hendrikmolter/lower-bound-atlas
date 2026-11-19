@@ -1,0 +1,20 @@
+{
+  "aliases": [
+    "Square Clique Hypothesis",
+    "k-by-k Clique Hypothesis"
+  ],
+  "conventions": "The selected vertices may share columns.",
+  "definition": "Given an explicit k × k array of vertices and their edges, no deterministic 2^(o(k log₂ k))-time algorithm decides whether a clique meets every row.",
+  "id": "kxk",
+  "model": "The graph is given explicitly.",
+  "name": "k × k Clique Hypothesis",
+  "quantifiers": "The exclusion concerns the worst-case running time as the number of rows k grows.",
+  "revision": 1,
+  "source": {
+    "editionId": "v3",
+    "locator": "Section 2, hypothesis definition on p. 2 and deterministic convention on p. 3",
+    "paperId": "szeider2026",
+    "placement": "statement",
+    "role": "defining hypothesis"
+  }
+}

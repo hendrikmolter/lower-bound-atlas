@@ -1,0 +1,1 @@
+MIT Hardness Group, Josh Brunner, Erik D. Demaine, Fabian Frei, Timothy Gomez, Markus Hecher, Jeffery Li, Jayson Lynch. ETH is Dead, Long Live SH. arXiv:2611.02650v1, 2 November 2026. https://arxiv.org/abs/2611.02650v1

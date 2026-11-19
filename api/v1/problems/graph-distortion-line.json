@@ -1,0 +1,10 @@
+{
+  "id": "graph-distortion-line",
+  "input": "A connected finite simple unweighted undirected graph G and a positive integer distortion threshold d.",
+  "name": "Graph Distortion into a line",
+  "parameterizations": [
+    "graph-distortion-line"
+  ],
+  "question": "Does the shortest-path metric of G admit a noncontracting embedding into the line that expands no distance by more than a factor d?",
+  "revision": 1
+}

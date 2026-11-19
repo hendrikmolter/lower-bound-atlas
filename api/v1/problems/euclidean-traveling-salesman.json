@@ -1,0 +1,10 @@
+{
+  "id": "euclidean-traveling-salesman",
+  "input": "A set P of n points with explicitly encoded rational coordinates in fixed dimension d and a nonnegative rational threshold T.",
+  "name": "Euclidean Traveling Salesman",
+  "parameterizations": [
+    "euclidean-traveling-salesman-points"
+  ],
+  "question": "Is there a cycle visiting every point of total Euclidean length at most T?",
+  "revision": 1
+}

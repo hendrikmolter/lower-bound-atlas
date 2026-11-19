@@ -1,0 +1,71 @@
+{
+  "assessments": {
+    "eth": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unassessed"
+    },
+    "sh": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unassessed"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "sh",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "square-sh",
+  "inputConditions": [],
+  "inputFactor": "N^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [
+    "For every fixed 0 < ε < 1."
+  ],
+  "reader": {
+    "label": "Fixed-power bound",
+    "revision": 1
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "2^(O(k^(1−ε))) N^(O(1))",
+  "runtimeSymbols": [
+    "k",
+    "N"
+  ],
+  "sources": [
+    {
+      "editionId": "v2",
+      "locator": "Table 1, k × k Clique row, p. 4, and Theorem 3.1, p. 8",
+      "paperId": "sh26",
+      "placement": "statement",
+      "role": "lower bound"
+    }
+  ],
+  "statement": "Under SH, no deterministic algorithm decides k × k Clique within the stated running time.",
+  "status": "established",
+  "supported": true
+}

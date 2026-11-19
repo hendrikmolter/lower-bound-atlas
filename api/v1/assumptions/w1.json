@@ -1,0 +1,18 @@
+{
+  "aliases": [
+    "deterministic W[1] separation"
+  ],
+  "conventions": "No restriction to polynomial, elementary or quasipolynomial growth of f. Randomized separation would be another premise.",
+  "definition": "Some parameterized problem in W[1] has no deterministic fixed-parameter tractable decision algorithm.",
+  "id": "w1",
+  "model": "Deterministic uniform algorithms on explicitly encoded inputs, under fixed-parameter reductions.",
+  "name": "FPT ≠ W[1]",
+  "quantifiers": "An FPT algorithm has time f(k) · L^C for a computable function f, a fixed constant C, parameter k, and complete input length L.",
+  "revision": 1,
+  "source": {
+    "editionId": "journal",
+    "locator": "Definition 1.9, p. 874, and Definitions 3.5–3.6, p. 882",
+    "paperId": "df1995-basic",
+    "role": "class definitions"
+  }
+}

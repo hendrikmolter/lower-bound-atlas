@@ -1,0 +1,24 @@
+{
+  "authors": [
+    "Jens Gramm",
+    "Jiong Guo",
+    "Falk Hüffner",
+    "Rolf Niedermeier"
+  ],
+  "editions": [
+    {
+      "access": "Published text checked for §2, Rules 1 and 3′, and Theorem 1, pp. 2.2:4–2.2:7. The linked author manuscript is also available.",
+      "doi": "10.1145/1412228.1412236",
+      "id": "journal",
+      "kind": "journal",
+      "label": "ACM Journal of Experimental Algorithmics 13 (2009), Article 2.2",
+      "openUrl": "https://hueffner.de/falk/clique-cover-jea07.pdf",
+      "preferredUrl": "https://doi.org/10.1145/1412228.1412236",
+      "primaryUrl": "https://doi.org/10.1145/1412228.1412236"
+    }
+  ],
+  "id": "gramm-guo-hueffner-niedermeier2009",
+  "preferredEditionId": "journal",
+  "preferredUrl": "https://doi.org/10.1145/1412228.1412236",
+  "title": "Data Reduction and Exact Algorithms for Clique Cover"
+}

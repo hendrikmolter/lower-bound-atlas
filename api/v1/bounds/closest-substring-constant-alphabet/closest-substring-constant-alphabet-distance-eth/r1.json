@@ -1,0 +1,66 @@
+{
+  "assessments": {
+    "eth": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unassessed"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "closest-substring-constant-alphabet-distance-eth",
+  "inputConditions": [],
+  "inputFactor": "N^(o(log₂ d))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [
+    "For every computable joint prefactor f."
+  ],
+  "reader": {
+    "label": "Logarithmic distance exponent",
+    "revision": 1,
+    "title": "Constant-alphabet Closest Substring under ETH: Logarithmic distance exponent"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "f(d,r) N^(o(log₂ d))",
+  "runtimeSymbols": [
+    "d",
+    "r",
+    "N"
+  ],
+  "sources": [
+    {
+      "editionId": "bulletin",
+      "locator": "Theorem 5.6, p. 60",
+      "paperId": "lms2011",
+      "placement": "statement",
+      "role": "conditional lower bound"
+    },
+    {
+      "editionId": "journal",
+      "locator": "Sections 7–8",
+      "paperId": "marx2008-closest-substring",
+      "placement": "context",
+      "role": "original reduction and rate analysis"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm solves the stated decision problem within the stated running time.",
+  "status": "established",
+  "supported": true
+}

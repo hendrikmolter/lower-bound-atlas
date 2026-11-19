@@ -1,0 +1,11 @@
+{
+  "id": "max-cut",
+  "input": "A finite simple undirected graph G and a nonnegative integer cut threshold b in binary.",
+  "name": "Max Cut",
+  "parameterizations": [
+    "max-cut-clique-width",
+    "max-cut-supplied-clique-width"
+  ],
+  "question": "Is there a bipartition of the vertices with at least b edges between its parts?",
+  "revision": 1
+}

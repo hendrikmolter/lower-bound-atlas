@@ -1,0 +1,10 @@
+{
+  "id": "strongly-connected-steiner-subgraph",
+  "input": "An explicitly encoded unweighted directed graph G, a specified terminal set, and a nonnegative integer k.",
+  "name": "Strongly Connected Steiner Subgraph",
+  "parameterizations": [
+    "strongly-connected-steiner-subgraph-solution-vertices"
+  ],
+  "question": "Is there a strongly connected subgraph containing the terminals with at most k vertices in total?",
+  "revision": 1
+}

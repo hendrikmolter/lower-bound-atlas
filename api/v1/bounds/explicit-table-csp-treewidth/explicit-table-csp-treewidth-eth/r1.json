@@ -1,0 +1,58 @@
+{
+  "assessments": {
+    "eth": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unassessed"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "explicit-table-csp-treewidth-eth",
+  "inputConditions": [],
+  "inputFactor": "N^(o(t))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [
+    "For every computable f."
+  ],
+  "reader": {
+    "label": "Sublinear exponent in treewidth",
+    "revision": 1,
+    "title": "Explicit-table CSP under ETH: Sublinear exponent in treewidth"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "f(t) N^(o(t))",
+  "runtimeSymbols": [
+    "t",
+    "N"
+  ],
+  "sources": [
+    {
+      "editionId": "bulletin",
+      "locator": "Theorem 6.6, p. 66",
+      "paperId": "lms2011",
+      "placement": "statement",
+      "role": "conditional lower bound"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm solves the stated decision problem within the stated running time.",
+  "status": "established",
+  "supported": true
+}

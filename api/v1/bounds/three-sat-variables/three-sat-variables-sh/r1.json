@@ -1,0 +1,59 @@
+{
+  "assessments": {
+    "sh": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unassessed"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "sh",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "three-sat-variables-sh",
+  "inputConditions": [],
+  "inputFactor": "B^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [
+    "For each fixed 0<ε<1."
+  ],
+  "reader": {
+    "explanation": "Theorem 2.4 gives the equivalence to the whole variable-count exclusion family.",
+    "label": "Fixed-power exclusion",
+    "revision": 1,
+    "title": "3SAT under SH: Fixed-power exclusion"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "2^(O(n^(1−ε))) B^(O(1))",
+  "runtimeSymbols": [
+    "n",
+    "B"
+  ],
+  "sources": [
+    {
+      "editionId": "v2",
+      "locator": "Table 1 and Theorem 2.4",
+      "paperId": "sh26",
+      "placement": "statement",
+      "role": "conditional lower bound"
+    }
+  ],
+  "statement": "Under SH, no deterministic algorithm solves the stated decision problem within the stated running time.",
+  "status": "established",
+  "supported": true
+}

@@ -1,0 +1,83 @@
+{
+  "assessments": {
+    "w1": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "established",
+        "evidence": [
+          {
+            "boundRevision": 2,
+            "hypothesisRevision": 1,
+            "proof": {
+              "proofId": "ilp-equations-w1-effective",
+              "revision": 2,
+              "theorem": "ilp-equations-w1-effective"
+            },
+            "reviewId": "ilp-equations-w1-all-ones-review"
+          }
+        ],
+        "status": "established"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "hypothesis-implies-bound"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "w1",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "ilp-equations-w1-effective",
+  "inputConditions": [
+    "binary-coefficients",
+    "all-ones-right-hand-side",
+    "nonzero-columns"
+  ],
+  "inputFactor": "N^C",
+  "proofs": [
+    {
+      "proofId": "ilp-equations-w1-effective",
+      "revision": 2,
+      "theorem": "ilp-equations-w1-effective"
+    }
+  ],
+  "provenance": "atlas",
+  "qualifications": [
+    "For every fixed C ≥ 0 and every finite nonnegative function h, assume there is a computable threshold function T with h(k) ≤ k/j for every positive integer j and every k ≥ T(j).",
+    "The function h itself need not be computable."
+  ],
+  "reader": {
+    "explanation": "The column count is unrestricted. The proof uses Lin’s incidence matrix with exact-one rows in place of covering constraints.",
+    "label": "Effective sublinear exponent with an all-ones right-hand side",
+    "revision": 2,
+    "title": "All-ones right-hand-side integer programming under FPT ≠ W[1]"
+  },
+  "reviewIds": [],
+  "revision": 2,
+  "runtime": "2^(h(k)) N^C",
+  "runtimeSymbols": [
+    "k",
+    "h",
+    "N",
+    "C"
+  ],
+  "sources": [
+    {
+      "editionId": "proceedings",
+      "locator": "Lemma 14, pp. 81:11–81:12",
+      "paperId": "lin2019",
+      "placement": "forward",
+      "role": "incidence construction and compatibility rows from Multicolored Clique"
+    }
+  ],
+  "statement": "Under FPT ≠ W[1], no deterministic algorithm decides feasibility of Ax=b for the stated all-ones right-hand side within the stated running time.",
+  "status": "established",
+  "supported": true
+}

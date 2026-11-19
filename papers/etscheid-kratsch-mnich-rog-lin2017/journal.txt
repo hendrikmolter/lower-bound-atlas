@@ -1,0 +1,1 @@
+Michael Etscheid, Stefan Kratsch, Matthias Mnich, Heiko Röglin. Polynomial kernels for weighted problems. Journal of Computer and System Sciences 84 (2017), pp. 1–10. https://doi.org/10.1016/j.jcss.2016.06.004

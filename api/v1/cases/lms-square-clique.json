@@ -1,0 +1,508 @@
+{
+  "aliases": [
+    "Square Clique",
+    "k-by-k Clique"
+  ],
+  "bounds": [
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unassessed"
+        },
+        "kxk": {
+          "converse": {
+            "effectiveStatus": "established",
+            "evidence": [
+              {
+                "boundRevision": 2,
+                "hypothesisRevision": 1,
+                "reviewId": "square-eth-equivalence-review",
+                "source": {
+                  "editionId": "v3",
+                  "locator": "Section 2, hypothesis definition on p. 2 and deterministic convention on p. 3",
+                  "paperId": "szeider2026",
+                  "placement": "proof",
+                  "role": "defining hypothesis"
+                }
+              }
+            ],
+            "status": "established"
+          },
+          "forward": {
+            "effectiveStatus": "established",
+            "evidence": [
+              {
+                "boundRevision": 2,
+                "hypothesisRevision": 1,
+                "reviewId": "square-eth-equivalence-review",
+                "source": {
+                  "editionId": "v3",
+                  "locator": "Section 2, hypothesis definition on p. 2 and deterministic convention on p. 3",
+                  "paperId": "szeider2026",
+                  "placement": "statement",
+                  "role": "defining hypothesis"
+                }
+              }
+            ],
+            "status": "established"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "established-equivalent"
+        },
+        "sh": {
+          "converse": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unassessed"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "square-eth",
+      "inputConditions": [],
+      "inputFactor": "N^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "label": "Bound in the number of rows",
+        "revision": 2
+      },
+      "reviewIds": [
+        "square-eth-equivalence-review"
+      ],
+      "revision": 2,
+      "runtime": "2^(o(k log₂ k)) N^(O(1))",
+      "runtimeSymbols": [
+        "k",
+        "N"
+      ],
+      "sources": [
+        {
+          "editionId": "journal",
+          "locator": "Theorem 2.4, pp. 679–680",
+          "paperId": "lms2018",
+          "placement": "statement",
+          "role": "lower bound"
+        },
+        {
+          "editionId": "bulletin",
+          "locator": "Theorem 4.4",
+          "paperId": "lms2011",
+          "placement": "statement",
+          "role": "lower bound"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm decides k × k Clique within the stated running time.",
+      "status": "established",
+      "supported": true
+    },
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unassessed"
+        },
+        "kxk": {
+          "converse": {
+            "effectiveStatus": "established",
+            "evidence": [
+              {
+                "boundRevision": 2,
+                "hypothesisRevision": 1,
+                "reviewId": "square-kxk-equivalence-review",
+                "source": {
+                  "editionId": "v3",
+                  "locator": "Section 2, hypothesis definition on p. 2 and deterministic convention on p. 3",
+                  "paperId": "szeider2026",
+                  "placement": "proof",
+                  "role": "defining hypothesis"
+                }
+              }
+            ],
+            "status": "established"
+          },
+          "forward": {
+            "effectiveStatus": "established",
+            "evidence": [
+              {
+                "boundRevision": 2,
+                "hypothesisRevision": 1,
+                "reviewId": "square-kxk-equivalence-review",
+                "source": {
+                  "editionId": "v3",
+                  "locator": "Section 2, hypothesis definition on p. 2 and deterministic convention on p. 3",
+                  "paperId": "szeider2026",
+                  "placement": "statement",
+                  "role": "defining hypothesis"
+                }
+              }
+            ],
+            "status": "established"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "established-equivalent"
+        },
+        "sh": {
+          "converse": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unassessed"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "kxk",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "square-kxk",
+      "inputConditions": [],
+      "inputFactor": "N^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "explanation": "This exclusion is the defining statement of the k × k Clique Hypothesis.",
+        "label": "Defining lower bound",
+        "revision": 2
+      },
+      "reviewIds": [
+        "square-kxk-equivalence-review"
+      ],
+      "revision": 2,
+      "runtime": "2^(o(k log₂ k)) N^(O(1))",
+      "runtimeSymbols": [
+        "k",
+        "N"
+      ],
+      "sources": [
+        {
+          "editionId": "v3",
+          "locator": "Section 2, hypothesis definition on p. 2 and deterministic convention on p. 3",
+          "paperId": "szeider2026",
+          "placement": "statement",
+          "role": "defining hypothesis"
+        }
+      ],
+      "statement": "Under the k × k Clique Hypothesis, no deterministic algorithm decides k × k Clique within the stated running time.",
+      "status": "established",
+      "supported": true
+    },
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unassessed"
+        },
+        "sh": {
+          "converse": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unassessed"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "sh",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "square-sh",
+      "inputConditions": [],
+      "inputFactor": "N^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [
+        "For every fixed 0 < ε < 1."
+      ],
+      "reader": {
+        "label": "Fixed-power bound",
+        "revision": 1
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "2^(O(k^(1−ε))) N^(O(1))",
+      "runtimeSymbols": [
+        "k",
+        "N"
+      ],
+      "sources": [
+        {
+          "editionId": "v2",
+          "locator": "Table 1, k × k Clique row, p. 4, and Theorem 3.1, p. 8",
+          "paperId": "sh26",
+          "placement": "statement",
+          "role": "lower bound"
+        }
+      ],
+      "statement": "Under SH, no deterministic algorithm decides k × k Clique within the stated running time.",
+      "status": "established",
+      "supported": true
+    }
+  ],
+  "coverage": "Literature bounds under ETH, SH, and the k × k Clique Hypothesis.",
+  "encoding": "Explicit graph on k² vertices. N is the complete input length in bits.",
+  "id": "lms-square-clique",
+  "inputConditions": [],
+  "kind": "lower-bound-case",
+  "parameter": "Number of rows k",
+  "problemDefinitionHash": "57a60791b921669d28d31a43ab0ec5bc6ab459b7c6378a058a93ba67f3ee6364",
+  "problemId": "square-clique",
+  "problemRevision": 1,
+  "reader": {
+    "anchor": "rows",
+    "parameter": "The number k of rows.",
+    "parameterLabel": "Number of rows",
+    "parameterSymbols": [
+      {
+        "meaning": "number of rows in the square grid",
+        "symbol": "k"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "Input length in bits.",
+        "symbol": "N"
+      }
+    ]
+  },
+  "recoveryAssessments": [
+    {
+      "comparison": "The defining exclusion has the same running time and input scope as the historical ETH lower bound.",
+      "effective": false,
+      "evidence": [
+        {
+          "editionId": "v3",
+          "locator": "Section 2, hypothesis definition on p. 2 and deterministic convention on p. 3",
+          "paperId": "szeider2026",
+          "placement": "statement",
+          "role": "defining hypothesis"
+        },
+        {
+          "editionId": "journal",
+          "locator": "Theorem 2.4, pp. 679–680",
+          "paperId": "lms2018",
+          "placement": "statement",
+          "role": "lower bound"
+        }
+      ],
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "recoveredScale": "k log₂ k",
+      "recovery": {
+        "id": "square-kxk",
+        "revision": 2
+      },
+      "scale": "full",
+      "target": {
+        "id": "square-eth",
+        "revision": 2
+      },
+      "targetScale": "k log₂ k"
+    },
+    {
+      "comparison": "SH excludes every fixed exponent power below one in the number of rows k. This recovers degree one. The historical little-o family at k log₂ k remains unrecovered.",
+      "effective": false,
+      "evidence": [
+        {
+          "editionId": "v2",
+          "locator": "Table 1, k × k Clique row, p. 4, and Theorem 3.1, p. 8",
+          "paperId": "sh26",
+          "placement": "statement",
+          "role": "lower bound"
+        },
+        {
+          "editionId": "journal",
+          "locator": "Theorem 2.4, pp. 679–680",
+          "paperId": "lms2018",
+          "placement": "statement",
+          "role": "lower bound"
+        }
+      ],
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "recoveredScale": "k^(1−ε)",
+      "recovery": {
+        "id": "square-sh",
+        "revision": 1
+      },
+      "scale": "degree",
+      "target": {
+        "id": "square-eth",
+        "revision": 2
+      },
+      "targetScale": "k log₂ k"
+    }
+  ],
+  "recoveryComparisons": [
+    {
+      "comparison": "The defining exclusion has the same running time and input scope as the historical ETH lower bound.",
+      "effective": false,
+      "evidence": [
+        {
+          "editionId": "v3",
+          "locator": "Section 2, hypothesis definition on p. 2 and deterministic convention on p. 3",
+          "paperId": "szeider2026",
+          "placement": "statement",
+          "role": "defining hypothesis"
+        },
+        {
+          "editionId": "journal",
+          "locator": "Theorem 2.4, pp. 679–680",
+          "paperId": "lms2018",
+          "placement": "statement",
+          "role": "lower bound"
+        }
+      ],
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "recoveredScale": "k log₂ k",
+      "recovery": {
+        "id": "square-kxk",
+        "revision": 2
+      },
+      "scale": "full",
+      "status": "recovered",
+      "target": {
+        "id": "square-eth",
+        "revision": 2
+      },
+      "targetScale": "k log₂ k"
+    },
+    {
+      "hypothesis": {
+        "id": "np_qp",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "square-eth",
+        "revision": 2
+      }
+    },
+    {
+      "comparison": "SH excludes every fixed exponent power below one in the number of rows k. This recovers degree one. The historical little-o family at k log₂ k remains unrecovered.",
+      "effective": false,
+      "evidence": [
+        {
+          "editionId": "v2",
+          "locator": "Table 1, k × k Clique row, p. 4, and Theorem 3.1, p. 8",
+          "paperId": "sh26",
+          "placement": "statement",
+          "role": "lower bound"
+        },
+        {
+          "editionId": "journal",
+          "locator": "Theorem 2.4, pp. 679–680",
+          "paperId": "lms2018",
+          "placement": "statement",
+          "role": "lower bound"
+        }
+      ],
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "recoveredScale": "k^(1−ε)",
+      "recovery": {
+        "id": "square-sh",
+        "revision": 1
+      },
+      "scale": "degree",
+      "status": "degree",
+      "target": {
+        "id": "square-eth",
+        "revision": 2
+      },
+      "targetScale": "k log₂ k"
+    },
+    {
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "square-eth",
+        "revision": 2
+      }
+    }
+  ],
+  "resolutions": [],
+  "revision": 5,
+  "task": "Does the graph contain a clique with one vertex from each row?",
+  "title": "k × k Clique",
+  "variant": "One vertex per row"
+}

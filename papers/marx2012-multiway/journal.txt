@@ -1,0 +1,1 @@
+Dániel Marx. A Tight Lower Bound for Planar Multiway Cut. ICALP 2012, Part I, LNCS 7391, pp. 677–688. https://doi.org/10.1007/978-3-642-31594-7_57

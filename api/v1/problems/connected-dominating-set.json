@@ -1,0 +1,10 @@
+{
+  "id": "connected-dominating-set",
+  "input": "A finite simple undirected graph G and a nonnegative integer budget k.",
+  "name": "Connected Dominating Set",
+  "parameterizations": [
+    "connected-dominating-set-budget"
+  ],
+  "question": "Does G have a set of at most k vertices inducing a connected subgraph such that every vertex is in the set or has a neighbor in it?",
+  "revision": 1
+}

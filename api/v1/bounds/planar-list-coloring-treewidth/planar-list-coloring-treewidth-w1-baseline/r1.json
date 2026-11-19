@@ -1,0 +1,60 @@
+{
+  "assessments": {
+    "w1": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unassessed"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "w1",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "hardnessBaseline": "W[1]",
+  "id": "planar-list-coloring-treewidth-w1-baseline",
+  "inputConditions": [],
+  "inputFactor": "B^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [
+    "The parameter factor f is an arbitrary computable function and the exponent of B is an arbitrary fixed constant."
+  ],
+  "reader": {
+    "explanation": "The reduction from Grid Tiling produces planar graphs with intrinsic treewidth bounded by a function of the source parameter. The lists and palette are part of the input.",
+    "label": "Fixed-parameter tractability",
+    "revision": 1,
+    "title": "Planar List Coloring under FPT ≠ W[1]: Fixed-parameter tractability"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "f(t) B^(O(1))",
+  "runtimeSymbols": [
+    "t",
+    "B"
+  ],
+  "sources": [
+    {
+      "editionId": "book",
+      "locator": "Theorem 14.29 and its proof, pp. 492–493",
+      "paperId": "cygan2015",
+      "placement": "statement",
+      "role": "parameterized hardness"
+    }
+  ],
+  "statement": "Under FPT ≠ W[1], no deterministic algorithm solves this decision problem within the stated running time.",
+  "status": "established",
+  "supported": true
+}

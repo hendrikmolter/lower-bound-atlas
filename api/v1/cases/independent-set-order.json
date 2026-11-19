@@ -1,0 +1,360 @@
+{
+  "aliases": [],
+  "bounds": [
+    {
+      "assessments": {
+        "uniform-eth": {
+          "converse": {
+            "effectiveStatus": "established",
+            "evidence": [
+              {
+                "boundRevision": 2,
+                "hypothesisRevision": 4,
+                "reviewId": "is-order-eth-equivalence-review",
+                "source": {
+                  "editionId": "journal",
+                  "locator": "Theorem 5, p. 526",
+                  "paperId": "ipz2001",
+                  "placement": "proof",
+                  "role": "linear-variable reduction to 3-SAT"
+                }
+              }
+            ],
+            "status": "established"
+          },
+          "forward": {
+            "effectiveStatus": "established",
+            "evidence": [
+              {
+                "boundRevision": 2,
+                "hypothesisRevision": 4,
+                "reviewId": "is-order-eth-equivalence-review",
+                "source": {
+                  "editionId": "journal",
+                  "locator": "Corollary 2, p. 524, and Theorem 5, p. 526",
+                  "paperId": "ipz2001",
+                  "placement": "forward",
+                  "role": "sparsification and linear reduction from clause-count 3-SAT"
+                }
+              }
+            ],
+            "status": "established"
+          },
+          "hypothesisRevision": 4,
+          "verdict": "established-equivalent"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "is-order-eth",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "label": "Exponential in the number of vertices",
+        "revision": 2,
+        "title": "Independent Set by graph order under ETH"
+      },
+      "reviewIds": [
+        "is-order-eth-equivalence-review"
+      ],
+      "revision": 2,
+      "runtime": "2^(o(n)) B^(O(1))",
+      "runtimeSymbols": [
+        "n",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "bulletin",
+          "locator": "Theorem 3.3, p. 52",
+          "paperId": "lms2011",
+          "placement": "statement",
+          "role": "benchmark"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm decides Independent Set within the stated running time.",
+      "status": "established",
+      "supported": true
+    },
+    {
+      "assessments": {
+        "sh": {
+          "converse": {
+            "effectiveStatus": "established",
+            "evidence": [
+              {
+                "boundRevision": 2,
+                "proof": {
+                  "proofId": "classical-graph-sh-converse",
+                  "revision": 1,
+                  "theorem": "is-order-sh-converse"
+                },
+                "reviewId": "is-order-sh-converse-review",
+                "source": {
+                  "editionId": "v1",
+                  "locator": "Lemma 2.2, pp. 5–6",
+                  "paperId": "sh26",
+                  "placement": "proof",
+                  "role": "quantitative decision sparsification, preprint dependency"
+                }
+              }
+            ],
+            "status": "established"
+          },
+          "forward": {
+            "effectiveStatus": "established",
+            "evidence": [
+              {
+                "boundRevision": 2,
+                "reviewId": "is-order-sh-source-review",
+                "source": {
+                  "editionId": "v2",
+                  "locator": "Table 1, Independent Set, p. 4",
+                  "paperId": "sh26",
+                  "placement": "statement",
+                  "role": "benchmark"
+                }
+              }
+            ],
+            "status": "established"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "established-equivalent"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "sh",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "is-order-sh",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [
+        "For each fixed ε strictly between zero and 1."
+      ],
+      "reader": {
+        "label": "Fixed power saving in the exponent",
+        "revision": 2,
+        "title": "Independent Set by graph order under SH"
+      },
+      "reviewIds": [
+        "is-order-sh-source-review"
+      ],
+      "revision": 2,
+      "runtime": "2^(O(n^(1−ε))) B^(O(1))",
+      "runtimeSymbols": [
+        "n",
+        "ε",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "v2",
+          "locator": "Table 1, Independent Set, p. 4",
+          "paperId": "sh26",
+          "placement": "statement",
+          "role": "benchmark"
+        }
+      ],
+      "statement": "Under SH, no deterministic algorithm decides Independent Set within the stated running time.",
+      "status": "established",
+      "supported": true
+    }
+  ],
+  "coverage": "Selected literature bounds for this parameterization.",
+  "encoding": "Explicit binary graph encoding with individually represented vertices and a binary solution threshold. B is the complete input length.",
+  "id": "independent-set-order",
+  "inputConditions": [
+    {
+      "condition": "The graph is finite, simple, undirected, and unweighted.",
+      "id": "graph-class",
+      "level": "problem"
+    }
+  ],
+  "kind": "lower-bound-case",
+  "parameter": "The number of vertices n of G.",
+  "problemDefinitionHash": "6fe0108aa6b3df98d29b1ee8450fbb8ed4348f500e86e17718dd16c389a351d5",
+  "problemId": "independent-set",
+  "problemRevision": 1,
+  "reader": {
+    "anchor": "vertices",
+    "boundContext": "The number of vertices n of G. The letter B denotes the input length in bits.",
+    "parameter": "The number of vertices n of G.",
+    "parameterLabel": "Number of vertices",
+    "parameterSymbols": [
+      {
+        "meaning": "number of vertices",
+        "symbol": "n"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "solution threshold",
+        "symbol": "k"
+      },
+      {
+        "meaning": "complete input length in bits",
+        "symbol": "B"
+      },
+      {
+        "meaning": "a fixed positive saving in the exponent",
+        "symbol": "ε"
+      }
+    ]
+  },
+  "recoveryAssessments": [
+    {
+      "comparison": "The SH bound excludes every fixed power below one in the exponent of the graph order n.",
+      "effective": false,
+      "evidence": [
+        {
+          "editionId": "v2",
+          "locator": "Table 1, Independent Set, p. 4",
+          "paperId": "sh26",
+          "placement": "statement",
+          "role": "benchmark"
+        },
+        {
+          "editionId": "bulletin",
+          "locator": "Theorem 3.3, p. 52",
+          "paperId": "lms2011",
+          "placement": "statement",
+          "role": "benchmark"
+        }
+      ],
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "recoveredScale": "n^(1−ε)",
+      "recovery": {
+        "id": "is-order-sh",
+        "revision": 2
+      },
+      "scale": "degree",
+      "target": {
+        "id": "is-order-eth",
+        "revision": 2
+      },
+      "targetScale": "n"
+    }
+  ],
+  "recoveryComparisons": [
+    {
+      "formulation": {
+        "id": "uniform-eth",
+        "revision": 4
+      },
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "status": "equivalence",
+      "target": {
+        "id": "is-order-eth",
+        "revision": 2
+      }
+    },
+    {
+      "formulation": {
+        "id": "uniform-eth",
+        "revision": 4
+      },
+      "hypothesis": {
+        "id": "np_qp",
+        "revision": 1
+      },
+      "status": "equivalence",
+      "target": {
+        "id": "is-order-eth",
+        "revision": 2
+      }
+    },
+    {
+      "comparison": "The SH bound excludes every fixed power below one in the exponent of the graph order n.",
+      "effective": false,
+      "evidence": [
+        {
+          "editionId": "v2",
+          "locator": "Table 1, Independent Set, p. 4",
+          "paperId": "sh26",
+          "placement": "statement",
+          "role": "benchmark"
+        },
+        {
+          "editionId": "bulletin",
+          "locator": "Theorem 3.3, p. 52",
+          "paperId": "lms2011",
+          "placement": "statement",
+          "role": "benchmark"
+        }
+      ],
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "recoveredScale": "n^(1−ε)",
+      "recovery": {
+        "id": "is-order-sh",
+        "revision": 2
+      },
+      "scale": "degree",
+      "status": "degree",
+      "target": {
+        "id": "is-order-eth",
+        "revision": 2
+      },
+      "targetScale": "n"
+    },
+    {
+      "formulation": {
+        "id": "uniform-eth",
+        "revision": 4
+      },
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "status": "equivalence",
+      "target": {
+        "id": "is-order-eth",
+        "revision": 2
+      }
+    },
+    {
+      "formulation": {
+        "id": "uniform-eth",
+        "revision": 4
+      },
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "status": "equivalence",
+      "target": {
+        "id": "is-order-eth",
+        "revision": 2
+      }
+    }
+  ],
+  "resolutions": [],
+  "revision": 6,
+  "task": "Does G have at least k pairwise nonadjacent vertices?",
+  "title": "Independent Set by graph order",
+  "variant": "Independent Set"
+}

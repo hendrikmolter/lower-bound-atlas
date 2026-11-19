@@ -1,0 +1,49 @@
+{
+  "assessments": {},
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "subset-sum-item-count-eth",
+  "inputConditions": [],
+  "inputFactor": "B^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [],
+  "reader": {
+    "explanation": "The reduction has a linear number of items in the combined number of variables and clauses. Its item bit lengths are polynomial, so the ETH argument also excludes a fixed polynomial factor in the complete input length.",
+    "label": "Sublinear exponent in the number of items",
+    "revision": 1,
+    "title": "Subset Sum by item count under ETH"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "2^(o(p)) B^(O(1))",
+  "runtimeSymbols": [
+    "p",
+    "B"
+  ],
+  "sources": [
+    {
+      "editionId": "journal",
+      "locator": "Lemma 13 and proof, §3, p. 8",
+      "paperId": "etscheid-kratsch-mnich-rog-lin2017",
+      "placement": "statement",
+      "role": "published linear-item ETH reduction"
+    },
+    {
+      "editionId": "journal",
+      "locator": "p. 2317 and Section 5",
+      "paperId": "nederlof-swennenhuis2022",
+      "placement": "context",
+      "role": "independent statement of the item-count benchmark"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm decides Subset Sum within the stated running time.",
+  "status": "established",
+  "supported": true
+}

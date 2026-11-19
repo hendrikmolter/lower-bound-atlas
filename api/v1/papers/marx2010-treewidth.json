@@ -1,0 +1,20 @@
+{
+  "authors": [
+    "Dániel Marx"
+  ],
+  "editions": [
+    {
+      "access": "Published edition.",
+      "doi": "10.4086/toc.2010.v006a005",
+      "id": "journal",
+      "kind": "journal",
+      "label": "Theory of Computing 6 (2010), 85–112",
+      "preferredUrl": "https://doi.org/10.4086/toc.2010.v006a005",
+      "primaryUrl": "https://doi.org/10.4086/toc.2010.v006a005"
+    }
+  ],
+  "id": "marx2010-treewidth",
+  "preferredEditionId": "journal",
+  "preferredUrl": "https://doi.org/10.4086/toc.2010.v006a005",
+  "title": "Can You Beat Treewidth?"
+}

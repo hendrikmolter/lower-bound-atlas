@@ -1,0 +1,19 @@
+{
+  "applicable": true,
+  "date": "2026-11-18",
+  "evidence": "evidence/clique-literature-equivalences.md",
+  "id": "clique-order-sh-equivalence-review",
+  "independent": true,
+  "label": "Agent verified",
+  "object": {
+    "caseId": "clique-order",
+    "id": "clique-order-sh",
+    "revision": 2,
+    "type": "bound"
+  },
+  "reviewer": "Codex parent agent",
+  "scope": "Forward SH implication from the same-order Independent Set exclusion by explicit graph complementation.",
+  "stale": false,
+  "type": "agent",
+  "verdict": "verified"
+}

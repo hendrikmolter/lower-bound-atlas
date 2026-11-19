@@ -1,0 +1,248 @@
+{
+  "aliases": [
+    "survey-sh06"
+  ],
+  "bounds": [
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unassessed"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "graph-homomorphism-total-order-eth",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "explanation": "Apply the source theorem with h(n)=n and p≤2n. A fixed polynomial in the explicit graph encoding is absorbed by the positive-rate gap.",
+        "label": "Subexponential-time bound in total order",
+        "revision": 1,
+        "title": "Graph Homomorphism under ETH: Subexponential-time bound in total order"
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "2^(o(p log₂ p)) B^(O(1))",
+      "runtimeSymbols": [
+        "p",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "journal",
+          "locator": "Theorems 1.1 and 4.1, pp. 18:2 and 18:17–18:18",
+          "paperId": "cygan-et-al2017-embedding",
+          "placement": "statement",
+          "role": "conditional lower bound"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm solves the stated decision problem within the stated running time.",
+      "status": "established",
+      "supported": true
+    },
+    {
+      "assessments": {
+        "sh": {
+          "converse": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unassessed"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "sh",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "graph-homomorphism-total-order-sh",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [
+        "For each fixed 0<ε<1."
+      ],
+      "reader": {
+        "explanation": "The input vertex count is summed over the two explicit graphs.",
+        "label": "Fixed-power exclusion",
+        "revision": 1,
+        "title": "Graph Homomorphism under SH: Fixed-power exclusion"
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "2^(O(p^(1−ε))) B^(O(1))",
+      "runtimeSymbols": [
+        "p",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "v2",
+          "locator": "Table 1, Graph Homomorphism row",
+          "paperId": "sh26",
+          "placement": "statement",
+          "role": "conditional lower bound"
+        }
+      ],
+      "statement": "Under SH, no deterministic algorithm solves the stated decision problem within the stated running time.",
+      "status": "established",
+      "supported": true
+    }
+  ],
+  "coverage": "Lower bounds for total graph order.",
+  "encoding": "Two explicitly given finite simple undirected graphs G and H.",
+  "id": "graph-homomorphism-total-order",
+  "inputConditions": [],
+  "kind": "lower-bound-case",
+  "parameter": "The sum of the orders of G and H p.",
+  "problemDefinitionHash": "02c42a266c65837e00384e29b7972fd7a631f994adcbc123d9b97b3827e17d80",
+  "problemId": "graph-homomorphism",
+  "problemRevision": 1,
+  "reader": {
+    "anchor": "graph-homomorphism-total-order",
+    "parameter": "The sum of the orders of G and H p.",
+    "parameterLabel": "Total graph order",
+    "parameterSymbols": [
+      {
+        "meaning": "sum of the orders of G and H",
+        "symbol": "p"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "complete explicit binary input length",
+        "symbol": "B"
+      }
+    ]
+  },
+  "recoveryAssessments": [
+    {
+      "comparison": "The cited fixed-power exclusion preserves the task and input-polynomial factor, with the recorded power loss in the exponent.",
+      "effective": false,
+      "evidence": [
+        {
+          "editionId": "v2",
+          "locator": "Table 1, Graph Homomorphism row",
+          "paperId": "sh26",
+          "placement": "statement",
+          "role": "conditional lower bound"
+        }
+      ],
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "recoveredScale": "p^(1−ε)",
+      "recovery": {
+        "id": "graph-homomorphism-total-order-sh",
+        "revision": 1
+      },
+      "scale": "degree",
+      "target": {
+        "id": "graph-homomorphism-total-order-eth",
+        "revision": 1
+      },
+      "targetScale": "p log₂ p"
+    }
+  ],
+  "recoveryComparisons": [
+    {
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "graph-homomorphism-total-order-eth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "np_qp",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "graph-homomorphism-total-order-eth",
+        "revision": 1
+      }
+    },
+    {
+      "comparison": "The cited fixed-power exclusion preserves the task and input-polynomial factor, with the recorded power loss in the exponent.",
+      "effective": false,
+      "evidence": [
+        {
+          "editionId": "v2",
+          "locator": "Table 1, Graph Homomorphism row",
+          "paperId": "sh26",
+          "placement": "statement",
+          "role": "conditional lower bound"
+        }
+      ],
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "recoveredScale": "p^(1−ε)",
+      "recovery": {
+        "id": "graph-homomorphism-total-order-sh",
+        "revision": 1
+      },
+      "scale": "degree",
+      "status": "degree",
+      "target": {
+        "id": "graph-homomorphism-total-order-eth",
+        "revision": 1
+      },
+      "targetScale": "p log₂ p"
+    },
+    {
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "graph-homomorphism-total-order-eth",
+        "revision": 1
+      }
+    }
+  ],
+  "resolutions": [],
+  "revision": 3,
+  "task": "Is there a map from V(G) to V(H) taking every edge of G to an edge of H?",
+  "title": "Graph Homomorphism by total graph order",
+  "variant": "Graph Homomorphism"
+}

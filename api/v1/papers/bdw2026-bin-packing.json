@@ -1,0 +1,32 @@
+{
+  "authors": [
+    "Karl Bringmann",
+    "Anita Dürr",
+    "Karol Węgrzycki"
+  ],
+  "editions": [
+    {
+      "access": "Full text inspected.",
+      "id": "arxiv-v1",
+      "kind": "preprint",
+      "label": "arXiv:2603.12999v1",
+      "openUrl": "https://arxiv.org/abs/2603.12999v1",
+      "preferredUrl": "https://arxiv.org/abs/2603.12999v1",
+      "primaryUrl": "https://arxiv.org/abs/2603.12999v1"
+    },
+    {
+      "access": "Published text checked for Theorem 1.1 and §4. The proof cites the full version for Theorem 8.1, the transfer to Bin Packing.",
+      "doi": "10.1145/3798129.3800913",
+      "id": "proceedings",
+      "kind": "proceedings",
+      "label": "STOC 2026, pp. 2094–2105",
+      "openUrl": "https://www.research-collection.ethz.ch/entities/publication/15a42f4d-79fe-4769-9e1f-8937bb6d009f",
+      "preferredUrl": "https://doi.org/10.1145/3798129.3800913",
+      "primaryUrl": "https://doi.org/10.1145/3798129.3800913"
+    }
+  ],
+  "id": "bdw2026-bin-packing",
+  "preferredEditionId": "proceedings",
+  "preferredUrl": "https://doi.org/10.1145/3798129.3800913",
+  "title": "Tight (S)ETH-Based Lower Bounds for Pseudopolynomial Algorithms for Bin Packing and Multi-machine Scheduling"
+}

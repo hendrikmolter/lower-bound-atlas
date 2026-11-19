@@ -1,0 +1,11 @@
+{
+  "id": "vertex-cover",
+  "input": "A finite, simple, undirected, unweighted graph G and a nonnegative integer k.",
+  "name": "Vertex Cover",
+  "parameterizations": [
+    "vertex-cover-order",
+    "vertex-cover-budget"
+  ],
+  "question": "Does G have a set of at most k vertices that includes an endpoint of every edge?",
+  "revision": 1
+}

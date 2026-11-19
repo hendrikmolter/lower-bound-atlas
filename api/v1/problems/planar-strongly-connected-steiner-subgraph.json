@@ -1,0 +1,10 @@
+{
+  "id": "planar-strongly-connected-steiner-subgraph",
+  "input": "An explicitly encoded directed graph G whose underlying undirected graph is planar, with nonnegative integer arc weights, a specified terminal set of size k, and a nonnegative threshold.",
+  "name": "Planar Strongly Connected Steiner Subgraph",
+  "parameterizations": [
+    "planar-strongly-connected-steiner-subgraph-terminals"
+  ],
+  "question": "Is there a strongly connected subgraph containing the terminals whose total arc weight is at most the threshold?",
+  "revision": 1
+}

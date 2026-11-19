@@ -1,0 +1,84 @@
+{
+  "assessments": {
+    "uniform-eth": {
+      "converse": {
+        "effectiveStatus": "established",
+        "evidence": [
+          {
+            "boundRevision": 2,
+            "hypothesisRevision": 4,
+            "reviewId": "vc-order-eth-equivalence-review",
+            "source": {
+              "editionId": "journal",
+              "locator": "Theorem 5, p. 526",
+              "paperId": "ipz2001",
+              "placement": "proof",
+              "role": "linear-variable reduction to 3-SAT"
+            }
+          }
+        ],
+        "status": "established"
+      },
+      "forward": {
+        "effectiveStatus": "established",
+        "evidence": [
+          {
+            "boundRevision": 2,
+            "hypothesisRevision": 4,
+            "reviewId": "vc-order-eth-equivalence-review",
+            "source": {
+              "editionId": "journal",
+              "locator": "Corollary 2, p. 524, and Theorem 5, p. 526",
+              "paperId": "ipz2001",
+              "placement": "forward",
+              "role": "sparsification and linear reduction from clause-count 3-SAT"
+            }
+          }
+        ],
+        "status": "established"
+      },
+      "hypothesisRevision": 4,
+      "verdict": "established-equivalent"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "vc-order-eth",
+  "inputConditions": [],
+  "inputFactor": "B^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [],
+  "reader": {
+    "label": "Exponential in the number of vertices",
+    "revision": 2,
+    "title": "Vertex Cover by graph order under ETH"
+  },
+  "reviewIds": [
+    "vc-order-eth-equivalence-review"
+  ],
+  "revision": 2,
+  "runtime": "2^(o(n)) B^(O(1))",
+  "runtimeSymbols": [
+    "n",
+    "B"
+  ],
+  "sources": [
+    {
+      "editionId": "bulletin",
+      "locator": "Theorem 3.3, p. 52",
+      "paperId": "lms2011",
+      "placement": "statement",
+      "role": "benchmark"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm decides Vertex Cover within the stated running time.",
+  "status": "established",
+  "supported": true
+}

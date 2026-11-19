@@ -1,0 +1,23 @@
+{
+  "authors": [
+    "Benjamin Bergougnoux",
+    "Tuukka Korhonen",
+    "Jesper Nederlof"
+  ],
+  "editions": [
+    {
+      "access": "Full published edition checked for the theorem and §4.",
+      "doi": "10.4230/LIPIcs.STACS.2023.11",
+      "id": "proceedings",
+      "kind": "proceedings",
+      "label": "STACS 2023, LIPIcs 254, pp. 11:1–11:17",
+      "openUrl": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol254-stacs2023/LIPIcs.STACS.2023.11/LIPIcs.STACS.2023.11.pdf",
+      "preferredUrl": "https://doi.org/10.4230/LIPIcs.STACS.2023.11",
+      "primaryUrl": "https://doi.org/10.4230/LIPIcs.STACS.2023.11"
+    }
+  ],
+  "id": "bkn2023-rankwidth",
+  "preferredEditionId": "proceedings",
+  "preferredUrl": "https://doi.org/10.4230/LIPIcs.STACS.2023.11",
+  "title": "Tight Lower Bounds for Problems Parameterized by Rank-Width"
+}

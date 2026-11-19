@@ -1,0 +1,58 @@
+{
+  "assessments": {
+    "eth": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unassessed"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "connected-dominating-set-budget-eth",
+  "inputConditions": [],
+  "inputFactor": "N^(o(k))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [
+    "For every computable function f."
+  ],
+  "reader": {
+    "label": "Sublinear exponent in the budget",
+    "revision": 1,
+    "title": "Connected Dominating Set under ETH: Sublinear exponent in the budget"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "f(k) N^(o(k))",
+  "runtimeSymbols": [
+    "k",
+    "N"
+  ],
+  "sources": [
+    {
+      "editionId": "book",
+      "locator": "Corollary 14.23, pp. 487–488",
+      "paperId": "cygan2015",
+      "placement": "statement",
+      "role": "conditional lower bound"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm solves the stated decision problem within the stated running time.",
+  "status": "established",
+  "supported": true
+}

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Chromatic Number | Lower Bound Atlas</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header"><nav class="site-nav" aria-label="Main">
+    <a href="../../index.html" class="site-brand">Lower Bound Atlas</a>
+    <div class="nav-links"><a href="../../index.html">Problems</a><a href="../../assumptions/index.html">Hypotheses</a><a href="../../papers/index.html">Papers</a><a href="../../notation/index.html">Notation</a><a href="../../about/index.html">About &amp; guide</a></div>
+  </nav></header>
+  <main id="main-content" tabindex="-1">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../../index.html">Problems</a><span aria-hidden="true"> / </span><a href="../../problems/chromatic-number/index.html">Chromatic Number</a></nav>
+    <header class="hero">
+      <h1>Chromatic Number</h1>
+      
+    </header>
+    <nav class="param-nav" aria-label="Recorded parameterizations"><strong>Recorded parameterizations</strong><a href="../chromatic-number-treewidth/index.html#parameterization">Treewidth</a> <a href="#parameterization" aria-current="location">Vertex cover number</a></nav>
+      <section id="parameterization" class="problem-box" aria-label="Problem definition"><dl>
+      <dt>Input</dt><dd>A finite simple undirected graph G and a positive integer ℓ.</dd>
+      <dt>Parameter</dt><dd>The vertex cover number k of G.</dd>
+      <dt>Question</dt><dd>Can the vertices of G be colored with at most ℓ colors so that adjacent vertices have different colors?</dd></dl></section><section><h2>Restricted problems</h2><ul><li><a href="../../problems/3-coloring/index.html">3-Coloring</a> (color budget ℓ = 3)</li></ul></section>
+      
+      <section id="comparisons"><h2 id="bounds">Lower bounds by hypothesis</h2>
+      <h3>Notation</h3><ul class="runtime-symbols"><li><i>n</i> — number of vertices of G</li><li><i>N</i> — complete binary input length</li></ul>
+      <article class="hypothesis-card" id="assessment-eth"><h3><a href="../../assumptions/eth/index.html">ETH</a> (historical)</h3>
+        <section class="bound-row" id="chromatic-vc-eth"><h4>Slightly superexponential bound</h4>
+        
+        
+        <div class="excluded-time"><span>Running time excluded under ETH</span><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mrow><mrow><mi>o</mi><mrow><mo>(</mo><mi>k</mi><mo>&#x2062;</mo><mspace width="0.14em"/><msub><mi>log</mi><mn>2</mn></msub><mo>&#x2062;</mo><mi>k</mi><mo>)</mo></mrow></mrow></mrow></msup><mo>&#x2062;</mo><msup><mi>n</mi><mrow><mrow><mi>𝒪</mi><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></mrow></msup></mrow><annotation encoding="text/plain">2^(o(k log₂ k)) n^(O(1))</annotation></semantics></math></div>
+        <div class="bound-links"><div class="actions"><a href="../../bounds/chromatic-number-vertex-cover/chromatic-vc-eth/index.html">Full statement</a></div>
+    </div><ul class="bound-citations"><li><a href="https://doi.org/10.1137/16M1104834">Slightly Superexponential Parameterized Problems</a></li></ul>
+        </section>
+        
+        </article><article class="hypothesis-card" id="assessment-sh"><h3><a href="../../assumptions/sh/index.html">SH</a></h3>
+        <section class="bound-row" id="chromatic-vc-sh"><h4>Fixed-power bounds</h4>
+        
+        
+        <div class="excluded-time"><span>Excluded running time</span><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mrow><mrow><mi>𝒪</mi><mrow><mo>(</mo><msup><mi>k</mi><mrow><mn>1</mn><mo>−</mo><mi>ε</mi></mrow></msup><mo>)</mo></mrow></mrow></mrow></msup><mo>&#x2062;</mo><msup><mi>N</mi><mrow><mrow><mi>𝒪</mi><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></mrow></msup></mrow><annotation encoding="text/plain">2^(O(k^(1−ε))) N^(O(1))</annotation></semantics></math></div><p class="runtime-qualification">For every fixed <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>&lt;</mo><mi>ε</mi><mo>&lt;</mo><mn>1</mn></mrow><annotation encoding="text/plain">0 &lt; ε &lt; 1</annotation></semantics></math>.</p>
+        <p>Exponent degree recovered · ETH target: <a href="../../bounds/chromatic-number-vertex-cover/chromatic-vc-eth/r1/index.html" aria-label="Slightly superexponential bound">Slightly superexponential bound</a>.</p><div class="bound-links"><div class="actions"><a href="../../bounds/chromatic-number-vertex-cover/chromatic-vc-sh/index.html">Full statement</a></div>
+    </div><ul class="bound-citations"><li><a href="https://arxiv.org/abs/2611.02650v2">ETH is Dead, Long Live SH</a></li></ul>
+        </section>
+        
+        </article><article class="hypothesis-card" id="assessment-w1"><h3><a href="../../assumptions/w1/index.html">FPT ≠ W[1]</a></h3>
+        <section class="bound-row" id="chromatic-vc-w1"><h4>Single-exponential bound</h4>
+        
+        
+        <div class="excluded-time"><span>Excluded running time</span><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mrow><mrow><mi>𝒪</mi><mrow><mo>(</mo><mi>k</mi><mo>)</mo></mrow></mrow></mrow></msup><mo>&#x2062;</mo><msup><mi>N</mi><mrow><mrow><mi>𝒪</mi><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></mrow></msup></mrow><annotation encoding="text/plain">2^(O(k)) N^(O(1))</annotation></semantics></math></div>
+        <p>Recovered up to a logarithmic factor in the exponent · ETH target: <a href="../../bounds/chromatic-number-vertex-cover/chromatic-vc-eth/r1/index.html" aria-label="Slightly superexponential bound">Slightly superexponential bound</a>.</p><div class="bound-links"><div class="actions"><a href="../../bounds/chromatic-number-vertex-cover/chromatic-vc-w1/index.html">Full statement</a></div>
+    </div>
+        </section>
+        
+        </article><article class="hypothesis-card" id="assessment-np_qp"><h3><a href="../../assumptions/np_qp/index.html">NP ⊈ QP</a></h3>
+        <p>No lower bound recorded for this parameterization.</p>
+        
+        </article><article class="hypothesis-card" id="assessment-kxk"><h3><a href="../../assumptions/kxk/index.html"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>×</mo><mi>k</mi></mrow><annotation encoding="text/plain">k × k</annotation></semantics></math> Clique Hypothesis</a></h3>
+        <p>No lower bound recorded for this parameterization.</p>
+        
+        </article></section>
+      <details class="reader-details"><summary>Record details</summary><dl class="details-grid"><div><dt>Identifier</dt><dd>chromatic-number-vertex-cover</dd></div><div><dt>Revision</dt><dd>3</dd></div><div><dt>Aliases</dt><dd>Chromatic Number parameterized by vertex cover number</dd></div></dl>
+      <a href="index.html">Permalink</a> · <a href="../../api/v1/cases/chromatic-number-vertex-cover.json">JSON record</a></details>
+  </main>
+  <footer class="site-footer">
+    <span>Release · v1.0.0</span>
+    <a href="../../api/v1/atlas.json">JSON export</a>
+    <a href="../../manifest.json">Build manifest</a>
+  </footer>
+</body>
+</html>

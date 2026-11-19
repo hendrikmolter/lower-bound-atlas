@@ -1,0 +1,52 @@
+{
+  "assessments": {},
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "w1",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "hardnessBaseline": "W[2]",
+  "id": "ds-budget-w1",
+  "inputConditions": [],
+  "inputFactor": "n^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [
+    "The bound excludes every computable prefactor f."
+  ],
+  "reader": {
+    "label": "Fixed-parameter tractability",
+    "revision": 1,
+    "title": "Dominating Set by solution size under FPT ≠ W[1]"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "f(k) n^(O(1))",
+  "runtimeSymbols": [
+    "f",
+    "k",
+    "n"
+  ],
+  "sources": [
+    {
+      "editionId": "bulletin",
+      "locator": "Reduction in the proof of Theorem 5.3, pp. 58–59",
+      "paperId": "lms2011",
+      "placement": "statement",
+      "role": "parameterized hardness reduction"
+    },
+    {
+      "editionId": "journal",
+      "locator": "Proof of Theorem 5.4, pp. 1359–1360",
+      "paperId": "chkx2006",
+      "placement": "statement",
+      "role": "W[2]-hardness for the solution budget"
+    }
+  ],
+  "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Dominating Set within the stated running time.",
+  "status": "established",
+  "supported": true
+}

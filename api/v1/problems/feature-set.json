@@ -1,0 +1,10 @@
+{
+  "id": "feature-set",
+  "input": "A binary example-by-feature matrix, one of two class labels per row, and a number k of features to select.",
+  "name": "Feature Set",
+  "parameterizations": [
+    "feature-set-budget"
+  ],
+  "question": "Can exactly k features be selected so that each pair of examples with different labels differs on a selected feature?",
+  "revision": 1
+}

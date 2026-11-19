@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Weighted normalized circuit satisfiability | Lower Bound Atlas</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header"><nav class="site-nav" aria-label="Main">
+    <a href="../../index.html" class="site-brand">Lower Bound Atlas</a>
+    <div class="nav-links"><a href="../../index.html">Problems</a><a href="../../assumptions/index.html">Hypotheses</a><a href="../../papers/index.html">Papers</a><a href="../../notation/index.html">Notation</a><a href="../../about/index.html">About &amp; guide</a></div>
+  </nav></header>
+  <main id="main-content" tabindex="-1">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../../index.html">Problems</a></nav>
+    <header class="hero">
+      <h1>Weighted normalized circuit satisfiability</h1>
+      
+    </header>
+    <nav class="param-nav" aria-label="Recorded parameterizations"><strong>Recorded parameterizations</strong><a href="../../cases/weighted-normalized-depth-t-circuit-weight/index.html#parameterization">Assignment weight at fixed depth</a></nav>
+      <section id="parameterization" class="problem-box" aria-label="Problem definition"><dl>
+      <dt>Input</dt><dd>A circuit and an integer k.</dd>
+      <dt>Parameter</dt><dd>The required assignment weight k.</dd>
+      <dt>Question</dt><dd>Decide whether exactly k input variables can be set to true to satisfy the circuit.</dd></dl><div class="input-restrictions"><strong>Input restrictions</strong><ul><li>The circuit has depth t. Unbounded-fan-in AND and OR gates alternate, the output gate is AND, and the inputs are literals.</li></ul></div></section>
+      
+      <section id="comparisons"><h2 id="bounds">Lower bounds by hypothesis</h2>
+      <h3>Notation</h3><ul class="runtime-symbols"><li><i>n</i> — number of Boolean input variables</li><li><i>B</i> — bit length of the circuit and its weight specification, including gate identifiers and wiring</li></ul>
+      <article class="hypothesis-card" id="assessment-eth"><h3><a href="../../assumptions/eth/index.html">ETH</a> (historical)</h3>
+        <section class="bound-row" id="nc-eth-full"><h4>Bound in the full input length</h4>
+        
+        
+        <div class="excluded-time"><span>Running time excluded under ETH</span><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>k</mi><mo>)</mo></mrow></mrow><mo>&#x2062;</mo><msup><mi>B</mi><mrow><mrow><mi>o</mi><mrow><mo>(</mo><mi>k</mi><mo>)</mo></mrow></mrow></mrow></msup></mrow><annotation encoding="text/plain">f(k) B^(o(k))</annotation></semantics></math></div><p class="runtime-qualification">The circuit depth <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>≥</mo><mn>2</mn></mrow><annotation encoding="text/plain">t ≥ 2</annotation></semantics></math> is fixed.</p><p class="runtime-qualification">The function f is recursive, subject to the source’s computability and inverse-function conventions.</p>
+        <div class="bound-links"><div class="actions"><a href="../../bounds/weighted-normalized-depth-t-circuit-weight/nc-eth-full/index.html">Full statement</a></div>
+    </div><ul class="bound-citations"><li><a href="https://doi.org/10.1007/s10878-006-7137-6">On the computational hardness based on linear FPT-reductions</a></li></ul>
+        </section>
+        
+        <details class="reader-details" data-earlier-bounds><summary>Earlier ETH bound</summary><section class="bound-row" id="nc-eth-input-count" data-superseded-by="nc-eth-full"><h4>Bound in the number of circuit inputs</h4>
+        
+        
+        <div class="excluded-time"><span>Running time excluded under ETH</span><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>n</mi><mrow><mrow><mi>o</mi><mrow><mo>(</mo><mi>k</mi><mo>)</mo></mrow></mrow></mrow></msup><mo>&#x2062;</mo><msup><mi>B</mi><mrow><mrow><mi>𝒪</mi><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></mrow></msup></mrow><annotation encoding="text/plain">n^(o(k)) B^(O(1))</annotation></semantics></math></div><p class="runtime-qualification">The circuit depth <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>≥</mo><mn>2</mn></mrow><annotation encoding="text/plain">t ≥ 2</annotation></semantics></math> is fixed.</p><p class="runtime-qualification">The exponent is bounded by <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>/</mo><mrow><mi>r</mi><mrow><mo>(</mo><mi>k</mi><mo>)</mo></mrow></mrow></mrow><annotation encoding="text/plain">k/r(k)</annotation></semantics></math> for an unbounded nondecreasing function r.</p>
+        <div class="bound-links"><div class="actions"><a href="../../bounds/weighted-normalized-depth-t-circuit-weight/nc-eth-input-count/index.html">Full statement</a></div>
+    </div><ul class="bound-citations"><li><a href="https://doi.org/10.1016/j.ic.2005.05.001">Tight Lower Bounds for Certain Parameterized NP-Hard Problems</a></li></ul>
+        <p><a href="#nc-eth-full">Superseding bound</a>. On the same explicit circuits <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>≤</mo><mi>B</mi></mrow><annotation encoding="text/plain">n ≤ B</annotation></semantics></math>. A running time <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>n</mi><mrow><mrow><mi>o</mi><mrow><mo>(</mo><mi>k</mi><mo>)</mo></mrow></mrow></mrow></msup><mo>&#x2062;</mo><msup><mi>B</mi><mrow><mrow><mi>𝒪</mi><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></mrow></msup></mrow><annotation encoding="text/plain">n^(o(k)) B^(O(1))</annotation></semantics></math> is therefore at most <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>B</mi><mrow><mrow><mi>o</mi><mrow><mo>(</mo><mi>k</mi><mo>)</mo></mrow></mrow></mrow></msup></mrow><annotation encoding="text/plain">B^(o(k))</annotation></semantics></math>, within the full-input exclusion under the recorded source conventions.</p></section></details></article><article class="hypothesis-card" id="assessment-sh"><h3><a href="../../assumptions/sh/index.html">SH</a></h3>
+        <p>No lower bound recorded for this parameterization.</p>
+        
+        </article><article class="hypothesis-card" id="assessment-w1"><h3><a href="../../assumptions/w1/index.html">FPT ≠ W[1]</a></h3>
+        <section class="bound-row" id="nc-w1-candidate"><h4>Bound in the number of circuit inputs</h4>
+        
+        
+        <div class="excluded-time"><span>Excluded running time</span><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>k</mi><mo>)</mo></mrow></mrow><mo>&#x2062;</mo><msup><mi>n</mi><mrow><mrow><mi>o</mi><mrow><mo>(</mo><mi>k</mi><mo>)</mo></mrow></mrow></mrow></msup><mo>&#x2062;</mo><msup><mi>B</mi><mrow><mrow><mi>𝒪</mi><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></mrow></msup></mrow><annotation encoding="text/plain">f(k) n^(o(k)) B^(O(1))</annotation></semantics></math></div><p class="runtime-qualification">The circuit depth <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>≥</mo><mn>2</mn></mrow><annotation encoding="text/plain">t ≥ 2</annotation></semantics></math> is fixed.</p><p class="runtime-qualification">The function f is recursive, subject to the source’s computability and inverse-function conventions.</p>
+        <div class="bound-links"><div class="actions"><a href="../../bounds/weighted-normalized-depth-t-circuit-weight/nc-w1-candidate/index.html">Full statement</a></div>
+    </div><ul class="bound-citations"><li><a href="https://doi.org/10.1007/s10878-006-7137-6">On the computational hardness based on linear FPT-reductions</a></li></ul>
+        </section><section class="bound-row" id="nc-w1-input-count"><h4>Input-count bound without a parameter-dependent prefactor</h4>
+        
+        
+        <div class="excluded-time"><span>Excluded running time</span><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>n</mi><mrow><mrow><mi>o</mi><mrow><mo>(</mo><mi>k</mi><mo>)</mo></mrow></mrow></mrow></msup><mo>&#x2062;</mo><msup><mi>B</mi><mrow><mrow><mi>𝒪</mi><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></mrow></msup></mrow><annotation encoding="text/plain">n^(o(k)) B^(O(1))</annotation></semantics></math></div><p class="runtime-qualification">The circuit depth <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>≥</mo><mn>2</mn></mrow><annotation encoding="text/plain">t ≥ 2</annotation></semantics></math> is fixed.</p><p class="runtime-qualification">The exponent is bounded by <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>/</mo><mrow><mi>r</mi><mrow><mo>(</mo><mi>k</mi><mo>)</mo></mrow></mrow></mrow><annotation encoding="text/plain">k/r(k)</annotation></semantics></math> for an unbounded nondecreasing function r.</p>
+        <div class="bound-links"><div class="actions"><a href="../../bounds/weighted-normalized-depth-t-circuit-weight/nc-w1-input-count/index.html">Full statement</a></div>
+    </div><ul class="bound-citations"><li><a href="https://doi.org/10.1016/j.ic.2005.05.001">Tight Lower Bounds for Certain Parameterized NP-Hard Problems</a></li></ul>
+        </section>
+        
+        </article><article class="hypothesis-card" id="assessment-np_qp"><h3><a href="../../assumptions/np_qp/index.html">NP ⊈ QP</a></h3>
+        <p>No lower bound recorded for this parameterization.</p>
+        
+        </article><article class="hypothesis-card" id="assessment-kxk"><h3><a href="../../assumptions/kxk/index.html"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>×</mo><mi>k</mi></mrow><annotation encoding="text/plain">k × k</annotation></semantics></math> Clique Hypothesis</a></h3>
+        <p>No lower bound recorded for this parameterization.</p>
+        
+        </article></section>
+      <details class="reader-details"><summary>Record details</summary><dl class="details-grid"><div><dt>Identifier</dt><dd>weighted-normalized-depth-t-circuit-weight</dd></div><div><dt>Revision</dt><dd>13</dd></div></dl>
+      <a href="index.html">Permalink</a> · <a href="../../api/v1/cases/weighted-normalized-depth-t-circuit-weight.json">JSON record</a></details>
+  </main>
+  <footer class="site-footer">
+    <span>Release · v1.0.0</span>
+    <a href="../../api/v1/atlas.json">JSON export</a>
+    <a href="../../manifest.json">Build manifest</a>
+  </footer>
+</body>
+</html>

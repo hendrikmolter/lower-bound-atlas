@@ -1,0 +1,11 @@
+{
+  "id": "weighted-tardy-jobs",
+  "input": "A list of n jobs, each with a positive integer processing time, a nonnegative integer due date and a nonnegative integer weight, and a nonnegative integer threshold. All numbers are binary encoded.",
+  "name": "Weighted Number of Tardy Jobs on One Machine",
+  "parameterizations": [
+    "weighted-tardy-jobs-processing-times",
+    "weighted-tardy-jobs-weights"
+  ],
+  "question": "Can all jobs be run without preemption on one machine starting at time zero, so that the total weight of jobs finishing after their due dates is at most the threshold?",
+  "revision": 1
+}

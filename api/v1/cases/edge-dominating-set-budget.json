@@ -1,0 +1,146 @@
+{
+  "aliases": [],
+  "bounds": [
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unassessed"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "edge-dominating-set-budget-eth",
+      "inputConditions": [
+        "bipartite"
+      ],
+      "inputFactor": "n^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "label": "Subexponential-time bound",
+        "revision": 1,
+        "title": "Edge Dominating Set under ETH: Subexponential-time bound"
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "2^(o(k)) n^(O(1))",
+      "runtimeSymbols": [
+        "k",
+        "n"
+      ],
+      "sources": [
+        {
+          "editionId": "journal",
+          "locator": "Theorem 10.6",
+          "paperId": "hermelin-et-al2019-domination",
+          "placement": "statement",
+          "role": "conditional lower bound"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm solves the stated decision problem within the stated running time.",
+      "status": "established",
+      "supported": true
+    }
+  ],
+  "coverage": "Lower bounds for solution budget.",
+  "encoding": "A finite simple undirected graph G and an integer k.",
+  "id": "edge-dominating-set-budget",
+  "inputConditions": [
+    {
+      "condition": "The graph is bipartite.",
+      "id": "bipartite",
+      "level": "bound"
+    }
+  ],
+  "kind": "lower-bound-case",
+  "parameter": "The solution budget k.",
+  "problemDefinitionHash": "62e138b3d4bd9e04709da2fb920583cc545ab429f46bc2a9a618921977eee9df",
+  "problemId": "edge-dominating-set",
+  "problemRevision": 1,
+  "reader": {
+    "anchor": "edge-dominating-set-budget",
+    "parameter": "The solution budget k.",
+    "parameterLabel": "Solution budget",
+    "parameterSymbols": [
+      {
+        "meaning": "solution budget",
+        "symbol": "k"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "number of vertices",
+        "symbol": "n"
+      }
+    ]
+  },
+  "recoveryComparisons": [
+    {
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "edge-dominating-set-budget-eth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "np_qp",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "edge-dominating-set-budget-eth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "edge-dominating-set-budget-eth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "edge-dominating-set-budget-eth",
+        "revision": 1
+      }
+    }
+  ],
+  "resolutions": [],
+  "revision": 2,
+  "task": "Is there a set of at most k edges such that every edge shares an endpoint with an edge in the set?",
+  "title": "Edge Dominating Set by solution budget",
+  "variant": "Edge Dominating Set"
+}

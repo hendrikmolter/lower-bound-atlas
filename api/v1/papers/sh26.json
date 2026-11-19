@@ -1,0 +1,36 @@
+{
+  "authors": [
+    "MIT Hardness Group",
+    "Josh Brunner",
+    "Erik D. Demaine",
+    "Fabian Frei",
+    "Timothy Gomez",
+    "Markus Hecher",
+    "Jeffery Li",
+    "Jayson Lynch"
+  ],
+  "editions": [
+    {
+      "access": "Exact arXiv v1. The quantitative sparsification proof is a preprint-only dependency.",
+      "id": "v1",
+      "kind": "preprint",
+      "label": "arXiv:2611.02650v1, 2 November 2026",
+      "openUrl": "https://arxiv.org/pdf/2611.02650v1",
+      "preferredUrl": "https://arxiv.org/abs/2611.02650v1",
+      "primaryUrl": "https://arxiv.org/abs/2611.02650v1"
+    },
+    {
+      "access": "Preprint. Table 1, its footnotes and Theorem 3.1 were checked in this version.",
+      "id": "v2",
+      "kind": "preprint",
+      "label": "arXiv:2611.02650v2, 16 November 2026",
+      "openUrl": "https://arxiv.org/pdf/2611.02650v2",
+      "preferredUrl": "https://arxiv.org/abs/2611.02650v2",
+      "primaryUrl": "https://arxiv.org/abs/2611.02650v2"
+    }
+  ],
+  "id": "sh26",
+  "preferredEditionId": "v2",
+  "preferredUrl": "https://arxiv.org/abs/2611.02650v2",
+  "title": "ETH is Dead, Long Live SH"
+}

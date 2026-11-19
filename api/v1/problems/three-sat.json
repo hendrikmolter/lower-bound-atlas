@@ -1,0 +1,11 @@
+{
+  "id": "three-sat",
+  "input": "An explicit Boolean CNF formula with clauses of width at most three.",
+  "name": "3SAT",
+  "parameterizations": [
+    "three-sat-clauses",
+    "three-sat-variables"
+  ],
+  "question": "Does the formula have a satisfying assignment?",
+  "revision": 1
+}

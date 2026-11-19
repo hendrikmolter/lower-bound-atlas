@@ -1,0 +1,33 @@
+{
+  "currentRevision": 1,
+  "id": "chromatic-number-cover-w1",
+  "revisions": [
+    {
+      "authorship": {
+        "authors": [
+          "Atlas"
+        ],
+        "kind": "ai",
+        "origin": "atlas"
+      },
+      "dependencies": [],
+      "dependencyCoverage": "complete",
+      "pdf": "proofs/chromatic-number-cover-w1.pdf",
+      "revision": 1,
+      "source": "proofs/chromatic-number-cover-w1.tex",
+      "theorems": [
+        {
+          "destination": "cover-w1",
+          "label": "cover-w1",
+          "number": "1",
+          "reviewIds": [
+            "chromatic-number-cover-w1-review"
+          ],
+          "statement": "Under deterministic FPT ≠ W[1], there is no Chromatic Number algorithm in 2^{O(k)} N^{O(1)} for vertex cover number k.",
+          "supports": true
+        }
+      ]
+    }
+  ],
+  "title": "A single-exponential lower bound for Chromatic Number by vertex cover number"
+}

@@ -1,0 +1,1 @@
+Marek Cygan, Jesper Nederlof, Marcin Pilipczuk, Michał Pilipczuk, Johan M. M. van Rooij, Jakub Onufry Wojtaszczyk. Solving Connectivity Problems Parameterized by Treewidth in Single Exponential Time. ACM Transactions on Algorithms 18(2), Article 17 (2022). https://doi.org/10.1145/3506707

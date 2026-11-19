@@ -1,0 +1,1 @@
+Dániel Marx. Closest Substring Problems with Small Distances. SIAM Journal on Computing 38(4) (2008), pp. 1382–1410. https://doi.org/10.1137/060673898

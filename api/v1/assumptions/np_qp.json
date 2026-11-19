@@ -1,0 +1,13 @@
+{
+  "access": "Class-separation premise stated directly in terms of the defining time classes. No priority or originating-paper attribution is asserted.",
+  "aliases": [
+    "NP outside quasipolynomial time"
+  ],
+  "conventions": "The complete bit length controls the exponent. An arbitrary FPT factor in a parameter need not be quasipolynomial in L.",
+  "definition": "There is a language in NP outside deterministic quasipolynomial time.",
+  "id": "np_qp",
+  "model": "Deterministic worst-case decision time on complete binary inputs of length L.",
+  "name": "NP ⊈ QP",
+  "quantifiers": "QP is the union over fixed c ≥ 1 of DTIME(2^O((log(L+2))^c)). Containment would allow a language-specific algorithm and exponent.",
+  "revision": 1
+}

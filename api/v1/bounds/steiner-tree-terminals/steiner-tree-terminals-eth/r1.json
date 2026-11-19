@@ -1,0 +1,44 @@
+{
+  "assessments": {},
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "steiner-tree-terminals-eth",
+  "inputConditions": [
+    "planar"
+  ],
+  "inputFactor": "B^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [],
+  "reader": {
+    "explanation": "The published theorem writes the polynomial factor in graph order n. On standard explicit unweighted inputs, one can normalize the budget to at most n − 1 and relabel vertices, so all threshold queries have length polynomial in n. Polynomially many such queries recover the minimum cost.",
+    "label": "Sublinear exponent in the number of terminals",
+    "revision": 1,
+    "title": "Steiner Tree by terminal count under ETH"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "2^(o(k)) B^(O(1))",
+  "runtimeSymbols": [
+    "k",
+    "B"
+  ],
+  "sources": [
+    {
+      "editionId": "focs",
+      "locator": "Theorem I.2 and Corollary I.4, p. 475",
+      "paperId": "marx-pilipczuk-pilipczuk2018-steiner",
+      "placement": "statement",
+      "role": "planar terminal-count lower bound"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm decides Steiner Tree within the stated running time.",
+  "status": "established",
+  "supported": true
+}

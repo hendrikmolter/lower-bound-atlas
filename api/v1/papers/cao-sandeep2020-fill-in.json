@@ -1,0 +1,31 @@
+{
+  "authors": [
+    "Yixin Cao",
+    "R. B. Sandeep"
+  ],
+  "editions": [
+    {
+      "access": "Full text inspected.",
+      "id": "arxiv-v1",
+      "kind": "preprint",
+      "label": "arXiv:1606.08141v1",
+      "openUrl": "https://arxiv.org/abs/1606.08141v1",
+      "preferredUrl": "https://arxiv.org/abs/1606.08141v1",
+      "primaryUrl": "https://arxiv.org/abs/1606.08141v1"
+    },
+    {
+      "access": "Published text checked for Theorem 1.3 and the proof of Theorem 1.2 that yields it.",
+      "doi": "10.1016/j.ic.2020.104514",
+      "id": "journal",
+      "kind": "journal",
+      "label": "Information and Computation 271 (2020), Article 104514",
+      "openUrl": "https://doi.org/10.1016/j.ic.2020.104514",
+      "preferredUrl": "https://doi.org/10.1016/j.ic.2020.104514",
+      "primaryUrl": "https://doi.org/10.1016/j.ic.2020.104514"
+    }
+  ],
+  "id": "cao-sandeep2020-fill-in",
+  "preferredEditionId": "journal",
+  "preferredUrl": "https://doi.org/10.1016/j.ic.2020.104514",
+  "title": "Minimum Fill-In: Inapproximability and Almost Tight Lower Bounds"
+}

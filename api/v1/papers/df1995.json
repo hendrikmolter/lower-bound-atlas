@@ -1,0 +1,22 @@
+{
+  "authors": [
+    "Rod G. Downey",
+    "Michael R. Fellows"
+  ],
+  "editions": [
+    {
+      "access": "Published Independent Set W[1]-completeness, with Clique by complementation.",
+      "doi": "10.1016/0304-3975(94)00097-3",
+      "id": "journal",
+      "kind": "journal",
+      "label": "Theoretical Computer Science 141(1–2) (1995), 109–131",
+      "openUrl": "https://homepages.ecs.vuw.ac.nz/~downey/publications/2.pdf",
+      "preferredUrl": "https://doi.org/10.1016/0304-3975(94)00097-3",
+      "primaryUrl": "https://doi.org/10.1016/0304-3975(94)00097-3"
+    }
+  ],
+  "id": "df1995",
+  "preferredEditionId": "journal",
+  "preferredUrl": "https://doi.org/10.1016/0304-3975(94)00097-3",
+  "title": "Fixed-parameter tractability and completeness II: On completeness for W[1]"
+}

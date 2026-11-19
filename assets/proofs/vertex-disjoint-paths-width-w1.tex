@@ -1,0 +1,321 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\title{Vertex-Disjoint Paths at optimal width on subcubic bipartite graphs}
+\author{Atlas\thanks{The proof in this note was found using ChatGPT.}}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+Assuming deterministic \(\mathrm{FPT}\ne\mathrm{W[1]}\), we exclude effectively
+\(2^{o(w\log w)}\) time, up to a polynomial input factor, for undirected
+Vertex-Disjoint Paths parameterized by treewidth or by the width of a supplied
+path decomposition. The exclusion holds on connected bipartite graphs of
+maximum degree three with distinct leaf terminals and an optimal width
+certificate.
+\end{abstract}
+
+\section{Statement}
+
+In Vertex-Disjoint Paths, the input contains a finite simple undirected graph
+and an explicit list of demand pairs of vertices. We ask for a path between
+the endpoints of each pair, with the paths pairwise disjoint, including their
+endpoints. The number of pairs is part of the input. Let \(B\) be the complete
+binary input length, including the demand list and any supplied certificate.
+For a nonnegative integer \(w\), put
+\(\phi(w)=\max\{1,w\log_2(\max\{2,w\})\}\).
+
+\begin{theorem}\label{vdp-width-w1}\hypertarget{vdp-width-w1}{}
+Assume deterministic \(\mathrm{FPT}\ne\mathrm{W[1]}\).
+For every fixed \(C\ge 0\) and finite nonnegative \(h\) admitting a computable
+function \(T\) with \(h(w)\le \phi(w)/j\) whenever \(w\ge T(j)\) and \(j\)
+is a positive integer, there is no correct deterministic solver running in
+\(O(2^{h(w)}B^C)\) time for Vertex-Disjoint Paths. This holds separately
+when \(w\) is intrinsic treewidth and when \(w\) is the width of a supplied path
+decomposition. The hard instances are connected bipartite graphs of maximum
+degree three, with distinct leaf terminals and equal treewidth and pathwidth.
+The supplied path decomposition, when included, is optimal.
+\end{theorem}
+
+We construct a deterministic family of queries from a compact Boolean encoding
+of Clique. Small width follows by grouping the variables before constructing
+the graph. We then simulate directed paths and pad the graph to certify the
+width.
+
+\section{From Clique to permutation hitting}
+
+We use the \(\mathrm{W[1]}\)-hardness of Clique parameterized by the requested
+size \(k\)~\cite{df}. For a graph with \(n\ge 2\) vertices, use \(k\) blocks of
+\(\lceil\log_2 n\rceil\) Boolean variables to encode the chosen vertices.
+Forbid each unused code in each block, and for each pair of blocks forbid every
+pair of valid codes representing equal or nonadjacent vertices. Each prohibition
+is a clause on the affected blocks, falsified exactly by the forbidden pattern.
+The formula is satisfiable exactly when the graph has a \(k\)-clique. It has
+\(m=k\lceil\log_2 n\rceil\) variables, and its complete length and construction
+time are both bounded by \(F(k)n^a\) for computable \(F\) and a fixed \(a\).
+We decide trivial Clique inputs directly.
+
+Take an explicit CNF over \(m\) listed variables. Decide instances with fewer
+than \(16\) variables or an empty clause directly, and likewise decide a
+formula with no clauses. Put
+\[
+ b=\lfloor (\log_2 m)/2\rfloor,\qquad
+ q=2^b,\qquad s=\lceil m/b\rceil,\qquad d=\max\{s,q\}.
+\]
+Pad the variable list to \(sb\) and partition it into \(s\) groups of size
+\(b\). In row \(i\) of a \(d\times d\) table, the first \(q\) columns encode
+assignments to group \(i\), for each \(i\le s\). Require a row selection to
+hit the set of these \(q\) cells for each real row. For each clause, require
+it to hit the set of all real cells whose group assignment satisfies a
+literal of the clause. Thus a mapping selecting one column per row hits all
+sets exactly when its real rows encode a satisfying assignment. Dummy
+rows have no domain constraint. The set family is explicit and has polynomial
+size in the formula length and \(m\). We have \(d=O(m/\log m)\).
+
+Use the deterministic constructive coloring family of Lokshtanov, Marx, and
+Saurabh~\cite[Lemma 2.8 and its proof]{lms}. It enumerates maps
+\(f\colon[d]\times[d]\to[d+1]\) in time
+\(2^{O(d\log\log(\max\{d,4\}))}d^{O(1)}\). For any mapping selecting one cell
+per row, some \(f\) gives the selected cells distinct colors and gives each
+selected cell a color absent from the other cells of its row. Indeed, the
+graph formed by a clique on the selected cells and the stars joining each
+selection to its row is the cactus-grid graph of that lemma.
+
+For each \(f\), retain the cells whose colors are unique within their rows, and
+replace the column of every retained cell by its color. Apply this operation to
+every set and additionally require a hit on the retained cells of each row.
+Add one unconstrained row to make a square of size \(D=d+1\).
+For any permutation hitting these new sets, the row-color choice in each
+original row has a unique preimage, which gives an original selection hitting
+all old sets. Conversely, for a selection hitting all old sets, the map
+\(f\) guaranteed by the coloring family retains every chosen cell and assigns
+them distinct colors. Assign the unused color to the new dummy row. This
+gives a permutation hitting all new sets. The number of queries and the time
+to enumerate the family are \(2^{o(m)}\) up to a fixed polynomial factor in
+the explicit formula length, with a computable sublinear exponent bound
+\(O(m\log\log m/\log m)\).
+
+\section{Testing the same permutation in every set}
+
+We give the directed construction of Lokshtanov, Marx, and Saurabh
+\cite[Section 5]{lms} on the permutation interface just obtained. For a
+set \(S\subseteq [D]\times[D]\), make vertices \(a_i,b_j,u_{i,j}\) and
+arcs \(a_i\to u_{i,j}\to b_j\). For each row \(i\), make a directed path
+\[
+ P_i=(c_{i,0},d_{i,1},w_{i,1},c_{i,1},\dots,d_{i,D},w_{i,D},c_{i,D}).
+\]
+For each cell \((i,j)\), add vertices \(f_{i,j},\ell_{i,j},r_{i,j}\)
+and arcs
+\[
+ b_j\to f_{i,j}\to c_{i,j},\qquad
+ \ell_{i,j}\to f_{i,j}\to r_{i,j},\qquad
+ \ell_{i,j}\to c_{i,0},\qquad c_{i,j-1}\to r_{i,j}.
+\]
+Make a source \(s\) and a sink \(t\), and add \(s\to d_{i,j}\to t\)
+for \((i,j)\in S\). The demands are \((a_i,c_{i,D})\) for each row,
+\((\ell_{i,j},r_{i,j})\) for each cell, and \((s,t)\). All demand endpoints
+are distinct. Each source has indegree zero and each sink has outdegree zero.
+
+A row path choosing \(u_{i,j}\) must follow \(b_j,f_{i,j}\) into its own
+row and then traverse the suffix from \(c_{i,j}\) to \(c_{i,D}\). Any other
+route from \(b_j\) would enter a different row or end at another demand's
+terminal. Distinct row paths use distinct vertices \(b_j\). Their choices
+therefore define a permutation \(\pi\).
+The local demand for \((i,\pi(i))\) must follow the prefix through
+\(c_{i,\pi(i)-1}\) since its \(f\)-vertex is occupied. The prefix and suffix
+together occupy all \(d_{i,j}\) and \(w_{i,j}\) except those at
+\(j=\pi(i)\). The test path must start through an unoccupied \(d_{i,j}\),
+so a hit exists. Conversely, route the rows and the special local demands
+as above, and route all other local demands directly through their own
+\(f\)-vertices. The test path uses \(s\to d_{i,\pi(i)}\to t\) for a hit.
+These routes are disjoint and leave exactly \(w_{i,\pi(i)}\) free among
+the output vertices of each row.
+
+For the full set family, make one such graph per set. Identify each
+\(w_{i,j}\) of a graph with \(u_{i,j}\) of the next graph. Retain all demands.
+The routes for a common permutation combine since the only input used in
+each row of the next graph is precisely the free output of the preceding
+one. For the converse, induct by gadget index to show that paths for its
+demands stay inside it, where shared vertices belong to both adjacent
+gadgets. When a path follows an arc from a shared vertex into the next
+gadget, it reaches a \(b_j\) there. To return it would have to reach an
+input of that gadget. Within the gadget only indegree-zero row sources have
+arcs into its inputs. An excursion further forward cannot change this:
+each newly entered gadget has the same interface and returning first from
+the furthest gadget reached would require reaching one of its inputs
+through such a source.
+For a backward excursion into the preceding gadget, the prefix and suffix
+demands of the normal solution occupy all but at most one output per row.
+A directed path through that previous gadget can return from that
+row only along the same row path. Returning through the sole available
+output would repeat a vertex. The first gadget has no preceding gadget.
+This proves the induction. The normal routes in two successive gadgets
+choose the same column per row, since the used input of the second must
+be the available output of the first. Thus a common permutation hits all
+sets.
+
+We supply a path decomposition of the underlying undirected graph. Initially
+process the first inputs \(u_{i,j}\) one at a time with all \(a_i,b_j\) of
+the first gadget. In a gadget block retain its \(a_i,b_j,s,t\) and the
+next gadget's \(a_i,b_j\), if it exists. Process the rows in order, retaining
+the full path \(P_i\) throughout its row block. For each column add the
+vertices \(f_{i,j},\ell_{i,j},r_{i,j}\) in one bag. All internal edges are
+covered, and the shared output vertices meet the next gadget's \(a_i,b_j\)
+in the pertinent row block. The next gadget's \(a_i,b_j\) persist across
+the two gadget blocks. The row paths and local vertices occur on consecutive intervals by
+construction. The largest bag has size at most \(7D+6\). The graph and the
+listed bags have polynomial size in the table and the set list.
+
+\section{Simulating direction on a subcubic graph}
+
+Let \(w_0\) be the width of the directed instance's path decomposition.
+We first modify the digraph so every vertex has indegree and outdegree at most
+two. Assign each arc to a bag containing both endpoints and order the arcs by
+bag and a fixed tie order. Replace each vertex by a center with a directed
+chain of incoming ports leading to it and a directed chain of outgoing ports
+leading away from it. Order ports in each chain by their assigned arcs.
+Every original arc now connects its outgoing port at its tail to its incoming
+port at its head. Put the demands on the corresponding centers. A traversal
+from an incoming incidence to an outgoing one uses the center, so directed
+routes expand and contract to give equivalent solutions. Any route that
+starts or ends at a demanded center also uses that center. A source center
+has indegree zero and at most one outgoing arc. A sink center has outdegree
+zero and at most one incoming arc.
+
+For the width, keep every center throughout its original bag interval.
+Process the assigned arcs at their bags. For each live center and each port
+chain retain the last introduced port until the next port of that chain
+arrives, or until the final incident chain edge is covered. Introduce the
+two fresh ports for an arc together to cover its replacement edge and the
+chain edges to retained predecessors. The first outgoing port and the last
+incoming port meet the center. Each bag contains at most three retained
+vertices per old live vertex and two new ports. Every port occurrence is
+consecutive. This gives a polynomial-length decomposition of width at most
+\(3(w_0+1)+1\).
+
+For each split digraph vertex \(v\), make adjacent vertices \(v^-\) and
+\(v^+\). Replace an arc \(u\to v\) by an undirected path
+\(u^+,p_{uv},q_{uv},v^-\) with private internal vertices. A main demand
+from a source \(s\) to a sink \(t\) now joins \(s^-\) to \(t^+\), both
+leaves. If \(v\) has two incoming arcs with private pairs \(p_i,q_i\) for
+\(i=1,2\), add \(a\) adjacent to both \(p_i\) and \(b\) adjacent to both
+\(q_i\). Put a private leaf \(a'\) at \(a\) and \(b'\) at \(b\), and add
+the auxiliary demand \((a',b')\). All vertices have degree at most three,
+and all demand endpoints are distinct leaves.
+
+A directed routing extends to main routes using the natural arc paths.
+At most one incoming arc path at each \(v\) is in use, so the auxiliary
+route can use \(a',a,p_i,q_i,b,b'\) on a free arc path. Conversely, an
+auxiliary route uses \(a,b\) and at least one of the two \(p_i\). A main
+route using any private pair must traverse the complete arc path because
+the only branches lead to the occupied \(a,b\), and neither private vertex
+is a terminal. At most one incoming arc path at each \(v\) is therefore
+available to the main routes. A main route starts by crossing from its
+source leaf to the source's positive copy. After an outgoing arc path
+it reaches another negative copy and must cross to the positive copy,
+since no other incoming arc path is available. It continues in this way
+until its own sink leaf. The projected directed routes are disjoint since
+each visited vertex uses both copies.
+
+Double the width decomposition's bags and insert a local bag adding two
+private vertices for each arc at a bag containing its endpoints. At an
+indegree-two head, extend the earlier private pair through the local bag
+of the later pair. The extension stays inside the interval of the negative
+copy of the common head, which is present in both local bags. Each head
+requires at most two extended vertices per bag. Where the two pairs meet,
+insert copies adding \(a,a'\) and \(b,b'\) in separate bags. This covers
+all auxiliary edges and preserves contiguity. The width is \(O(w_0+1)\)
+and the listed bag size is polynomial in the preceding input.
+
+\section{Certifying the width on a connected bipartite graph}
+
+Subdivide each edge once, using local bags to add each subdivision vertex.
+This preserves routing and the terminal leaves, and costs one in width.
+It makes the graph bipartite. Discard isolated vertices. If a demand
+crosses between components we reject the query directly. Otherwise choose
+one subdivision vertex in each component and attach it by a bridge to
+its own vertex on a new spine path. The attachments preserve bipartiteness
+by choosing the coloring of each component independently, and preserve
+maximum degree three. A simple path with its two endpoints in a component
+must stay there because it has only one edge to the rest of the graph.
+Process component decompositions in spine order, retaining the appropriate
+spine vertex in every bag for its component and adding bags for the spine
+edges. The width increases by at most one. If no component remains, decide
+the query directly.
+
+Let \(Q\) be the maximum of three and the actual width of this decomposition.
+We construct a connected bipartite padding graph with both widths \(Q\).
+Take \(Q+1\) disjoint paths indexed \(0,\ldots,Q\). For each pair \(i<j\),
+make one port on path \(i\) and one on path \(j\) and join them by an edge.
+Order the ports on each path by lexicographic order of the pairs \((i,j)\).
+Color the port on the lower-index path black and the other one white.
+Between consecutive ports use a path of length one for different colors
+and two for equal colors. This gives a proper bipartition and maximum
+degree three. Contracting the indexed paths yields a \(K_{Q+1}\) minor,
+so treewidth is at least \(Q\).
+
+For a path decomposition, process pairs in lexicographic order. Retain
+the current vertex on each started path while it has another pair
+to process. Advance the two relevant paths to their next ports one at
+a time, introducing one vertex before forgetting its predecessor.
+Once the ports meet, forget any final ports. Introduce an unstarted path
+at its first port. During the pairs with first index zero, advance path
+zero before introducing the other path. Before pair \((0,j)\) there
+are at most \(j\) retained vertices, and at most \(j+1\) appear in any
+bag for this pair. The first pair starts with the two ports. After
+\((0,Q)\) forget the final port of path zero, so subsequent bags have
+at most \(Q\) retained vertices plus one during an advance. All edges are
+covered and every vertex has a consecutive lifetime, so the bag size
+bound is \(Q+1\).
+
+Attach the first port on path zero by a bridge to the last spine vertex.
+Both endpoints have room for the added edge under the degree bound, and
+we can flip the padding bipartition if needed. The padding has no terminals
+and creates no new routes between old terminals. Concatenate the
+decompositions with a bridge bag between the last spine component and
+the first port bag. We obtain an optimal path decomposition of width \(Q\)
+because of the clique minor. This is also an optimal tree decomposition.
+All transformations have polynomial running time and output length in
+the initial directed instance and its decomposition.
+
+\section{Running time}
+
+For each formula query, the constructed width satisfies
+\(\phi(Q)\le A m+A\) for a fixed positive integer \(A\). All query bit
+lengths are bounded by a fixed polynomial in the formula length and \(m\).
+For a Clique instance, they are bounded by \(F_1(k)n^{a_1}\) for computable
+\(F_1\) and fixed \(a_1\). The enumeration and construction overhead has
+the same form: its effectively sublinear overhead in \(m\) is at most
+\(2^{m/(2k)}\) beyond a computable cutoff depending on \(k\), and its
+finite prefix has a computable bound.
+
+Suppose a solver as in Theorem~\ref{vdp-width-w1} exists. Both applications
+measure the same \(Q\) on our queries. For \(j=2A(k+1)\) and
+\(Q\ge T(j)\), we have
+\[
+ h(Q)\le (A k\lceil\log_2 n\rceil+A)/j
+       \le \log_2 n+1.
+\]
+For the exceptional widths, hardwire a single integer \(D_0\) bounding
+the finite values of \(h(w)\) for \(w<T(1)\). Then
+\(h(w)\le \phi(w)+D_0\) for all \(w\). Consequently the range
+\(Q<T(j)\) has a computable upper bound on \(h(Q)\) as a function of \(k\),
+even if \(h\) itself is uncomputable. The polynomial input factor has
+a fixed exponent. Running the solver on every query thus gives a
+deterministic FPT algorithm for Clique, a contradiction.
+
+\begin{thebibliography}{9}
+\bibitem{df} R. G. Downey and M. R. Fellows.
+Fixed-parameter tractability and completeness II: On completeness for W[1].
+\emph{Theoretical Computer Science} 141(1--2), 109--131, 1995.
+\href{https://doi.org/10.1016/0304-3975(94)00097-3}{DOI}.
+\bibitem{lms} D. Lokshtanov, D. Marx, and S. Saurabh.
+Slightly Superexponential Parameterized Problems.
+\emph{SIAM Journal on Computing} 47(3), 675--702, 2018.
+\href{https://doi.org/10.1137/16M1104834}{DOI}.
+\end{thebibliography}
+\end{document}

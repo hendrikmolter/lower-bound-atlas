@@ -1,0 +1,10 @@
+{
+  "id": "hitting-set",
+  "input": "An explicit finite ground set, an explicit family of its subsets, and a nonnegative integer k in binary.",
+  "name": "Hitting Set",
+  "parameterizations": [
+    "hitting-set-budget"
+  ],
+  "question": "Is there a set of at most k ground elements intersecting every listed subset?",
+  "revision": 1
+}

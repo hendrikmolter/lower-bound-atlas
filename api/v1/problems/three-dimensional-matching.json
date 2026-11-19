@@ -1,0 +1,10 @@
+{
+  "id": "three-dimensional-matching",
+  "input": "Three disjoint sets X, Y and Z each of size q, and an explicit set T of triples in X × Y × Z.",
+  "name": "Three-Dimensional Matching",
+  "parameterizations": [
+    "three-dimensional-matching-part-size"
+  ],
+  "question": "Are there q triples in T that together use every element of X, Y and Z exactly once?",
+  "revision": 1
+}

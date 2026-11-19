@@ -1,0 +1,21 @@
+{
+  "authors": [
+    "Takanori Akiyama",
+    "Takao Nishizeki",
+    "Nobuji Saito"
+  ],
+  "editions": [
+    {
+      "access": "Published scan in the author's archive. Section 2, Figures 1–5 and the nonplanar graph before crossing replacement checked.",
+      "id": "journal",
+      "kind": "journal",
+      "label": "Journal of Information Processing 3(2) (1980), 73–76",
+      "preferredUrl": "https://www.ecei.tohoku.ac.jp/alg/nishizeki/sub/j/DVD/PDF_J/J029.pdf",
+      "primaryUrl": "https://www.ecei.tohoku.ac.jp/alg/nishizeki/sub/j/DVD/PDF_J/J029.pdf"
+    }
+  ],
+  "id": "akiyama-nishizeki-saito1980",
+  "preferredEditionId": "journal",
+  "preferredUrl": "https://www.ecei.tohoku.ac.jp/alg/nishizeki/sub/j/DVD/PDF_J/J029.pdf",
+  "title": "NP-Completeness of the Hamiltonian Cycle Problem for Bipartite Graphs"
+}

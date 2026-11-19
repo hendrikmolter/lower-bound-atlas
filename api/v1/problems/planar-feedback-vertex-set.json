@@ -1,0 +1,17 @@
+{
+  "id": "planar-feedback-vertex-set",
+  "input": "An explicitly encoded finite simple undirected planar graph G and a nonnegative integer k.",
+  "name": "Planar Feedback Vertex Set",
+  "parameterizations": [
+    "planar-feedback-vertex-set-budget",
+    "planar-feedback-vertex-set-vertices"
+  ],
+  "question": "Can at most k vertices be deleted to make G acyclic?",
+  "restrictionOf": [
+    {
+      "condition": "G is planar",
+      "problemId": "feedback-vertex-set"
+    }
+  ],
+  "revision": 1
+}

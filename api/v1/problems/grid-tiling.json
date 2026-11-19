@@ -1,0 +1,10 @@
+{
+  "id": "grid-tiling",
+  "input": "An explicitly listed k × k array of sets of ordered pairs from [n] × [n].",
+  "name": "Grid Tiling",
+  "parameterizations": [
+    "grid-tiling-side"
+  ],
+  "question": "Can one choose one allowed pair per cell so that first coordinates agree along each row and second coordinates agree along each column?",
+  "revision": 1
+}

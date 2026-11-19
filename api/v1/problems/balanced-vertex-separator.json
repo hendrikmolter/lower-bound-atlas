@@ -1,0 +1,10 @@
+{
+  "id": "balanced-vertex-separator",
+  "input": "A finite simple undirected graph G and a nonnegative integer budget k.",
+  "name": "Balanced Vertex Separator",
+  "parameterizations": [
+    "balanced-vertex-separator-budget"
+  ],
+  "question": "Does G have a set of at most k vertices whose removal leaves all components with at most half the original vertices?",
+  "revision": 1
+}

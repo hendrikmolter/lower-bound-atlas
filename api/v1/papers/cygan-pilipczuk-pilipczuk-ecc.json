@@ -1,0 +1,31 @@
+{
+  "authors": [
+    "Marek Cygan",
+    "Marcin Pilipczuk",
+    "Michał Pilipczuk"
+  ],
+  "editions": [
+    {
+      "access": "Published text checked for Theorem 1 and Corollaries 2–3 on p. 70, and their proofs.",
+      "doi": "10.1137/130947076",
+      "id": "journal",
+      "kind": "journal",
+      "label": "SIAM J. Comput. 45(1) (2016), 67–83",
+      "preferredUrl": "https://doi.org/10.1137/130947076",
+      "primaryUrl": "https://doi.org/10.1137/130947076"
+    },
+    {
+      "access": "Checked the reduction statement and lower-bound corollary in the full text.",
+      "id": "v2",
+      "kind": "preprint",
+      "label": "arXiv:1203.1754v2, 26 September 2012",
+      "openUrl": "https://arxiv.org/pdf/1203.1754v2",
+      "preferredUrl": "https://arxiv.org/abs/1203.1754v2",
+      "primaryUrl": "https://arxiv.org/abs/1203.1754v2"
+    }
+  ],
+  "id": "cygan-pilipczuk-pilipczuk-ecc",
+  "preferredEditionId": "journal",
+  "preferredUrl": "https://doi.org/10.1137/130947076",
+  "title": "Known Algorithms for Edge Clique Cover Are Probably Optimal"
+}

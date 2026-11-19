@@ -1,0 +1,10 @@
+{
+  "id": "unit-disk-independent-set",
+  "input": "An explicit list of closed disks of radius one in the plane with rational coordinates in binary, and a nonnegative integer k in binary.",
+  "name": "Independent Set of unit disks",
+  "parameterizations": [
+    "unit-disk-independent-set-budget"
+  ],
+  "question": "Are there k listed objects that are pairwise disjoint?",
+  "revision": 1
+}

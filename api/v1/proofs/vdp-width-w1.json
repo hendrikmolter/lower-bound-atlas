@@ -1,0 +1,33 @@
+{
+  "currentRevision": 1,
+  "id": "vdp-width-w1",
+  "revisions": [
+    {
+      "authorship": {
+        "authors": [
+          "Atlas"
+        ],
+        "kind": "ai",
+        "origin": "atlas"
+      },
+      "dependencies": [],
+      "dependencyCoverage": "complete",
+      "pdf": "proofs/vertex-disjoint-paths-width-w1.pdf",
+      "revision": 1,
+      "source": "proofs/vertex-disjoint-paths-width-w1.tex",
+      "theorems": [
+        {
+          "destination": "vdp-width-w1",
+          "label": "vdp-width-w1",
+          "number": "1",
+          "reviewIds": [
+            "vdp-width-w1-independent"
+          ],
+          "statement": "Under deterministic FPT ≠ W[1], there is no correct deterministic Vertex-Disjoint Paths solver in 2^{h(w)} B^C time for a fixed C and a finite nonnegative h effectively little-o of max(1, w log₂(max(2,w))). The parameter is intrinsic treewidth or the width of a supplied path decomposition. The hard instances are connected bipartite graphs of maximum degree three with distinct leaf demand endpoints and equal treewidth and pathwidth. The supplied path decomposition is optimal.",
+          "supports": true
+        }
+      ]
+    }
+  ],
+  "title": "Vertex-Disjoint Paths at optimal width on subcubic bipartite graphs"
+}

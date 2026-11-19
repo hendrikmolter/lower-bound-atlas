@@ -1,0 +1,47 @@
+{
+  "assessments": {},
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "chromatic-tw-eth",
+  "inputConditions": [],
+  "inputFactor": "n^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [],
+  "reader": {
+    "label": "Slightly superexponential bound",
+    "revision": 1
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "2^(o(t log₂ t)) n^(O(1))",
+  "runtimeSymbols": [
+    "t",
+    "n"
+  ],
+  "sources": [
+    {
+      "editionId": "journal",
+      "locator": "Theorem 6.1 and its cover-size bound, pp. 698–699, with treewidth bounded by vertex cover number",
+      "paperId": "lms2018",
+      "placement": "statement",
+      "role": "published reduction"
+    },
+    {
+      "editionId": "bulletin",
+      "locator": "Theorem 6.3, PDF p. 22",
+      "paperId": "lms2011",
+      "placement": "statement",
+      "role": "published lower bound"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm decides Chromatic Number within the stated running time.",
+  "status": "established",
+  "supported": true
+}

@@ -1,0 +1,66 @@
+{
+  "assessments": {
+    "kxk": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unassessed"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "kxk",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "closest-substring-constant-alphabet-strings-kxk",
+  "inputConditions": [],
+  "inputFactor": "N^(o(log₂ log₂ r))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [
+    "For every computable joint prefactor f."
+  ],
+  "reader": {
+    "label": "Double-logarithmic string-count exponent",
+    "revision": 1,
+    "title": "Constant-alphabet Closest Substring under the k × k Clique Hypothesis: Double-logarithmic string-count exponent"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "f(d,r) N^(o(log₂ log₂ r))",
+  "runtimeSymbols": [
+    "d",
+    "r",
+    "N"
+  ],
+  "sources": [
+    {
+      "editionId": "v3",
+      "locator": "Proposition 1 and Table 1",
+      "paperId": "szeider2026",
+      "placement": "statement",
+      "role": "conditional lower bound"
+    },
+    {
+      "editionId": "book",
+      "locator": "Theorem 14.27",
+      "paperId": "cygan2015",
+      "placement": "proof",
+      "role": "source reduction and parameter scales"
+    }
+  ],
+  "statement": "Under the k × k Clique Hypothesis, no deterministic algorithm solves the stated decision problem within the stated running time.",
+  "status": "established",
+  "supported": true
+}

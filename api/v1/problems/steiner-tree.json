@@ -1,0 +1,10 @@
+{
+  "id": "steiner-tree",
+  "input": "A finite simple undirected graph G with a set T of distinct terminals and a nonnegative integer edge budget b in binary.",
+  "name": "Steiner Tree",
+  "parameterizations": [
+    "steiner-tree-terminals"
+  ],
+  "question": "Does G have a tree spanning all terminals in T that uses at most b edges?",
+  "revision": 1
+}

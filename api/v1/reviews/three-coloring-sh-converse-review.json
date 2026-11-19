@@ -1,0 +1,20 @@
+{
+  "applicable": true,
+  "date": "2026-11-18",
+  "evidence": "evidence/three-coloring-sh-converse-independent.md",
+  "id": "three-coloring-sh-converse-review",
+  "independent": true,
+  "label": "Agent verified",
+  "object": {
+    "id": "three-coloring-sh-converse",
+    "revision": 1,
+    "theorem": "color-sh-converse",
+    "type": "proof"
+  },
+  "reviewer": "Independent agent reviewer",
+  "scope": "Converse only. Checks the encoding, the quantitative sparsification import, the choice of fixed exponents and the deterministic running time.",
+  "sourceSha256": "9f946a0078c62a6ae28959f44f9ad2f6df97133f59a14e8f715a53da497da49a",
+  "stale": false,
+  "type": "agent",
+  "verdict": "verified"
+}

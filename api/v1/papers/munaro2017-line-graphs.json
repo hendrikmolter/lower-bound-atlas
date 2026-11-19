@@ -1,0 +1,21 @@
+{
+  "authors": [
+    "Andrea Munaro"
+  ],
+  "editions": [
+    {
+      "access": "Theorems 21, 23 and 24 and Figure 5 checked in the open author copy.",
+      "doi": "10.1016/j.disc.2017.01.006",
+      "id": "journal",
+      "kind": "journal",
+      "label": "Discrete Mathematics 340(6) (2017), 1210–1226",
+      "openUrl": "https://pure.qub.ac.uk/files/186487120/dmline.pdf",
+      "preferredUrl": "https://doi.org/10.1016/j.disc.2017.01.006",
+      "primaryUrl": "https://doi.org/10.1016/j.disc.2017.01.006"
+    }
+  ],
+  "id": "munaro2017-line-graphs",
+  "preferredEditionId": "journal",
+  "preferredUrl": "https://doi.org/10.1016/j.disc.2017.01.006",
+  "title": "On Line Graphs of Subcubic Triangle-Free Graphs"
+}

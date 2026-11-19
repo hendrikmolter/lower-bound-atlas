@@ -1,0 +1,19 @@
+{
+  "applicable": true,
+  "date": "2026-11-18",
+  "evidence": "evidence/six-w1-memberships-independent.md",
+  "id": "scattered-set-solution-size-w1-hardness-scope",
+  "independent": true,
+  "label": "Agent verified",
+  "object": {
+    "caseId": "scattered-set-solution-size",
+    "id": "scattered-set-solution-size-w1",
+    "revision": 1,
+    "type": "bound"
+  },
+  "reviewer": "Codex agent /root/population_c",
+  "scope": "Setting d to two in the unweighted graph gives exactly Independent Set by the same requested solution size. Disconnected vertices have infinite distance and are allowed together.",
+  "stale": false,
+  "type": "agent",
+  "verdict": "verified"
+}

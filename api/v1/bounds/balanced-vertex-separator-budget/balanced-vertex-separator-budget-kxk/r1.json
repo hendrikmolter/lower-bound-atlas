@@ -1,0 +1,65 @@
+{
+  "assessments": {
+    "kxk": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unassessed"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "kxk",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "balanced-vertex-separator-budget-kxk",
+  "inputConditions": [],
+  "inputFactor": "N^(o(k))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [
+    "For every computable f."
+  ],
+  "reader": {
+    "label": "Sublinear exponent in the budget",
+    "revision": 1,
+    "title": "Balanced Vertex Separator under the k × k Clique Hypothesis: Sublinear exponent in the budget"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "f(k) N^(o(k))",
+  "runtimeSymbols": [
+    "k",
+    "N"
+  ],
+  "sources": [
+    {
+      "editionId": "v3",
+      "locator": "Proposition 1 and Table 1, second row",
+      "paperId": "szeider2026",
+      "placement": "statement",
+      "role": "conditional lower bound"
+    },
+    {
+      "editionId": "book",
+      "locator": "Corollary 14.23, pp. 487–488",
+      "paperId": "cygan2015",
+      "placement": "proof",
+      "role": "linear-parameter reduction application"
+    }
+  ],
+  "statement": "Under the k × k Clique Hypothesis, no deterministic algorithm solves the stated decision problem within the stated running time.",
+  "status": "established",
+  "supported": true
+}

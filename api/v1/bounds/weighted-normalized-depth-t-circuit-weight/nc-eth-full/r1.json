@@ -1,0 +1,74 @@
+{
+  "assessments": {
+    "eth": {
+      "converse": {
+        "effectiveStatus": "unknown",
+        "evidence": [],
+        "status": "unknown"
+      },
+      "forward": {
+        "effectiveStatus": "unknown",
+        "evidence": [],
+        "status": "unknown"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unknown"
+    },
+    "sh": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unassessed"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "nc-eth-full",
+  "inputConditions": [],
+  "inputFactor": "Complete length B is the base of the exponent",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [
+    "The circuit depth t ≥ 2 is fixed.",
+    "The function f is recursive, subject to the source’s computability and inverse-function conventions."
+  ],
+  "reader": {
+    "explanation": "The journal uses the premise that some SNP problem has no subexponential-time algorithm. Positive-rate variable-3SAT ETH implies this premise.",
+    "label": "Bound in the full input length",
+    "revision": 1
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "f(k) B^(o(k))",
+  "runtimeSymbols": [
+    "t",
+    "k",
+    "B"
+  ],
+  "sources": [
+    {
+      "editionId": "journal",
+      "locator": "Theorem 2.3, p. 235, Theorems 3.1–3.2, pp. 236–238, circuit definitions, pp. 233–235, and footnote 1, p. 231",
+      "paperId": "chkx2005",
+      "placement": "statement",
+      "role": "benchmark"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm decides Weighted normalized circuit satisfiability within the stated running time.",
+  "status": "established",
+  "supported": true
+}

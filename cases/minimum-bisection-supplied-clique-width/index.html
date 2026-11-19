@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Minimum Bisection | Lower Bound Atlas</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header"><nav class="site-nav" aria-label="Main">
+    <a href="../../index.html" class="site-brand">Lower Bound Atlas</a>
+    <div class="nav-links"><a href="../../index.html">Problems</a><a href="../../assumptions/index.html">Hypotheses</a><a href="../../papers/index.html">Papers</a><a href="../../notation/index.html">Notation</a><a href="../../about/index.html">About &amp; guide</a></div>
+  </nav></header>
+  <main id="main-content" tabindex="-1">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../../index.html">Problems</a><span aria-hidden="true"> / </span><a href="../../problems/minimum-bisection/index.html">Minimum Bisection</a></nav>
+    <header class="hero">
+      <h1>Minimum Bisection</h1>
+      
+    </header>
+    <nav class="param-nav" aria-label="Recorded parameterizations"><strong>Recorded parameterizations</strong><a href="../minimum-bisection-clique-width/index.html#minimum-bisection-clique-width">Clique-width</a> <a href="#minimum-bisection-supplied-clique-width" aria-current="location">Width of a supplied clique-width expression</a></nav>
+      <section id="minimum-bisection-supplied-clique-width" class="problem-box" aria-label="Problem definition"><dl>
+      <dt>Input</dt><dd>An explicitly encoded finite simple undirected graph G and a nonnegative integer cut budget b. An expression tree that constructs G using t clique-width labels.</dd>
+      <dt>Parameter</dt><dd>The width of the supplied clique-width expression t.</dd>
+      <dt>Question</dt><dd>Can the vertices be partitioned into two equally large parts with at most b edges between the parts?</dd></dl><div class="input-restrictions"><strong>Input restrictions</strong><ul><li>The input graph has an even number of vertices.</li></ul></div></section>
+      
+      <section id="comparisons"><h2 id="bounds">Lower bounds by hypothesis</h2>
+      <h3>Notation</h3><ul class="runtime-symbols"><li><i>n</i> — number of vertices in the input graph</li><li><i>B</i> — complete binary input length, including the supplied expression</li></ul>
+      <article class="hypothesis-card" id="assessment-eth"><h3><a href="../../assumptions/eth/index.html">ETH</a> (historical)</h3>
+        <section class="bound-row" id="minimum-bisection-supplied-clique-width-eth"><h4>Sublinear exponent in the expression width</h4>
+        
+        
+        <div class="excluded-time"><span>Running time excluded under ETH</span><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow></mrow><mo>&#x2062;</mo><msup><mi>n</mi><mrow><mrow><mi>o</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow></mrow></mrow></msup></mrow><annotation encoding="text/plain">f(t) n^(o(t))</annotation></semantics></math></div><p class="runtime-qualification">For every computable function f.</p>
+        <div class="bound-links"><div class="actions"><a href="../../bounds/minimum-bisection-supplied-clique-width/minimum-bisection-supplied-clique-width-eth/index.html">Full statement</a></div>
+    </div><ul class="bound-citations"><li><a href="https://doi.org/10.1137/130910932">Almost Optimal Lower Bounds for Problems Parameterized by Clique-Width</a></li></ul>
+        </section>
+        
+        </article><article class="hypothesis-card" id="assessment-sh"><h3><a href="../../assumptions/sh/index.html">SH</a></h3>
+        <p>No lower bound recorded for this parameterization.</p>
+        
+        </article><article class="hypothesis-card" id="assessment-w1"><h3><a href="../../assumptions/w1/index.html">FPT ≠ W[1]</a></h3>
+        <section class="bound-row" id="minimum-bisection-supplied-clique-width-w1-baseline">
+        
+        
+        <p>No lower bound recorded for this parameterization beyond W[1]-hardness.</p>
+        <ul class="bound-citations"><li><a href="https://doi.org/10.1137/130910932">Almost Optimal Lower Bounds for Problems Parameterized by Clique-Width</a></li><li><a href="https://doi.org/10.1016/S0166-218X(99)00184-5">Upper Bounds to the Clique Width of Graphs</a></li></ul><div class="bound-links"><div class="actions"><a href="../../bounds/minimum-bisection-supplied-clique-width/minimum-bisection-supplied-clique-width-w1-baseline/index.html">Full statement</a></div>
+    </div>
+        </section>
+        
+        </article><article class="hypothesis-card" id="assessment-np_qp"><h3><a href="../../assumptions/np_qp/index.html">NP ⊈ QP</a></h3>
+        <p>No lower bound recorded for this parameterization.</p>
+        
+        </article><article class="hypothesis-card" id="assessment-kxk"><h3><a href="../../assumptions/kxk/index.html"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>×</mo><mi>k</mi></mrow><annotation encoding="text/plain">k × k</annotation></semantics></math> Clique Hypothesis</a></h3>
+        <p>No lower bound recorded for this parameterization.</p>
+        
+        </article></section>
+      <details class="reader-details"><summary>Record details</summary><dl class="details-grid"><div><dt>Identifier</dt><dd>minimum-bisection-supplied-clique-width</dd></div><div><dt>Revision</dt><dd>3</dd></div></dl>
+      <a href="index.html">Permalink</a> · <a href="../../api/v1/cases/minimum-bisection-supplied-clique-width.json">JSON record</a></details>
+  </main>
+  <footer class="site-footer">
+    <span>Release · v1.0.0</span>
+    <a href="../../api/v1/atlas.json">JSON export</a>
+    <a href="../../manifest.json">Build manifest</a>
+  </footer>
+</body>
+</html>

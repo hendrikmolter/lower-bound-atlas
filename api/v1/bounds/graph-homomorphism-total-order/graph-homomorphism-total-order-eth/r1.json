@@ -1,0 +1,57 @@
+{
+  "assessments": {
+    "eth": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unassessed"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "graph-homomorphism-total-order-eth",
+  "inputConditions": [],
+  "inputFactor": "B^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [],
+  "reader": {
+    "explanation": "Apply the source theorem with h(n)=n and p≤2n. A fixed polynomial in the explicit graph encoding is absorbed by the positive-rate gap.",
+    "label": "Subexponential-time bound in total order",
+    "revision": 1,
+    "title": "Graph Homomorphism under ETH: Subexponential-time bound in total order"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "2^(o(p log₂ p)) B^(O(1))",
+  "runtimeSymbols": [
+    "p",
+    "B"
+  ],
+  "sources": [
+    {
+      "editionId": "journal",
+      "locator": "Theorems 1.1 and 4.1, pp. 18:2 and 18:17–18:18",
+      "paperId": "cygan-et-al2017-embedding",
+      "placement": "statement",
+      "role": "conditional lower bound"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm solves the stated decision problem within the stated running time.",
+  "status": "established",
+  "supported": true
+}

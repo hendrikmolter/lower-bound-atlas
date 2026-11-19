@@ -1,0 +1,77 @@
+{
+  "assessments": {
+    "eth": {
+      "converse": {
+        "effectiveStatus": "unknown",
+        "evidence": [],
+        "status": "unknown"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unknown"
+    },
+    "sh": {
+      "converse": {
+        "effectiveStatus": "unknown",
+        "evidence": [],
+        "status": "unknown"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unknown"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "maximum-cycle-cover-supplied-pathwidth-eth",
+  "inputConditions": [],
+  "inputFactor": "B^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [],
+  "reader": {
+    "label": "Exponent in supplied pathwidth",
+    "revision": 1,
+    "title": "Exponent in supplied pathwidth under ETH"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "2^(o(p log₂(p+2))) B^(O(1))",
+  "runtimeSymbols": [
+    "p",
+    "B"
+  ],
+  "sources": [
+    {
+      "editionId": "book",
+      "locator": "Exercise 14.8, p. 516, and bibliographic notes",
+      "paperId": "cygan2015",
+      "placement": "statement",
+      "role": "benchmark"
+    },
+    {
+      "editionId": "journal",
+      "locator": "Theorem 1.3 and Table 1, Max Cycle Cover, p. 17:4",
+      "paperId": "cygan-cut-count",
+      "placement": "statement",
+      "role": "benchmark"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm solves Maximum Cycle Cover within the stated running time.",
+  "status": "established",
+  "supported": true
+}

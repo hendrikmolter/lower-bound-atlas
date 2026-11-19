@@ -1,0 +1,118 @@
+{
+  "assessments": {
+    "eth": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unassessed"
+    },
+    "kxk": {
+      "converse": {
+        "effectiveStatus": "established",
+        "evidence": [
+          {
+            "boundRevision": 2,
+            "hypothesisRevision": 1,
+            "reviewId": "square-eth-equivalence-review",
+            "source": {
+              "editionId": "v3",
+              "locator": "Section 2, hypothesis definition on p. 2 and deterministic convention on p. 3",
+              "paperId": "szeider2026",
+              "placement": "proof",
+              "role": "defining hypothesis"
+            }
+          }
+        ],
+        "status": "established"
+      },
+      "forward": {
+        "effectiveStatus": "established",
+        "evidence": [
+          {
+            "boundRevision": 2,
+            "hypothesisRevision": 1,
+            "reviewId": "square-eth-equivalence-review",
+            "source": {
+              "editionId": "v3",
+              "locator": "Section 2, hypothesis definition on p. 2 and deterministic convention on p. 3",
+              "paperId": "szeider2026",
+              "placement": "statement",
+              "role": "defining hypothesis"
+            }
+          }
+        ],
+        "status": "established"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "established-equivalent"
+    },
+    "sh": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unassessed"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "square-eth",
+  "inputConditions": [],
+  "inputFactor": "N^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [],
+  "reader": {
+    "label": "Bound in the number of rows",
+    "revision": 2
+  },
+  "reviewIds": [
+    "square-eth-equivalence-review"
+  ],
+  "revision": 2,
+  "runtime": "2^(o(k log₂ k)) N^(O(1))",
+  "runtimeSymbols": [
+    "k",
+    "N"
+  ],
+  "sources": [
+    {
+      "editionId": "journal",
+      "locator": "Theorem 2.4, pp. 679–680",
+      "paperId": "lms2018",
+      "placement": "statement",
+      "role": "lower bound"
+    },
+    {
+      "editionId": "bulletin",
+      "locator": "Theorem 4.4",
+      "paperId": "lms2011",
+      "placement": "statement",
+      "role": "lower bound"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm decides k × k Clique within the stated running time.",
+  "status": "established",
+  "supported": true
+}
