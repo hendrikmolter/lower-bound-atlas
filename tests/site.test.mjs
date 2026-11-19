@@ -25,7 +25,7 @@ test('a release build fails before publishing when the source revision cannot be
   assert.equal(existsSync(join(dir, 'dist/site/manifest.json')), false);
 });
 
-test('renders qualitative hardness with citations and preserves the exact statement', t => {
+test('renders qualitative hardness as a cited notice without a statement page', t => {
   const dir = readerFixture(t);
   const baselines = [
     ['grid-tiling-side', 'grid-tiling-side-w1', 'W[1]'],
@@ -50,21 +50,17 @@ test('renders qualitative hardness with citations and preserves the exact statem
     const afterNotice = card.split('<p>' + sentence + '</p>')[1].trimStart();
     assert.ok(afterNotice.startsWith('<ul class="bound-citations"><li><a href='));
     assert.ok(!card.includes('excluded-time'));
-    assert.ok(card.includes('>Full statement</a>'));
-    const detail = read('bounds/' + caseId + '/' + boundId);
-    assert.ok(detail.includes('<p>' + sentence + '</p>'));
-    assert.ok(detail.includes('class="statement"'));
-    assert.ok(detail.includes('class="implication-evidence"'));
+    assert.ok(!card.includes('Full statement') && !card.includes('quivalent to'));
+    assert.ok(!existsSync(join(dir, 'dist/site/bounds', caseId, boundId, 'index.html')));
+    assert.ok(!existsSync(join(dir, 'dist/site/bounds', caseId, boundId, 'r1/index.html')));
     if (mixed) {
-      assert.ok(!detail.includes(notice));
       assert.ok(!card.includes(notice));
       assert.ok(row(read('cases/' + caseId), 'feature-set-budget-w1-fixed').includes('excluded-time'));
     }
   }
-  const grid = read('bounds/grid-tiling-side/grid-tiling-side-w1');
-  assert.ok(grid.includes('aria-label="Statement implies FPT ≠ W[1]"'));
-  assert.ok(grid.includes('The parameter factor'));
-  assert.ok(read('assumptions/w1').includes('>W[2]-hardness</a>'));
+  const applications = read('assumptions/w1');
+  assert.ok(applications.includes('grid-tiling-side/index.html#grid-tiling-side-w1'));
+  assert.ok(applications.includes('>W[2]-hardness</a>'));
 });
 
 test('renaming a problem and admitting another hypothesis require only data changes', t => {

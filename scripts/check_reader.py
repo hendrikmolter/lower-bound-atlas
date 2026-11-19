@@ -130,6 +130,10 @@ def check():
             if location[1] and problem.bound_locations.get(location[2]) != (owner, False, None):
                 raise ValueError(f"Earlier bound {bound['id']} lacks a current superseding bound under {owner}")
             detail = SITE / "bounds" / case["id"] / bound["id"] / "index.html"
+            if bound.get("hardnessBaseline"):
+                if any(detail.parent.rglob("*.html")):
+                    raise ValueError(f"Hardness-only entry has a statement page: {detail}")
+                continue
             if detail not in pages:
                 raise ValueError(f"Missing current statement page for {case['id']}/{bound['id']}")
             sections = {"statement", "cite"}

@@ -121,7 +121,8 @@ function link(page, target, label, hash) {
 }
 
 function anchor(url, label, attributes = '') {
-  return `<a href="${escape(url)}"${attributes}>${mathText(label)}</a>`;
+  const text = mathText(label).replaceAll('<math ', '<span class="link-math"><math ').replaceAll('</math>', '</math></span>');
+  return `<a href="${escape(url)}"${attributes}>${text}</a>`;
 }
 
 function write(path, content) {
@@ -256,8 +257,14 @@ function objectLink(page, ref, label) {
     const { proof, theorem } = proofData(ref);
     label = proof.title + ' · Theorem ' + theorem.number + ' · r' + ref.revision;
   }
-  if (ref.type === 'bound' && label) {
-    return `<a href="${escape(relativeUrl(page, objectPage(ref)))}" aria-label="${escape(label)}">${mathText(label)}</a>`;
+  if (ref.type === 'bound') {
+    const target = movedBounds.get(boundKey(ref)) ?? ref;
+    const { version } = boundVersions.get(boundKey(target));
+    const current = registries.cases.get(target.caseId).bounds.some(bound => bound.id === target.id);
+    const url = version.hardnessBaseline
+      ? relativeUrl(page, routes.case(target.caseId)) + (current ? '#' + encodeURIComponent(target.id) : '')
+      : relativeUrl(page, routes.bound(target));
+    return anchor(url, label ?? ref.id + ' · r' + ref.revision, label ? ' aria-label="' + escape(label) + '"' : '');
   }
   return link(page, objectPage(ref), label ?? ref.id + ' · r' + ref.revision);
 }
@@ -368,9 +375,10 @@ function problemActions(page, record, bound) {
   const corrections = bound.status === 'withdrawn' ? db.challenges.filter(c =>
     sameObject(c.object, boundRef(record.id, bound))).map(c => link(page, routes.challenge(c.id), 'Correction record')) : [];
   const references = items(citations, 'bound-citations');
+  if (bound.hardnessBaseline) return references;
   const actions = `<div class="bound-links"><div class="actions">${link(page, routes.bound(ref), 'Full statement')}</div>
     ${corrections.join(' ')}${notation ? link(page, 'notation/index.html', notationLabel ?? 'Notation', notation) : ''}</div>`;
-  return bound.hardnessBaseline ? references + actions : actions + references;
+  return actions + references;
 }
 
 function directRegistryLink(ref) {
@@ -575,8 +583,12 @@ function casePage(record, page) {
 
     function row(bound, hypothesisId, witness) {
       const wording = boundCopy(bound);
-      const baseline = bound.hardnessBaseline;
-      const title = baseline ? '' : escape(wording.label ?? '');
+      const id = bound.assumptions[0].id === hypothesisId ? bound.id : hypothesisId + '-' + bound.id;
+      const section = `<section class="bound-row" id="${escape(id)}"${witness ? ' data-superseded-by="' + escape(witness.stronger) + '"' : ''}>`;
+      if (bound.hardnessBaseline) {
+        return section + paragraphs(hardnessNotice(record,bound)) + problemActions(page,record,bound) + '</section>';
+      }
+      const title = escape(wording.label ?? '');
       const destination = routes.bound({ caseId: record.id, id: bound.id });
       const equivalents = [
         ...formulationComparisons(record,bound).map(({formulation: f}) => [f.id, f.name]),
@@ -588,16 +600,13 @@ function casePage(record, page) {
         (wording.subject ? wording.subject + ' is equivalent to ' : 'Equivalent to ') + name, id) + '.</p>').join('');
       const historical = hypothesisId === 'eth';
       const label = bound.status !== 'established' ? 'Running time' : historical ? 'Running time excluded under ETH' : 'Excluded running time';
-      const id = bound.assumptions[0].id === hypothesisId ? bound.id : hypothesisId + '-' + bound.id;
       const recoveryNotes = record.recoveryComparisons.filter(e => e.hypothesis.id === hypothesisId && e.recovery?.id === bound.id)
         .map(e => '<p>' + escape(recoveryLabel(e)) + ' · ETH target: ' + recoveryTarget(page,record,e) + '.</p>').join('');
-      return `<section class="bound-row" id="${escape(id)}"${witness ? ' data-superseded-by="' + escape(witness.stronger) + '"' : ''}>${title ? '<h4>' + title + '</h4>' : ''}
+      return `${section}${title ? '<h4>' + title + '</h4>' : ''}
         ${bound.status !== 'established' ? status(bound.status) : ''}${bound.assumptions.length > 1 ? premises(page,bound) : ''}
         ${inputScope(record,bound)}${modelException(bound)}
-        ${baseline ? paragraphs(hardnessNotice(record,bound)) :
-          `<div class="excluded-time"><span>${label}</span>${runtimeFormula(record,bound)}</div>${runtimeQualifications(record,bound)}`}
-        ${baseline ? problemActions(page,record,bound) + equivalence + recoveryNotes :
-          equivalence + recoveryNotes + problemActions(page,record,bound)}
+        <div class="excluded-time"><span>${label}</span>${runtimeFormula(record,bound)}</div>${runtimeQualifications(record,bound)}
+        ${equivalence + recoveryNotes + problemActions(page,record,bound)}
         ${witness ? '<p>' + anchor('#' + witness.stronger, 'Superseding bound') + '. ' + mathText(witness.reason) + '</p>' : ''}</section>`;
     }
     const cards = hypothesisOrder.filter(id => registries.assumptions.has(id)).map(id => {
@@ -669,7 +678,7 @@ function boundPages() {
     const ref = boundRef(record.id, version);
     const recordPath = api + '/bounds/' + record.id + '/' + version.id + '/r' + version.revision + '.json';
     write(recordPath, json(version));
-    if (movedBounds.has(boundKey(ref))) continue;
+    if (version.hardnessBaseline || movedBounds.has(boundKey(ref))) continue;
     const problemName = problemLabels(record)[0];
     const currentRecord = registries.cases.get(record.id);
     const current = currentRecord.bounds.find(bound => bound.id === version.id);
@@ -741,7 +750,6 @@ function boundPages() {
         ${current && current.revision !== version.revision ? '<p class="warning">' + objectLink(page,boundRef(record.id,current),'See the current revision') + '</p>' : ''}
         ${version.status !== 'established' ? '<p class="warning">' + status(version.status) + '</p>' : ''}
         <section class="problem-box"><h2 id="statement">Statement</h2>
-        ${version.hardnessBaseline ? paragraphs(hardnessNotice(currentRecord,version)) : ''}
         ${runtime.legacy ? paragraphs(record.reader?.boundContext) : ''}
         ${restrictions(record.inputConditions.filter(c => c.level === 'problem' || version.inputConditions.includes(c.id)))}${modelException(version)}
         ${!runtime.legacy ? paragraphs(statementText) + '<p class="statement">' + runtimeFormula(record,version) +
@@ -1097,8 +1105,7 @@ function versionHistory(page) {
       loggedBounds.add(key);
       const owner = bound.record.problemId;
       if (!groups.has(owner)) groups.set(owner, []);
-      const destination = objectPage({ ...ref, type: 'bound' });
-      groups.get(owner).push('<li>' + humanize(ref.change) + ' · ' + link(page, destination, boundTitle(bound.version)) + '</li>');
+      groups.get(owner).push('<li>' + humanize(ref.change) + ' · ' + objectLink(page, { ...ref, type: 'bound' }, boundTitle(bound.version)) + '</li>');
     }
     for (const [id, links] of groups) {
       const added = event.problems.includes(id);
