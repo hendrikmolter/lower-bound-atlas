@@ -1,0 +1,19 @@
+{
+  "name": "lower-bound-atlas",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "check": "node scripts/atlas.mjs validate",
+    "site": "node website/build.mjs --release",
+    "site:preview": "node website/build.mjs",
+    "preview": "node website/serve.mjs"
+  },
+  "bin": {
+    "lower-bound-atlas": "./scripts/atlas.mjs"
+  }
+}

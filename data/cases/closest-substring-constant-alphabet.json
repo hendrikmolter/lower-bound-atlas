@@ -1,0 +1,478 @@
+{
+  "aliases": [
+    "lms-closest-substring-d"
+  ],
+  "bounds": [
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "id": "closest-substring-constant-alphabet-distance-eth",
+      "inputConditions": [],
+      "inputFactor": "N^(o(log₂ d))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [
+        "For every computable joint prefactor f."
+      ],
+      "reader": {
+        "label": "Logarithmic distance exponent",
+        "revision": 1,
+        "title": "Constant-alphabet Closest Substring under ETH: Logarithmic distance exponent"
+      },
+      "revision": 1,
+      "runtime": "f(d,r) N^(o(log₂ d))",
+      "runtimeSymbols": [
+        "d",
+        "r",
+        "N"
+      ],
+      "sources": [
+        {
+          "editionId": "bulletin",
+          "locator": "Theorem 5.6, p. 60",
+          "paperId": "lms2011",
+          "placement": "statement",
+          "role": "conditional lower bound"
+        },
+        {
+          "editionId": "journal",
+          "locator": "Sections 7–8",
+          "paperId": "marx2008-closest-substring",
+          "placement": "context",
+          "role": "original reduction and rate analysis"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm solves the stated decision problem within the stated running time.",
+      "status": "established"
+    },
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "id": "closest-substring-constant-alphabet-strings-eth",
+      "inputConditions": [],
+      "inputFactor": "N^(o(log₂ log₂ r))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [
+        "For every computable joint prefactor f."
+      ],
+      "reader": {
+        "label": "Double-logarithmic string-count exponent",
+        "revision": 1,
+        "title": "Constant-alphabet Closest Substring under ETH: Double-logarithmic string-count exponent"
+      },
+      "revision": 1,
+      "runtime": "f(d,r) N^(o(log₂ log₂ r))",
+      "runtimeSymbols": [
+        "d",
+        "r",
+        "N"
+      ],
+      "sources": [
+        {
+          "editionId": "bulletin",
+          "locator": "Theorem 5.6, p. 60",
+          "paperId": "lms2011",
+          "placement": "statement",
+          "role": "conditional lower bound"
+        },
+        {
+          "editionId": "journal",
+          "locator": "Sections 7–8",
+          "paperId": "marx2008-closest-substring",
+          "placement": "context",
+          "role": "original reduction and rate analysis"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm solves the stated decision problem within the stated running time.",
+      "status": "established"
+    },
+    {
+      "assessments": {
+        "kxk": {
+          "converse": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "kxk",
+          "revision": 1
+        }
+      ],
+      "id": "closest-substring-constant-alphabet-distance-kxk",
+      "inputConditions": [],
+      "inputFactor": "N^(o(log₂ d))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [
+        "For every computable joint prefactor f."
+      ],
+      "reader": {
+        "label": "Logarithmic distance exponent",
+        "revision": 1,
+        "title": "Constant-alphabet Closest Substring under the k × k Clique Hypothesis: Logarithmic distance exponent"
+      },
+      "revision": 1,
+      "runtime": "f(d,r) N^(o(log₂ d))",
+      "runtimeSymbols": [
+        "d",
+        "r",
+        "N"
+      ],
+      "sources": [
+        {
+          "editionId": "v3",
+          "locator": "Proposition 1 and Table 1",
+          "paperId": "szeider2026",
+          "placement": "statement",
+          "role": "conditional lower bound"
+        },
+        {
+          "editionId": "book",
+          "locator": "Theorem 14.27",
+          "paperId": "cygan2015",
+          "placement": "proof",
+          "role": "source reduction and parameter scales"
+        }
+      ],
+      "statement": "Under the k × k Clique Hypothesis, no deterministic algorithm solves the stated decision problem within the stated running time.",
+      "status": "established"
+    },
+    {
+      "assessments": {
+        "kxk": {
+          "converse": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "kxk",
+          "revision": 1
+        }
+      ],
+      "id": "closest-substring-constant-alphabet-strings-kxk",
+      "inputConditions": [],
+      "inputFactor": "N^(o(log₂ log₂ r))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [
+        "For every computable joint prefactor f."
+      ],
+      "reader": {
+        "label": "Double-logarithmic string-count exponent",
+        "revision": 1,
+        "title": "Constant-alphabet Closest Substring under the k × k Clique Hypothesis: Double-logarithmic string-count exponent"
+      },
+      "revision": 1,
+      "runtime": "f(d,r) N^(o(log₂ log₂ r))",
+      "runtimeSymbols": [
+        "d",
+        "r",
+        "N"
+      ],
+      "sources": [
+        {
+          "editionId": "v3",
+          "locator": "Proposition 1 and Table 1",
+          "paperId": "szeider2026",
+          "placement": "statement",
+          "role": "conditional lower bound"
+        },
+        {
+          "editionId": "book",
+          "locator": "Theorem 14.27",
+          "paperId": "cygan2015",
+          "placement": "proof",
+          "role": "source reduction and parameter scales"
+        }
+      ],
+      "statement": "Under the k × k Clique Hypothesis, no deterministic algorithm solves the stated decision problem within the stated running time.",
+      "status": "established"
+    },
+    {
+      "assessments": {
+        "w1": {
+          "converse": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "w1",
+          "revision": 1
+        }
+      ],
+      "hardnessBaseline": "W[1]",
+      "id": "closest-substring-constant-alphabet-w1",
+      "inputConditions": [
+        "binary-alphabet"
+      ],
+      "inputFactor": "N^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [
+        "For every computable joint prefactor f."
+      ],
+      "reader": {
+        "label": "Joint-parameter W[1]-hardness",
+        "revision": 1,
+        "title": "Binary Closest Substring under FPT ≠ W[1]"
+      },
+      "revision": 1,
+      "runtime": "f(d,r) N^(O(1))",
+      "runtimeSymbols": [
+        "d",
+        "r",
+        "N"
+      ],
+      "sources": [
+        {
+          "editionId": "journal",
+          "locator": "Abstract, Section 1.3 and Theorem 8.1 (full author text)",
+          "paperId": "marx2008-closest-substring",
+          "placement": "statement",
+          "role": "W[1]-hardness with the combined parameters on binary inputs"
+        }
+      ],
+      "statement": "Under FPT ≠ W[1], no deterministic algorithm solves binary Closest Substring within the stated running time.",
+      "status": "established"
+    }
+  ],
+  "coverage": "Lower bounds for distance threshold and string count.",
+  "encoding": "A collection of r strings over a fixed finite alphabet, a requested substring length, and an integer distance threshold d.",
+  "id": "closest-substring-constant-alphabet",
+  "inputConditions": [
+    {
+      "condition": "The alphabet is binary.",
+      "id": "binary-alphabet",
+      "level": "bound"
+    }
+  ],
+  "kind": "lower-bound-case",
+  "parameter": "The Hamming-distance threshold d and The number of input strings r.",
+  "problemDefinitionHash": "414ba90840d9d45ac1e372502ed92dc622db9e50f9a2d0200ab1d284d2557eb7",
+  "problemId": "closest-substring-constant-alphabet",
+  "problemRevision": 1,
+  "reader": {
+    "anchor": "closest-substring-constant-alphabet",
+    "parameter": "The Hamming-distance threshold d and The number of input strings r.",
+    "parameterLabel": "Distance threshold and string count",
+    "parameterSymbols": [
+      {
+        "meaning": "Hamming-distance threshold",
+        "symbol": "d"
+      },
+      {
+        "meaning": "number of input strings",
+        "symbol": "r"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "size of the string input in the source",
+        "symbol": "N"
+      }
+    ]
+  },
+  "recoveryAssessments": [
+    {
+      "comparison": "The source transfer preserves the task, parameter, prefactor and excluded exponent family.",
+      "effective": false,
+      "evidence": [
+        {
+          "editionId": "v3",
+          "locator": "Proposition 1 and Table 1",
+          "paperId": "szeider2026",
+          "placement": "statement",
+          "role": "conditional lower bound"
+        },
+        {
+          "editionId": "book",
+          "locator": "Theorem 14.27",
+          "paperId": "cygan2015",
+          "placement": "proof",
+          "role": "source reduction and parameter scales"
+        }
+      ],
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "recoveredScale": "log₂ d",
+      "recovery": {
+        "id": "closest-substring-constant-alphabet-distance-kxk",
+        "revision": 1
+      },
+      "scale": "full",
+      "target": {
+        "id": "closest-substring-constant-alphabet-distance-eth",
+        "revision": 1
+      },
+      "targetScale": "log₂ d"
+    },
+    {
+      "comparison": "The source transfer preserves the task, parameter, prefactor and excluded exponent family.",
+      "effective": false,
+      "evidence": [
+        {
+          "editionId": "v3",
+          "locator": "Proposition 1 and Table 1",
+          "paperId": "szeider2026",
+          "placement": "statement",
+          "role": "conditional lower bound"
+        },
+        {
+          "editionId": "book",
+          "locator": "Theorem 14.27",
+          "paperId": "cygan2015",
+          "placement": "proof",
+          "role": "source reduction and parameter scales"
+        }
+      ],
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "recoveredScale": "log₂ log₂ r",
+      "recovery": {
+        "id": "closest-substring-constant-alphabet-strings-kxk",
+        "revision": 1
+      },
+      "scale": "full",
+      "target": {
+        "id": "closest-substring-constant-alphabet-strings-eth",
+        "revision": 1
+      },
+      "targetScale": "log₂ log₂ r"
+    }
+  ],
+  "recoveryDispositions": [
+    {
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "reason": "The two exponent scales use different parameters. The square-Clique source gives a same-scale transfer separately for each corresponding target.",
+      "recovery": {
+        "id": "closest-substring-constant-alphabet-distance-kxk",
+        "revision": 1
+      },
+      "target": {
+        "id": "closest-substring-constant-alphabet-strings-eth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "reason": "The two exponent scales use different parameters. The square-Clique source gives a same-scale transfer separately for each corresponding target.",
+      "recovery": {
+        "id": "closest-substring-constant-alphabet-strings-kxk",
+        "revision": 1
+      },
+      "target": {
+        "id": "closest-substring-constant-alphabet-distance-eth",
+        "revision": 1
+      }
+    },
+    {
+      "target": {
+        "id": "closest-substring-constant-alphabet-distance-eth",
+        "revision": 1
+      },
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "recovery": {
+        "id": "closest-substring-constant-alphabet-w1",
+        "revision": 1
+      },
+      "reason": "The published reduction excludes a fixed polynomial exponent; the historical benchmark excludes a variable exponent growing sublogarithmically in the specified parameter."
+    },
+    {
+      "target": {
+        "id": "closest-substring-constant-alphabet-strings-eth",
+        "revision": 1
+      },
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "recovery": {
+        "id": "closest-substring-constant-alphabet-w1",
+        "revision": 1
+      },
+      "reason": "The published reduction excludes a fixed polynomial exponent; the historical benchmark excludes a variable exponent growing sublogarithmically in the specified parameter."
+    }
+  ],
+  "resolutions": [],
+  "revision": 7,
+  "task": "Is there a string of the requested length whose Hamming distance from some substring of each input string is at most d?",
+  "title": "Constant-alphabet Closest Substring by distance threshold and string count",
+  "variant": "Constant-alphabet Closest Substring"
+}

@@ -1,0 +1,196 @@
+{
+  "aliases": [],
+  "bounds": [
+    {
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "id": "ecc-budget-eth",
+      "inputConditions": [],
+      "inputFactor": "n^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "label": "Double-exponential dependence on the clique budget",
+        "revision": 1
+      },
+      "revision": 1,
+      "runtime": "2^(2^(o(k))) n^(O(1))",
+      "runtimeSymbols": [
+        "k",
+        "n"
+      ],
+      "sources": [
+        {
+          "paperId": "cygan-pilipczuk-pilipczuk-ecc",
+          "editionId": "journal",
+          "locator": "Theorem 1 and Corollary 2, p. 70",
+          "placement": "statement",
+          "role": "published lower bound"
+        },
+        {
+          "editionId": "book",
+          "locator": "Theorem 14.20, p. 485",
+          "paperId": "cygan2015",
+          "placement": "statement",
+          "role": "textbook benchmark"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm decides Edge Clique Cover within the stated running time.",
+      "status": "established"
+    },
+    {
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "np_qp",
+          "revision": 1
+        }
+      ],
+      "id": "ecc-budget-np-qp",
+      "inputConditions": [],
+      "inputFactor": "n^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "explanation": "The reduction from 3-SAT uses a clique budget logarithmic in the number of variables and produces a graph of polynomial size. A solver within the stated time would give a quasipolynomial-time algorithm for 3-SAT.",
+        "label": "Polynomial powers in the exponent",
+        "revision": 2
+      },
+      "revision": 2,
+      "runtime": "2^(k^(O(1))) n^(O(1))",
+      "runtimeSymbols": [
+        "k",
+        "n"
+      ],
+      "sources": [
+        {
+          "paperId": "cygan-pilipczuk-pilipczuk-ecc",
+          "editionId": "journal",
+          "locator": "Theorem 1 and Corollary 3, p. 70",
+          "placement": "statement",
+          "role": "published lower bound"
+        }
+      ],
+      "statement": "Under NP ⊈ QP, no deterministic algorithm decides Edge Clique Cover within the stated running time.",
+      "status": "established",
+      "assessments": {
+        "np_qp": {
+          "hypothesisRevision": 1,
+          "forward": {
+            "status": "established",
+            "evidence": [
+              {
+                "boundRevision": 2,
+                "hypothesisRevision": 1,
+                "reviewId": "ecc-budget-np-qp-equivalence-review",
+                "source": {
+                  "paperId": "cygan-pilipczuk-pilipczuk-ecc",
+                  "editionId": "journal",
+                  "locator": "Theorem 1 and Corollary 3, p. 70",
+                  "placement": "forward",
+                  "role": "reduction with logarithmic clique budget"
+                }
+              }
+            ]
+          },
+          "converse": {
+            "status": "established",
+            "evidence": [
+              {
+                "boundRevision": 2,
+                "hypothesisRevision": 1,
+                "reviewId": "ecc-np-qp-converse-independent",
+                "source": {
+                  "paperId": "gramm-guo-hueffner-niedermeier2009",
+                  "editionId": "journal",
+                  "locator": "§2, Rules 1 and 3′, and Theorem 1, pp. 2.2:4–2.2:7",
+                  "placement": "proof",
+                  "role": "exponential kernel argument"
+                },
+                "proof": {
+                  "proofId": "ecc-np-qp-converse",
+                  "revision": 1,
+                  "theorem": "ecc-np-qp-converse"
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "coverage": "Literature bounds.",
+  "encoding": "A finite simple undirected graph G and a nonnegative integer k.",
+  "id": "edge-clique-cover-budget",
+  "inputConditions": [],
+  "kind": "lower-bound-case",
+  "parameter": "The allowed number k of covering cliques.",
+  "problemDefinitionHash": "8285317033cb35c10ae857cd307f3f7058bf623a8ccf6f711d97884776b1d4b7",
+  "problemId": "edge-clique-cover",
+  "problemRevision": 1,
+  "reader": {
+    "anchor": "budget",
+    "boundContext": "The allowed number k of covering cliques. Here n is the number of vertices of G.",
+    "parameter": "The allowed number k of covering cliques.",
+    "parameterLabel": "Clique budget",
+    "parameterSymbols": [
+      {
+        "meaning": "allowed number of covering cliques",
+        "symbol": "k"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "the number of vertices of G",
+        "symbol": "n"
+      }
+    ]
+  },
+  "resolutions": [],
+  "revision": 5,
+  "task": "Can every edge of G be covered by a family of at most k cliques of G?",
+  "title": "Edge Clique Cover by clique budget",
+  "variant": "Edge Clique Cover with overlapping cliques allowed",
+  "reviews": [
+    {
+      "id": "ecc-budget-np-qp-equivalence-review",
+      "type": "agent",
+      "date": "2026-11-18",
+      "reviewer": "Codex agent audit_tracks",
+      "verdict": "verified",
+      "scope": "The SAT reduction has logarithmic clique budget and polynomial graph size. The converse review checks the kernel and quasipolynomial-time transfer.",
+      "evidence": "evidence/ecc-np-qp-converse-independent.md",
+      "object": {
+        "type": "bound",
+        "caseId": "edge-clique-cover-budget",
+        "id": "ecc-budget-np-qp",
+        "revision": 2
+      },
+      "independent": true
+    }
+  ],
+  "recoveryDispositions": [
+    {
+      "target": {
+        "id": "ecc-budget-eth",
+        "revision": 1
+      },
+      "hypothesis": {
+        "id": "np_qp",
+        "revision": 1
+      },
+      "recovery": {
+        "id": "ecc-budget-np-qp",
+        "revision": 2
+      },
+      "reason": "The alternative excludes single-exponential running times with any fixed polynomial in the cover budget in the exponent. The historical exclusion is double exponential. The alternative preserves neither the historical tower height nor an innermost exponent of the same degree."
+    }
+  ]
+}

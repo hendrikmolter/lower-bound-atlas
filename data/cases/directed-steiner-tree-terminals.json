@@ -1,0 +1,112 @@
+{
+  "aliases": [],
+  "bounds": [
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "id": "directed-steiner-tree-terminals-eth",
+      "inputConditions": [
+        "planar",
+        "unit-cost"
+      ],
+      "inputFactor": "n^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "explanation": "A rooted out-star demand counts one more vertex than the nonroot terminal set. The underlying unweighted Steiner Tree bound transfers by replacing each undirected edge by both unit-cost orientations.",
+        "label": "Subexponential-time bound",
+        "revision": 1,
+        "title": "Directed Steiner Tree under ETH: Subexponential-time bound"
+      },
+      "revision": 1,
+      "runtime": "2^(o(p)) n^(O(1))",
+      "runtimeSymbols": [
+        "p",
+        "n"
+      ],
+      "sources": [
+        {
+          "editionId": "proceedings",
+          "locator": "Theorem 2(ii) and Section 3, proof of statement (ii)",
+          "paperId": "galby-et-al2024-directed-steiner",
+          "placement": "statement",
+          "role": "conditional lower bound"
+        },
+        {
+          "editionId": "focs",
+          "locator": "Theorem I.2",
+          "paperId": "marx-pilipczuk-pilipczuk2018-steiner",
+          "placement": "forward",
+          "role": "underlying undirected planar Steiner Tree reduction"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm solves the stated decision problem within the stated running time.",
+      "status": "established"
+    }
+  ],
+  "coverage": "Lower bounds for number of terminals.",
+  "encoding": "An explicit directed graph G with nonnegative integer arc costs, a root, a terminal set disjoint from the root and an integer budget.",
+  "id": "directed-steiner-tree-terminals",
+  "inputConditions": [
+    {
+      "condition": "The underlying undirected graph is planar.",
+      "id": "planar",
+      "level": "bound"
+    },
+    {
+      "condition": "Every arc has unit cost.",
+      "id": "unit-cost",
+      "level": "bound"
+    }
+  ],
+  "kind": "lower-bound-case",
+  "parameter": "The number of terminals other than the root p.",
+  "problemDefinitionHash": "1572acda4ee2e7f51769b338621947bd25a9d017f1bf1db40d25f6a6de9bd262",
+  "problemId": "directed-steiner-tree",
+  "problemRevision": 1,
+  "reader": {
+    "anchor": "directed-steiner-tree-terminals",
+    "parameter": "The number of terminals other than the root p.",
+    "parameterLabel": "Number of terminals",
+    "parameterSymbols": [
+      {
+        "meaning": "number of terminals other than the root",
+        "symbol": "p"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "complete explicit binary input length",
+        "symbol": "B"
+      },
+      {
+        "meaning": "number of vertices",
+        "symbol": "n"
+      }
+    ]
+  },
+  "resolutions": [],
+  "revision": 2,
+  "task": "Is there a subgraph of cost at most the budget with a directed path from the root to every terminal?",
+  "title": "Directed Steiner Tree by number of terminals",
+  "variant": "Directed Steiner Tree"
+}

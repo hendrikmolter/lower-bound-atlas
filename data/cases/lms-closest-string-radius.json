@@ -1,0 +1,220 @@
+{
+  "id": "lms-closest-string-radius",
+  "revision": 3,
+  "title": "Closest String by radius",
+  "kind": "lower-bound-case",
+  "aliases": [],
+  "variant": "Explicit Closest String over a finite alphabet",
+  "task": "Decide whether one center word is within Hamming distance d of every word in the explicit list.",
+  "encoding": "N includes the word list, symbol identifiers, and all binary headers and radius fields.",
+  "parameter": "Hamming radius d",
+  "coverage": "Literature lower bounds in the Hamming radius.",
+  "inputConditions": [
+    {
+      "id": "common-length",
+      "condition": "All input strings have the same length L.",
+      "level": "problem"
+    }
+  ],
+  "reader": {
+    "anchor": "radius",
+    "parameterLabel": "Radius d",
+    "parameter": "The Hamming radius d.",
+    "symbols": [
+      {
+        "symbol": "N",
+        "meaning": "Input length in bits."
+      }
+    ],
+    "parameterSymbols": [
+      {
+        "symbol": "d",
+        "meaning": "Hamming radius"
+      }
+    ]
+  },
+  "bounds": [
+    {
+      "id": "cs-radius-eth",
+      "revision": 1,
+      "statement": "Under ETH, no deterministic algorithm decides Closest String within the stated running time.",
+      "runtime": "2^(o(d log₂ d)) N^(O(1))",
+      "inputFactor": "N^(O(1))",
+      "status": "established",
+      "provenance": "literature",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "assumptionOperator": "all",
+      "sources": [
+        {
+          "paperId": "lms2018",
+          "editionId": "journal",
+          "locator": "Theorem 3.1, p. 687",
+          "role": "original lower bound",
+          "placement": "statement"
+        },
+        {
+          "paperId": "cygan2015",
+          "editionId": "book",
+          "locator": "Theorem 14.17",
+          "role": "lower bound",
+          "placement": "statement"
+        }
+      ],
+      "proofs": [],
+      "assessments": {
+        "eth": {
+          "hypothesisRevision": 1,
+          "forward": {
+            "status": "unassessed",
+            "evidence": []
+          },
+          "converse": {
+            "status": "unassessed",
+            "evidence": []
+          }
+        },
+        "sh": {
+          "hypothesisRevision": 1,
+          "forward": {
+            "status": "unassessed",
+            "evidence": []
+          },
+          "converse": {
+            "status": "unassessed",
+            "evidence": []
+          }
+        }
+      },
+      "inputConditions": [],
+      "reader": {
+        "revision": 1,
+        "label": "Subexponential-time bound"
+      },
+      "runtimeSymbols": [
+        "d",
+        "N"
+      ],
+      "qualifications": []
+    },
+    {
+      "id": "cs-radius-kxk",
+      "revision": 1,
+      "statement": "Under the k × k Clique Hypothesis, no deterministic algorithm decides Closest String within the stated running time.",
+      "runtime": "2^(o(d log₂ d)) N^(O(1))",
+      "inputFactor": "N^(O(1))",
+      "status": "established",
+      "provenance": "literature",
+      "assumptions": [
+        {
+          "id": "kxk",
+          "revision": 1
+        }
+      ],
+      "assumptionOperator": "all",
+      "sources": [
+        {
+          "paperId": "szeider2026",
+          "editionId": "v3",
+          "locator": "Section 3, Table 1, first row, p. 5, covering Theorem 14.17 of Parameterized Algorithms",
+          "role": "transfer under the k × k Clique Hypothesis",
+          "placement": "statement"
+        },
+        {
+          "paperId": "cygan2015",
+          "editionId": "book",
+          "locator": "Theorem 14.17",
+          "role": "lower bound",
+          "placement": "statement"
+        },
+        {
+          "paperId": "lms2018",
+          "editionId": "journal",
+          "locator": "Theorem 3.1, p. 687",
+          "role": "original lower bound",
+          "placement": "statement"
+        }
+      ],
+      "proofs": [],
+      "assessments": {
+        "eth": {
+          "hypothesisRevision": 1,
+          "forward": {
+            "status": "unassessed",
+            "evidence": []
+          },
+          "converse": {
+            "status": "unassessed",
+            "evidence": []
+          }
+        },
+        "sh": {
+          "hypothesisRevision": 1,
+          "forward": {
+            "status": "unassessed",
+            "evidence": []
+          },
+          "converse": {
+            "status": "unassessed",
+            "evidence": []
+          }
+        }
+      },
+      "inputConditions": [],
+      "reader": {
+        "revision": 1,
+        "label": "Subexponential-time bound"
+      },
+      "runtimeSymbols": [
+        "d",
+        "N"
+      ],
+      "qualifications": []
+    }
+  ],
+  "resolutions": [],
+  "recoveryAssessments": [
+    {
+      "target": {
+        "id": "cs-radius-eth",
+        "revision": 1
+      },
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "recovery": {
+        "id": "cs-radius-kxk",
+        "revision": 1
+      },
+      "scale": "full",
+      "effective": false,
+      "targetScale": "d log₂ d",
+      "recoveredScale": "d log₂ d",
+      "comparison": "The two exclusions have the same exponent, polynomial input factor, and input scope.",
+      "evidence": [
+        {
+          "paperId": "szeider2026",
+          "editionId": "v3",
+          "locator": "Section 3, Table 1, first row, p. 5, covering Theorem 14.17 of Parameterized Algorithms",
+          "role": "transfer under the k × k Clique Hypothesis",
+          "placement": "statement"
+        },
+        {
+          "paperId": "cygan2015",
+          "editionId": "book",
+          "locator": "Theorem 14.17",
+          "role": "lower bound",
+          "placement": "statement"
+        }
+      ]
+    }
+  ],
+  "problemId": "closest-string",
+  "problemRevision": 1,
+  "problemDefinitionHash": "d3113ccc1552ff74b4c27af56bd77d1b8e5cd2b4bdb8a65d6fc17be74dd84818"
+}

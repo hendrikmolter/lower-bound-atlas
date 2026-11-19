@@ -1,0 +1,110 @@
+{
+  "id": "planar-3-coloring-order",
+  "revision": 1,
+  "title": "Planar 3-Coloring by graph order",
+  "kind": "lower-bound-case",
+  "aliases": [],
+  "variant": "Proper 3-colorability of a planar graph",
+  "task": "Decide whether the graph admits a proper coloring with at most three colors.",
+  "encoding": "Explicit binary graph encoding with individually represented vertices. B includes the complete graph input.",
+  "parameter": "Number of vertices n",
+  "coverage": "Historical ETH lower bound by the number of vertices.",
+  "bounds": [
+    {
+      "id": "color-eth-planar",
+      "revision": 2,
+      "statement": "Under ETH, no deterministic algorithm decides Planar 3-Coloring within the stated running time.",
+      "runtime": "2^(o(n^(1/2))) B^(O(1))",
+      "inputFactor": "B^(O(1))",
+      "status": "established",
+      "provenance": "literature",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "assumptionOperator": "all",
+      "sources": [
+        {
+          "paperId": "cygan2015",
+          "editionId": "book",
+          "locator": "Theorem 14.9 and Exercise 14.3(d)",
+          "role": "benchmark",
+          "placement": "statement"
+        }
+      ],
+      "proofs": [],
+      "assessments": {
+        "eth": {
+          "hypothesisRevision": 1,
+          "forward": {
+            "status": "unassessed",
+            "evidence": []
+          },
+          "converse": {
+            "status": "unassessed",
+            "evidence": []
+          }
+        },
+        "sh": {
+          "hypothesisRevision": 1,
+          "forward": {
+            "status": "unassessed",
+            "evidence": []
+          },
+          "converse": {
+            "status": "unassessed",
+            "evidence": []
+          }
+        }
+      },
+      "reader": {
+        "revision": 2,
+        "label": "Square-root exponent",
+        "title": "Square-root exponent on planar graphs under ETH"
+      },
+      "inputConditions": [],
+      "runtimeSymbols": [
+        "n",
+        "B"
+      ],
+      "qualifications": []
+    }
+  ],
+  "resolutions": [],
+  "reader": {
+    "parameterLabel": "Number of vertices",
+    "anchor": "vertices",
+    "parameter": "The number of vertices n = |V(G)|.",
+    "notation": "These bounds concern deterministic algorithms.",
+    "boundContext": "Let n be the number of vertices and B the input length in bits.",
+    "parameterSymbols": [
+      {
+        "symbol": "n",
+        "meaning": "number of vertices"
+      }
+    ],
+    "symbols": [
+      {
+        "symbol": "B",
+        "meaning": "input length in bits"
+      }
+    ]
+  },
+  "inputConditions": [
+    {
+      "id": "graph-class",
+      "condition": "The graph is finite, simple, undirected, and unweighted.",
+      "level": "problem"
+    },
+    {
+      "id": "planar",
+      "level": "problem",
+      "condition": "The graph is planar."
+    }
+  ],
+  "problemId": "planar-3-coloring",
+  "problemRevision": 1,
+  "problemDefinitionHash": "f4b5cc9670f279026a47b77bbb9fdedfe61a994491ecc8293c03b2106f85dd4c"
+}

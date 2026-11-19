@@ -1,0 +1,378 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\title{Cycle Packing at bounded degree and large girth}
+\author{Atlas}
+\date{18 November 2026}
+\begin{document}
+\maketitle
+
+In \textsc{Cycle Packing}, we ask whether an explicit simple undirected
+graph \(G\) has at least the given number of pairwise vertex-disjoint
+cycles. Write \(n=|V(G)|\) and \(N\) for the complete binary input length,
+including the integer threshold and any supplied decomposition.
+For \(t\ge0\) let \(\phi(t)=\max\{1,t\log_2(\max\{t,2\})\}\).
+A computable nonnegative integer function \(h\) is effectively \(o(\phi(t))\)
+if, for each positive rational \(\eta\), a computable cutoff \(T(\eta)\)
+guarantees \(h(t)\le \eta\phi(t)\) for all \(t\ge T(\eta)\).
+
+\hypertarget{cycle-packing-degree-six}{}
+\begin{theorem}\label{cycle-packing-degree-six}
+Assume deterministic \(\mathrm{FPT}\ne\mathrm W[1]\). For every fixed
+\(0<\gamma<1\), every fixed \(C\ge0\) and every computable effectively
+\(o(\phi(t))\) function \(h\), no deterministic algorithm decides
+\textsc{Cycle Packing} in \(O(2^{h(t)}N^C)\) time on connected bipartite
+graphs of maximum degree six and girth at least \(n^{1-\gamma}\).
+This holds for intrinsic treewidth and separately for the width of
+a supplied path decomposition, even when the decomposition is optimal
+and treewidth equals pathwidth.
+\end{theorem}
+
+The historical \(t\log t\) scale under ETH comes from Lokshtanov,
+Marx and Saurabh~\cite[Theorem 6.3]{survey} and Cygan et al.~
+\cite[Theorem 14.19]{book}. We adapt the permutation host of
+Cygan et al.~\cite[Appendix C.2 of the full version]{ccfull}
+to handle arbitrary sets of cells. A further replacement bounds the
+degree while preserving the optimum up to a known offset. A stretched
+grid supplies exact width without introducing short cycles.
+
+
+\section{From Clique to permutation hitting}
+
+We use the \(\mathrm{W[1]}\)-hardness of Clique parameterized by the requested
+size \(k\)~\cite{df}. For a graph with \(n\ge 2\) vertices, use \(k\) blocks of
+\(\lceil\log_2 n\rceil\) Boolean variables to encode the chosen vertices.
+Forbid each unused code in each block, and for each pair of blocks forbid every
+pair of valid codes representing equal or nonadjacent vertices. Each prohibition
+is a clause on the affected blocks, falsified exactly by the forbidden pattern.
+The formula is satisfiable exactly when the graph has a \(k\)-clique. It has
+\(m=k\lceil\log_2 n\rceil\) variables, and its complete length and construction
+time are both bounded by \(F(k)n^a\) for computable \(F\) and a fixed \(a\).
+We decide trivial Clique inputs directly.
+
+Take an explicit CNF over \(m\) listed variables. Decide instances with fewer
+than \(16\) variables or an empty clause directly, and likewise decide a
+formula with no clauses. Put
+\[
+ b=\lfloor (\log_2 m)/2\rfloor,\qquad
+ q=2^b,\qquad s=\lceil m/b\rceil,\qquad d=\max\{s,q\}.
+\]
+Pad the variable list to \(sb\) and partition it into \(s\) groups of size
+\(b\). In row \(i\) of a \(d\times d\) table, the first \(q\) columns encode
+assignments to group \(i\), for each \(i\le s\). Require a row selection to
+hit the set of these \(q\) cells for each real row. For each clause, require
+it to hit the set of all real cells whose group assignment satisfies a
+literal of the clause. Thus a mapping selecting one column per row hits all
+sets exactly when its real rows encode a satisfying assignment. Dummy
+rows have no domain constraint. The set family is explicit and has polynomial
+size in the formula length and \(m\). We have \(d=O(m/\log m)\).
+
+Use the deterministic constructive coloring family of Lokshtanov, Marx, and
+Saurabh~\cite[Lemma 2.8 and its proof]{lms}. It enumerates maps
+\(f\colon[d]\times[d]\to[d+1]\) in time
+\(2^{O(d\log\log(\max\{d,4\}))}d^{O(1)}\). For any mapping selecting one cell
+per row, some \(f\) gives the selected cells distinct colors and gives each
+selected cell a color absent from the other cells of its row. Indeed, the
+graph formed by a clique on the selected cells and the stars joining each
+selection to its row is the cactus-grid graph of that lemma.
+
+For each \(f\), retain the cells whose colors are unique within their rows, and
+replace the column of every retained cell by its color. Apply this operation to
+every set and additionally require a hit on the retained cells of each row.
+Add one unconstrained row to make a square of size \(D=d+1\).
+For any permutation hitting these new sets, the row-color choice in each
+original row has a unique preimage, which gives an original selection hitting
+all old sets. Conversely, for a selection hitting all old sets, the map
+\(f\) guaranteed by the coloring family retains every chosen cell and assigns
+them distinct colors. Assign the unused color to the new dummy row. This
+gives a permutation hitting all new sets. The number of queries and the time
+to enumerate the family are \(2^{o(m)}\) up to a fixed polynomial factor in
+the explicit formula length, with a computable sublinear exponent bound
+\(O(m\log\log m/\log m)\).
+
+
+\section{From permutation hitting to Cycle Packing}
+
+We allow a multigraph temporarily, with a pair of parallel edges
+forming a two-cycle. For ports \(v_1,\ldots,v_d\), add private vertices
+\(u_1,\ldots,u_{d-1}\) and double the edges from \(u_i\) to \(v_i,v_{i+1}\).
+For any omitted port \(v_j\), match the private vertices to all other
+ports using \(u_i v_i\) for \(i<j\) and \(u_i v_{i+1}\) otherwise.
+Each match makes a two-cycle. We also use a second type of gadget,
+with one private vertex joined by a doubled edge to every port.
+
+When private vertices have no neighbors elsewhere and port sets are
+disjoint, normalize a maximum packing separately at each gadget.
+For the first type, remove all cycles meeting a private vertex.
+Their number is at most the number of private vertices and the number
+of currently free ports, since each removed cycle uses both.
+The matching covers as many free ports as possible up to \(d-1\),
+so replace the removed cycles by at least as many two-cycles.
+If there are still \(a\ge2\) ports occupied by the other cycles,
+delete at most \(a-1\) such cycles leaving at most one occupied port.
+Indeed, if some cycle uses at least two ports delete all touching
+cycles, and otherwise retain one. Replacing the two-cycles by a
+full matching gains at least \(a-1\), since at most \(d-a\)
+were present. For the second type, replace the private vertex's
+cycle by a two-cycle on one of its ports, or add a two-cycle on a
+free port if the private vertex was unused. If all ports were
+used and the private vertex unused, remove one touching cycle
+to free its port. Previously installed two-cycles survive because
+the port sets are disjoint. After normalizing, the first type
+has one port available to other cycles and the second type has
+all but one port available.
+
+Let the permutation have order \(K\) and let \(S_1,\ldots,S_M\)
+be its nonempty target sets of cells. An empty target set or an
+empty family can be decided directly. Use row-end vertices \(P_i,Q_i\)
+and column-end vertices \(A_j,B_j\). For each pair \((i,j)\) add
+paths \(P_i,p_{ij},A_j\) and \(Q_i,q_{ij},B_j\).
+The rail for row \(i\) connects \(P_i\) to \(Q_i\) through pairs
+\(x^L_{i,s},y^L_{i,s}\) in increasing order of stage \(s\).
+The rail for column \(j\) connects \(A_j\) to \(B_j\) through
+\(x^R_{j,s},y^R_{j,s}\) in the same way. For every occurrence
+\(e=(i,j,s)\) in a target set add
+\[
+ x^L_{i,s},a_e,c_e,x^R_{j,s}\qquad\text{and}\qquad
+ y^L_{i,s},b_e,d_e,y^R_{j,s}
+\]
+as paths, and add the triangle \(a_e,b_e,z_e\).
+Use the first gadget type on each row's \(p\) ports and separately
+on its \(q\) ports. At each stage use the first type separately
+on the \(c\) and \(d\) ports, and the second type on the \(z\) ports.
+Let \(g=2K(K-1)+\sum_s(2|S_s|-1)\) count all private vertices
+of these gadgets. The threshold is \(g+K+\sum_s|S_s|\).
+
+\paragraph{Completeness.}
+For a permutation \(f\) hitting all sets choose one cell
+\((i,f(i))\) at each stage. Use the selector paths at the ends
+of row \(i\) and column \(f(i)\). Together with their rails,
+the two crossing paths of each chosen cell split that pair of
+rails into one more cycle per chosen occurrence. If no cell is
+chosen on the pair, the two end selectors close one cycle.
+Thus these rail cycles contribute \(K+M\). Pack the local
+triangle of every unchosen occurrence, for \(\sum_s(|S_s|-1)\)
+additional cycles. The port capacities permit all \(g\) gadget
+two-cycles, reaching the threshold.
+
+\paragraph{Soundness.}
+Normalize and remove the \(g\) gadget two-cycles. Let \(Z\)
+consist of all \(P_i,Q_i,a_e,b_e\). Removing \(Z\) from the remaining
+host gives a forest. Every vertex of \(Z\) has at most one neighbor
+in each component of this forest. Every surviving cycle therefore
+uses at least two vertices of \(Z\). As the number of cycles is
+at least \(|Z|/2\), each cycle uses exactly two and all of \(Z\)
+is used.
+
+The cycle containing \(P_i\) uses its row rail and exactly one
+\(p\) port, by capacity one. At that port's column vertex \(A_j\)
+it must enter the column rail. Otherwise the cycle would reach
+another row-end vertex \(P_{i'}\) through a second port. The row
+components incident to \(P_i,P_{i'}\) are distinct, so the cycle
+could not return between them without using a third vertex of
+\(Z\). Distinct \(P_i\) thus use distinct \(A_j\) and define a
+permutation \(f\). At the start of the first stage the past side
+pairs the row and column rail ends of each \((i,f(i))\) by a
+path with exactly one previously encountered vertex of \(Z\).
+
+Suppose this property holds on entering stage \(s\). Some \(z_e\)
+is unused by the host cycles, by the second gadget's capacity.
+The covered \(a_e\) therefore uses at least one entry route,
+either directly from its row or through \(c_e\) from its column.
+If it also uses \(b_e\), its cycle has three vertices of \(Z\),
+including the one already on that entering path. Thus it uses
+both entry routes. These entries must be paired by the
+same past path, or their two previously encountered vertices
+of \(Z\) would give a third with \(a_e\). Hence \(e=(i,f(i),s)\)
+witnesses a hit. The use of \(c_e\) excludes every other \(c\)
+port in this stage. For another occurrence \(e'\), a traversal
+of \(a_{e'}\) from its row entry would have to continue through
+\(b_{e'}\) or through \(z_{e'}\) and \(b_{e'}\), again giving three
+vertices of \(Z\). Thus \(a_{e'},b_{e'},z_{e'}\) form their local
+triangle. The covered \(b_e\) uses the \(d_e\) path to pair the
+exits of the chosen row and column, with itself as the new
+vertex of \(Z\). All other paired rails continue through the
+stage. This proves the invariant and every target-set hit.
+
+
+Keep the \(4K\) rail ends throughout a path decomposition.
+At each end-selector system process one row at a time, keeping
+its at most \(2K\) ports and private vertices. In the middle keep
+the \(4K\) rail vertices of the current stage, and of the next
+stage across a stage transition. Process occurrences within the
+stage in selector order for both sparse selectors.
+Keep the preceding \(c,d\) ports until the next occurrence
+and their shared selector-private vertices are processed.
+Keep the \(z\)-selector center throughout the stage.
+Only a constant number of other vertices are needed at any
+time. The supplied width is \(O(K)\), with polynomially many
+bags in the explicit permutation input. To obtain a simple
+graph, replace each multigraph edge by a length-three path.
+Every cycle projects to a multigraph cycle, including parallel
+two-cycles, and this preserves the packing optimum. Extend the
+path decomposition using bags containing the old endpoints and
+at most two new vertices while processing an edge.
+
+\section{Degree, girth, and exact width}
+
+The simple host is connected when all target sets are nonempty:
+the end-selector paths link all row and column rails and each
+other vertex connects to a rail or its port. We bound the degree
+of a simple host using the following replacement. Order its
+edges by assigned covering bags of the supplied path decomposition.
+For a vertex of degree \(d>0\), make a backbone path of length
+\(d-1\) in incident-edge order. At position \(i\) attach a
+port \(p_i\) to the backbone vertex and a companion \(x_i\) to
+\(p_i\). Every old edge joins its two ports. For \(1\le i\le d-2\)
+make a center \(u_i\) adjacent to \(p_j,x_j\) for
+\(j\in\{i,i+1,i+2\}\). All degrees are at most six. Ignore
+isolated vertices. For \(d\ge2\), if at most two ports are unavailable and
+the available companions are free, match the \(d-2\) centers
+to the first \(d-2\) available ports in order. Their indices
+\(j_i\) satisfy \(i\le j_i\le i+2\), so this gives \(d-2\)
+disjoint triangles. A degree-one gadget has no center and cannot
+be traversed by a cycle. Any old packing lifts along backbones using
+at most two ports per gadget and all these triangles, with
+offset \(\sum_v\max(0,d(v)-2)\).
+
+For the reverse, normalize a maximum packing one gadget at a time.
+For \(d\ge3\), remove the \(c\) cycles touching its centers and let
+\(a\) count ports used by the kept cycles. Companions have degree
+one when centers are ignored, so each occupied port uses its
+backbone edge and its external edge. Each kept cycle enters and
+leaves equally often, and \(a\) is even. If \(a\le2\), the \(d-2\)
+triangles pay for removing the \(c\le d-2\) cycles.
+If \(a\ge4\), each removed cycle using exactly one center in the
+gadget had to use a port there, since without ports a center and
+its companions form a star. Such cycles use distinct ports outside
+the kept packing. If \(c_1\le d-a\) denotes their number,
+then \(c_1+2(c-c_1)\le d-2\), giving \(c\le d-1-a/2\).
+Delete at most \(a/2-1\) additional cycles to leave at most two
+ports occupied. If fewer than \(a/2\) cycles touch the gadget
+delete all of them. Otherwise they each use two ports and one
+can be kept. In both cases the \(d-2\) triangles pay for
+all removals. Their vertices are local and do not disturb
+triangles in gadgets already processed. After normalization
+discard the offset triangles. At most two ports per gadget
+remain occupied, and any visited gadget is traversed once.
+Contract those traversals to recover disjoint cycles of the host.
+
+For the width, process old edges in the assigned order, keeping
+the newest backbone vertex and the newest two port-companion
+pairs per active old vertex. For each edge introduce the next
+backbone, port and companion at its two endpoints and their
+centers for the latest triples. Cover all new edges, remove the
+centers, and discard the old backbone and excess pairs.
+All events for an old vertex fit in its original bag interval.
+At most \(5(w+1)+8\) vertices are needed for old supplied width
+\(w\). The output and certificate have polynomial length.
+
+
+Replace every edge by a path of even length \(L\ge4\).
+The graph stays connected, becomes bipartite and has girth
+at least \(L\). The packing optimum is unchanged and the
+decomposition extends with at most two extra vertices per bag.
+Independently of \(L\), choose the least even \(q\ge2\) strictly larger
+than the pre-subdivision width plus two, leaving
+room for one more vertex in a bag. Take a \(q\) by \(q\) grid
+and stretch each vertical edge to length \(L+1\). This remains
+bipartite and has girth at least \(L\), since any cycle uses a
+vertical path. Its packing optimum is \(q^2/4\), attained by
+tiling the original grid by squares. No packing can have more
+cycles since every cycle in the original grid uses at least
+four vertices and subdivisions preserve packing.
+
+The grid forces width at least \(q\). In the unexpanded grid
+take all crosses consisting of one row and one column of the
+top-left \((q-1)\) by \((q-1)\) subgrid. Add the bottom row and
+the rightmost column with its bottom vertex removed. These
+sets are each connected and pairwise touch, and a set meeting
+all of them needs at least \(q+1\) vertices. Indeed, with fewer
+than \(q-1\) vertices in the subgrid some row and column are
+missed. In a tree decomposition, the subtrees of bags meeting
+a connected set are connected. Pairwise touching forces these
+subtrees to intersect pairwise, so the Helly property for
+subtrees gives a bag meeting all sets. This yields the lower
+bound for the original grid, and it is a minor of the stretched
+grid. Contractions cannot increase treewidth, by identifying
+the endpoints in all bags of a decomposition and using the
+bag containing their edge to ensure a connected lifetime.
+
+The stretched grid also has a supplied path decomposition of
+width \(q\). Sweep rows from left to right, maintaining the
+latest vertex in each column. To advance a column, introduce
+the next vertex on its vertical path before forgetting its
+predecessor. The previous column's new row vertex still covers
+the horizontal edge. This needs at most \(q\) representatives
+and one successor. In the initial row start at the top-left corner.
+
+Join the stretched host to that corner by a bridge from an
+internal subdivision vertex of the host. The endpoints have
+degree two before joining. Choose the two orientations of the
+bipartitions so the bridge preserves bipartiteness. No cycle
+uses the bridge. Retain the host endpoint from its first bag
+until the end, add a bridge bag, and start the grid certificate
+at its top-left corner. Both intrinsic widths now equal \(q\)
+and the supplied certificate attains it. Add \(q^2/4\) to the
+threshold as the grid contribution.
+
+Let \(H\) be the combined order before the final long subdivisions.
+The degree bounds give \(n\le cHL\) for an absolute integer \(c\).
+For the fixed \(\gamma\), choose an integer \(a\ge(1-\gamma)/\gamma\)
+and take the least even \(L\ge\max(4,(cH)^a)\).
+Then \(L^\gamma\ge(cH)^{1-\gamma}\), giving \(L\ge n^{1-\gamma}\).
+All output lengths and construction costs stay polynomial per
+permutation instance for this fixed \(\gamma\).
+
+\section{Running time}
+
+For the compact \(m\)-variable formula from a Clique instance
+of size \(k\) and order \(n_0\), each output has \(t=q=O(m/\log m)\).
+Consequently \(\phi(t)\le Am\) with an absolute integer \(A\).
+A hypothetical solver at effectively \(o(\phi(t))\) rate has
+exponent at most \(m/(4k)\) beyond its computable cutoff at
+\(1/(4Ak)\). Below this cutoff its computable finite prefix
+contributes only a factor depending on \(k\).
+The effective disjunction overhead is at most \(2^{m/(4k)}\)
+beyond a computable cutoff in \(m\), with another computable
+parameter factor for smaller \(m\). All other factors are
+fixed polynomials in the explicit source size, as are the
+complete output sizes. Since \(m=k\lceil\log_2 n_0\rceil\), the
+result is a deterministic fixed-parameter algorithm for
+Clique by requested size, a contradiction.
+
+\paragraph{Acknowledgment.}
+The proof was found using ChatGPT.
+
+\begin{thebibliography}{9}
+\bibitem{df}
+R. G. Downey and M. R. Fellows. Fixed-parameter tractability and
+completeness II: On completeness for \(\mathrm W[1]\).
+\emph{Theoretical Computer Science}, 141(1--2):109--131, 1995.
+\href{https://doi.org/10.1016/0304-3975(94)00097-3}{DOI}.
+\bibitem{lms}
+D. Lokshtanov, D. Marx, and S. Saurabh.
+Slightly superexponential parameterized problems.
+\emph{SIAM Journal on Computing}, 47(3):675--702, 2018.
+\href{https://doi.org/10.1137/16M1104834}{DOI}.
+\bibitem{survey}
+D. Lokshtanov, D. Marx, and S. Saurabh.
+Lower bounds based on the Exponential Time Hypothesis.
+\emph{Bulletin of the EATCS}, 105, 2011.
+\bibitem{book}
+M. Cygan et al. \emph{Parameterized Algorithms}. Springer, 2015.
+\href{https://doi.org/10.1007/978-3-319-21275-3}{DOI}.
+\bibitem{ccfull}
+M. Cygan et al.
+Solving connectivity problems parameterized by treewidth in single
+exponential time. \emph{ACM Transactions on Algorithms}, 18(2), 2022.
+\href{https://doi.org/10.1145/3506707}{DOI}.
+The inspected appendix is in
+\href{https://arxiv.org/abs/1103.0534v1}{arXiv:1103.0534v1}.
+\end{thebibliography}
+\end{document}
+
+
+

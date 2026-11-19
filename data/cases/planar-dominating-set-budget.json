@@ -1,0 +1,167 @@
+{
+  "id": "planar-dominating-set-budget",
+  "revision": 1,
+  "problemId": "planar-dominating-set",
+  "problemRevision": 1,
+  "problemDefinitionHash": "6a2a9c1efe251ffa3c13dc493e915dd53947c4a408127119737c4a5c9cafce20",
+  "title": "Planar Dominating Set by dominating-set budget",
+  "kind": "lower-bound-case",
+  "aliases": [],
+  "variant": "Planar Dominating Set",
+  "task": "Is there a set of at most k vertices that meets the closed neighborhood of every vertex?",
+  "encoding": "An explicitly encoded finite simple undirected planar graph G and a nonnegative integer k.",
+  "parameter": "The dominating-set budget k.",
+  "inputConditions": [],
+  "coverage": "Literature bounds.",
+  "bounds": [
+    {
+      "runtime": "2^(o(k^(1/2))) B^(O(1))",
+      "inputFactor": "B^(O(1))",
+      "runtimeSymbols": [
+        "k",
+        "B"
+      ],
+      "qualifications": [],
+      "inputConditions": [],
+      "sources": [
+        {
+          "paperId": "cai-juedes2003",
+          "editionId": "journal",
+          "locator": "Corollary 5.1, p. 805",
+          "placement": "statement",
+          "role": "lower-bound statement"
+        },
+        {
+          "paperId": "cygan2015",
+          "editionId": "book",
+          "locator": "Theorem 14.11, p. 477",
+          "placement": "statement",
+          "role": "lower-bound statement"
+        }
+      ],
+      "reader": {
+        "label": "Square-root exponent in the solution budget",
+        "revision": 1
+      },
+      "revision": 1,
+      "provenance": "literature",
+      "status": "established",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "assumptionOperator": "all",
+      "proofs": [],
+      "id": "planar-dominating-set-budget-eth",
+      "statement": "Under ETH, no deterministic algorithm solves Planar Dominating Set within the stated running time."
+    },
+    {
+      "runtime": "2^(O(k^(1/2−ε))) B^(O(1))",
+      "inputFactor": "B^(O(1))",
+      "runtimeSymbols": [
+        "k",
+        "B",
+        "ε"
+      ],
+      "qualifications": [
+        "Separately for each fixed 0 < ε < 1/2."
+      ],
+      "inputConditions": [],
+      "sources": [
+        {
+          "paperId": "szeider2026",
+          "editionId": "oct30",
+          "locator": "Table 1, Weak ETH row",
+          "placement": "statement",
+          "role": "lower-bound statement"
+        }
+      ],
+      "reader": {
+        "label": "Every fixed power below one half",
+        "revision": 1
+      },
+      "revision": 1,
+      "provenance": "literature",
+      "status": "established",
+      "assumptions": [
+        {
+          "id": "sh",
+          "revision": 1
+        }
+      ],
+      "assumptionOperator": "all",
+      "proofs": [],
+      "id": "planar-dominating-set-budget-sh",
+      "statement": "Under SH, no deterministic algorithm solves Planar Dominating Set within the stated running time."
+    }
+  ],
+  "resolutions": [],
+  "reader": {
+    "anchor": "budget",
+    "parameterLabel": "Dominating-set budget",
+    "parameter": "The dominating-set budget k.",
+    "parameterSymbols": [
+      {
+        "symbol": "k",
+        "meaning": "dominating-set budget"
+      }
+    ],
+    "symbols": [
+      {
+        "symbol": "B",
+        "meaning": "complete input length in bits"
+      },
+      {
+        "symbol": "ε",
+        "meaning": "fixed exponent loss"
+      }
+    ],
+    "boundContext": "The dominating-set budget k. Here B denotes complete input length in bits, ε denotes fixed exponent loss."
+  },
+  "recoveryAssessments": [
+    {
+      "target": {
+        "id": "planar-dominating-set-budget-eth",
+        "revision": 1
+      },
+      "recovery": {
+        "id": "planar-dominating-set-budget-sh",
+        "revision": 1
+      },
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "scale": "degree",
+      "targetScale": "k^(1/2)",
+      "recoveredScale": "k^(1/2−ε)",
+      "comparison": "The SH bound excludes every fixed positive power below one half in the exponent of the same parameter.",
+      "effective": false,
+      "evidence": [
+        {
+          "paperId": "cai-juedes2003",
+          "editionId": "journal",
+          "locator": "Corollary 5.1, p. 805",
+          "placement": "statement",
+          "role": "lower-bound statement"
+        },
+        {
+          "paperId": "cygan2015",
+          "editionId": "book",
+          "locator": "Theorem 14.11, p. 477",
+          "placement": "statement",
+          "role": "lower-bound statement"
+        },
+        {
+          "paperId": "szeider2026",
+          "editionId": "oct30",
+          "locator": "Table 1, Weak ETH row",
+          "placement": "statement",
+          "role": "lower-bound statement"
+        }
+      ]
+    }
+  ]
+}

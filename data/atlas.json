@@ -1,0 +1,3178 @@
+{
+  "schemaVersion": 1,
+  "edition": "v1.0.0",
+  "revision": 2,
+  "assumptions": [
+    {
+      "id": "eth",
+      "name": "Exponential Time Hypothesis",
+      "aliases": [
+        "ETH",
+        "positive-rate ETH"
+      ],
+      "definition": "There is a positive exponential rate below which deterministic variable-3SAT cannot be solved.",
+      "model": "Deterministic decision on explicit 3-CNF formulas. Let n be the number of variables and L the complete input length.",
+      "quantifiers": "There exists δ > 0 such that, for every fixed C ≥ 0, no correct algorithm runs in O(2^(δ n) L^C).",
+      "conventions": "Variable-count positive-rate convention. Solvers at different rates in the negation may be different algorithms.",
+      "source": {
+        "paperId": "ip2001",
+        "editionId": "journal",
+        "locator": "Definition of s_k and Theorem 1, item 3, p. 368",
+        "role": "hypothesis origin"
+      },
+      "revision": 1,
+      "refutation": "https://github.com/openai/math/tree/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026"
+    },
+    {
+      "id": "sh",
+      "name": "Satisfiability Hypothesis",
+      "aliases": [
+        "SH",
+        "SAT power index one"
+      ],
+      "definition": "The deterministic decision power index of CNF-SAT is one.",
+      "model": "Explicit CNF-SAT with the source encoding length as the size measure.",
+      "quantifiers": "For each fixed 0 < a < 1 there is no deterministic 2^O(n^a) · poly(n) SAT algorithm, with n the normalized input length.",
+      "conventions": "Whole fixed-power exclusion family. Conversions to variable count, clause count or combinatorial length require the stated normalization or sparsification argument.",
+      "source": {
+        "paperId": "sh1990",
+        "editionId": "journal",
+        "locator": "Definition 2.1, p. 210, and Satisfiability Hypothesis, §2, p. 213",
+        "role": "hypothesis origin"
+      },
+      "revision": 1,
+      "access": "Stearns and Hunt introduced SH. For the normalized length convention, see the introduction and footnotes 1–2 in arXiv:2611.02650v2, pp. 1–2."
+    },
+    {
+      "id": "w1",
+      "name": "FPT ≠ W[1]",
+      "aliases": [
+        "deterministic W[1] separation"
+      ],
+      "definition": "Some parameterized problem in W[1] has no deterministic fixed-parameter tractable decision algorithm.",
+      "model": "Deterministic uniform algorithms on explicitly encoded inputs, under fixed-parameter reductions.",
+      "quantifiers": "An FPT algorithm has time f(k) · L^C for a computable function f, a fixed constant C, parameter k, and complete input length L.",
+      "conventions": "No restriction to polynomial, elementary or quasipolynomial growth of f. Randomized separation would be another premise.",
+      "source": {
+        "paperId": "df1995-basic",
+        "editionId": "journal",
+        "locator": "Definition 1.9, p. 874, and Definitions 3.5–3.6, p. 882",
+        "role": "class definitions"
+      },
+      "revision": 1
+    },
+    {
+      "id": "np_qp",
+      "name": "NP ⊈ QP",
+      "aliases": [
+        "NP outside quasipolynomial time"
+      ],
+      "definition": "There is a language in NP outside deterministic quasipolynomial time.",
+      "model": "Deterministic worst-case decision time on complete binary inputs of length L.",
+      "quantifiers": "QP is the union over fixed c ≥ 1 of DTIME(2^O((log(L+2))^c)). Containment would allow a language-specific algorithm and exponent.",
+      "conventions": "The complete bit length controls the exponent. An arbitrary FPT factor in a parameter need not be quasipolynomial in L.",
+      "access": "Class-separation premise stated directly in terms of the defining time classes. No priority or originating-paper attribution is asserted.",
+      "revision": 1
+    },
+    {
+      "id": "kxk",
+      "revision": 1,
+      "name": "k × k Clique Hypothesis",
+      "aliases": [
+        "Square Clique Hypothesis",
+        "k-by-k Clique Hypothesis"
+      ],
+      "definition": "Given an explicit k × k array of vertices and their edges, no deterministic 2^(o(k log₂ k))-time algorithm decides whether a clique meets every row.",
+      "model": "The graph is given explicitly.",
+      "quantifiers": "The exclusion concerns the worst-case running time as the number of rows k grows.",
+      "conventions": "The selected vertices may share columns.",
+      "source": {
+        "paperId": "szeider2026",
+        "editionId": "v3",
+        "locator": "Section 2, hypothesis definition on p. 2 and deterministic convention on p. 3",
+        "role": "defining hypothesis",
+        "placement": "statement"
+      }
+    }
+  ],
+  "papers": [
+    {
+      "id": "ip2001",
+      "title": "On the Complexity of k-SAT",
+      "authors": [
+        "Russell Impagliazzo",
+        "Ramamohan Paturi"
+      ],
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "journal",
+          "label": "Journal of Computer and System Sciences 62(2) (2001), 367–375",
+          "doi": "10.1006/jcss.2000.1727",
+          "primaryUrl": "https://doi.org/10.1006/jcss.2000.1727",
+          "openUrl": "https://cseweb.ucsd.edu/~paturi/myPapers/pubs/ImpagliazzoPaturi_2001_jcss.pdf"
+        }
+      ],
+      "preferredEditionId": "journal"
+    },
+    {
+      "id": "df1995-basic",
+      "title": "Fixed-Parameter Tractability and Completeness I: Basic Results",
+      "authors": [
+        "Rod G. Downey",
+        "Michael R. Fellows"
+      ],
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "journal",
+          "label": "SIAM Journal on Computing 24(4) (1995), 873–921",
+          "doi": "10.1137/S0097539792228228",
+          "primaryUrl": "https://doi.org/10.1137/S0097539792228228",
+          "openUrl": "https://homepages.ecs.vuw.ac.nz/~downey/publications/1.pdf"
+        }
+      ],
+      "preferredEditionId": "journal"
+    },
+    {
+      "id": "lms2011",
+      "title": "Lower bounds based on the Exponential Time Hypothesis",
+      "authors": [
+        "Daniel Lokshtanov",
+        "Dániel Marx",
+        "Saket Saurabh"
+      ],
+      "editions": [
+        {
+          "id": "bulletin",
+          "kind": "periodical",
+          "label": "Bulletin of the EATCS 105 (2011), 41–71",
+          "primaryUrl": "https://bulletin.eatcs.org/index.php/beatcs/article/view/92",
+          "openUrl": "https://bulletin.eatcs.org/index.php/beatcs/article/viewFile/92/88",
+          "access": "Published survey. Exact theorem locators checked."
+        }
+      ],
+      "preferredEditionId": "bulletin"
+    },
+    {
+      "id": "ipz2001",
+      "title": "Which Problems Have Strongly Exponential Complexity?",
+      "authors": [
+        "Russell Impagliazzo",
+        "Ramamohan Paturi",
+        "Francis Zane"
+      ],
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "journal",
+          "label": "JCSS 63(4) (2001), 512–530",
+          "primaryUrl": "https://doi.org/10.1006/jcss.2001.1774",
+          "openUrl": "https://cseweb.ucsd.edu/~russell/ipz.pdf",
+          "access": "Published-layout text inspected for sparsification and the linear-variable reductions in Theorem 5.",
+          "doi": "10.1006/jcss.2001.1774"
+        }
+      ],
+      "preferredEditionId": "journal"
+    },
+    {
+      "id": "sh1990",
+      "title": "Power indices and easier hard problems",
+      "authors": [
+        "Richard E. Stearns",
+        "Harry B. Hunt III"
+      ],
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "journal",
+          "label": "Mathematical Systems Theory 23(4) (1990), 209–225",
+          "doi": "10.1007/BF02090776",
+          "primaryUrl": "https://doi.org/10.1007/BF02090776",
+          "access": "Published text checked for Definition 2.1 (p. 210) and the Satisfiability Hypothesis (§2, p. 213). The current normalized convention is stated in arXiv:2611.02650v2."
+        }
+      ],
+      "preferredEditionId": "journal"
+    },
+    {
+      "id": "sh26",
+      "title": "ETH is Dead, Long Live SH",
+      "authors": [
+        "MIT Hardness Group",
+        "Josh Brunner",
+        "Erik D. Demaine",
+        "Fabian Frei",
+        "Timothy Gomez",
+        "Markus Hecher",
+        "Jeffery Li",
+        "Jayson Lynch"
+      ],
+      "editions": [
+        {
+          "id": "v1",
+          "kind": "preprint",
+          "label": "arXiv:2611.02650v1, 2 November 2026",
+          "primaryUrl": "https://arxiv.org/abs/2611.02650v1",
+          "openUrl": "https://arxiv.org/pdf/2611.02650v1",
+          "access": "Exact arXiv v1. The quantitative sparsification proof is a preprint-only dependency."
+        },
+        {
+          "id": "v2",
+          "kind": "preprint",
+          "label": "arXiv:2611.02650v2, 16 November 2026",
+          "primaryUrl": "https://arxiv.org/abs/2611.02650v2",
+          "openUrl": "https://arxiv.org/pdf/2611.02650v2",
+          "access": "Preprint. Table 1, its footnotes and Theorem 3.1 were checked in this version."
+        }
+      ],
+      "preferredEditionId": "v2"
+    },
+    {
+      "id": "lms2018",
+      "title": "Slightly Superexponential Parameterized Problems",
+      "authors": [
+        "Daniel Lokshtanov",
+        "Dániel Marx",
+        "Saket Saurabh"
+      ],
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "journal",
+          "label": "SIAM J. Comput. 47(3) (2018), 675–702",
+          "primaryUrl": "https://doi.org/10.1137/16M1104834",
+          "access": "Checked the relevant published-format theorem statements and reductions.",
+          "doi": "10.1137/16M1104834"
+        },
+        {
+          "id": "manuscript",
+          "kind": "manuscript",
+          "label": "Public journal author manuscript",
+          "primaryUrl": "https://sites.cs.ucsb.edu/~daniello/papers/slightlySuperexpSICOMP18.pdf",
+          "openUrl": "https://sites.cs.ucsb.edu/~daniello/papers/slightlySuperexpSICOMP18.pdf",
+          "access": "Open author manuscript used for theorem and reduction interfaces."
+        }
+      ],
+      "preferredEditionId": "journal"
+    },
+    {
+      "id": "df1995",
+      "title": "Fixed-parameter tractability and completeness II: On completeness for W[1]",
+      "authors": [
+        "Rod G. Downey",
+        "Michael R. Fellows"
+      ],
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "journal",
+          "label": "Theoretical Computer Science 141(1–2) (1995), 109–131",
+          "primaryUrl": "https://doi.org/10.1016/0304-3975(94)00097-3",
+          "openUrl": "https://homepages.ecs.vuw.ac.nz/~downey/publications/2.pdf",
+          "access": "Published Independent Set W[1]-completeness, with Clique by complementation.",
+          "doi": "10.1016/0304-3975(94)00097-3"
+        }
+      ],
+      "preferredEditionId": "journal"
+    },
+    {
+      "id": "chkx2005",
+      "title": "W-Hardness under Linear FPT-Reductions: Structural Properties and Further Applications",
+      "authors": [
+        "Jianer Chen",
+        "Xiuzhen Huang",
+        "Iyad A. Kanj",
+        "Ge Xia"
+      ],
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "journal",
+          "title": "On the computational hardness based on linear FPT-reductions",
+          "label": "Journal of Combinatorial Optimization 11(2) (2006), 231–247",
+          "doi": "10.1007/s10878-006-7137-6",
+          "primaryUrl": "https://doi.org/10.1007/s10878-006-7137-6",
+          "access": "Published text checked for Theorems 2.2–2.3, 3.2, 4.1 and 5.1, the linear-reduction definition, and the complexity-function convention."
+        },
+        {
+          "id": "cocoon",
+          "kind": "proceedings",
+          "label": "COCOON 2005, LNCS 3595, 975–984",
+          "primaryUrl": "https://doi.org/10.1007/11533719_98",
+          "access": "Published conference edition.",
+          "doi": "10.1007/11533719_98"
+        },
+        {
+          "id": "manuscript",
+          "kind": "manuscript",
+          "label": "Inspected 2005 conference author manuscript",
+          "primaryUrl": "https://www.cs.lafayette.edu/~gexia/research/jcombopt.pdf",
+          "openUrl": "https://www.cs.lafayette.edu/~gexia/research/jcombopt.pdf",
+          "access": "Several technical proofs are omitted and deferred to a technical report."
+        }
+      ],
+      "preferredEditionId": "journal"
+    },
+    {
+      "id": "chkx2006",
+      "title": "Strong Computational Lower Bounds via Parameterized Complexity",
+      "authors": [
+        "Jianer Chen",
+        "Xiuzhen Huang",
+        "Iyad A. Kanj",
+        "Ge Xia"
+      ],
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "journal",
+          "label": "JCSS 72(8) (2006), 1346–1367",
+          "primaryUrl": "https://doi.org/10.1016/j.jcss.2006.04.007",
+          "access": "Published text checked for DS-Core and Theorems 5.4–5.8 in §5, pp. 1358–1361.",
+          "doi": "10.1016/j.jcss.2006.04.007"
+        },
+        {
+          "id": "jan17",
+          "kind": "manuscript",
+          "label": "Inspected author manuscript, 17 January 2006",
+          "primaryUrl": "https://www.cs.lafayette.edu/~gexia/research/jcss72_8.pdf",
+          "openUrl": "https://www.cs.lafayette.edu/~gexia/research/jcss72_8.pdf",
+          "access": "Inspected author manuscript with the DS-Core definition and Theorem 5.4. Retained for earlier citations and their pagination."
+        }
+      ],
+      "preferredEditionId": "journal"
+    },
+    {
+      "id": "ccfhjkx2005",
+      "title": "Tight Lower Bounds for Certain Parameterized NP-Hard Problems",
+      "authors": [
+        "Jianer Chen",
+        "Benny Chor",
+        "Mike Fellows",
+        "Xiuzhen Huang",
+        "David Juedes",
+        "Iyad A. Kanj",
+        "Ge Xia"
+      ],
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "journal",
+          "label": "Information and Computation 201(2) (2005), 216–231",
+          "primaryUrl": "https://doi.org/10.1016/j.ic.2005.05.001",
+          "access": "Published text checked for the circuit definitions and Theorems 3.3, 3.5, and 4.3, including the Clique-to-k-Cut reduction cited in its proof.",
+          "doi": "10.1016/j.ic.2005.05.001"
+        },
+        {
+          "id": "manuscript",
+          "kind": "manuscript",
+          "label": "Inspected author manuscript",
+          "primaryUrl": "https://people.csail.mit.edu/rrw/presentations/w1-vs-eth.pdf",
+          "openUrl": "https://people.csail.mit.edu/rrw/presentations/w1-vs-eth.pdf",
+          "access": "Author manuscript retained for earlier citations and their numbering."
+        }
+      ],
+      "preferredEditionId": "journal"
+    },
+    {
+      "id": "szeider2026",
+      "title": "After ETH: the k×k Clique Hypothesis",
+      "authors": [
+        "Stefan Szeider"
+      ],
+      "editions": [
+        {
+          "id": "oct30",
+          "kind": "preprint",
+          "label": "Zenodo preprint v1, 30 October 2026",
+          "doi": "10.5281/zenodo.23797197",
+          "primaryUrl": "https://doi.org/10.5281/zenodo.23797197",
+          "access": "Inspected original version."
+        },
+        {
+          "id": "v3",
+          "kind": "preprint",
+          "label": "Zenodo preprint v3, 9 November 2026",
+          "doi": "10.5281/zenodo.24088151",
+          "primaryUrl": "https://doi.org/10.5281/zenodo.24088151",
+          "openUrl": "https://zenodo.org/api/records/24088151/files/kxk_note.pdf/content",
+          "access": "Checked the exact Zenodo PDF for the hypothesis and the transfers in Table 1."
+        }
+      ],
+      "preferredEditionId": "v3"
+    },
+    {
+      "id": "ps2020",
+      "title": "A Double-Exponential Lower Bound for the Distinct Vectors Problem",
+      "authors": [
+        "Marcin Pilipczuk",
+        "Manuel Sorge"
+      ],
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "journal",
+          "label": "Discrete Mathematics & Theoretical Computer Science 22(4), no. 7 (2020)",
+          "doi": "10.23638/DMTCS-22-4-7",
+          "primaryUrl": "https://doi.org/10.23638/DMTCS-22-4-7",
+          "openUrl": "https://dmtcs.episciences.org/6789/pdf"
+        }
+      ],
+      "preferredEditionId": "journal"
+    },
+    {
+      "id": "fhp2020",
+      "title": "Lower Bounds for QBFs of Bounded Treewidth",
+      "authors": [
+        "Johannes K. Fichte",
+        "Markus Hecher",
+        "Andreas Pfandler"
+      ],
+      "editions": [
+        {
+          "id": "proceedings",
+          "kind": "proceedings",
+          "label": "LICS 2020, 410–424",
+          "doi": "10.1145/3373718.3394756",
+          "primaryUrl": "https://doi.org/10.1145/3373718.3394756",
+          "access": "Published text checked for Theorem 13, its proof, and the source definitions of ETH and normalized QBF."
+        },
+        {
+          "id": "full",
+          "kind": "preprint",
+          "label": "Full version (arXiv:1910.01047v2)",
+          "primaryUrl": "https://arxiv.org/abs/1910.01047v2",
+          "openUrl": "https://arxiv.org/pdf/1910.01047v2",
+          "access": "Inspected arXiv version retained for earlier citations and their pagination."
+        }
+      ],
+      "preferredEditionId": "proceedings"
+    },
+    {
+      "id": "cygan2015",
+      "title": "Parameterized Algorithms",
+      "authors": [
+        "Marek Cygan",
+        "Fedor V. Fomin",
+        "Łukasz Kowalik",
+        "Daniel Lokshtanov",
+        "Dániel Marx",
+        "Marcin Pilipczuk",
+        "Michał Pilipczuk",
+        "Saket Saurabh"
+      ],
+      "editions": [
+        {
+          "id": "book",
+          "kind": "book",
+          "label": "Springer Cham, 1st edition (2015)",
+          "doi": "10.1007/978-3-319-21275-3",
+          "primaryUrl": "https://doi.org/10.1007/978-3-319-21275-3",
+          "openUrl": "https://parameterized-algorithms.mimuw.edu.pl/parameterized-algorithms.pdf",
+          "editionNumber": 1,
+          "access": "Springer lists the 2015 first edition. The open PDF is the authors’ copy."
+        }
+      ],
+      "preferredEditionId": "book"
+    },
+    {
+      "id": "cygan-cut-count",
+      "title": "Solving Connectivity Problems Parameterized by Treewidth in Single Exponential Time",
+      "authors": [
+        "Marek Cygan",
+        "Jesper Nederlof",
+        "Marcin Pilipczuk",
+        "Michał Pilipczuk",
+        "Johan M. M. van Rooij",
+        "Jakub Onufry Wojtaszczyk"
+      ],
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "journal",
+          "label": "ACM Transactions on Algorithms 18(2), Article 17 (2022)",
+          "doi": "10.1145/3506707",
+          "primaryUrl": "https://doi.org/10.1145/3506707",
+          "openUrl": "https://dspace.library.uu.nl/bitstream/handle/1874/430283/3506707.pdf?sequence=1",
+          "access": "Published text checked for Table 1 and Theorem 1.3, p. 17:4. The journal refers to earlier work for the full lower-bound constructions."
+        },
+        {
+          "id": "arxiv-v1",
+          "kind": "preprint",
+          "label": "arXiv:1103.0534v1, 2 March 2011",
+          "primaryUrl": "https://arxiv.org/abs/1103.0534v1",
+          "openUrl": "https://arxiv.org/pdf/1103.0534v1",
+          "access": "The full Appendix C is available here. Appendix C.4 gives the width-plus-three reduction used for the Max Cycle Cover consequence."
+        }
+      ],
+      "preferredEditionId": "journal"
+    },
+    {
+      "id": "lin2019",
+      "title": "A Simple Gap-Producing Reduction for the Parameterized Set Cover Problem",
+      "authors": [
+        "Bingkai Lin"
+      ],
+      "editions": [
+        {
+          "id": "proceedings",
+          "kind": "proceedings",
+          "label": "ICALP 2019, LIPIcs 132, 81:1–81:15",
+          "doi": "10.4230/LIPIcs.ICALP.2019.81",
+          "primaryUrl": "https://doi.org/10.4230/LIPIcs.ICALP.2019.81",
+          "openUrl": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol132-icalp2019/LIPIcs.ICALP.2019.81/LIPIcs.ICALP.2019.81.pdf"
+        }
+      ],
+      "preferredEditionId": "proceedings"
+    },
+    {
+      "id": "froese2012",
+      "title": "Combinatorial Feature Selection: Parameterized Algorithms and Complexity",
+      "authors": [
+        "Vincent Froese"
+      ],
+      "editions": [
+        {
+          "id": "thesis",
+          "kind": "thesis",
+          "label": "Master’s thesis, Technische Universität Berlin (2012)",
+          "primaryUrl": "https://fpt.akt.tu-berlin.de/publications/theses/MA-vincent-froese.pdf"
+        }
+      ],
+      "preferredEditionId": "thesis"
+    },
+    {
+      "id": "cygan-pilipczuk-pilipczuk-ecc",
+      "title": "Known Algorithms for Edge Clique Cover Are Probably Optimal",
+      "authors": [
+        "Marek Cygan",
+        "Marcin Pilipczuk",
+        "Michał Pilipczuk"
+      ],
+      "preferredEditionId": "journal",
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "journal",
+          "label": "SIAM J. Comput. 45(1) (2016), 67–83",
+          "doi": "10.1137/130947076",
+          "primaryUrl": "https://doi.org/10.1137/130947076",
+          "access": "Published text checked for Theorem 1 and Corollaries 2–3 on p. 70, and their proofs."
+        },
+        {
+          "id": "v2",
+          "kind": "preprint",
+          "label": "arXiv:1203.1754v2, 26 September 2012",
+          "primaryUrl": "https://arxiv.org/abs/1203.1754v2",
+          "openUrl": "https://arxiv.org/pdf/1203.1754v2",
+          "access": "Checked the reduction statement and lower-bound corollary in the full text."
+        }
+      ]
+    },
+    {
+      "id": "cai-juedes2003",
+      "title": "On the Existence of Subexponential Parameterized Algorithms",
+      "authors": [
+        "Liming Cai",
+        "David Juedes"
+      ],
+      "preferredEditionId": "journal",
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "journal",
+          "label": "JCSS 67(4) (2003), 789–807",
+          "doi": "10.1016/S0022-0000(03)00074-6",
+          "primaryUrl": "https://doi.org/10.1016/S0022-0000(03)00074-6",
+          "access": "Journal text inspected for Theorem 4.2, Proposition 4.1, and Corollaries 4.3 and 5.1."
+        }
+      ]
+    },
+    {
+      "id": "ganian-dehaan-kanj-szeider2020",
+      "title": "On Existential MSO and Its Relation to ETH",
+      "authors": [
+        "Robert Ganian",
+        "Ronald de Haan",
+        "Iyad Kanj",
+        "Stefan Szeider"
+      ],
+      "preferredEditionId": "journal",
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "journal",
+          "label": "ACM Transactions on Computation Theory 12(4) (2020), Article 22",
+          "doi": "10.1145/3417759",
+          "primaryUrl": "https://doi.org/10.1145/3417759",
+          "access": "Published text checked for the subexponential-time convention in §2.2 and the Dominating Set equivalence in Corollary 3.8."
+        },
+        {
+          "id": "mfcs",
+          "kind": "proceedings",
+          "label": "MFCS 2016, LIPIcs 58, 42:1–42:14",
+          "doi": "10.4230/LIPIcs.MFCS.2016.42",
+          "primaryUrl": "https://doi.org/10.4230/LIPIcs.MFCS.2016.42",
+          "openUrl": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol058-mfcs2016/LIPIcs.MFCS.2016.42/LIPIcs.MFCS.2016.42.pdf",
+          "access": "Proceedings full text inspected for the single-algorithm definition and Dominating Set corollary."
+        }
+      ]
+    },
+    {
+      "id": "gramm-guo-hueffner-niedermeier2009",
+      "title": "Data Reduction and Exact Algorithms for Clique Cover",
+      "authors": [
+        "Jens Gramm",
+        "Jiong Guo",
+        "Falk Hüffner",
+        "Rolf Niedermeier"
+      ],
+      "preferredEditionId": "journal",
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "journal",
+          "label": "ACM Journal of Experimental Algorithmics 13 (2009), Article 2.2",
+          "doi": "10.1145/1412228.1412236",
+          "primaryUrl": "https://doi.org/10.1145/1412228.1412236",
+          "openUrl": "https://hueffner.de/falk/clique-cover-jea07.pdf",
+          "access": "Published text checked for §2, Rules 1 and 3′, and Theorem 1, pp. 2.2:4–2.2:7. The linked author manuscript is also available."
+        }
+      ]
+    },
+    {
+      "id": "koutecky2026-hard-side",
+      "title": "Lecture 2 – Proving the hard side",
+      "authors": [
+        "Martin Koutecký"
+      ],
+      "editions": [
+        {
+          "id": "notes",
+          "kind": "other",
+          "label": "Parameterized Algorithms 2026–27, lecture notes, 13 November 2026",
+          "primaryUrl": "https://iuuk.mff.cuni.cz/~koutecky/paralg2627-graph/lecture-2-proving-the-hard-side.html",
+          "access": "Original online lecture notes inspected, including Theorems 1 and 3 and the clause-grouping construction."
+        }
+      ],
+      "preferredEditionId": "notes"
+    },
+    {
+      "id": "bonnet2026-treewidth",
+      "title": "Treewidth Inapproximability and Tight ETH Lower Bound",
+      "authors": [
+        "Édouard Bonnet"
+      ],
+      "preferredEditionId": "journal",
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "journal",
+          "label": "Journal of the ACM 73(5), article 35 (2026)",
+          "primaryUrl": "https://doi.org/10.1145/3833387",
+          "access": "Journal publication and Theorem 1.2 locator confirmed in publisher-indexed text. Direct full-text access returned 403."
+        },
+        {
+          "id": "arxiv-v2",
+          "kind": "preprint",
+          "label": "arXiv:2406.11628v2, 23 June 2025",
+          "primaryUrl": "https://arxiv.org/abs/2406.11628v2",
+          "openUrl": "https://arxiv.org/pdf/2406.11628v2",
+          "access": "Theorem 2 and its proof were inspected in this version."
+        }
+      ]
+    },
+    {
+      "id": "marx-pilipczuk-pilipczuk2018-steiner",
+      "title": "On Subexponential Parameterized Algorithms for Steiner Tree and Directed Subset TSP on Planar Graphs",
+      "authors": [
+        "Dániel Marx",
+        "Marcin Pilipczuk",
+        "Michał Pilipczuk"
+      ],
+      "preferredEditionId": "focs",
+      "editions": [
+        {
+          "id": "focs",
+          "kind": "proceedings",
+          "label": "FOCS 2018, pp. 474–484",
+          "primaryUrl": "https://doi.org/10.1109/FOCS.2018.00052",
+          "openUrl": "https://ieee-focs.org/FOCS-2018-Papers/pdfs/59f474.pdf",
+          "access": "Published proceedings PDF inspected. The 2022 SIAM Journal on Computing article under a different title addresses Directed Subset TSP."
+        }
+      ]
+    },
+    {
+      "id": "etscheid-kratsch-mnich-rog-lin2017",
+      "title": "Polynomial kernels for weighted problems",
+      "authors": [
+        "Michael Etscheid",
+        "Stefan Kratsch",
+        "Matthias Mnich",
+        "Heiko Röglin"
+      ],
+      "preferredEditionId": "journal",
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "journal",
+          "label": "Journal of Computer and System Sciences 84 (2017), pp. 1–10",
+          "primaryUrl": "https://doi.org/10.1016/j.jcss.2016.06.004",
+          "access": "Published text checked for §3, Lemma 13, p. 8, including the linear-item reduction."
+        },
+        {
+          "id": "arxiv",
+          "kind": "preprint",
+          "label": "arXiv:1507.03439",
+          "primaryUrl": "https://arxiv.org/abs/1507.03439",
+          "openUrl": "https://arxiv.org/pdf/1507.03439",
+          "access": "Lemma 3 and the detailed positive-item no-carry reduction were inspected."
+        }
+      ]
+    },
+    {
+      "id": "nederlof-swennenhuis2022",
+      "title": "On the Fine-grained Parameterized Complexity of Partial Scheduling to Minimize the Makespan",
+      "authors": [
+        "Jesper Nederlof",
+        "Céline M. F. Swennenhuis"
+      ],
+      "preferredEditionId": "journal",
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "journal",
+          "label": "Algorithmica 84(8) (2022), pp. 2309–2334",
+          "primaryUrl": "https://doi.org/10.1007/s00453-022-00970-8",
+          "openUrl": "https://pure.tue.nl/ws/files/215115935/s00453_022_00970_8.pdf",
+          "access": "Published PDF inspected for the ETH item-count statement on p. 2317 and its attribution in Section 5."
+        }
+      ]
+    },
+    {
+      "id": "marx2012-multiway",
+      "title": "A Tight Lower Bound for Planar Multiway Cut with Fixed Number of Terminals",
+      "authors": [
+        "Dániel Marx"
+      ],
+      "preferredEditionId": "journal",
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "proceedings",
+          "label": "ICALP 2012, Part I, LNCS 7391, pp. 677–688",
+          "primaryUrl": "https://doi.org/10.1007/978-3-642-31594-7_57",
+          "doi": "10.1007/978-3-642-31594-7_57",
+          "access": "Published ICALP text checked for Theorem 3 and Corollary 5.",
+          "title": "A Tight Lower Bound for Planar Multiway Cut"
+        },
+        {
+          "id": "author",
+          "kind": "preprint",
+          "label": "Inspected author version",
+          "primaryUrl": "https://www.cs.bme.hu/~dmarx/papers/marx-mway-icalp2012.pdf",
+          "openUrl": "https://www.cs.bme.hu/~dmarx/papers/marx-mway-icalp2012.pdf",
+          "access": "Public version used where the published full text was unavailable."
+        }
+      ]
+    },
+    {
+      "id": "marx-pilipczuk-scattered",
+      "title": "Optimal Parameterized Algorithms for Planar Facility Location Problems Using Voronoi Diagrams",
+      "authors": [
+        "Dániel Marx",
+        "Michał Pilipczuk"
+      ],
+      "preferredEditionId": "journal",
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "journal",
+          "label": "ACM Transactions on Algorithms 18(2) (2022), Article 13",
+          "primaryUrl": "https://doi.org/10.1145/3483425",
+          "doi": "10.1145/3483425",
+          "access": "Published text checked for the planar d-Scattered Set lower-bound paragraph in §1, p. 13:6, and its textbook reduction reference."
+        },
+        {
+          "id": "author",
+          "kind": "preprint",
+          "label": "Inspected author version",
+          "primaryUrl": "https://arxiv.org/abs/1504.05476",
+          "openUrl": "https://arxiv.org/abs/1504.05476",
+          "access": "Public version used where the published full text was unavailable."
+        }
+      ]
+    },
+    {
+      "id": "chitnis-feldmann-hajiaghayi-marx-scss",
+      "title": "Tight Bounds for Planar Strongly Connected Steiner Subgraph with Fixed Number of Terminals (and Extensions)",
+      "authors": [
+        "Rajesh H. Chitnis",
+        "Andreas E. Feldmann",
+        "MohammadTaghi HajiAghayi",
+        "Dániel Marx"
+      ],
+      "preferredEditionId": "journal",
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "journal",
+          "label": "SIAM Journal on Computing 49(2) (2020)",
+          "primaryUrl": "https://doi.org/10.1137/18M122371X",
+          "doi": "10.1137/18M122371X",
+          "access": "Journal DOI and theorem checked against the institutional peer-reviewed accepted manuscript. Publisher pagination was not checked."
+        },
+        {
+          "id": "author",
+          "kind": "preprint",
+          "label": "Inspected author version",
+          "primaryUrl": "https://arxiv.org/abs/1911.13161",
+          "openUrl": "https://arxiv.org/abs/1911.13161",
+          "access": "Public version used where the published full text was unavailable."
+        },
+        {
+          "id": "accepted",
+          "kind": "manuscript",
+          "label": "Journal accepted manuscript",
+          "primaryUrl": "https://pure-oai.bham.ac.uk/ws/portalfiles/portal/84854624/J10_Tight_Bounds_for_Planar.pdf",
+          "openUrl": "https://pure-oai.bham.ac.uk/ws/portalfiles/portal/84854624/J10_Tight_Bounds_for_Planar.pdf",
+          "access": "University of Birmingham peer-reviewed manuscript checked for Theorem 1.2 and §3, including §3.6."
+        }
+      ]
+    },
+    {
+      "id": "marx2010-treewidth",
+      "title": "Can You Beat Treewidth?",
+      "authors": [
+        "Dániel Marx"
+      ],
+      "preferredEditionId": "journal",
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "journal",
+          "label": "Theory of Computing 6 (2010), 85–112",
+          "primaryUrl": "https://doi.org/10.4086/toc.2010.v006a005",
+          "doi": "10.4086/toc.2010.v006a005",
+          "access": "Published edition."
+        }
+      ]
+    },
+    {
+      "id": "marx2006-geometric",
+      "title": "Parameterized Complexity of Independence and Domination on Geometric Graphs",
+      "authors": [
+        "Dániel Marx"
+      ],
+      "preferredEditionId": "journal",
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "proceedings",
+          "label": "IWPEC 2006, LNCS 4169, 154–165",
+          "primaryUrl": "https://doi.org/10.1007/11847250_14",
+          "doi": "10.1007/11847250_14",
+          "access": "Published edition."
+        }
+      ]
+    },
+    {
+      "id": "marx2008-closest-substring",
+      "title": "Closest Substring Problems with Small Distances",
+      "authors": [
+        "Dániel Marx"
+      ],
+      "preferredEditionId": "journal",
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "journal",
+          "label": "SIAM Journal on Computing 38(4) (2008), pp. 1382–1410",
+          "doi": "10.1137/060673898",
+          "primaryUrl": "https://doi.org/10.1137/060673898",
+          "openUrl": "https://citeseerx.ist.psu.edu/document?doi=4af18d39158c8450c46da957bc5a51c1bfc4abd9&repid=rep1&type=pdf",
+          "access": "Publisher abstract confirms joint d,k hardness. Full author text inspected for Theorem 8.1 and Corollaries 8.8–8.10, including the binary-alphabet scope."
+        }
+      ]
+    },
+    {
+      "id": "fgls2014-clique-width",
+      "title": "Almost Optimal Lower Bounds for Problems Parameterized by Clique-Width",
+      "authors": [
+        "Fedor V. Fomin",
+        "Petr A. Golovach",
+        "Daniel Lokshtanov",
+        "Saket Saurabh"
+      ],
+      "preferredEditionId": "journal",
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "journal",
+          "label": "SIAM Journal on Computing 43(5) (2014), pp. 1541–1563",
+          "doi": "10.1137/130910932",
+          "primaryUrl": "https://doi.org/10.1137/130910932",
+          "openUrl": "https://fedorvf.github.io/articles/2014/2014b.pdf",
+          "access": "Journal-layout text inspected."
+        }
+      ]
+    },
+    {
+      "id": "fgls2010-clique-width",
+      "title": "Intractability of Clique-Width Parameterizations",
+      "authors": [
+        "Fedor V. Fomin",
+        "Petr A. Golovach",
+        "Daniel Lokshtanov",
+        "Saket Saurabh"
+      ],
+      "preferredEditionId": "journal",
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "journal",
+          "label": "SIAM Journal on Computing 39(5) (2010), pp. 1941–1956",
+          "doi": "10.1137/080742270",
+          "primaryUrl": "https://doi.org/10.1137/080742270",
+          "openUrl": "https://sites.cs.ucsb.edu/~daniello/papers/cliquewidth.pdf",
+          "access": "Author text inspected for Theorem 4.6."
+        }
+      ]
+    },
+    {
+      "id": "deberg-et-al2020-geometric",
+      "title": "A Framework for Exponential-Time-Hypothesis–Tight Algorithms and Lower Bounds in Geometric Intersection Graphs",
+      "authors": [
+        "Mark de Berg",
+        "Hans L. Bodlaender",
+        "Sándor Kisfaludi-Bak",
+        "Dániel Marx",
+        "Tom C. van der Zanden"
+      ],
+      "preferredEditionId": "journal",
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "journal",
+          "label": "SIAM Journal on Computing 49(6) (2020), pp. 1291–1331",
+          "doi": "10.1137/20M1320870",
+          "primaryUrl": "https://doi.org/10.1137/20M1320870",
+          "openUrl": "https://dspace.library.uu.nl/bitstream/handle/1874/412715/20m1320870.pdf?isAllowed=y&sequence=1",
+          "access": "Journal statement Corollary 4.8; Theorem 4.7 gives the induced grid reduction."
+        }
+      ]
+    },
+    {
+      "id": "cygan-et-al2017-embedding",
+      "title": "Tight Lower Bounds on Graph Embedding Problems",
+      "authors": [
+        "Marek Cygan",
+        "Fedor V. Fomin",
+        "Alexander Golovnev",
+        "Alexander S. Kulikov",
+        "Ivan Mihajlin",
+        "Jakub Pachocki",
+        "Arkadiusz Socała"
+      ],
+      "preferredEditionId": "journal",
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "journal",
+          "label": "Journal of the ACM 64(3) (2017), Article 18",
+          "doi": "10.1145/3051094",
+          "primaryUrl": "https://doi.org/10.1145/3051094",
+          "openUrl": "https://fedorvf.github.io/articles/2017/2017d.pdf",
+          "access": "Published-layout text inspected for Theorems 1.1 and 4.1."
+        }
+      ]
+    },
+    {
+      "id": "hermelin-et-al2019-domination",
+      "title": "Domination When the Stars Are Out",
+      "authors": [
+        "Danny Hermelin",
+        "Matthias Mnich",
+        "Erik Jan van Leeuwen",
+        "Gerhard J. Woeginger"
+      ],
+      "preferredEditionId": "journal",
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "journal",
+          "label": "ACM Transactions on Algorithms 15(2) (2019), Article 25",
+          "doi": "10.1145/3301445",
+          "primaryUrl": "https://doi.org/10.1145/3301445",
+          "openUrl": "https://dspace.library.uu.nl/bitstream/handle/1874/382146/a25_hermelin.pdf?sequence=1",
+          "access": "Journal-layout proof of Theorem 10.8 states the sparse-SAT to Connected Vertex Cover budget transfer explicitly."
+        }
+      ]
+    },
+    {
+      "id": "galby-et-al2024-directed-steiner",
+      "title": "Subexponential Parameterized Directed Steiner Network Problems on Planar Graphs: A Complete Classification",
+      "authors": [
+        "Esther Galby",
+        "Sándor Kisfaludi-Bak",
+        "Dániel Marx",
+        "Roohani Sharma"
+      ],
+      "preferredEditionId": "proceedings",
+      "editions": [
+        {
+          "id": "proceedings",
+          "kind": "proceedings",
+          "label": "ICALP 2024, LIPIcs 297, Article 67",
+          "doi": "10.4230/LIPIcs.ICALP.2024.67",
+          "primaryUrl": "https://doi.org/10.4230/LIPIcs.ICALP.2024.67",
+          "openUrl": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol297-icalp2024/LIPIcs.ICALP.2024.67/LIPIcs.ICALP.2024.67.pdf",
+          "access": "Published proceedings text inspected for Theorem 2(ii) and the out-star interface."
+        }
+      ]
+    },
+    {
+      "id": "lichtenstein1982",
+      "title": "Planar Formulae and Their Uses",
+      "authors": [
+        "David Lichtenstein"
+      ],
+      "preferredEditionId": "journal",
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "journal",
+          "label": "SIAM J. Comput. 11(2), 329–343 (1982)",
+          "primaryUrl": "https://doi.org/10.1137/0211025",
+          "doi": "10.1137/0211025",
+          "access": "Published reduction. The quantitative crossover size is also stated in the cited textbook."
+        }
+      ]
+    },
+    {
+      "id": "lss2022-min-k-cut",
+      "title": "A Parameterized Approximation Scheme for Min k-Cut",
+      "authors": [
+        "Daniel Lokshtanov",
+        "Saket Saurabh",
+        "Vaishali Surianarayanan"
+      ],
+      "preferredEditionId": "journal",
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "journal",
+          "label": "SIAM J. Comput. 53(6) (2024), FOCS20-205–FOCS20-238",
+          "primaryUrl": "https://doi.org/10.1137/20M1383197",
+          "doi": "10.1137/20M1383197",
+          "access": "Publication record checked. The historically cited exact lower-bound sentence was checked in the FOCS introduction, p. 798."
+        },
+        {
+          "id": "focs",
+          "kind": "proceedings",
+          "label": "FOCS 2020, 798–809",
+          "primaryUrl": "https://doi.org/10.1109/FOCS46700.2020.00079",
+          "openUrl": "https://sites.cs.ucsb.edu/~daniello/papers/minkcutFOCS20.pdf",
+          "access": "Published proceedings PDF, introduction, p. 798.",
+          "doi": "10.1109/FOCS46700.2020.00079"
+        }
+      ]
+    },
+    {
+      "id": "marx2005-geometric",
+      "title": "Efficient Approximation Schemes for Geometric Problems?",
+      "authors": [
+        "Dániel Marx"
+      ],
+      "preferredEditionId": "esa",
+      "editions": [
+        {
+          "id": "esa",
+          "kind": "proceedings",
+          "label": "ESA 2005, LNCS 3669, 448–459",
+          "primaryUrl": "https://doi.org/10.1007/11561071_41",
+          "doi": "10.1007/11561071_41",
+          "openUrl": "https://www.cs.bme.hu/~dmarx/papers/marx-esa2005.pdf",
+          "access": "Theorems 1 and 3 checked in the open author copy. Both hard constructions explicitly represent open regions with rational coordinates."
+        }
+      ]
+    },
+    {
+      "id": "kpw2020-ilp",
+      "title": "Tight Complexity Lower Bounds for Integer Linear Programming with Few Constraints",
+      "authors": [
+        "Dušan Knop",
+        "Michał Pilipczuk",
+        "Marcin Wrochna"
+      ],
+      "preferredEditionId": "journal",
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "journal",
+          "label": "ACM Transactions on Computation Theory 12(3) (2020), Article 19",
+          "doi": "10.1145/3397484",
+          "primaryUrl": "https://doi.org/10.1145/3397484",
+          "openUrl": "https://doi.org/10.1145/3397484",
+          "access": "Published text checked for Theorem 1, §2.3, and the distinction from Corollary 2."
+        },
+        {
+          "id": "stacs",
+          "kind": "proceedings",
+          "label": "STACS 2019, LIPIcs 126, pp. 44:1–44:15",
+          "primaryUrl": "https://doi.org/10.4230/LIPIcs.STACS.2019.44",
+          "openUrl": "https://doi.org/10.4230/LIPIcs.STACS.2019.44",
+          "access": "Full text inspected.",
+          "doi": "10.4230/LIPIcs.STACS.2019.44"
+        }
+      ]
+    },
+    {
+      "id": "jkms2013-bin-packing",
+      "title": "Bin Packing with Fixed Number of Bins Revisited",
+      "authors": [
+        "Klaus Jansen",
+        "Stefan Kratsch",
+        "Dániel Marx",
+        "Ildikó Schlotter"
+      ],
+      "preferredEditionId": "journal",
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "journal",
+          "label": "Journal of Computer and System Sciences 79(1) (2013), pp. 39–49",
+          "doi": "10.1016/j.jcss.2012.04.004",
+          "primaryUrl": "https://doi.org/10.1016/j.jcss.2012.04.004",
+          "openUrl": "https://doi.org/10.1016/j.jcss.2012.04.004",
+          "access": "Published text checked for the unary decision formulation and Theorems 2–3."
+        },
+        {
+          "id": "author",
+          "kind": "preprint",
+          "label": "Authors’ full manuscript",
+          "primaryUrl": "https://www.cs.bme.hu/~dmarx/papers/jansen-binpacking-algo.pdf",
+          "openUrl": "https://www.cs.bme.hu/~dmarx/papers/jansen-binpacking-algo.pdf",
+          "access": "Full text inspected."
+        }
+      ]
+    },
+    {
+      "id": "bdw2026-bin-packing",
+      "title": "Tight (S)ETH-Based Lower Bounds for Pseudopolynomial Algorithms for Bin Packing and Multi-machine Scheduling",
+      "authors": [
+        "Karl Bringmann",
+        "Anita Dürr",
+        "Karol Węgrzycki"
+      ],
+      "preferredEditionId": "proceedings",
+      "editions": [
+        {
+          "id": "proceedings",
+          "kind": "proceedings",
+          "label": "STOC 2026, pp. 2094–2105",
+          "doi": "10.1145/3798129.3800913",
+          "primaryUrl": "https://doi.org/10.1145/3798129.3800913",
+          "openUrl": "https://www.research-collection.ethz.ch/entities/publication/15a42f4d-79fe-4769-9e1f-8937bb6d009f",
+          "access": "Published text checked for Theorem 1.1 and §4. The proof cites the full version for Theorem 8.1, the transfer to Bin Packing."
+        },
+        {
+          "id": "arxiv-v1",
+          "kind": "preprint",
+          "label": "arXiv:2603.12999v1",
+          "primaryUrl": "https://arxiv.org/abs/2603.12999v1",
+          "openUrl": "https://arxiv.org/abs/2603.12999v1",
+          "access": "Full text inspected."
+        }
+      ]
+    },
+    {
+      "id": "cao-sandeep2020-fill-in",
+      "title": "Minimum Fill-In: Inapproximability and Almost Tight Lower Bounds",
+      "authors": [
+        "Yixin Cao",
+        "R. B. Sandeep"
+      ],
+      "preferredEditionId": "journal",
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "journal",
+          "label": "Information and Computation 271 (2020), Article 104514",
+          "doi": "10.1016/j.ic.2020.104514",
+          "primaryUrl": "https://doi.org/10.1016/j.ic.2020.104514",
+          "openUrl": "https://doi.org/10.1016/j.ic.2020.104514",
+          "access": "Published text checked for Theorem 1.3 and the proof of Theorem 1.2 that yields it."
+        },
+        {
+          "id": "arxiv-v1",
+          "kind": "preprint",
+          "label": "arXiv:1606.08141v1",
+          "primaryUrl": "https://arxiv.org/abs/1606.08141v1",
+          "openUrl": "https://arxiv.org/abs/1606.08141v1",
+          "access": "Full text inspected."
+        }
+      ]
+    },
+    {
+      "id": "bovz2016-vector",
+      "title": "Approximating Vector Scheduling: Almost Matching Upper and Lower Bounds",
+      "authors": [
+        "Nikhil Bansal",
+        "Tim Oosterwijk",
+        "Tjark Vredeveld",
+        "Ruben van der Zwaan"
+      ],
+      "preferredEditionId": "journal",
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "journal",
+          "label": "Algorithmica 76 (2016), pp. 1077–1096",
+          "doi": "10.1007/s00453-016-0116-0",
+          "primaryUrl": "https://doi.org/10.1007/s00453-016-0116-0",
+          "openUrl": "https://link.springer.com/content/pdf/10.1007/s00453-016-0116-0.pdf",
+          "access": "Open full text inspected."
+        }
+      ]
+    },
+    {
+      "id": "hh2026-tardy-jobs",
+      "title": "Minimizing the Weighted Number of Tardy Jobs is W[1]-hard",
+      "authors": [
+        "Klaus Heeger",
+        "Danny Hermelin"
+      ],
+      "preferredEditionId": "journal",
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "journal",
+          "label": "Journal of Computer and System Sciences 161 (2026), Article 103817",
+          "doi": "10.1016/j.jcss.2026.103817",
+          "primaryUrl": "https://doi.org/10.1016/j.jcss.2026.103817",
+          "openUrl": "https://doi.org/10.1016/j.jcss.2026.103817",
+          "access": "Published text checked for Theorem 3 and §§3–4, and for Corollary 1 and the full §5 ETH reduction."
+        },
+        {
+          "id": "esa",
+          "kind": "proceedings",
+          "label": "ESA 2024, LIPIcs 308, pp. 68:1–68:14",
+          "primaryUrl": "https://doi.org/10.4230/LIPIcs.ESA.2024.68",
+          "openUrl": "https://doi.org/10.4230/LIPIcs.ESA.2024.68",
+          "access": "Full text inspected.",
+          "doi": "10.4230/LIPIcs.ESA.2024.68"
+        },
+        {
+          "id": "arxiv",
+          "kind": "preprint",
+          "label": "arXiv:2401.01740",
+          "primaryUrl": "https://arxiv.org/abs/2401.01740",
+          "openUrl": "https://arxiv.org/html/2401.01740",
+          "access": "Full manuscript inspected for the ETH reduction and bit sizes."
+        }
+      ]
+    },
+    {
+      "id": "ku2012-cluster-editing",
+      "title": "Cluster Editing with Locally Bounded Modifications",
+      "authors": [
+        "Christian Komusiewicz",
+        "Johannes Uhlmann"
+      ],
+      "preferredEditionId": "journal",
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "journal",
+          "label": "Discrete Applied Mathematics 160(15) (2012), pp. 2259–2270",
+          "doi": "10.1016/j.dam.2012.05.019",
+          "primaryUrl": "https://doi.org/10.1016/j.dam.2012.05.019",
+          "openUrl": "https://www.sciencedirect.com/science/article/pii/S0166218X12002259",
+          "access": "Published text checked for Theorem 2 and its reduction in §2, including the maximum-degree-six restriction."
+        },
+        {
+          "id": "author",
+          "kind": "preprint",
+          "label": "Authors’ full manuscript",
+          "primaryUrl": "https://www.uni-marburg.de/de/fb12/arbeitsgruppen/algorith/paper/ce-bounded-degree.pdf",
+          "openUrl": "https://www.uni-marburg.de/de/fb12/arbeitsgruppen/algorith/paper/ce-bounded-degree.pdf",
+          "access": "Full text inspected."
+        }
+      ]
+    },
+    {
+      "id": "abs2017-mcis",
+      "title": "On the Complexity of Various Parameterizations of Common Induced Subgraph Isomorphism",
+      "authors": [
+        "Faisal N. Abu-Khzam",
+        "Édouard Bonnet",
+        "Florian Sikora"
+      ],
+      "preferredEditionId": "journal",
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "journal",
+          "label": "Theoretical Computer Science 697 (2017), pp. 69–78",
+          "doi": "10.1016/j.tcs.2017.07.010",
+          "primaryUrl": "https://doi.org/10.1016/j.tcs.2017.07.010",
+          "openUrl": "https://doi.org/10.1016/j.tcs.2017.07.010",
+          "access": "Published text checked for Theorem 12 and Corollary 13, with the sum of the two intrinsic vertex-cover numbers."
+        },
+        {
+          "id": "author",
+          "kind": "preprint",
+          "label": "Authors’ full manuscript",
+          "primaryUrl": "https://perso.ens-lyon.fr/edouard.bonnet/publi/tcs2017.pdf",
+          "openUrl": "https://perso.ens-lyon.fr/edouard.bonnet/publi/tcs2017.pdf",
+          "access": "Full text inspected."
+        }
+      ]
+    },
+    {
+      "id": "cygan-et-al2021-mcsp",
+      "title": "Minimum Common String Partition: Exact Algorithms",
+      "authors": [
+        "Marek Cygan",
+        "Alexander S. Kulikov",
+        "Ivan Mihajlin",
+        "Maksim Nikolaev",
+        "Grigory Reznikov"
+      ],
+      "preferredEditionId": "proceedings",
+      "editions": [
+        {
+          "id": "proceedings",
+          "kind": "proceedings",
+          "label": "ESA 2021, LIPIcs 204, pp. 35:1–35:16",
+          "doi": "10.4230/LIPIcs.ESA.2021.35",
+          "primaryUrl": "https://doi.org/10.4230/LIPIcs.ESA.2021.35",
+          "openUrl": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol204-esa2021/LIPIcs.ESA.2021.35/LIPIcs.ESA.2021.35.pdf",
+          "access": "Open full text inspected."
+        }
+      ]
+    },
+    {
+      "id": "bs2017-graph-motif",
+      "title": "The Graph Motif Problem Parameterized by the Structure of the Input Graph",
+      "authors": [
+        "Édouard Bonnet",
+        "Florian Sikora"
+      ],
+      "preferredEditionId": "journal",
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "journal",
+          "label": "Discrete Applied Mathematics 231 (2017), pp. 78–94",
+          "doi": "10.1016/j.dam.2016.11.016",
+          "primaryUrl": "https://doi.org/10.1016/j.dam.2016.11.016",
+          "openUrl": "https://www.sciencedirect.com/science/article/pii/S0166218X1630539X",
+          "access": "Published text checked for both parts of Theorem 14 and their proof in §3.4."
+        },
+        {
+          "id": "arxiv-v3",
+          "kind": "preprint",
+          "label": "arXiv:1503.05110v3",
+          "primaryUrl": "https://arxiv.org/abs/1503.05110v3",
+          "openUrl": "https://arxiv.org/abs/1503.05110v3",
+          "access": "Full text inspected."
+        }
+      ]
+    },
+    {
+      "id": "bkn2023-rankwidth",
+      "title": "Tight Lower Bounds for Problems Parameterized by Rank-Width",
+      "authors": [
+        "Benjamin Bergougnoux",
+        "Tuukka Korhonen",
+        "Jesper Nederlof"
+      ],
+      "preferredEditionId": "proceedings",
+      "editions": [
+        {
+          "id": "proceedings",
+          "kind": "proceedings",
+          "label": "STACS 2023, LIPIcs 254, pp. 11:1–11:17",
+          "doi": "10.4230/LIPIcs.STACS.2023.11",
+          "primaryUrl": "https://doi.org/10.4230/LIPIcs.STACS.2023.11",
+          "openUrl": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol254-stacs2023/LIPIcs.STACS.2023.11/LIPIcs.STACS.2023.11.pdf",
+          "access": "Full published edition checked for the theorem and §4."
+        }
+      ]
+    },
+    {
+      "id": "liu-meng2026-rankwidth",
+      "title": "Lower Bounds for Domination-Type Problems Parameterized by Rank-Width",
+      "authors": [
+        "Chenghua Liu",
+        "Boning Meng"
+      ],
+      "preferredEditionId": "v1",
+      "editions": [
+        {
+          "id": "v1",
+          "kind": "preprint",
+          "label": "arXiv:2608.18854v1, 19 August 2026",
+          "primaryUrl": "https://arxiv.org/abs/2608.18854v1",
+          "openUrl": "https://arxiv.org/html/2608.18854v1",
+          "access": "Preprint only. Checked Theorem 3.1, Corollary 3.10, the monopolar construction in §3.2, and the observation on clause length in the proof of Theorem C.1."
+        }
+      ]
+    },
+    {
+      "id": "akiyama-nishizeki-saito1980",
+      "title": "NP-Completeness of the Hamiltonian Cycle Problem for Bipartite Graphs",
+      "authors": [
+        "Takanori Akiyama",
+        "Takao Nishizeki",
+        "Nobuji Saito"
+      ],
+      "preferredEditionId": "journal",
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "journal",
+          "label": "Journal of Information Processing 3(2) (1980), 73–76",
+          "primaryUrl": "https://www.ecei.tohoku.ac.jp/alg/nishizeki/sub/j/DVD/PDF_J/J029.pdf",
+          "access": "Published scan in the author's archive. Section 2, Figures 1–5 and the nonplanar graph before crossing replacement checked."
+        }
+      ]
+    },
+    {
+      "id": "munaro2017-line-graphs",
+      "title": "On Line Graphs of Subcubic Triangle-Free Graphs",
+      "authors": [
+        "Andrea Munaro"
+      ],
+      "preferredEditionId": "journal",
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "journal",
+          "label": "Discrete Mathematics 340(6) (2017), 1210–1226",
+          "primaryUrl": "https://doi.org/10.1016/j.disc.2017.01.006",
+          "doi": "10.1016/j.disc.2017.01.006",
+          "openUrl": "https://pure.qub.ac.uk/files/186487120/dmline.pdf",
+          "access": "Theorems 21, 23 and 24 and Figure 5 checked in the open author copy."
+        }
+      ]
+    },
+    {
+      "id": "courcelle-olariu2000",
+      "title": "Upper Bounds to the Clique Width of Graphs",
+      "authors": [
+        "Bruno Courcelle",
+        "Stephan Olariu"
+      ],
+      "preferredEditionId": "journal",
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "journal",
+          "label": "Discrete Applied Mathematics 101(1–3) (2000), 77–114",
+          "doi": "10.1016/S0166-218X(99)00184-5",
+          "primaryUrl": "https://doi.org/10.1016/S0166-218X(99)00184-5",
+          "openUrl": "https://www.labri.fr/perso/courcell/CoursMaster/BC-Olariu%282000%29.pdf",
+          "access": "Author-hosted copy of the published article inspected for Theorem 4.1 and Proposition 4.3."
+        }
+      ]
+    }
+  ],
+  "proofs": [
+    {
+      "id": "distinct-vectors-fixed-coefficient",
+      "title": "A double-exponential lower bound for Distinct Vectors under FPT ≠ W[1]",
+      "revisions": [
+        {
+          "revision": 1,
+          "source": "proofs/distinct-vectors-fixed-coefficient.tex",
+          "pdf": "proofs/distinct-vectors-fixed-coefficient.pdf",
+          "theorems": [
+            {
+              "label": "dv-fixed-coefficient",
+              "number": "1",
+              "destination": "dv-fixed-coefficient",
+              "statement": "For every fixed 0 < γ < 1, under FPT ≠ W[1] no deterministic algorithm decides Distinct Vectors in time 2^(O(2^(γ k))) N^(O(1))."
+            }
+          ],
+          "dependencyCoverage": "partial",
+          "dependencies": [],
+          "authorship": {
+            "origin": "atlas",
+            "kind": "ai",
+            "authors": [
+              "Atlas"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "closest-string-balanced",
+      "title": "Closest String with a balanced alphabet",
+      "revisions": [
+        {
+          "revision": 1,
+          "source": "proofs/closest-string-balanced.tex",
+          "pdf": "proofs/closest-string-balanced.pdf",
+          "theorems": [
+            {
+              "label": "cs-balanced",
+              "number": "1",
+              "destination": "cs-balanced",
+              "statement": "Under deterministic FPT ≠ W[1], on inputs with L=d+1 and used alphabet size q=2d+3 there is no deterministic solver in 2^{h(d)} N^C for fixed C, where h has a computable upper bound and is effectively sublinear in d."
+            }
+          ],
+          "dependencyCoverage": "complete",
+          "dependencies": [],
+          "authorship": {
+            "origin": "atlas",
+            "kind": "ai",
+            "authors": [
+              "Atlas"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "three-coloring-sh-converse",
+      "title": "The 3-Coloring bound implies the Satisfiability Hypothesis",
+      "revisions": [
+        {
+          "revision": 1,
+          "source": "proofs/three-coloring-sh-converse.tex",
+          "pdf": "proofs/three-coloring-sh-converse.pdf",
+          "theorems": [
+            {
+              "label": "color-sh-converse",
+              "number": "1",
+              "destination": "color-sh-converse",
+              "statement": "If for every fixed 0<a<1 there is no deterministic 3-Coloring algorithm in 2^{O(n^a)} B^{O(1)}, then SH holds."
+            }
+          ],
+          "dependencyCoverage": "complete",
+          "dependencies": [],
+          "authorship": {
+            "origin": "atlas",
+            "kind": "ai",
+            "authors": [
+              "Atlas"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "chromatic-number-cover-w1",
+      "title": "A single-exponential lower bound for Chromatic Number by vertex cover number",
+      "revisions": [
+        {
+          "revision": 1,
+          "source": "proofs/chromatic-number-cover-w1.tex",
+          "pdf": "proofs/chromatic-number-cover-w1.pdf",
+          "theorems": [
+            {
+              "label": "cover-w1",
+              "number": "1",
+              "destination": "cover-w1",
+              "statement": "Under deterministic FPT ≠ W[1], there is no Chromatic Number algorithm in 2^{O(k)} N^{O(1)} for vertex cover number k."
+            }
+          ],
+          "dependencyCoverage": "complete",
+          "dependencies": [],
+          "authorship": {
+            "origin": "atlas",
+            "kind": "ai",
+            "authors": [
+              "Atlas"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "chromatic-number-treewidth-w1",
+      "title": "An effective treewidth lower bound for Chromatic Number",
+      "revisions": [
+        {
+          "revision": 1,
+          "source": "proofs/chromatic-number-treewidth-w1.tex",
+          "pdf": "proofs/chromatic-number-treewidth-w1.pdf",
+          "theorems": [
+            {
+              "label": "tw-w1",
+              "number": "1",
+              "destination": "tw-w1",
+              "statement": "Under deterministic FPT ≠ W[1], there is no Chromatic Number algorithm in 2^{h(t)} N^C for a fixed C and a finite nonnegative h effectively little-o of t log₂(max(t,2))."
+            }
+          ],
+          "dependencyCoverage": "complete",
+          "dependencies": [],
+          "authorship": {
+            "origin": "atlas",
+            "kind": "ai",
+            "authors": [
+              "Atlas"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "vdp-width-w1",
+      "title": "Vertex-Disjoint Paths at optimal width on subcubic bipartite graphs",
+      "revisions": [
+        {
+          "revision": 1,
+          "source": "proofs/vertex-disjoint-paths-width-w1.tex",
+          "pdf": "proofs/vertex-disjoint-paths-width-w1.pdf",
+          "theorems": [
+            {
+              "label": "vdp-width-w1",
+              "number": "1",
+              "destination": "vdp-width-w1",
+              "statement": "Under deterministic FPT ≠ W[1], there is no correct deterministic Vertex-Disjoint Paths solver in 2^{h(w)} B^C time for a fixed C and a finite nonnegative h effectively little-o of max(1, w log₂(max(2,w))). The parameter is intrinsic treewidth or the width of a supplied path decomposition. The hard instances are connected bipartite graphs of maximum degree three with distinct leaf demand endpoints and equal treewidth and pathwidth. The supplied path decomposition is optimal."
+            }
+          ],
+          "dependencyCoverage": "complete",
+          "dependencies": [],
+          "authorship": {
+            "origin": "atlas",
+            "kind": "ai",
+            "authors": [
+              "Atlas"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "classical-graph-sh-converse",
+      "title": "The Satisfiability Hypothesis from fixed-power graph bounds",
+      "revisions": [
+        {
+          "revision": 1,
+          "source": "proofs/classical-graph-sh-converse.tex",
+          "pdf": "proofs/classical-graph-sh-converse.pdf",
+          "theorems": [
+            {
+              "label": "is-order-sh-converse",
+              "number": "1(a)",
+              "destination": "is-order-sh-converse",
+              "statement": "The fixed-power exclusion for Independent Set parameterized by the number of vertices implies SH."
+            },
+            {
+              "label": "vc-order-sh-converse",
+              "number": "1(b)",
+              "destination": "vc-order-sh-converse",
+              "statement": "The fixed-power exclusion for Vertex Cover parameterized by the number of vertices implies SH."
+            },
+            {
+              "label": "vc-budget-sh-converse",
+              "number": "1(c)",
+              "destination": "vc-budget-sh-converse",
+              "statement": "The fixed-power exclusion for Vertex Cover parameterized by the solution budget implies SH."
+            }
+          ],
+          "dependencyCoverage": "complete",
+          "dependencies": [],
+          "authorship": {
+            "origin": "atlas",
+            "kind": "ai",
+            "authors": [
+              "Atlas"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "ecc-np-qp-converse",
+      "title": "A converse for the Edge Clique Cover bound under NP ⊈ QP",
+      "revisions": [
+        {
+          "revision": 1,
+          "source": "proofs/ecc-np-qp-converse.tex",
+          "pdf": "proofs/ecc-np-qp-converse.pdf",
+          "theorems": [
+            {
+              "label": "ecc-np-qp-converse",
+              "number": "1",
+              "destination": "ecc-np-qp-converse",
+              "statement": "If Edge Clique Cover has no deterministic algorithm running in time 2^(k^(O(1))) n^(O(1)), then NP ⊈ QP."
+            }
+          ],
+          "dependencyCoverage": "complete",
+          "dependencies": [],
+          "authorship": {
+            "origin": "atlas",
+            "kind": "ai",
+            "authors": [
+              "Atlas"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "subset-sum-item-count-sh",
+      "title": "Subset Sum by item count under the Satisfiability Hypothesis",
+      "revisions": [
+        {
+          "revision": 1,
+          "source": "proofs/subset-sum-item-count-sh.tex",
+          "pdf": "proofs/subset-sum-item-count-sh.pdf",
+          "theorems": [
+            {
+              "label": "subset-sum-item-count-sh",
+              "number": "1",
+              "destination": "subset-sum-item-count-sh",
+              "statement": "Under SH, for each fixed 0 < ε < 1 there is no deterministic 2^(O(p^(1−ε))) B^(O(1))-time algorithm for positive binary Subset Sum by indexed item count."
+            }
+          ],
+          "dependencyCoverage": "partial",
+          "dependencies": [],
+          "authorship": {
+            "origin": "atlas",
+            "kind": "ai",
+            "authors": [
+              "Atlas"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "clique-order-sh-converse",
+      "title": "The Satisfiability Hypothesis from Clique by graph order",
+      "revisions": [
+        {
+          "revision": 1,
+          "source": "proofs/clique-order-sh-converse.tex",
+          "pdf": "proofs/clique-order-sh-converse.pdf",
+          "theorems": [
+            {
+              "label": "clique-order-sh-converse",
+              "number": "1",
+              "destination": "clique-order-sh-converse",
+              "statement": "The whole fixed-power exclusion family for Clique by number of vertices implies SH."
+            }
+          ],
+          "dependencyCoverage": "complete",
+          "dependencies": [],
+          "authorship": {
+            "origin": "atlas",
+            "kind": "ai",
+            "authors": [
+              "Atlas"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "dominating-set-order-sh",
+      "title": "Dominating Set by number of vertices is equivalent to the Satisfiability Hypothesis",
+      "revisions": [
+        {
+          "revision": 1,
+          "source": "proofs/dominating-set-order-sh.tex",
+          "pdf": "proofs/dominating-set-order-sh.pdf",
+          "theorems": [
+            {
+              "label": "dominating-set-order-sh",
+              "number": "1",
+              "destination": "dominating-set-order-sh",
+              "statement": "SH is equivalent to the following exclusion: for every fixed 0 < ε < 1, no deterministic Dominating Set algorithm runs in 2^(O(n^(1−ε))) B^(O(1)) time, where n counts vertices and B is the complete binary input length."
+            }
+          ],
+          "dependencyCoverage": "complete",
+          "dependencies": [],
+          "authorship": {
+            "origin": "atlas",
+            "kind": "ai",
+            "authors": [
+              "Atlas"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "closest-string-balanced-kxk",
+      "title": "A square-clique lower bound for Closest String with a balanced alphabet",
+      "revisions": [
+        {
+          "revision": 1,
+          "source": "proofs/closest-string-balanced-kxk.tex",
+          "pdf": "proofs/closest-string-balanced-kxk.pdf",
+          "theorems": [
+            {
+              "label": "closest-string-balanced-kxk",
+              "number": "1",
+              "destination": "closest-string-balanced-kxk",
+              "statement": "Under the k × k Clique Hypothesis, no deterministic Closest String algorithm runs in 2^(o(d log₂ d)) N^(O(1)) time on instances of common length d+1 with exactly 2d+3 distinct symbols occurring in the input strings."
+            }
+          ],
+          "dependencyCoverage": "complete",
+          "dependencies": [],
+          "authorship": {
+            "origin": "atlas",
+            "kind": "ai",
+            "authors": [
+              "Atlas"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "graph-distortion-line-w1",
+      "title": "An effective lower bound for bipartite line distortion",
+      "revisions": [
+        {
+          "revision": 1,
+          "source": "proofs/graph-distortion-line-w1.tex",
+          "pdf": "proofs/graph-distortion-line-w1.pdf",
+          "theorems": [
+            {
+              "label": "graph-distortion-line-w1",
+              "number": "1",
+              "destination": "graph-distortion-line-w1",
+              "statement": "Under FPT ≠ W[1], no deterministic algorithm decides integer or real line distortion in time 2^(h(d)) B^(O(1)) on connected simple unweighted bipartite graphs when h is finite, nonnegative, and effectively o(d log₂ d)."
+            }
+          ],
+          "dependencyCoverage": "complete",
+          "dependencies": [],
+          "authorship": {
+            "origin": "atlas",
+            "kind": "ai",
+            "authors": [
+              "Atlas"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "hamiltonian-sh",
+      "title": "Fixed-power lower bounds for Hamiltonian Cycle, Hamiltonian Path, and Longest Path",
+      "revisions": [
+        {
+          "revision": 1,
+          "source": "proofs/hamiltonian-sh.tex",
+          "pdf": "proofs/hamiltonian-sh.pdf",
+          "dependencyCoverage": "complete",
+          "dependencies": [],
+          "authorship": {
+            "origin": "atlas",
+            "kind": "ai",
+            "authors": [
+              "Atlas"
+            ]
+          },
+          "theorems": [
+            {
+              "label": "hamiltonian-sh-forward",
+              "number": "1",
+              "destination": "hamiltonian-sh-forward",
+              "statement": "Under SH, for every fixed 0 < a < 1, no deterministic algorithm runs in 2^(O(p^a)) B^(O(1)) time for Hamiltonian Cycle by vertices or vertices plus edges, Hamiltonian Path by vertices, or Longest Path by the requested path length."
+            },
+            {
+              "label": "hamiltonian-size-sh-converse",
+              "number": "2",
+              "destination": "hamiltonian-size-sh-converse",
+              "statement": "The fixed-power exclusion family for Hamiltonian Cycle by number of vertices plus edges implies SH."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "six-w1-memberships",
+      "title": "Membership in W[1] for six parameterizations",
+      "revisions": [
+        {
+          "revision": 1,
+          "source": "proofs/six-w1-memberships.tex",
+          "pdf": "proofs/six-w1-memberships.pdf",
+          "theorems": [
+            {
+              "label": "grid-tiling-w1-membership",
+              "number": "1",
+              "destination": "grid-tiling-w1-membership",
+              "statement": "Equality Grid Tiling on explicit tables is in W[1] by grid side k."
+            },
+            {
+              "label": "unit-disk-independent-set-w1-membership",
+              "number": "2",
+              "destination": "unit-disk-independent-set-w1-membership",
+              "statement": "Independent Set of explicitly represented closed unit disks with rational centers is in W[1] by the requested number of disks."
+            },
+            {
+              "label": "unit-square-independent-set-w1-membership",
+              "number": "3",
+              "destination": "unit-square-independent-set-w1-membership",
+              "statement": "Independent Set of explicitly represented closed axis-parallel unit squares with rational coordinates is in W[1] by the requested number of squares."
+            },
+            {
+              "label": "scattered-set-w1-membership",
+              "number": "4",
+              "destination": "scattered-set-w1-membership",
+              "statement": "Scattered Set on explicit unweighted undirected graphs is in W[1] by the requested number of vertices."
+            },
+            {
+              "label": "planar-scattered-set-w1-membership",
+              "number": "5",
+              "destination": "planar-scattered-set-w1-membership",
+              "statement": "Scattered Set on explicit unweighted planar graphs is in W[1] by the requested number of vertices."
+            },
+            {
+              "label": "weighted-q-cnf-w1-membership",
+              "number": "6",
+              "destination": "weighted-q-cnf-w1-membership",
+              "statement": "For separately fixed q ≥ 2, explicit CNF of width at most q with exact satisfying weight k is in W[1] by k."
+            },
+            {
+              "label": "open-to-closed-regions",
+              "number": "7",
+              "destination": "open-to-closed-regions",
+              "statement": "Open rational unit disks and axis-parallel unit squares can be mapped in polynomial time to closed regions preserving every intersection, the number of regions, and the selection budget."
+            }
+          ],
+          "dependencyCoverage": "complete",
+          "dependencies": [],
+          "authorship": {
+            "origin": "atlas",
+            "kind": "ai",
+            "authors": [
+              "Atlas"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "ilp-equations-w1-effective",
+      "title": "An effective lower bound for integer programming with an all-ones right-hand side",
+      "revisions": [
+        {
+          "revision": 2,
+          "source": "proofs/ilp-equations-w1-all-ones.tex",
+          "pdf": "proofs/ilp-equations-w1-all-ones.pdf",
+          "theorems": [
+            {
+              "label": "ilp-equations-w1-effective",
+              "number": "1",
+              "destination": "ilp-equations-w1-effective",
+              "statement": "Assuming deterministic FPT ≠ W[1], for every fixed C ≥ 0 and every finite nonnegative function h admitting a computable threshold T(j) with h(k) ≤ k/j for every positive integer j and all k ≥ T(j), no deterministic algorithm decides feasibility of Ax=1 over nonnegative integers for a binary k-row matrix A in O(2^(h(k)) N^C) time, with complete binary input length N and unrestricted column count. The exclusion holds even when all columns are nonzero, in which case every feasible coordinate is at most one."
+            }
+          ],
+          "dependencyCoverage": "complete",
+          "dependencies": [],
+          "authorship": {
+            "origin": "atlas",
+            "kind": "ai",
+            "authors": [
+              "Atlas"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "cycle-packing-degree-six",
+      "title": "Cycle Packing at bounded degree and large girth",
+      "revisions": [
+        {
+          "revision": 1,
+          "source": "proofs/cycle-packing-degree-six.tex",
+          "pdf": "proofs/cycle-packing-degree-six.pdf",
+          "theorems": [
+            {
+              "label": "cycle-packing-degree-six",
+              "number": "1",
+              "destination": "cycle-packing-degree-six",
+              "statement": "Assuming deterministic FPT ≠ W[1], for each fixed 0<γ<1 there is no deterministic effective 2^(o(t log₂ t)) N^(O(1)) Cycle Packing algorithm by treewidth or by supplied path-decomposition width, even on connected bipartite graphs of maximum degree six, girth at least n^(1−γ), and equal treewidth and pathwidth, with an optimal certificate if supplied."
+            }
+          ],
+          "dependencyCoverage": "complete",
+          "dependencies": [],
+          "authorship": {
+            "origin": "atlas",
+            "kind": "ai",
+            "authors": [
+              "Atlas"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "independent-set-rankwidth",
+      "title": "Quadratic lower bounds for Independent Set on triangle-free graphs",
+      "revisions": [
+        {
+          "revision": 1,
+          "source": "proofs/independent-set-rankwidth.tex",
+          "pdf": "proofs/independent-set-rankwidth.pdf",
+          "theorems": [
+            {
+              "label": "independent-set-rankwidth-w1",
+              "number": "1",
+              "destination": "independent-set-rankwidth-w1",
+              "statement": "Assuming deterministic FPT ≠ W[1], there is no deterministic effective 2^(o(p²)) N^(O(1)) Independent Set algorithm on triangle-free graphs by either intrinsic width, with or without an optimal corresponding certificate."
+            },
+            {
+              "label": "independent-set-rankwidth-sh",
+              "number": "2",
+              "destination": "independent-set-rankwidth-sh",
+              "statement": "Assuming deterministic SH, for every fixed 0<ε<2 there is no deterministic 2^(O(p^(2−ε))) N^(O(1)) Independent Set algorithm on triangle-free graphs by either intrinsic width, with or without an optimal corresponding certificate."
+            }
+          ],
+          "dependencyCoverage": "complete",
+          "dependencies": [],
+          "authorship": {
+            "origin": "atlas",
+            "kind": "ai",
+            "authors": [
+              "Atlas"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "dominating-set-rankwidth",
+      "title": "An effective quadratic lower bound for unweighted Dominating Set",
+      "revisions": [
+        {
+          "revision": 1,
+          "source": "proofs/dominating-set-rankwidth.tex",
+          "pdf": "proofs/dominating-set-rankwidth.pdf",
+          "theorems": [
+            {
+              "label": "dominating-set-rankwidth",
+              "number": "1",
+              "destination": "dominating-set-rankwidth",
+              "statement": "Assuming deterministic FPT ≠ W[1], there is no deterministic effective 2^(o(p²)) N^(O(1)) Dominating Set algorithm on monopolar graphs by rank-width, linear rank-width, or the actual width of a supplied rank decomposition or vertex order."
+            }
+          ],
+          "dependencyCoverage": "complete",
+          "dependencies": [],
+          "authorship": {
+            "origin": "atlas",
+            "kind": "ai",
+            "authors": [
+              "Atlas"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "reviews": [
+    {
+      "id": "color-eth-historical-review",
+      "type": "agent",
+      "date": "2026-11-18",
+      "reviewer": "Independent atlas proof reviewer",
+      "verdict": "verified",
+      "scope": "ETH implies the historical rate family by domination by the exact positive-rate exclusion. The literal older converse remains unknown.",
+      "evidence": "evidence/three-coloring-independent.md",
+      "object": {
+        "type": "bound",
+        "caseId": "lms-3color-order",
+        "id": "color-eth-historical",
+        "revision": 1
+      }
+    },
+    {
+      "id": "color-sh-review",
+      "type": "agent",
+      "date": "2026-11-18",
+      "reviewer": "Independent atlas proof reviewer",
+      "verdict": "verified",
+      "scope": "Both directions of the whole fixed-power family, with the converse conditional on the imported exact-v1 sparsification interface.",
+      "evidence": "evidence/three-coloring-independent.md",
+      "object": {
+        "type": "bound",
+        "caseId": "lms-3color-order",
+        "id": "color-sh-fixed-power",
+        "revision": 1
+      }
+    },
+    {
+      "id": "dv-fixed-coefficient-review",
+      "type": "agent",
+      "reviewer": "Independent atlas proof reviewer",
+      "date": "2026-11-18",
+      "verdict": "verified",
+      "scope": "The fixed-coefficient bound, including the Set Cover construction, distinct-row promise, parameter accounting, deterministic running time and comparison to the published ETH bound.",
+      "evidence": "evidence/distinct-vectors-fixed-coefficient-independent.md",
+      "object": {
+        "type": "proof",
+        "id": "distinct-vectors-fixed-coefficient",
+        "revision": 1,
+        "theorem": "dv-fixed-coefficient"
+      },
+      "independent": true,
+      "sourceSha256": "89bf1663aa5be39d5b4396703a32b80af63dc554609d1b14dc65e4a2ef4e0584"
+    },
+    {
+      "id": "closest-string-balanced-review",
+      "type": "agent",
+      "date": "2026-11-18",
+      "reviewer": "Independent agent reviewer",
+      "verdict": "verified",
+      "scope": "Balanced alphabet, Clique reduction, effective convergence and fixed-parameter running time.",
+      "evidence": "evidence/closest-string-balanced-independent.md",
+      "object": {
+        "type": "proof",
+        "id": "closest-string-balanced",
+        "revision": 1,
+        "theorem": "cs-balanced"
+      },
+      "independent": true,
+      "sourceSha256": "a6a07d3afa6761631bea8c341eb264eb38ac136b527ebf314c98342a9e9353e3"
+    },
+    {
+      "id": "three-coloring-sh-converse-review",
+      "type": "agent",
+      "date": "2026-11-18",
+      "reviewer": "Independent agent reviewer",
+      "verdict": "verified",
+      "scope": "Converse only. Checks the encoding, the quantitative sparsification import, the choice of fixed exponents and the deterministic running time.",
+      "evidence": "evidence/three-coloring-sh-converse-independent.md",
+      "object": {
+        "type": "proof",
+        "id": "three-coloring-sh-converse",
+        "revision": 1,
+        "theorem": "color-sh-converse"
+      },
+      "independent": true,
+      "sourceSha256": "9f946a0078c62a6ae28959f44f9ad2f6df97133f59a14e8f715a53da497da49a"
+    },
+    {
+      "id": "chromatic-number-cover-w1-review",
+      "type": "agent",
+      "date": "2026-11-18",
+      "reviewer": "Independent agent reviewer",
+      "verdict": "verified",
+      "scope": "Checks the histogram enumeration, synchronized color banks, forbidden pairs, cover size, and fixed-parameter Turing reduction.",
+      "evidence": "evidence/chromatic-number-cover-w1-independent.md",
+      "object": {
+        "type": "proof",
+        "id": "chromatic-number-cover-w1",
+        "revision": 1,
+        "theorem": "cover-w1"
+      },
+      "independent": true,
+      "sourceSha256": "f78a95b261c38a1dfc849ad13e6ec4420898f56aa2666c5943caa13b3fd4800a"
+    },
+    {
+      "id": "chromatic-number-treewidth-w1-review",
+      "type": "agent",
+      "date": "2026-11-18",
+      "reviewer": "Independent agent reviewer",
+      "verdict": "verified",
+      "scope": "Checks the coloring reduction, intrinsic width estimate, computable convergence thresholds, finite prefix, and deterministic running-time transfer.",
+      "evidence": "evidence/chromatic-number-treewidth-w1-independent.md",
+      "object": {
+        "type": "proof",
+        "id": "chromatic-number-treewidth-w1",
+        "revision": 1,
+        "theorem": "tw-w1"
+      },
+      "independent": true,
+      "sourceSha256": "1f54ebe9c862f2c3e42818775cd92645558501908f2a753ad467eb5ed6be6075"
+    },
+    {
+      "id": "vdp-width-w1-independent",
+      "type": "agent",
+      "date": "2026-11-18",
+      "reviewer": "Independent agent reviewer",
+      "verdict": "verified",
+      "scope": "Checks the complete effective W[1] exclusion for both width interfaces, including the permutation family, normality and width of the chain, subcubic degree and direction simulation, bipartiteness and optimal certificate, and the effective rate transfer.",
+      "evidence": "evidence/vertex-disjoint-paths-width-w1-independent.md",
+      "object": {
+        "type": "proof",
+        "id": "vdp-width-w1",
+        "revision": 1,
+        "theorem": "vdp-width-w1"
+      },
+      "independent": true,
+      "sourceSha256": "b25920c20dd1b89a0f6446239b4bf9dcc2a9321dac8c8ae7f95c2692198fa576"
+    },
+    {
+      "id": "ecc-np-qp-converse-independent",
+      "type": "agent",
+      "date": "2026-11-18",
+      "reviewer": "Codex agent audit_tracks",
+      "verdict": "verified",
+      "scope": "Checks kernel correctness and size, canonical input length, NP verification, and the exact deterministic exponent transfer.",
+      "evidence": "evidence/ecc-np-qp-converse-independent.md",
+      "object": {
+        "type": "proof",
+        "id": "ecc-np-qp-converse",
+        "revision": 1,
+        "theorem": "ecc-np-qp-converse"
+      },
+      "independent": true,
+      "sourceSha256": "38e011c0cc2494ad02b0570ebf328c111246b9f97eb973d64680af6b22ab75e1"
+    },
+    {
+      "id": "dominating-set-order-sh-review",
+      "type": "agent",
+      "date": "2026-11-18",
+      "reviewer": "Codex agent natural_batch",
+      "verdict": "verified",
+      "scope": "Both implications. Checks the explicit CNF encoding, triangle construction, branching and residual queries, and deterministic whole fixed-power quantifiers.",
+      "evidence": "evidence/dominating-set-order-sh-independent.md",
+      "object": {
+        "type": "proof",
+        "id": "dominating-set-order-sh",
+        "revision": 1,
+        "theorem": "dominating-set-order-sh"
+      },
+      "independent": true,
+      "sourceSha256": "bf1ae82b104cedd384facca43eb568e8c88fa5a00a4657d2baf596394cdb9d54"
+    },
+    {
+      "id": "closest-string-balanced-kxk-review",
+      "type": "agent",
+      "date": "2026-11-18",
+      "reviewer": "Codex agent clique_batch",
+      "verdict": "verified",
+      "scope": "Forward implication. Checks the deterministic disjunction, reduction chain, used alphabet and common length, and the exact running time.",
+      "evidence": "evidence/closest-string-balanced-kxk-independent.md",
+      "object": {
+        "type": "proof",
+        "id": "closest-string-balanced-kxk",
+        "revision": 1,
+        "theorem": "closest-string-balanced-kxk"
+      },
+      "independent": true,
+      "sourceSha256": "0a30765d590e30160fe5c774b6be5a37fbc94d456530cf463dc7ed42cc17c504"
+    },
+    {
+      "id": "graph-distortion-line-w1-review",
+      "type": "agent",
+      "date": "2026-11-18",
+      "reviewer": "Codex agent population coordinator",
+      "verdict": "verified",
+      "scope": "Forward implication, including the integer and real coordinate interfaces, the deterministic coloring-family enumeration, the ordering and bipartite graph gadgets, and the effective convergence calculation.",
+      "evidence": "evidence/graph-distortion-line-w1-independent.md",
+      "object": {
+        "type": "proof",
+        "id": "graph-distortion-line-w1",
+        "revision": 1,
+        "theorem": "graph-distortion-line-w1"
+      },
+      "independent": true,
+      "sourceSha256": "3e4a4c93dd5e82dd5d7d366ab689f5a451020d3cc799191711a17311677b77c7"
+    },
+    {
+      "id": "hamiltonian-sh-forward-independent",
+      "type": "agent",
+      "date": "2026-11-18",
+      "reviewer": "Codex agent derived_shortlist",
+      "verdict": "verified",
+      "scope": "Forward implication for Hamiltonian Cycle by vertices and by vertices plus edges, Hamiltonian Path by vertices, and Longest Path by requested path length.",
+      "evidence": "evidence/hamiltonian-sh-independent.md",
+      "object": {
+        "type": "proof",
+        "id": "hamiltonian-sh",
+        "revision": 1,
+        "theorem": "hamiltonian-sh-forward"
+      },
+      "independent": true,
+      "sourceSha256": "d4ef120a878f319e07c2844d228affc11af663e74ff6b5e9ee63d223dcf432cc"
+    },
+    {
+      "id": "hamiltonian-size-sh-converse-independent",
+      "type": "agent",
+      "date": "2026-11-18",
+      "reviewer": "Codex agent derived_shortlist",
+      "verdict": "verified",
+      "scope": "Converse for Hamiltonian Cycle by vertices plus edges.",
+      "evidence": "evidence/hamiltonian-sh-independent.md",
+      "object": {
+        "type": "proof",
+        "id": "hamiltonian-sh",
+        "revision": 1,
+        "theorem": "hamiltonian-size-sh-converse"
+      },
+      "independent": true,
+      "sourceSha256": "d4ef120a878f319e07c2844d228affc11af663e74ff6b5e9ee63d223dcf432cc"
+    },
+    {
+      "id": "grid-tiling-w1-membership-independent",
+      "type": "agent",
+      "date": "2026-11-18",
+      "reviewer": "Codex agent /root",
+      "verdict": "verified",
+      "scope": "Equality Grid Tiling on explicit tables is in W[1] by grid side k.",
+      "evidence": "evidence/six-w1-memberships-independent.md",
+      "object": {
+        "type": "proof",
+        "id": "six-w1-memberships",
+        "revision": 1,
+        "theorem": "grid-tiling-w1-membership"
+      },
+      "independent": true,
+      "sourceSha256": "f746b961e52ff19036f9e05aee729f20e4bf71d49d9c0eff9e19b4806aa94802"
+    },
+    {
+      "id": "unit-disk-independent-set-w1-membership-independent",
+      "type": "agent",
+      "date": "2026-11-18",
+      "reviewer": "Codex agent /root",
+      "verdict": "verified",
+      "scope": "Independent Set of explicitly represented closed unit disks with rational centers is in W[1] by the requested number of disks.",
+      "evidence": "evidence/six-w1-memberships-independent.md",
+      "object": {
+        "type": "proof",
+        "id": "six-w1-memberships",
+        "revision": 1,
+        "theorem": "unit-disk-independent-set-w1-membership"
+      },
+      "independent": true,
+      "sourceSha256": "f746b961e52ff19036f9e05aee729f20e4bf71d49d9c0eff9e19b4806aa94802"
+    },
+    {
+      "id": "unit-square-independent-set-w1-membership-independent",
+      "type": "agent",
+      "date": "2026-11-18",
+      "reviewer": "Codex agent /root",
+      "verdict": "verified",
+      "scope": "Independent Set of explicitly represented closed axis-parallel unit squares with rational coordinates is in W[1] by the requested number of squares.",
+      "evidence": "evidence/six-w1-memberships-independent.md",
+      "object": {
+        "type": "proof",
+        "id": "six-w1-memberships",
+        "revision": 1,
+        "theorem": "unit-square-independent-set-w1-membership"
+      },
+      "independent": true,
+      "sourceSha256": "f746b961e52ff19036f9e05aee729f20e4bf71d49d9c0eff9e19b4806aa94802"
+    },
+    {
+      "id": "scattered-set-w1-membership-independent",
+      "type": "agent",
+      "date": "2026-11-18",
+      "reviewer": "Codex agent /root",
+      "verdict": "verified",
+      "scope": "Scattered Set on explicit unweighted undirected graphs is in W[1] by the requested number of vertices.",
+      "evidence": "evidence/six-w1-memberships-independent.md",
+      "object": {
+        "type": "proof",
+        "id": "six-w1-memberships",
+        "revision": 1,
+        "theorem": "scattered-set-w1-membership"
+      },
+      "independent": true,
+      "sourceSha256": "f746b961e52ff19036f9e05aee729f20e4bf71d49d9c0eff9e19b4806aa94802"
+    },
+    {
+      "id": "planar-scattered-set-w1-membership-independent",
+      "type": "agent",
+      "date": "2026-11-18",
+      "reviewer": "Codex agent /root",
+      "verdict": "verified",
+      "scope": "Scattered Set on explicit unweighted planar graphs is in W[1] by the requested number of vertices.",
+      "evidence": "evidence/six-w1-memberships-independent.md",
+      "object": {
+        "type": "proof",
+        "id": "six-w1-memberships",
+        "revision": 1,
+        "theorem": "planar-scattered-set-w1-membership"
+      },
+      "independent": true,
+      "sourceSha256": "f746b961e52ff19036f9e05aee729f20e4bf71d49d9c0eff9e19b4806aa94802"
+    },
+    {
+      "id": "weighted-q-cnf-w1-membership-independent",
+      "type": "agent",
+      "date": "2026-11-18",
+      "reviewer": "Codex agent /root",
+      "verdict": "verified",
+      "scope": "For separately fixed q ≥ 2, explicit CNF of width at most q with exact satisfying weight k is in W[1] by k.",
+      "evidence": "evidence/six-w1-memberships-independent.md",
+      "object": {
+        "type": "proof",
+        "id": "six-w1-memberships",
+        "revision": 1,
+        "theorem": "weighted-q-cnf-w1-membership"
+      },
+      "independent": true,
+      "sourceSha256": "f746b961e52ff19036f9e05aee729f20e4bf71d49d9c0eff9e19b4806aa94802"
+    },
+    {
+      "id": "open-to-closed-regions-independent",
+      "type": "agent",
+      "date": "2026-11-18",
+      "reviewer": "Codex agent /root",
+      "verdict": "verified",
+      "scope": "Open rational unit disks and axis-parallel unit squares can be mapped in polynomial time to closed regions preserving every intersection, the number of regions, and the selection budget.",
+      "evidence": "evidence/six-w1-memberships-independent.md",
+      "object": {
+        "type": "proof",
+        "id": "six-w1-memberships",
+        "revision": 1,
+        "theorem": "open-to-closed-regions"
+      },
+      "independent": true,
+      "sourceSha256": "f746b961e52ff19036f9e05aee729f20e4bf71d49d9c0eff9e19b4806aa94802"
+    },
+    {
+      "id": "cycle-packing-degree-six-review",
+      "type": "agent",
+      "date": "2026-11-18",
+      "reviewer": "Codex agent derived_shortlist",
+      "verdict": "verified",
+      "scope": "Assuming deterministic FPT ≠ W[1], for each fixed 0<γ<1 there is no deterministic effective 2^(o(t log₂ t)) N^(O(1)) Cycle Packing algorithm by treewidth or by supplied path-decomposition width, even on connected bipartite graphs of maximum degree six, girth at least n^(1−γ), and equal treewidth and pathwidth, with an optimal certificate if supplied.",
+      "evidence": "evidence/cycle-packing-degree-six-independent.md",
+      "object": {
+        "type": "proof",
+        "id": "cycle-packing-degree-six",
+        "revision": 1,
+        "theorem": "cycle-packing-degree-six"
+      },
+      "independent": true,
+      "sourceSha256": "746938c54f4a675284c033d8be3b1241a6f34333db571a9af583f6fb9580fa9d"
+    },
+    {
+      "id": "independent-set-rankwidth-w1-review",
+      "type": "agent",
+      "date": "2026-11-18",
+      "reviewer": "Codex agent derived_shortlist",
+      "verdict": "verified",
+      "scope": "Assuming deterministic FPT ≠ W[1], there is no deterministic effective 2^(o(p²)) N^(O(1)) Independent Set algorithm on triangle-free graphs by either intrinsic width, with or without an optimal corresponding certificate.",
+      "evidence": "evidence/independent-set-rankwidth-independent.md",
+      "object": {
+        "type": "proof",
+        "id": "independent-set-rankwidth",
+        "revision": 1,
+        "theorem": "independent-set-rankwidth-w1"
+      },
+      "independent": true,
+      "sourceSha256": "d7a6aba181a1f49669c6e55b562246aeedfc2b3a21760a7766f00250b0c1c80f"
+    },
+    {
+      "id": "independent-set-rankwidth-sh-review",
+      "type": "agent",
+      "date": "2026-11-18",
+      "reviewer": "Codex agent derived_shortlist",
+      "verdict": "verified",
+      "scope": "Assuming deterministic SH, for every fixed 0<ε<2 there is no deterministic 2^(O(p^(2−ε))) N^(O(1)) Independent Set algorithm on triangle-free graphs by either intrinsic width, with or without an optimal corresponding certificate.",
+      "evidence": "evidence/independent-set-rankwidth-independent.md",
+      "object": {
+        "type": "proof",
+        "id": "independent-set-rankwidth",
+        "revision": 1,
+        "theorem": "independent-set-rankwidth-sh"
+      },
+      "independent": true,
+      "sourceSha256": "d7a6aba181a1f49669c6e55b562246aeedfc2b3a21760a7766f00250b0c1c80f"
+    },
+    {
+      "id": "dominating-set-rankwidth-review",
+      "type": "agent",
+      "date": "2026-11-18",
+      "reviewer": "Codex agent derived_shortlist",
+      "verdict": "verified",
+      "scope": "Assuming deterministic FPT ≠ W[1], there is no deterministic effective 2^(o(p²)) N^(O(1)) Dominating Set algorithm on monopolar graphs by rank-width, linear rank-width, or the actual width of a supplied rank decomposition or vertex order.",
+      "evidence": "evidence/dominating-set-rankwidth-independent.md",
+      "object": {
+        "type": "proof",
+        "id": "dominating-set-rankwidth",
+        "revision": 1,
+        "theorem": "dominating-set-rankwidth"
+      },
+      "independent": true,
+      "sourceSha256": "fa61733eeae80fa150716b31461435cdb7f52bb6be5a7b1e26f8930ecf566bad"
+    },
+    {
+      "id": "ilp-equations-w1-all-ones-review",
+      "type": "agent",
+      "date": "2026-11-19",
+      "reviewer": "Codex agent derived_shortlist",
+      "verdict": "verified",
+      "scope": "Theorem 1, revision 2. Checks the exact-one Lin incidence reduction, nonzero columns and binary feasible coordinates, unrestricted column count, complete input factor, and a computable cutoff for finite nonnegative h, with no computability assumption on h.",
+      "evidence": "evidence/ilp-equations-w1-all-ones-independent.md",
+      "object": {
+        "type": "proof",
+        "id": "ilp-equations-w1-effective",
+        "revision": 2,
+        "theorem": "ilp-equations-w1-effective"
+      },
+      "independent": true,
+      "sourceSha256": "7384d8597eead558b47b321294814f5bb88a7192d24fd90499a343f02919f015"
+    }
+  ],
+  "challenges": [],
+  "formulations": [
+    {
+      "id": "uniform-eth",
+      "revision": 4,
+      "hypothesisId": "eth",
+      "hypothesisRevision": 1,
+      "name": "Uniform ETH",
+      "statement": "No single deterministic algorithm decides 3-SAT in time 2^(o(n)) L^(O(1)), where n is the number of variables and L is the input length in bits.",
+      "reference": "https://doi.org/10.1007/978-3-642-33293-7_4",
+      "refutation": "https://github.com/openai/math/tree/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026",
+      "equivalences": [
+        {
+          "caseId": "lms-3color-order",
+          "boundId": "color-eth-historical",
+          "boundRevision": 1,
+          "forward": "Suppose there were a single subexponential algorithm for 3-Coloring. For each fixed positive integer j, sparsification splits a 3-SAT instance on n variables into at most 2^(n/j) formulas. Each has linearly many clauses for fixed j and reduces to a graph with linearly many vertices. Running the coloring algorithm on these graphs decides 3-SAT in time 2^(n/j+o(n)), up to a polynomial input factor.\n\nTo obtain a single 3-SAT algorithm, simulate the solvers for all j, giving each fixed solver a fixed share of the simulation time, and return the first answer. All solvers are correct. Since j can be arbitrarily large, the combined algorithm runs in subexponential time and contradicts uniform ETH. This last step adapts the published reduction to the single-algorithm formulation.",
+          "reverse": "Suppose there were a single subexponential algorithm for 3-SAT. Encode a graph on n vertices using three Boolean variables per vertex, one per color. One clause per vertex requires at least one color. For each edge and each color, a binary clause forbids both endpoints from choosing that color. A satisfying assignment gives a proper coloring by choosing any allowed color at each vertex. Conversely, every proper coloring satisfies the formula.\n\nThis is a 3-CNF formula with exactly 3n variables and polynomial length. The assumed 3-SAT algorithm would therefore decide 3-Coloring in subexponential time, contradicting the bound.",
+          "source": "https://bulletin.eatcs.org/index.php/beatcs/article/viewFile/92/88#page=8",
+          "locator": "Daniel Lokshtanov, Dániel Marx, and Saket Saurabh. “Lower bounds based on the Exponential Time Hypothesis.” Bulletin of the EATCS 105, 41–71 (2011). Section 2 (the subexponential-time formulation for 3-CNF-SAT) and Theorem 3.2 (3-Coloring on unrestricted graphs).",
+          "reverseSource": "https://doi.org/10.4230/LIPIcs.SAT.2024.12",
+          "reverseLocator": "Daniel Faber, Adalat Jabrayilov, and Petra Mutzel. “SAT Encoding of Partial Ordering Models for Graph Coloring Problems.” 27th International Conference on Theory and Applications of Satisfiability Testing (SAT 2024), LIPIcs 305, article 12 (2024). Assignment clauses (8a) and (8b), specialized here to three colors.",
+          "additionalForwardSources": [
+            {
+              "source": "https://doi.org/10.1007/s00453-014-9949-6",
+              "locator": "George B. Mertzios and Paul G. Spirakis. “Algorithms and Almost Tight Results for 3-Colorability of Small Diameter Graphs.” Algorithmica 74, 385–414 (2016). Section 2, definition of ETH and Theorem 2 (diameter 4 and radius 2)."
+            }
+          ]
+        },
+        {
+          "caseId": "three-sat-variables",
+          "boundId": "three-sat-variables-eth",
+          "boundRevision": 1,
+          "forward": "The uniform ETH formulation excludes exactly one deterministic 3SAT solver in the displayed subexponential variable-count time family. The polynomial factor is in the complete binary input length on both sides.",
+          "reverse": "The bound is precisely the same exclusion as uniform ETH with the same clauses and measure.",
+          "source": "https://bulletin.eatcs.org/index.php/beatcs/article/view/92",
+          "locator": "Lokshtanov, Marx and Saurabh, Bulletin of the EATCS 105 (2011), §2, ETH in the single-algorithm subexponential convention."
+        },
+        {
+          "caseId": "three-sat-clauses",
+          "boundId": "three-sat-clauses-eth",
+          "boundRevision": 1,
+          "forward": "Normalize the explicit formula in polynomial time: renumber occurring variables and remove repetitions, leaving polynomial normalized length in n, the number of occurring variables. For each positive integer j, the effective sparsifier with tolerance 1/j branches into at most 2^(n/j) formulas, each with O_j(n) clauses. A single hypothetical solver with a little-o exponent on the target measure therefore gives a correct solver for each j with time 2^(n/j+o(n)) on normalized inputs. Interleave the simulations, giving each fixed j a fixed positive share of the steps, and return the first answer. Every solver is correct. Since j can be chosen arbitrarily large in the time analysis, this is one uniform subexponential variable-count 3SAT algorithm. The proof needs no computable convergence modulus for the target exponent.",
+          "reverse": "If uniform ETH fails, delete unused variables and run its single subexponential solver. A width-three formula with m clauses has at most 3m occurring variables, so the exponent is o(m), with fixed polynomial overhead in the full input.",
+          "source": "https://doi.org/10.1006/jcss.2001.1774",
+          "locator": "Impagliazzo, Paturi and Zane, JCSS 63 (2001), pp. 519–524, Corollary 1 and its proof (fixed-width decision sparsification), and Lemma 10 (width reduction)."
+        },
+        {
+          "caseId": "fixed-width-sat-formula-size",
+          "boundId": "fixed-width-sat-formula-size-eth",
+          "boundRevision": 1,
+          "forward": "Fix the width r≥3. Sparse 3CNF formulas remain admissible r-CNF inputs and have n+m=O_j(n) after sparsification. Normalize the explicit formula in polynomial time: renumber occurring variables and remove repetitions, leaving polynomial normalized length in n, the number of occurring variables. For each positive integer j, the effective sparsifier with tolerance 1/j branches into at most 2^(n/j) formulas, each with O_j(n) clauses. A single hypothetical solver with a little-o exponent on the target measure therefore gives a correct solver for each j with time 2^(n/j+o(n)) on normalized inputs. Interleave the simulations, giving each fixed j a fixed positive share of the steps, and return the first answer. Every solver is correct. Since j can be chosen arbitrarily large in the time analysis, this is one uniform subexponential variable-count 3SAT algorithm. The proof needs no computable convergence modulus for the target exponent.",
+          "reverse": "For each fixed width r≥3, split every long clause with private auxiliary variables into a chain of clauses of width at most three. This preserves satisfiability and introduces O_r(m) variables, where m is the clause count. Together with the original variables, the new count is O_r(n+m). A single variable-count subexponential 3SAT solver gives the claimed total-size clock.",
+          "source": "https://doi.org/10.1006/jcss.2001.1774",
+          "locator": "Impagliazzo, Paturi and Zane, JCSS 63 (2001), pp. 519–524, Corollary 1 and its proof (fixed-width decision sparsification), and Lemma 10 (width reduction)."
+        },
+        {
+          "caseId": "fixed-width-sat-variables",
+          "boundId": "fixed-width-sat-variables-eth",
+          "boundRevision": 1,
+          "forward": "Uniform ETH excludes a single subexponential variable-count solver for 3SAT. Such a solver for r-SAT, where r≥3 is fixed, would also accept every 3SAT input.",
+          "reverse": "A uniform variable-subexponential solver for 3SAT transfers to every fixed width using the fixed-rate IPZ sparsification and width reduction. After normalizing the occurring variables, each branch has O_j(n) clauses for sparsification tolerance 1/j. Its width-three image has O_j(n) variables, and one call costs 2^o(n). Interleave the resulting correct decision algorithms for all j, using a fixed positive share of time for each fixed j. The first response has a single uniform subexponential worst-case clock, since the exponent contribution n/j for arbitrarily large fixed j is available in the analysis.",
+          "source": "https://doi.org/10.1006/jcss.2001.1774",
+          "locator": "IPZ Corollary 1, Lemma 10 and Theorem 3."
+        }
+      ],
+      "referenceLabel": "Chen, Eickmeyer and Flum"
+    },
+    {
+      "id": "strongly-uniform-eth",
+      "revision": 1,
+      "hypothesisId": "eth",
+      "hypothesisRevision": 1,
+      "name": "Strongly uniform ETH",
+      "statement": "No single deterministic algorithm decides 3-SAT in time 2^(o_eff(n)) L^(O(1)), where n is the number of variables and L is the input length in bits.",
+      "reference": "https://doi.org/10.1007/978-3-642-33293-7_4",
+      "refutation": "https://github.com/openai/math/tree/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026",
+      "equivalences": [],
+      "referenceLabel": "Chen, Eickmeyer and Flum"
+    }
+  ],
+  "problems": [
+    {
+      "id": "3-coloring",
+      "name": "3-Coloring",
+      "input": "A graph G.",
+      "question": "Can the vertices of G be colored with at most three colors so that adjacent vertices have different colors?",
+      "revision": 1,
+      "restrictionOf": [
+        {
+          "problemId": "chromatic-number",
+          "condition": "color budget ℓ = 3"
+        }
+      ]
+    },
+    {
+      "id": "chromatic-number",
+      "name": "Chromatic Number",
+      "input": "A finite simple undirected graph G and a positive integer ℓ.",
+      "question": "Can the vertices of G be colored with at most ℓ colors so that adjacent vertices have different colors?",
+      "revision": 1
+    },
+    {
+      "id": "closest-string",
+      "name": "Closest String",
+      "input": "A list of strings and a Hamming radius d.",
+      "question": "Is there a string of length L at Hamming distance at most d from every input string?",
+      "revision": 1
+    },
+    {
+      "id": "cycle-packing",
+      "name": "Cycle Packing",
+      "input": "A finite simple undirected graph G and a nonnegative integer r.",
+      "question": "Does G contain at least r pairwise vertex-disjoint cycles?",
+      "revision": 1
+    },
+    {
+      "id": "distinct-vectors",
+      "name": "Distinct Vectors",
+      "input": "A binary matrix A and an integer k≥0.",
+      "question": "Can we select at most k columns so that every pair of rows differs in at least one selected column?",
+      "revision": 1
+    },
+    {
+      "id": "square-clique",
+      "name": "k × k Clique",
+      "input": "A graph whose vertices are the cells of a k × k grid.",
+      "question": "Does the graph contain a clique with one vertex from each row?",
+      "revision": 1
+    },
+    {
+      "id": "planar-3-coloring",
+      "name": "Planar 3-Coloring",
+      "input": "A finite simple undirected unweighted planar graph G.",
+      "question": "Can the vertices of G be colored with at most three colors so that adjacent vertices have different colors?",
+      "revision": 1,
+      "restrictionOf": [
+        {
+          "problemId": "3-coloring",
+          "condition": "G is planar"
+        }
+      ]
+    },
+    {
+      "id": "quantified-boolean-satisfiability",
+      "name": "Quantified Boolean satisfiability",
+      "input": "A closed prenex Boolean formula with q alternating quantifier blocks, for a fixed q≥1.",
+      "question": "Is the quantified formula true?",
+      "revision": 1
+    },
+    {
+      "id": "weighted-normalized-circuit-satisfiability",
+      "name": "Weighted normalized circuit satisfiability",
+      "input": "A circuit and an integer k.",
+      "question": "Decide whether exactly k input variables can be set to true to satisfy the circuit.",
+      "revision": 1
+    },
+    {
+      "id": "edge-clique-cover",
+      "revision": 1,
+      "name": "Edge Clique Cover",
+      "input": "A finite simple undirected graph G and a nonnegative integer k.",
+      "question": "Can every edge of G be covered by a family of at most k cliques of G?"
+    },
+    {
+      "id": "vertex-disjoint-paths",
+      "revision": 1,
+      "name": "Vertex-Disjoint Paths",
+      "input": "A finite simple undirected graph G and an explicit list of demand pairs of vertices.",
+      "question": "Is there one path joining the endpoints of each demand pair, with all the paths pairwise vertex-disjoint?"
+    },
+    {
+      "id": "vertex-cover",
+      "name": "Vertex Cover",
+      "input": "A finite, simple, undirected, unweighted graph G and a nonnegative integer k.",
+      "question": "Does G have a set of at most k vertices that includes an endpoint of every edge?",
+      "revision": 1
+    },
+    {
+      "id": "planar-vertex-cover",
+      "name": "Planar Vertex Cover",
+      "input": "A finite, simple, undirected, unweighted graph G that is planar and a nonnegative integer k.",
+      "question": "Does G have a set of at most k vertices that includes an endpoint of every edge?",
+      "revision": 1,
+      "restrictionOf": [
+        {
+          "problemId": "vertex-cover",
+          "condition": "G is planar"
+        }
+      ]
+    },
+    {
+      "id": "independent-set",
+      "name": "Independent Set",
+      "input": "A finite, simple, undirected, unweighted graph G and a nonnegative integer k.",
+      "question": "Does G have at least k pairwise nonadjacent vertices?",
+      "revision": 1
+    },
+    {
+      "id": "dominating-set",
+      "name": "Dominating Set",
+      "input": "A finite, simple, undirected, unweighted graph G and a nonnegative integer k.",
+      "question": "Does G have a set of at most k vertices such that every vertex either belongs to the set or has a neighbor in the set?",
+      "revision": 1
+    },
+    {
+      "id": "clique",
+      "name": "Clique",
+      "input": "A finite simple undirected graph G and a nonnegative integer k.",
+      "question": "Does G contain at least k pairwise adjacent vertices?",
+      "revision": 1
+    },
+    {
+      "id": "multicolored-clique",
+      "name": "Multicolored Clique",
+      "input": "A finite simple undirected graph G and a partition of its vertices into k color classes.",
+      "question": "Is there a clique containing exactly one vertex from each color class?",
+      "revision": 1
+    },
+    {
+      "id": "treewidth-computation",
+      "name": "Treewidth computation",
+      "input": "A finite simple undirected graph G and a nonnegative integer width threshold k in binary.",
+      "question": "Does G have treewidth at most k?",
+      "revision": 1
+    },
+    {
+      "id": "steiner-tree",
+      "name": "Steiner Tree",
+      "input": "A finite simple undirected graph G with a set T of distinct terminals and a nonnegative integer edge budget b in binary.",
+      "question": "Does G have a tree spanning all terminals in T that uses at most b edges?",
+      "revision": 1
+    },
+    {
+      "id": "subset-sum",
+      "name": "Subset Sum",
+      "input": "An explicitly listed sequence of p positive binary integers and a positive binary target T.",
+      "question": "Does a subset of the item indices have values summing to T?",
+      "revision": 1
+    },
+    {
+      "id": "planar-dominating-set",
+      "name": "Planar Dominating Set",
+      "input": "An explicitly encoded finite simple undirected planar graph G and a nonnegative integer k.",
+      "question": "Is there a set of at most k vertices that meets the closed neighborhood of every vertex?",
+      "revision": 1,
+      "restrictionOf": [
+        {
+          "problemId": "dominating-set",
+          "condition": "G is planar"
+        }
+      ]
+    },
+    {
+      "id": "planar-feedback-vertex-set",
+      "name": "Planar Feedback Vertex Set",
+      "input": "An explicitly encoded finite simple undirected planar graph G and a nonnegative integer k.",
+      "question": "Can at most k vertices be deleted to make G acyclic?",
+      "revision": 1,
+      "restrictionOf": [
+        {
+          "problemId": "feedback-vertex-set",
+          "condition": "G is planar"
+        }
+      ]
+    },
+    {
+      "id": "planar-hamiltonian-cycle",
+      "name": "Planar Hamiltonian Cycle",
+      "input": "An explicitly encoded finite simple undirected planar graph G.",
+      "question": "Does G contain a cycle through every vertex?",
+      "revision": 1,
+      "restrictionOf": [
+        {
+          "problemId": "hamiltonian-cycle",
+          "condition": "G is planar"
+        }
+      ]
+    },
+    {
+      "id": "planar-edge-multiway-cut",
+      "name": "Planar Edge Multiway Cut",
+      "input": "An explicitly encoded finite simple undirected planar graph G with nonnegative integer edge weights, k specified distinct terminals, and a nonnegative integer threshold.",
+      "question": "Can edges of total weight at most the threshold be deleted so that no two terminals are connected?",
+      "revision": 1
+    },
+    {
+      "id": "planar-list-coloring",
+      "name": "Planar List Coloring",
+      "input": "An explicitly encoded finite simple undirected planar graph G and an explicit list of allowed colors for each vertex.",
+      "question": "Can each vertex be assigned a color from its list so that adjacent vertices have different colors?",
+      "revision": 1,
+      "restrictionOf": [
+        {
+          "problemId": "list-coloring",
+          "condition": "G is planar"
+        }
+      ]
+    },
+    {
+      "id": "scattered-set",
+      "name": "Scattered Set",
+      "input": "An explicitly encoded finite simple undirected graph G and positive integers k and d.",
+      "question": "Are there k vertices whose pairwise graph distances are at least d?",
+      "revision": 1
+    },
+    {
+      "id": "planar-scattered-set",
+      "name": "Planar Scattered Set",
+      "input": "An explicitly encoded finite simple undirected planar graph G and positive integers k and d.",
+      "question": "Are there k vertices whose pairwise graph distances are at least d?",
+      "revision": 1,
+      "restrictionOf": [
+        {
+          "problemId": "scattered-set",
+          "condition": "G is planar"
+        }
+      ]
+    },
+    {
+      "id": "planar-strongly-connected-steiner-subgraph",
+      "name": "Planar Strongly Connected Steiner Subgraph",
+      "input": "An explicitly encoded directed graph G whose underlying undirected graph is planar, with nonnegative integer arc weights, a specified terminal set of size k, and a nonnegative threshold.",
+      "question": "Is there a strongly connected subgraph containing the terminals whose total arc weight is at most the threshold?",
+      "revision": 1
+    },
+    {
+      "id": "strongly-connected-steiner-subgraph",
+      "name": "Strongly Connected Steiner Subgraph",
+      "input": "An explicitly encoded unweighted directed graph G, a specified terminal set, and a nonnegative integer k.",
+      "question": "Is there a strongly connected subgraph containing the terminals with at most k vertices in total?",
+      "revision": 1
+    },
+    {
+      "id": "subgraph-isomorphism",
+      "name": "Subgraph Isomorphism",
+      "input": "Two explicitly encoded finite simple undirected graphs H and G.",
+      "question": "Does an injective vertex map from H to G preserve every edge of H?",
+      "revision": 1
+    },
+    {
+      "id": "unit-disk-dominating-set",
+      "name": "Unit Disk Dominating Set",
+      "input": "An explicitly encoded finite simple undirected graph G promised to be a unit disk graph, and a nonnegative integer k.",
+      "question": "Is there a set of at most k vertices that meets every closed neighborhood?",
+      "revision": 1
+    },
+    {
+      "id": "set-cover",
+      "name": "Set Cover",
+      "input": "An explicitly listed finite universe U, a family of subsets of U, and a nonnegative integer k.",
+      "question": "Can at most k of the given sets cover U?",
+      "revision": 1
+    },
+    {
+      "id": "weighted-cnf-sat",
+      "name": "Weighted CNF SAT",
+      "input": "An explicit CNF formula over a declared finite variable set and a nonnegative integer k.",
+      "question": "Can exactly k variables be set to true in a satisfying assignment?",
+      "revision": 1
+    },
+    {
+      "id": "weighted-fixed-width-cnf-sat",
+      "name": "Weighted Fixed-Width CNF SAT",
+      "input": "For a separately fixed integer q ≥ 2, an explicit CNF formula over a declared finite variable set and a nonnegative integer k. Each clause has at most q literals.",
+      "question": "Can exactly k variables be set to true in a satisfying assignment?",
+      "revision": 1,
+      "restrictionOf": [
+        {
+          "problemId": "weighted-cnf-sat",
+          "condition": "Clause width at most separately fixed q ≥ 2"
+        }
+      ]
+    },
+    {
+      "id": "three-sat",
+      "name": "3SAT",
+      "input": "An explicit Boolean CNF formula with clauses of width at most three.",
+      "question": "Does the formula have a satisfying assignment?",
+      "revision": 1
+    },
+    {
+      "id": "balanced-vertex-separator",
+      "name": "Balanced Vertex Separator",
+      "input": "A finite simple undirected graph G and a nonnegative integer budget k.",
+      "question": "Does G have a set of at most k vertices whose removal leaves all components with at most half the original vertices?",
+      "revision": 1
+    },
+    {
+      "id": "connected-dominating-set",
+      "name": "Connected Dominating Set",
+      "input": "A finite simple undirected graph G and a nonnegative integer budget k.",
+      "question": "Does G have a set of at most k vertices inducing a connected subgraph such that every vertex is in the set or has a neighbor in it?",
+      "revision": 1
+    },
+    {
+      "id": "tournament-dominating-set",
+      "name": "Dominating Set on tournaments",
+      "input": "A tournament and a nonnegative integer budget k.",
+      "question": "Does the tournament have a set of at most k vertices such that every vertex outside the set has an incoming arc from a vertex in it?",
+      "revision": 1
+    },
+    {
+      "id": "closest-substring-constant-alphabet",
+      "name": "Constant-alphabet Closest Substring",
+      "input": "A collection of r strings over a fixed finite alphabet, a requested substring length, and an integer distance threshold d.",
+      "question": "Is there a string of the requested length whose Hamming distance from some substring of each input string is at most d?",
+      "revision": 1
+    },
+    {
+      "id": "edge-dominating-set",
+      "name": "Edge Dominating Set",
+      "input": "A finite simple undirected graph G and an integer k.",
+      "question": "Is there a set of at most k edges such that every edge shares an endpoint with an edge in the set?",
+      "revision": 1
+    },
+    {
+      "id": "explicit-table-csp",
+      "name": "Explicit-table CSP",
+      "input": "An explicit finite-domain constraint satisfaction instance with a table of allowed tuples for each constraint.",
+      "question": "Can all variables be assigned domain values so that each constraint has an allowed tuple?",
+      "revision": 1
+    },
+    {
+      "id": "feedback-vertex-set",
+      "name": "Feedback Vertex Set",
+      "input": "A finite simple undirected graph G and a nonnegative integer budget k.",
+      "question": "Can at most k vertices be deleted so that the remaining graph is a forest?",
+      "revision": 1
+    },
+    {
+      "id": "fixed-width-sat-formula-size",
+      "name": "Fixed-width SAT",
+      "input": "An explicit Boolean CNF formula with clauses of width at most r, for a separately fixed integer r ≥ 3.",
+      "question": "Does the formula have a satisfying assignment?",
+      "revision": 1
+    },
+    {
+      "id": "graph-distortion-line",
+      "name": "Graph Distortion into a line",
+      "input": "A connected finite simple unweighted undirected graph G and a positive integer distortion threshold d.",
+      "question": "Does the shortest-path metric of G admit a noncontracting embedding into the line that expands no distance by more than a factor d?",
+      "revision": 1
+    },
+    {
+      "id": "euclidean-traveling-salesman",
+      "name": "Euclidean Traveling Salesman",
+      "input": "A set P of n points with explicitly encoded rational coordinates in fixed dimension d and a nonnegative rational threshold T.",
+      "question": "Is there a cycle visiting every point of total Euclidean length at most T?",
+      "revision": 1
+    },
+    {
+      "id": "graph-homomorphism",
+      "name": "Graph Homomorphism",
+      "input": "Two explicitly given finite simple undirected graphs G and H.",
+      "question": "Is there a map from V(G) to V(H) taking every edge of G to an edge of H?",
+      "revision": 1
+    },
+    {
+      "id": "connected-vertex-cover",
+      "name": "Connected Vertex Cover",
+      "input": "A finite simple undirected graph G and a nonnegative integer budget k.",
+      "question": "Is there a vertex cover of size at most k inducing a connected subgraph?",
+      "revision": 1
+    },
+    {
+      "id": "directed-steiner-tree",
+      "name": "Directed Steiner Tree",
+      "input": "An explicit directed graph G with nonnegative integer arc costs, a root, a terminal set disjoint from the root and an integer budget.",
+      "question": "Is there a subgraph of cost at most the budget with a directed path from the root to every terminal?",
+      "revision": 1
+    },
+    {
+      "id": "feature-set",
+      "name": "Feature Set",
+      "input": "A binary example-by-feature matrix, one of two class labels per row, and a number k of features to select.",
+      "question": "Can exactly k features be selected so that each pair of examples with different labels differs on a selected feature?",
+      "revision": 1
+    },
+    {
+      "id": "grid-tiling",
+      "name": "Grid Tiling",
+      "input": "An explicitly listed k × k array of sets of ordered pairs from [n] × [n].",
+      "question": "Can one choose one allowed pair per cell so that first coordinates agree along each row and second coordinates agree along each column?",
+      "revision": 1
+    },
+    {
+      "id": "hamiltonian-cycle",
+      "name": "Hamiltonian Cycle",
+      "input": "A finite simple undirected graph G.",
+      "question": "Does G contain a simple cycle through all vertices?",
+      "revision": 1
+    },
+    {
+      "id": "hamiltonian-path",
+      "name": "Hamiltonian Path",
+      "input": "A finite simple undirected graph G.",
+      "question": "Does G contain a simple path through all vertices?",
+      "revision": 1
+    },
+    {
+      "id": "hitting-set",
+      "name": "Hitting Set",
+      "input": "An explicit finite ground set, an explicit family of its subsets, and a nonnegative integer k in binary.",
+      "question": "Is there a set of at most k ground elements intersecting every listed subset?",
+      "revision": 1
+    },
+    {
+      "id": "unit-square-independent-set",
+      "name": "Independent Set of axis-parallel unit squares",
+      "input": "An explicit list of axis-parallel closed unit squares in the plane with rational coordinates in binary, and a nonnegative integer k in binary.",
+      "question": "Are there k listed objects that are pairwise disjoint?",
+      "revision": 1
+    },
+    {
+      "id": "unit-disk-independent-set",
+      "name": "Independent Set of unit disks",
+      "input": "An explicit list of closed disks of radius one in the plane with rational coordinates in binary, and a nonnegative integer k in binary.",
+      "question": "Are there k listed objects that are pairwise disjoint?",
+      "revision": 1
+    },
+    {
+      "id": "list-coloring",
+      "name": "List Coloring",
+      "input": "A finite simple undirected graph G with one explicitly listed finite color set per vertex.",
+      "question": "Can each vertex be assigned a color from its list so that adjacent vertices receive distinct colors?",
+      "revision": 1
+    },
+    {
+      "id": "longest-path",
+      "name": "Longest Path",
+      "input": "A finite simple undirected graph G and a nonnegative integer k in binary.",
+      "question": "Does G contain a path on at least k distinct vertices?",
+      "revision": 1
+    },
+    {
+      "id": "max-cut",
+      "name": "Max Cut",
+      "input": "A finite simple undirected graph G and a nonnegative integer cut threshold b in binary.",
+      "question": "Is there a bipartition of the vertices with at least b edges between its parts?",
+      "revision": 1
+    },
+    {
+      "id": "maximum-cycle-cover",
+      "name": "Maximum Cycle Cover",
+      "input": "A finite simple undirected graph G and a nonnegative integer r in binary.",
+      "question": "Can all vertices be partitioned into at least r pairwise vertex-disjoint simple cycles?",
+      "revision": 1
+    },
+    {
+      "id": "minimum-k-cut",
+      "name": "Minimum k-Cut",
+      "input": "A finite simple undirected graph G with nonnegative integer edge weights and a weight threshold b in binary.",
+      "question": "Can edges of total weight at most b be deleted so that at least k connected components remain?",
+      "revision": 1
+    },
+    {
+      "id": "odd-cycle-transversal",
+      "name": "Odd Cycle Transversal",
+      "input": "A finite simple undirected graph G and a nonnegative integer b in binary.",
+      "question": "Can at most b vertices be deleted to make G bipartite?",
+      "revision": 1
+    },
+    {
+      "id": "odd-set",
+      "name": "Odd Set",
+      "input": "A finite ground set, an explicitly listed family of its subsets and a nonnegative integer k in binary.",
+      "question": "Is there a set of at most k elements with odd intersection size with every listed subset?",
+      "revision": 1
+    },
+    {
+      "id": "planar-3sat",
+      "name": "Planar 3SAT",
+      "input": "An explicitly listed CNF formula with at most three literals per clause and a planar variable–clause incidence graph.",
+      "question": "Does the formula have a satisfying assignment?",
+      "revision": 1,
+      "restrictionOf": [
+        {
+          "problemId": "three-sat",
+          "condition": "The variable–clause incidence graph is planar"
+        }
+      ]
+    },
+    {
+      "id": "integer-linear-programming-feasibility",
+      "name": "Integer Linear Programming Feasibility",
+      "input": "A signed integer matrix A with k rows and ℓ columns and a signed integer vector b of length k, all entries encoded in binary.",
+      "question": "Does there exist a vector x of ℓ nonnegative integers satisfying Ax=b?",
+      "revision": 1
+    },
+    {
+      "id": "unary-bin-packing",
+      "name": "Unary Bin Packing",
+      "input": "A list of positive integer item sizes, a positive bin capacity T and a positive bin limit k. Sizes and capacity are written in unary.",
+      "question": "Can all items be assigned to at most k bins so that the sum of sizes in each bin is at most T?",
+      "revision": 1
+    },
+    {
+      "id": "minimum-fill-in",
+      "name": "Minimum Fill-In",
+      "input": "An explicitly encoded finite simple undirected graph G and a nonnegative integer edge-addition budget k.",
+      "question": "Can at most k edges be added to G to make it chordal, so that every cycle on at least four vertices has a chord?",
+      "revision": 1
+    },
+    {
+      "id": "three-dimensional-matching",
+      "name": "Three-Dimensional Matching",
+      "input": "Three disjoint sets X, Y and Z each of size q, and an explicit set T of triples in X × Y × Z.",
+      "question": "Are there q triples in T that together use every element of X, Y and Z exactly once?",
+      "revision": 1
+    },
+    {
+      "id": "weighted-tardy-jobs",
+      "name": "Weighted Number of Tardy Jobs on One Machine",
+      "input": "A list of n jobs, each with a positive integer processing time, a nonnegative integer due date and a nonnegative integer weight, and a nonnegative integer threshold. All numbers are binary encoded.",
+      "question": "Can all jobs be run without preemption on one machine starting at time zero, so that the total weight of jobs finishing after their due dates is at most the threshold?",
+      "revision": 1
+    },
+    {
+      "id": "cluster-editing",
+      "name": "Cluster Editing",
+      "input": "An explicitly encoded finite simple undirected graph G and a nonnegative integer edit budget k.",
+      "question": "Can G be turned into a disjoint union of cliques by adding or deleting a total of at most k edges?",
+      "revision": 1
+    },
+    {
+      "id": "minimum-bisection",
+      "name": "Minimum Bisection",
+      "input": "An explicitly encoded finite simple undirected graph G and a nonnegative integer cut budget b.",
+      "question": "Can the vertices be partitioned into two equally large parts with at most b edges between the parts?",
+      "revision": 1
+    },
+    {
+      "id": "maximum-common-induced-subgraph",
+      "name": "Maximum Common Induced Subgraph",
+      "input": "Two explicitly encoded finite simple undirected graphs G₁ and G₂ and a nonnegative integer threshold r.",
+      "question": "Do G₁ and G₂ have isomorphic induced subgraphs on at least r vertices?",
+      "revision": 1
+    },
+    {
+      "id": "minimum-common-string-partition",
+      "name": "Minimum Common String Partition",
+      "input": "Two explicit strings of the same length n over a common alphabet and a nonnegative integer block budget b.",
+      "question": "Can the first string be partitioned into at most b nonempty contiguous blocks that can be permuted and concatenated to form the second string?",
+      "revision": 1
+    },
+    {
+      "id": "graph-motif",
+      "name": "Graph Motif",
+      "input": "An explicitly encoded finite simple undirected graph G with a color on each vertex, and a multiset M of colors.",
+      "question": "Is there a set of vertices that induces a connected subgraph and whose colors, counted with multiplicity, form M?",
+      "revision": 1
+    }
+  ],
+  "releaseHypotheses": [
+    "eth",
+    "sh",
+    "w1",
+    "np_qp",
+    "kxk"
+  ]
+}

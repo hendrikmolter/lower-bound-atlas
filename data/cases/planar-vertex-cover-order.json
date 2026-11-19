@@ -1,0 +1,184 @@
+{
+  "aliases": [],
+  "bounds": [
+    {
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "id": "pvc-order-eth",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "label": "Square-root exponent in the number of vertices",
+        "revision": 1,
+        "title": "Planar Vertex Cover by graph order under ETH"
+      },
+      "revision": 1,
+      "runtime": "2^(o(n^(1/2))) B^(O(1))",
+      "runtimeSymbols": [
+        "n",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "book",
+          "locator": "Theorem 14.9 and Exercise 14.3(a)",
+          "paperId": "cygan2015",
+          "placement": "statement",
+          "role": "benchmark"
+        },
+        {
+          "editionId": "bulletin",
+          "locator": "Paragraph following Theorem 3.5, p. 52",
+          "paperId": "lms2011",
+          "placement": "statement",
+          "role": "benchmark"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm decides Planar Vertex Cover within the stated running time.",
+      "status": "established"
+    },
+    {
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "sh",
+          "revision": 1
+        }
+      ],
+      "id": "pvc-order-sh",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [
+        "For each fixed ε strictly between zero and 1/2."
+      ],
+      "reader": {
+        "label": "Fixed power saving in the exponent",
+        "revision": 1,
+        "title": "Planar Vertex Cover by graph order under SH"
+      },
+      "revision": 1,
+      "runtime": "2^(O(n^(1/2−ε))) B^(O(1))",
+      "runtimeSymbols": [
+        "n",
+        "ε",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "v3",
+          "locator": "Table 1, Weak ETH row",
+          "paperId": "szeider2026",
+          "placement": "statement",
+          "role": "Weak ETH formulation"
+        },
+        {
+          "editionId": "book",
+          "locator": "Theorem 14.9 and Exercise 14.3(a)",
+          "paperId": "cygan2015",
+          "placement": "statement",
+          "role": "benchmark"
+        }
+      ],
+      "statement": "Under SH, no deterministic algorithm decides Planar Vertex Cover within the stated running time.",
+      "status": "established"
+    }
+  ],
+  "coverage": "Selected literature bounds for this parameterization.",
+  "encoding": "Explicit binary graph encoding with individually represented vertices and a binary solution threshold. B is the complete input length.",
+  "id": "planar-vertex-cover-order",
+  "inputConditions": [
+    {
+      "condition": "The graph is finite, simple, undirected, and unweighted.",
+      "id": "graph-class",
+      "level": "problem"
+    },
+    {
+      "condition": "The graph is planar.",
+      "id": "planar",
+      "level": "problem"
+    }
+  ],
+  "kind": "lower-bound-case",
+  "parameter": "The number of vertices n of G.",
+  "problemDefinitionHash": "0205af0ba8e77d04ea2ca928635606c49533a3f4405ad5a2e17798991c3e91cf",
+  "problemId": "planar-vertex-cover",
+  "problemRevision": 1,
+  "reader": {
+    "anchor": "vertices",
+    "boundContext": "The number of vertices n of G. The letter B denotes the input length in bits.",
+    "parameter": "The number of vertices n of G.",
+    "parameterLabel": "Number of vertices",
+    "parameterSymbols": [
+      {
+        "meaning": "number of vertices",
+        "symbol": "n"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "solution threshold",
+        "symbol": "k"
+      },
+      {
+        "meaning": "complete input length in bits",
+        "symbol": "B"
+      },
+      {
+        "meaning": "a fixed positive saving in the exponent",
+        "symbol": "ε"
+      }
+    ]
+  },
+  "resolutions": [],
+  "revision": 4,
+  "task": "Does G have a set of at most k vertices that includes an endpoint of every edge?",
+  "title": "Planar Vertex Cover by graph order",
+  "variant": "Planar Vertex Cover",
+  "recoveryAssessments": [
+    {
+      "target": {
+        "id": "pvc-order-eth",
+        "revision": 1
+      },
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "recovery": {
+        "id": "pvc-order-sh",
+        "revision": 1
+      },
+      "scale": "degree",
+      "effective": false,
+      "targetScale": "n^(1/2)",
+      "recoveredScale": "n^(1/2−ε)",
+      "comparison": "The SH bound excludes every fixed power below one half in the exponent of the planar graph order n.",
+      "evidence": [
+        {
+          "editionId": "v3",
+          "locator": "Table 1, Weak ETH row",
+          "paperId": "szeider2026",
+          "placement": "statement",
+          "role": "Weak ETH formulation"
+        },
+        {
+          "editionId": "book",
+          "locator": "Theorem 14.9 and Exercise 14.3(a)",
+          "paperId": "cygan2015",
+          "placement": "statement",
+          "role": "benchmark"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,226 @@
+{
+  "aliases": [],
+  "bounds": [
+    {
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "id": "is-tw-eth",
+      "inputConditions": [],
+      "inputFactor": "n^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "label": "Exponential in the treewidth",
+        "revision": 1,
+        "title": "Independent Set by treewidth under ETH"
+      },
+      "revision": 1,
+      "runtime": "2^(o(t)) n^(O(1))",
+      "runtimeSymbols": [
+        "t",
+        "n"
+      ],
+      "sources": [
+        {
+          "editionId": "bulletin",
+          "locator": "Theorem 6.2, p. 62",
+          "paperId": "lms2011",
+          "placement": "statement",
+          "role": "benchmark"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm decides Independent Set within the stated running time.",
+      "status": "established"
+    },
+    {
+      "id": "is-tw-w1",
+      "revision": 1,
+      "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Independent Set within the stated running time.",
+      "runtime": "2^(o_eff(t)) B^(O(1))",
+      "inputFactor": "B^(O(1))",
+      "status": "established",
+      "provenance": "atlas",
+      "assumptions": [
+        {
+          "id": "w1",
+          "revision": 1
+        }
+      ],
+      "assumptionOperator": "all",
+      "sources": [
+        {
+          "paperId": "df1995",
+          "editionId": "journal",
+          "locator": "W[1]-completeness of Independent Set, with Clique by complementation",
+          "role": "source hardness",
+          "placement": "proof"
+        }
+      ],
+      "proofs": [
+        {
+          "proofId": "independent-set-treewidth-w1-proof",
+          "revision": 1,
+          "theorem": "is-treewidth"
+        }
+      ],
+      "reader": {
+        "revision": 1,
+        "label": "Effective little-o bound in the treewidth",
+        "notation": "effective-little-o",
+        "notationLabel": "Effective little-o"
+      },
+      "inputConditions": [
+        "maximum-degree-three",
+        "equal-pathwidth"
+      ],
+      "runtimeSymbols": [
+        "t",
+        "B"
+      ],
+      "qualifications": [
+        "The exponent h(t) is finite and nonnegative.",
+        "There is a computable function T such that h(t) ≤ η max(t, 1) whenever t ≥ T(η), for each positive rational η.",
+        "The proof also permits the solver to receive the exact width and an optimal path decomposition, counted in the complete input length."
+      ]
+    }
+  ],
+  "coverage": "Selected literature bounds for this parameterization.",
+  "encoding": "Explicit binary graph encoding with individually represented vertices and a binary solution threshold. B is the complete input length.",
+  "id": "independent-set-treewidth",
+  "inputConditions": [
+    {
+      "condition": "The graph is finite, simple, undirected, and unweighted.",
+      "id": "graph-class",
+      "level": "problem"
+    },
+    {
+      "id": "maximum-degree-three",
+      "condition": "The maximum degree of G is at most three.",
+      "level": "bound"
+    },
+    {
+      "id": "equal-pathwidth",
+      "condition": "The pathwidth of G equals its treewidth.",
+      "level": "bound"
+    }
+  ],
+  "kind": "lower-bound-case",
+  "parameter": "The intrinsic treewidth t of G.",
+  "problemDefinitionHash": "6fe0108aa6b3df98d29b1ee8450fbb8ed4348f500e86e17718dd16c389a351d5",
+  "problemId": "independent-set",
+  "problemRevision": 1,
+  "reader": {
+    "anchor": "treewidth",
+    "boundContext": "The intrinsic treewidth t of G. A tree decomposition is optional for the decision problem and is absent from this input. The letter B denotes the input length in bits.",
+    "parameter": "The intrinsic treewidth t of G.",
+    "parameterLabel": "Treewidth",
+    "parameterSymbols": [
+      {
+        "meaning": "treewidth of the input graph",
+        "symbol": "t"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "number of vertices",
+        "symbol": "n"
+      },
+      {
+        "meaning": "solution threshold",
+        "symbol": "k"
+      },
+      {
+        "meaning": "complete input length in bits",
+        "symbol": "B"
+      }
+    ]
+  },
+  "resolutions": [],
+  "revision": 3,
+  "task": "Does G have at least k pairwise nonadjacent vertices?",
+  "title": "Independent Set by treewidth",
+  "variant": "Independent Set",
+  "proofs": [
+    {
+      "id": "independent-set-treewidth-w1-proof",
+      "title": "An effective treewidth lower bound for Independent Set",
+      "revisions": [
+        {
+          "revision": 1,
+          "source": "proofs/independent-set-treewidth-w1.tex",
+          "pdf": "proofs/independent-set-treewidth-w1.pdf",
+          "theorems": [
+            {
+              "label": "is-treewidth",
+              "number": "1",
+              "destination": "is-treewidth",
+              "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Independent Set within the stated running time. 2^(o_eff(t)) B^(O(1)). The maximum degree of G is at most three. The pathwidth of G equals its treewidth. The exponent h(t) is finite and nonnegative. There is a computable function T such that h(t) ≤ η max(t, 1) whenever t ≥ T(η), for each positive rational η. The proof also permits the solver to receive the exact width and an optimal path decomposition, counted in the complete input length."
+            }
+          ],
+          "dependencyCoverage": "complete",
+          "dependencies": [],
+          "authorship": {
+            "origin": "atlas",
+            "kind": "ai",
+            "authors": [
+              "Atlas"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "reviews": [
+    {
+      "id": "independent-set-treewidth-w1-independent",
+      "type": "agent",
+      "date": "2026-11-18",
+      "reviewer": "Codex agent secondary_natural",
+      "verdict": "verified",
+      "scope": "Checks the Clique encoding, subcubic construction, exact width and optional optimal decomposition, noncomputable exponent envelope with computable convergence, and deterministic FPT transfer.",
+      "evidence": "evidence/independent-set-treewidth-w1-independent.md",
+      "object": {
+        "type": "proof",
+        "id": "independent-set-treewidth-w1-proof",
+        "revision": 1,
+        "theorem": "is-treewidth"
+      },
+      "independent": true,
+      "sourceSha256": "cbee40dd1d5b24db19ae7c6ec4a24f40b05a594993ddb4223282f0b387ba35f4"
+    }
+  ],
+  "recoveryAssessments": [
+    {
+      "target": {
+        "id": "is-tw-eth",
+        "revision": 1
+      },
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "recovery": {
+        "id": "is-tw-w1",
+        "revision": 1
+      },
+      "scale": "full",
+      "effective": true,
+      "targetScale": "t",
+      "recoveredScale": "t",
+      "comparison": "The exclusion reaches the historical treewidth exponent scale for effectively sublinear exponents. It holds on graphs of maximum degree three whose pathwidth equals their treewidth.",
+      "evidence": [
+        {
+          "proofId": "independent-set-treewidth-w1-proof",
+          "revision": 1,
+          "theorem": "is-treewidth"
+        }
+      ]
+    }
+  ]
+}

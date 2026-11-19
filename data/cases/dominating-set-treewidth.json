@@ -1,0 +1,232 @@
+{
+  "aliases": [],
+  "bounds": [
+    {
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "id": "ds-tw-eth",
+      "inputConditions": [],
+      "inputFactor": "n^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "label": "Exponential in the treewidth",
+        "revision": 1,
+        "title": "Dominating Set by treewidth under ETH"
+      },
+      "revision": 1,
+      "runtime": "2^(o(t)) n^(O(1))",
+      "runtimeSymbols": [
+        "t",
+        "n"
+      ],
+      "sources": [
+        {
+          "editionId": "bulletin",
+          "locator": "Theorem 6.2, p. 62",
+          "paperId": "lms2011",
+          "placement": "statement",
+          "role": "benchmark"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm decides Dominating Set within the stated running time.",
+      "status": "established"
+    },
+    {
+      "id": "ds-tw-w1",
+      "revision": 1,
+      "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Dominating Set within the stated running time.",
+      "runtime": "f(k) 2^(o_eff(t)) B^(O(1))",
+      "inputFactor": "B^(O(1))",
+      "status": "established",
+      "provenance": "atlas",
+      "assumptions": [
+        {
+          "id": "w1",
+          "revision": 1
+        }
+      ],
+      "assumptionOperator": "all",
+      "sources": [
+        {
+          "paperId": "df1995",
+          "editionId": "journal",
+          "locator": "W[1]-completeness of Independent Set, with Clique by complementation",
+          "role": "source hardness",
+          "placement": "proof"
+        },
+        {
+          "paperId": "lin2019",
+          "editionId": "proceedings",
+          "locator": "Lemma 14",
+          "role": "compact reduction to Set Cover",
+          "placement": "proof"
+        }
+      ],
+      "proofs": [
+        {
+          "proofId": "dominating-set-treewidth-w1-proof",
+          "revision": 1,
+          "theorem": "ds-treewidth"
+        }
+      ],
+      "reader": {
+        "revision": 1,
+        "label": "Effective little-o bound in the treewidth",
+        "notation": "effective-little-o",
+        "notationLabel": "Effective little-o"
+      },
+      "inputConditions": [
+        "connected-bipartite"
+      ],
+      "runtimeSymbols": [
+        "f",
+        "k",
+        "t",
+        "B"
+      ],
+      "qualifications": [
+        "The prefactor f is any total computable positive integer-valued function of the solution budget k. The exponent h is computable and nonnegative integer-valued.",
+        "There is a computable function T such that h(t) ≤ η max(t, 1) whenever t ≥ T(η), for each positive rational η."
+      ]
+    }
+  ],
+  "coverage": "Selected literature bounds for this parameterization.",
+  "encoding": "Explicit binary graph encoding with individually represented vertices and a binary solution threshold. B is the complete input length.",
+  "id": "dominating-set-treewidth",
+  "inputConditions": [
+    {
+      "condition": "The graph is finite, simple, undirected, and unweighted.",
+      "id": "graph-class",
+      "level": "problem"
+    },
+    {
+      "id": "connected-bipartite",
+      "condition": "The graph is connected and bipartite.",
+      "level": "bound"
+    }
+  ],
+  "kind": "lower-bound-case",
+  "parameter": "The intrinsic treewidth t of G.",
+  "problemDefinitionHash": "9d6636f7c27bc6ec224ccc8c59ffbe211599986218bc672f4bdb3a2b6405d3a1",
+  "problemId": "dominating-set",
+  "problemRevision": 1,
+  "reader": {
+    "anchor": "treewidth",
+    "boundContext": "The intrinsic treewidth t of G. A tree decomposition is optional for the decision problem and is absent from this input. The letter B denotes the input length in bits.",
+    "parameter": "The intrinsic treewidth t of G.",
+    "parameterLabel": "Treewidth",
+    "parameterSymbols": [
+      {
+        "meaning": "treewidth of the input graph",
+        "symbol": "t"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "number of vertices",
+        "symbol": "n"
+      },
+      {
+        "meaning": "solution threshold",
+        "symbol": "k"
+      },
+      {
+        "meaning": "complete input length in bits",
+        "symbol": "B"
+      },
+      {
+        "symbol": "f",
+        "meaning": "a computable prefactor in the solution budget"
+      }
+    ]
+  },
+  "resolutions": [],
+  "revision": 3,
+  "task": "Does G have a set of at most k vertices such that every vertex either belongs to the set or has a neighbor in the set?",
+  "title": "Dominating Set by treewidth",
+  "variant": "Dominating Set",
+  "proofs": [
+    {
+      "id": "dominating-set-treewidth-w1-proof",
+      "title": "An effective treewidth lower bound for Dominating Set",
+      "revisions": [
+        {
+          "revision": 1,
+          "source": "proofs/dominating-set-treewidth-w1.tex",
+          "pdf": "proofs/dominating-set-treewidth-w1.pdf",
+          "theorems": [
+            {
+              "label": "ds-treewidth",
+              "number": "1",
+              "destination": "ds-treewidth",
+              "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Dominating Set within the stated running time. f(k) 2^(o_eff(t)) B^(O(1)). The graph is connected and bipartite. The prefactor f is any total computable positive integer-valued function of the solution budget k. The exponent h is computable and nonnegative integer-valued. There is a computable function T such that h(t) ≤ η max(t, 1) whenever t ≥ T(η), for each positive rational η."
+            }
+          ],
+          "dependencyCoverage": "complete",
+          "dependencies": [],
+          "authorship": {
+            "origin": "atlas",
+            "kind": "ai",
+            "authors": [
+              "Atlas"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "reviews": [
+    {
+      "id": "dominating-set-treewidth-w1-independent",
+      "type": "agent",
+      "date": "2026-11-18",
+      "reviewer": "Codex agent secondary_natural",
+      "verdict": "verified",
+      "scope": "Checks Lin’s compact Set Cover interface, the connected bipartite graph, budget k, intrinsic width bound and the effective deterministic running-time transfer.",
+      "evidence": "evidence/dominating-set-treewidth-w1-independent.md",
+      "object": {
+        "type": "proof",
+        "id": "dominating-set-treewidth-w1-proof",
+        "revision": 1,
+        "theorem": "ds-treewidth"
+      },
+      "independent": true,
+      "sourceSha256": "30c349aac9eab92dcb99e9bd50a0b67d8fa7ba97bef46213c81890232d73ddfe"
+    }
+  ],
+  "recoveryAssessments": [
+    {
+      "target": {
+        "id": "ds-tw-eth",
+        "revision": 1
+      },
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "recovery": {
+        "id": "ds-tw-w1",
+        "revision": 1
+      },
+      "scale": "full",
+      "effective": true,
+      "targetScale": "t",
+      "recoveredScale": "t",
+      "comparison": "Taking f=1 reaches the historical treewidth exponent scale for computable effectively sublinear exponents. The exclusion holds on connected bipartite graphs and allows a computable prefactor in the solution budget.",
+      "evidence": [
+        {
+          "proofId": "dominating-set-treewidth-w1-proof",
+          "revision": 1,
+          "theorem": "ds-treewidth"
+        }
+      ]
+    }
+  ]
+}

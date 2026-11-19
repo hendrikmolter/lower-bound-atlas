@@ -1,0 +1,203 @@
+{
+  "aliases": [
+    "lms-hp-order"
+  ],
+  "bounds": [
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "evidence": [],
+            "status": "unknown"
+          },
+          "forward": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1
+        },
+        "sh": {
+          "converse": {
+            "evidence": [],
+            "status": "unknown"
+          },
+          "forward": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "id": "hamiltonian-path-order-eth",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "label": "Exponent in number of vertices",
+        "revision": 1,
+        "title": "Exponent in number of vertices under ETH"
+      },
+      "revision": 1,
+      "runtime": "2^(o(n)) B^(O(1))",
+      "runtimeSymbols": [
+        "n",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "bulletin",
+          "locator": "Theorem 3.3",
+          "paperId": "lms2011",
+          "placement": "statement",
+          "role": "benchmark"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm solves Hamiltonian Path within the stated running time.",
+      "status": "established"
+    },
+    {
+      "assessments": {
+        "sh": {
+          "converse": {
+            "evidence": [],
+            "status": "unknown"
+          },
+          "forward": {
+            "evidence": [
+              {
+                "boundRevision": 1,
+                "hypothesisRevision": 1,
+                "proof": {
+                  "proofId": "hamiltonian-sh",
+                  "revision": 1,
+                  "theorem": "hamiltonian-sh-forward"
+                },
+                "reviewId": "hamiltonian-sh-forward-independent"
+              }
+            ],
+            "status": "established"
+          },
+          "hypothesisRevision": 1
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "sh",
+          "revision": 1
+        }
+      ],
+      "id": "hamiltonian-path-order-sh",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [
+        {
+          "proofId": "hamiltonian-sh",
+          "revision": 1,
+          "theorem": "hamiltonian-sh-forward"
+        }
+      ],
+      "provenance": "atlas",
+      "qualifications": [
+        "Separately for every fixed 0 < a < 1."
+      ],
+      "reader": {
+        "label": "Fixed-power exponent in the number of vertices",
+        "revision": 1,
+        "title": "Fixed-power bounds under SH"
+      },
+      "revision": 1,
+      "runtime": "2^(O(n^a)) B^(O(1))",
+      "runtimeSymbols": [
+        "n",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "v2",
+          "locator": "Definition of SH and footnotes 1–2, pp. 1–2",
+          "paperId": "sh26",
+          "placement": "context",
+          "role": "hypothesis and encoding conventions"
+        },
+        {
+          "editionId": "journal",
+          "locator": "Section 3, p. 525, following Theorem 5",
+          "paperId": "ipz2001",
+          "placement": "proof",
+          "role": "linear-size reduction to Hamiltonian Circuit"
+        }
+      ],
+      "statement": "Under SH, no deterministic algorithm can decide Hamiltonian Path within the stated running time.",
+      "status": "established"
+    }
+  ],
+  "coverage": "Published lower bounds for number of vertices.",
+  "encoding": "A finite simple undirected graph G.",
+  "id": "hamiltonian-path-order",
+  "inputConditions": [],
+  "kind": "lower-bound-case",
+  "parameter": "Number of vertices.",
+  "problemDefinitionHash": "28f2e53473e9a30080672ffaa0de6c92820160c20557abe567aab27cca3028e9",
+  "problemId": "hamiltonian-path",
+  "problemRevision": 1,
+  "reader": {
+    "anchor": "number-of-vertices",
+    "parameter": "Number of vertices.",
+    "parameterLabel": "Number of vertices",
+    "parameterSymbols": [
+      {
+        "meaning": "number of vertices of the input graph",
+        "symbol": "n"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "complete explicit binary input length",
+        "symbol": "B"
+      }
+    ]
+  },
+  "resolutions": [],
+  "revision": 3,
+  "task": "Does G contain a simple path through all vertices?",
+  "title": "Hamiltonian Path by number of vertices",
+  "variant": "Hamiltonian Path",
+  "recoveryAssessments": [
+    {
+      "target": {
+        "id": "hamiltonian-path-order-eth",
+        "revision": 1
+      },
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "recovery": {
+        "id": "hamiltonian-path-order-sh",
+        "revision": 1
+      },
+      "scale": "degree",
+      "effective": false,
+      "targetScale": "n",
+      "recoveredScale": "n^a",
+      "comparison": "The SH result excludes every fixed power below one in the exponent of the number of vertices.",
+      "evidence": [
+        {
+          "proofId": "hamiltonian-sh",
+          "revision": 1,
+          "theorem": "hamiltonian-sh-forward"
+        }
+      ]
+    }
+  ]
+}

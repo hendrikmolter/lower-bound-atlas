@@ -1,0 +1,107 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\title{An effective treewidth lower bound for Chromatic Number}
+\author{Atlas\thanks{The proof in this note was found using ChatGPT.}}
+\date{}
+\begin{document}
+\maketitle
+
+Given a simple undirected graph \(G\) and a positive integer \(Q\),
+Chromatic Number asks whether \(G\) admits a proper coloring with at most
+\(Q\) colors. Let \(t\) be the treewidth of \(G\), let \(N\) be the binary
+input length, and write \(s(t)=t\log_2(\max\{t,2\})\).
+
+\hypertarget{tw-w1}{}\begin{theorem}\label{tw-w1}
+Assume \(\mathrm{FPT}\ne\mathrm{W[1]}\). Chromatic Number has no
+deterministic algorithm running in \(2^{h(t)}N^C\) time for a fixed
+constant \(C\) and a finite nonnegative function \(h\) with the following
+property: there is a computable function \(T\colon\mathbb{N}_{>0}\to
+\mathbb{N}\) such that \(h(t)\le s(t)/j\) for every positive integer
+\(j\) and every \(t\ge T(j)\).
+\end{theorem}
+
+\begin{proof}
+Suppose such an algorithm exists. We give a fixed-parameter algorithm
+for Clique parameterized by the requested clique size \(k\).
+This problem is \(\mathrm{W[1]}\)-complete by graph complementation and
+the corresponding theorem for Independent Set~\cite{df}.
+Let the input graph have \(n\) explicitly represented vertices and binary
+length \(M\). Handle \(k<2\) and \(k>n\) directly, and put
+\(\ell=\lceil\log_2 n\rceil\).
+
+Use \(k\) strings of \(\ell\) bits each to name the vertices of the
+clique. In each string, forbid every unused name by a clause. For every
+pair of strings, forbid each ordered pair of equal or nonadjacent
+vertices by a clause that is false precisely when the two strings have
+those names. The resulting formula has \(m=k\ell\) variables and
+\(\mathcal O(kn+k^2n^2)\) clauses, each of length at most \(2\ell\).
+It is satisfiable exactly when the input graph has a \(k\)-clique.
+
+We next encode this formula by a coloring instance. For \(m<16\), test
+all bit assignments directly. Otherwise put
+\[
+ b=\left\lfloor\tfrac12\log_2 m\right\rfloor,\qquad
+ p=\lceil m/b\rceil,\qquad q=2^b .
+\]
+Split the variables into \(p\) groups of \(b\) bits, padding the last
+group with unused bits. Make a clique on \(Q=q+p\) vertices to name
+the colors: one assignment color \(A_a\) for each \(b\)-bit string
+\(a\), and one witness color \(W_i\) for each group \(i\).
+In a coloring with at most \(Q\) colors, all palette vertices have
+distinct colors. In the construction below, we give a vertex an
+allowed set of colors by joining it to every palette vertex outside
+the set. This uses only ordinary edges.
+
+For each group \(i\), introduce a vertex \(x_i\) allowed to use all
+assignment colors. For each clause \(D\), introduce a selector
+\(y_D\) allowed to use all witness colors. Choosing \(W_i\) means
+that group \(i\) supplies a true literal of \(D\). To enforce this,
+consider each group \(i\) and each assignment \(a\) that satisfies
+no literal of \(D\) in that group. Add a private vertex adjacent to
+\(x_i\) and \(y_D\), with allowed colors \(A_a\) and \(W_i\).
+This also covers groups containing no literal of \(D\).
+
+Each private vertex can be colored unless \(x_i\) has color \(A_a\)
+and \(y_D\) has color \(W_i\). Private vertices are pairwise
+nonadjacent. Consequently, given colors for the group vertices, a
+clause selector and its private vertices can be colored exactly
+when some group assignment makes a literal of that clause true.
+The whole graph is thus \(Q\)-colorable exactly when the formula
+is satisfiable.
+
+Let \(S\) consist of the palette and all group vertices. A path
+decomposition keeps \(S\) in every bag. Process the clauses in order:
+use a bag containing \(S\) and the current selector, and add and
+remove its private vertices one at a time. These bags contain both
+ends of every edge, and the bags containing each vertex form an
+interval. Thus the graph has treewidth \(t\le q+2p+1\).
+Since \(q\le\sqrt m\) and \(b\ge(\log_2 m)/4\), this gives
+\(t=\mathcal O(m/\log m)\). In particular, there is a fixed positive
+integer \(A\) such that \(s(t)\le A m\) throughout the construction.
+There are at most \(pq\) private vertices per clause. The graph,
+including every edge that implements an allowed set, has polynomial
+encoding length in \(M\) and can be constructed in polynomial time.
+
+Finally, choose \(j=Ak\). If \(t\ge T(j)\), we have
+\(h(t)\le A m/j=\ell\). To handle the other values of \(t\), let \(D_0\)
+be a fixed nonnegative integer bounding all \(h(u)\) for \(u<T(1)\).
+Such an integer exists since this set is finite. For all \(u\) we
+then have \(h(u)\le D_0+s(u)\). Hence for \(t<T(j)\),
+\(h(t)\le D_0+(T(j)+1)^2\), a computable function of \(k\):
+the integer \(D_0\) is a constant of the assumed algorithm.
+Since \(2^\ell\le 2n\), the resulting Clique algorithm runs in
+\(f(k)M^{\mathcal O(1)}\) time for some computable \(f\).
+This contradicts the hypothesis.
+\end{proof}
+
+\begin{thebibliography}{1}
+\bibitem{df} R.~G. Downey and M.~R. Fellows.
+Fixed-parameter tractability and completeness II: On completeness for W[1].
+\emph{Theoretical Computer Science} 141(1--2), 109--131, 1995.
+\href{https://doi.org/10.1016/0304-3975(94)00097-3}{DOI}.
+\end{thebibliography}
+\end{document}

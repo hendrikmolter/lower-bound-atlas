@@ -1,0 +1,323 @@
+{
+  "aliases": [],
+  "bounds": [
+    {
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "id": "vc-budget-eth",
+      "inputConditions": [],
+      "inputFactor": "n^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "label": "Exponential in the solution budget",
+        "revision": 2,
+        "title": "Vertex Cover by solution size under ETH"
+      },
+      "revision": 2,
+      "runtime": "2^(o(k)) n^(O(1))",
+      "runtimeSymbols": [
+        "k",
+        "n"
+      ],
+      "sources": [
+        {
+          "editionId": "journal",
+          "locator": "Corollary 4.3, p. 803",
+          "paperId": "cai-juedes2003",
+          "placement": "statement",
+          "role": "benchmark"
+        },
+        {
+          "editionId": "bulletin",
+          "locator": "Theorem 4.1, p. 53",
+          "paperId": "lms2011",
+          "placement": "statement",
+          "role": "benchmark"
+        },
+        {
+          "editionId": "book",
+          "locator": "Section 14.3.1, p. 476",
+          "paperId": "cygan2015",
+          "placement": "statement",
+          "role": "benchmark"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm decides Vertex Cover within the stated running time.",
+      "status": "established",
+      "assessments": {
+        "uniform-eth": {
+          "hypothesisRevision": 4,
+          "forward": {
+            "status": "established",
+            "evidence": [
+              {
+                "boundRevision": 2,
+                "hypothesisRevision": 4,
+                "reviewId": "vc-budget-eth-equivalence-review",
+                "source": {
+                  "paperId": "cai-juedes2003",
+                  "editionId": "journal",
+                  "locator": "Theorem 4.2, pp. 801–802, and Corollary 4.3, p. 803",
+                  "placement": "forward",
+                  "role": "single-algorithm 3-SAT implication"
+                }
+              }
+            ]
+          },
+          "converse": {
+            "status": "established",
+            "evidence": [
+              {
+                "boundRevision": 2,
+                "hypothesisRevision": 4,
+                "reviewId": "vc-budget-eth-equivalence-review",
+                "source": {
+                  "paperId": "ipz2001",
+                  "editionId": "journal",
+                  "locator": "Theorem 5, p. 526",
+                  "placement": "proof",
+                  "role": "linear-variable reduction to 3-SAT"
+                }
+              },
+              {
+                "boundRevision": 2,
+                "hypothesisRevision": 4,
+                "reviewId": "vc-budget-eth-equivalence-review",
+                "source": {
+                  "paperId": "cai-juedes2003",
+                  "editionId": "journal",
+                  "locator": "Proposition 4.1, p. 803",
+                  "placement": "proof",
+                  "role": "2k-vertex kernel for general Vertex Cover, credited to Chen et al."
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "sh",
+          "revision": 1
+        }
+      ],
+      "id": "vc-budget-sh",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [
+        "For each fixed ε strictly between zero and 1."
+      ],
+      "reader": {
+        "label": "Fixed power saving in the exponent",
+        "revision": 2,
+        "title": "Vertex Cover by solution size under SH"
+      },
+      "revision": 2,
+      "runtime": "2^(O(k^(1−ε))) B^(O(1))",
+      "runtimeSymbols": [
+        "k",
+        "ε",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "v2",
+          "locator": "Table 1, Vertex Cover by solution budget, p. 4",
+          "paperId": "sh26",
+          "placement": "statement",
+          "role": "benchmark"
+        }
+      ],
+      "statement": "Under SH, no deterministic algorithm decides Vertex Cover within the stated running time.",
+      "status": "established",
+      "assessments": {
+        "sh": {
+          "hypothesisRevision": 1,
+          "forward": {
+            "status": "established",
+            "evidence": [
+              {
+                "boundRevision": 2,
+                "reviewId": "vc-budget-sh-source-review",
+                "source": {
+                  "editionId": "v2",
+                  "locator": "Table 1, Vertex Cover by solution budget, p. 4",
+                  "paperId": "sh26",
+                  "placement": "statement",
+                  "role": "benchmark"
+                }
+              }
+            ]
+          },
+          "converse": {
+            "status": "established",
+            "evidence": [
+              {
+                "boundRevision": 2,
+                "reviewId": "vc-budget-sh-converse-review",
+                "proof": {
+                  "proofId": "classical-graph-sh-converse",
+                  "revision": 1,
+                  "theorem": "vc-budget-sh-converse"
+                },
+                "source": {
+                  "paperId": "sh26",
+                  "editionId": "v1",
+                  "locator": "Lemma 2.2, pp. 5–6",
+                  "role": "quantitative decision sparsification, preprint dependency",
+                  "placement": "proof"
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "coverage": "Selected literature bounds for this parameterization.",
+  "encoding": "Explicit binary graph encoding with individually represented vertices and a binary solution threshold. B is the complete input length.",
+  "id": "vertex-cover-budget",
+  "inputConditions": [
+    {
+      "condition": "The graph is finite, simple, undirected, and unweighted.",
+      "id": "graph-class",
+      "level": "problem"
+    }
+  ],
+  "kind": "lower-bound-case",
+  "parameter": "The input threshold k.",
+  "problemDefinitionHash": "a9ccce0fb0f65dac9528ed3bef390b32af53184cadd36074247a21390fa6a792",
+  "problemId": "vertex-cover",
+  "problemRevision": 1,
+  "reader": {
+    "anchor": "solution-size",
+    "boundContext": "The input threshold k. The letter B denotes the input length in bits.",
+    "parameter": "The input threshold k.",
+    "parameterLabel": "Solution size",
+    "parameterSymbols": [
+      {
+        "meaning": "solution threshold",
+        "symbol": "k"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "number of vertices",
+        "symbol": "n"
+      },
+      {
+        "meaning": "complete input length in bits",
+        "symbol": "B"
+      },
+      {
+        "meaning": "a fixed positive saving in the exponent",
+        "symbol": "ε"
+      }
+    ]
+  },
+  "resolutions": [],
+  "revision": 6,
+  "task": "Does G have a set of at most k vertices that includes an endpoint of every edge?",
+  "title": "Vertex Cover by solution size",
+  "variant": "Vertex Cover",
+  "reviews": [
+    {
+      "id": "vc-budget-sh-source-review",
+      "type": "agent",
+      "date": "2026-11-18",
+      "reviewer": "Codex agent secondary_natural",
+      "verdict": "verified",
+      "scope": "Checks the statement in Table 1 and its applicability to the deterministic exclusion for Vertex Cover by the solution budget, with the full input polynomial.",
+      "evidence": "evidence/classical-graph-sh-converse-independent.md",
+      "object": {
+        "type": "bound",
+        "caseId": "vertex-cover-budget",
+        "id": "vc-budget-sh",
+        "revision": 2
+      },
+      "independent": true
+    },
+    {
+      "id": "vc-budget-sh-converse-review",
+      "type": "agent",
+      "date": "2026-11-18",
+      "reviewer": "Codex agent secondary_natural",
+      "verdict": "verified",
+      "scope": "Checks the converse for Vertex Cover parameterized by the solution budget, including the exponent after quantitative sparsification, the linear-variable selection encoding, and the kernel when parameterized by the budget.",
+      "evidence": "evidence/classical-graph-sh-converse-independent.md",
+      "object": {
+        "type": "proof",
+        "id": "classical-graph-sh-converse",
+        "revision": 1,
+        "theorem": "vc-budget-sh-converse"
+      },
+      "independent": true,
+      "sourceSha256": "a45124649155337293a6ef01825717af11a995de79ac2463cceb640c22ee646c"
+    },
+    {
+      "id": "vc-budget-eth-equivalence-review",
+      "type": "agent",
+      "date": "2026-11-18",
+      "reviewer": "Codex parent agent",
+      "verdict": "verified",
+      "scope": "The unrestricted cover problem inherits the SAT implication from degree-three graphs. The general 2k-vertex kernel followed by the linear-variable reduction supplies the other direction.",
+      "evidence": "evidence/current-equivalences-independent.md",
+      "object": {
+        "type": "bound",
+        "caseId": "vertex-cover-budget",
+        "id": "vc-budget-eth",
+        "revision": 2
+      },
+      "independent": true
+    }
+  ],
+  "recoveryAssessments": [
+    {
+      "target": {
+        "id": "vc-budget-eth",
+        "revision": 2
+      },
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "recovery": {
+        "id": "vc-budget-sh",
+        "revision": 2
+      },
+      "scale": "degree",
+      "effective": false,
+      "targetScale": "k",
+      "recoveredScale": "k^(1−ε)",
+      "comparison": "The SH bound excludes every fixed power below one in the exponent of the cover budget k.",
+      "evidence": [
+        {
+          "editionId": "v2",
+          "locator": "Table 1, Vertex Cover by solution budget, p. 4",
+          "paperId": "sh26",
+          "placement": "statement",
+          "role": "benchmark"
+        },
+        {
+          "editionId": "journal",
+          "locator": "Corollary 4.3, p. 803",
+          "paperId": "cai-juedes2003",
+          "placement": "statement",
+          "role": "benchmark"
+        }
+      ]
+    }
+  ]
+}

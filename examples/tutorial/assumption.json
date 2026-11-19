@@ -1,0 +1,35 @@
+{
+  "assumption": {
+    "id": "tutorial-p-ne-np",
+    "revision": 1,
+    "name": "P ≠ NP (tutorial)",
+    "aliases": [
+      "tutorial classical separation"
+    ],
+    "definition": "Some language in NP is outside P.",
+    "model": "Deterministic decision on complete binary inputs.",
+    "quantifiers": "For some language in NP, for every fixed polynomial running-time bound, no deterministic decider satisfies that bound.",
+    "conventions": "Disposable contributor exercise outside the four launch assumptions.",
+    "access": "Standard definitions of P and NP. The cited tutorial paper uses NP-completeness to derive a running-time consequence."
+  },
+  "papers": [
+    {
+      "id": "tutorial-gjs76",
+      "title": "Some simplified NP-complete graph problems",
+      "authors": [
+        "M. R. Garey",
+        "D. S. Johnson",
+        "L. Stockmeyer"
+      ],
+      "preferredEditionId": "journal",
+      "editions": [
+        {
+          "id": "journal",
+          "label": "Journal edition",
+          "kind": "journal",
+          "doi": "10.1016/0304-3975(76)90059-1"
+        }
+      ]
+    }
+  ]
+}

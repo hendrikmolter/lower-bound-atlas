@@ -1,0 +1,118 @@
+{
+  "id": "qbf-fixed-block-width",
+  "revision": 3,
+  "title": "Quantified Boolean satisfiability",
+  "kind": "lower-bound-case",
+  "aliases": [
+    "QBF",
+    "QSAT"
+  ],
+  "variant": "Closed prenex quantified Boolean formulas with a fixed number of alternating quantifier blocks",
+  "task": "Decide whether the formula is true.",
+  "encoding": "Explicit quantifier prefix and matrix. n counts variables occurring in the matrix.",
+  "parameter": "Treewidth t of the primal graph",
+  "coverage": "The fixed-block primal-treewidth lower bound of Fichte, Hecher, and Pfandler.",
+  "inputConditions": [
+    {
+      "id": "matrix-form",
+      "level": "problem",
+      "condition": "The matrix is in 3-CNF if the last quantifier is existential and in 3-DNF if it is universal."
+    }
+  ],
+  "reader": {
+    "parameterLabel": "Primal treewidth at fixed quantifier depth",
+    "parameter": "The treewidth t of the primal graph. Its vertices are the variables, and two variables are adjacent if they occur together in a clause or term.",
+    "symbols": [
+      {
+        "symbol": "n",
+        "meaning": "number of variables in the matrix"
+      },
+      {
+        "symbol": "T(q,x)",
+        "meaning": "a tower of q powers of two with x at the top, so T(1,x)=2^x and T(2,x)=2^(2^x)"
+      }
+    ],
+    "boundContext": "Here q is the fixed number of quantifier blocks, t is the primal treewidth, and n is the number of variables in the matrix. T(q,x) is a tower of q powers of two with x at the top, so T(1,x)=2^x and T(2,x)=2^(2^x).",
+    "parameterSymbols": [
+      {
+        "symbol": "t",
+        "meaning": "treewidth of the primal graph"
+      },
+      {
+        "symbol": "q",
+        "meaning": "number of alternating quantifier blocks"
+      }
+    ]
+  },
+  "resolutions": [],
+  "bounds": [
+    {
+      "id": "qbf-eth-primal-treewidth",
+      "revision": 1,
+      "statement": "Under ETH, no deterministic algorithm decides Quantified Boolean satisfiability within the stated running time.",
+      "runtime": "T(q,o(t)) n^(O(1))",
+      "inputFactor": "n^(O(1))",
+      "status": "established",
+      "provenance": "literature",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "assumptionOperator": "all",
+      "sources": [
+        {
+          "paperId": "fhp2020",
+          "editionId": "proceedings",
+          "locator": "Theorem 13, proceedings pp. 417 and 421 (PDF pp. 8 and 12)",
+          "role": "benchmark",
+          "placement": "statement"
+        }
+      ],
+      "proofs": [],
+      "assessments": {
+        "eth": {
+          "hypothesisRevision": 1,
+          "forward": {
+            "status": "unassessed",
+            "evidence": []
+          },
+          "converse": {
+            "status": "unassessed",
+            "evidence": []
+          }
+        },
+        "sh": {
+          "hypothesisRevision": 1,
+          "forward": {
+            "status": "unassessed",
+            "evidence": []
+          },
+          "converse": {
+            "status": "unassessed",
+            "evidence": []
+          }
+        }
+      },
+      "reader": {
+        "revision": 1,
+        "label": "Tower bound at fixed quantifier depth",
+        "explanation": "The source treats the matrix as a set of clauses or terms and uses positive-rate variable-3SAT ETH. The polynomial factor counts the variables in the matrix."
+      },
+      "inputConditions": [],
+      "runtimeSymbols": [
+        "q",
+        "t",
+        "n",
+        "T(q,x)"
+      ],
+      "qualifications": [
+        "For each fixed integer q ≥ 1."
+      ]
+    }
+  ],
+  "problemId": "quantified-boolean-satisfiability",
+  "problemRevision": 1,
+  "problemDefinitionHash": "b2da30ef392eee8092ecd9983cb81c1b6e8fba0f6fb5ee48d14c09384e9870af"
+}

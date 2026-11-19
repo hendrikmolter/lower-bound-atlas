@@ -1,0 +1,53 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\title{Dominating Set by number of vertices is equivalent to the Satisfiability Hypothesis}
+\author{Atlas\thanks{The proof in this note was found using ChatGPT.}}
+\date{}
+\begin{document}
+\maketitle
+
+The \emph{Satisfiability Hypothesis} (SH) excludes a deterministic CNF satisfiability algorithm running in $2^{O(S^{1-\eta})}S^{O(1)}$ time in the explicit binary input length $S$, for any fixed $0<\eta<1$ \cite{sh}. The combinatorial length convention in \cite{sh} gives the same fixed-power family, since renaming the occurring variables changes lengths by at most a logarithmic factor after polynomial-time normalization. In \textsc{Dominating Set}, the input is an explicit finite simple undirected graph $G$ and a nonnegative integer budget $b$ in binary. The question is whether at most $b$ vertices cover $V(G)$ by their closed neighborhoods. Let $n=|V(G)|$ and let $B$ be the full input length in bits.
+
+\hypertarget{dominating-set-order-sh}{}
+\begin{theorem}\label{thm:ds-order-sh}
+SH holds if and only if, for every fixed $0<\varepsilon<1$, there is no deterministic algorithm for \textup{\textsc{Dominating Set}} running in $2^{O(n^{1-\varepsilon})}B^{O(1)}$ time.
+\end{theorem}
+
+The reduction from CNF gives a graph with linearly many vertices in the formula length. In the other direction a dense graph can lead to too many occurrences in the CNF encoding. We first branch on vertices that cover many remaining demands and encode the resulting instances separately.
+
+\begin{proof}
+Suppose first that \textsc{Dominating Set} has an algorithm with the stated running time for some fixed $\varepsilon$. Consider a CNF input of bit length $S$. An empty clause is an immediate NO instance, and a formula with no clauses is an immediate YES instance. To reduce clause width, express each clause as a binary OR circuit over its literals. For each gate introduce a fresh output variable $z$, encode $z\leftrightarrow(x\vee y)$ by $(\neg x\vee z)$, $(\neg y\vee z)$ and $(x\vee y\vee\neg z)$, and assert each clause's circuit output with a unit clause. A one-literal clause is retained directly. This preserves satisfiability and yields $O(S)$ occurring variables and clauses of width at most three in polynomial time.
+
+For each occurring variable $i$ create a triangle with vertices $t_i,f_i,p_i$. For each clause add a vertex adjacent to the literal vertices of that clause, where $t_i$ represents the positive literal and $f_i$ the negative literal. Set the budget to the number of triangles. A satisfying assignment selects its true literal vertex in each triangle and thereby dominates every vertex. Conversely, dominating $p_i$ requires a selection from each triangle. The budget therefore leaves exactly one selection per triangle and none among the clause vertices. Replace a selected $p_i$ by $t_i$, which covers the whole triangle and loses no covered clause vertex. The resulting literal choices satisfy all clauses. The output order is $O(S)$ and its explicit bit length is polynomial in $S$. The assumed algorithm thus violates SH.
+
+Now suppose a deterministic SAT algorithm runs in $2^{O(S^{1-\eta})}S^{O(1)}$ time for a fixed $0<\eta<1$. Choose a fixed rational $\alpha\in(0,1)$ with $(1+\alpha)(1-\eta)<1$. Handle $n\le 1$ directly and set $D=\lceil n^\alpha\rceil$ otherwise. Normalize the budget to at most $n$. A residual instance consists of a set $A$ of available vertices, a set $U$ of uncovered vertices, and a remaining budget. Initially $A=U=V(G)$. All coverage tests use the closed neighborhoods in $G$. A negative budget gives NO, and an empty demand set with nonnegative budget gives YES.
+
+Whenever some $v\in A$ covers at least $D$ vertices of $U$, choose the first such vertex in a fixed order and branch on including or excluding it. Both branches remove $v$ from $A$. Inclusion also removes its covered vertices from $U$ and decreases the budget. These branches exhaust all covers of the residual instance. Each root-to-leaf path has length at most $n$ and includes at most $\lfloor n/D\rfloor$ vertices, since their newly covered demands are disjoint. Record inclusion as $1$ and exclusion as $0$. The branch strings of leaves are prefix-free, so padding them to $n$ bits with zeros is injective. Thus the number of leaves is at most
+\[
+\sum_{i=0}^{\lfloor n/D\rfloor}\binom{n}{i}
+\le (n+1)^{1+\lfloor n/D\rfloor}.
+\]
+The number of nodes is at most $n+1$ times the number of leaves. Polynomial work per node gives total branching overhead $2^{O(n^{1-\alpha}\log(n+2))}B^{O(1)}$.
+
+At each leaf without an immediate answer, introduce an indicator for each vertex in $A$. For every vertex in $U$, require that at least one available vertex covering it is selected. The coverage clauses have at most $nD$ literal occurrences in total, since every available vertex covers fewer than $D$ remaining demands. A demand with no available cover gives NO directly. To enforce the budget, sum the indicators in a binary counter of width $\lceil\log_2(n+1)\rceil$ and compare the result with the remaining budget. Serial ripple-carry additions and the comparison use $O(n\log(n+2))$ bounded-fan-in gates. Encode each gate's truth table by a constant number of clauses and assert the output of the comparison. The counter is wide enough to store every partial sum. The CNF is satisfiable exactly when the residual instance has a cover within budget.
+
+After relabeling, the variable names use $O(\log(n+2))$ bits each and the formula has length
+\[
+O(nD\log(n+2)+n\log^2(n+2)).
+\]
+All preprocessing and per-leaf construction take polynomial time in $B$. The graph is a YES instance if some branch returns YES or some leaf formula is satisfiable. The exponent in the total running time is bounded by
+\[
+O\bigl(n^{1-\alpha}\log(n+2)+
+ n^{(1+\alpha)(1-\eta)}\log^2(n+2)\bigr).
+\]
+The two powers of $n$ are strictly below one. Hence for some fixed $\varepsilon\in(0,1)$ the resulting \textsc{Dominating Set} algorithm runs in $2^{O(n^{1-\varepsilon})}B^{O(1)}$ time.
+\end{proof}
+
+\begin{thebibliography}{1}
+\bibitem{sh} MIT Hardness Group, Josh Brunner, Erik D. Demaine, Fabian Frei, Timothy Gomez, Markus Hecher, Jeffery Li, and Jayson Lynch.
+\emph{ETH is Dead, Long Live SH}. \href{https://arxiv.org/abs/2611.02650v2}{arXiv:2611.02650v2}, 2026. Definition of SH and Lemma~2.1.
+\end{thebibliography}
+\end{document}

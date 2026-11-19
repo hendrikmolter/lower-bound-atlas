@@ -1,0 +1,233 @@
+{
+  "id": "distinct-vectors-budget",
+  "revision": 3,
+  "title": "Distinct Vectors",
+  "kind": "lower-bound-case",
+  "aliases": [
+    "Binary Distinct Vectors",
+    "Binary Test Cover"
+  ],
+  "variant": "Selecting columns of a binary matrix",
+  "task": "Decide whether at most k columns distinguish all pairs of rows.",
+  "encoding": "Explicit binary matrix with m rows and n columns and an integer budget k.",
+  "parameter": "Number of selected columns k",
+  "coverage": "The published ETH bound and the fixed-coefficient bound under FPT ≠ W[1] for the column budget.",
+  "bounds": [
+    {
+      "id": "dv-eth-column-budget",
+      "revision": 1,
+      "statement": "Under ETH, no deterministic algorithm decides Distinct Vectors within the stated running time.",
+      "runtime": "2^(O(2^(c k))) (m+n)^(O(1))",
+      "inputFactor": "(m+n)^(O(1))",
+      "status": "established",
+      "provenance": "literature",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "assumptionOperator": "all",
+      "sources": [
+        {
+          "paperId": "ps2020",
+          "editionId": "journal",
+          "locator": "Theorem 1, p. 1",
+          "role": "benchmark",
+          "placement": "statement"
+        }
+      ],
+      "proofs": [],
+      "assessments": {
+        "eth": {
+          "hypothesisRevision": 1,
+          "forward": {
+            "status": "unassessed",
+            "evidence": []
+          },
+          "converse": {
+            "status": "unassessed",
+            "evidence": []
+          }
+        },
+        "sh": {
+          "hypothesisRevision": 1,
+          "forward": {
+            "status": "unassessed",
+            "evidence": []
+          },
+          "converse": {
+            "status": "unassessed",
+            "evidence": []
+          }
+        }
+      },
+      "reader": {
+        "revision": 1,
+        "label": "Double-exponential bound"
+      },
+      "inputConditions": [],
+      "runtimeSymbols": [
+        "k",
+        "m",
+        "n"
+      ],
+      "qualifications": [
+        "For every fixed ε > 0, let c = 1/2 − ε."
+      ]
+    },
+    {
+      "id": "dv-w1-fixed-coefficient",
+      "revision": 1,
+      "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Distinct Vectors within the stated running time.",
+      "runtime": "2^(O(2^(γ k))) N^(O(1))",
+      "inputFactor": "N^(O(1))",
+      "status": "established",
+      "provenance": "atlas",
+      "assumptions": [
+        {
+          "id": "w1",
+          "revision": 1
+        }
+      ],
+      "assumptionOperator": "all",
+      "sources": [
+        {
+          "paperId": "df1995",
+          "editionId": "journal",
+          "locator": "Independent Set completeness, with Clique by complementation",
+          "role": "source completeness",
+          "placement": "proof"
+        },
+        {
+          "paperId": "lin2019",
+          "editionId": "proceedings",
+          "locator": "Lemma 14",
+          "role": "source reduction",
+          "placement": "proof"
+        },
+        {
+          "paperId": "froese2012",
+          "editionId": "thesis",
+          "locator": "Section 4.1.1, Theorem 4.1, pp. 33–34",
+          "role": "address construction",
+          "placement": "proof"
+        }
+      ],
+      "proofs": [
+        {
+          "proofId": "distinct-vectors-fixed-coefficient",
+          "revision": 1,
+          "theorem": "dv-fixed-coefficient"
+        }
+      ],
+      "assessments": {
+        "eth": {
+          "hypothesisRevision": 1,
+          "forward": {
+            "status": "unassessed",
+            "evidence": []
+          },
+          "converse": {
+            "status": "unassessed",
+            "evidence": []
+          }
+        },
+        "sh": {
+          "hypothesisRevision": 1,
+          "forward": {
+            "status": "unassessed",
+            "evidence": []
+          },
+          "converse": {
+            "status": "unassessed",
+            "evidence": []
+          }
+        }
+      },
+      "reader": {
+        "revision": 1,
+        "label": "Double-exponential bound"
+      },
+      "inputConditions": [],
+      "runtimeSymbols": [
+        "k",
+        "N"
+      ],
+      "qualifications": [
+        "For every fixed 0 < γ < 1."
+      ]
+    }
+  ],
+  "resolutions": [],
+  "reader": {
+    "parameterLabel": "Number of selected columns",
+    "parameter": "The column budget k.",
+    "symbols": [
+      {
+        "symbol": "m",
+        "meaning": "number of rows"
+      },
+      {
+        "symbol": "n",
+        "meaning": "number of columns"
+      },
+      {
+        "symbol": "N",
+        "meaning": "input length in bits, including the binary column budget"
+      }
+    ],
+    "boundContext": "The binary matrix has m rows and n columns; k is the column budget.",
+    "parameterSymbols": [
+      {
+        "symbol": "k",
+        "meaning": "maximum number of selected columns"
+      }
+    ]
+  },
+  "inputConditions": [
+    {
+      "id": "distinct-rows",
+      "level": "problem",
+      "condition": "The rows are pairwise distinct."
+    }
+  ],
+  "recoveryAssessments": [
+    {
+      "target": {
+        "id": "dv-eth-column-budget",
+        "revision": 1
+      },
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "recovery": {
+        "id": "dv-w1-fixed-coefficient",
+        "revision": 1
+      },
+      "scale": "full",
+      "effective": false,
+      "targetScale": "2^(c k), c=1/2−ε",
+      "recoveredScale": "2^(γ k), 0 < γ < 1",
+      "comparison": "For any fixed c below 1/2, choose γ strictly between max(0,c) and 1. The W[1] bound then excludes the full historical running-time family for the same binary matrices and column budgets.",
+      "evidence": [
+        {
+          "proofId": "distinct-vectors-fixed-coefficient",
+          "revision": 1,
+          "theorem": "dv-fixed-coefficient"
+        },
+        {
+          "paperId": "ps2020",
+          "editionId": "journal",
+          "locator": "Theorem 1, p. 1",
+          "role": "benchmark",
+          "placement": "statement"
+        }
+      ]
+    }
+  ],
+  "problemId": "distinct-vectors",
+  "problemRevision": 1,
+  "problemDefinitionHash": "da29b648fc0b00df95164f86cd2dad9b07223e338b680d8e70f867bf81297225"
+}

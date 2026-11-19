@@ -1,0 +1,253 @@
+{
+  "aliases": [
+    "book-fvs-graph-size"
+  ],
+  "bounds": [
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "id": "feedback-vertex-set-graph-size-eth",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "label": "Subexponential-time bound",
+        "revision": 1,
+        "title": "Feedback Vertex Set under ETH: Subexponential-time bound"
+      },
+      "revision": 1,
+      "runtime": "2^(o(s)) B^(O(1))",
+      "runtimeSymbols": [
+        "s",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "book",
+          "locator": "Theorem 14.6, p. 473 and Exercise 14.2(c), p. 515",
+          "paperId": "cygan2015",
+          "placement": "statement",
+          "role": "conditional lower bound"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm solves the stated decision problem within the stated running time.",
+      "status": "established"
+    },
+    {
+      "id": "feedback-vertex-set-graph-size-sh-cubic-line",
+      "revision": 1,
+      "statement": "Under SH, no deterministic algorithm decides Feedback Vertex Set within the stated running time.",
+      "runtime": "2^(O(s^(1−ε))) N^(O(1))",
+      "inputFactor": "N^(O(1))",
+      "runtimeSymbols": [
+        "s",
+        "ε",
+        "N"
+      ],
+      "qualifications": [
+        "For every fixed 0<ε<1."
+      ],
+      "inputConditions": [
+        "cubic-bipartite-root"
+      ],
+      "status": "established",
+      "provenance": "literature",
+      "assumptions": [
+        {
+          "id": "sh",
+          "revision": 1
+        }
+      ],
+      "assumptionOperator": "all",
+      "sources": [
+        {
+          "paperId": "akiyama-nishizeki-saito1980",
+          "editionId": "journal",
+          "locator": "Section 2 and Figures 1–5, pp. 73–75, before crossing replacement",
+          "placement": "forward",
+          "role": "source reduction from 3-SAT to cubic bipartite Hamiltonian Cycle with a required edge"
+        },
+        {
+          "paperId": "munaro2017-line-graphs",
+          "editionId": "journal",
+          "locator": "Theorems 21, 23 and 24 and Figure 5 (open author copy, §5, pp. 13–15)",
+          "placement": "forward",
+          "role": "local Hamiltonian Path reduction and line-graph budget identity"
+        },
+        {
+          "paperId": "sh26",
+          "editionId": "v2",
+          "locator": "Lemma 2.1 and Theorem 3.1, pp. 5–6 and 8",
+          "placement": "forward",
+          "role": "fixed-width size formulation and exponent transfer for the composed reduction"
+        }
+      ],
+      "proofs": [],
+      "reader": {
+        "revision": 1,
+        "label": "Fixed-power bound on cubic bipartite line graphs",
+        "title": "Fixed-power bound on cubic bipartite line graphs under SH",
+        "explanation": "The same construction keeps both the deletion budget and the sum of graph order and size linear in the variable-plus-clause count of the source formula.",
+        "historicalNote": [
+          "This bound follows by composing the cited reductions with the SH exponent transfer. The cubic bipartite graph before crossing replacement has linear size in the formula. The local path reduction adds a constant number of vertices, and the final line graph is four-regular with deletion budget one plus a third of its order."
+        ]
+      },
+      "assessments": {
+        "sh": {
+          "hypothesisRevision": 1,
+          "forward": {
+            "status": "established",
+            "evidence": [
+              {
+                "boundRevision": 1,
+                "hypothesisRevision": 1,
+                "reviewId": "feedback-vertex-set-graph-size-sh-cubic-line-source-review",
+                "source": {
+                  "paperId": "sh26",
+                  "editionId": "v2",
+                  "locator": "Lemma 2.1 and Theorem 3.1, pp. 5–6 and 8",
+                  "placement": "forward",
+                  "role": "fixed-width size formulation and exponent transfer for the composed reduction"
+                }
+              }
+            ]
+          },
+          "converse": {
+            "status": "unassessed",
+            "evidence": []
+          }
+        }
+      }
+    }
+  ],
+  "coverage": "Lower bounds for vertex-plus-edge count.",
+  "encoding": "A finite simple undirected graph G and a nonnegative integer budget k.",
+  "id": "feedback-vertex-set-graph-size",
+  "inputConditions": [
+    {
+      "id": "cubic-bipartite-root",
+      "condition": "The input is the line graph of a connected simple cubic bipartite graph. The root graph need not be supplied.",
+      "level": "bound"
+    }
+  ],
+  "kind": "lower-bound-case",
+  "parameter": "The sum of the numbers of vertices and edges s.",
+  "problemDefinitionHash": "09e27bd6f632865edef13554cd25eaf63637ed95ca1c1a506a9869810c6ad716",
+  "problemId": "feedback-vertex-set",
+  "problemRevision": 1,
+  "reader": {
+    "anchor": "feedback-vertex-set-graph-size",
+    "parameter": "The sum of the numbers of vertices and edges s.",
+    "parameterLabel": "Vertex-plus-edge count",
+    "parameterSymbols": [
+      {
+        "meaning": "sum of the numbers of vertices and edges",
+        "symbol": "s"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "complete explicit binary input length",
+        "symbol": "B"
+      },
+      {
+        "meaning": "solution budget",
+        "symbol": "k"
+      },
+      {
+        "symbol": "N",
+        "meaning": "complete binary input length, including a supplied certificate if present"
+      },
+      {
+        "symbol": "ε",
+        "meaning": "fixed positive exponent saving"
+      }
+    ]
+  },
+  "resolutions": [],
+  "revision": 3,
+  "task": "Can at most k vertices be deleted so that the remaining graph is a forest?",
+  "title": "Feedback Vertex Set by vertex-plus-edge count",
+  "variant": "Feedback Vertex Set",
+  "recoveryAssessments": [
+    {
+      "target": {
+        "id": "feedback-vertex-set-graph-size-eth",
+        "revision": 1
+      },
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "recovery": {
+        "id": "feedback-vertex-set-graph-size-sh-cubic-line",
+        "revision": 1
+      },
+      "scale": "degree",
+      "effective": false,
+      "targetScale": "s",
+      "recoveredScale": "s^(1−ε)",
+      "comparison": "For every separately fixed positive saving below one, the SH bound excludes the corresponding power of the same parameter. The cubic bipartite line graphs are valid historical inputs, and their explicit encodings have polynomial size in the source formula.",
+      "evidence": [
+        {
+          "paperId": "akiyama-nishizeki-saito1980",
+          "editionId": "journal",
+          "locator": "Section 2 and Figures 1–5, pp. 73–75, before crossing replacement",
+          "placement": "forward",
+          "role": "source reduction from 3-SAT to cubic bipartite Hamiltonian Cycle with a required edge"
+        },
+        {
+          "paperId": "munaro2017-line-graphs",
+          "editionId": "journal",
+          "locator": "Theorems 21, 23 and 24 and Figure 5 (open author copy, §5, pp. 13–15)",
+          "placement": "forward",
+          "role": "local Hamiltonian Path reduction and line-graph budget identity"
+        },
+        {
+          "paperId": "sh26",
+          "editionId": "v2",
+          "locator": "Lemma 2.1 and Theorem 3.1, pp. 5–6 and 8",
+          "placement": "forward",
+          "role": "fixed-width size formulation and exponent transfer for the composed reduction"
+        }
+      ]
+    }
+  ],
+  "reviews": [
+    {
+      "id": "feedback-vertex-set-graph-size-sh-cubic-line-source-review",
+      "type": "agent",
+      "date": "2026-11-18",
+      "reviewer": "Codex agent /root/apply_novelty",
+      "verdict": "verified",
+      "scope": "Checked the SH consequence of the cited published reductions by vertices plus edges. Checked the connected simple cubic bipartite root, the linear parameter blowup, and polynomial complete encoding length.",
+      "evidence": "evidence/fvs-cubic-line-source-transfer.md",
+      "object": {
+        "type": "bound",
+        "caseId": "feedback-vertex-set-graph-size",
+        "id": "feedback-vertex-set-graph-size-sh-cubic-line",
+        "revision": 1
+      }
+    }
+  ]
+}

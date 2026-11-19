@@ -1,0 +1,89 @@
+{
+  "aliases": [],
+  "bounds": [
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "id": "cluster-editing-size-eth",
+      "inputConditions": [
+        "degree-six"
+      ],
+      "inputFactor": "Included in the displayed running time",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "explanation": "The reduction produces normalized explicit instances whose encoding size is polynomial in the source formula size. Its hardness proof also excludes adding a fixed polynomial input factor.",
+        "label": "Subexponential bound in the number of edges",
+        "revision": 1,
+        "title": "Subexponential bound in the number of edges under ETH"
+      },
+      "revision": 1,
+      "runtime": "2^(o(m))",
+      "runtimeSymbols": [
+        "m"
+      ],
+      "sources": [
+        {
+          "paperId": "ku2012-cluster-editing",
+          "editionId": "journal",
+          "locator": "Theorem 2 and proof, §2, pp. 2263–2264",
+          "role": "published lower bound",
+          "placement": "statement"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm solves Cluster Editing within the stated running time.",
+      "status": "established"
+    }
+  ],
+  "coverage": "Published lower bounds.",
+  "encoding": "An explicitly encoded finite simple undirected graph G and a nonnegative integer edit budget k.",
+  "id": "cluster-editing-size",
+  "inputConditions": [
+    {
+      "condition": "The input graph has maximum degree at most six.",
+      "id": "degree-six",
+      "level": "bound"
+    }
+  ],
+  "kind": "lower-bound-case",
+  "parameter": "The number of edges in the input graph m.",
+  "problemDefinitionHash": "fa82c88e8303ad7c33e1a31b04830c01adefc9fadf34fab05582692bd7fbbf1f",
+  "problemId": "cluster-editing",
+  "problemRevision": 1,
+  "reader": {
+    "anchor": "cluster-editing-size",
+    "parameter": "The number of edges in the input graph m.",
+    "parameterLabel": "Number of edges",
+    "parameterSymbols": [
+      {
+        "meaning": "number of edges in the input graph",
+        "symbol": "m"
+      }
+    ],
+    "symbols": []
+  },
+  "resolutions": [],
+  "revision": 2,
+  "task": "Can G be turned into a disjoint union of cliques by adding or deleting a total of at most k edges?",
+  "title": "Cluster Editing by number of edges",
+  "variant": "Cluster Editing"
+}

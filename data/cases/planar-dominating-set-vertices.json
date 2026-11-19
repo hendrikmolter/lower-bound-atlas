@@ -1,0 +1,167 @@
+{
+  "id": "planar-dominating-set-vertices",
+  "revision": 1,
+  "problemId": "planar-dominating-set",
+  "problemRevision": 1,
+  "problemDefinitionHash": "6a2a9c1efe251ffa3c13dc493e915dd53947c4a408127119737c4a5c9cafce20",
+  "title": "Planar Dominating Set by number of vertices",
+  "kind": "lower-bound-case",
+  "aliases": [],
+  "variant": "Planar Dominating Set",
+  "task": "Is there a set of at most k vertices that meets the closed neighborhood of every vertex?",
+  "encoding": "An explicitly encoded finite simple undirected planar graph G and a nonnegative integer k.",
+  "parameter": "The number of vertices n.",
+  "inputConditions": [],
+  "coverage": "Literature bounds.",
+  "bounds": [
+    {
+      "runtime": "2^(o(n^(1/2))) B^(O(1))",
+      "inputFactor": "B^(O(1))",
+      "runtimeSymbols": [
+        "n",
+        "B"
+      ],
+      "qualifications": [],
+      "inputConditions": [],
+      "sources": [
+        {
+          "paperId": "lms2011",
+          "editionId": "bulletin",
+          "locator": "Text after Theorem 3.5, p. 52",
+          "placement": "statement",
+          "role": "lower-bound statement"
+        },
+        {
+          "paperId": "cygan2015",
+          "editionId": "book",
+          "locator": "Theorem 14.9 and Exercise 14.3(b), pp. 475, 516–517",
+          "placement": "statement",
+          "role": "lower-bound statement"
+        }
+      ],
+      "reader": {
+        "label": "Square-root exponent",
+        "revision": 1
+      },
+      "revision": 1,
+      "provenance": "literature",
+      "status": "established",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "assumptionOperator": "all",
+      "proofs": [],
+      "id": "planar-dominating-set-vertices-eth",
+      "statement": "Under ETH, no deterministic algorithm solves Planar Dominating Set within the stated running time."
+    },
+    {
+      "runtime": "2^(O(n^(1/2−ε))) B^(O(1))",
+      "inputFactor": "B^(O(1))",
+      "runtimeSymbols": [
+        "n",
+        "B",
+        "ε"
+      ],
+      "qualifications": [
+        "Separately for each fixed 0 < ε < 1/2."
+      ],
+      "inputConditions": [],
+      "sources": [
+        {
+          "paperId": "szeider2026",
+          "editionId": "oct30",
+          "locator": "Table 1, Weak ETH row",
+          "placement": "statement",
+          "role": "lower-bound statement"
+        }
+      ],
+      "reader": {
+        "label": "Every fixed power below one half",
+        "revision": 1
+      },
+      "revision": 1,
+      "provenance": "literature",
+      "status": "established",
+      "assumptions": [
+        {
+          "id": "sh",
+          "revision": 1
+        }
+      ],
+      "assumptionOperator": "all",
+      "proofs": [],
+      "id": "planar-dominating-set-vertices-sh",
+      "statement": "Under SH, no deterministic algorithm solves Planar Dominating Set within the stated running time."
+    }
+  ],
+  "resolutions": [],
+  "reader": {
+    "anchor": "vertices",
+    "parameterLabel": "Number of vertices",
+    "parameter": "The number of vertices n.",
+    "parameterSymbols": [
+      {
+        "symbol": "n",
+        "meaning": "number of vertices"
+      }
+    ],
+    "symbols": [
+      {
+        "symbol": "B",
+        "meaning": "complete input length in bits"
+      },
+      {
+        "symbol": "ε",
+        "meaning": "fixed exponent loss"
+      }
+    ],
+    "boundContext": "The number of vertices n. Here B denotes complete input length in bits, ε denotes fixed exponent loss."
+  },
+  "recoveryAssessments": [
+    {
+      "target": {
+        "id": "planar-dominating-set-vertices-eth",
+        "revision": 1
+      },
+      "recovery": {
+        "id": "planar-dominating-set-vertices-sh",
+        "revision": 1
+      },
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "scale": "degree",
+      "targetScale": "n^(1/2)",
+      "recoveredScale": "n^(1/2−ε)",
+      "comparison": "The SH bound excludes every fixed positive power below one half in the exponent of the same parameter.",
+      "effective": false,
+      "evidence": [
+        {
+          "paperId": "lms2011",
+          "editionId": "bulletin",
+          "locator": "Text after Theorem 3.5, p. 52",
+          "placement": "statement",
+          "role": "lower-bound statement"
+        },
+        {
+          "paperId": "cygan2015",
+          "editionId": "book",
+          "locator": "Theorem 14.9 and Exercise 14.3(b), pp. 475, 516–517",
+          "placement": "statement",
+          "role": "lower-bound statement"
+        },
+        {
+          "paperId": "szeider2026",
+          "editionId": "oct30",
+          "locator": "Table 1, Weak ETH row",
+          "placement": "statement",
+          "role": "lower-bound statement"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,360 @@
+{
+  "aliases": [
+    "lms-clique-xp"
+  ],
+  "bounds": [
+    {
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "id": "clique-budget-eth",
+      "inputConditions": [],
+      "inputFactor": "n is the base of the exponent",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [
+        "The bound excludes every computable prefactor f."
+      ],
+      "reader": {
+        "explanation": "The original theorem uses the full instance measure and subexponential solvability of SNP. For explicit graphs after oversized thresholds are decided directly, the encoding length and graph order are polynomially related. The survey and textbook state the graph-order ETH form.",
+        "label": "Exponent sublinear in the solution size",
+        "revision": 1,
+        "title": "Clique by solution size under ETH"
+      },
+      "revision": 1,
+      "runtime": "f(k) n^(o(k))",
+      "runtimeSymbols": [
+        "f",
+        "k",
+        "n"
+      ],
+      "sources": [
+        {
+          "editionId": "journal",
+          "locator": "Theorem 5.5, p. 1360",
+          "paperId": "chkx2006",
+          "placement": "statement",
+          "role": "SNP-based lower bound"
+        },
+        {
+          "editionId": "bulletin",
+          "locator": "Theorem 5.1, p. 57",
+          "paperId": "lms2011",
+          "placement": "statement",
+          "role": "explicit ETH formulation"
+        },
+        {
+          "editionId": "book",
+          "locator": "Theorem 14.21, pp. 485–487",
+          "paperId": "cygan2015",
+          "placement": "statement",
+          "role": "clause-grouping proof"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm decides Clique within the stated running time.",
+      "status": "established"
+    },
+    {
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "sh",
+          "revision": 1
+        }
+      ],
+      "id": "clique-budget-sh",
+      "inputConditions": [],
+      "inputFactor": "n is the base of the data-dependent factor",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [
+        "For each fixed ε strictly between zero and 1."
+      ],
+      "reader": {
+        "explanation": "The fixed-power savings apply with a prefactor bounded by an exponential of a fixed polynomial in k.",
+        "label": "Fixed power saving in the solution size",
+        "revision": 1,
+        "title": "Clique by solution size under SH"
+      },
+      "revision": 1,
+      "runtime": "2^(k^(O(1))) n^(O(k^(1−ε)))",
+      "runtimeSymbols": [
+        "k",
+        "n",
+        "ε"
+      ],
+      "sources": [
+        {
+          "editionId": "notes",
+          "locator": "Theorem 3",
+          "paperId": "koutecky2026-hard-side",
+          "placement": "statement",
+          "role": "SH lower bound"
+        }
+      ],
+      "statement": "Under SH, no deterministic algorithm decides Clique within the stated running time.",
+      "status": "established"
+    },
+    {
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "w1",
+          "revision": 1
+        }
+      ],
+      "hardnessBaseline": "W[1]",
+      "id": "clique-budget-w1",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [
+        "The bound excludes every computable prefactor f."
+      ],
+      "reader": {
+        "explanation": "W[1]-completeness applies to the threshold decision question because a clique of size at least k has a subset of exactly k vertices.",
+        "label": "Fixed-parameter tractability",
+        "revision": 2,
+        "title": "Clique by solution size under FPT ≠ W[1]"
+      },
+      "revision": 2,
+      "runtime": "f(k) B^(O(1))",
+      "runtimeSymbols": [
+        "f",
+        "k",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "journal",
+          "locator": "Corollary 3.2 and Theorem 3.1",
+          "paperId": "df1995",
+          "placement": "statement",
+          "role": "W[1]-completeness"
+        }
+      ],
+      "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Clique within the stated running time.",
+      "status": "established",
+      "assessments": {
+        "w1": {
+          "hypothesisRevision": 1,
+          "forward": {
+            "status": "established",
+            "evidence": [
+              {
+                "boundRevision": 2,
+                "hypothesisRevision": 1,
+                "reviewId": "clique-budget-w1-equivalence-review",
+                "source": {
+                  "paperId": "df1995",
+                  "editionId": "journal",
+                  "locator": "Corollary 3.2",
+                  "role": "W[1]-hardness",
+                  "placement": "forward"
+                }
+              }
+            ]
+          },
+          "converse": {
+            "status": "established",
+            "evidence": [
+              {
+                "boundRevision": 2,
+                "hypothesisRevision": 1,
+                "reviewId": "clique-budget-w1-equivalence-review",
+                "source": {
+                  "paperId": "df1995",
+                  "editionId": "journal",
+                  "locator": "Corollary 3.2",
+                  "role": "membership in W[1]",
+                  "placement": "proof"
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "kxk",
+          "revision": 1
+        }
+      ],
+      "id": "clique-budget-kxk",
+      "inputConditions": [],
+      "inputFactor": "n is the base of the exponent",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [
+        "The bound excludes every computable prefactor f."
+      ],
+      "reader": {
+        "label": "Exponent sublinear in the solution size",
+        "revision": 1,
+        "title": "Clique by solution size under the k × k Clique Hypothesis"
+      },
+      "revision": 1,
+      "runtime": "f(k) n^(o(k))",
+      "runtimeSymbols": [
+        "f",
+        "k",
+        "n"
+      ],
+      "sources": [
+        {
+          "editionId": "v3",
+          "locator": "Proposition 1, Section 3 and Table 1, second row",
+          "paperId": "szeider2026",
+          "placement": "statement",
+          "role": "benchmark"
+        }
+      ],
+      "statement": "Under the k × k Clique Hypothesis, no deterministic algorithm decides Clique within the stated running time.",
+      "status": "established"
+    }
+  ],
+  "coverage": "Selected literature bounds for this parameterization.",
+  "encoding": "Explicit binary graph encoding with individually represented vertices and a binary solution threshold. B is the complete input length.",
+  "id": "clique-budget",
+  "inputConditions": [
+    {
+      "condition": "The graph is finite, simple, undirected, and unweighted.",
+      "id": "graph-class",
+      "level": "problem"
+    }
+  ],
+  "kind": "lower-bound-case",
+  "parameter": "The requested clique size k.",
+  "problemDefinitionHash": "30ef1009ee1cd0125696d5790a6401bf89509b4d4df2fc689ee018aae1f571f0",
+  "problemId": "clique",
+  "problemRevision": 1,
+  "reader": {
+    "anchor": "solution-size",
+    "parameter": "The requested clique size k.",
+    "parameterLabel": "Solution size",
+    "parameterSymbols": [
+      {
+        "meaning": "requested clique size",
+        "symbol": "k"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "number of vertices",
+        "symbol": "n"
+      },
+      {
+        "meaning": "complete input length in bits",
+        "symbol": "B"
+      },
+      {
+        "meaning": "a computable parameter-dependent prefactor",
+        "symbol": "f"
+      },
+      {
+        "meaning": "a fixed positive saving in the exponent",
+        "symbol": "ε"
+      }
+    ]
+  },
+  "resolutions": [],
+  "revision": 6,
+  "task": "Does G contain at least k pairwise adjacent vertices?",
+  "title": "Clique by solution size",
+  "variant": "Clique",
+  "reviews": [
+    {
+      "id": "clique-budget-w1-equivalence-review",
+      "type": "agent",
+      "date": "2026-11-18",
+      "reviewer": "Codex parent agent",
+      "verdict": "verified",
+      "scope": "Both directions of the ordinary no-FPT exclusion with the exact budget parameter and full input factor.",
+      "evidence": "evidence/clique-literature-equivalences.md",
+      "object": {
+        "type": "bound",
+        "caseId": "clique-budget",
+        "id": "clique-budget-w1",
+        "revision": 2
+      },
+      "independent": true
+    }
+  ],
+  "recoveryDispositions": [
+    {
+      "target": {
+        "id": "clique-budget-eth",
+        "revision": 1
+      },
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "recovery": {
+        "id": "clique-budget-sh",
+        "revision": 1
+      },
+      "reason": "SH excludes only fixed power savings in the graph-order exponent and prefactors bounded by an exponential of a fixed polynomial in k. The historical exclusion allows a rate such as k/log₂(k+2) and every computable prefactor."
+    },
+    {
+      "target": {
+        "id": "clique-budget-eth",
+        "revision": 1
+      },
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "recovery": {
+        "id": "clique-budget-w1",
+        "revision": 2
+      },
+      "reason": "The exclusion bounds the graph-order exponent by an arbitrary fixed constant. The historical exclusion allows that exponent to grow as any sublinear function of k."
+    }
+  ],
+  "recoveryAssessments": [
+    {
+      "target": {
+        "id": "clique-budget-eth",
+        "revision": 1
+      },
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "recovery": {
+        "id": "clique-budget-kxk",
+        "revision": 1
+      },
+      "scale": "full",
+      "effective": false,
+      "targetScale": "f(k) n^(o(k))",
+      "recoveredScale": "f(k) n^(o(k))",
+      "comparison": "The historical and square-hypothesis bounds exclude the same unrestricted deterministic time family, with total graph order as the exponent base and every computable prefactor.",
+      "evidence": [
+        {
+          "editionId": "bulletin",
+          "locator": "Theorem 5.1, p. 57",
+          "paperId": "lms2011",
+          "placement": "statement",
+          "role": "explicit ETH formulation"
+        },
+        {
+          "editionId": "v3",
+          "locator": "Proposition 1, Section 3 and Table 1, second row",
+          "paperId": "szeider2026",
+          "placement": "statement",
+          "role": "benchmark"
+        }
+      ]
+    }
+  ]
+}

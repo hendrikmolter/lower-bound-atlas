@@ -1,0 +1,94 @@
+{
+  "aliases": [],
+  "bounds": [
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "id": "cluster-editing-budget-eth",
+      "inputConditions": [
+        "degree-six"
+      ],
+      "inputFactor": "n^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "label": "Subexponential bound in the edit budget",
+        "revision": 1,
+        "title": "Subexponential bound in the edit budget under ETH"
+      },
+      "revision": 1,
+      "runtime": "2^(o(k)) n^(O(1))",
+      "runtimeSymbols": [
+        "k",
+        "n"
+      ],
+      "sources": [
+        {
+          "paperId": "ku2012-cluster-editing",
+          "editionId": "journal",
+          "locator": "Theorem 2 and proof, §2, pp. 2263–2264",
+          "role": "published lower bound",
+          "placement": "statement"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm solves Cluster Editing within the stated running time.",
+      "status": "established"
+    }
+  ],
+  "coverage": "Published lower bounds.",
+  "encoding": "An explicitly encoded finite simple undirected graph G and a nonnegative integer edit budget k.",
+  "id": "cluster-editing-budget",
+  "inputConditions": [
+    {
+      "condition": "The input graph has maximum degree at most six.",
+      "id": "degree-six",
+      "level": "bound"
+    }
+  ],
+  "kind": "lower-bound-case",
+  "parameter": "The maximum number of edge additions and deletions k.",
+  "problemDefinitionHash": "fa82c88e8303ad7c33e1a31b04830c01adefc9fadf34fab05582692bd7fbbf1f",
+  "problemId": "cluster-editing",
+  "problemRevision": 1,
+  "reader": {
+    "anchor": "cluster-editing-budget",
+    "parameter": "The maximum number of edge additions and deletions k.",
+    "parameterLabel": "Edge-edit budget",
+    "parameterSymbols": [
+      {
+        "meaning": "maximum number of edge additions and deletions",
+        "symbol": "k"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "number of vertices in the input graph",
+        "symbol": "n"
+      }
+    ]
+  },
+  "resolutions": [],
+  "revision": 2,
+  "task": "Can G be turned into a disjoint union of cliques by adding or deleting a total of at most k edges?",
+  "title": "Cluster Editing by edge-edit budget",
+  "variant": "Cluster Editing"
+}

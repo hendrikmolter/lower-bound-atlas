@@ -1,0 +1,138 @@
+{
+  "aliases": [],
+  "bounds": [
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "id": "minimum-common-string-partition-binary-eth",
+      "inputConditions": [
+        "binary-alphabet"
+      ],
+      "inputFactor": "Included in the displayed running time",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "label": "Binary-alphabet bound in n / log n",
+        "revision": 1,
+        "title": "Binary-alphabet bound in n / log n under ETH"
+      },
+      "revision": 1,
+      "runtime": "2^(o(n / log₂ n))",
+      "runtimeSymbols": [
+        "n"
+      ],
+      "sources": [
+        {
+          "editionId": "proceedings",
+          "locator": "Theorem 10 and proof, pp. 35:14–35:15",
+          "paperId": "cygan-et-al2021-mcsp",
+          "placement": "statement",
+          "role": "published lower bound"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm solves Minimum Common String Partition within the stated running time.",
+      "status": "established"
+    },
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "id": "minimum-common-string-partition-general-eth",
+      "inputConditions": [],
+      "inputFactor": "Included in the displayed running time",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "explanation": "This reduction allows the alphabet to grow with the instance. Its symbols have polynomial-size explicit encodings.",
+        "label": "Subexponential bound in the common string length",
+        "revision": 1,
+        "title": "Subexponential bound in the common string length under ETH"
+      },
+      "revision": 1,
+      "runtime": "2^(o(n))",
+      "runtimeSymbols": [
+        "n"
+      ],
+      "sources": [
+        {
+          "editionId": "proceedings",
+          "locator": "Lemma 9, p. 35:13",
+          "paperId": "cygan-et-al2021-mcsp",
+          "placement": "statement",
+          "role": "published lower bound"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm solves Minimum Common String Partition within the stated running time.",
+      "status": "established"
+    }
+  ],
+  "coverage": "Published lower bounds.",
+  "encoding": "Two explicit strings of the same length n over a common alphabet and a nonnegative integer block budget b.",
+  "id": "minimum-common-string-partition-length",
+  "inputConditions": [
+    {
+      "condition": "Both strings use a fixed binary alphabet.",
+      "id": "binary-alphabet",
+      "level": "bound"
+    }
+  ],
+  "kind": "lower-bound-case",
+  "parameter": "The length of either input string n.",
+  "problemDefinitionHash": "ae152fb6338f1b7b496810e1596398b243dfc04258a95c93d160f18b75ada215",
+  "problemId": "minimum-common-string-partition",
+  "problemRevision": 1,
+  "reader": {
+    "anchor": "minimum-common-string-partition-length",
+    "parameter": "The length of either input string n.",
+    "parameterLabel": "Common string length",
+    "parameterSymbols": [
+      {
+        "meaning": "length of either input string",
+        "symbol": "n"
+      }
+    ],
+    "symbols": []
+  },
+  "resolutions": [],
+  "revision": 3,
+  "task": "Can the first string be partitioned into at most b nonempty contiguous blocks that can be permuted and concatenated to form the second string?",
+  "title": "Minimum Common String Partition by common string length",
+  "variant": "Minimum Common String Partition"
+}

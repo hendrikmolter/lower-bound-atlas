@@ -1,0 +1,361 @@
+{
+  "aliases": [
+    "book-grid-tiling"
+  ],
+  "bounds": [
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "evidence": [],
+            "status": "unknown"
+          },
+          "forward": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1
+        },
+        "sh": {
+          "converse": {
+            "evidence": [],
+            "status": "unknown"
+          },
+          "forward": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "id": "grid-tiling-side-eth",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [
+        "The parameter factor f is an arbitrary computable function."
+      ],
+      "reader": {
+        "label": "Exponent in grid side",
+        "revision": 1,
+        "title": "Exponent in grid side under ETH"
+      },
+      "revision": 1,
+      "runtime": "f(k) n^(o(k)) B^(O(1))",
+      "runtimeSymbols": [
+        "k",
+        "n",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "book",
+          "locator": "Theorem 14.28, pp. 490–491",
+          "paperId": "cygan2015",
+          "placement": "statement",
+          "role": "benchmark"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm solves Grid Tiling within the stated running time.",
+      "status": "established"
+    },
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "evidence": [],
+            "status": "unknown"
+          },
+          "forward": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1
+        },
+        "sh": {
+          "converse": {
+            "evidence": [],
+            "status": "unknown"
+          },
+          "forward": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1
+        },
+        "w1": {
+          "hypothesisRevision": 1,
+          "forward": {
+            "status": "established",
+            "evidence": [
+              {
+                "reviewId": "grid-tiling-side-w1-hardness-scope",
+                "boundRevision": 2,
+                "hypothesisRevision": 1,
+                "source": {
+                  "paperId": "cygan2015",
+                  "editionId": "book",
+                  "locator": "Theorem 14.28, pp. 490–491, reduction from k-Clique",
+                  "placement": "forward",
+                  "role": "published hardness direction"
+                }
+              }
+            ]
+          },
+          "converse": {
+            "status": "established",
+            "evidence": [
+              {
+                "reviewId": "grid-tiling-w1-membership-independent",
+                "boundRevision": 2,
+                "hypothesisRevision": 1,
+                "proof": {
+                  "proofId": "six-w1-memberships",
+                  "revision": 1,
+                  "theorem": "grid-tiling-w1-membership"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "w1",
+          "revision": 1
+        }
+      ],
+      "hardnessBaseline": "W[1]",
+      "id": "grid-tiling-side-w1",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [
+        "The parameter factor f is an arbitrary computable function."
+      ],
+      "reader": {
+        "label": "Fixed-parameter tractability",
+        "revision": 2,
+        "title": "Fixed-parameter tractability under FPT ≠ W[1]"
+      },
+      "revision": 2,
+      "runtime": "f(k) B^(O(1))",
+      "runtimeSymbols": [
+        "k",
+        "B"
+      ],
+      "sources": [
+        {
+          "paperId": "cygan2015",
+          "editionId": "book",
+          "locator": "Theorem 14.28, pp. 490–491, reduction from k-Clique",
+          "placement": "forward",
+          "role": "published hardness direction"
+        },
+        {
+          "editionId": "book",
+          "locator": "Theorem 14.28, pp. 490–491 (reduction from k-Clique)",
+          "paperId": "cygan2015",
+          "placement": "statement",
+          "role": "benchmark"
+        }
+      ],
+      "statement": "Under FPT ≠ W[1], no deterministic algorithm solves Grid Tiling within the stated running time.",
+      "status": "established"
+    },
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "evidence": [],
+            "status": "unknown"
+          },
+          "forward": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1
+        },
+        "sh": {
+          "converse": {
+            "evidence": [],
+            "status": "unknown"
+          },
+          "forward": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "kxk",
+          "revision": 1
+        }
+      ],
+      "id": "grid-tiling-side-kxk",
+      "inputConditions": [],
+      "inputFactor": "n^(o(k))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [
+        "The parameter factor f is an arbitrary computable function."
+      ],
+      "reader": {
+        "label": "Exponent in grid side",
+        "revision": 1,
+        "title": "Exponent in grid side under the k × k Clique Hypothesis"
+      },
+      "revision": 1,
+      "runtime": "f(k) n^(o(k))",
+      "runtimeSymbols": [
+        "k",
+        "n"
+      ],
+      "sources": [
+        {
+          "editionId": "v3",
+          "locator": "Proposition 1 and Table 1",
+          "paperId": "szeider2026",
+          "placement": "statement",
+          "role": "benchmark"
+        },
+        {
+          "editionId": "oct30",
+          "locator": "§3, Proposition 1 and Table 1, second row",
+          "paperId": "szeider2026",
+          "placement": "statement",
+          "role": "benchmark"
+        }
+      ],
+      "statement": "Under the k × k Clique Hypothesis, no deterministic algorithm solves Grid Tiling within the stated running time.",
+      "status": "established"
+    }
+  ],
+  "coverage": "Published lower bounds for grid side.",
+  "encoding": "An explicitly listed k × k array of sets of ordered pairs from [n] × [n].",
+  "id": "grid-tiling-side",
+  "inputConditions": [],
+  "kind": "lower-bound-case",
+  "parameter": "Grid side.",
+  "problemDefinitionHash": "f67edac5c897744fb7d571069b699c00b04ad20a64f2a2d75aac437ddef14dd4",
+  "problemId": "grid-tiling",
+  "problemRevision": 1,
+  "reader": {
+    "anchor": "grid-side",
+    "parameter": "Grid side.",
+    "parameterLabel": "Grid side",
+    "parameterSymbols": [
+      {
+        "meaning": "side length of the grid",
+        "symbol": "k"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "bound on each coordinate",
+        "symbol": "n"
+      },
+      {
+        "meaning": "complete explicit binary input length",
+        "symbol": "B"
+      }
+    ]
+  },
+  "resolutions": [],
+  "revision": 5,
+  "task": "Can one choose one allowed pair per cell so that first coordinates agree along each row and second coordinates agree along each column?",
+  "title": "Grid Tiling by grid side",
+  "variant": "Grid Tiling",
+  "recoveryDispositions": [
+    {
+      "target": {
+        "id": "grid-tiling-side-eth",
+        "revision": 1
+      },
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "recovery": {
+        "id": "grid-tiling-side-w1",
+        "revision": 2
+      },
+      "reason": "Ordinary parameterized hardness excludes a fixed polynomial input exponent. The historical result excludes a growing little-o exponent."
+    }
+  ],
+  "recoveryAssessments": [
+    {
+      "target": {
+        "id": "grid-tiling-side-eth",
+        "revision": 1
+      },
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "recovery": {
+        "id": "grid-tiling-side-kxk",
+        "revision": 1
+      },
+      "scale": "full",
+      "effective": false,
+      "targetScale": "n^(o(k))",
+      "recoveredScale": "n^(o(k))",
+      "comparison": "The published transfer gives the same rate for the same problem and explicit input convention, including arbitrary computable parameter prefactors.",
+      "evidence": [
+        {
+          "editionId": "book",
+          "locator": "Theorem 14.28, pp. 490–491",
+          "paperId": "cygan2015",
+          "placement": "statement",
+          "role": "benchmark"
+        },
+        {
+          "editionId": "v3",
+          "locator": "Proposition 1 and Table 1",
+          "paperId": "szeider2026",
+          "placement": "statement",
+          "role": "benchmark"
+        },
+        {
+          "editionId": "oct30",
+          "locator": "§3, Proposition 1 and Table 1, second row",
+          "paperId": "szeider2026",
+          "placement": "statement",
+          "role": "benchmark"
+        }
+      ]
+    }
+  ],
+  "reviews": [
+    {
+      "id": "grid-tiling-side-w1-hardness-scope",
+      "type": "agent",
+      "date": "2026-11-18",
+      "reviewer": "Codex agent /root/population_c",
+      "verdict": "verified",
+      "scope": "The reduction from Clique in Theorem 14.28 lists the cell tables and preserves their side-length parameter. Its coordinate convention is interchangeable by swapping the two coordinates.",
+      "evidence": "evidence/six-w1-memberships-independent.md",
+      "object": {
+        "type": "bound",
+        "caseId": "grid-tiling-side",
+        "id": "grid-tiling-side-w1",
+        "revision": 2
+      },
+      "independent": true
+    }
+  ]
+}

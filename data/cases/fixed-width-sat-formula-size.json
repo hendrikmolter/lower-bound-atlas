@@ -1,0 +1,186 @@
+{
+  "aliases": [
+    "fixed-sat-size"
+  ],
+  "bounds": [
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "id": "fixed-width-sat-formula-size-eth",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [
+        "Separately for each fixed integer r ≥ 3."
+      ],
+      "reader": {
+        "explanation": "At fixed width, bounding s bounds the number of literal occurrences as well.",
+        "label": "Subexponential-time bound",
+        "revision": 1,
+        "title": "Fixed-width SAT under ETH: Subexponential-time bound"
+      },
+      "revision": 1,
+      "runtime": "2^(o(s)) B^(O(1))",
+      "runtimeSymbols": [
+        "s",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "journal",
+          "locator": "Corollary 1",
+          "paperId": "ipz2001",
+          "placement": "statement",
+          "role": "variable-to-clause sparsification"
+        },
+        {
+          "editionId": "book",
+          "locator": "Theorems 14.4 and 14.6, pp. 472–473",
+          "paperId": "cygan2015",
+          "placement": "context",
+          "role": "exposition of sparsification consequences"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm solves the stated decision problem within the stated running time.",
+      "status": "established"
+    },
+    {
+      "assessments": {
+        "sh": {
+          "converse": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "sh",
+          "revision": 1
+        }
+      ],
+      "id": "fixed-width-sat-formula-size-sh",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [
+        "For each fixed integer r≥3 and each fixed 0<ε<1."
+      ],
+      "reader": {
+        "explanation": "At fixed width the sum of clauses and declared variables also bounds the number of literal occurrences.",
+        "label": "Fixed-power exclusion",
+        "revision": 1,
+        "title": "Fixed-width SAT under SH: Fixed-power exclusion"
+      },
+      "revision": 1,
+      "runtime": "2^(O(s^(1−ε))) B^(O(1))",
+      "runtimeSymbols": [
+        "s",
+        "r",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "v2",
+          "locator": "Lemma 2.1 and Corollaries 2.3 and 2.5",
+          "paperId": "sh26",
+          "placement": "statement",
+          "role": "conditional lower bound"
+        }
+      ],
+      "statement": "Under SH, no deterministic algorithm solves the stated decision problem within the stated running time.",
+      "status": "established"
+    }
+  ],
+  "coverage": "Lower bounds for total formula size.",
+  "encoding": "An explicit Boolean CNF formula with clauses of width at most r, for a separately fixed integer r ≥ 3.",
+  "id": "fixed-width-sat-formula-size",
+  "inputConditions": [],
+  "kind": "lower-bound-case",
+  "parameter": "The sum of the numbers of declared variables and clauses s.",
+  "problemDefinitionHash": "8424ac7d9705b6f6b387f27dd2bccac897639f5dcd7008cc58a6fc6617c7bc01",
+  "problemId": "fixed-width-sat-formula-size",
+  "problemRevision": 1,
+  "reader": {
+    "anchor": "fixed-width-sat-formula-size",
+    "parameter": "The sum of the numbers of declared variables and clauses s.",
+    "parameterLabel": "Total formula size",
+    "parameterSymbols": [
+      {
+        "meaning": "sum of the numbers of declared variables and clauses",
+        "symbol": "s"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "complete explicit binary input length",
+        "symbol": "B"
+      },
+      {
+        "meaning": "the fixed width bound",
+        "symbol": "r"
+      }
+    ]
+  },
+  "resolutions": [],
+  "revision": 3,
+  "task": "Does the formula have a satisfying assignment?",
+  "title": "Fixed-width SAT by total formula size",
+  "variant": "Fixed-width SAT",
+  "recoveryAssessments": [
+    {
+      "target": {
+        "id": "fixed-width-sat-formula-size-eth",
+        "revision": 1
+      },
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "recovery": {
+        "id": "fixed-width-sat-formula-size-sh",
+        "revision": 1
+      },
+      "scale": "degree",
+      "effective": false,
+      "targetScale": "s",
+      "recoveredScale": "s^(1−ε)",
+      "comparison": "The cited fixed-power exclusion preserves the task and input-polynomial factor, with the recorded power loss in the exponent.",
+      "evidence": [
+        {
+          "editionId": "v2",
+          "locator": "Lemma 2.1 and Corollaries 2.3 and 2.5",
+          "paperId": "sh26",
+          "placement": "statement",
+          "role": "conditional lower bound"
+        }
+      ]
+    }
+  ]
+}

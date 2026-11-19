@@ -1,0 +1,52 @@
+{
+  "id": "tutorial-polynomial-time",
+  "revision": 1,
+  "statement": "Under P ≠ NP there is no deterministic polynomial-time algorithm deciding 3-colorability of explicit finite simple graphs.",
+  "runtime": "B^(O(1))",
+  "runtimeSymbols": ["B"],
+  "qualifications": [],
+  "inputFactor": "B^(O(1))",
+  "status": "proposed",
+  "provenance": "literature",
+  "assumptions": [
+    {
+      "id": "tutorial-p-ne-np",
+      "revision": 1
+    }
+  ],
+  "assumptionOperator": "all",
+  "sources": [
+    {
+      "paperId": "tutorial-gjs76",
+      "editionId": "journal",
+      "locator": "Theorem 2.1 (3SAT to Graph 3-Colorability); Theorems 2.2–2.3 for the bounded-degree subclass",
+      "role": "literature lower bound via NP-completeness"
+    }
+  ],
+  "proofs": [],
+  "assessments": {
+    "eth": {
+      "hypothesisRevision": 1,
+      "forward": {
+        "status": "unassessed",
+        "evidence": []
+      },
+      "converse": {
+        "status": "unassessed",
+        "evidence": []
+      }
+    },
+    "sh": {
+      "hypothesisRevision": 1,
+      "forward": {
+        "status": "unassessed",
+        "evidence": []
+      },
+      "converse": {
+        "status": "unassessed",
+        "evidence": []
+      }
+    }
+  },
+  "inputConditions": []
+}

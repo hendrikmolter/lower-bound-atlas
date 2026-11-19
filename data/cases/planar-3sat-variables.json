@@ -1,0 +1,213 @@
+{
+  "aliases": [
+    "survey-sh07"
+  ],
+  "bounds": [
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "evidence": [],
+            "status": "unknown"
+          },
+          "forward": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1
+        },
+        "sh": {
+          "converse": {
+            "evidence": [],
+            "status": "unknown"
+          },
+          "forward": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "id": "planar-3sat-variables-eth",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "label": "Exponent in number of variables",
+        "revision": 1,
+        "title": "Exponent in number of variables under ETH"
+      },
+      "revision": 1,
+      "runtime": "2^(o(n^(1/2))) B^(O(1))",
+      "runtimeSymbols": [
+        "n",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "journal",
+          "locator": "Theorem 2, p. 333 (quadratic planarity reduction)",
+          "paperId": "lichtenstein1982",
+          "placement": "statement",
+          "role": "benchmark"
+        },
+        {
+          "editionId": "book",
+          "locator": "Theorem 14.8, p. 474 (quadratic bound on total variables and clauses)",
+          "paperId": "cygan2015",
+          "placement": "statement",
+          "role": "benchmark"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm solves Planar 3SAT within the stated running time.",
+      "status": "established"
+    },
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "evidence": [],
+            "status": "unknown"
+          },
+          "forward": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1
+        },
+        "sh": {
+          "converse": {
+            "evidence": [],
+            "status": "unknown"
+          },
+          "forward": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "sh",
+          "revision": 1
+        }
+      ],
+      "id": "planar-3sat-variables-sh",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [
+        "The exclusion holds separately for every fixed 0 < ε < 1/2."
+      ],
+      "reader": {
+        "label": "Fixed-power savings",
+        "revision": 1,
+        "title": "Fixed-power savings under SH"
+      },
+      "revision": 1,
+      "runtime": "2^(O(n^(1/2−ε))) B^(O(1))",
+      "runtimeSymbols": [
+        "n",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "v2",
+          "locator": "Table 1, Planar 3-SAT row",
+          "paperId": "sh26",
+          "placement": "statement",
+          "role": "benchmark"
+        }
+      ],
+      "statement": "Under SH, no deterministic algorithm solves Planar 3SAT within the stated running time.",
+      "status": "established"
+    }
+  ],
+  "coverage": "Published lower bounds for number of variables.",
+  "encoding": "An explicitly listed CNF formula with at most three literals per clause and a planar variable–clause incidence graph.",
+  "id": "planar-3sat-variables",
+  "inputConditions": [],
+  "kind": "lower-bound-case",
+  "parameter": "Number of variables.",
+  "problemDefinitionHash": "37e6a2369a54fce251d511ede0526547307fa3efbfddfee5f3dddb2dcdd685e0",
+  "problemId": "planar-3sat",
+  "problemRevision": 1,
+  "reader": {
+    "anchor": "number-of-variables",
+    "parameter": "Number of variables.",
+    "parameterLabel": "Number of variables",
+    "parameterSymbols": [
+      {
+        "meaning": "number of formula variables",
+        "symbol": "n"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "complete explicit binary input length",
+        "symbol": "B"
+      }
+    ]
+  },
+  "resolutions": [],
+  "revision": 3,
+  "task": "Does the formula have a satisfying assignment?",
+  "title": "Planar 3SAT by number of variables",
+  "variant": "Planar 3SAT",
+  "recoveryAssessments": [
+    {
+      "target": {
+        "id": "planar-3sat-variables-eth",
+        "revision": 1
+      },
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "recovery": {
+        "id": "planar-3sat-variables-sh",
+        "revision": 1
+      },
+      "scale": "degree",
+      "effective": false,
+      "targetScale": "n^(1/2)",
+      "recoveredScale": "n^(1/2−ε)",
+      "comparison": "SH excludes every fixed power below one half in the exponent of the number of variables.",
+      "evidence": [
+        {
+          "editionId": "journal",
+          "locator": "Theorem 2, p. 333 (quadratic planarity reduction)",
+          "paperId": "lichtenstein1982",
+          "placement": "statement",
+          "role": "benchmark"
+        },
+        {
+          "editionId": "book",
+          "locator": "Theorem 14.8, p. 474 (quadratic bound on total variables and clauses)",
+          "paperId": "cygan2015",
+          "placement": "statement",
+          "role": "benchmark"
+        },
+        {
+          "editionId": "v2",
+          "locator": "Table 1, Planar 3-SAT row",
+          "paperId": "sh26",
+          "placement": "statement",
+          "role": "benchmark"
+        }
+      ]
+    }
+  ]
+}

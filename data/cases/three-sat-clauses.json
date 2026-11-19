@@ -1,0 +1,178 @@
+{
+  "aliases": [
+    "lms-three-sat-clauses"
+  ],
+  "bounds": [
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "id": "three-sat-clauses-eth",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "label": "Subexponential-time bound",
+        "revision": 1,
+        "title": "3SAT under ETH: Subexponential-time bound"
+      },
+      "revision": 1,
+      "runtime": "2^(o(m)) B^(O(1))",
+      "runtimeSymbols": [
+        "m",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "bulletin",
+          "locator": "Proposition 2.9 and Section 2, p. 49",
+          "paperId": "lms2011",
+          "placement": "statement",
+          "role": "conditional lower bound"
+        },
+        {
+          "editionId": "journal",
+          "locator": "Corollary 1",
+          "paperId": "ipz2001",
+          "placement": "forward",
+          "role": "decision sparsification"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm solves the stated decision problem within the stated running time.",
+      "status": "established"
+    },
+    {
+      "assessments": {
+        "sh": {
+          "converse": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "sh",
+          "revision": 1
+        }
+      ],
+      "id": "three-sat-clauses-sh",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [
+        "For each fixed 0<ε<1."
+      ],
+      "reader": {
+        "explanation": "Deleting unused variables gives at most 3m occurring variables. The reverse bound uses the sparse clause-count comparison in Corollary 2.3.",
+        "label": "Fixed-power exclusion",
+        "revision": 1,
+        "title": "3SAT under SH: Fixed-power exclusion"
+      },
+      "revision": 1,
+      "runtime": "2^(O(m^(1−ε))) B^(O(1))",
+      "runtimeSymbols": [
+        "m",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "v2",
+          "locator": "Corollary 2.3 and Theorem 2.4",
+          "paperId": "sh26",
+          "placement": "statement",
+          "role": "conditional lower bound"
+        }
+      ],
+      "statement": "Under SH, no deterministic algorithm solves the stated decision problem within the stated running time.",
+      "status": "established"
+    }
+  ],
+  "coverage": "Lower bounds for clause count.",
+  "encoding": "An explicit Boolean CNF formula with clauses of width at most three.",
+  "id": "three-sat-clauses",
+  "inputConditions": [],
+  "kind": "lower-bound-case",
+  "parameter": "The number of clauses m.",
+  "problemDefinitionHash": "18641fada1e28b3bc5158d2dc8bcabde8c9f0aa5c53e02fc50c49459de526ca4",
+  "problemId": "three-sat",
+  "problemRevision": 1,
+  "reader": {
+    "anchor": "three-sat-clauses",
+    "parameter": "The number of clauses m.",
+    "parameterLabel": "Clause count",
+    "parameterSymbols": [
+      {
+        "meaning": "number of clauses",
+        "symbol": "m"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "complete explicit binary input length",
+        "symbol": "B"
+      }
+    ]
+  },
+  "resolutions": [],
+  "revision": 3,
+  "task": "Does the formula have a satisfying assignment?",
+  "title": "3SAT by clause count",
+  "variant": "3SAT",
+  "recoveryAssessments": [
+    {
+      "target": {
+        "id": "three-sat-clauses-eth",
+        "revision": 1
+      },
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "recovery": {
+        "id": "three-sat-clauses-sh",
+        "revision": 1
+      },
+      "scale": "degree",
+      "effective": false,
+      "targetScale": "m",
+      "recoveredScale": "m^(1−ε)",
+      "comparison": "The cited fixed-power exclusion preserves the task and input-polynomial factor, with the recorded power loss in the exponent.",
+      "evidence": [
+        {
+          "editionId": "v2",
+          "locator": "Corollary 2.3 and Theorem 2.4",
+          "paperId": "sh26",
+          "placement": "statement",
+          "role": "conditional lower bound"
+        }
+      ]
+    }
+  ]
+}

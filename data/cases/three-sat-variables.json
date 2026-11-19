@@ -1,0 +1,264 @@
+{
+  "aliases": [
+    "survey-sh01"
+  ],
+  "bounds": [
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "id": "three-sat-variables-eth",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "label": "Subexponential-time bound",
+        "revision": 1,
+        "title": "3SAT under ETH: Subexponential-time bound"
+      },
+      "revision": 1,
+      "runtime": "2^(o(n)) B^(O(1))",
+      "runtimeSymbols": [
+        "n",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "journal",
+          "locator": "Introduction and Corollary 1",
+          "paperId": "ipz2001",
+          "placement": "statement",
+          "role": "hypothesis and sparsification convention"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm solves the stated decision problem within the stated running time.",
+      "status": "established"
+    },
+    {
+      "assessments": {
+        "sh": {
+          "converse": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "sh",
+          "revision": 1
+        }
+      ],
+      "id": "three-sat-variables-sh",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [
+        "For each fixed 0<ε<1."
+      ],
+      "reader": {
+        "explanation": "Theorem 2.4 gives the equivalence to the whole variable-count exclusion family.",
+        "label": "Fixed-power exclusion",
+        "revision": 1,
+        "title": "3SAT under SH: Fixed-power exclusion"
+      },
+      "revision": 1,
+      "runtime": "2^(O(n^(1−ε))) B^(O(1))",
+      "runtimeSymbols": [
+        "n",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "v2",
+          "locator": "Table 1 and Theorem 2.4",
+          "paperId": "sh26",
+          "placement": "statement",
+          "role": "conditional lower bound"
+        }
+      ],
+      "statement": "Under SH, no deterministic algorithm solves the stated decision problem within the stated running time.",
+      "status": "established"
+    },
+    {
+      "assessments": {
+        "kxk": {
+          "converse": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "kxk",
+          "revision": 1
+        }
+      ],
+      "id": "three-sat-variables-kxk",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "explanation": "The log factor multiplies the square root. The reduction encodes each row choice and incompatibility in a width-three formula with quadratically many variables.",
+        "label": "Square-root exponent with a logarithmic factor",
+        "revision": 1,
+        "title": "3SAT under the k × k Clique Hypothesis: Square-root exponent with a logarithmic factor"
+      },
+      "revision": 1,
+      "runtime": "2^(o(n^(1/2) log₂ n)) B^(O(1))",
+      "runtimeSymbols": [
+        "n",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "oct30",
+          "locator": "Proposition 2(a), p. 3",
+          "paperId": "szeider2026",
+          "placement": "statement",
+          "role": "theorem"
+        },
+        {
+          "editionId": "v3",
+          "locator": "November 9 revision",
+          "paperId": "szeider2026",
+          "placement": "context",
+          "role": "preferred edition"
+        }
+      ],
+      "statement": "Under the k × k Clique Hypothesis, no deterministic algorithm solves the stated decision problem within the stated running time.",
+      "status": "established"
+    }
+  ],
+  "coverage": "Lower bounds for variable count.",
+  "encoding": "An explicit Boolean CNF formula with clauses of width at most three.",
+  "id": "three-sat-variables",
+  "inputConditions": [],
+  "kind": "lower-bound-case",
+  "parameter": "The number of declared variables n.",
+  "problemDefinitionHash": "18641fada1e28b3bc5158d2dc8bcabde8c9f0aa5c53e02fc50c49459de526ca4",
+  "problemId": "three-sat",
+  "problemRevision": 1,
+  "reader": {
+    "anchor": "three-sat-variables",
+    "parameter": "The number of declared variables n.",
+    "parameterLabel": "Variable count",
+    "parameterSymbols": [
+      {
+        "meaning": "number of declared variables",
+        "symbol": "n"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "complete explicit binary input length",
+        "symbol": "B"
+      }
+    ]
+  },
+  "recoveryAssessments": [
+    {
+      "comparison": "The cited fixed-power exclusion preserves the task and input-polynomial factor, with the recorded power loss in the exponent.",
+      "effective": false,
+      "evidence": [
+        {
+          "editionId": "v2",
+          "locator": "Table 1 and Theorem 2.4",
+          "paperId": "sh26",
+          "placement": "statement",
+          "role": "conditional lower bound"
+        }
+      ],
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "recoveredScale": "n^(1−ε)",
+      "recovery": {
+        "id": "three-sat-variables-sh",
+        "revision": 1
+      },
+      "scale": "degree",
+      "target": {
+        "id": "three-sat-variables-eth",
+        "revision": 1
+      },
+      "targetScale": "n"
+    },
+    {
+      "target": {
+        "id": "three-sat-variables-eth",
+        "revision": 1
+      },
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "recovery": {
+        "id": "three-sat-variables-kxk",
+        "revision": 1
+      },
+      "scale": "degree",
+      "effective": false,
+      "targetScale": "n",
+      "recoveredScale": "√n log₂ n",
+      "comparison": "The source preserves the same task, variable-count measure and input factor, with a square-root power of n and a logarithmic factor.",
+      "evidence": [
+        {
+          "paperId": "szeider2026",
+          "editionId": "oct30",
+          "locator": "Proposition 2(a), p. 3",
+          "role": "theorem",
+          "placement": "statement"
+        },
+        {
+          "paperId": "szeider2026",
+          "editionId": "v3",
+          "locator": "November 9 revision",
+          "role": "preferred edition",
+          "placement": "context"
+        }
+      ]
+    }
+  ],
+  "resolutions": [],
+  "revision": 4,
+  "task": "Does the formula have a satisfying assignment?",
+  "title": "3SAT by variable count",
+  "variant": "3SAT"
+}

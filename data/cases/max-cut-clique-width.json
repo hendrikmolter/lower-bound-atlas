@@ -1,0 +1,185 @@
+{
+  "aliases": [],
+  "bounds": [
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "evidence": [],
+            "status": "unknown"
+          },
+          "forward": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1
+        },
+        "sh": {
+          "converse": {
+            "evidence": [],
+            "status": "unknown"
+          },
+          "forward": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "id": "max-cut-clique-width-eth",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [
+        "The parameter factor f is an arbitrary computable function."
+      ],
+      "reader": {
+        "label": "Exponent in clique-width",
+        "revision": 1,
+        "title": "Exponent in clique-width under ETH"
+      },
+      "revision": 1,
+      "runtime": "f(t) n^(o(t)) B^(O(1))",
+      "runtimeSymbols": [
+        "t",
+        "n",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "journal",
+          "locator": "Theorem 4.1 and its reduction",
+          "paperId": "fgls2014-clique-width",
+          "placement": "statement",
+          "role": "benchmark"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm solves Max Cut within the stated running time.",
+      "status": "established"
+    },
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "evidence": [],
+            "status": "unknown"
+          },
+          "forward": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1
+        },
+        "sh": {
+          "converse": {
+            "evidence": [],
+            "status": "unknown"
+          },
+          "forward": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "w1",
+          "revision": 1
+        }
+      ],
+      "hardnessBaseline": "W[1]",
+      "id": "max-cut-clique-width-w1",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [
+        "The parameter factor f is an arbitrary computable function."
+      ],
+      "reader": {
+        "label": "Fixed-parameter tractability",
+        "revision": 1,
+        "title": "Fixed-parameter tractability under FPT ≠ W[1]"
+      },
+      "revision": 1,
+      "runtime": "f(t) B^(O(1))",
+      "runtimeSymbols": [
+        "t",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "journal",
+          "locator": "§6, p. 1562, and the FPT reduction in Theorem 4.1",
+          "paperId": "fgls2014-clique-width",
+          "placement": "statement",
+          "role": "benchmark"
+        }
+      ],
+      "statement": "Under FPT ≠ W[1], no deterministic algorithm solves Max Cut within the stated running time.",
+      "status": "established"
+    }
+  ],
+  "coverage": "Published lower bounds for clique-width.",
+  "encoding": "A finite simple undirected graph G and a nonnegative integer cut threshold b in binary.",
+  "id": "max-cut-clique-width",
+  "inputConditions": [],
+  "kind": "lower-bound-case",
+  "parameter": "Clique-width.",
+  "problemDefinitionHash": "640dd3f7096db11606e97a32993093cf4cdb443e17e73ec11ab9fc1b205f5c63",
+  "problemId": "max-cut",
+  "problemRevision": 1,
+  "reader": {
+    "anchor": "clique-width",
+    "parameter": "Clique-width.",
+    "parameterLabel": "Clique-width",
+    "parameterSymbols": [
+      {
+        "meaning": "intrinsic clique-width of G",
+        "symbol": "t"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "number of vertices of the input graph",
+        "symbol": "n"
+      },
+      {
+        "meaning": "complete explicit binary input length",
+        "symbol": "B"
+      }
+    ]
+  },
+  "resolutions": [],
+  "revision": 3,
+  "task": "Is there a bipartition of the vertices with at least b edges between its parts?",
+  "title": "Max Cut by clique-width",
+  "variant": "Max Cut",
+  "recoveryDispositions": [
+    {
+      "target": {
+        "id": "max-cut-clique-width-eth",
+        "revision": 1
+      },
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "recovery": {
+        "id": "max-cut-clique-width-w1",
+        "revision": 1
+      },
+      "reason": "Ordinary parameterized hardness excludes a fixed polynomial input exponent. The ETH bound excludes an exponent that grows sublinearly in the parameter."
+    }
+  ]
+}

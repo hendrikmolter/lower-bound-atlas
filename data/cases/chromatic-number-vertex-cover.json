@@ -1,0 +1,219 @@
+{
+  "id": "chromatic-number-vertex-cover",
+  "revision": 3,
+  "kind": "lower-bound-case",
+  "title": "Chromatic Number by vertex cover number",
+  "problemId": "chromatic-number",
+  "problemRevision": 1,
+  "problemDefinitionHash": "c8e3140a0aa9565f3bf5539eef4510570437e78f14e5838a5980852b66d1f794",
+  "aliases": [
+    "Chromatic Number parameterized by vertex cover number"
+  ],
+  "variant": "Undirected graph coloring with an input color budget",
+  "task": "Can the vertices of G be colored with at most ℓ colors so that adjacent vertices have different colors?",
+  "encoding": "A finite simple undirected graph G and a positive integer ℓ.",
+  "parameter": "The vertex cover number k of G.",
+  "coverage": "Deterministic ETH and SH bounds.",
+  "bounds": [
+    {
+      "id": "chromatic-vc-eth",
+      "revision": 1,
+      "status": "established",
+      "provenance": "literature",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "assumptionOperator": "all",
+      "statement": "Under ETH, no deterministic algorithm decides Chromatic Number within the stated running time.",
+      "runtime": "2^(o(k log₂ k)) n^(O(1))",
+      "inputFactor": "n^(O(1))",
+      "runtimeSymbols": [
+        "k",
+        "n"
+      ],
+      "qualifications": [],
+      "inputConditions": [],
+      "reader": {
+        "revision": 1,
+        "label": "Slightly superexponential bound"
+      },
+      "sources": [
+        {
+          "paperId": "lms2018",
+          "editionId": "journal",
+          "locator": "Theorem 6.1, p. 698",
+          "role": "published lower bound",
+          "placement": "statement"
+        }
+      ],
+      "proofs": []
+    },
+    {
+      "id": "chromatic-vc-sh",
+      "revision": 1,
+      "status": "established",
+      "provenance": "literature",
+      "assumptions": [
+        {
+          "id": "sh",
+          "revision": 1
+        }
+      ],
+      "assumptionOperator": "all",
+      "statement": "Under SH, no deterministic algorithm decides Chromatic Number within the stated running time.",
+      "runtime": "2^(O(k^(1−ε))) N^(O(1))",
+      "inputFactor": "N^(O(1))",
+      "runtimeSymbols": [
+        "k",
+        "N"
+      ],
+      "qualifications": [
+        "For every fixed 0 < ε < 1."
+      ],
+      "inputConditions": [],
+      "reader": {
+        "revision": 1,
+        "label": "Fixed-power bounds"
+      },
+      "sources": [
+        {
+          "paperId": "sh26",
+          "editionId": "v2",
+          "locator": "Table 1, Chromatic Number row and footnote d, p. 4, and Theorem 3.1, p. 8",
+          "role": "preprint lower bound",
+          "placement": "statement"
+        }
+      ],
+      "proofs": []
+    },
+    {
+      "id": "chromatic-vc-w1",
+      "revision": 1,
+      "status": "established",
+      "provenance": "atlas",
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "w1",
+          "revision": 1
+        }
+      ],
+      "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Chromatic Number within the stated running time.",
+      "runtime": "2^(O(k)) N^(O(1))",
+      "inputFactor": "N^(O(1))",
+      "inputConditions": [],
+      "runtimeSymbols": [
+        "k",
+        "N"
+      ],
+      "qualifications": [],
+      "reader": {
+        "revision": 1,
+        "label": "Single-exponential bound"
+      },
+      "sources": [
+        {
+          "paperId": "df1995",
+          "editionId": "journal",
+          "locator": "W[1]-completeness of Independent Set, with Clique by complementation",
+          "role": "source completeness",
+          "placement": "proof"
+        }
+      ],
+      "proofs": [
+        {
+          "proofId": "chromatic-number-cover-w1",
+          "revision": 1,
+          "theorem": "cover-w1"
+        }
+      ]
+    }
+  ],
+  "resolutions": [],
+  "inputConditions": [],
+  "reader": {
+    "parameterLabel": "Vertex cover number",
+    "parameterSymbols": [
+      {
+        "symbol": "k",
+        "meaning": "minimum size of a vertex cover of G"
+      }
+    ],
+    "symbols": [
+      {
+        "symbol": "n",
+        "meaning": "number of vertices of G"
+      },
+      {
+        "symbol": "N",
+        "meaning": "complete binary input length"
+      }
+    ]
+  },
+  "recoveryAssessments": [
+    {
+      "target": {
+        "id": "chromatic-vc-eth",
+        "revision": 1
+      },
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "recovery": {
+        "id": "chromatic-vc-w1",
+        "revision": 1
+      },
+      "scale": "logarithmic",
+      "effective": false,
+      "targetScale": "k log₂ k",
+      "recoveredScale": "k",
+      "comparison": "The excluded exponent is linear in the vertex cover number k, a logarithmic factor below the historical scale k log₂ k.",
+      "evidence": [
+        {
+          "proofId": "chromatic-number-cover-w1",
+          "revision": 1,
+          "theorem": "cover-w1"
+        }
+      ]
+    },
+    {
+      "target": {
+        "id": "chromatic-vc-eth",
+        "revision": 1
+      },
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "recovery": {
+        "id": "chromatic-vc-sh",
+        "revision": 1
+      },
+      "scale": "degree",
+      "effective": false,
+      "targetScale": "k log₂ k",
+      "recoveredScale": "k^(1−ε)",
+      "comparison": "SH excludes every fixed exponent power below one in the vertex cover number k. This recovers degree one. The historical little-o family at k log₂ k remains unrecovered.",
+      "evidence": [
+        {
+          "paperId": "sh26",
+          "editionId": "v2",
+          "locator": "Table 1, Chromatic Number row and footnote d, p. 4, and Theorem 3.1, p. 8",
+          "role": "preprint lower bound",
+          "placement": "statement"
+        },
+        {
+          "paperId": "lms2018",
+          "editionId": "journal",
+          "locator": "Theorem 6.1, p. 698",
+          "role": "published lower bound",
+          "placement": "statement"
+        }
+      ]
+    }
+  ]
+}

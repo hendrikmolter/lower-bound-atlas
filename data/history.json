@@ -1,0 +1,465 @@
+[
+  {
+    "cases": [
+      {
+        "id": "balanced-vertex-separator-budget",
+        "revision": 4
+      },
+      {
+        "id": "chromatic-number-treewidth",
+        "revision": 3
+      },
+      {
+        "id": "chromatic-number-vertex-cover",
+        "revision": 3
+      },
+      {
+        "id": "clique-budget",
+        "revision": 6
+      },
+      {
+        "id": "clique-order",
+        "revision": 5
+      },
+      {
+        "id": "closest-substring-constant-alphabet",
+        "revision": 7
+      },
+      {
+        "id": "cluster-editing-budget",
+        "revision": 2
+      },
+      {
+        "id": "cluster-editing-order",
+        "revision": 2
+      },
+      {
+        "id": "cluster-editing-size",
+        "revision": 2
+      },
+      {
+        "id": "connected-dominating-set-budget",
+        "revision": 4
+      },
+      {
+        "id": "connected-vertex-cover-budget",
+        "revision": 2
+      },
+      {
+        "id": "cycle-packing-supplied-pathwidth",
+        "revision": 4
+      },
+      {
+        "id": "cycle-packing-treewidth",
+        "revision": 3
+      },
+      {
+        "id": "directed-steiner-tree-terminals",
+        "revision": 2
+      },
+      {
+        "id": "distinct-vectors-budget",
+        "revision": 3
+      },
+      {
+        "id": "dominating-set-budget",
+        "revision": 5
+      },
+      {
+        "id": "dominating-set-linear-rank-width",
+        "revision": 2
+      },
+      {
+        "id": "dominating-set-order",
+        "revision": 4
+      },
+      {
+        "id": "dominating-set-rank-width",
+        "revision": 2
+      },
+      {
+        "id": "dominating-set-supplied-linear-layout",
+        "revision": 2
+      },
+      {
+        "id": "dominating-set-supplied-rank-decomposition",
+        "revision": 2
+      },
+      {
+        "id": "dominating-set-treewidth",
+        "revision": 3
+      },
+      {
+        "id": "edge-clique-cover-budget",
+        "revision": 5
+      },
+      {
+        "id": "edge-dominating-set-budget",
+        "revision": 2
+      },
+      {
+        "id": "edge-dominating-set-clique-width",
+        "revision": 3
+      },
+      {
+        "id": "edge-dominating-set-intrinsic-clique-width",
+        "revision": 3
+      },
+      {
+        "id": "euclidean-traveling-salesman-points",
+        "revision": 3
+      },
+      {
+        "id": "explicit-table-csp-treewidth",
+        "revision": 3
+      },
+      {
+        "id": "feature-set-budget",
+        "revision": 5
+      },
+      {
+        "id": "feedback-vertex-set-budget",
+        "revision": 3
+      },
+      {
+        "id": "feedback-vertex-set-graph-size",
+        "revision": 3
+      },
+      {
+        "id": "fixed-width-sat-formula-size",
+        "revision": 3
+      },
+      {
+        "id": "fixed-width-sat-variables",
+        "revision": 4
+      },
+      {
+        "id": "graph-distortion-line",
+        "revision": 4
+      },
+      {
+        "id": "graph-homomorphism-total-order",
+        "revision": 3
+      },
+      {
+        "id": "graph-motif-order",
+        "revision": 3
+      },
+      {
+        "id": "grid-tiling-side",
+        "revision": 5
+      },
+      {
+        "id": "hamiltonian-cycle-graph-size",
+        "revision": 3
+      },
+      {
+        "id": "hamiltonian-cycle-order",
+        "revision": 3
+      },
+      {
+        "id": "hamiltonian-path-order",
+        "revision": 3
+      },
+      {
+        "id": "hitting-set-budget",
+        "revision": 4
+      },
+      {
+        "id": "independent-set-budget",
+        "revision": 6
+      },
+      {
+        "id": "independent-set-linear-rank-width",
+        "revision": 2
+      },
+      {
+        "id": "independent-set-order",
+        "revision": 6
+      },
+      {
+        "id": "independent-set-rank-width",
+        "revision": 2
+      },
+      {
+        "id": "independent-set-supplied-linear-layout",
+        "revision": 2
+      },
+      {
+        "id": "independent-set-supplied-rank-decomposition",
+        "revision": 2
+      },
+      {
+        "id": "independent-set-treewidth",
+        "revision": 3
+      },
+      {
+        "id": "integer-linear-programming-equations",
+        "revision": 4
+      },
+      {
+        "id": "list-coloring-treewidth",
+        "revision": 4
+      },
+      {
+        "id": "lms-3color-order",
+        "revision": 18
+      },
+      {
+        "id": "lms-closest-string-radius",
+        "revision": 3
+      },
+      {
+        "id": "lms-closest-string-radius-alphabet",
+        "revision": 19
+      },
+      {
+        "id": "lms-square-clique",
+        "revision": 5
+      },
+      {
+        "id": "longest-path-budget",
+        "revision": 3
+      },
+      {
+        "id": "max-cut-clique-width",
+        "revision": 3
+      },
+      {
+        "id": "max-cut-supplied-clique-width",
+        "revision": 3
+      },
+      {
+        "id": "maximum-common-induced-subgraph-vertex-cover",
+        "revision": 2
+      },
+      {
+        "id": "maximum-cycle-cover-supplied-pathwidth",
+        "revision": 4
+      },
+      {
+        "id": "minimum-bisection-clique-width",
+        "revision": 3
+      },
+      {
+        "id": "minimum-bisection-supplied-clique-width",
+        "revision": 3
+      },
+      {
+        "id": "minimum-common-string-partition-length",
+        "revision": 3
+      },
+      {
+        "id": "minimum-fill-in-budget",
+        "revision": 2
+      },
+      {
+        "id": "minimum-k-cut-components",
+        "revision": 3
+      },
+      {
+        "id": "multicolored-clique-colors",
+        "revision": 6
+      },
+      {
+        "id": "odd-cycle-transversal-treewidth",
+        "revision": 3
+      },
+      {
+        "id": "odd-set-budget",
+        "revision": 4
+      },
+      {
+        "id": "planar-3-coloring-order",
+        "revision": 1
+      },
+      {
+        "id": "planar-3sat-formula-size",
+        "revision": 3
+      },
+      {
+        "id": "planar-3sat-variables",
+        "revision": 3
+      },
+      {
+        "id": "planar-dominating-set-budget",
+        "revision": 1
+      },
+      {
+        "id": "planar-dominating-set-vertices",
+        "revision": 1
+      },
+      {
+        "id": "planar-edge-multiway-cut-terminals",
+        "revision": 1
+      },
+      {
+        "id": "planar-feedback-vertex-set-budget",
+        "revision": 1
+      },
+      {
+        "id": "planar-feedback-vertex-set-vertices",
+        "revision": 1
+      },
+      {
+        "id": "planar-hamiltonian-cycle-vertices",
+        "revision": 1
+      },
+      {
+        "id": "planar-list-coloring-treewidth",
+        "revision": 2
+      },
+      {
+        "id": "planar-scattered-set-solution-size",
+        "revision": 3
+      },
+      {
+        "id": "planar-strongly-connected-steiner-subgraph-terminals",
+        "revision": 1
+      },
+      {
+        "id": "planar-vertex-cover-budget",
+        "revision": 4
+      },
+      {
+        "id": "planar-vertex-cover-order",
+        "revision": 4
+      },
+      {
+        "id": "qbf-fixed-block-width",
+        "revision": 3
+      },
+      {
+        "id": "scattered-set-solution-size",
+        "revision": 3
+      },
+      {
+        "id": "set-cover-budget",
+        "revision": 1
+      },
+      {
+        "id": "steiner-tree-terminals",
+        "revision": 2
+      },
+      {
+        "id": "strongly-connected-steiner-subgraph-solution-vertices",
+        "revision": 2
+      },
+      {
+        "id": "subgraph-isomorphism-pattern-edges",
+        "revision": 2
+      },
+      {
+        "id": "subset-sum-item-count",
+        "revision": 4
+      },
+      {
+        "id": "three-dimensional-matching-part-size",
+        "revision": 2
+      },
+      {
+        "id": "three-sat-clauses",
+        "revision": 3
+      },
+      {
+        "id": "three-sat-variables",
+        "revision": 4
+      },
+      {
+        "id": "tournament-dominating-set-budget",
+        "revision": 4
+      },
+      {
+        "id": "treewidth-computation-order",
+        "revision": 4
+      },
+      {
+        "id": "unary-bin-packing-bins",
+        "revision": 5
+      },
+      {
+        "id": "unit-disk-dominating-set-budget",
+        "revision": 1
+      },
+      {
+        "id": "unit-disk-independent-set-budget",
+        "revision": 5
+      },
+      {
+        "id": "unit-square-independent-set-budget",
+        "revision": 5
+      },
+      {
+        "id": "vertex-cover-budget",
+        "revision": 6
+      },
+      {
+        "id": "vertex-cover-order",
+        "revision": 6
+      },
+      {
+        "id": "vertex-disjoint-paths-supplied-pathwidth",
+        "revision": 4
+      },
+      {
+        "id": "vertex-disjoint-paths-treewidth",
+        "revision": 4
+      },
+      {
+        "id": "weighted-cnf-sat-weight",
+        "revision": 1
+      },
+      {
+        "id": "weighted-fixed-width-cnf-sat-weight",
+        "revision": 2
+      },
+      {
+        "id": "weighted-normalized-depth-t-circuit-weight",
+        "revision": 13
+      },
+      {
+        "id": "weighted-tardy-jobs-processing-times",
+        "revision": 4
+      },
+      {
+        "id": "weighted-tardy-jobs-weights",
+        "revision": 4
+      }
+    ],
+    "challenges": [],
+    "contributor": "Hendrik Molter",
+    "date": "2026-11-19",
+    "kind": "initial",
+    "reviews": [
+      "clique-budget-w1-equivalence-review",
+      "clique-order-eth-equivalence-review",
+      "clique-order-sh-equivalence-review",
+      "color-eth-historical-review",
+      "color-sh-review",
+      "ds-order-eth-equivalence-review",
+      "ecc-budget-np-qp-equivalence-review",
+      "feedback-vertex-set-budget-sh-cubic-line-source-review",
+      "feedback-vertex-set-graph-size-sh-cubic-line-source-review",
+      "grid-tiling-side-w1-hardness-scope",
+      "is-budget-w1-equivalence-review",
+      "is-order-eth-equivalence-review",
+      "is-order-sh-source-review",
+      "multicolored-clique-colors-w1-equivalence-review",
+      "planar-scattered-set-solution-size-w1-hardness-scope",
+      "scattered-set-solution-size-w1-hardness-scope",
+      "square-eth-equivalence-review",
+      "square-kxk-equivalence-review",
+      "unit-disk-independent-set-budget-eth-closed-scope",
+      "unit-disk-independent-set-budget-kxk-closed-scope",
+      "unit-disk-independent-set-budget-w1-hardness-scope",
+      "unit-square-independent-set-budget-eth-closed-scope",
+      "unit-square-independent-set-budget-kxk-closed-scope",
+      "unit-square-independent-set-budget-w1-hardness-scope",
+      "vc-budget-eth-equivalence-review",
+      "vc-budget-sh-source-review",
+      "vc-order-eth-equivalence-review",
+      "vc-order-sh-source-review",
+      "weighted-fixed-width-cnf-sat-weight-w1-hardness-scope"
+    ]
+  }
+]

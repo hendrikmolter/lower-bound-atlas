@@ -1,0 +1,145 @@
+{
+  "aliases": [],
+  "bounds": [
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "id": "graph-motif-tree-order-eth",
+      "inputConditions": [
+        "tree"
+      ],
+      "inputFactor": "Included in the displayed running time",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "label": "Subexponential bound on trees",
+        "revision": 1,
+        "title": "Subexponential bound on trees under ETH",
+        "explanation": "The source construction produces trees of diameter at most four."
+      },
+      "revision": 1,
+      "runtime": "2^(o(n))",
+      "runtimeSymbols": [
+        "n"
+      ],
+      "sources": [
+        {
+          "paperId": "bs2017-graph-motif",
+          "editionId": "journal",
+          "locator": "Theorem 14(ii) and proof, §3.4, p. 87",
+          "placement": "statement",
+          "role": "published lower bound"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm solves Graph Motif within the stated running time.",
+      "status": "established"
+    },
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "id": "graph-motif-cluster-distance-order-eth",
+      "inputConditions": [
+        "cluster-distance-one"
+      ],
+      "inputFactor": "Included in the displayed running time",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "label": "Subexponential bound at distance one from a cluster graph",
+        "revision": 1,
+        "title": "Subexponential bound at distance one from a cluster graph under ETH"
+      },
+      "revision": 1,
+      "runtime": "2^(o(n))",
+      "runtimeSymbols": [
+        "n"
+      ],
+      "sources": [
+        {
+          "paperId": "bs2017-graph-motif",
+          "editionId": "journal",
+          "locator": "Theorem 14(i) and proof, §3.4, p. 87",
+          "placement": "statement",
+          "role": "published lower bound"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm solves Graph Motif within the stated running time.",
+      "status": "established"
+    }
+  ],
+  "coverage": "Published lower bounds.",
+  "encoding": "An explicitly encoded finite simple undirected graph G with a color on each vertex, and a multiset M of colors.",
+  "id": "graph-motif-order",
+  "inputConditions": [
+    {
+      "condition": "G is a tree.",
+      "id": "tree",
+      "level": "bound"
+    },
+    {
+      "condition": "The minimum number of vertices whose deletion leaves a disjoint union of cliques is one.",
+      "id": "cluster-distance-one",
+      "level": "bound"
+    }
+  ],
+  "kind": "lower-bound-case",
+  "parameter": "The number of vertices in the input graph n.",
+  "problemDefinitionHash": "920f33f1683f828550a110f912a81f66814db91651faa3fc5acc07d7f58cffe3",
+  "problemId": "graph-motif",
+  "problemRevision": 1,
+  "reader": {
+    "anchor": "graph-motif-order",
+    "parameter": "The number of vertices in the input graph n.",
+    "parameterLabel": "Number of vertices",
+    "parameterSymbols": [
+      {
+        "meaning": "number of vertices in the input graph",
+        "symbol": "n"
+      }
+    ],
+    "symbols": []
+  },
+  "resolutions": [],
+  "revision": 3,
+  "task": "Is there a set of vertices that induces a connected subgraph and whose colors, counted with multiplicity, form M?",
+  "title": "Graph Motif by number of vertices",
+  "variant": "Graph Motif"
+}

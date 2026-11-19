@@ -1,0 +1,191 @@
+{
+  "aliases": [],
+  "bounds": [
+    {
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "id": "treewidth-order-eth-positive-rate",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [
+        "There exists δ > 0 such that the exclusion holds for every fixed C ≥ 0."
+      ],
+      "reader": {
+        "explanation": "The proof distinguishes two adjacent treewidth thresholds on graphs with a linear number of vertices from bounded-occurrence 3-SAT. The journal and checked author version use different theorem numbers.",
+        "label": "Positive exponential rate in the number of vertices",
+        "revision": 1,
+        "title": "Treewidth computation by graph order under ETH"
+      },
+      "revision": 1,
+      "runtime": "O(2^(δ n) B^C)",
+      "runtimeSymbols": [
+        "n",
+        "δ",
+        "C",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "journal",
+          "locator": "Theorem 1.2 and its proof",
+          "paperId": "bonnet2026-treewidth",
+          "placement": "statement",
+          "role": "original lower bound"
+        },
+        {
+          "editionId": "arxiv-v2",
+          "locator": "Theorem 2 and Section 3",
+          "paperId": "bonnet2026-treewidth",
+          "placement": "statement",
+          "role": "checked author version and decision threshold"
+        },
+        {
+          "paperId": "sh26",
+          "editionId": "v2",
+          "locator": "Table 1, Treewidth, historical ETH column, p. 4",
+          "role": "later little-o restatement",
+          "placement": "context"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm decides Treewidth computation within the stated running time.",
+      "status": "established"
+    },
+    {
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "sh",
+          "revision": 1
+        }
+      ],
+      "id": "treewidth-order-sh",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [
+        "For each fixed ε strictly between zero and 1."
+      ],
+      "reader": {
+        "label": "Fixed power saving in the exponent",
+        "revision": 1,
+        "title": "Treewidth computation by graph order under SH"
+      },
+      "revision": 1,
+      "runtime": "2^(O(n^(1−ε))) B^(O(1))",
+      "runtimeSymbols": [
+        "n",
+        "ε",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "v2",
+          "locator": "Table 1, Treewidth, SH column and note b, p. 4",
+          "paperId": "sh26",
+          "placement": "statement",
+          "role": "fixed-power lower bound"
+        }
+      ],
+      "statement": "Under SH, no deterministic algorithm decides Treewidth computation within the stated running time.",
+      "status": "established"
+    }
+  ],
+  "coverage": "Selected lower bounds for this parameterization.",
+  "encoding": "Explicit binary graph encoding with individually represented vertices and a binary width threshold.",
+  "id": "treewidth-computation-order",
+  "inputConditions": [
+    {
+      "condition": "The graph is finite, simple and undirected.",
+      "id": "graph-class",
+      "level": "problem"
+    }
+  ],
+  "kind": "lower-bound-case",
+  "parameter": "The number of vertices n of G.",
+  "problemDefinitionHash": "f4fa619cca4bde6aa6ba061b0149018ce9d427267547460f8ce4c593bd1e6590",
+  "problemId": "treewidth-computation",
+  "problemRevision": 1,
+  "reader": {
+    "anchor": "vertices",
+    "parameter": "The number of vertices n of G.",
+    "parameterLabel": "Number of vertices",
+    "parameterSymbols": [
+      {
+        "meaning": "number of vertices",
+        "symbol": "n"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "width threshold",
+        "symbol": "k"
+      },
+      {
+        "meaning": "complete input length in bits",
+        "symbol": "B"
+      },
+      {
+        "meaning": "a positive exponent coefficient",
+        "symbol": "δ"
+      },
+      {
+        "meaning": "a fixed positive saving in the exponent",
+        "symbol": "ε"
+      },
+      {
+        "meaning": "a fixed polynomial input exponent",
+        "symbol": "C"
+      }
+    ]
+  },
+  "resolutions": [],
+  "revision": 4,
+  "task": "Does G have treewidth at most k?",
+  "title": "Treewidth computation by graph order",
+  "variant": "Treewidth computation",
+  "recoveryAssessments": [
+    {
+      "target": {
+        "id": "treewidth-order-eth-positive-rate",
+        "revision": 1
+      },
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "recovery": {
+        "id": "treewidth-order-sh",
+        "revision": 1
+      },
+      "scale": "degree",
+      "effective": false,
+      "targetScale": "n",
+      "recoveredScale": "n^(1−ε)",
+      "comparison": "The SH bound excludes every fixed power below one in the exponent of the graph order.",
+      "evidence": [
+        {
+          "paperId": "bonnet2026-treewidth",
+          "editionId": "journal",
+          "locator": "Theorem 1.2 and its proof",
+          "role": "original lower bound",
+          "placement": "statement"
+        },
+        {
+          "paperId": "sh26",
+          "editionId": "v2",
+          "locator": "Table 1, Treewidth, SH column and note b, p. 4",
+          "role": "fixed-power lower bound",
+          "placement": "statement"
+        }
+      ]
+    }
+  ]
+}

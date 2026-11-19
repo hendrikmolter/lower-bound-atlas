@@ -1,0 +1,319 @@
+{
+  "aliases": [
+    "lms-distortion-line"
+  ],
+  "bounds": [
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "id": "graph-distortion-line-eth",
+      "inputConditions": [
+        "integer-line"
+      ],
+      "inputFactor": "n^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "label": "Subexponential-time bound in d log d",
+        "revision": 1,
+        "title": "Graph Distortion into a line under ETH: Subexponential-time bound in d log d"
+      },
+      "revision": 1,
+      "runtime": "2^(o(d log₂ d)) n^(O(1))",
+      "runtimeSymbols": [
+        "d",
+        "n"
+      ],
+      "sources": [
+        {
+          "editionId": "journal",
+          "locator": "Theorem 4.2, p. 690",
+          "paperId": "lms2018",
+          "placement": "statement",
+          "role": "conditional lower bound"
+        },
+        {
+          "editionId": "book",
+          "locator": "Theorem 14.18, p. 483",
+          "paperId": "cygan2015",
+          "placement": "context",
+          "role": "textbook statement"
+        },
+        {
+          "editionId": "bulletin",
+          "locator": "Theorem 4.6, p. 56",
+          "paperId": "lms2011",
+          "placement": "context",
+          "role": "earlier natural-coordinate statement"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm solves the stated decision problem within the stated running time.",
+      "status": "established"
+    },
+    {
+      "assessments": {
+        "w1": {
+          "converse": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "evidence": [
+              {
+                "boundRevision": 1,
+                "hypothesisRevision": 1,
+                "proof": {
+                  "proofId": "graph-distortion-line-w1",
+                  "revision": 1,
+                  "theorem": "graph-distortion-line-w1"
+                },
+                "reviewId": "graph-distortion-line-w1-review"
+              }
+            ],
+            "status": "established"
+          },
+          "hypothesisRevision": 1
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "w1",
+          "revision": 1
+        }
+      ],
+      "id": "graph-distortion-line-w1",
+      "inputConditions": [
+        "bipartite"
+      ],
+      "inputFactor": "B^(O(1))",
+      "proofs": [
+        {
+          "proofId": "graph-distortion-line-w1",
+          "revision": 1,
+          "theorem": "graph-distortion-line-w1"
+        }
+      ],
+      "provenance": "atlas",
+      "qualifications": [
+        "The exponent h is finite, nonnegative and o(d log₂ d) with a computable convergence modulus."
+      ],
+      "reader": {
+        "label": "Effective subexponential lower bound",
+        "revision": 1,
+        "title": "Graph Distortion into a line under FPT ≠ W[1]: Effective subexponential lower bound"
+      },
+      "revision": 1,
+      "runtime": "2^(h(d)) B^(O(1))",
+      "runtimeSymbols": [
+        "d",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "journal",
+          "locator": "Lemma 2.8 and its proof",
+          "paperId": "lms2018",
+          "placement": "proof",
+          "role": "deterministic constructive coloring family"
+        },
+        {
+          "editionId": "journal",
+          "locator": "Theorem 2.1",
+          "paperId": "df1995",
+          "placement": "proof",
+          "role": "Clique hardness by Independent Set complementation"
+        }
+      ],
+      "statement": "Under FPT ≠ W[1], no deterministic algorithm solves the stated decision problem within the stated running time.",
+      "status": "established"
+    },
+    {
+      "assessments": {
+        "kxk": {
+          "converse": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "kxk",
+          "revision": 1
+        }
+      ],
+      "id": "graph-distortion-line-kxk",
+      "inputConditions": [
+        "integer-line"
+      ],
+      "inputFactor": "n^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "label": "Subexponential-time bound in d log d",
+        "revision": 1,
+        "title": "Graph Distortion into a line under the k × k Clique Hypothesis: Subexponential-time bound in d log d"
+      },
+      "revision": 1,
+      "runtime": "2^(o(d log₂ d)) n^(O(1))",
+      "runtimeSymbols": [
+        "d",
+        "n"
+      ],
+      "sources": [
+        {
+          "editionId": "v3",
+          "locator": "Section 3, Table 1, first row, p. 5",
+          "paperId": "szeider2026",
+          "placement": "statement",
+          "role": "conditional lower bound"
+        },
+        {
+          "editionId": "journal",
+          "locator": "Theorems 4.1–4.2, pp. 687–692",
+          "paperId": "lms2018",
+          "placement": "proof",
+          "role": "reduction to integer line distortion"
+        }
+      ],
+      "statement": "Under the k × k Clique Hypothesis, no deterministic algorithm solves the stated decision problem within the stated running time.",
+      "status": "established"
+    }
+  ],
+  "coverage": "Lower bounds for distortion threshold.",
+  "encoding": "A connected finite simple unweighted undirected graph G and a positive integer distortion threshold d.",
+  "id": "graph-distortion-line",
+  "inputConditions": [
+    {
+      "condition": "The target is the integer line.",
+      "id": "integer-line",
+      "level": "bound"
+    },
+    {
+      "condition": "The graph is bipartite.",
+      "id": "bipartite",
+      "level": "bound"
+    }
+  ],
+  "kind": "lower-bound-case",
+  "parameter": "The allowed distortion d.",
+  "problemDefinitionHash": "f828b106c06c91d4c0375e1fcbe9fb2ac99601b4da2dfb570c229d76bfcfb0b8",
+  "problemId": "graph-distortion-line",
+  "problemRevision": 1,
+  "reader": {
+    "anchor": "graph-distortion-line",
+    "parameter": "The allowed distortion d.",
+    "parameterLabel": "Distortion threshold",
+    "parameterSymbols": [
+      {
+        "meaning": "allowed distortion",
+        "symbol": "d"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "number of vertices",
+        "symbol": "n"
+      },
+      {
+        "meaning": "complete explicit binary input length",
+        "symbol": "B"
+      }
+    ]
+  },
+  "resolutions": [],
+  "revision": 4,
+  "task": "Does the shortest-path metric of G admit a noncontracting embedding into the line that expands no distance by more than a factor d?",
+  "title": "Graph Distortion into a line by distortion threshold",
+  "variant": "Graph Distortion into a line",
+  "recoveryAssessments": [
+    {
+      "target": {
+        "id": "graph-distortion-line-eth",
+        "revision": 1
+      },
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "recovery": {
+        "id": "graph-distortion-line-w1",
+        "revision": 1
+      },
+      "scale": "full",
+      "effective": true,
+      "targetScale": "d log₂ d",
+      "recoveredScale": "d log₂ d",
+      "comparison": "Both bounds use the d log₂ d scale. A solver on the full integer-line problem also handles connected bipartite hard instances. The graph encoding on the reduction images has length polynomial in graph order; the remaining gap is the computable convergence modulus.",
+      "evidence": [
+        {
+          "proofId": "graph-distortion-line-w1",
+          "revision": 1,
+          "theorem": "graph-distortion-line-w1"
+        }
+      ]
+    },
+    {
+      "target": {
+        "id": "graph-distortion-line-eth",
+        "revision": 1
+      },
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "recovery": {
+        "id": "graph-distortion-line-kxk",
+        "revision": 1
+      },
+      "scale": "full",
+      "effective": false,
+      "targetScale": "d log₂ d",
+      "recoveredScale": "d log₂ d",
+      "comparison": "The source transfer preserves the task, parameter, prefactor and excluded exponent family.",
+      "evidence": [
+        {
+          "editionId": "v3",
+          "locator": "Section 3, Table 1, first row, p. 5",
+          "paperId": "szeider2026",
+          "placement": "statement",
+          "role": "conditional lower bound"
+        },
+        {
+          "editionId": "journal",
+          "locator": "Theorems 4.1–4.2, pp. 687–692",
+          "paperId": "lms2018",
+          "placement": "proof",
+          "role": "reduction to integer line distortion"
+        }
+      ]
+    }
+  ]
+}

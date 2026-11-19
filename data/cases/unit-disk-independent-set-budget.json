@@ -1,0 +1,467 @@
+{
+  "aliases": [
+    "book-unit-disk-independent-set-budget"
+  ],
+  "bounds": [
+    {
+      "assessments": {
+        "eth": {
+          "hypothesisRevision": 1,
+          "forward": {
+            "status": "established",
+            "evidence": [
+              {
+                "reviewId": "unit-disk-independent-set-budget-eth-closed-scope",
+                "boundRevision": 2,
+                "hypothesisRevision": 1,
+                "source": {
+                  "editionId": "book",
+                  "locator": "Theorem 14.34, p. 500",
+                  "paperId": "cygan2015",
+                  "placement": "statement",
+                  "role": "benchmark"
+                },
+                "proof": {
+                  "proofId": "six-w1-memberships",
+                  "revision": 1,
+                  "theorem": "open-to-closed-regions"
+                }
+              }
+            ]
+          },
+          "converse": {
+            "status": "unknown",
+            "evidence": []
+          }
+        },
+        "sh": {
+          "converse": {
+            "evidence": [],
+            "status": "unknown"
+          },
+          "forward": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "id": "unit-disk-independent-set-budget-eth",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [
+        "The parameter factor f is an arbitrary computable function.",
+        "The hard instances have coordinates of polynomial bit length in the number of objects."
+      ],
+      "reader": {
+        "label": "Exponent in solution budget",
+        "revision": 2,
+        "title": "Exponent in solution budget under ETH"
+      },
+      "revision": 2,
+      "runtime": "f(k) n^(o(k^(1/2))) B^(O(1))",
+      "runtimeSymbols": [
+        "k",
+        "n",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "book",
+          "locator": "Theorem 14.34, p. 500",
+          "paperId": "cygan2015",
+          "placement": "statement",
+          "role": "benchmark"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm solves Independent Set of unit disks within the stated running time.",
+      "status": "established"
+    },
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "evidence": [],
+            "status": "unknown"
+          },
+          "forward": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1
+        },
+        "sh": {
+          "converse": {
+            "evidence": [],
+            "status": "unknown"
+          },
+          "forward": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1
+        },
+        "w1": {
+          "hypothesisRevision": 1,
+          "forward": {
+            "status": "established",
+            "evidence": [
+              {
+                "reviewId": "unit-disk-independent-set-budget-w1-hardness-scope",
+                "boundRevision": 2,
+                "hypothesisRevision": 1,
+                "source": {
+                  "paperId": "marx2005-geometric",
+                  "editionId": "esa",
+                  "locator": "Theorem 3, Section 2",
+                  "placement": "forward",
+                  "role": "published hardness direction"
+                },
+                "proof": {
+                  "proofId": "six-w1-memberships",
+                  "revision": 1,
+                  "theorem": "open-to-closed-regions"
+                }
+              }
+            ]
+          },
+          "converse": {
+            "status": "established",
+            "evidence": [
+              {
+                "reviewId": "unit-disk-independent-set-w1-membership-independent",
+                "boundRevision": 2,
+                "hypothesisRevision": 1,
+                "proof": {
+                  "proofId": "six-w1-memberships",
+                  "revision": 1,
+                  "theorem": "unit-disk-independent-set-w1-membership"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "w1",
+          "revision": 1
+        }
+      ],
+      "hardnessBaseline": "W[1]",
+      "id": "unit-disk-independent-set-budget-w1",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [
+        "The hard instances have coordinates of polynomial bit length in the number of objects."
+      ],
+      "reader": {
+        "label": "Fixed-parameter tractability",
+        "revision": 2,
+        "title": "Fixed-parameter tractability under FPT ≠ W[1]"
+      },
+      "revision": 2,
+      "runtime": "f(k) B^(O(1))",
+      "runtimeSymbols": [
+        "k",
+        "B"
+      ],
+      "sources": [
+        {
+          "paperId": "marx2005-geometric",
+          "editionId": "esa",
+          "locator": "Theorem 3, Section 2",
+          "placement": "forward",
+          "role": "published hardness direction"
+        },
+        {
+          "editionId": "book",
+          "locator": "Theorem 14.34, p. 500 (Grid Tiling reduction)",
+          "paperId": "cygan2015",
+          "placement": "statement",
+          "role": "benchmark"
+        }
+      ],
+      "statement": "Under FPT ≠ W[1], no deterministic algorithm solves Independent Set of unit disks within the stated running time.",
+      "status": "established"
+    },
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "evidence": [],
+            "status": "unknown"
+          },
+          "forward": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1
+        },
+        "sh": {
+          "converse": {
+            "evidence": [],
+            "status": "unknown"
+          },
+          "forward": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1
+        },
+        "kxk": {
+          "hypothesisRevision": 1,
+          "forward": {
+            "status": "established",
+            "evidence": [
+              {
+                "reviewId": "unit-disk-independent-set-budget-kxk-closed-scope",
+                "boundRevision": 2,
+                "hypothesisRevision": 1,
+                "source": {
+                  "editionId": "v3",
+                  "locator": "Proposition 1 and Table 1",
+                  "paperId": "szeider2026",
+                  "placement": "statement",
+                  "role": "benchmark"
+                },
+                "proof": {
+                  "proofId": "six-w1-memberships",
+                  "revision": 1,
+                  "theorem": "open-to-closed-regions"
+                }
+              }
+            ]
+          },
+          "converse": {
+            "status": "unknown",
+            "evidence": []
+          }
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "kxk",
+          "revision": 1
+        }
+      ],
+      "id": "unit-disk-independent-set-budget-kxk",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [
+        "The parameter factor f is an arbitrary computable function.",
+        "The hard instances have coordinates of polynomial bit length in the number of objects."
+      ],
+      "reader": {
+        "label": "Exponent in solution budget",
+        "revision": 2,
+        "title": "Exponent in solution budget under the k × k Clique Hypothesis"
+      },
+      "revision": 2,
+      "runtime": "f(k) n^(o(k^(1/2))) B^(O(1))",
+      "runtimeSymbols": [
+        "k",
+        "n",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "v3",
+          "locator": "Proposition 1 and Table 1",
+          "paperId": "szeider2026",
+          "placement": "statement",
+          "role": "benchmark"
+        },
+        {
+          "editionId": "oct30",
+          "locator": "§3, geometric transfers from Grid Tiling",
+          "paperId": "szeider2026",
+          "placement": "statement",
+          "role": "benchmark"
+        },
+        {
+          "editionId": "book",
+          "locator": "Theorem 14.34, p. 500",
+          "paperId": "cygan2015",
+          "placement": "statement",
+          "role": "benchmark"
+        }
+      ],
+      "statement": "Under the k × k Clique Hypothesis, no deterministic algorithm solves Independent Set of unit disks within the stated running time.",
+      "status": "established"
+    }
+  ],
+  "coverage": "Published lower bounds for solution budget.",
+  "encoding": "An explicit list of closed disks of radius one in the plane with rational coordinates in binary, and a nonnegative integer k in binary.",
+  "id": "unit-disk-independent-set-budget",
+  "inputConditions": [],
+  "kind": "lower-bound-case",
+  "parameter": "Solution budget.",
+  "problemDefinitionHash": "310640512e3cf42d2cf68f12a8d5c77870b68cc2e692eafb37c72f611ad4ba3d",
+  "problemId": "unit-disk-independent-set",
+  "problemRevision": 1,
+  "reader": {
+    "anchor": "solution-budget",
+    "parameter": "Solution budget.",
+    "parameterLabel": "Solution budget",
+    "parameterSymbols": [
+      {
+        "meaning": "solution budget",
+        "symbol": "k"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "number of supplied geometric objects",
+        "symbol": "n"
+      },
+      {
+        "meaning": "complete explicit binary input length",
+        "symbol": "B"
+      }
+    ]
+  },
+  "resolutions": [],
+  "revision": 5,
+  "task": "Are there k listed objects that are pairwise disjoint?",
+  "title": "Independent Set of unit disks by solution budget",
+  "variant": "Independent Set of unit disks",
+  "recoveryDispositions": [
+    {
+      "target": {
+        "id": "unit-disk-independent-set-budget-eth",
+        "revision": 2
+      },
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "recovery": {
+        "id": "unit-disk-independent-set-budget-w1",
+        "revision": 2
+      },
+      "reason": "Ordinary parameterized hardness excludes a fixed polynomial input exponent. The historical result excludes a growing little-o exponent."
+    }
+  ],
+  "recoveryAssessments": [
+    {
+      "target": {
+        "id": "unit-disk-independent-set-budget-eth",
+        "revision": 2
+      },
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "recovery": {
+        "id": "unit-disk-independent-set-budget-kxk",
+        "revision": 2
+      },
+      "scale": "full",
+      "effective": false,
+      "targetScale": "n^(o(k^(1/2)))",
+      "recoveredScale": "n^(o(k^(1/2)))",
+      "comparison": "The published transfer gives the same rate for the same problem and explicit input convention, including arbitrary computable parameter prefactors.",
+      "evidence": [
+        {
+          "editionId": "book",
+          "locator": "Theorem 14.34, p. 500",
+          "paperId": "cygan2015",
+          "placement": "statement",
+          "role": "benchmark"
+        },
+        {
+          "editionId": "v3",
+          "locator": "Proposition 1 and Table 1",
+          "paperId": "szeider2026",
+          "placement": "statement",
+          "role": "benchmark"
+        },
+        {
+          "editionId": "oct30",
+          "locator": "§3, geometric transfers from Grid Tiling",
+          "paperId": "szeider2026",
+          "placement": "statement",
+          "role": "benchmark"
+        },
+        {
+          "editionId": "book",
+          "locator": "Theorem 14.34, p. 500",
+          "paperId": "cygan2015",
+          "placement": "statement",
+          "role": "benchmark"
+        },
+        {
+          "proofId": "six-w1-memberships",
+          "revision": 1,
+          "theorem": "open-to-closed-regions"
+        }
+      ]
+    }
+  ],
+  "reviews": [
+    {
+      "id": "unit-disk-independent-set-budget-w1-hardness-scope",
+      "type": "agent",
+      "date": "2026-11-18",
+      "reviewer": "Codex agent /root/population_c",
+      "verdict": "verified",
+      "scope": "Marx’s construction uses open unit-diameter disks with rational centers. Uniform rescaling of both centers and sizes converts diameter one to radius one. Theorem 7 changes the boundary convention while preserving the budget.",
+      "evidence": "evidence/six-w1-memberships-independent.md",
+      "object": {
+        "type": "bound",
+        "caseId": "unit-disk-independent-set-budget",
+        "id": "unit-disk-independent-set-budget-w1",
+        "revision": 2
+      },
+      "independent": true
+    },
+    {
+      "id": "unit-disk-independent-set-budget-eth-closed-scope",
+      "type": "agent",
+      "date": "2026-11-18",
+      "reviewer": "Codex agent /root/population_c",
+      "verdict": "verified",
+      "scope": "The boundary transfer preserves graph intersections, number of objects and selection budget. The polynomial growth in complete bit length is absorbed by the input factor.",
+      "evidence": "evidence/six-w1-memberships-independent.md",
+      "object": {
+        "type": "bound",
+        "caseId": "unit-disk-independent-set-budget",
+        "id": "unit-disk-independent-set-budget-eth",
+        "revision": 2
+      },
+      "independent": true
+    },
+    {
+      "id": "unit-disk-independent-set-budget-kxk-closed-scope",
+      "type": "agent",
+      "date": "2026-11-18",
+      "reviewer": "Codex agent /root/population_c",
+      "verdict": "verified",
+      "scope": "The boundary transfer preserves graph intersections, number of objects and selection budget. The polynomial growth in complete bit length is absorbed by the input factor.",
+      "evidence": "evidence/six-w1-memberships-independent.md",
+      "object": {
+        "type": "bound",
+        "caseId": "unit-disk-independent-set-budget",
+        "id": "unit-disk-independent-set-budget-kxk",
+        "revision": 2
+      },
+      "independent": true
+    }
+  ]
+}

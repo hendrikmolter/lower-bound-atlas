@@ -1,0 +1,153 @@
+{
+  "id": "planar-list-coloring-treewidth",
+  "revision": 2,
+  "problemId": "planar-list-coloring",
+  "problemRevision": 1,
+  "problemDefinitionHash": "32ba45614f4faa2d9bf98f51a7b97a33d9b816d1b13ce0914647a4065eca8c5c",
+  "title": "Planar List Coloring by intrinsic treewidth",
+  "kind": "lower-bound-case",
+  "aliases": [],
+  "variant": "Planar List Coloring",
+  "task": "Can each vertex be assigned a color from its list so that adjacent vertices have different colors?",
+  "encoding": "An explicitly encoded finite simple undirected planar graph G and an explicit list of allowed colors for each vertex.",
+  "parameter": "The intrinsic treewidth t.",
+  "inputConditions": [],
+  "coverage": "Literature bounds.",
+  "bounds": [
+    {
+      "runtime": "f(t) n^(o(t))",
+      "inputFactor": "n is the base of the exponent",
+      "runtimeSymbols": [
+        "f",
+        "t",
+        "n"
+      ],
+      "qualifications": [],
+      "inputConditions": [],
+      "sources": [
+        {
+          "paperId": "cygan2015",
+          "editionId": "book",
+          "locator": "Theorem 14.29, pp. 492–493",
+          "placement": "statement",
+          "role": "lower-bound statement"
+        }
+      ],
+      "reader": {
+        "label": "Sublinear exponent in the parameter",
+        "revision": 1
+      },
+      "revision": 1,
+      "provenance": "literature",
+      "status": "established",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "assumptionOperator": "all",
+      "proofs": [],
+      "id": "planar-list-coloring-treewidth-eth",
+      "statement": "Under ETH, no deterministic algorithm solves Planar List Coloring within the stated running time."
+    },
+    {
+      "assessments": {
+        "w1": {
+          "converse": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "w1",
+          "revision": 1
+        }
+      ],
+      "hardnessBaseline": "W[1]",
+      "id": "planar-list-coloring-treewidth-w1-baseline",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [
+        "The parameter factor f is an arbitrary computable function and the exponent of B is an arbitrary fixed constant."
+      ],
+      "reader": {
+        "explanation": "The reduction from Grid Tiling produces planar graphs with intrinsic treewidth bounded by a function of the source parameter. The lists and palette are part of the input.",
+        "label": "Fixed-parameter tractability",
+        "revision": 1,
+        "title": "Planar List Coloring under FPT ≠ W[1]: Fixed-parameter tractability"
+      },
+      "revision": 1,
+      "runtime": "f(t) B^(O(1))",
+      "runtimeSymbols": [
+        "t",
+        "B"
+      ],
+      "sources": [
+        {
+          "editionId": "book",
+          "locator": "Theorem 14.29 and its proof, pp. 492–493",
+          "paperId": "cygan2015",
+          "placement": "statement",
+          "role": "parameterized hardness"
+        }
+      ],
+      "statement": "Under FPT ≠ W[1], no deterministic algorithm solves this decision problem within the stated running time.",
+      "status": "established"
+    }
+  ],
+  "resolutions": [],
+  "reader": {
+    "anchor": "treewidth",
+    "parameterLabel": "Intrinsic treewidth",
+    "parameter": "The intrinsic treewidth t.",
+    "parameterSymbols": [
+      {
+        "symbol": "t",
+        "meaning": "intrinsic treewidth"
+      }
+    ],
+    "symbols": [
+      {
+        "symbol": "f",
+        "meaning": "arbitrary total computable parameter function"
+      },
+      {
+        "symbol": "n",
+        "meaning": "number of vertices"
+      },
+      {
+        "meaning": "complete binary input length",
+        "symbol": "B"
+      }
+    ],
+    "boundContext": "The intrinsic treewidth t. Here f denotes arbitrary total computable parameter function, n denotes number of vertices."
+  },
+  "recoveryDispositions": [
+    {
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "reason": "Parameterized hardness excludes algorithms with a constant exponent on the complete input length. The historical ETH result also excludes runtimes with growing input exponents in its stated little-o family.",
+      "recovery": {
+        "id": "planar-list-coloring-treewidth-w1-baseline",
+        "revision": 1
+      },
+      "target": {
+        "id": "planar-list-coloring-treewidth-eth",
+        "revision": 1
+      }
+    }
+  ]
+}

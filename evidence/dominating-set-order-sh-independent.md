@@ -1,0 +1,11 @@
+# Dominating Set by graph order under SH
+
+Independent review by Codex agent `/root/natural_batch`, 18 November 2026.
+
+Verdict: verified for the biconditional in theorem `dominating-set-order-sh`, revision 1. The TeX SHA-256 is `bf1ae82b104cedd384facca43eb568e8c88fa5a00a4657d2baf596394cdb9d54`. The review covers exact deterministic decision on explicit finite simple undirected graphs, graph order, the binary budget, the fixed-power family for all fixed savings strictly between zero and one, and the complete input polynomial factor.
+
+The forward implication uses a polynomial-time width reduction with one variable per binary OR gate and confirms the triangle construction. Every private triangle vertex forces one selection in its own triangle. A solution within budget chooses no clause vertex, and replacing a chosen private vertex with a literal vertex preserves domination. The graph order is linear in the number of literal occurrences and variables, which is at most linear in the complete binary input length. No sparsification is required in this direction.
+
+The converse uses a fixed rational branching threshold exponent. Inclusion removes at least the threshold number of previously uncovered demands, so every root-to-leaf word has at most the claimed number of inclusion bits. The prefix-free leaf words remain distinct after zero padding. Every residual candidate covers fewer than the threshold number of demands at a nontrivial leaf, bounding the CNF occurrence count by summing the candidate cover sizes. The binary counter fits all partial sums and its gate encoding enforces the residual budget. Renumbering uses logarithmic-size variable names. Choosing the branching exponent small enough places both the search overhead and the assumed SAT clock strictly below linear exponent degree, leaving slack to absorb logarithms.
+
+The only external premise is the normalized decision SH convention from [arXiv:2611.02650v2](https://arxiv.org/abs/2611.02650v2). Consecutive renaming keeps the bit/combinatorial-length conversion within a logarithmic factor on normalized formulas, so it preserves existence of a fixed positive power saving. The review establishes neither an ETH converse nor a novelty claim.
