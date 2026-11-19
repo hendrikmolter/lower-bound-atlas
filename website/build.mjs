@@ -212,7 +212,7 @@ function catalogPage(page, title, lead, body, { active, browse = false, crumbs =
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
   <title>${escape(title)} | Lower Bound Atlas</title>
-  <link rel="stylesheet" href="${relativeUrl(page, 'assets/style.css')}">
+  <link rel="stylesheet" href="${relativeUrl(page, 'assets/style.css')}${commit ? '?v=' + commit : ''}">
   ${browse ? `<script src="${relativeUrl(page, 'assets/browse.js')}" defer></script>` : ''}
 </head>
 <body>
