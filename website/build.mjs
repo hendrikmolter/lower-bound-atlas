@@ -1272,18 +1272,11 @@ challengePages();
 aboutPage();
 catalogPage('legal/index.html', 'Legal notice and privacy', '', `
   <section id="impressum"><h2>Impressum</h2>
-    <p>Hendrik Molter operates the Lower Bound Atlas in a personal capacity. For questions about the Atlas or your personal data, email <a href="mailto:hendrik.molter@hpi.de">hendrik.molter@hpi.de</a>.</p></section>
+    <p>Operator and data controller: Hendrik Molter · <a href="mailto:hendrik.molter@hpi.de">hendrik.molter@hpi.de</a></p></section>
   <section id="privacy"><h2>Privacy</h2>
-    <p>Hendrik Molter is the controller for personal data processed in operating the Atlas. The contact above also applies to privacy requests.</p>
-    <h3>Visiting and searching</h3>
-    <p>GitHub Pages hosts the website, including its fonts, scripts and proof downloads. When you visit, your browser sends GitHub your IP address and the requested URL. GitHub logs visitor IP addresses for security. The Atlas uses no analytics or tracking cookies. The legal basis for using the hosting service is the operator’s legitimate interest in making the research database publicly and securely accessible (Article 6(1)(f) GDPR).</p>
-    <p>Searches and filters run in your browser. The address bar updates as you search. Anyone you share that address with can see the search terms and filters. Opening or reloading a search URL sends those terms and filters to GitHub as part of the request.</p>
-    <p>GitHub describes its retention criteria and the safeguards it uses for international transfers, including transfers to the United States, in its <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">privacy statement</a>. Its <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection">Pages documentation</a> explains IP logging.</p>
-    <h3>Email and public contributions</h3>
-    <p>If you email the operator, your address and message are processed through the email provider to answer your request and follow up as needed. Correspondence is kept for as long as needed for that purpose or to meet applicable legal obligations.</p>
-    <p>If you open a public GitHub issue or pull request, your username and submission are visible to others. Accepted contributions and attribution may remain in the Atlas and its public Git history so readers can trace a result. The operator’s legitimate interests in answering inquiries and maintaining a verifiable research record are the basis for this processing (Article 6(1)(f) GDPR).</p>
-    <h3>Your rights</h3>
-    <p>You may request access to your personal data, correction, erasure or restriction of processing, subject to the applicable GDPR conditions. You may object to processing based on legitimate interests on grounds relating to your particular situation. Email the operator using the address above. You may also lodge a complaint with a data protection supervisory authority, including the <a href="https://www.lda.brandenburg.de/">Brandenburg data protection authority</a>.</p>
+    <p><strong>Visiting and searching.</strong> GitHub Pages hosts the Atlas and logs IP addresses for security. Searches run in your browser. Opening a shared search URL sends its terms and filters to GitHub. GitHub explains retention and international transfers in its <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">privacy statement</a>.</p>
+    <p><strong>Contact and contributions.</strong> Emails are kept as needed to answer requests or meet legal obligations. GitHub issues and pull requests are public. Contributions and author credits may remain in the project history. The operator relies on legitimate interests in secure hosting, answering inquiries and preserving the research record (Article 6(1)(f) GDPR).</p>
+    <p><strong>Your rights.</strong> You may contact the operator to request access, correction, erasure or restriction of processing, or to object on grounds relating to your situation. You may also complain to a supervisory authority, including the <a href="https://www.lda.brandenburg.de/">Brandenburg data protection authority</a>.</p>
   </section>`);
 write(api + '/atlas.json', json(db));
 removeObsoleteFiles();
