@@ -281,6 +281,45 @@ test('links the preferred publication and labels the exact edition inspected for
   assert.match(read('papers/edition-fixture/manuscript.txt'), /Inspected manuscript title/);
 });
 
+test('every paper edition lists each cited bound once per problem and source passage', t => {
+  const dir = readerFixture(t);
+  execFileSync(process.execPath, ['website/build.mjs'], {cwd:dir});
+  const site = join(dir, 'dist/site');
+  const data = JSON.parse(readFileSync(join(site, 'api/v1/atlas.json')));
+  const cases = new Map(data.cases.map(record => [record.id, record]));
+  for (const paper of data.papers) {
+    const html = readFileSync(join(site, 'papers', paper.id, 'index.html'), 'utf8');
+    for (const edition of paper.editions) {
+      const context = paper.id + '/' + edition.id;
+      const section = html.split('<section class="panel" id="' + edition.id + '">')[1].split('</section>')[0];
+      const list = section.split('<h3>Recorded uses</h3>')[1];
+      const groups = new Map();
+      const citations = (data.reverse.papers[paper.id] ?? []).filter(ref => ref.editionId === edition.id);
+      for (const ref of citations.filter(ref => ref.type === 'bound')) {
+        const record = cases.get(ref.caseId);
+        const key = JSON.stringify([record.problemId, ref.locator, ref.editionReason ?? '']);
+        if (!groups.has(key)) groups.set(key, new Set());
+        const current = record.bounds.find(bound => bound.id === ref.id);
+        const href = current?.hardnessBaseline ? '../../cases/' + record.id + '/index.html#' + ref.id
+          : '../../bounds/' + record.id + '/' + ref.id + '/r' + ref.revision + '/index.html';
+        groups.get(key).add(href);
+      }
+      const expected = [...groups.values()].map(links => [...links].sort().join(' ')).sort();
+      const actual = [];
+      for (const [,row] of list.matchAll(/<li>(.*?)<\/li>/gs)) {
+        const links = [...row.matchAll(/<a href="([^"]+)"[^>]*>(.*?)<\/a>/gs)];
+        const bounds = links.filter(([,href]) => href.startsWith('../../bounds/') ||
+          (href.startsWith('../../cases/') && href.includes('#') && !href.includes('#assessment-')));
+        if (!bounds.length) continue;
+        const labels = bounds.map(link => link[2]);
+        assert.equal(new Set(labels).size, labels.length, context + ': indistinguishable link labels');
+        actual.push(bounds.map(link => link[1]).sort().join(' '));
+      }
+      assert.deepEqual(actual.sort(), expected, context);
+    }
+  }
+});
+
 test('trial search indexes quantitative witnesses and keeps paper filters optional', t => {
   const dir = readerFixture(t);
   execFileSync(process.execPath, ['website/build.mjs'], {cwd:dir});

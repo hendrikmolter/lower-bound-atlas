@@ -45,6 +45,8 @@ Inspect the diff. The main registry owns the premise and edition, and the case o
 
 ## Choosing a citation
 
+When the same passage supports a statement, an implication or another parameterization, reuse its edition and locator verbatim. Record each role separately. Use distinct locators when different passages supply the evidence. The paper page groups uses by edition, problem and locator and links each applicable statement once in that group.
+
 Look up the publication history with the publisher or authors. An extended journal version can have a different title. For a paper, prefer the journal version, followed by the published conference version, followed by a preprint or other unpublished manuscript. For a book, cite the newest published edition. Check the publisher’s edition number and date since a reprint or corrected printing can retain the same edition number.
 
 Record each edition’s publication kind in `kind`. For books, record the publisher’s edition number in `editionNumber`. Set the work’s `preferredEditionId` to that publication. Use a DOI URL when one identifies the edition. Add an open copy of the same edition as its full-text link. Record a distinct edition when its title, numbering or content matters to the citation. Give the original authors, publication title, venue and year.

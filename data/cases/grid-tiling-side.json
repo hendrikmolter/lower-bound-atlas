@@ -171,7 +171,7 @@
         },
         {
           "editionId": "book",
-          "locator": "Theorem 14.28, pp. 490–491 (reduction from k-Clique)",
+          "locator": "Theorem 14.28, pp. 490–491, reduction from k-Clique",
           "paperId": "cygan2015",
           "placement": "statement",
           "role": "benchmark"
