@@ -43,14 +43,8 @@
     "balanced-alphabet"
   ],
   "inputFactor": "N^C, C fixed",
-  "proofs": [
-    {
-      "proofId": "closest-string-balanced",
-      "revision": 1,
-      "theorem": "cs-balanced"
-    }
-  ],
-  "provenance": "atlas",
+  "proofs": [],
+  "provenance": "literature",
   "qualifications": [
     "The nonnegative integer exponent has a computable upper bound and is effectively sublinear in d. The running time allows no additional factor depending on q."
   ],
@@ -70,11 +64,11 @@
   ],
   "sources": [
     {
-      "editionId": "journal",
-      "locator": "Independent Set is W[1]-complete, with Clique by complementation",
-      "paperId": "df1995",
-      "placement": "proof",
-      "role": "source completeness"
+      "editionId": "arxiv-v1",
+      "locator": "Theorem 6, Section 8",
+      "paperId": "molter2026-running-time",
+      "placement": "statement",
+      "role": "running-time lower bound"
     }
   ],
   "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Closest String within the stated running time.",

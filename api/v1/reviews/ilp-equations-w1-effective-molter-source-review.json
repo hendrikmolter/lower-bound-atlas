@@ -1,0 +1,18 @@
+{
+  "applicable": true,
+  "date": "2026-11-20",
+  "evidence": "evidence/molter2026-source-scope.md",
+  "id": "ilp-equations-w1-effective-molter-source-review",
+  "label": "Agent verified",
+  "object": {
+    "caseId": "integer-linear-programming-equations",
+    "id": "ilp-equations-w1-effective",
+    "revision": 2,
+    "type": "bound"
+  },
+  "reviewer": "Codex source audit",
+  "scope": "Forward implication. Checked the exact task, parameter, input restrictions, and effective running time against Theorem 8, Section 10.",
+  "stale": false,
+  "type": "agent",
+  "verdict": "verified"
+}

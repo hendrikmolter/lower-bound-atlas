@@ -3,9 +3,9 @@
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage[hidelinks]{hyperref}
 \newtheorem{theorem}{Theorem}
-\title{Quadratic lower bounds for Independent Set on triangle-free graphs}
+\title{Fixed-power lower bounds for Independent Set by rank-width under SH}
 \author{Atlas}
-\date{18 November 2026}
+\date{20 November 2026}
 \begin{document}
 \maketitle
 
@@ -20,46 +20,36 @@ rank of a split induced by a tree edge. Rank-width is the minimum such
 width. An order gives a caterpillar rank decomposition with no larger
 width except for the harmless bound of one on pendant cuts.
 
-Let \(N\) be the complete binary input length including the certificate
-when supplied. A computable nonnegative integer function \(h\) is
-effectively \(o(p^2)\) if a computable function \(T\) satisfies
-\(h(p)\le \eta\max(1,p)^2\) for \(p\ge T(\eta)\) for every positive rational
-\(\eta\).
-
-\hypertarget{independent-set-rankwidth-w1}{}
-\begin{theorem}\label{independent-set-rankwidth-w1}
-Assume deterministic \(\mathrm{FPT}\ne\mathrm W[1]\).
-For every fixed \(C\ge0\) and computable effectively \(o(p^2)\) function
-\(h\), no deterministic algorithm decides \textsc{Independent Set} on
-triangle-free graphs in \(O(2^{h(p)}N^C)\) time. This holds separately for
-rank-width and linear rank-width, with or without an optimal certificate
-of the corresponding type.
-\end{theorem}
-
-The same graph construction also gives the following fixed-power
-exclusion under deterministic SH.
+Let \(N\) be the complete binary input length, including a vertex
+order or rank decomposition when supplied. The deterministic
+Satisfiability Hypothesis (SH) excludes deterministic algorithms for
+CNF-SAT in time \(O(2^{L^{1-\delta}})\) for every fixed
+\(0<\delta<1\), where \(L\) is the formula's bit length~\cite{sh}.
 
 \hypertarget{independent-set-rankwidth-sh}{}
 \begin{theorem}\label{independent-set-rankwidth-sh}
 Assume deterministic SH. For every fixed \(0<\epsilon<2\), no deterministic
 algorithm decides \textsc{Independent Set} on triangle-free graphs
-in \(2^{O(p^{2-\epsilon})}N^{O(1)}\) time. This holds separately for
-rank-width and linear rank-width, with or without an optimal certificate
-of the corresponding type.
+in \(2^{O(p^{2-\epsilon})}N^{O(1)}\) time. Here \(p\) is rank-width or
+linear rank-width, separately. The exclusion also holds when the input
+includes a rank decomposition or vertex order of width \(p\), even
+on the promise that the supplied width is optimal.
 \end{theorem}
 
 Bergougnoux, Korhonen and Nederlof~\cite[Theorem 1.1]{bkn} establish
 the quadratic ETH lower bound, parameterized by linear rank-width.
-We adapt their construction to arbitrary clause lengths by changing
-the order of the literal vertices. Paths replace selection cliques to
-remove triangles, and a small graph of large rank-width allows us to
-supply an optimal certificate.
+We use Molter's reduction~\cite[Sections 7.1--7.3]{molter} from
+satisfiability to triangle-free graphs. It uses paths in place of
+selection cliques to remove triangles and a small graph of large
+rank-width to obtain an optimal certificate. We give the construction
+and then derive the fixed-power exclusion from its size and width bounds.
 
 \section{Encoding assignments in an independent set}
 
 Take a CNF formula with \(v\) occurring variables and \(m\) clauses.
 Normalize names and remove duplicate literals and tautologies.
-Handle formulas with a constant answer directly. With
+An empty clause gives an immediate no answer, and a formula with no
+remaining clauses gives an immediate yes answer. With
 \(k=\lceil\sqrt{v}\rceil\), pad with unused variables to make \(k\) rows
 of \(k\) variables each. Let \(B\) be an independent set with one
 vertex for each \(z\in\mathbb F_2^{2k}\). For each clause \(i\) and
@@ -88,7 +78,7 @@ of \(B\) and a literal in every \(T_i\). Thus all layers have the same
 common nonneighbors in \(B\) and the same assignment. Its selected
 literal in each clause is true.
 
-\section{Removing triangles without increasing width}
+\section{Removing triangles with constant additive width overhead}
 
 Process \(B\) first, then, clause by clause and row by row, list
 the vertices of \(A_{i,j}\) followed by the literals of that row of
@@ -114,7 +104,8 @@ bipartite, each site touches at most one marker, and a marker's
 two sites are three edges apart.
 
 Before each marker \(j\), insert its path's as yet unplaced sites
-through \(4j+3\). Insert the last site after the last marker.
+through \(4j+3\). Insert each path's last site immediately after its
+last marker.
 For any cut in the resulting order, the intergroup edges among
 old vertices have rank at most \(3k+1\). The parity edges between
 \(B\) and assignment groups factor through \(2k\) coordinates.
@@ -156,9 +147,12 @@ its vertices map out under one permutation is at most
 Indeed, one of the \(\binom rt\) subsets of size \(r-t\) must
 map into \(S\), and its distinct images can be exposed in order.
 The binomial bound uses the increase of \(x\ln(ea/(2x))\) up to
-\(a/100\). A union bound over all sets for all eight permutations
-gives failure probability at most \(2^a2^{-8a/5}<1\). Thus
-every balanced cut has more than \(a/100\) edges. Its crossing
+\(a/100\). For a fixed cut, if all eight permutations have at most
+\(t\) outgoing images, independence bounds the probability of that
+event by \(2^{-8a/5}\). A union bound over the cuts gives failure
+probability at most \(2^a2^{-8a/5}<1\). A permutation with more
+than \(t\) outgoing images provides that many distinct crossing
+edges, so every balanced cut has more than \(a/100\) edges. Its crossing
 graph has an induced matching of size at least \(a/51200\):
 greedily keeping one edge and removing the neighborhoods of its
 endpoints removes at most \(2\cdot16^2\) edges per choice.
@@ -211,43 +205,29 @@ construction costs \(2^{O(k\log(k+2))}\) times a fixed polynomial
 in formula length, and the complete output length is
 \(2^{O(k)}\) times a fixed polynomial.
 
-\section{Transferring the running-time bounds}
+\section{Transferring the running-time bound}
 
-For the \(\mathrm W[1]\) comparison, encode a Multicolored Clique
-instance with \(\ell\) colors and \(n\ge 2\) vertices by blocks of
-\(\lceil\log_2 n\rceil\) bits. Each block names a vertex of its color.
-Forbid unused names and nonedge pairs by clauses that disagree with
-the corresponding bit patterns. Empty color classes and trivial
-cases can be answered directly. The CNF has
-\(v\le\ell\lceil\log_2 n\rceil\) variables and polynomial length and
-construction time with an absolute exponent. It is satisfiable
-exactly when there is a multicolored clique. This problem is
-\(\mathrm W[1]\)-hard by number of colors~\cite{df}, by copying the
-original Clique vertices to each color and respecting adjacency
-between copies in different colors.
+\begin{proof}[Proof of Theorem~\ref{independent-set-rankwidth-sh}]
+Suppose an algorithm runs within the stated time bound for one of
+the parameterizations and a fixed \(0<\epsilon<2\). Start with a 3-CNF
+formula of variable-plus-clause count \(s\) and complete input length
+\(L\). Under SH, this problem admits no deterministic
+\(2^{O(s^{1-\gamma})}L^{O(1)}\)-time algorithm for any fixed
+\(0<\gamma<1\)~\cite[Lemma 2.1]{sh}. With consecutive variable
+identifiers the encoding length of a 3-CNF formula is polynomial
+in \(s\), so the polynomial factor is absorbed in the exponential
+bound on those inputs.
 
-Let \(x=\log_2 n\). The padding cost in the exponent is bounded by
-\(C(\ell)x^{3/4}\) for computable \(C\), since
-\(k=O(\sqrt{\ell x})\) and \(\log(k+2)=O(\sqrt{k})\).
-Above \(C(\ell)^4\) it is at most \(x\); below this cutoff it is
-bounded by a computable function of \(\ell\).
-For the hypothetical solver, take a computable integer \(A(\ell)\)
-bounding \(\max(1,p)^2/x\) and use the modulus at \(1/A(\ell)\).
-The exponent is at most \(x\) beyond the cutoff, and the
-computable finite prefix of \(h\) bounds it otherwise.
-The resulting deterministic fixed-parameter algorithm by color
-count contradicts \(\mathrm{FPT}\ne\mathrm W[1]\).
-
-For SH take a 3-CNF formula of variable-plus-clause count \(s\).
-The deterministic 3-CNF formulation of SH excludes every
-fixed positive saving below the linear power in \(s\) with
-a fixed polynomial input factor~\cite[Lemma 2.1]{sh}.
-Here \(k=O(\sqrt{s})\) and \(p=O(\sqrt{s})\), and the
-construction cost exponent is \(O(s^{3/4})\).
-A solver for any fixed \(0<\epsilon<2\) would therefore give a
-solver in \(2^{O(s^{1-\gamma})}\) times a fixed polynomial in
-complete input length, with \(\gamma=\min(1/4,\epsilon/2)>0\).
-This proves both exclusions.
+Apply the construction above. The independent set threshold is
+attainable exactly when the formula is satisfiable. Supply the
+corresponding optimal certificate if the algorithm takes one.
+Since \(k=O(\sqrt{s})\), the width satisfies \(p=O(\sqrt{s})\), and the
+construction takes \(2^{O(\sqrt{s}\log(s+2))}L^{O(1)}\) time.
+The complete output length satisfies \(N=2^{O(\sqrt{s})}L^{O(1)}\).
+The algorithm and the reduction together take
+\(2^{O(s^{1-\gamma})}L^{O(1)}\) time for
+\(\gamma=\min\{1/4,\epsilon/2\}>0\), contradicting SH.
+\end{proof}
 
 \paragraph{Acknowledgment.}
 The proof was found using ChatGPT.
@@ -258,14 +238,12 @@ B. Bergougnoux, T. Korhonen, and J. Nederlof.
 Tight lower bounds for problems parameterized by rank-width.
 \emph{STACS}, LIPIcs 254, 11:1--11:17, 2023.
 \href{https://doi.org/10.4230/LIPIcs.STACS.2023.11}{DOI}.
-\bibitem{df}
-R. G. Downey and M. R. Fellows. Fixed-parameter tractability and
-completeness II: On completeness for \(\mathrm W[1]\).
-\emph{Theoretical Computer Science}, 141(1--2):109--131, 1995.
-\href{https://doi.org/10.1016/0304-3975(94)00097-3}{DOI}.
 \bibitem{sh}
 MIT Hardness Group et al. ETH is dead, long live SH.
 \href{https://arxiv.org/abs/2611.02650v2}{arXiv:2611.02650v2}, 2026.
+\bibitem{molter}
+H. Molter. Running-time lower bounds under \(\mathrm{FPT}\ne\mathrm W[1]\).
+\href{https://arxiv.org/abs/2611.26080v1}{arXiv:2611.26080v1}, 2026.
 \end{thebibliography}
 \end{document}
 

@@ -14,10 +14,10 @@
             "hypothesisRevision": 1,
             "proof": {
               "proofId": "independent-set-rankwidth",
-              "revision": 1,
+              "revision": 2,
               "theorem": "independent-set-rankwidth-sh"
             },
-            "reviewId": "independent-set-rankwidth-sh-review"
+            "reviewId": "independent-set-rankwidth-sh-r2-review"
           }
         ],
         "status": "established"
@@ -43,7 +43,7 @@
   "proofs": [
     {
       "proofId": "independent-set-rankwidth",
-      "revision": 1,
+      "revision": 2,
       "theorem": "independent-set-rankwidth-sh"
     }
   ],

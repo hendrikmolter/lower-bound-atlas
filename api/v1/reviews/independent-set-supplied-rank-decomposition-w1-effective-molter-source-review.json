@@ -1,0 +1,18 @@
+{
+  "applicable": true,
+  "date": "2026-11-20",
+  "evidence": "evidence/molter2026-source-scope.md",
+  "id": "independent-set-supplied-rank-decomposition-w1-effective-molter-source-review",
+  "label": "Agent verified",
+  "object": {
+    "caseId": "independent-set-supplied-rank-decomposition",
+    "id": "independent-set-supplied-rank-decomposition-w1-effective",
+    "revision": 1,
+    "type": "bound"
+  },
+  "reviewer": "Codex source audit",
+  "scope": "Forward implication. Checked the exact task, parameter, input restrictions, and effective running time against Theorem 5, Section 7.",
+  "stale": false,
+  "type": "agent",
+  "verdict": "verified"
+}

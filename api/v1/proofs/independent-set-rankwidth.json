@@ -1,5 +1,5 @@
 {
-  "currentRevision": 1,
+  "currentRevision": 2,
   "id": "independent-set-rankwidth",
   "revisions": [
     {
@@ -13,25 +13,15 @@
       "dependencies": [],
       "dependencyCoverage": "complete",
       "pdf": "proofs/independent-set-rankwidth.pdf",
-      "revision": 1,
+      "revision": 2,
       "source": "proofs/independent-set-rankwidth.tex",
       "theorems": [
         {
-          "destination": "independent-set-rankwidth-w1",
-          "label": "independent-set-rankwidth-w1",
-          "number": "1",
-          "reviewIds": [
-            "independent-set-rankwidth-w1-review"
-          ],
-          "statement": "Assuming deterministic FPT ≠ W[1], there is no deterministic effective 2^(o(p²)) N^(O(1)) Independent Set algorithm on triangle-free graphs by either intrinsic width, with or without an optimal corresponding certificate.",
-          "supports": true
-        },
-        {
           "destination": "independent-set-rankwidth-sh",
           "label": "independent-set-rankwidth-sh",
-          "number": "2",
+          "number": "1",
           "reviewIds": [
-            "independent-set-rankwidth-sh-review"
+            "independent-set-rankwidth-sh-r2-review"
           ],
           "statement": "Assuming deterministic SH, for every fixed 0<ε<2 there is no deterministic 2^(O(p^(2−ε))) N^(O(1)) Independent Set algorithm on triangle-free graphs by either intrinsic width, with or without an optimal corresponding certificate.",
           "supports": true
@@ -39,5 +29,5 @@
       ]
     }
   ],
-  "title": "Quadratic lower bounds for Independent Set on triangle-free graphs"
+  "title": "A fixed-power lower bound for Independent Set on triangle-free graphs under SH"
 }

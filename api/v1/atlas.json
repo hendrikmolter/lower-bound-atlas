@@ -539,14 +539,8 @@
           "id": "chromatic-tw-w1",
           "inputConditions": [],
           "inputFactor": "N^(O(1))",
-          "proofs": [
-            {
-              "proofId": "chromatic-number-treewidth-w1",
-              "revision": 1,
-              "theorem": "tw-w1"
-            }
-          ],
-          "provenance": "atlas",
+          "proofs": [],
+          "provenance": "literature",
           "qualifications": [
             "The exponent h(t) is finite and nonnegative. There is a computable function T such that, for every positive integer j, h(t)≤t log₂(t)/j whenever t≥T(j)."
           ],
@@ -565,11 +559,11 @@
           ],
           "sources": [
             {
-              "editionId": "journal",
-              "locator": "W[1]-completeness of Independent Set, with Clique by complementation",
-              "paperId": "df1995",
-              "placement": "proof",
-              "role": "source completeness"
+              "editionId": "arxiv-v1",
+              "locator": "Theorem 2, Section 4",
+              "paperId": "molter2026-running-time",
+              "placement": "statement",
+              "role": "running-time lower bound"
             }
           ],
           "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Chromatic Number within the stated running time.",
@@ -611,9 +605,11 @@
           "effective": true,
           "evidence": [
             {
-              "proofId": "chromatic-number-treewidth-w1",
-              "revision": 1,
-              "theorem": "tw-w1"
+              "editionId": "arxiv-v1",
+              "locator": "Theorem 2, Section 4",
+              "paperId": "molter2026-running-time",
+              "placement": "statement",
+              "role": "running-time lower bound"
             }
           ],
           "hypothesis": {
@@ -732,9 +728,11 @@
           "effective": true,
           "evidence": [
             {
-              "proofId": "chromatic-number-treewidth-w1",
-              "revision": 1,
-              "theorem": "tw-w1"
+              "editionId": "arxiv-v1",
+              "locator": "Theorem 2, Section 4",
+              "paperId": "molter2026-running-time",
+              "placement": "statement",
+              "role": "running-time lower bound"
             }
           ],
           "hypothesis": {
@@ -861,14 +859,8 @@
           "id": "chromatic-vc-w1",
           "inputConditions": [],
           "inputFactor": "N^(O(1))",
-          "proofs": [
-            {
-              "proofId": "chromatic-number-cover-w1",
-              "revision": 1,
-              "theorem": "cover-w1"
-            }
-          ],
-          "provenance": "atlas",
+          "proofs": [],
+          "provenance": "literature",
           "qualifications": [],
           "reader": {
             "label": "Single-exponential bound",
@@ -883,11 +875,11 @@
           ],
           "sources": [
             {
-              "editionId": "journal",
-              "locator": "W[1]-completeness of Independent Set, with Clique by complementation",
-              "paperId": "df1995",
-              "placement": "proof",
-              "role": "source completeness"
+              "editionId": "arxiv-v1",
+              "locator": "Theorem 1, Section 3",
+              "paperId": "molter2026-running-time",
+              "placement": "statement",
+              "role": "running-time lower bound"
             }
           ],
           "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Chromatic Number within the stated running time.",
@@ -929,9 +921,11 @@
           "effective": false,
           "evidence": [
             {
-              "proofId": "chromatic-number-cover-w1",
-              "revision": 1,
-              "theorem": "cover-w1"
+              "editionId": "arxiv-v1",
+              "locator": "Theorem 1, Section 3",
+              "paperId": "molter2026-running-time",
+              "placement": "statement",
+              "role": "running-time lower bound"
             }
           ],
           "hypothesis": {
@@ -1050,9 +1044,11 @@
           "effective": false,
           "evidence": [
             {
-              "proofId": "chromatic-number-cover-w1",
-              "revision": 1,
-              "theorem": "cover-w1"
+              "editionId": "arxiv-v1",
+              "locator": "Theorem 1, Section 3",
+              "paperId": "molter2026-running-time",
+              "placement": "statement",
+              "role": "running-time lower bound"
             }
           ],
           "hypothesis": {
@@ -3560,12 +3556,14 @@
                   {
                     "boundRevision": 1,
                     "hypothesisRevision": 1,
-                    "proof": {
-                      "proofId": "cycle-packing-degree-six",
-                      "revision": 1,
-                      "theorem": "cycle-packing-degree-six"
-                    },
-                    "reviewId": "cycle-packing-degree-six-review"
+                    "reviewId": "cp-pw-w1-effective-molter-source-review",
+                    "source": {
+                      "editionId": "arxiv-v1",
+                      "locator": "Theorem 10, Section 13",
+                      "paperId": "molter2026-running-time",
+                      "placement": "forward",
+                      "role": "forward implication"
+                    }
                   }
                 ],
                 "status": "established"
@@ -3590,14 +3588,8 @@
             "optimal-path-decomposition"
           ],
           "inputFactor": "N^(O(1))",
-          "proofs": [
-            {
-              "proofId": "cycle-packing-degree-six",
-              "revision": 1,
-              "theorem": "cycle-packing-degree-six"
-            }
-          ],
-          "provenance": "atlas",
+          "proofs": [],
+          "provenance": "literature",
           "qualifications": [
             "For every fixed 0<γ<1.",
             "The exponent is a computable nonnegative integer function and has computable convergence to little-o at scale p log₂ p."
@@ -3608,7 +3600,9 @@
             "revision": 1,
             "title": "Effective bound in width times its logarithm under FPT ≠ W[1]"
           },
-          "reviewIds": [],
+          "reviewIds": [
+            "cp-pw-w1-effective-molter-source-review"
+          ],
           "revision": 1,
           "runtime": "2^(o_eff(p log₂ p)) N^(O(1))",
           "runtimeSymbols": [
@@ -3617,7 +3611,15 @@
             "n",
             "γ"
           ],
-          "sources": [],
+          "sources": [
+            {
+              "editionId": "arxiv-v1",
+              "locator": "Theorem 10, Section 13",
+              "paperId": "molter2026-running-time",
+              "placement": "statement",
+              "role": "running-time lower bound"
+            }
+          ],
           "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Undirected Cycle Packing within the stated running time.",
           "status": "established",
           "supported": true
@@ -3725,9 +3727,11 @@
           "effective": true,
           "evidence": [
             {
-              "proofId": "cycle-packing-degree-six",
-              "revision": 1,
-              "theorem": "cycle-packing-degree-six"
+              "editionId": "arxiv-v1",
+              "locator": "Theorem 10, Section 13",
+              "paperId": "molter2026-running-time",
+              "placement": "statement",
+              "role": "running-time lower bound"
             }
           ],
           "hypothesis": {
@@ -3811,9 +3815,11 @@
           "effective": true,
           "evidence": [
             {
-              "proofId": "cycle-packing-degree-six",
-              "revision": 1,
-              "theorem": "cycle-packing-degree-six"
+              "editionId": "arxiv-v1",
+              "locator": "Theorem 10, Section 13",
+              "paperId": "molter2026-running-time",
+              "placement": "statement",
+              "role": "running-time lower bound"
             }
           ],
           "hypothesis": {
@@ -3927,12 +3933,14 @@
                   {
                     "boundRevision": 1,
                     "hypothesisRevision": 1,
-                    "proof": {
-                      "proofId": "cycle-packing-degree-six",
-                      "revision": 1,
-                      "theorem": "cycle-packing-degree-six"
-                    },
-                    "reviewId": "cycle-packing-degree-six-review"
+                    "reviewId": "cp-tw-w1-effective-molter-source-review",
+                    "source": {
+                      "editionId": "arxiv-v1",
+                      "locator": "Theorem 10, Section 13",
+                      "paperId": "molter2026-running-time",
+                      "placement": "forward",
+                      "role": "forward implication"
+                    }
                   }
                 ],
                 "status": "established"
@@ -3956,14 +3964,8 @@
             "large-girth"
           ],
           "inputFactor": "N^(O(1))",
-          "proofs": [
-            {
-              "proofId": "cycle-packing-degree-six",
-              "revision": 1,
-              "theorem": "cycle-packing-degree-six"
-            }
-          ],
-          "provenance": "atlas",
+          "proofs": [],
+          "provenance": "literature",
           "qualifications": [
             "For every fixed 0<γ<1.",
             "The exponent is a computable nonnegative integer function and has computable convergence to little-o at scale t log₂ t."
@@ -3974,7 +3976,9 @@
             "revision": 1,
             "title": "Effective bound in width times its logarithm under FPT ≠ W[1]"
           },
-          "reviewIds": [],
+          "reviewIds": [
+            "cp-tw-w1-effective-molter-source-review"
+          ],
           "revision": 1,
           "runtime": "2^(o_eff(t log₂ t)) N^(O(1))",
           "runtimeSymbols": [
@@ -3983,7 +3987,15 @@
             "n",
             "γ"
           ],
-          "sources": [],
+          "sources": [
+            {
+              "editionId": "arxiv-v1",
+              "locator": "Theorem 10, Section 13",
+              "paperId": "molter2026-running-time",
+              "placement": "statement",
+              "role": "running-time lower bound"
+            }
+          ],
           "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Undirected Cycle Packing within the stated running time.",
           "status": "established",
           "supported": true
@@ -4046,9 +4058,11 @@
           "effective": true,
           "evidence": [
             {
-              "proofId": "cycle-packing-degree-six",
-              "revision": 1,
-              "theorem": "cycle-packing-degree-six"
+              "editionId": "arxiv-v1",
+              "locator": "Theorem 10, Section 13",
+              "paperId": "molter2026-running-time",
+              "placement": "statement",
+              "role": "running-time lower bound"
             }
           ],
           "hypothesis": {
@@ -4107,9 +4121,11 @@
           "effective": true,
           "evidence": [
             {
-              "proofId": "cycle-packing-degree-six",
-              "revision": 1,
-              "theorem": "cycle-packing-degree-six"
+              "editionId": "arxiv-v1",
+              "locator": "Theorem 10, Section 13",
+              "paperId": "molter2026-running-time",
+              "placement": "statement",
+              "role": "running-time lower bound"
             }
           ],
           "hypothesis": {
@@ -4420,14 +4436,8 @@
           "id": "dv-w1-fixed-coefficient",
           "inputConditions": [],
           "inputFactor": "N^(O(1))",
-          "proofs": [
-            {
-              "proofId": "distinct-vectors-fixed-coefficient",
-              "revision": 1,
-              "theorem": "dv-fixed-coefficient"
-            }
-          ],
-          "provenance": "atlas",
+          "proofs": [],
+          "provenance": "literature",
           "qualifications": [
             "For every fixed 0 < γ < 1."
           ],
@@ -4444,25 +4454,11 @@
           ],
           "sources": [
             {
-              "editionId": "journal",
-              "locator": "Corollary 3.2, with Clique by complementation",
-              "paperId": "df1995",
-              "placement": "proof",
-              "role": "source completeness"
-            },
-            {
-              "editionId": "proceedings",
-              "locator": "Lemma 14 and proof, pp. 81:11–81:12",
-              "paperId": "lin2019",
-              "placement": "proof",
-              "role": "source reduction"
-            },
-            {
-              "editionId": "thesis",
-              "locator": "Section 4.1.1, proof of Theorem 4.1, p. 33",
-              "paperId": "froese2012",
-              "placement": "proof",
-              "role": "address construction"
+              "editionId": "arxiv-v1",
+              "locator": "Theorem 7, Section 9",
+              "paperId": "molter2026-running-time",
+              "placement": "statement",
+              "role": "running-time lower bound"
             }
           ],
           "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Distinct Vectors within the stated running time.",
@@ -4516,9 +4512,11 @@
           "effective": false,
           "evidence": [
             {
-              "proofId": "distinct-vectors-fixed-coefficient",
-              "revision": 1,
-              "theorem": "dv-fixed-coefficient"
+              "editionId": "arxiv-v1",
+              "locator": "Theorem 7, Section 9",
+              "paperId": "molter2026-running-time",
+              "placement": "statement",
+              "role": "running-time lower bound"
             },
             {
               "editionId": "journal",
@@ -4584,9 +4582,11 @@
           "effective": false,
           "evidence": [
             {
-              "proofId": "distinct-vectors-fixed-coefficient",
-              "revision": 1,
-              "theorem": "dv-fixed-coefficient"
+              "editionId": "arxiv-v1",
+              "locator": "Theorem 7, Section 9",
+              "paperId": "molter2026-running-time",
+              "placement": "statement",
+              "role": "running-time lower bound"
             },
             {
               "editionId": "journal",
@@ -9806,12 +9806,14 @@
                   {
                     "boundRevision": 1,
                     "hypothesisRevision": 1,
-                    "proof": {
-                      "proofId": "graph-distortion-line-w1",
-                      "revision": 1,
-                      "theorem": "graph-distortion-line-w1"
-                    },
-                    "reviewId": "graph-distortion-line-w1-review"
+                    "reviewId": "graph-distortion-line-w1-molter-source-review",
+                    "source": {
+                      "editionId": "arxiv-v1",
+                      "locator": "Theorem 12, Section 15",
+                      "paperId": "molter2026-running-time",
+                      "placement": "forward",
+                      "role": "forward implication"
+                    }
                   }
                 ],
                 "status": "established"
@@ -9833,14 +9835,8 @@
             "bipartite"
           ],
           "inputFactor": "B^(O(1))",
-          "proofs": [
-            {
-              "proofId": "graph-distortion-line-w1",
-              "revision": 1,
-              "theorem": "graph-distortion-line-w1"
-            }
-          ],
-          "provenance": "atlas",
+          "proofs": [],
+          "provenance": "literature",
           "qualifications": [
             "The exponent h is finite, nonnegative and o(d log₂ d) with a computable convergence modulus."
           ],
@@ -9849,7 +9845,9 @@
             "revision": 1,
             "title": "Graph Distortion into a line under FPT ≠ W[1]: Effective subexponential lower bound"
           },
-          "reviewIds": [],
+          "reviewIds": [
+            "graph-distortion-line-w1-molter-source-review"
+          ],
           "revision": 1,
           "runtime": "2^(h(d)) B^(O(1))",
           "runtimeSymbols": [
@@ -9858,18 +9856,11 @@
           ],
           "sources": [
             {
-              "editionId": "journal",
-              "locator": "Lemma 2.8 and its proof",
-              "paperId": "lms2018",
-              "placement": "proof",
-              "role": "deterministic constructive coloring family"
-            },
-            {
-              "editionId": "journal",
-              "locator": "Theorem 2.1",
-              "paperId": "df1995",
-              "placement": "proof",
-              "role": "Clique hardness by Independent Set complementation"
+              "editionId": "arxiv-v1",
+              "locator": "Theorem 12, Section 15",
+              "paperId": "molter2026-running-time",
+              "placement": "statement",
+              "role": "running-time lower bound"
             }
           ],
           "statement": "Under FPT ≠ W[1], no deterministic algorithm solves the stated decision problem within the stated running time.",
@@ -9924,9 +9915,11 @@
           "effective": true,
           "evidence": [
             {
-              "proofId": "graph-distortion-line-w1",
-              "revision": 1,
-              "theorem": "graph-distortion-line-w1"
+              "editionId": "arxiv-v1",
+              "locator": "Theorem 12, Section 15",
+              "paperId": "molter2026-running-time",
+              "placement": "statement",
+              "role": "running-time lower bound"
             }
           ],
           "hypothesis": {
@@ -10045,9 +10038,11 @@
           "effective": true,
           "evidence": [
             {
-              "proofId": "graph-distortion-line-w1",
-              "revision": 1,
-              "theorem": "graph-distortion-line-w1"
+              "editionId": "arxiv-v1",
+              "locator": "Theorem 12, Section 15",
+              "paperId": "molter2026-running-time",
+              "placement": "statement",
+              "role": "running-time lower bound"
             }
           ],
           "hypothesis": {
@@ -12732,10 +12727,10 @@
                     "hypothesisRevision": 1,
                     "proof": {
                       "proofId": "independent-set-rankwidth",
-                      "revision": 1,
+                      "revision": 2,
                       "theorem": "independent-set-rankwidth-sh"
                     },
-                    "reviewId": "independent-set-rankwidth-sh-review"
+                    "reviewId": "independent-set-rankwidth-sh-r2-review"
                   }
                 ],
                 "status": "established"
@@ -12760,7 +12755,7 @@
           "proofs": [
             {
               "proofId": "independent-set-rankwidth",
-              "revision": 1,
+              "revision": 2,
               "theorem": "independent-set-rankwidth-sh"
             }
           ],
@@ -12800,12 +12795,14 @@
                   {
                     "boundRevision": 1,
                     "hypothesisRevision": 1,
-                    "proof": {
-                      "proofId": "independent-set-rankwidth",
-                      "revision": 1,
-                      "theorem": "independent-set-rankwidth-w1"
-                    },
-                    "reviewId": "independent-set-rankwidth-w1-review"
+                    "reviewId": "independent-set-linear-rank-width-w1-effective-molter-source-review",
+                    "source": {
+                      "editionId": "arxiv-v1",
+                      "locator": "Theorem 5, Section 7",
+                      "paperId": "molter2026-running-time",
+                      "placement": "forward",
+                      "role": "forward implication"
+                    }
                   }
                 ],
                 "status": "established"
@@ -12827,14 +12824,8 @@
             "triangle-free"
           ],
           "inputFactor": "N^(O(1))",
-          "proofs": [
-            {
-              "proofId": "independent-set-rankwidth",
-              "revision": 1,
-              "theorem": "independent-set-rankwidth-w1"
-            }
-          ],
-          "provenance": "atlas",
+          "proofs": [],
+          "provenance": "literature",
           "qualifications": [
             "The exponent is a computable nonnegative integer function and has computable convergence to little-o at scale p^2."
           ],
@@ -12844,14 +12835,24 @@
             "revision": 1,
             "title": "Effective quadratic-width bound on triangle-free graphs under FPT ≠ W[1]"
           },
-          "reviewIds": [],
+          "reviewIds": [
+            "independent-set-linear-rank-width-w1-effective-molter-source-review"
+          ],
           "revision": 1,
           "runtime": "2^(o_eff(p^2)) N^(O(1))",
           "runtimeSymbols": [
             "p",
             "N"
           ],
-          "sources": [],
+          "sources": [
+            {
+              "editionId": "arxiv-v1",
+              "locator": "Theorem 5, Section 7",
+              "paperId": "molter2026-running-time",
+              "placement": "statement",
+              "role": "running-time lower bound"
+            }
+          ],
           "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Independent Set within the stated running time.",
           "status": "established",
           "supported": true
@@ -12903,9 +12904,11 @@
           "effective": true,
           "evidence": [
             {
-              "proofId": "independent-set-rankwidth",
-              "revision": 1,
-              "theorem": "independent-set-rankwidth-w1"
+              "editionId": "arxiv-v1",
+              "locator": "Theorem 5, Section 7",
+              "paperId": "molter2026-running-time",
+              "placement": "statement",
+              "role": "running-time lower bound"
             }
           ],
           "hypothesis": {
@@ -12930,7 +12933,7 @@
           "evidence": [
             {
               "proofId": "independent-set-rankwidth",
-              "revision": 1,
+              "revision": 2,
               "theorem": "independent-set-rankwidth-sh"
             }
           ],
@@ -12980,7 +12983,7 @@
           "evidence": [
             {
               "proofId": "independent-set-rankwidth",
-              "revision": 1,
+              "revision": 2,
               "theorem": "independent-set-rankwidth-sh"
             }
           ],
@@ -13006,9 +13009,11 @@
           "effective": true,
           "evidence": [
             {
-              "proofId": "independent-set-rankwidth",
-              "revision": 1,
-              "theorem": "independent-set-rankwidth-w1"
+              "editionId": "arxiv-v1",
+              "locator": "Theorem 5, Section 7",
+              "paperId": "molter2026-running-time",
+              "placement": "statement",
+              "role": "running-time lower bound"
             }
           ],
           "hypothesis": {
@@ -13456,10 +13461,10 @@
                     "hypothesisRevision": 1,
                     "proof": {
                       "proofId": "independent-set-rankwidth",
-                      "revision": 1,
+                      "revision": 2,
                       "theorem": "independent-set-rankwidth-sh"
                     },
-                    "reviewId": "independent-set-rankwidth-sh-review"
+                    "reviewId": "independent-set-rankwidth-sh-r2-review"
                   }
                 ],
                 "status": "established"
@@ -13484,7 +13489,7 @@
           "proofs": [
             {
               "proofId": "independent-set-rankwidth",
-              "revision": 1,
+              "revision": 2,
               "theorem": "independent-set-rankwidth-sh"
             }
           ],
@@ -13524,12 +13529,14 @@
                   {
                     "boundRevision": 1,
                     "hypothesisRevision": 1,
-                    "proof": {
-                      "proofId": "independent-set-rankwidth",
-                      "revision": 1,
-                      "theorem": "independent-set-rankwidth-w1"
-                    },
-                    "reviewId": "independent-set-rankwidth-w1-review"
+                    "reviewId": "independent-set-rank-width-w1-effective-molter-source-review",
+                    "source": {
+                      "editionId": "arxiv-v1",
+                      "locator": "Theorem 5, Section 7",
+                      "paperId": "molter2026-running-time",
+                      "placement": "forward",
+                      "role": "forward implication"
+                    }
                   }
                 ],
                 "status": "established"
@@ -13551,14 +13558,8 @@
             "triangle-free"
           ],
           "inputFactor": "N^(O(1))",
-          "proofs": [
-            {
-              "proofId": "independent-set-rankwidth",
-              "revision": 1,
-              "theorem": "independent-set-rankwidth-w1"
-            }
-          ],
-          "provenance": "atlas",
+          "proofs": [],
+          "provenance": "literature",
           "qualifications": [
             "The exponent is a computable nonnegative integer function and has computable convergence to little-o at scale p^2."
           ],
@@ -13568,14 +13569,24 @@
             "revision": 1,
             "title": "Effective quadratic-width bound on triangle-free graphs under FPT ≠ W[1]"
           },
-          "reviewIds": [],
+          "reviewIds": [
+            "independent-set-rank-width-w1-effective-molter-source-review"
+          ],
           "revision": 1,
           "runtime": "2^(o_eff(p^2)) N^(O(1))",
           "runtimeSymbols": [
             "p",
             "N"
           ],
-          "sources": [],
+          "sources": [
+            {
+              "editionId": "arxiv-v1",
+              "locator": "Theorem 5, Section 7",
+              "paperId": "molter2026-running-time",
+              "placement": "statement",
+              "role": "running-time lower bound"
+            }
+          ],
           "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Independent Set within the stated running time.",
           "status": "established",
           "supported": true
@@ -13627,9 +13638,11 @@
           "effective": true,
           "evidence": [
             {
-              "proofId": "independent-set-rankwidth",
-              "revision": 1,
-              "theorem": "independent-set-rankwidth-w1"
+              "editionId": "arxiv-v1",
+              "locator": "Theorem 5, Section 7",
+              "paperId": "molter2026-running-time",
+              "placement": "statement",
+              "role": "running-time lower bound"
             }
           ],
           "hypothesis": {
@@ -13654,7 +13667,7 @@
           "evidence": [
             {
               "proofId": "independent-set-rankwidth",
-              "revision": 1,
+              "revision": 2,
               "theorem": "independent-set-rankwidth-sh"
             }
           ],
@@ -13704,7 +13717,7 @@
           "evidence": [
             {
               "proofId": "independent-set-rankwidth",
-              "revision": 1,
+              "revision": 2,
               "theorem": "independent-set-rankwidth-sh"
             }
           ],
@@ -13730,9 +13743,11 @@
           "effective": true,
           "evidence": [
             {
-              "proofId": "independent-set-rankwidth",
-              "revision": 1,
-              "theorem": "independent-set-rankwidth-w1"
+              "editionId": "arxiv-v1",
+              "locator": "Theorem 5, Section 7",
+              "paperId": "molter2026-running-time",
+              "placement": "statement",
+              "role": "running-time lower bound"
             }
           ],
           "hypothesis": {
@@ -13820,10 +13835,10 @@
                     "hypothesisRevision": 1,
                     "proof": {
                       "proofId": "independent-set-rankwidth",
-                      "revision": 1,
+                      "revision": 2,
                       "theorem": "independent-set-rankwidth-sh"
                     },
-                    "reviewId": "independent-set-rankwidth-sh-review"
+                    "reviewId": "independent-set-rankwidth-sh-r2-review"
                   }
                 ],
                 "status": "established"
@@ -13849,7 +13864,7 @@
           "proofs": [
             {
               "proofId": "independent-set-rankwidth",
-              "revision": 1,
+              "revision": 2,
               "theorem": "independent-set-rankwidth-sh"
             }
           ],
@@ -13889,12 +13904,14 @@
                   {
                     "boundRevision": 1,
                     "hypothesisRevision": 1,
-                    "proof": {
-                      "proofId": "independent-set-rankwidth",
-                      "revision": 1,
-                      "theorem": "independent-set-rankwidth-w1"
-                    },
-                    "reviewId": "independent-set-rankwidth-w1-review"
+                    "reviewId": "independent-set-supplied-linear-layout-w1-effective-molter-source-review",
+                    "source": {
+                      "editionId": "arxiv-v1",
+                      "locator": "Theorem 5, Section 7",
+                      "paperId": "molter2026-running-time",
+                      "placement": "forward",
+                      "role": "forward implication"
+                    }
                   }
                 ],
                 "status": "established"
@@ -13917,14 +13934,8 @@
             "optimal-certificate"
           ],
           "inputFactor": "N^(O(1))",
-          "proofs": [
-            {
-              "proofId": "independent-set-rankwidth",
-              "revision": 1,
-              "theorem": "independent-set-rankwidth-w1"
-            }
-          ],
-          "provenance": "atlas",
+          "proofs": [],
+          "provenance": "literature",
           "qualifications": [
             "The exponent is a computable nonnegative integer function and has computable convergence to little-o at scale p^2."
           ],
@@ -13934,14 +13945,24 @@
             "revision": 1,
             "title": "Effective quadratic-width bound on triangle-free graphs under FPT ≠ W[1]"
           },
-          "reviewIds": [],
+          "reviewIds": [
+            "independent-set-supplied-linear-layout-w1-effective-molter-source-review"
+          ],
           "revision": 1,
           "runtime": "2^(o_eff(p^2)) N^(O(1))",
           "runtimeSymbols": [
             "p",
             "N"
           ],
-          "sources": [],
+          "sources": [
+            {
+              "editionId": "arxiv-v1",
+              "locator": "Theorem 5, Section 7",
+              "paperId": "molter2026-running-time",
+              "placement": "statement",
+              "role": "running-time lower bound"
+            }
+          ],
           "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Independent Set within the stated running time.",
           "status": "established",
           "supported": true
@@ -13999,9 +14020,11 @@
           "effective": true,
           "evidence": [
             {
-              "proofId": "independent-set-rankwidth",
-              "revision": 1,
-              "theorem": "independent-set-rankwidth-w1"
+              "editionId": "arxiv-v1",
+              "locator": "Theorem 5, Section 7",
+              "paperId": "molter2026-running-time",
+              "placement": "statement",
+              "role": "running-time lower bound"
             }
           ],
           "hypothesis": {
@@ -14026,7 +14049,7 @@
           "evidence": [
             {
               "proofId": "independent-set-rankwidth",
-              "revision": 1,
+              "revision": 2,
               "theorem": "independent-set-rankwidth-sh"
             }
           ],
@@ -14076,7 +14099,7 @@
           "evidence": [
             {
               "proofId": "independent-set-rankwidth",
-              "revision": 1,
+              "revision": 2,
               "theorem": "independent-set-rankwidth-sh"
             }
           ],
@@ -14102,9 +14125,11 @@
           "effective": true,
           "evidence": [
             {
-              "proofId": "independent-set-rankwidth",
-              "revision": 1,
-              "theorem": "independent-set-rankwidth-w1"
+              "editionId": "arxiv-v1",
+              "locator": "Theorem 5, Section 7",
+              "paperId": "molter2026-running-time",
+              "placement": "statement",
+              "role": "running-time lower bound"
             }
           ],
           "hypothesis": {
@@ -14192,10 +14217,10 @@
                     "hypothesisRevision": 1,
                     "proof": {
                       "proofId": "independent-set-rankwidth",
-                      "revision": 1,
+                      "revision": 2,
                       "theorem": "independent-set-rankwidth-sh"
                     },
-                    "reviewId": "independent-set-rankwidth-sh-review"
+                    "reviewId": "independent-set-rankwidth-sh-r2-review"
                   }
                 ],
                 "status": "established"
@@ -14221,7 +14246,7 @@
           "proofs": [
             {
               "proofId": "independent-set-rankwidth",
-              "revision": 1,
+              "revision": 2,
               "theorem": "independent-set-rankwidth-sh"
             }
           ],
@@ -14261,12 +14286,14 @@
                   {
                     "boundRevision": 1,
                     "hypothesisRevision": 1,
-                    "proof": {
-                      "proofId": "independent-set-rankwidth",
-                      "revision": 1,
-                      "theorem": "independent-set-rankwidth-w1"
-                    },
-                    "reviewId": "independent-set-rankwidth-w1-review"
+                    "reviewId": "independent-set-supplied-rank-decomposition-w1-effective-molter-source-review",
+                    "source": {
+                      "editionId": "arxiv-v1",
+                      "locator": "Theorem 5, Section 7",
+                      "paperId": "molter2026-running-time",
+                      "placement": "forward",
+                      "role": "forward implication"
+                    }
                   }
                 ],
                 "status": "established"
@@ -14289,14 +14316,8 @@
             "optimal-certificate"
           ],
           "inputFactor": "N^(O(1))",
-          "proofs": [
-            {
-              "proofId": "independent-set-rankwidth",
-              "revision": 1,
-              "theorem": "independent-set-rankwidth-w1"
-            }
-          ],
-          "provenance": "atlas",
+          "proofs": [],
+          "provenance": "literature",
           "qualifications": [
             "The exponent is a computable nonnegative integer function and has computable convergence to little-o at scale p^2."
           ],
@@ -14306,14 +14327,24 @@
             "revision": 1,
             "title": "Effective quadratic-width bound on triangle-free graphs under FPT ≠ W[1]"
           },
-          "reviewIds": [],
+          "reviewIds": [
+            "independent-set-supplied-rank-decomposition-w1-effective-molter-source-review"
+          ],
           "revision": 1,
           "runtime": "2^(o_eff(p^2)) N^(O(1))",
           "runtimeSymbols": [
             "p",
             "N"
           ],
-          "sources": [],
+          "sources": [
+            {
+              "editionId": "arxiv-v1",
+              "locator": "Theorem 5, Section 7",
+              "paperId": "molter2026-running-time",
+              "placement": "statement",
+              "role": "running-time lower bound"
+            }
+          ],
           "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Independent Set within the stated running time.",
           "status": "established",
           "supported": true
@@ -14371,9 +14402,11 @@
           "effective": true,
           "evidence": [
             {
-              "proofId": "independent-set-rankwidth",
-              "revision": 1,
-              "theorem": "independent-set-rankwidth-w1"
+              "editionId": "arxiv-v1",
+              "locator": "Theorem 5, Section 7",
+              "paperId": "molter2026-running-time",
+              "placement": "statement",
+              "role": "running-time lower bound"
             }
           ],
           "hypothesis": {
@@ -14398,7 +14431,7 @@
           "evidence": [
             {
               "proofId": "independent-set-rankwidth",
-              "revision": 1,
+              "revision": 2,
               "theorem": "independent-set-rankwidth-sh"
             }
           ],
@@ -14448,7 +14481,7 @@
           "evidence": [
             {
               "proofId": "independent-set-rankwidth",
-              "revision": 1,
+              "revision": 2,
               "theorem": "independent-set-rankwidth-sh"
             }
           ],
@@ -14474,9 +14507,11 @@
           "effective": true,
           "evidence": [
             {
-              "proofId": "independent-set-rankwidth",
-              "revision": 1,
-              "theorem": "independent-set-rankwidth-w1"
+              "editionId": "arxiv-v1",
+              "locator": "Theorem 5, Section 7",
+              "paperId": "molter2026-running-time",
+              "placement": "statement",
+              "role": "running-time lower bound"
             }
           ],
           "hypothesis": {
@@ -14563,14 +14598,8 @@
             "equal-pathwidth"
           ],
           "inputFactor": "B^(O(1))",
-          "proofs": [
-            {
-              "proofId": "independent-set-treewidth-w1-proof",
-              "revision": 1,
-              "theorem": "is-treewidth"
-            }
-          ],
-          "provenance": "atlas",
+          "proofs": [],
+          "provenance": "literature",
           "qualifications": [
             "The exponent h(t) is finite and nonnegative.",
             "There is a computable function T such that h(t) ≤ η max(t, 1) whenever t ≥ T(η), for each positive rational η.",
@@ -14591,11 +14620,11 @@
           ],
           "sources": [
             {
-              "editionId": "journal",
-              "locator": "W[1]-completeness of Independent Set, with Clique by complementation",
-              "paperId": "df1995",
-              "placement": "proof",
-              "role": "source hardness"
+              "editionId": "arxiv-v1",
+              "locator": "Theorem 3, Section 5",
+              "paperId": "molter2026-running-time",
+              "placement": "statement",
+              "role": "running-time lower bound"
             }
           ],
           "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Independent Set within the stated running time.",
@@ -14660,9 +14689,11 @@
           "effective": true,
           "evidence": [
             {
-              "proofId": "independent-set-treewidth-w1-proof",
-              "revision": 1,
-              "theorem": "is-treewidth"
+              "editionId": "arxiv-v1",
+              "locator": "Theorem 3, Section 5",
+              "paperId": "molter2026-running-time",
+              "placement": "statement",
+              "role": "running-time lower bound"
             }
           ],
           "hypothesis": {
@@ -14721,9 +14752,11 @@
           "effective": true,
           "evidence": [
             {
-              "proofId": "independent-set-treewidth-w1-proof",
-              "revision": 1,
-              "theorem": "is-treewidth"
+              "editionId": "arxiv-v1",
+              "locator": "Theorem 3, Section 5",
+              "paperId": "molter2026-running-time",
+              "placement": "statement",
+              "role": "running-time lower bound"
             }
           ],
           "hypothesis": {
@@ -14886,12 +14919,14 @@
                   {
                     "boundRevision": 2,
                     "hypothesisRevision": 1,
-                    "proof": {
-                      "proofId": "ilp-equations-w1-effective",
-                      "revision": 3,
-                      "theorem": "ilp-equations-w1-effective"
-                    },
-                    "reviewId": "ilp-equations-w1-all-ones-r3-citation-review"
+                    "reviewId": "ilp-equations-w1-effective-molter-source-review",
+                    "source": {
+                      "editionId": "arxiv-v1",
+                      "locator": "Theorem 8, Section 10",
+                      "paperId": "molter2026-running-time",
+                      "placement": "forward",
+                      "role": "forward implication"
+                    }
                   }
                 ],
                 "status": "established"
@@ -14915,14 +14950,8 @@
             "nonzero-columns"
           ],
           "inputFactor": "N^C",
-          "proofs": [
-            {
-              "proofId": "ilp-equations-w1-effective",
-              "revision": 3,
-              "theorem": "ilp-equations-w1-effective"
-            }
-          ],
-          "provenance": "atlas",
+          "proofs": [],
+          "provenance": "literature",
           "qualifications": [
             "For every fixed C ≥ 0 and every finite nonnegative function h, assume there is a computable threshold function T with h(k) ≤ k/j for every positive integer j and every k ≥ T(j).",
             "The function h itself need not be computable."
@@ -14933,7 +14962,9 @@
             "revision": 2,
             "title": "All-ones right-hand-side integer programming under FPT ≠ W[1]"
           },
-          "reviewIds": [],
+          "reviewIds": [
+            "ilp-equations-w1-effective-molter-source-review"
+          ],
           "revision": 2,
           "runtime": "2^(h(k)) N^C",
           "runtimeSymbols": [
@@ -14944,11 +14975,11 @@
           ],
           "sources": [
             {
-              "editionId": "proceedings",
-              "locator": "Lemma 14, pp. 81:11–81:12",
-              "paperId": "lin2019",
-              "placement": "forward",
-              "role": "incidence construction and compatibility rows from Multicolored Clique"
+              "editionId": "arxiv-v1",
+              "locator": "Theorem 8, Section 10",
+              "paperId": "molter2026-running-time",
+              "placement": "statement",
+              "role": "running-time lower bound"
             }
           ],
           "statement": "Under FPT ≠ W[1], no deterministic algorithm decides feasibility of Ax=b for the stated all-ones right-hand side within the stated running time.",
@@ -15017,9 +15048,11 @@
           "effective": true,
           "evidence": [
             {
-              "proofId": "ilp-equations-w1-effective",
-              "revision": 3,
-              "theorem": "ilp-equations-w1-effective"
+              "editionId": "arxiv-v1",
+              "locator": "Theorem 8, Section 10",
+              "paperId": "molter2026-running-time",
+              "placement": "statement",
+              "role": "running-time lower bound"
             }
           ],
           "hypothesis": {
@@ -15122,9 +15155,11 @@
           "effective": true,
           "evidence": [
             {
-              "proofId": "ilp-equations-w1-effective",
-              "revision": 3,
-              "theorem": "ilp-equations-w1-effective"
+              "editionId": "arxiv-v1",
+              "locator": "Theorem 8, Section 10",
+              "paperId": "molter2026-running-time",
+              "placement": "statement",
+              "role": "running-time lower bound"
             }
           ],
           "hypothesis": {
@@ -16636,14 +16671,8 @@
             "balanced-alphabet"
           ],
           "inputFactor": "N^C, C fixed",
-          "proofs": [
-            {
-              "proofId": "closest-string-balanced",
-              "revision": 1,
-              "theorem": "cs-balanced"
-            }
-          ],
-          "provenance": "atlas",
+          "proofs": [],
+          "provenance": "literature",
           "qualifications": [
             "The nonnegative integer exponent has a computable upper bound and is effectively sublinear in d. The running time allows no additional factor depending on q."
           ],
@@ -16663,11 +16692,11 @@
           ],
           "sources": [
             {
-              "editionId": "journal",
-              "locator": "Independent Set is W[1]-complete, with Clique by complementation",
-              "paperId": "df1995",
-              "placement": "proof",
-              "role": "source completeness"
+              "editionId": "arxiv-v1",
+              "locator": "Theorem 6, Section 8",
+              "paperId": "molter2026-running-time",
+              "placement": "statement",
+              "role": "running-time lower bound"
             }
           ],
           "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Closest String within the stated running time.",
@@ -16733,9 +16762,11 @@
           "effective": true,
           "evidence": [
             {
-              "proofId": "closest-string-balanced",
-              "revision": 1,
-              "theorem": "cs-balanced"
+              "editionId": "arxiv-v1",
+              "locator": "Theorem 6, Section 8",
+              "paperId": "molter2026-running-time",
+              "placement": "statement",
+              "role": "running-time lower bound"
             }
           ],
           "hypothesis": {
@@ -16836,9 +16867,11 @@
           "effective": true,
           "evidence": [
             {
-              "proofId": "closest-string-balanced",
-              "revision": 1,
-              "theorem": "cs-balanced"
+              "editionId": "arxiv-v1",
+              "locator": "Theorem 6, Section 8",
+              "paperId": "molter2026-running-time",
+              "placement": "statement",
+              "role": "running-time lower bound"
             }
           ],
           "hypothesis": {
@@ -18534,14 +18567,8 @@
             "connected-bipartite-degree-eight"
           ],
           "inputFactor": "B^(O(1))",
-          "proofs": [
-            {
-              "proofId": "maximum-cycle-cover-supplied-pathwidth-w1-proof",
-              "revision": 1,
-              "theorem": "maximum-cycle-cover-supplied-pathwidth-w1"
-            }
-          ],
-          "provenance": "atlas",
+          "proofs": [],
+          "provenance": "literature",
           "qualifications": [
             "The exponent h(p) is finite and nonnegative and the ratio h(p) / max(1, p log₂(p+2)) converges to zero with a computable modulus.",
             "The supplied path decomposition and binary threshold count in the complete input length."
@@ -18561,33 +18588,11 @@
           ],
           "sources": [
             {
-              "editionId": "journal",
-              "locator": "W[1]-completeness of Independent Set, with Clique by complementation",
-              "paperId": "df1995",
-              "placement": "proof",
-              "role": "source hardness"
-            },
-            {
-              "editionId": "journal",
-              "locator": "Lemma 2.8 (constructive coloring family)",
-              "paperId": "lms2018",
-              "placement": "proof",
-              "role": "reduction ingredient"
-            },
-            {
-              "editionId": "journal",
-              "locator": "Table 1 and Theorem 1.3, p. 17:4",
-              "paperId": "cygan-cut-count",
-              "placement": "proof",
-              "role": "historical benchmark"
-            },
-            {
               "editionId": "arxiv-v1",
-              "editionReason": "The journal states the lower bounds but omits the pathwidth constructions in Appendix C.2–C.4 that the Atlas proof uses.",
-              "locator": "Appendix C.2–C.4",
-              "paperId": "cygan-cut-count",
-              "placement": "proof",
-              "role": "predecessor constructions"
+              "locator": "Theorem 11, Section 14",
+              "paperId": "molter2026-running-time",
+              "placement": "statement",
+              "role": "running-time lower bound"
             }
           ],
           "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Maximum Cycle Cover within the stated running time.",
@@ -18634,9 +18639,11 @@
           "effective": true,
           "evidence": [
             {
-              "proofId": "maximum-cycle-cover-supplied-pathwidth-w1-proof",
-              "revision": 1,
-              "theorem": "maximum-cycle-cover-supplied-pathwidth-w1"
+              "editionId": "arxiv-v1",
+              "locator": "Theorem 11, Section 14",
+              "paperId": "molter2026-running-time",
+              "placement": "statement",
+              "role": "running-time lower bound"
             }
           ],
           "hypothesis": {
@@ -18785,9 +18792,11 @@
           "effective": true,
           "evidence": [
             {
-              "proofId": "maximum-cycle-cover-supplied-pathwidth-w1-proof",
-              "revision": 1,
-              "theorem": "maximum-cycle-cover-supplied-pathwidth-w1"
+              "editionId": "arxiv-v1",
+              "locator": "Theorem 11, Section 14",
+              "paperId": "molter2026-running-time",
+              "placement": "statement",
+              "role": "running-time lower bound"
             }
           ],
           "hypothesis": {
@@ -20448,14 +20457,8 @@
             "equal-pathwidth"
           ],
           "inputFactor": "B^(O(1))",
-          "proofs": [
-            {
-              "proofId": "odd-cycle-transversal-treewidth-w1-proof",
-              "revision": 1,
-              "theorem": "odd-cycle-transversal-treewidth-w1"
-            }
-          ],
-          "provenance": "atlas",
+          "proofs": [],
+          "provenance": "literature",
           "qualifications": [
             "The exponent h(t) is finite and nonnegative and has a computable convergence modulus at the scale t.",
             "The exact width and an optimal path decomposition can be supplied and count in the complete input length."
@@ -20476,11 +20479,11 @@
           ],
           "sources": [
             {
-              "editionId": "journal",
-              "locator": "W[1]-completeness of Independent Set, with Clique by complementation",
-              "paperId": "df1995",
-              "placement": "proof",
-              "role": "source hardness"
+              "editionId": "arxiv-v1",
+              "locator": "Theorem 4, Section 6",
+              "paperId": "molter2026-running-time",
+              "placement": "statement",
+              "role": "running-time lower bound"
             }
           ],
           "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Odd Cycle Transversal within the stated running time.",
@@ -20540,9 +20543,11 @@
           "effective": true,
           "evidence": [
             {
-              "proofId": "odd-cycle-transversal-treewidth-w1-proof",
-              "revision": 1,
-              "theorem": "odd-cycle-transversal-treewidth-w1"
+              "editionId": "arxiv-v1",
+              "locator": "Theorem 4, Section 6",
+              "paperId": "molter2026-running-time",
+              "placement": "statement",
+              "role": "running-time lower bound"
             }
           ],
           "hypothesis": {
@@ -20601,9 +20606,11 @@
           "effective": true,
           "evidence": [
             {
-              "proofId": "odd-cycle-transversal-treewidth-w1-proof",
-              "revision": 1,
-              "theorem": "odd-cycle-transversal-treewidth-w1"
+              "editionId": "arxiv-v1",
+              "locator": "Theorem 4, Section 6",
+              "paperId": "molter2026-running-time",
+              "placement": "statement",
+              "role": "running-time lower bound"
             }
           ],
           "hypothesis": {
@@ -30164,14 +30171,8 @@
             "optimal-path-decomposition"
           ],
           "inputFactor": "B^(O(1))",
-          "proofs": [
-            {
-              "proofId": "vdp-width-w1",
-              "revision": 1,
-              "theorem": "vdp-width-w1"
-            }
-          ],
-          "provenance": "atlas",
+          "proofs": [],
+          "provenance": "literature",
           "qualifications": [
             "The exponent h(p) is finite and nonnegative. There is a computable function T such that h(p) ≤ max(1, p log₂(max(2, p)))/j for every positive integer j and every p ≥ T(j)."
           ],
@@ -30190,18 +30191,11 @@
           ],
           "sources": [
             {
-              "editionId": "journal",
-              "locator": "Lemma 2.8 and its proof",
-              "paperId": "lms2018",
-              "placement": "proof",
-              "role": "deterministic coloring family"
-            },
-            {
-              "editionId": "journal",
-              "locator": "W[1]-completeness of Independent Set, with Clique by complementation",
-              "paperId": "df1995",
-              "placement": "proof",
-              "role": "source completeness"
+              "editionId": "arxiv-v1",
+              "locator": "Theorem 9, Section 12",
+              "paperId": "molter2026-running-time",
+              "placement": "statement",
+              "role": "running-time lower bound"
             }
           ],
           "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Vertex-Disjoint Paths within the stated running time.",
@@ -30299,9 +30293,11 @@
           "effective": true,
           "evidence": [
             {
-              "proofId": "vdp-width-w1",
-              "revision": 1,
-              "theorem": "vdp-width-w1"
+              "editionId": "arxiv-v1",
+              "locator": "Theorem 9, Section 12",
+              "paperId": "molter2026-running-time",
+              "placement": "statement",
+              "role": "running-time lower bound"
             }
           ],
           "hypothesis": {
@@ -30385,9 +30381,11 @@
           "effective": true,
           "evidence": [
             {
-              "proofId": "vdp-width-w1",
-              "revision": 1,
-              "theorem": "vdp-width-w1"
+              "editionId": "arxiv-v1",
+              "locator": "Theorem 9, Section 12",
+              "paperId": "molter2026-running-time",
+              "placement": "statement",
+              "role": "running-time lower bound"
             }
           ],
           "hypothesis": {
@@ -30517,14 +30515,8 @@
             "equal-widths"
           ],
           "inputFactor": "B^(O(1))",
-          "proofs": [
-            {
-              "proofId": "vdp-width-w1",
-              "revision": 1,
-              "theorem": "vdp-width-w1"
-            }
-          ],
-          "provenance": "atlas",
+          "proofs": [],
+          "provenance": "literature",
           "qualifications": [
             "The exponent h(t) is finite and nonnegative. There is a computable function T such that h(t) ≤ max(1, t log₂(max(2, t)))/j for every positive integer j and every t ≥ T(j)."
           ],
@@ -30543,18 +30535,11 @@
           ],
           "sources": [
             {
-              "editionId": "journal",
-              "locator": "Lemma 2.8 and its proof",
-              "paperId": "lms2018",
-              "placement": "proof",
-              "role": "deterministic coloring family"
-            },
-            {
-              "editionId": "journal",
-              "locator": "W[1]-completeness of Independent Set, with Clique by complementation",
-              "paperId": "df1995",
-              "placement": "proof",
-              "role": "source completeness"
+              "editionId": "arxiv-v1",
+              "locator": "Theorem 9, Section 12",
+              "paperId": "molter2026-running-time",
+              "placement": "statement",
+              "role": "running-time lower bound"
             }
           ],
           "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Vertex-Disjoint Paths within the stated running time.",
@@ -30639,9 +30624,11 @@
           "effective": true,
           "evidence": [
             {
-              "proofId": "vdp-width-w1",
-              "revision": 1,
-              "theorem": "vdp-width-w1"
+              "editionId": "arxiv-v1",
+              "locator": "Theorem 9, Section 12",
+              "paperId": "molter2026-running-time",
+              "placement": "statement",
+              "role": "running-time lower bound"
             }
           ],
           "hypothesis": {
@@ -30718,9 +30705,11 @@
           "effective": true,
           "evidence": [
             {
-              "proofId": "vdp-width-w1",
-              "revision": 1,
-              "theorem": "vdp-width-w1"
+              "editionId": "arxiv-v1",
+              "locator": "Theorem 9, Section 12",
+              "paperId": "molter2026-running-time",
+              "placement": "statement",
+              "role": "running-time lower bound"
             }
           ],
           "hypothesis": {
@@ -33479,6 +33468,27 @@
     },
     {
       "authors": [
+        "Hendrik Molter"
+      ],
+      "editions": [
+        {
+          "access": "Version 1 full text inspected. Theorems 1–12 establish deterministic running-time lower bounds under FPT ≠ W[1].",
+          "doi": "10.48550/arXiv.2611.26080",
+          "id": "arxiv-v1",
+          "kind": "preprint",
+          "label": "arXiv:2611.26080v1, 19 November 2026",
+          "openUrl": "https://arxiv.org/html/2611.26080v1",
+          "preferredUrl": "https://doi.org/10.48550/arXiv.2611.26080",
+          "primaryUrl": "https://arxiv.org/abs/2611.26080v1"
+        }
+      ],
+      "id": "molter2026-running-time",
+      "preferredEditionId": "arxiv-v1",
+      "preferredUrl": "https://doi.org/10.48550/arXiv.2611.26080",
+      "title": "Running-Time Lower Bounds under FPT ≠ W[1]"
+    },
+    {
+      "authors": [
         "Andrea Munaro"
       ],
       "editions": [
@@ -34164,72 +34174,6 @@
   ],
   "proofs": [
     {
-      "currentRevision": 1,
-      "id": "chromatic-number-cover-w1",
-      "revisions": [
-        {
-          "authorship": {
-            "authors": [
-              "Atlas"
-            ],
-            "kind": "ai",
-            "origin": "atlas"
-          },
-          "dependencies": [],
-          "dependencyCoverage": "complete",
-          "pdf": "proofs/chromatic-number-cover-w1.pdf",
-          "revision": 1,
-          "source": "proofs/chromatic-number-cover-w1.tex",
-          "theorems": [
-            {
-              "destination": "cover-w1",
-              "label": "cover-w1",
-              "number": "1",
-              "reviewIds": [
-                "chromatic-number-cover-w1-review"
-              ],
-              "statement": "Under deterministic FPT ≠ W[1], there is no Chromatic Number algorithm in 2^{O(k)} N^{O(1)} for vertex cover number k.",
-              "supports": true
-            }
-          ]
-        }
-      ],
-      "title": "A single-exponential lower bound for Chromatic Number by vertex cover number"
-    },
-    {
-      "currentRevision": 1,
-      "id": "chromatic-number-treewidth-w1",
-      "revisions": [
-        {
-          "authorship": {
-            "authors": [
-              "Atlas"
-            ],
-            "kind": "ai",
-            "origin": "atlas"
-          },
-          "dependencies": [],
-          "dependencyCoverage": "complete",
-          "pdf": "proofs/chromatic-number-treewidth-w1.pdf",
-          "revision": 1,
-          "source": "proofs/chromatic-number-treewidth-w1.tex",
-          "theorems": [
-            {
-              "destination": "tw-w1",
-              "label": "tw-w1",
-              "number": "1",
-              "reviewIds": [
-                "chromatic-number-treewidth-w1-review"
-              ],
-              "statement": "Under deterministic FPT ≠ W[1], there is no Chromatic Number algorithm in 2^{h(t)} N^C for a fixed C and a finite nonnegative h effectively little-o of t log₂(max(t,2)).",
-              "supports": true
-            }
-          ]
-        }
-      ],
-      "title": "An effective treewidth lower bound for Chromatic Number"
-    },
-    {
       "currentRevision": 2,
       "id": "classical-graph-sh-converse",
       "revisions": [
@@ -34389,39 +34333,6 @@
     },
     {
       "currentRevision": 1,
-      "id": "closest-string-balanced",
-      "revisions": [
-        {
-          "authorship": {
-            "authors": [
-              "Atlas"
-            ],
-            "kind": "ai",
-            "origin": "atlas"
-          },
-          "dependencies": [],
-          "dependencyCoverage": "complete",
-          "pdf": "proofs/closest-string-balanced.pdf",
-          "revision": 1,
-          "source": "proofs/closest-string-balanced.tex",
-          "theorems": [
-            {
-              "destination": "cs-balanced",
-              "label": "cs-balanced",
-              "number": "1",
-              "reviewIds": [
-                "closest-string-balanced-review"
-              ],
-              "statement": "Under deterministic FPT ≠ W[1], on inputs with L=d+1 and used alphabet size q=2d+3 there is no deterministic solver in 2^{h(d)} N^C for fixed C, where h has a computable upper bound and is effectively sublinear in d.",
-              "supports": true
-            }
-          ]
-        }
-      ],
-      "title": "Closest String with a balanced alphabet"
-    },
-    {
-      "currentRevision": 1,
       "id": "closest-string-balanced-kxk",
       "revisions": [
         {
@@ -34452,72 +34363,6 @@
         }
       ],
       "title": "A square-clique lower bound for Closest String with a balanced alphabet"
-    },
-    {
-      "currentRevision": 1,
-      "id": "cycle-packing-degree-six",
-      "revisions": [
-        {
-          "authorship": {
-            "authors": [
-              "Atlas"
-            ],
-            "kind": "ai",
-            "origin": "atlas"
-          },
-          "dependencies": [],
-          "dependencyCoverage": "complete",
-          "pdf": "proofs/cycle-packing-degree-six.pdf",
-          "revision": 1,
-          "source": "proofs/cycle-packing-degree-six.tex",
-          "theorems": [
-            {
-              "destination": "cycle-packing-degree-six",
-              "label": "cycle-packing-degree-six",
-              "number": "1",
-              "reviewIds": [
-                "cycle-packing-degree-six-review"
-              ],
-              "statement": "Assuming deterministic FPT ≠ W[1], for each fixed 0<γ<1 there is no deterministic effective 2^(o(t log₂ t)) N^(O(1)) Cycle Packing algorithm by treewidth or by supplied path-decomposition width, even on connected bipartite graphs of maximum degree six, girth at least n^(1−γ), and equal treewidth and pathwidth, with an optimal certificate if supplied.",
-              "supports": true
-            }
-          ]
-        }
-      ],
-      "title": "Cycle Packing at bounded degree and large girth"
-    },
-    {
-      "currentRevision": 1,
-      "id": "distinct-vectors-fixed-coefficient",
-      "revisions": [
-        {
-          "authorship": {
-            "authors": [
-              "Atlas"
-            ],
-            "kind": "ai",
-            "origin": "atlas"
-          },
-          "dependencies": [],
-          "dependencyCoverage": "partial",
-          "pdf": "proofs/distinct-vectors-fixed-coefficient.pdf",
-          "revision": 1,
-          "source": "proofs/distinct-vectors-fixed-coefficient.tex",
-          "theorems": [
-            {
-              "destination": "dv-fixed-coefficient",
-              "label": "dv-fixed-coefficient",
-              "number": "1",
-              "reviewIds": [
-                "dv-fixed-coefficient-review"
-              ],
-              "statement": "For every fixed 0 < γ < 1, under FPT ≠ W[1] no deterministic algorithm decides Distinct Vectors in time 2^(O(2^(γ k))) N^(O(1)).",
-              "supports": true
-            }
-          ]
-        }
-      ],
-      "title": "A double-exponential lower bound for Distinct Vectors under FPT ≠ W[1]"
     },
     {
       "currentRevision": 1,
@@ -34653,39 +34498,6 @@
     },
     {
       "currentRevision": 1,
-      "id": "graph-distortion-line-w1",
-      "revisions": [
-        {
-          "authorship": {
-            "authors": [
-              "Atlas"
-            ],
-            "kind": "ai",
-            "origin": "atlas"
-          },
-          "dependencies": [],
-          "dependencyCoverage": "complete",
-          "pdf": "proofs/graph-distortion-line-w1.pdf",
-          "revision": 1,
-          "source": "proofs/graph-distortion-line-w1.tex",
-          "theorems": [
-            {
-              "destination": "graph-distortion-line-w1",
-              "label": "graph-distortion-line-w1",
-              "number": "1",
-              "reviewIds": [
-                "graph-distortion-line-w1-review"
-              ],
-              "statement": "Under FPT ≠ W[1], no deterministic algorithm decides integer or real line distortion in time 2^(h(d)) B^(O(1)) on connected simple unweighted bipartite graphs when h is finite, nonnegative, and effectively o(d log₂ d).",
-              "supports": true
-            }
-          ]
-        }
-      ],
-      "title": "An effective lower bound for bipartite line distortion"
-    },
-    {
-      "currentRevision": 1,
       "id": "hamiltonian-sh",
       "revisions": [
         {
@@ -34728,66 +34540,7 @@
       "title": "Fixed-power lower bounds for Hamiltonian Cycle, Hamiltonian Path, and Longest Path"
     },
     {
-      "currentRevision": 3,
-      "id": "ilp-equations-w1-effective",
-      "revisions": [
-        {
-          "authorship": {
-            "authors": [
-              "Atlas"
-            ],
-            "kind": "ai",
-            "origin": "atlas"
-          },
-          "dependencies": [],
-          "dependencyCoverage": "complete",
-          "pdf": "proofs/ilp-equations-w1-all-ones-r2.pdf",
-          "revision": 2,
-          "source": "proofs/ilp-equations-w1-all-ones-r2.tex",
-          "theorems": [
-            {
-              "destination": "ilp-equations-w1-effective",
-              "label": "ilp-equations-w1-effective",
-              "number": "1",
-              "reviewIds": [
-                "ilp-equations-w1-all-ones-review"
-              ],
-              "statement": "Assuming deterministic FPT ≠ W[1], for every fixed C ≥ 0 and every finite nonnegative function h admitting a computable threshold T(j) with h(k) ≤ k/j for every positive integer j and all k ≥ T(j), no deterministic algorithm decides feasibility of Ax=1 over nonnegative integers for a binary k-row matrix A in O(2^(h(k)) N^C) time, with complete binary input length N and unrestricted column count. The exclusion holds even when all columns are nonzero, in which case every feasible coordinate is at most one.",
-              "supports": true
-            }
-          ]
-        },
-        {
-          "authorship": {
-            "authors": [
-              "Atlas"
-            ],
-            "kind": "ai",
-            "origin": "atlas"
-          },
-          "dependencies": [],
-          "dependencyCoverage": "complete",
-          "pdf": "proofs/ilp-equations-w1-all-ones.pdf",
-          "revision": 3,
-          "source": "proofs/ilp-equations-w1-all-ones.tex",
-          "theorems": [
-            {
-              "destination": "ilp-equations-w1-effective",
-              "label": "ilp-equations-w1-effective",
-              "number": "1",
-              "reviewIds": [
-                "ilp-equations-w1-all-ones-r3-citation-review"
-              ],
-              "statement": "Assuming deterministic FPT ≠ W[1], for every fixed C ≥ 0 and every finite nonnegative function h admitting a computable threshold T(j) with h(k) ≤ k/j for every positive integer j and all k ≥ T(j), no deterministic algorithm decides feasibility of Ax=1 over nonnegative integers for a binary k-row matrix A in O(2^(h(k)) N^C) time, with complete binary input length N and unrestricted column count. The exclusion holds even when all columns are nonzero, in which case every feasible coordinate is at most one.",
-              "supports": true
-            }
-          ]
-        }
-      ],
-      "title": "An effective lower bound for integer programming with an all-ones right-hand side"
-    },
-    {
-      "currentRevision": 1,
+      "currentRevision": 2,
       "id": "independent-set-rankwidth",
       "revisions": [
         {
@@ -34801,25 +34554,15 @@
           "dependencies": [],
           "dependencyCoverage": "complete",
           "pdf": "proofs/independent-set-rankwidth.pdf",
-          "revision": 1,
+          "revision": 2,
           "source": "proofs/independent-set-rankwidth.tex",
           "theorems": [
             {
-              "destination": "independent-set-rankwidth-w1",
-              "label": "independent-set-rankwidth-w1",
-              "number": "1",
-              "reviewIds": [
-                "independent-set-rankwidth-w1-review"
-              ],
-              "statement": "Assuming deterministic FPT ≠ W[1], there is no deterministic effective 2^(o(p²)) N^(O(1)) Independent Set algorithm on triangle-free graphs by either intrinsic width, with or without an optimal corresponding certificate.",
-              "supports": true
-            },
-            {
               "destination": "independent-set-rankwidth-sh",
               "label": "independent-set-rankwidth-sh",
-              "number": "2",
+              "number": "1",
               "reviewIds": [
-                "independent-set-rankwidth-sh-review"
+                "independent-set-rankwidth-sh-r2-review"
               ],
               "statement": "Assuming deterministic SH, for every fixed 0<ε<2 there is no deterministic 2^(O(p^(2−ε))) N^(O(1)) Independent Set algorithm on triangle-free graphs by either intrinsic width, with or without an optimal corresponding certificate.",
               "supports": true
@@ -34827,106 +34570,7 @@
           ]
         }
       ],
-      "title": "Quadratic lower bounds for Independent Set on triangle-free graphs"
-    },
-    {
-      "currentRevision": 1,
-      "id": "independent-set-treewidth-w1-proof",
-      "revisions": [
-        {
-          "authorship": {
-            "authors": [
-              "Atlas"
-            ],
-            "kind": "ai",
-            "origin": "atlas"
-          },
-          "dependencies": [],
-          "dependencyCoverage": "complete",
-          "pdf": "proofs/independent-set-treewidth-w1.pdf",
-          "revision": 1,
-          "source": "proofs/independent-set-treewidth-w1.tex",
-          "theorems": [
-            {
-              "destination": "is-treewidth",
-              "label": "is-treewidth",
-              "number": "1",
-              "reviewIds": [
-                "independent-set-treewidth-w1-independent"
-              ],
-              "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Independent Set within the stated running time. 2^(o_eff(t)) B^(O(1)). The maximum degree of G is at most three. The pathwidth of G equals its treewidth. The exponent h(t) is finite and nonnegative. There is a computable function T such that h(t) ≤ η max(t, 1) whenever t ≥ T(η), for each positive rational η. The proof also permits the solver to receive the exact width and an optimal path decomposition, counted in the complete input length.",
-              "supports": true
-            }
-          ]
-        }
-      ],
-      "title": "An effective treewidth lower bound for Independent Set"
-    },
-    {
-      "currentRevision": 1,
-      "id": "maximum-cycle-cover-supplied-pathwidth-w1-proof",
-      "revisions": [
-        {
-          "authorship": {
-            "authors": [
-              "Atlas"
-            ],
-            "kind": "ai",
-            "origin": "atlas"
-          },
-          "dependencies": [],
-          "dependencyCoverage": "complete",
-          "pdf": "proofs/maximum-cycle-cover-supplied-pathwidth-w1.pdf",
-          "revision": 1,
-          "source": "proofs/maximum-cycle-cover-supplied-pathwidth-w1.tex",
-          "theorems": [
-            {
-              "destination": "maximum-cycle-cover-supplied-pathwidth-w1",
-              "label": "maximum-cycle-cover-supplied-pathwidth-w1",
-              "number": "1",
-              "reviewIds": [
-                "maximum-cycle-cover-supplied-pathwidth-w1-independent"
-              ],
-              "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Maximum Cycle Cover within the stated running time. 2^(o_eff(p log₂(p+2))) B^(O(1)). The graph is connected, bipartite, and has maximum degree at most eight. The exponent h(p) is finite and nonnegative and the ratio h(p) / max(1, p log₂(p+2)) converges to zero with a computable modulus. The supplied path decomposition and binary threshold count in the complete input length.",
-              "supports": true
-            }
-          ]
-        }
-      ],
-      "title": "An effective pathwidth lower bound for Maximum Cycle Cover"
-    },
-    {
-      "currentRevision": 1,
-      "id": "odd-cycle-transversal-treewidth-w1-proof",
-      "revisions": [
-        {
-          "authorship": {
-            "authors": [
-              "Atlas"
-            ],
-            "kind": "ai",
-            "origin": "atlas"
-          },
-          "dependencies": [],
-          "dependencyCoverage": "complete",
-          "pdf": "proofs/odd-cycle-transversal-treewidth-w1.pdf",
-          "revision": 1,
-          "source": "proofs/odd-cycle-transversal-treewidth-w1.tex",
-          "theorems": [
-            {
-              "destination": "odd-cycle-transversal-treewidth-w1",
-              "label": "odd-cycle-transversal-treewidth-w1",
-              "number": "1",
-              "reviewIds": [
-                "odd-cycle-transversal-treewidth-w1-independent"
-              ],
-              "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Odd Cycle Transversal within the stated running time. 2^(o_eff(t)) B^(O(1)). The graph is connected and has maximum degree at most three. For each fixed 0 < η < 1 the girth is at least n^(1−η), where n is the number of vertices. The pathwidth of G equals its treewidth. The exponent h(t) is finite and nonnegative and has a computable convergence modulus at the scale t. The exact width and an optimal path decomposition can be supplied and count in the complete input length.",
-              "supports": true
-            }
-          ]
-        }
-      ],
-      "title": "Odd Cycle Transversal on subcubic graphs of large girth"
+      "title": "A fixed-power lower bound for Independent Set on triangle-free graphs under SH"
     },
     {
       "currentRevision": 1,
@@ -35138,39 +34782,6 @@
         }
       ],
       "title": "The 3-Coloring bound implies the Satisfiability Hypothesis"
-    },
-    {
-      "currentRevision": 1,
-      "id": "vdp-width-w1",
-      "revisions": [
-        {
-          "authorship": {
-            "authors": [
-              "Atlas"
-            ],
-            "kind": "ai",
-            "origin": "atlas"
-          },
-          "dependencies": [],
-          "dependencyCoverage": "complete",
-          "pdf": "proofs/vertex-disjoint-paths-width-w1.pdf",
-          "revision": 1,
-          "source": "proofs/vertex-disjoint-paths-width-w1.tex",
-          "theorems": [
-            {
-              "destination": "vdp-width-w1",
-              "label": "vdp-width-w1",
-              "number": "1",
-              "reviewIds": [
-                "vdp-width-w1-independent"
-              ],
-              "statement": "Under deterministic FPT ≠ W[1], there is no correct deterministic Vertex-Disjoint Paths solver in 2^{h(w)} B^C time for a fixed C and a finite nonnegative h effectively little-o of max(1, w log₂(max(2,w))). The parameter is intrinsic treewidth or the width of a supplied path decomposition. The hard instances are connected bipartite graphs of maximum degree three with distinct leaf demand endpoints and equal treewidth and pathwidth. The supplied path decomposition is optimal.",
-              "supports": true
-            }
-          ]
-        }
-      ],
-      "title": "Vertex-Disjoint Paths at optimal width on subcubic bipartite graphs"
     }
   ],
   "releaseHypotheses": [
@@ -37411,29 +37022,6 @@
           "revision": 1,
           "role": "Packing-to-cover reduction with width increase at most three",
           "type": "bound"
-        },
-        {
-          "caseId": "maximum-cycle-cover-supplied-pathwidth",
-          "editionId": "journal",
-          "id": "maximum-cycle-cover-supplied-pathwidth-w1",
-          "locator": "Table 1 and Theorem 1.3, p. 17:4",
-          "paperId": "cygan-cut-count",
-          "placement": "proof",
-          "revision": 1,
-          "role": "historical benchmark",
-          "type": "bound"
-        },
-        {
-          "caseId": "maximum-cycle-cover-supplied-pathwidth",
-          "editionId": "arxiv-v1",
-          "editionReason": "The journal states the lower bounds but omits the pathwidth constructions in Appendix C.2–C.4 that the Atlas proof uses.",
-          "id": "maximum-cycle-cover-supplied-pathwidth-w1",
-          "locator": "Appendix C.2–C.4",
-          "paperId": "cygan-cut-count",
-          "placement": "proof",
-          "revision": 1,
-          "role": "predecessor constructions",
-          "type": "bound"
         }
       ],
       "cygan-et-al2017-embedding": [
@@ -38383,28 +37971,6 @@
       ],
       "df1995": [
         {
-          "caseId": "chromatic-number-treewidth",
-          "editionId": "journal",
-          "id": "chromatic-tw-w1",
-          "locator": "W[1]-completeness of Independent Set, with Clique by complementation",
-          "paperId": "df1995",
-          "placement": "proof",
-          "revision": 1,
-          "role": "source completeness",
-          "type": "bound"
-        },
-        {
-          "caseId": "chromatic-number-vertex-cover",
-          "editionId": "journal",
-          "id": "chromatic-vc-w1",
-          "locator": "W[1]-completeness of Independent Set, with Clique by complementation",
-          "paperId": "df1995",
-          "placement": "proof",
-          "revision": 1,
-          "role": "source completeness",
-          "type": "bound"
-        },
-        {
           "caseId": "clique-budget",
           "editionId": "journal",
           "id": "clique-budget-w1",
@@ -38438,17 +38004,6 @@
           "type": "bound"
         },
         {
-          "caseId": "distinct-vectors-budget",
-          "editionId": "journal",
-          "id": "dv-w1-fixed-coefficient",
-          "locator": "Corollary 3.2, with Clique by complementation",
-          "paperId": "df1995",
-          "placement": "proof",
-          "revision": 1,
-          "role": "source completeness",
-          "type": "bound"
-        },
-        {
           "caseId": "dominating-set-treewidth",
           "editionId": "journal",
           "id": "ds-tw-w1",
@@ -38457,17 +38012,6 @@
           "placement": "proof",
           "revision": 1,
           "role": "source hardness",
-          "type": "bound"
-        },
-        {
-          "caseId": "graph-distortion-line",
-          "editionId": "journal",
-          "id": "graph-distortion-line-w1",
-          "locator": "Theorem 2.1",
-          "paperId": "df1995",
-          "placement": "proof",
-          "revision": 1,
-          "role": "Clique hardness by Independent Set complementation",
           "type": "bound"
         },
         {
@@ -38504,39 +38048,6 @@
           "type": "bound"
         },
         {
-          "caseId": "independent-set-treewidth",
-          "editionId": "journal",
-          "id": "is-tw-w1",
-          "locator": "W[1]-completeness of Independent Set, with Clique by complementation",
-          "paperId": "df1995",
-          "placement": "proof",
-          "revision": 1,
-          "role": "source hardness",
-          "type": "bound"
-        },
-        {
-          "caseId": "lms-closest-string-radius-alphabet",
-          "editionId": "journal",
-          "id": "cs-w1-balanced",
-          "locator": "Independent Set is W[1]-complete, with Clique by complementation",
-          "paperId": "df1995",
-          "placement": "proof",
-          "revision": 1,
-          "role": "source completeness",
-          "type": "bound"
-        },
-        {
-          "caseId": "maximum-cycle-cover-supplied-pathwidth",
-          "editionId": "journal",
-          "id": "maximum-cycle-cover-supplied-pathwidth-w1",
-          "locator": "W[1]-completeness of Independent Set, with Clique by complementation",
-          "paperId": "df1995",
-          "placement": "proof",
-          "revision": 1,
-          "role": "source hardness",
-          "type": "bound"
-        },
-        {
           "caseId": "multicolored-clique-colors",
           "editionId": "journal",
           "id": "multicolored-clique-colors-w1",
@@ -38548,17 +38059,6 @@
           "type": "bound"
         },
         {
-          "caseId": "odd-cycle-transversal-treewidth",
-          "editionId": "journal",
-          "id": "odd-cycle-transversal-treewidth-w1",
-          "locator": "W[1]-completeness of Independent Set, with Clique by complementation",
-          "paperId": "df1995",
-          "placement": "proof",
-          "revision": 1,
-          "role": "source hardness",
-          "type": "bound"
-        },
-        {
           "caseId": "scattered-set-solution-size",
           "editionId": "journal",
           "id": "scattered-set-solution-size-w1",
@@ -38567,28 +38067,6 @@
           "placement": "forward",
           "revision": 1,
           "role": "published hardness direction",
-          "type": "bound"
-        },
-        {
-          "caseId": "vertex-disjoint-paths-supplied-pathwidth",
-          "editionId": "journal",
-          "id": "vdp-pw-w1",
-          "locator": "W[1]-completeness of Independent Set, with Clique by complementation",
-          "paperId": "df1995",
-          "placement": "proof",
-          "revision": 1,
-          "role": "source completeness",
-          "type": "bound"
-        },
-        {
-          "caseId": "vertex-disjoint-paths-treewidth",
-          "editionId": "journal",
-          "id": "vdp-tw-w1",
-          "locator": "W[1]-completeness of Independent Set, with Clique by complementation",
-          "paperId": "df1995",
-          "placement": "proof",
-          "revision": 1,
-          "role": "source completeness",
           "type": "bound"
         }
       ],
@@ -38893,19 +38371,6 @@
           "placement": "statement",
           "revision": 1,
           "role": "benchmark",
-          "type": "bound"
-        }
-      ],
-      "froese2012": [
-        {
-          "caseId": "distinct-vectors-budget",
-          "editionId": "thesis",
-          "id": "dv-w1-fixed-coefficient",
-          "locator": "Section 4.1.1, proof of Theorem 4.1, p. 33",
-          "paperId": "froese2012",
-          "placement": "proof",
-          "revision": 1,
-          "role": "address construction",
           "type": "bound"
         }
       ],
@@ -39599,17 +39064,6 @@
       ],
       "lin2019": [
         {
-          "caseId": "distinct-vectors-budget",
-          "editionId": "proceedings",
-          "id": "dv-w1-fixed-coefficient",
-          "locator": "Lemma 14 and proof, pp. 81:11–81:12",
-          "paperId": "lin2019",
-          "placement": "proof",
-          "revision": 1,
-          "role": "source reduction",
-          "type": "bound"
-        },
-        {
           "caseId": "dominating-set-treewidth",
           "editionId": "proceedings",
           "id": "ds-tw-w1",
@@ -39618,17 +39072,6 @@
           "placement": "proof",
           "revision": 1,
           "role": "compact reduction to Set Cover",
-          "type": "bound"
-        },
-        {
-          "caseId": "integer-linear-programming-equations",
-          "editionId": "proceedings",
-          "id": "ilp-equations-w1-effective",
-          "locator": "Lemma 14, pp. 81:11–81:12",
-          "paperId": "lin2019",
-          "placement": "forward",
-          "revision": 2,
-          "role": "incidence construction and compatibility rows from Multicolored Clique",
           "type": "bound"
         }
       ],
@@ -40095,17 +39538,6 @@
           "type": "bound"
         },
         {
-          "caseId": "graph-distortion-line",
-          "editionId": "journal",
-          "id": "graph-distortion-line-w1",
-          "locator": "Lemma 2.8 and its proof",
-          "paperId": "lms2018",
-          "placement": "proof",
-          "revision": 1,
-          "role": "deterministic constructive coloring family",
-          "type": "bound"
-        },
-        {
           "caseId": "lms-closest-string-radius",
           "editionId": "journal",
           "id": "cs-radius-eth",
@@ -40192,17 +39624,6 @@
           "type": "bound"
         },
         {
-          "caseId": "maximum-cycle-cover-supplied-pathwidth",
-          "editionId": "journal",
-          "id": "maximum-cycle-cover-supplied-pathwidth-w1",
-          "locator": "Lemma 2.8 (constructive coloring family)",
-          "paperId": "lms2018",
-          "placement": "proof",
-          "revision": 1,
-          "role": "reduction ingredient",
-          "type": "bound"
-        },
-        {
           "caseId": "vertex-disjoint-paths-supplied-pathwidth",
           "editionId": "journal",
           "id": "vdp-pw-eth",
@@ -40225,17 +39646,6 @@
           "type": "bound"
         },
         {
-          "caseId": "vertex-disjoint-paths-supplied-pathwidth",
-          "editionId": "journal",
-          "id": "vdp-pw-w1",
-          "locator": "Lemma 2.8 and its proof",
-          "paperId": "lms2018",
-          "placement": "proof",
-          "revision": 1,
-          "role": "deterministic coloring family",
-          "type": "bound"
-        },
-        {
           "caseId": "vertex-disjoint-paths-treewidth",
           "editionId": "journal",
           "id": "vdp-tw-eth",
@@ -40244,17 +39654,6 @@
           "placement": "statement",
           "revision": 1,
           "role": "published reduction",
-          "type": "bound"
-        },
-        {
-          "caseId": "vertex-disjoint-paths-treewidth",
-          "editionId": "journal",
-          "id": "vdp-tw-w1",
-          "locator": "Lemma 2.8 and its proof",
-          "paperId": "lms2018",
-          "placement": "proof",
-          "revision": 1,
-          "role": "deterministic coloring family",
           "type": "bound"
         }
       ],
@@ -40527,6 +39926,283 @@
           "placement": "statement",
           "revision": 1,
           "role": "published W[1]-hardness",
+          "type": "bound"
+        }
+      ],
+      "molter2026-running-time": [
+        {
+          "caseId": "chromatic-number-treewidth",
+          "editionId": "arxiv-v1",
+          "id": "chromatic-tw-w1",
+          "locator": "Theorem 2, Section 4",
+          "paperId": "molter2026-running-time",
+          "placement": "statement",
+          "revision": 1,
+          "role": "running-time lower bound",
+          "type": "bound"
+        },
+        {
+          "caseId": "chromatic-number-vertex-cover",
+          "editionId": "arxiv-v1",
+          "id": "chromatic-vc-w1",
+          "locator": "Theorem 1, Section 3",
+          "paperId": "molter2026-running-time",
+          "placement": "statement",
+          "revision": 1,
+          "role": "running-time lower bound",
+          "type": "bound"
+        },
+        {
+          "caseId": "cycle-packing-supplied-pathwidth",
+          "editionId": "arxiv-v1",
+          "id": "cp-pw-w1-effective",
+          "locator": "Theorem 10, Section 13",
+          "paperId": "molter2026-running-time",
+          "placement": "statement",
+          "revision": 1,
+          "role": "running-time lower bound",
+          "type": "bound"
+        },
+        {
+          "caseId": "cycle-packing-supplied-pathwidth",
+          "editionId": "arxiv-v1",
+          "id": "cp-pw-w1-effective",
+          "locator": "Theorem 10, Section 13",
+          "paperId": "molter2026-running-time",
+          "placement": "forward",
+          "revision": 1,
+          "role": "forward implication",
+          "type": "bound"
+        },
+        {
+          "caseId": "cycle-packing-treewidth",
+          "editionId": "arxiv-v1",
+          "id": "cp-tw-w1-effective",
+          "locator": "Theorem 10, Section 13",
+          "paperId": "molter2026-running-time",
+          "placement": "statement",
+          "revision": 1,
+          "role": "running-time lower bound",
+          "type": "bound"
+        },
+        {
+          "caseId": "cycle-packing-treewidth",
+          "editionId": "arxiv-v1",
+          "id": "cp-tw-w1-effective",
+          "locator": "Theorem 10, Section 13",
+          "paperId": "molter2026-running-time",
+          "placement": "forward",
+          "revision": 1,
+          "role": "forward implication",
+          "type": "bound"
+        },
+        {
+          "caseId": "distinct-vectors-budget",
+          "editionId": "arxiv-v1",
+          "id": "dv-w1-fixed-coefficient",
+          "locator": "Theorem 7, Section 9",
+          "paperId": "molter2026-running-time",
+          "placement": "statement",
+          "revision": 1,
+          "role": "running-time lower bound",
+          "type": "bound"
+        },
+        {
+          "caseId": "graph-distortion-line",
+          "editionId": "arxiv-v1",
+          "id": "graph-distortion-line-w1",
+          "locator": "Theorem 12, Section 15",
+          "paperId": "molter2026-running-time",
+          "placement": "statement",
+          "revision": 1,
+          "role": "running-time lower bound",
+          "type": "bound"
+        },
+        {
+          "caseId": "graph-distortion-line",
+          "editionId": "arxiv-v1",
+          "id": "graph-distortion-line-w1",
+          "locator": "Theorem 12, Section 15",
+          "paperId": "molter2026-running-time",
+          "placement": "forward",
+          "revision": 1,
+          "role": "forward implication",
+          "type": "bound"
+        },
+        {
+          "caseId": "independent-set-linear-rank-width",
+          "editionId": "arxiv-v1",
+          "id": "independent-set-linear-rank-width-w1-effective",
+          "locator": "Theorem 5, Section 7",
+          "paperId": "molter2026-running-time",
+          "placement": "statement",
+          "revision": 1,
+          "role": "running-time lower bound",
+          "type": "bound"
+        },
+        {
+          "caseId": "independent-set-linear-rank-width",
+          "editionId": "arxiv-v1",
+          "id": "independent-set-linear-rank-width-w1-effective",
+          "locator": "Theorem 5, Section 7",
+          "paperId": "molter2026-running-time",
+          "placement": "forward",
+          "revision": 1,
+          "role": "forward implication",
+          "type": "bound"
+        },
+        {
+          "caseId": "independent-set-rank-width",
+          "editionId": "arxiv-v1",
+          "id": "independent-set-rank-width-w1-effective",
+          "locator": "Theorem 5, Section 7",
+          "paperId": "molter2026-running-time",
+          "placement": "statement",
+          "revision": 1,
+          "role": "running-time lower bound",
+          "type": "bound"
+        },
+        {
+          "caseId": "independent-set-rank-width",
+          "editionId": "arxiv-v1",
+          "id": "independent-set-rank-width-w1-effective",
+          "locator": "Theorem 5, Section 7",
+          "paperId": "molter2026-running-time",
+          "placement": "forward",
+          "revision": 1,
+          "role": "forward implication",
+          "type": "bound"
+        },
+        {
+          "caseId": "independent-set-supplied-linear-layout",
+          "editionId": "arxiv-v1",
+          "id": "independent-set-supplied-linear-layout-w1-effective",
+          "locator": "Theorem 5, Section 7",
+          "paperId": "molter2026-running-time",
+          "placement": "statement",
+          "revision": 1,
+          "role": "running-time lower bound",
+          "type": "bound"
+        },
+        {
+          "caseId": "independent-set-supplied-linear-layout",
+          "editionId": "arxiv-v1",
+          "id": "independent-set-supplied-linear-layout-w1-effective",
+          "locator": "Theorem 5, Section 7",
+          "paperId": "molter2026-running-time",
+          "placement": "forward",
+          "revision": 1,
+          "role": "forward implication",
+          "type": "bound"
+        },
+        {
+          "caseId": "independent-set-supplied-rank-decomposition",
+          "editionId": "arxiv-v1",
+          "id": "independent-set-supplied-rank-decomposition-w1-effective",
+          "locator": "Theorem 5, Section 7",
+          "paperId": "molter2026-running-time",
+          "placement": "statement",
+          "revision": 1,
+          "role": "running-time lower bound",
+          "type": "bound"
+        },
+        {
+          "caseId": "independent-set-supplied-rank-decomposition",
+          "editionId": "arxiv-v1",
+          "id": "independent-set-supplied-rank-decomposition-w1-effective",
+          "locator": "Theorem 5, Section 7",
+          "paperId": "molter2026-running-time",
+          "placement": "forward",
+          "revision": 1,
+          "role": "forward implication",
+          "type": "bound"
+        },
+        {
+          "caseId": "independent-set-treewidth",
+          "editionId": "arxiv-v1",
+          "id": "is-tw-w1",
+          "locator": "Theorem 3, Section 5",
+          "paperId": "molter2026-running-time",
+          "placement": "statement",
+          "revision": 1,
+          "role": "running-time lower bound",
+          "type": "bound"
+        },
+        {
+          "caseId": "integer-linear-programming-equations",
+          "editionId": "arxiv-v1",
+          "id": "ilp-equations-w1-effective",
+          "locator": "Theorem 8, Section 10",
+          "paperId": "molter2026-running-time",
+          "placement": "statement",
+          "revision": 2,
+          "role": "running-time lower bound",
+          "type": "bound"
+        },
+        {
+          "caseId": "integer-linear-programming-equations",
+          "editionId": "arxiv-v1",
+          "id": "ilp-equations-w1-effective",
+          "locator": "Theorem 8, Section 10",
+          "paperId": "molter2026-running-time",
+          "placement": "forward",
+          "revision": 2,
+          "role": "forward implication",
+          "type": "bound"
+        },
+        {
+          "caseId": "lms-closest-string-radius-alphabet",
+          "editionId": "arxiv-v1",
+          "id": "cs-w1-balanced",
+          "locator": "Theorem 6, Section 8",
+          "paperId": "molter2026-running-time",
+          "placement": "statement",
+          "revision": 1,
+          "role": "running-time lower bound",
+          "type": "bound"
+        },
+        {
+          "caseId": "maximum-cycle-cover-supplied-pathwidth",
+          "editionId": "arxiv-v1",
+          "id": "maximum-cycle-cover-supplied-pathwidth-w1",
+          "locator": "Theorem 11, Section 14",
+          "paperId": "molter2026-running-time",
+          "placement": "statement",
+          "revision": 1,
+          "role": "running-time lower bound",
+          "type": "bound"
+        },
+        {
+          "caseId": "odd-cycle-transversal-treewidth",
+          "editionId": "arxiv-v1",
+          "id": "odd-cycle-transversal-treewidth-w1",
+          "locator": "Theorem 4, Section 6",
+          "paperId": "molter2026-running-time",
+          "placement": "statement",
+          "revision": 1,
+          "role": "running-time lower bound",
+          "type": "bound"
+        },
+        {
+          "caseId": "vertex-disjoint-paths-supplied-pathwidth",
+          "editionId": "arxiv-v1",
+          "id": "vdp-pw-w1",
+          "locator": "Theorem 9, Section 12",
+          "paperId": "molter2026-running-time",
+          "placement": "statement",
+          "revision": 1,
+          "role": "running-time lower bound",
+          "type": "bound"
+        },
+        {
+          "caseId": "vertex-disjoint-paths-treewidth",
+          "editionId": "arxiv-v1",
+          "id": "vdp-tw-w1",
+          "locator": "Theorem 9, Section 12",
+          "paperId": "molter2026-running-time",
+          "placement": "statement",
+          "revision": 1,
+          "role": "running-time lower bound",
           "type": "bound"
         }
       ],
@@ -41417,28 +41093,6 @@
       ]
     },
     "proofs": {
-      "chromatic-number-cover-w1": [
-        {
-          "applicable": true,
-          "caseId": "chromatic-number-vertex-cover",
-          "id": "chromatic-vc-w1",
-          "proofRevision": 1,
-          "revision": 1,
-          "theorem": "cover-w1",
-          "type": "bound"
-        }
-      ],
-      "chromatic-number-treewidth-w1": [
-        {
-          "applicable": true,
-          "caseId": "chromatic-number-treewidth",
-          "id": "chromatic-tw-w1",
-          "proofRevision": 1,
-          "revision": 1,
-          "theorem": "tw-w1",
-          "type": "bound"
-        }
-      ],
       "classical-graph-sh-converse": [
         {
           "applicable": true,
@@ -41479,17 +41133,6 @@
           "type": "bound"
         }
       ],
-      "closest-string-balanced": [
-        {
-          "applicable": true,
-          "caseId": "lms-closest-string-radius-alphabet",
-          "id": "cs-w1-balanced",
-          "proofRevision": 1,
-          "revision": 1,
-          "theorem": "cs-balanced",
-          "type": "bound"
-        }
-      ],
       "closest-string-balanced-kxk": [
         {
           "applicable": true,
@@ -41498,37 +41141,6 @@
           "proofRevision": 1,
           "revision": 1,
           "theorem": "closest-string-balanced-kxk",
-          "type": "bound"
-        }
-      ],
-      "cycle-packing-degree-six": [
-        {
-          "applicable": true,
-          "caseId": "cycle-packing-supplied-pathwidth",
-          "id": "cp-pw-w1-effective",
-          "proofRevision": 1,
-          "revision": 1,
-          "theorem": "cycle-packing-degree-six",
-          "type": "bound"
-        },
-        {
-          "applicable": true,
-          "caseId": "cycle-packing-treewidth",
-          "id": "cp-tw-w1-effective",
-          "proofRevision": 1,
-          "revision": 1,
-          "theorem": "cycle-packing-degree-six",
-          "type": "bound"
-        }
-      ],
-      "distinct-vectors-fixed-coefficient": [
-        {
-          "applicable": true,
-          "caseId": "distinct-vectors-budget",
-          "id": "dv-w1-fixed-coefficient",
-          "proofRevision": 1,
-          "revision": 1,
-          "theorem": "dv-fixed-coefficient",
           "type": "bound"
         }
       ],
@@ -41603,17 +41215,6 @@
           "type": "bound"
         }
       ],
-      "graph-distortion-line-w1": [
-        {
-          "applicable": true,
-          "caseId": "graph-distortion-line",
-          "id": "graph-distortion-line-w1",
-          "proofRevision": 1,
-          "revision": 1,
-          "theorem": "graph-distortion-line-w1",
-          "type": "bound"
-        }
-      ],
       "hamiltonian-sh": [
         {
           "applicable": true,
@@ -41661,121 +41262,41 @@
           "type": "bound"
         }
       ],
-      "ilp-equations-w1-effective": [
-        {
-          "applicable": true,
-          "caseId": "integer-linear-programming-equations",
-          "id": "ilp-equations-w1-effective",
-          "proofRevision": 3,
-          "revision": 2,
-          "theorem": "ilp-equations-w1-effective",
-          "type": "bound"
-        }
-      ],
       "independent-set-rankwidth": [
         {
           "applicable": true,
           "caseId": "independent-set-linear-rank-width",
           "id": "independent-set-linear-rank-width-sh-degree",
-          "proofRevision": 1,
+          "proofRevision": 2,
           "revision": 1,
           "theorem": "independent-set-rankwidth-sh",
-          "type": "bound"
-        },
-        {
-          "applicable": true,
-          "caseId": "independent-set-linear-rank-width",
-          "id": "independent-set-linear-rank-width-w1-effective",
-          "proofRevision": 1,
-          "revision": 1,
-          "theorem": "independent-set-rankwidth-w1",
           "type": "bound"
         },
         {
           "applicable": true,
           "caseId": "independent-set-rank-width",
           "id": "independent-set-rank-width-sh-degree",
-          "proofRevision": 1,
+          "proofRevision": 2,
           "revision": 1,
           "theorem": "independent-set-rankwidth-sh",
-          "type": "bound"
-        },
-        {
-          "applicable": true,
-          "caseId": "independent-set-rank-width",
-          "id": "independent-set-rank-width-w1-effective",
-          "proofRevision": 1,
-          "revision": 1,
-          "theorem": "independent-set-rankwidth-w1",
           "type": "bound"
         },
         {
           "applicable": true,
           "caseId": "independent-set-supplied-linear-layout",
           "id": "independent-set-supplied-linear-layout-sh-degree",
-          "proofRevision": 1,
+          "proofRevision": 2,
           "revision": 1,
           "theorem": "independent-set-rankwidth-sh",
-          "type": "bound"
-        },
-        {
-          "applicable": true,
-          "caseId": "independent-set-supplied-linear-layout",
-          "id": "independent-set-supplied-linear-layout-w1-effective",
-          "proofRevision": 1,
-          "revision": 1,
-          "theorem": "independent-set-rankwidth-w1",
           "type": "bound"
         },
         {
           "applicable": true,
           "caseId": "independent-set-supplied-rank-decomposition",
           "id": "independent-set-supplied-rank-decomposition-sh-degree",
-          "proofRevision": 1,
+          "proofRevision": 2,
           "revision": 1,
           "theorem": "independent-set-rankwidth-sh",
-          "type": "bound"
-        },
-        {
-          "applicable": true,
-          "caseId": "independent-set-supplied-rank-decomposition",
-          "id": "independent-set-supplied-rank-decomposition-w1-effective",
-          "proofRevision": 1,
-          "revision": 1,
-          "theorem": "independent-set-rankwidth-w1",
-          "type": "bound"
-        }
-      ],
-      "independent-set-treewidth-w1-proof": [
-        {
-          "applicable": true,
-          "caseId": "independent-set-treewidth",
-          "id": "is-tw-w1",
-          "proofRevision": 1,
-          "revision": 1,
-          "theorem": "is-treewidth",
-          "type": "bound"
-        }
-      ],
-      "maximum-cycle-cover-supplied-pathwidth-w1-proof": [
-        {
-          "applicable": true,
-          "caseId": "maximum-cycle-cover-supplied-pathwidth",
-          "id": "maximum-cycle-cover-supplied-pathwidth-w1",
-          "proofRevision": 1,
-          "revision": 1,
-          "theorem": "maximum-cycle-cover-supplied-pathwidth-w1",
-          "type": "bound"
-        }
-      ],
-      "odd-cycle-transversal-treewidth-w1-proof": [
-        {
-          "applicable": true,
-          "caseId": "odd-cycle-transversal-treewidth",
-          "id": "odd-cycle-transversal-treewidth-w1",
-          "proofRevision": 1,
-          "revision": 1,
-          "theorem": "odd-cycle-transversal-treewidth-w1",
           "type": "bound"
         }
       ],
@@ -41910,70 +41431,10 @@
           "theorem": "color-sh-converse",
           "type": "bound"
         }
-      ],
-      "vdp-width-w1": [
-        {
-          "applicable": true,
-          "caseId": "vertex-disjoint-paths-supplied-pathwidth",
-          "id": "vdp-pw-w1",
-          "proofRevision": 1,
-          "revision": 1,
-          "theorem": "vdp-width-w1",
-          "type": "bound"
-        },
-        {
-          "applicable": true,
-          "caseId": "vertex-disjoint-paths-treewidth",
-          "id": "vdp-tw-w1",
-          "proofRevision": 1,
-          "revision": 1,
-          "theorem": "vdp-width-w1",
-          "type": "bound"
-        }
       ]
     }
   },
   "reviews": [
-    {
-      "applicable": true,
-      "date": "2026-11-18",
-      "evidence": "evidence/chromatic-number-cover-w1-independent.md",
-      "id": "chromatic-number-cover-w1-review",
-      "independent": true,
-      "label": "Agent verified",
-      "object": {
-        "id": "chromatic-number-cover-w1",
-        "revision": 1,
-        "theorem": "cover-w1",
-        "type": "proof"
-      },
-      "reviewer": "Independent agent reviewer",
-      "scope": "Checks the histogram enumeration, synchronized color banks, forbidden pairs, cover size, and fixed-parameter Turing reduction.",
-      "sourceSha256": "f78a95b261c38a1dfc849ad13e6ec4420898f56aa2666c5943caa13b3fd4800a",
-      "stale": false,
-      "type": "agent",
-      "verdict": "verified"
-    },
-    {
-      "applicable": true,
-      "date": "2026-11-18",
-      "evidence": "evidence/chromatic-number-treewidth-w1-independent.md",
-      "id": "chromatic-number-treewidth-w1-review",
-      "independent": true,
-      "label": "Agent verified",
-      "object": {
-        "id": "chromatic-number-treewidth-w1",
-        "revision": 1,
-        "theorem": "tw-w1",
-        "type": "proof"
-      },
-      "reviewer": "Independent agent reviewer",
-      "scope": "Checks the coloring reduction, intrinsic width estimate, computable convergence thresholds, finite prefix, and deterministic running-time transfer.",
-      "sourceSha256": "1f54ebe9c862f2c3e42818775cd92645558501908f2a753ad467eb5ed6be6075",
-      "stale": false,
-      "type": "agent",
-      "verdict": "verified"
-    },
     {
       "applicable": true,
       "date": "2026-11-18",
@@ -42094,26 +41555,6 @@
     {
       "applicable": true,
       "date": "2026-11-18",
-      "evidence": "evidence/closest-string-balanced-independent.md",
-      "id": "closest-string-balanced-review",
-      "independent": true,
-      "label": "Agent verified",
-      "object": {
-        "id": "closest-string-balanced",
-        "revision": 1,
-        "theorem": "cs-balanced",
-        "type": "proof"
-      },
-      "reviewer": "Independent agent reviewer",
-      "scope": "Balanced alphabet, Clique reduction, effective convergence and fixed-parameter running time.",
-      "sourceSha256": "a6a07d3afa6761631bea8c341eb264eb38ac136b527ebf314c98342a9e9353e3",
-      "stale": false,
-      "type": "agent",
-      "verdict": "verified"
-    },
-    {
-      "applicable": true,
-      "date": "2026-11-18",
       "evidence": "evidence/three-coloring-independent.md",
       "id": "color-eth-historical-review",
       "label": "Agent verified",
@@ -42149,20 +41590,36 @@
     },
     {
       "applicable": true,
-      "date": "2026-11-18",
-      "evidence": "evidence/cycle-packing-degree-six-independent.md",
-      "id": "cycle-packing-degree-six-review",
-      "independent": true,
+      "date": "2026-11-20",
+      "evidence": "evidence/molter2026-source-scope.md",
+      "id": "cp-pw-w1-effective-molter-source-review",
       "label": "Agent verified",
       "object": {
-        "id": "cycle-packing-degree-six",
+        "caseId": "cycle-packing-supplied-pathwidth",
+        "id": "cp-pw-w1-effective",
         "revision": 1,
-        "theorem": "cycle-packing-degree-six",
-        "type": "proof"
+        "type": "bound"
       },
-      "reviewer": "Codex agent derived_shortlist",
-      "scope": "Assuming deterministic FPT ≠ W[1], for each fixed 0<γ<1 there is no deterministic effective 2^(o(t log₂ t)) N^(O(1)) Cycle Packing algorithm by treewidth or by supplied path-decomposition width, even on connected bipartite graphs of maximum degree six, girth at least n^(1−γ), and equal treewidth and pathwidth, with an optimal certificate if supplied.",
-      "sourceSha256": "746938c54f4a675284c033d8be3b1241a6f34333db571a9af583f6fb9580fa9d",
+      "reviewer": "Codex source audit",
+      "scope": "Forward implication. Checked the exact task, parameter, input restrictions, and effective running time against Theorem 10, Section 13.",
+      "stale": false,
+      "type": "agent",
+      "verdict": "verified"
+    },
+    {
+      "applicable": true,
+      "date": "2026-11-20",
+      "evidence": "evidence/molter2026-source-scope.md",
+      "id": "cp-tw-w1-effective-molter-source-review",
+      "label": "Agent verified",
+      "object": {
+        "caseId": "cycle-packing-treewidth",
+        "id": "cp-tw-w1-effective",
+        "revision": 1,
+        "type": "bound"
+      },
+      "reviewer": "Codex source audit",
+      "scope": "Forward implication. Checked the exact task, parameter, input restrictions, and effective running time against Theorem 10, Section 13.",
       "stale": false,
       "type": "agent",
       "verdict": "verified"
@@ -42249,26 +41706,6 @@
     {
       "applicable": true,
       "date": "2026-11-18",
-      "evidence": "evidence/distinct-vectors-fixed-coefficient-independent.md",
-      "id": "dv-fixed-coefficient-review",
-      "independent": true,
-      "label": "Agent verified",
-      "object": {
-        "id": "distinct-vectors-fixed-coefficient",
-        "revision": 1,
-        "theorem": "dv-fixed-coefficient",
-        "type": "proof"
-      },
-      "reviewer": "Independent atlas proof reviewer",
-      "scope": "The fixed-coefficient bound, including the Set Cover construction, distinct-row promise, parameter accounting, deterministic running time and comparison to the published ETH bound.",
-      "sourceSha256": "89bf1663aa5be39d5b4396703a32b80af63dc554609d1b14dc65e4a2ef4e0584",
-      "stale": false,
-      "type": "agent",
-      "verdict": "verified"
-    },
-    {
-      "applicable": true,
-      "date": "2026-11-18",
       "evidence": "evidence/ecc-np-qp-converse-independent.md",
       "id": "ecc-budget-np-qp-equivalence-review",
       "independent": true,
@@ -42343,20 +41780,18 @@
     },
     {
       "applicable": true,
-      "date": "2026-11-18",
-      "evidence": "evidence/graph-distortion-line-w1-independent.md",
-      "id": "graph-distortion-line-w1-review",
-      "independent": true,
+      "date": "2026-11-20",
+      "evidence": "evidence/molter2026-source-scope.md",
+      "id": "graph-distortion-line-w1-molter-source-review",
       "label": "Agent verified",
       "object": {
+        "caseId": "graph-distortion-line",
         "id": "graph-distortion-line-w1",
         "revision": 1,
-        "theorem": "graph-distortion-line-w1",
-        "type": "proof"
+        "type": "bound"
       },
-      "reviewer": "Codex agent population coordinator",
-      "scope": "Forward implication, including the integer and real coordinate interfaces, the deterministic coloring-family enumeration, the ordering and bipartite graph gadgets, and the effective convergence calculation.",
-      "sourceSha256": "3e4a4c93dd5e82dd5d7d366ab689f5a451020d3cc799191711a17311677b77c7",
+      "reviewer": "Codex source audit",
+      "scope": "Forward implication. Checked the exact task, parameter, input restrictions, and effective running time against Theorem 12, Section 15.",
       "stale": false,
       "type": "agent",
       "verdict": "verified"
@@ -42442,100 +41877,110 @@
     },
     {
       "applicable": true,
-      "date": "2026-11-19",
-      "evidence": "evidence/ilp-equations-w1-all-ones-r3-citation-review.md",
-      "id": "ilp-equations-w1-all-ones-r3-citation-review",
-      "independent": true,
+      "date": "2026-11-20",
+      "evidence": "evidence/molter2026-source-scope.md",
+      "id": "ilp-equations-w1-effective-molter-source-review",
       "label": "Agent verified",
       "object": {
+        "caseId": "integer-linear-programming-equations",
         "id": "ilp-equations-w1-effective",
-        "revision": 3,
-        "theorem": "ilp-equations-w1-effective",
-        "type": "proof"
+        "revision": 2,
+        "type": "bound"
       },
-      "reviewer": "Codex agent /root/remaining",
-      "scope": "Theorem 1, revision 3. Checked the journal locator and exact scope of the comparison statement and verified that the theorem and its proof match the independently reviewed revision 2.",
-      "sourceSha256": "bcfd01fdc4de9b242960aa6d4fa251898a4e0b31a38289fbbd69a8514e0a6baf",
+      "reviewer": "Codex source audit",
+      "scope": "Forward implication. Checked the exact task, parameter, input restrictions, and effective running time against Theorem 8, Section 10.",
       "stale": false,
       "type": "agent",
       "verdict": "verified"
     },
     {
       "applicable": true,
-      "date": "2026-11-19",
-      "evidence": "evidence/ilp-equations-w1-all-ones-independent.md",
-      "id": "ilp-equations-w1-all-ones-review",
-      "independent": true,
+      "date": "2026-11-20",
+      "evidence": "evidence/molter2026-source-scope.md",
+      "id": "independent-set-linear-rank-width-w1-effective-molter-source-review",
       "label": "Agent verified",
       "object": {
-        "id": "ilp-equations-w1-effective",
-        "revision": 2,
-        "theorem": "ilp-equations-w1-effective",
-        "type": "proof"
+        "caseId": "independent-set-linear-rank-width",
+        "id": "independent-set-linear-rank-width-w1-effective",
+        "revision": 1,
+        "type": "bound"
       },
-      "reviewer": "Codex agent derived_shortlist",
-      "scope": "Theorem 1, revision 2. Checks the exact-one Lin incidence reduction, nonzero columns and binary feasible coordinates, unrestricted column count, complete input factor, and a computable cutoff for finite nonnegative h, with no computability assumption on h.",
-      "sourceSha256": "7384d8597eead558b47b321294814f5bb88a7192d24fd90499a343f02919f015",
-      "stale": true,
+      "reviewer": "Codex source audit",
+      "scope": "Forward implication. Checked the exact task, parameter, input restrictions, and effective running time against Theorem 5, Section 7.",
+      "stale": false,
       "type": "agent",
       "verdict": "verified"
     },
     {
       "applicable": true,
-      "date": "2026-11-18",
-      "evidence": "evidence/independent-set-rankwidth-independent.md",
-      "id": "independent-set-rankwidth-sh-review",
+      "date": "2026-11-20",
+      "evidence": "evidence/molter2026-source-scope.md",
+      "id": "independent-set-rank-width-w1-effective-molter-source-review",
+      "label": "Agent verified",
+      "object": {
+        "caseId": "independent-set-rank-width",
+        "id": "independent-set-rank-width-w1-effective",
+        "revision": 1,
+        "type": "bound"
+      },
+      "reviewer": "Codex source audit",
+      "scope": "Forward implication. Checked the exact task, parameter, input restrictions, and effective running time against Theorem 5, Section 7.",
+      "stale": false,
+      "type": "agent",
+      "verdict": "verified"
+    },
+    {
+      "applicable": true,
+      "date": "2026-11-20",
+      "evidence": "evidence/independent-set-rankwidth-sh-independent.md",
+      "id": "independent-set-rankwidth-sh-r2-review",
       "independent": true,
       "label": "Agent verified",
       "object": {
         "id": "independent-set-rankwidth",
-        "revision": 1,
+        "revision": 2,
         "theorem": "independent-set-rankwidth-sh",
         "type": "proof"
       },
-      "reviewer": "Codex agent derived_shortlist",
-      "scope": "Assuming deterministic SH, for every fixed 0<ε<2 there is no deterministic 2^(O(p^(2−ε))) N^(O(1)) Independent Set algorithm on triangle-free graphs by either intrinsic width, with or without an optimal corresponding certificate.",
-      "sourceSha256": "d7a6aba181a1f49669c6e55b562246aeedfc2b3a21760a7766f00250b0c1c80f",
+      "reviewer": "Codex agent /root/paper_compare",
+      "scope": "Forward implication from SH for each fixed 0 < ε < 2 on triangle-free graphs. Checks rank-width and linear rank-width, each without a certificate or with an optimal certificate of the corresponding type.",
+      "sourceSha256": "4eb08c9631732983d6faa17a5bd199db83c3906f70dda27e4d7a38bc95c92a41",
       "stale": false,
       "type": "agent",
       "verdict": "verified"
     },
     {
       "applicable": true,
-      "date": "2026-11-18",
-      "evidence": "evidence/independent-set-rankwidth-independent.md",
-      "id": "independent-set-rankwidth-w1-review",
-      "independent": true,
+      "date": "2026-11-20",
+      "evidence": "evidence/molter2026-source-scope.md",
+      "id": "independent-set-supplied-linear-layout-w1-effective-molter-source-review",
       "label": "Agent verified",
       "object": {
-        "id": "independent-set-rankwidth",
+        "caseId": "independent-set-supplied-linear-layout",
+        "id": "independent-set-supplied-linear-layout-w1-effective",
         "revision": 1,
-        "theorem": "independent-set-rankwidth-w1",
-        "type": "proof"
+        "type": "bound"
       },
-      "reviewer": "Codex agent derived_shortlist",
-      "scope": "Assuming deterministic FPT ≠ W[1], there is no deterministic effective 2^(o(p²)) N^(O(1)) Independent Set algorithm on triangle-free graphs by either intrinsic width, with or without an optimal corresponding certificate.",
-      "sourceSha256": "d7a6aba181a1f49669c6e55b562246aeedfc2b3a21760a7766f00250b0c1c80f",
+      "reviewer": "Codex source audit",
+      "scope": "Forward implication. Checked the exact task, parameter, input restrictions, and effective running time against Theorem 5, Section 7.",
       "stale": false,
       "type": "agent",
       "verdict": "verified"
     },
     {
       "applicable": true,
-      "date": "2026-11-18",
-      "evidence": "evidence/independent-set-treewidth-w1-independent.md",
-      "id": "independent-set-treewidth-w1-independent",
-      "independent": true,
+      "date": "2026-11-20",
+      "evidence": "evidence/molter2026-source-scope.md",
+      "id": "independent-set-supplied-rank-decomposition-w1-effective-molter-source-review",
       "label": "Agent verified",
       "object": {
-        "id": "independent-set-treewidth-w1-proof",
+        "caseId": "independent-set-supplied-rank-decomposition",
+        "id": "independent-set-supplied-rank-decomposition-w1-effective",
         "revision": 1,
-        "theorem": "is-treewidth",
-        "type": "proof"
+        "type": "bound"
       },
-      "reviewer": "Codex agent secondary_natural",
-      "scope": "Checks the Clique encoding, subcubic construction, exact width and optional optimal decomposition, noncomputable exponent envelope with computable convergence, and deterministic FPT transfer.",
-      "sourceSha256": "cbee40dd1d5b24db19ae7c6ec4a24f40b05a594993ddb4223282f0b387ba35f4",
+      "reviewer": "Codex source audit",
+      "scope": "Forward implication. Checked the exact task, parameter, input restrictions, and effective running time against Theorem 5, Section 7.",
       "stale": false,
       "type": "agent",
       "verdict": "verified"
@@ -42640,26 +42085,6 @@
     {
       "applicable": true,
       "date": "2026-11-18",
-      "evidence": "evidence/maximum-cycle-cover-supplied-pathwidth-w1-independent.md",
-      "id": "maximum-cycle-cover-supplied-pathwidth-w1-independent",
-      "independent": true,
-      "label": "Agent verified",
-      "object": {
-        "id": "maximum-cycle-cover-supplied-pathwidth-w1-proof",
-        "revision": 1,
-        "theorem": "maximum-cycle-cover-supplied-pathwidth-w1",
-        "type": "proof"
-      },
-      "reviewer": "Codex agent population_c",
-      "scope": "Checks the Clique and permutation table reduction, arbitrary table cycle packing host, degree reduction, spanning cover construction, supplied pathwidth, size and deterministic FPT transfer with effective rates.",
-      "sourceSha256": "6af540c87cec7a6629b5c8dcaf56ac474f8cf1197632394464181fad0fc39c94",
-      "stale": false,
-      "type": "agent",
-      "verdict": "verified"
-    },
-    {
-      "applicable": true,
-      "date": "2026-11-18",
       "evidence": "evidence/clique-literature-equivalences.md",
       "id": "multicolored-clique-colors-w1-equivalence-review",
       "independent": true,
@@ -42672,26 +42097,6 @@
       },
       "reviewer": "Codex parent agent",
       "scope": "Both directions of the ordinary no-FPT exclusion with the exact budget parameter and full input factor.",
-      "stale": false,
-      "type": "agent",
-      "verdict": "verified"
-    },
-    {
-      "applicable": true,
-      "date": "2026-11-18",
-      "evidence": "evidence/odd-cycle-transversal-treewidth-w1-independent.md",
-      "id": "odd-cycle-transversal-treewidth-w1-independent",
-      "independent": true,
-      "label": "Agent verified",
-      "object": {
-        "id": "odd-cycle-transversal-treewidth-w1-proof",
-        "revision": 1,
-        "theorem": "odd-cycle-transversal-treewidth-w1",
-        "type": "proof"
-      },
-      "reviewer": "Codex agent population_b",
-      "scope": "Clique encoding, streamed NAE constraints, degree and connectivity, budget, odd subdivision, girth growth, exact width certificate, and effective deterministic FPT transfer.",
-      "sourceSha256": "830301c624ab268167e89ade2668e61013c0155c680836321b5228e729b02b7b",
       "stale": false,
       "type": "agent",
       "verdict": "verified"
@@ -43225,26 +42630,6 @@
     {
       "applicable": true,
       "date": "2026-11-18",
-      "evidence": "evidence/vertex-disjoint-paths-width-w1-independent.md",
-      "id": "vdp-width-w1-independent",
-      "independent": true,
-      "label": "Agent verified",
-      "object": {
-        "id": "vdp-width-w1",
-        "revision": 1,
-        "theorem": "vdp-width-w1",
-        "type": "proof"
-      },
-      "reviewer": "Independent agent reviewer",
-      "scope": "Checks the complete effective W[1] exclusion for both width interfaces, including the permutation family, normality and width of the chain, subcubic degree and direction simulation, bipartiteness and optimal certificate, and the effective rate transfer.",
-      "sourceSha256": "b25920c20dd1b89a0f6446239b4bf9dcc2a9321dac8c8ae7f95c2692198fa576",
-      "stale": false,
-      "type": "agent",
-      "verdict": "verified"
-    },
-    {
-      "applicable": true,
-      "date": "2026-11-18",
       "evidence": "evidence/six-w1-memberships-independent.md",
       "id": "weighted-fixed-width-cnf-sat-weight-w1-hardness-scope",
       "independent": true,
@@ -43282,6 +42667,6 @@
       "verdict": "verified"
     }
   ],
-  "revision": 2,
+  "revision": 3,
   "schemaVersion": 1
 }

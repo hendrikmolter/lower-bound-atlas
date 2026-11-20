@@ -40,14 +40,8 @@
   "id": "dv-w1-fixed-coefficient",
   "inputConditions": [],
   "inputFactor": "N^(O(1))",
-  "proofs": [
-    {
-      "proofId": "distinct-vectors-fixed-coefficient",
-      "revision": 1,
-      "theorem": "dv-fixed-coefficient"
-    }
-  ],
-  "provenance": "atlas",
+  "proofs": [],
+  "provenance": "literature",
   "qualifications": [
     "For every fixed 0 < γ < 1."
   ],
@@ -64,25 +58,11 @@
   ],
   "sources": [
     {
-      "editionId": "journal",
-      "locator": "Corollary 3.2, with Clique by complementation",
-      "paperId": "df1995",
-      "placement": "proof",
-      "role": "source completeness"
-    },
-    {
-      "editionId": "proceedings",
-      "locator": "Lemma 14 and proof, pp. 81:11–81:12",
-      "paperId": "lin2019",
-      "placement": "proof",
-      "role": "source reduction"
-    },
-    {
-      "editionId": "thesis",
-      "locator": "Section 4.1.1, proof of Theorem 4.1, p. 33",
-      "paperId": "froese2012",
-      "placement": "proof",
-      "role": "address construction"
+      "editionId": "arxiv-v1",
+      "locator": "Theorem 7, Section 9",
+      "paperId": "molter2026-running-time",
+      "placement": "statement",
+      "role": "running-time lower bound"
     }
   ],
   "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Distinct Vectors within the stated running time.",

@@ -11,14 +11,8 @@
   "id": "chromatic-tw-w1",
   "inputConditions": [],
   "inputFactor": "N^(O(1))",
-  "proofs": [
-    {
-      "proofId": "chromatic-number-treewidth-w1",
-      "revision": 1,
-      "theorem": "tw-w1"
-    }
-  ],
-  "provenance": "atlas",
+  "proofs": [],
+  "provenance": "literature",
   "qualifications": [
     "The exponent h(t) is finite and nonnegative. There is a computable function T such that, for every positive integer j, h(t)≤t log₂(t)/j whenever t≥T(j)."
   ],
@@ -37,11 +31,11 @@
   ],
   "sources": [
     {
-      "editionId": "journal",
-      "locator": "W[1]-completeness of Independent Set, with Clique by complementation",
-      "paperId": "df1995",
-      "placement": "proof",
-      "role": "source completeness"
+      "editionId": "arxiv-v1",
+      "locator": "Theorem 2, Section 4",
+      "paperId": "molter2026-running-time",
+      "placement": "statement",
+      "role": "running-time lower bound"
     }
   ],
   "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Chromatic Number within the stated running time.",

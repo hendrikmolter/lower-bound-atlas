@@ -1,0 +1,18 @@
+{
+  "applicable": true,
+  "date": "2026-11-20",
+  "evidence": "evidence/molter2026-source-scope.md",
+  "id": "cp-tw-w1-effective-molter-source-review",
+  "label": "Agent verified",
+  "object": {
+    "caseId": "cycle-packing-treewidth",
+    "id": "cp-tw-w1-effective",
+    "revision": 1,
+    "type": "bound"
+  },
+  "reviewer": "Codex source audit",
+  "scope": "Forward implication. Checked the exact task, parameter, input restrictions, and effective running time against Theorem 10, Section 13.",
+  "stale": false,
+  "type": "agent",
+  "verdict": "verified"
+}

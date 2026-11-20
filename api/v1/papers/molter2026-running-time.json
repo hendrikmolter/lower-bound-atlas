@@ -1,0 +1,21 @@
+{
+  "authors": [
+    "Hendrik Molter"
+  ],
+  "editions": [
+    {
+      "access": "Version 1 full text inspected. Theorems 1–12 establish deterministic running-time lower bounds under FPT ≠ W[1].",
+      "doi": "10.48550/arXiv.2611.26080",
+      "id": "arxiv-v1",
+      "kind": "preprint",
+      "label": "arXiv:2611.26080v1, 19 November 2026",
+      "openUrl": "https://arxiv.org/html/2611.26080v1",
+      "preferredUrl": "https://doi.org/10.48550/arXiv.2611.26080",
+      "primaryUrl": "https://arxiv.org/abs/2611.26080v1"
+    }
+  ],
+  "id": "molter2026-running-time",
+  "preferredEditionId": "arxiv-v1",
+  "preferredUrl": "https://doi.org/10.48550/arXiv.2611.26080",
+  "title": "Running-Time Lower Bounds under FPT ≠ W[1]"
+}

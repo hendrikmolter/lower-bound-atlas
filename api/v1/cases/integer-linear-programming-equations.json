@@ -134,12 +134,14 @@
               {
                 "boundRevision": 2,
                 "hypothesisRevision": 1,
-                "proof": {
-                  "proofId": "ilp-equations-w1-effective",
-                  "revision": 3,
-                  "theorem": "ilp-equations-w1-effective"
-                },
-                "reviewId": "ilp-equations-w1-all-ones-r3-citation-review"
+                "reviewId": "ilp-equations-w1-effective-molter-source-review",
+                "source": {
+                  "editionId": "arxiv-v1",
+                  "locator": "Theorem 8, Section 10",
+                  "paperId": "molter2026-running-time",
+                  "placement": "forward",
+                  "role": "forward implication"
+                }
               }
             ],
             "status": "established"
@@ -163,14 +165,8 @@
         "nonzero-columns"
       ],
       "inputFactor": "N^C",
-      "proofs": [
-        {
-          "proofId": "ilp-equations-w1-effective",
-          "revision": 3,
-          "theorem": "ilp-equations-w1-effective"
-        }
-      ],
-      "provenance": "atlas",
+      "proofs": [],
+      "provenance": "literature",
       "qualifications": [
         "For every fixed C ≥ 0 and every finite nonnegative function h, assume there is a computable threshold function T with h(k) ≤ k/j for every positive integer j and every k ≥ T(j).",
         "The function h itself need not be computable."
@@ -181,7 +177,9 @@
         "revision": 2,
         "title": "All-ones right-hand-side integer programming under FPT ≠ W[1]"
       },
-      "reviewIds": [],
+      "reviewIds": [
+        "ilp-equations-w1-effective-molter-source-review"
+      ],
       "revision": 2,
       "runtime": "2^(h(k)) N^C",
       "runtimeSymbols": [
@@ -192,11 +190,11 @@
       ],
       "sources": [
         {
-          "editionId": "proceedings",
-          "locator": "Lemma 14, pp. 81:11–81:12",
-          "paperId": "lin2019",
-          "placement": "forward",
-          "role": "incidence construction and compatibility rows from Multicolored Clique"
+          "editionId": "arxiv-v1",
+          "locator": "Theorem 8, Section 10",
+          "paperId": "molter2026-running-time",
+          "placement": "statement",
+          "role": "running-time lower bound"
         }
       ],
       "statement": "Under FPT ≠ W[1], no deterministic algorithm decides feasibility of Ax=b for the stated all-ones right-hand side within the stated running time.",
@@ -265,9 +263,11 @@
       "effective": true,
       "evidence": [
         {
-          "proofId": "ilp-equations-w1-effective",
-          "revision": 3,
-          "theorem": "ilp-equations-w1-effective"
+          "editionId": "arxiv-v1",
+          "locator": "Theorem 8, Section 10",
+          "paperId": "molter2026-running-time",
+          "placement": "statement",
+          "role": "running-time lower bound"
         }
       ],
       "hypothesis": {
@@ -370,9 +370,11 @@
       "effective": true,
       "evidence": [
         {
-          "proofId": "ilp-equations-w1-effective",
-          "revision": 3,
-          "theorem": "ilp-equations-w1-effective"
+          "editionId": "arxiv-v1",
+          "locator": "Theorem 8, Section 10",
+          "paperId": "molter2026-running-time",
+          "placement": "statement",
+          "role": "running-time lower bound"
         }
       ],
       "hypothesis": {

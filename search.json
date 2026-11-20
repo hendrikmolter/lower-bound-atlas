@@ -384,10 +384,9 @@
       "Markus Hecher",
       "Jeffery Li",
       "Jayson Lynch",
-      "df1995",
-      "Fixed-parameter tractability and completeness II: On completeness for W[1]",
-      "Rod G. Downey",
-      "Michael R. Fellows"
+      "molter2026-running-time",
+      "Running-Time Lower Bounds under FPT ≠ W[1]",
+      "Hendrik Molter"
     ],
     "statements": [
       {
@@ -470,10 +469,9 @@
       "Markus Hecher",
       "Jeffery Li",
       "Jayson Lynch",
-      "df1995",
-      "Fixed-parameter tractability and completeness II: On completeness for W[1]",
-      "Rod G. Downey",
-      "Michael R. Fellows"
+      "molter2026-running-time",
+      "Running-Time Lower Bounds under FPT ≠ W[1]",
+      "Hendrik Molter"
     ],
     "statements": [
       {
@@ -800,10 +798,9 @@
       "Marcin Pilipczuk",
       "Michał Pilipczuk",
       "Saket Saurabh",
-      "df1995",
-      "Fixed-parameter tractability and completeness II: On completeness for W[1]",
-      "Rod G. Downey",
-      "Michael R. Fellows"
+      "molter2026-running-time",
+      "Running-Time Lower Bounds under FPT ≠ W[1]",
+      "Hendrik Molter"
     ],
     "statements": [
       {
@@ -1191,7 +1188,10 @@
       "Marcin Pilipczuk",
       "Michał Pilipczuk",
       "Johan M. M. van Rooij",
-      "Jakub Onufry Wojtaszczyk"
+      "Jakub Onufry Wojtaszczyk",
+      "molter2026-running-time",
+      "Running-Time Lower Bounds under FPT ≠ W[1]",
+      "Hendrik Molter"
     ],
     "statements": [
       {
@@ -1271,7 +1271,10 @@
       "Saket Saurabh",
       "szeider2026",
       "After ETH: the k×k Clique Hypothesis",
-      "Stefan Szeider"
+      "Stefan Szeider",
+      "molter2026-running-time",
+      "Running-Time Lower Bounds under FPT ≠ W[1]",
+      "Hendrik Molter"
     ],
     "statements": [
       {
@@ -1375,16 +1378,9 @@
       "A Double-Exponential Lower Bound for the Distinct Vectors Problem",
       "Marcin Pilipczuk",
       "Manuel Sorge",
-      "df1995",
-      "Fixed-parameter tractability and completeness II: On completeness for W[1]",
-      "Rod G. Downey",
-      "Michael R. Fellows",
-      "lin2019",
-      "A Simple Gap-Producing Reduction for the Parameterized Set Cover Problem",
-      "Bingkai Lin",
-      "froese2012",
-      "Combinatorial Feature Selection: Parameterized Algorithms and Complexity",
-      "Vincent Froese"
+      "molter2026-running-time",
+      "Running-Time Lower Bounds under FPT ≠ W[1]",
+      "Hendrik Molter"
     ],
     "statements": [
       {
@@ -2729,10 +2725,9 @@
       "szeider2026",
       "After ETH: the k×k Clique Hypothesis",
       "Stefan Szeider",
-      "df1995",
-      "Fixed-parameter tractability and completeness II: On completeness for W[1]",
-      "Rod G. Downey",
-      "Michael R. Fellows"
+      "molter2026-running-time",
+      "Running-Time Lower Bounds under FPT ≠ W[1]",
+      "Hendrik Molter"
     ],
     "statements": [
       {
@@ -3281,7 +3276,10 @@
       "Tight Lower Bounds for Problems Parameterized by Rank-Width",
       "Benjamin Bergougnoux",
       "Tuukka Korhonen",
-      "Jesper Nederlof"
+      "Jesper Nederlof",
+      "molter2026-running-time",
+      "Running-Time Lower Bounds under FPT ≠ W[1]",
+      "Hendrik Molter"
     ],
     "statements": [
       {
@@ -3420,7 +3418,10 @@
       "Tight Lower Bounds for Problems Parameterized by Rank-Width",
       "Benjamin Bergougnoux",
       "Tuukka Korhonen",
-      "Jesper Nederlof"
+      "Jesper Nederlof",
+      "molter2026-running-time",
+      "Running-Time Lower Bounds under FPT ≠ W[1]",
+      "Hendrik Molter"
     ],
     "statements": [
       {
@@ -3562,10 +3563,9 @@
       "Daniel Lokshtanov",
       "Dániel Marx",
       "Saket Saurabh",
-      "df1995",
-      "Fixed-parameter tractability and completeness II: On completeness for W[1]",
-      "Rod G. Downey",
-      "Michael R. Fellows"
+      "molter2026-running-time",
+      "Running-Time Lower Bounds under FPT ≠ W[1]",
+      "Hendrik Molter"
     ],
     "statements": [
       {
@@ -3629,7 +3629,10 @@
       "Tight Lower Bounds for Problems Parameterized by Rank-Width",
       "Benjamin Bergougnoux",
       "Tuukka Korhonen",
-      "Jesper Nederlof"
+      "Jesper Nederlof",
+      "molter2026-running-time",
+      "Running-Time Lower Bounds under FPT ≠ W[1]",
+      "Hendrik Molter"
     ],
     "statements": [
       {
@@ -3699,7 +3702,10 @@
       "Tight Lower Bounds for Problems Parameterized by Rank-Width",
       "Benjamin Bergougnoux",
       "Tuukka Korhonen",
-      "Jesper Nederlof"
+      "Jesper Nederlof",
+      "molter2026-running-time",
+      "Running-Time Lower Bounds under FPT ≠ W[1]",
+      "Hendrik Molter"
     ],
     "statements": [
       {
@@ -3914,9 +3920,9 @@
       "Dušan Knop",
       "Michał Pilipczuk",
       "Marcin Wrochna",
-      "lin2019",
-      "A Simple Gap-Producing Reduction for the Parameterized Set Cover Problem",
-      "Bingkai Lin"
+      "molter2026-running-time",
+      "Running-Time Lower Bounds under FPT ≠ W[1]",
+      "Hendrik Molter"
     ],
     "statements": [
       {
@@ -4368,15 +4374,9 @@
       "szeider2026",
       "After ETH: the k×k Clique Hypothesis",
       "Stefan Szeider",
-      "df1995",
-      "Fixed-parameter tractability and completeness II: On completeness for W[1]",
-      "Rod G. Downey",
-      "Michael R. Fellows",
-      "lms2018",
-      "Slightly Superexponential Parameterized Problems",
-      "Daniel Lokshtanov",
-      "Dániel Marx",
-      "Saket Saurabh"
+      "molter2026-running-time",
+      "Running-Time Lower Bounds under FPT ≠ W[1]",
+      "Hendrik Molter"
     ],
     "statements": [
       {
@@ -4763,10 +4763,9 @@
       "Daniel Lokshtanov",
       "Dániel Marx",
       "Saket Saurabh",
-      "df1995",
-      "Fixed-parameter tractability and completeness II: On completeness for W[1]",
-      "Rod G. Downey",
-      "Michael R. Fellows"
+      "molter2026-running-time",
+      "Running-Time Lower Bounds under FPT ≠ W[1]",
+      "Hendrik Molter"
     ],
     "statements": [
       {
@@ -6569,10 +6568,9 @@
       "Markus Hecher",
       "Jeffery Li",
       "Jayson Lynch",
-      "df1995",
-      "Fixed-parameter tractability and completeness II: On completeness for W[1]",
-      "Rod G. Downey",
-      "Michael R. Fellows"
+      "molter2026-running-time",
+      "Running-Time Lower Bounds under FPT ≠ W[1]",
+      "Hendrik Molter"
     ],
     "statements": [
       {
@@ -6656,10 +6654,9 @@
       "szeider2026",
       "After ETH: the k×k Clique Hypothesis",
       "Stefan Szeider",
-      "df1995",
-      "Fixed-parameter tractability and completeness II: On completeness for W[1]",
-      "Rod G. Downey",
-      "Michael R. Fellows"
+      "molter2026-running-time",
+      "Running-Time Lower Bounds under FPT ≠ W[1]",
+      "Hendrik Molter"
     ],
     "statements": [
       {
