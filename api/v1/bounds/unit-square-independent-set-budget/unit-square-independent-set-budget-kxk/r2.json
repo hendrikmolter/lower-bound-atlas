@@ -34,7 +34,7 @@
             "reviewId": "unit-square-independent-set-budget-kxk-closed-scope",
             "source": {
               "editionId": "v3",
-              "locator": "Proposition 1 and Table 1",
+              "locator": "§3, Proposition 1, pp. 3–4, and Table 1, second row, p. 5 (Unit Disk Independent Set and Grid Tiling transfer starting bounds)",
               "paperId": "szeider2026",
               "placement": "statement",
               "role": "benchmark"

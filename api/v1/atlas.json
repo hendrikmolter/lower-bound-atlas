@@ -10838,7 +10838,7 @@
             },
             {
               "editionId": "book",
-              "locator": "Theorem 14.28, pp. 490–491 (reduction from k-Clique)",
+              "locator": "Theorem 14.28, pp. 490–491, reduction from k-Clique",
               "paperId": "cygan2015",
               "placement": "statement",
               "role": "benchmark"
@@ -28408,7 +28408,7 @@
                     "reviewId": "unit-disk-independent-set-budget-kxk-closed-scope",
                     "source": {
                       "editionId": "v3",
-                      "locator": "Proposition 1 and Table 1",
+                      "locator": "§3, Proposition 1, pp. 3–4, and Table 1, second row, p. 5",
                       "paperId": "szeider2026",
                       "placement": "statement",
                       "role": "benchmark"
@@ -28930,7 +28930,7 @@
                     "reviewId": "unit-square-independent-set-budget-kxk-closed-scope",
                     "source": {
                       "editionId": "v3",
-                      "locator": "Proposition 1 and Table 1",
+                      "locator": "§3, Proposition 1, pp. 3–4, and Table 1, second row, p. 5 (Unit Disk Independent Set and Grid Tiling transfer starting bounds)",
                       "paperId": "szeider2026",
                       "placement": "statement",
                       "role": "benchmark"
@@ -37343,7 +37343,7 @@
           "caseId": "grid-tiling-side",
           "editionId": "book",
           "id": "grid-tiling-side-w1",
-          "locator": "Theorem 14.28, pp. 490–491 (reduction from k-Clique)",
+          "locator": "Theorem 14.28, pp. 490–491, reduction from k-Clique",
           "paperId": "cygan2015",
           "placement": "statement",
           "revision": 2,
@@ -41047,32 +41047,10 @@
           "type": "bound"
         },
         {
-          "caseId": "unit-disk-independent-set-budget",
-          "editionId": "v3",
-          "id": "unit-disk-independent-set-budget-kxk",
-          "locator": "Proposition 1 and Table 1",
-          "paperId": "szeider2026",
-          "placement": "statement",
-          "revision": 2,
-          "role": "benchmark",
-          "type": "bound"
-        },
-        {
           "caseId": "unit-square-independent-set-budget",
           "editionId": "v3",
           "id": "unit-square-independent-set-budget-kxk",
           "locator": "§3, Proposition 1, pp. 3–4, and Table 1, second row, p. 5 (Unit Disk Independent Set and Grid Tiling transfer starting bounds)",
-          "paperId": "szeider2026",
-          "placement": "statement",
-          "revision": 2,
-          "role": "benchmark",
-          "type": "bound"
-        },
-        {
-          "caseId": "unit-square-independent-set-budget",
-          "editionId": "v3",
-          "id": "unit-square-independent-set-budget-kxk",
-          "locator": "Proposition 1 and Table 1",
           "paperId": "szeider2026",
           "placement": "statement",
           "revision": 2,
