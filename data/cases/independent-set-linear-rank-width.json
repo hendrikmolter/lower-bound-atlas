@@ -96,7 +96,7 @@
         "triangle-free"
       ],
       "status": "established",
-      "provenance": "atlas",
+      "provenance": "literature",
       "assumptions": [
         {
           "id": "w1",
@@ -104,14 +104,16 @@
         }
       ],
       "assumptionOperator": "all",
-      "sources": [],
-      "proofs": [
+      "sources": [
         {
-          "proofId": "independent-set-rankwidth",
-          "revision": 1,
-          "theorem": "independent-set-rankwidth-w1"
+          "paperId": "molter2026-running-time",
+          "editionId": "arxiv-v1",
+          "locator": "Theorem 5, Section 7",
+          "role": "running-time lower bound",
+          "placement": "statement"
         }
       ],
+      "proofs": [],
       "reader": {
         "revision": 1,
         "label": "Effective quadratic-width bound on triangle-free graphs",
@@ -127,11 +129,13 @@
               {
                 "boundRevision": 1,
                 "hypothesisRevision": 1,
-                "reviewId": "independent-set-rankwidth-w1-review",
-                "proof": {
-                  "proofId": "independent-set-rankwidth",
-                  "revision": 1,
-                  "theorem": "independent-set-rankwidth-w1"
+                "reviewId": "independent-set-linear-rank-width-w1-effective-molter-source-review",
+                "source": {
+                  "paperId": "molter2026-running-time",
+                  "editionId": "arxiv-v1",
+                  "locator": "Theorem 5, Section 7",
+                  "role": "forward implication",
+                  "placement": "forward"
                 }
               }
             ]
@@ -173,7 +177,7 @@
       "proofs": [
         {
           "proofId": "independent-set-rankwidth",
-          "revision": 1,
+          "revision": 2,
           "theorem": "independent-set-rankwidth-sh"
         }
       ],
@@ -191,10 +195,10 @@
               {
                 "boundRevision": 1,
                 "hypothesisRevision": 1,
-                "reviewId": "independent-set-rankwidth-sh-review",
+                "reviewId": "independent-set-rankwidth-sh-r2-review",
                 "proof": {
                   "proofId": "independent-set-rankwidth",
-                  "revision": 1,
+                  "revision": 2,
                   "theorem": "independent-set-rankwidth-sh"
                 }
               }
@@ -233,9 +237,11 @@
       "comparison": "The recovered clock is the same squared-width scale with a computable exponent and modulus. The restricted instances are valid inputs of the historical task and the normalized full graph encoding, including any supplied certificate, is polynomial in its order.",
       "evidence": [
         {
-          "proofId": "independent-set-rankwidth",
-          "revision": 1,
-          "theorem": "independent-set-rankwidth-w1"
+          "paperId": "molter2026-running-time",
+          "editionId": "arxiv-v1",
+          "locator": "Theorem 5, Section 7",
+          "role": "running-time lower bound",
+          "placement": "statement"
         }
       ]
     },
@@ -260,7 +266,7 @@
       "evidence": [
         {
           "proofId": "independent-set-rankwidth",
-          "revision": 1,
+          "revision": 2,
           "theorem": "independent-set-rankwidth-sh"
         }
       ]

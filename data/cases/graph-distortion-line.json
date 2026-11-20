@@ -74,12 +74,14 @@
               {
                 "boundRevision": 1,
                 "hypothesisRevision": 1,
-                "proof": {
-                  "proofId": "graph-distortion-line-w1",
-                  "revision": 1,
-                  "theorem": "graph-distortion-line-w1"
-                },
-                "reviewId": "graph-distortion-line-w1-review"
+                "reviewId": "graph-distortion-line-w1-molter-source-review",
+                "source": {
+                  "paperId": "molter2026-running-time",
+                  "editionId": "arxiv-v1",
+                  "locator": "Theorem 12, Section 15",
+                  "role": "forward implication",
+                  "placement": "forward"
+                }
               }
             ],
             "status": "established"
@@ -99,14 +101,8 @@
         "bipartite"
       ],
       "inputFactor": "B^(O(1))",
-      "proofs": [
-        {
-          "proofId": "graph-distortion-line-w1",
-          "revision": 1,
-          "theorem": "graph-distortion-line-w1"
-        }
-      ],
-      "provenance": "atlas",
+      "proofs": [],
+      "provenance": "literature",
       "qualifications": [
         "The exponent h is finite, nonnegative and o(d log₂ d) with a computable convergence modulus."
       ],
@@ -123,18 +119,11 @@
       ],
       "sources": [
         {
-          "editionId": "journal",
-          "locator": "Lemma 2.8 and its proof",
-          "paperId": "lms2018",
-          "placement": "proof",
-          "role": "deterministic constructive coloring family"
-        },
-        {
-          "editionId": "journal",
-          "locator": "Theorem 2.1",
-          "paperId": "df1995",
-          "placement": "proof",
-          "role": "Clique hardness by Independent Set complementation"
+          "paperId": "molter2026-running-time",
+          "editionId": "arxiv-v1",
+          "locator": "Theorem 12, Section 15",
+          "role": "running-time lower bound",
+          "placement": "statement"
         }
       ],
       "statement": "Under FPT ≠ W[1], no deterministic algorithm solves the stated decision problem within the stated running time.",
@@ -267,9 +256,11 @@
       "comparison": "Both bounds use the d log₂ d scale. A solver on the full integer-line problem also handles connected bipartite hard instances. The graph encoding on the reduction images has length polynomial in graph order; the remaining gap is the computable convergence modulus.",
       "evidence": [
         {
-          "proofId": "graph-distortion-line-w1",
-          "revision": 1,
-          "theorem": "graph-distortion-line-w1"
+          "paperId": "molter2026-running-time",
+          "editionId": "arxiv-v1",
+          "locator": "Theorem 12, Section 15",
+          "role": "running-time lower bound",
+          "placement": "statement"
         }
       ]
     },

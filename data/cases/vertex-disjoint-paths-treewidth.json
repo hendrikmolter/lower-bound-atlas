@@ -91,14 +91,8 @@
         "equal-widths"
       ],
       "inputFactor": "B^(O(1))",
-      "proofs": [
-        {
-          "proofId": "vdp-width-w1",
-          "revision": 1,
-          "theorem": "vdp-width-w1"
-        }
-      ],
-      "provenance": "atlas",
+      "proofs": [],
+      "provenance": "literature",
       "qualifications": [
         "The exponent h(t) is finite and nonnegative. There is a computable function T such that h(t) ≤ max(1, t log₂(max(2, t)))/j for every positive integer j and every t ≥ T(j)."
       ],
@@ -116,18 +110,11 @@
       ],
       "sources": [
         {
-          "editionId": "journal",
-          "locator": "Lemma 2.8 and its proof",
-          "paperId": "lms2018",
-          "placement": "proof",
-          "role": "deterministic coloring family"
-        },
-        {
-          "editionId": "journal",
-          "locator": "W[1]-completeness of Independent Set, with Clique by complementation",
-          "paperId": "df1995",
-          "placement": "proof",
-          "role": "source completeness"
+          "paperId": "molter2026-running-time",
+          "editionId": "arxiv-v1",
+          "locator": "Theorem 9, Section 12",
+          "role": "running-time lower bound",
+          "placement": "statement"
         }
       ],
       "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Vertex-Disjoint Paths within the stated running time.",
@@ -226,9 +213,11 @@
       "comparison": "The recovery excludes the same scale with a computable convergence modulus. The proof obtains the exclusion on connected bipartite graphs of maximum degree three with distinct leaf terminals and equal widths.",
       "evidence": [
         {
-          "proofId": "vdp-width-w1",
-          "revision": 1,
-          "theorem": "vdp-width-w1"
+          "paperId": "molter2026-running-time",
+          "editionId": "arxiv-v1",
+          "locator": "Theorem 9, Section 12",
+          "role": "running-time lower bound",
+          "placement": "statement"
         }
       ]
     }

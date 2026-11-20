@@ -143,7 +143,7 @@
       "runtime": "2^(o_eff(d)) N^C",
       "inputFactor": "N^C, C fixed",
       "status": "established",
-      "provenance": "atlas",
+      "provenance": "literature",
       "assumptions": [
         {
           "id": "w1",
@@ -153,20 +153,14 @@
       "assumptionOperator": "all",
       "sources": [
         {
-          "paperId": "df1995",
-          "editionId": "journal",
-          "locator": "Independent Set is W[1]-complete, with Clique by complementation",
-          "role": "source completeness",
-          "placement": "proof"
+          "paperId": "molter2026-running-time",
+          "editionId": "arxiv-v1",
+          "locator": "Theorem 6, Section 8",
+          "role": "running-time lower bound",
+          "placement": "statement"
         }
       ],
-      "proofs": [
-        {
-          "proofId": "closest-string-balanced",
-          "revision": 1,
-          "theorem": "cs-balanced"
-        }
-      ],
+      "proofs": [],
       "assessments": {
         "eth": {
           "hypothesisRevision": 1,
@@ -454,9 +448,11 @@
       "comparison": "On the balanced inputs of the historical bound, dividing the exponent scale by log₂ d gives d. The exclusion at this scale requires effective convergence.",
       "evidence": [
         {
-          "proofId": "closest-string-balanced",
-          "revision": 1,
-          "theorem": "cs-balanced"
+          "paperId": "molter2026-running-time",
+          "editionId": "arxiv-v1",
+          "locator": "Theorem 6, Section 8",
+          "role": "running-time lower bound",
+          "placement": "statement"
         }
       ]
     },

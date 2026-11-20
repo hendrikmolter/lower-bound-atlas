@@ -93,7 +93,7 @@
       "id": "chromatic-vc-w1",
       "revision": 1,
       "status": "established",
-      "provenance": "atlas",
+      "provenance": "literature",
       "assumptionOperator": "all",
       "assumptions": [
         {
@@ -116,20 +116,14 @@
       },
       "sources": [
         {
-          "paperId": "df1995",
-          "editionId": "journal",
-          "locator": "W[1]-completeness of Independent Set, with Clique by complementation",
-          "role": "source completeness",
-          "placement": "proof"
+          "paperId": "molter2026-running-time",
+          "editionId": "arxiv-v1",
+          "locator": "Theorem 1, Section 3",
+          "role": "running-time lower bound",
+          "placement": "statement"
         }
       ],
-      "proofs": [
-        {
-          "proofId": "chromatic-number-cover-w1",
-          "revision": 1,
-          "theorem": "cover-w1"
-        }
-      ]
+      "proofs": []
     }
   ],
   "resolutions": [],
@@ -174,9 +168,11 @@
       "comparison": "The excluded exponent is linear in the vertex cover number k, a logarithmic factor below the historical scale k log₂ k.",
       "evidence": [
         {
-          "proofId": "chromatic-number-cover-w1",
-          "revision": 1,
-          "theorem": "cover-w1"
+          "paperId": "molter2026-running-time",
+          "editionId": "arxiv-v1",
+          "locator": "Theorem 1, Section 3",
+          "role": "running-time lower bound",
+          "placement": "statement"
         }
       ]
     },

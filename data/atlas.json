@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "edition": "v1.0.0",
-  "revision": 2,
+  "revision": 3,
   "assumptions": [
     {
       "id": "eth",
@@ -1464,65 +1464,28 @@
           "access": "Section 2 explicitly defines the at-most-k red/blue Odd Set problem and proves its W[1]-hardness in Theorem 2."
         }
       ]
+    },
+    {
+      "id": "molter2026-running-time",
+      "title": "Running-Time Lower Bounds under FPT ≠ W[1]",
+      "authors": [
+        "Hendrik Molter"
+      ],
+      "preferredEditionId": "arxiv-v1",
+      "editions": [
+        {
+          "id": "arxiv-v1",
+          "kind": "preprint",
+          "label": "arXiv:2611.26080v1, 19 November 2026",
+          "primaryUrl": "https://arxiv.org/abs/2611.26080v1",
+          "openUrl": "https://arxiv.org/html/2611.26080v1",
+          "access": "Version 1 full text inspected. Theorems 1–12 establish deterministic running-time lower bounds under FPT ≠ W[1].",
+          "doi": "10.48550/arXiv.2611.26080"
+        }
+      ]
     }
   ],
   "proofs": [
-    {
-      "id": "distinct-vectors-fixed-coefficient",
-      "title": "A double-exponential lower bound for Distinct Vectors under FPT ≠ W[1]",
-      "revisions": [
-        {
-          "revision": 1,
-          "source": "proofs/distinct-vectors-fixed-coefficient.tex",
-          "pdf": "proofs/distinct-vectors-fixed-coefficient.pdf",
-          "theorems": [
-            {
-              "label": "dv-fixed-coefficient",
-              "number": "1",
-              "destination": "dv-fixed-coefficient",
-              "statement": "For every fixed 0 < γ < 1, under FPT ≠ W[1] no deterministic algorithm decides Distinct Vectors in time 2^(O(2^(γ k))) N^(O(1))."
-            }
-          ],
-          "dependencyCoverage": "partial",
-          "dependencies": [],
-          "authorship": {
-            "origin": "atlas",
-            "kind": "ai",
-            "authors": [
-              "Atlas"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "closest-string-balanced",
-      "title": "Closest String with a balanced alphabet",
-      "revisions": [
-        {
-          "revision": 1,
-          "source": "proofs/closest-string-balanced.tex",
-          "pdf": "proofs/closest-string-balanced.pdf",
-          "theorems": [
-            {
-              "label": "cs-balanced",
-              "number": "1",
-              "destination": "cs-balanced",
-              "statement": "Under deterministic FPT ≠ W[1], on inputs with L=d+1 and used alphabet size q=2d+3 there is no deterministic solver in 2^{h(d)} N^C for fixed C, where h has a computable upper bound and is effectively sublinear in d."
-            }
-          ],
-          "dependencyCoverage": "complete",
-          "dependencies": [],
-          "authorship": {
-            "origin": "atlas",
-            "kind": "ai",
-            "authors": [
-              "Atlas"
-            ]
-          }
-        }
-      ]
-    },
     {
       "id": "three-coloring-sh-converse",
       "title": "The 3-Coloring bound implies the Satisfiability Hypothesis",
@@ -1559,90 +1522,6 @@
               "number": "1",
               "destination": "color-sh-converse",
               "statement": "If for every fixed 0<a<1 there is no deterministic 3-Coloring algorithm in 2^{O(n^a)} B^{O(1)}, then SH holds."
-            }
-          ],
-          "dependencyCoverage": "complete",
-          "dependencies": [],
-          "authorship": {
-            "origin": "atlas",
-            "kind": "ai",
-            "authors": [
-              "Atlas"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "chromatic-number-cover-w1",
-      "title": "A single-exponential lower bound for Chromatic Number by vertex cover number",
-      "revisions": [
-        {
-          "revision": 1,
-          "source": "proofs/chromatic-number-cover-w1.tex",
-          "pdf": "proofs/chromatic-number-cover-w1.pdf",
-          "theorems": [
-            {
-              "label": "cover-w1",
-              "number": "1",
-              "destination": "cover-w1",
-              "statement": "Under deterministic FPT ≠ W[1], there is no Chromatic Number algorithm in 2^{O(k)} N^{O(1)} for vertex cover number k."
-            }
-          ],
-          "dependencyCoverage": "complete",
-          "dependencies": [],
-          "authorship": {
-            "origin": "atlas",
-            "kind": "ai",
-            "authors": [
-              "Atlas"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "chromatic-number-treewidth-w1",
-      "title": "An effective treewidth lower bound for Chromatic Number",
-      "revisions": [
-        {
-          "revision": 1,
-          "source": "proofs/chromatic-number-treewidth-w1.tex",
-          "pdf": "proofs/chromatic-number-treewidth-w1.pdf",
-          "theorems": [
-            {
-              "label": "tw-w1",
-              "number": "1",
-              "destination": "tw-w1",
-              "statement": "Under deterministic FPT ≠ W[1], there is no Chromatic Number algorithm in 2^{h(t)} N^C for a fixed C and a finite nonnegative h effectively little-o of t log₂(max(t,2))."
-            }
-          ],
-          "dependencyCoverage": "complete",
-          "dependencies": [],
-          "authorship": {
-            "origin": "atlas",
-            "kind": "ai",
-            "authors": [
-              "Atlas"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "vdp-width-w1",
-      "title": "Vertex-Disjoint Paths at optimal width on subcubic bipartite graphs",
-      "revisions": [
-        {
-          "revision": 1,
-          "source": "proofs/vertex-disjoint-paths-width-w1.tex",
-          "pdf": "proofs/vertex-disjoint-paths-width-w1.pdf",
-          "theorems": [
-            {
-              "label": "vdp-width-w1",
-              "number": "1",
-              "destination": "vdp-width-w1",
-              "statement": "Under deterministic FPT ≠ W[1], there is no correct deterministic Vertex-Disjoint Paths solver in 2^{h(w)} B^C time for a fixed C and a finite nonnegative h effectively little-o of max(1, w log₂(max(2,w))). The parameter is intrinsic treewidth or the width of a supplied path decomposition. The hard instances are connected bipartite graphs of maximum degree three with distinct leaf demand endpoints and equal treewidth and pathwidth. The supplied path decomposition is optimal."
             }
           ],
           "dependencyCoverage": "complete",
@@ -1916,34 +1795,6 @@
       ]
     },
     {
-      "id": "graph-distortion-line-w1",
-      "title": "An effective lower bound for bipartite line distortion",
-      "revisions": [
-        {
-          "revision": 1,
-          "source": "proofs/graph-distortion-line-w1.tex",
-          "pdf": "proofs/graph-distortion-line-w1.pdf",
-          "theorems": [
-            {
-              "label": "graph-distortion-line-w1",
-              "number": "1",
-              "destination": "graph-distortion-line-w1",
-              "statement": "Under FPT ≠ W[1], no deterministic algorithm decides integer or real line distortion in time 2^(h(d)) B^(O(1)) on connected simple unweighted bipartite graphs when h is finite, nonnegative, and effectively o(d log₂ d)."
-            }
-          ],
-          "dependencyCoverage": "complete",
-          "dependencies": [],
-          "authorship": {
-            "origin": "atlas",
-            "kind": "ai",
-            "authors": [
-              "Atlas"
-            ]
-          }
-        }
-      ]
-    },
-    {
       "id": "hamiltonian-sh",
       "title": "Fixed-power lower bounds for Hamiltonian Cycle, Hamiltonian Path, and Longest Path",
       "revisions": [
@@ -2042,101 +1893,17 @@
       ]
     },
     {
-      "id": "ilp-equations-w1-effective",
-      "title": "An effective lower bound for integer programming with an all-ones right-hand side",
+      "id": "independent-set-rankwidth",
+      "title": "A fixed-power lower bound for Independent Set on triangle-free graphs under SH",
       "revisions": [
         {
           "revision": 2,
-          "source": "proofs/ilp-equations-w1-all-ones-r2.tex",
-          "pdf": "proofs/ilp-equations-w1-all-ones-r2.pdf",
-          "theorems": [
-            {
-              "label": "ilp-equations-w1-effective",
-              "number": "1",
-              "destination": "ilp-equations-w1-effective",
-              "statement": "Assuming deterministic FPT ≠ W[1], for every fixed C ≥ 0 and every finite nonnegative function h admitting a computable threshold T(j) with h(k) ≤ k/j for every positive integer j and all k ≥ T(j), no deterministic algorithm decides feasibility of Ax=1 over nonnegative integers for a binary k-row matrix A in O(2^(h(k)) N^C) time, with complete binary input length N and unrestricted column count. The exclusion holds even when all columns are nonzero, in which case every feasible coordinate is at most one."
-            }
-          ],
-          "dependencyCoverage": "complete",
-          "dependencies": [],
-          "authorship": {
-            "origin": "atlas",
-            "kind": "ai",
-            "authors": [
-              "Atlas"
-            ]
-          }
-        },
-        {
-          "revision": 3,
-          "source": "proofs/ilp-equations-w1-all-ones.tex",
-          "pdf": "proofs/ilp-equations-w1-all-ones.pdf",
-          "theorems": [
-            {
-              "label": "ilp-equations-w1-effective",
-              "number": "1",
-              "destination": "ilp-equations-w1-effective",
-              "statement": "Assuming deterministic FPT ≠ W[1], for every fixed C ≥ 0 and every finite nonnegative function h admitting a computable threshold T(j) with h(k) ≤ k/j for every positive integer j and all k ≥ T(j), no deterministic algorithm decides feasibility of Ax=1 over nonnegative integers for a binary k-row matrix A in O(2^(h(k)) N^C) time, with complete binary input length N and unrestricted column count. The exclusion holds even when all columns are nonzero, in which case every feasible coordinate is at most one."
-            }
-          ],
-          "dependencyCoverage": "complete",
-          "dependencies": [],
-          "authorship": {
-            "origin": "atlas",
-            "kind": "ai",
-            "authors": [
-              "Atlas"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "cycle-packing-degree-six",
-      "title": "Cycle Packing at bounded degree and large girth",
-      "revisions": [
-        {
-          "revision": 1,
-          "source": "proofs/cycle-packing-degree-six.tex",
-          "pdf": "proofs/cycle-packing-degree-six.pdf",
-          "theorems": [
-            {
-              "label": "cycle-packing-degree-six",
-              "number": "1",
-              "destination": "cycle-packing-degree-six",
-              "statement": "Assuming deterministic FPT ≠ W[1], for each fixed 0<γ<1 there is no deterministic effective 2^(o(t log₂ t)) N^(O(1)) Cycle Packing algorithm by treewidth or by supplied path-decomposition width, even on connected bipartite graphs of maximum degree six, girth at least n^(1−γ), and equal treewidth and pathwidth, with an optimal certificate if supplied."
-            }
-          ],
-          "dependencyCoverage": "complete",
-          "dependencies": [],
-          "authorship": {
-            "origin": "atlas",
-            "kind": "ai",
-            "authors": [
-              "Atlas"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "independent-set-rankwidth",
-      "title": "Quadratic lower bounds for Independent Set on triangle-free graphs",
-      "revisions": [
-        {
-          "revision": 1,
           "source": "proofs/independent-set-rankwidth.tex",
           "pdf": "proofs/independent-set-rankwidth.pdf",
           "theorems": [
             {
-              "label": "independent-set-rankwidth-w1",
-              "number": "1",
-              "destination": "independent-set-rankwidth-w1",
-              "statement": "Assuming deterministic FPT ≠ W[1], there is no deterministic effective 2^(o(p²)) N^(O(1)) Independent Set algorithm on triangle-free graphs by either intrinsic width, with or without an optimal corresponding certificate."
-            },
-            {
               "label": "independent-set-rankwidth-sh",
-              "number": "2",
+              "number": "1",
               "destination": "independent-set-rankwidth-sh",
               "statement": "Assuming deterministic SH, for every fixed 0<ε<2 there is no deterministic 2^(O(p^(2−ε))) N^(O(1)) Independent Set algorithm on triangle-free graphs by either intrinsic width, with or without an optimal corresponding certificate."
             }
@@ -2214,40 +1981,6 @@
       }
     },
     {
-      "id": "dv-fixed-coefficient-review",
-      "type": "agent",
-      "reviewer": "Independent atlas proof reviewer",
-      "date": "2026-11-18",
-      "verdict": "verified",
-      "scope": "The fixed-coefficient bound, including the Set Cover construction, distinct-row promise, parameter accounting, deterministic running time and comparison to the published ETH bound.",
-      "evidence": "evidence/distinct-vectors-fixed-coefficient-independent.md",
-      "object": {
-        "type": "proof",
-        "id": "distinct-vectors-fixed-coefficient",
-        "revision": 1,
-        "theorem": "dv-fixed-coefficient"
-      },
-      "independent": true,
-      "sourceSha256": "89bf1663aa5be39d5b4396703a32b80af63dc554609d1b14dc65e4a2ef4e0584"
-    },
-    {
-      "id": "closest-string-balanced-review",
-      "type": "agent",
-      "date": "2026-11-18",
-      "reviewer": "Independent agent reviewer",
-      "verdict": "verified",
-      "scope": "Balanced alphabet, Clique reduction, effective convergence and fixed-parameter running time.",
-      "evidence": "evidence/closest-string-balanced-independent.md",
-      "object": {
-        "type": "proof",
-        "id": "closest-string-balanced",
-        "revision": 1,
-        "theorem": "cs-balanced"
-      },
-      "independent": true,
-      "sourceSha256": "a6a07d3afa6761631bea8c341eb264eb38ac136b527ebf314c98342a9e9353e3"
-    },
-    {
       "id": "three-coloring-sh-converse-review",
       "type": "agent",
       "date": "2026-11-18",
@@ -2263,57 +1996,6 @@
       },
       "independent": true,
       "sourceSha256": "9f946a0078c62a6ae28959f44f9ad2f6df97133f59a14e8f715a53da497da49a"
-    },
-    {
-      "id": "chromatic-number-cover-w1-review",
-      "type": "agent",
-      "date": "2026-11-18",
-      "reviewer": "Independent agent reviewer",
-      "verdict": "verified",
-      "scope": "Checks the histogram enumeration, synchronized color banks, forbidden pairs, cover size, and fixed-parameter Turing reduction.",
-      "evidence": "evidence/chromatic-number-cover-w1-independent.md",
-      "object": {
-        "type": "proof",
-        "id": "chromatic-number-cover-w1",
-        "revision": 1,
-        "theorem": "cover-w1"
-      },
-      "independent": true,
-      "sourceSha256": "f78a95b261c38a1dfc849ad13e6ec4420898f56aa2666c5943caa13b3fd4800a"
-    },
-    {
-      "id": "chromatic-number-treewidth-w1-review",
-      "type": "agent",
-      "date": "2026-11-18",
-      "reviewer": "Independent agent reviewer",
-      "verdict": "verified",
-      "scope": "Checks the coloring reduction, intrinsic width estimate, computable convergence thresholds, finite prefix, and deterministic running-time transfer.",
-      "evidence": "evidence/chromatic-number-treewidth-w1-independent.md",
-      "object": {
-        "type": "proof",
-        "id": "chromatic-number-treewidth-w1",
-        "revision": 1,
-        "theorem": "tw-w1"
-      },
-      "independent": true,
-      "sourceSha256": "1f54ebe9c862f2c3e42818775cd92645558501908f2a753ad467eb5ed6be6075"
-    },
-    {
-      "id": "vdp-width-w1-independent",
-      "type": "agent",
-      "date": "2026-11-18",
-      "reviewer": "Independent agent reviewer",
-      "verdict": "verified",
-      "scope": "Checks the complete effective W[1] exclusion for both width interfaces, including the permutation family, normality and width of the chain, subcubic degree and direction simulation, bipartiteness and optimal certificate, and the effective rate transfer.",
-      "evidence": "evidence/vertex-disjoint-paths-width-w1-independent.md",
-      "object": {
-        "type": "proof",
-        "id": "vdp-width-w1",
-        "revision": 1,
-        "theorem": "vdp-width-w1"
-      },
-      "independent": true,
-      "sourceSha256": "b25920c20dd1b89a0f6446239b4bf9dcc2a9321dac8c8ae7f95c2692198fa576"
     },
     {
       "id": "ecc-np-qp-converse-independent",
@@ -2365,23 +2047,6 @@
       },
       "independent": true,
       "sourceSha256": "0a30765d590e30160fe5c774b6be5a37fbc94d456530cf463dc7ed42cc17c504"
-    },
-    {
-      "id": "graph-distortion-line-w1-review",
-      "type": "agent",
-      "date": "2026-11-18",
-      "reviewer": "Codex agent population coordinator",
-      "verdict": "verified",
-      "scope": "Forward implication, including the integer and real coordinate interfaces, the deterministic coloring-family enumeration, the ordering and bipartite graph gadgets, and the effective convergence calculation.",
-      "evidence": "evidence/graph-distortion-line-w1-independent.md",
-      "object": {
-        "type": "proof",
-        "id": "graph-distortion-line-w1",
-        "revision": 1,
-        "theorem": "graph-distortion-line-w1"
-      },
-      "independent": true,
-      "sourceSha256": "3e4a4c93dd5e82dd5d7d366ab689f5a451020d3cc799191711a17311677b77c7"
     },
     {
       "id": "hamiltonian-sh-forward-independent",
@@ -2537,55 +2202,21 @@
       "sourceSha256": "f746b961e52ff19036f9e05aee729f20e4bf71d49d9c0eff9e19b4806aa94802"
     },
     {
-      "id": "cycle-packing-degree-six-review",
+      "id": "independent-set-rankwidth-sh-r2-review",
       "type": "agent",
-      "date": "2026-11-18",
-      "reviewer": "Codex agent derived_shortlist",
+      "date": "2026-11-20",
+      "reviewer": "Codex agent /root/paper_compare",
       "verdict": "verified",
-      "scope": "Assuming deterministic FPT ≠ W[1], for each fixed 0<γ<1 there is no deterministic effective 2^(o(t log₂ t)) N^(O(1)) Cycle Packing algorithm by treewidth or by supplied path-decomposition width, even on connected bipartite graphs of maximum degree six, girth at least n^(1−γ), and equal treewidth and pathwidth, with an optimal certificate if supplied.",
-      "evidence": "evidence/cycle-packing-degree-six-independent.md",
-      "object": {
-        "type": "proof",
-        "id": "cycle-packing-degree-six",
-        "revision": 1,
-        "theorem": "cycle-packing-degree-six"
-      },
-      "independent": true,
-      "sourceSha256": "746938c54f4a675284c033d8be3b1241a6f34333db571a9af583f6fb9580fa9d"
-    },
-    {
-      "id": "independent-set-rankwidth-w1-review",
-      "type": "agent",
-      "date": "2026-11-18",
-      "reviewer": "Codex agent derived_shortlist",
-      "verdict": "verified",
-      "scope": "Assuming deterministic FPT ≠ W[1], there is no deterministic effective 2^(o(p²)) N^(O(1)) Independent Set algorithm on triangle-free graphs by either intrinsic width, with or without an optimal corresponding certificate.",
-      "evidence": "evidence/independent-set-rankwidth-independent.md",
+      "scope": "Forward implication from SH for each fixed 0 < ε < 2 on triangle-free graphs. Checks rank-width and linear rank-width, each without a certificate or with an optimal certificate of the corresponding type.",
+      "evidence": "evidence/independent-set-rankwidth-sh-independent.md",
       "object": {
         "type": "proof",
         "id": "independent-set-rankwidth",
-        "revision": 1,
-        "theorem": "independent-set-rankwidth-w1"
-      },
-      "independent": true,
-      "sourceSha256": "d7a6aba181a1f49669c6e55b562246aeedfc2b3a21760a7766f00250b0c1c80f"
-    },
-    {
-      "id": "independent-set-rankwidth-sh-review",
-      "type": "agent",
-      "date": "2026-11-18",
-      "reviewer": "Codex agent derived_shortlist",
-      "verdict": "verified",
-      "scope": "Assuming deterministic SH, for every fixed 0<ε<2 there is no deterministic 2^(O(p^(2−ε))) N^(O(1)) Independent Set algorithm on triangle-free graphs by either intrinsic width, with or without an optimal corresponding certificate.",
-      "evidence": "evidence/independent-set-rankwidth-independent.md",
-      "object": {
-        "type": "proof",
-        "id": "independent-set-rankwidth",
-        "revision": 1,
+        "revision": 2,
         "theorem": "independent-set-rankwidth-sh"
       },
       "independent": true,
-      "sourceSha256": "d7a6aba181a1f49669c6e55b562246aeedfc2b3a21760a7766f00250b0c1c80f"
+      "sourceSha256": "4eb08c9631732983d6faa17a5bd199db83c3906f70dda27e4d7a38bc95c92a41"
     },
     {
       "id": "dominating-set-rankwidth-review",
@@ -2605,40 +2236,6 @@
       "sourceSha256": "fa61733eeae80fa150716b31461435cdb7f52bb6be5a7b1e26f8930ecf566bad"
     },
     {
-      "id": "ilp-equations-w1-all-ones-review",
-      "type": "agent",
-      "date": "2026-11-19",
-      "reviewer": "Codex agent derived_shortlist",
-      "verdict": "verified",
-      "scope": "Theorem 1, revision 2. Checks the exact-one Lin incidence reduction, nonzero columns and binary feasible coordinates, unrestricted column count, complete input factor, and a computable cutoff for finite nonnegative h, with no computability assumption on h.",
-      "evidence": "evidence/ilp-equations-w1-all-ones-independent.md",
-      "object": {
-        "type": "proof",
-        "id": "ilp-equations-w1-effective",
-        "revision": 2,
-        "theorem": "ilp-equations-w1-effective"
-      },
-      "independent": true,
-      "sourceSha256": "7384d8597eead558b47b321294814f5bb88a7192d24fd90499a343f02919f015"
-    },
-    {
-      "id": "ilp-equations-w1-all-ones-r3-citation-review",
-      "type": "agent",
-      "date": "2026-11-19",
-      "reviewer": "Codex agent /root/remaining",
-      "verdict": "verified",
-      "scope": "Theorem 1, revision 3. Checked the journal locator and exact scope of the comparison statement and verified that the theorem and its proof match the independently reviewed revision 2.",
-      "evidence": "evidence/ilp-equations-w1-all-ones-r3-citation-review.md",
-      "object": {
-        "type": "proof",
-        "id": "ilp-equations-w1-effective",
-        "revision": 3,
-        "theorem": "ilp-equations-w1-effective"
-      },
-      "independent": true,
-      "sourceSha256": "bcfd01fdc4de9b242960aa6d4fa251898a4e0b31a38289fbbd69a8514e0a6baf"
-    },
-    {
       "id": "three-coloring-sh-converse-review-r2",
       "type": "agent",
       "date": "2026-11-19",
@@ -2654,6 +2251,126 @@
       },
       "independent": true,
       "sourceSha256": "37e81a7db845fdff77e451dafc10866b3da9f9e1ad26f8f7424b414feb24de81"
+    },
+    {
+      "id": "cp-pw-w1-effective-molter-source-review",
+      "type": "agent",
+      "reviewer": "Codex source audit",
+      "date": "2026-11-20",
+      "verdict": "verified",
+      "scope": "Forward implication. Checked the exact task, parameter, input restrictions, and effective running time against Theorem 10, Section 13.",
+      "evidence": "evidence/molter2026-source-scope.md",
+      "object": {
+        "type": "bound",
+        "caseId": "cycle-packing-supplied-pathwidth",
+        "id": "cp-pw-w1-effective",
+        "revision": 1
+      }
+    },
+    {
+      "id": "cp-tw-w1-effective-molter-source-review",
+      "type": "agent",
+      "reviewer": "Codex source audit",
+      "date": "2026-11-20",
+      "verdict": "verified",
+      "scope": "Forward implication. Checked the exact task, parameter, input restrictions, and effective running time against Theorem 10, Section 13.",
+      "evidence": "evidence/molter2026-source-scope.md",
+      "object": {
+        "type": "bound",
+        "caseId": "cycle-packing-treewidth",
+        "id": "cp-tw-w1-effective",
+        "revision": 1
+      }
+    },
+    {
+      "id": "graph-distortion-line-w1-molter-source-review",
+      "type": "agent",
+      "reviewer": "Codex source audit",
+      "date": "2026-11-20",
+      "verdict": "verified",
+      "scope": "Forward implication. Checked the exact task, parameter, input restrictions, and effective running time against Theorem 12, Section 15.",
+      "evidence": "evidence/molter2026-source-scope.md",
+      "object": {
+        "type": "bound",
+        "caseId": "graph-distortion-line",
+        "id": "graph-distortion-line-w1",
+        "revision": 1
+      }
+    },
+    {
+      "id": "independent-set-linear-rank-width-w1-effective-molter-source-review",
+      "type": "agent",
+      "reviewer": "Codex source audit",
+      "date": "2026-11-20",
+      "verdict": "verified",
+      "scope": "Forward implication. Checked the exact task, parameter, input restrictions, and effective running time against Theorem 5, Section 7.",
+      "evidence": "evidence/molter2026-source-scope.md",
+      "object": {
+        "type": "bound",
+        "caseId": "independent-set-linear-rank-width",
+        "id": "independent-set-linear-rank-width-w1-effective",
+        "revision": 1
+      }
+    },
+    {
+      "id": "independent-set-rank-width-w1-effective-molter-source-review",
+      "type": "agent",
+      "reviewer": "Codex source audit",
+      "date": "2026-11-20",
+      "verdict": "verified",
+      "scope": "Forward implication. Checked the exact task, parameter, input restrictions, and effective running time against Theorem 5, Section 7.",
+      "evidence": "evidence/molter2026-source-scope.md",
+      "object": {
+        "type": "bound",
+        "caseId": "independent-set-rank-width",
+        "id": "independent-set-rank-width-w1-effective",
+        "revision": 1
+      }
+    },
+    {
+      "id": "independent-set-supplied-linear-layout-w1-effective-molter-source-review",
+      "type": "agent",
+      "reviewer": "Codex source audit",
+      "date": "2026-11-20",
+      "verdict": "verified",
+      "scope": "Forward implication. Checked the exact task, parameter, input restrictions, and effective running time against Theorem 5, Section 7.",
+      "evidence": "evidence/molter2026-source-scope.md",
+      "object": {
+        "type": "bound",
+        "caseId": "independent-set-supplied-linear-layout",
+        "id": "independent-set-supplied-linear-layout-w1-effective",
+        "revision": 1
+      }
+    },
+    {
+      "id": "independent-set-supplied-rank-decomposition-w1-effective-molter-source-review",
+      "type": "agent",
+      "reviewer": "Codex source audit",
+      "date": "2026-11-20",
+      "verdict": "verified",
+      "scope": "Forward implication. Checked the exact task, parameter, input restrictions, and effective running time against Theorem 5, Section 7.",
+      "evidence": "evidence/molter2026-source-scope.md",
+      "object": {
+        "type": "bound",
+        "caseId": "independent-set-supplied-rank-decomposition",
+        "id": "independent-set-supplied-rank-decomposition-w1-effective",
+        "revision": 1
+      }
+    },
+    {
+      "id": "ilp-equations-w1-effective-molter-source-review",
+      "type": "agent",
+      "reviewer": "Codex source audit",
+      "date": "2026-11-20",
+      "verdict": "verified",
+      "scope": "Forward implication. Checked the exact task, parameter, input restrictions, and effective running time against Theorem 8, Section 10.",
+      "evidence": "evidence/molter2026-source-scope.md",
+      "object": {
+        "type": "bound",
+        "caseId": "integer-linear-programming-equations",
+        "id": "ilp-equations-w1-effective",
+        "revision": 2
+      }
     }
   ],
   "challenges": [],

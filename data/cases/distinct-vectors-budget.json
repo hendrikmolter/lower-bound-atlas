@@ -83,7 +83,7 @@
       "runtime": "2^(O(2^(γ k))) N^(O(1))",
       "inputFactor": "N^(O(1))",
       "status": "established",
-      "provenance": "atlas",
+      "provenance": "literature",
       "assumptions": [
         {
           "id": "w1",
@@ -93,34 +93,14 @@
       "assumptionOperator": "all",
       "sources": [
         {
-          "paperId": "df1995",
-          "editionId": "journal",
-          "locator": "Corollary 3.2, with Clique by complementation",
-          "role": "source completeness",
-          "placement": "proof"
-        },
-        {
-          "paperId": "lin2019",
-          "editionId": "proceedings",
-          "locator": "Lemma 14 and proof, pp. 81:11–81:12",
-          "role": "source reduction",
-          "placement": "proof"
-        },
-        {
-          "paperId": "froese2012",
-          "editionId": "thesis",
-          "locator": "Section 4.1.1, proof of Theorem 4.1, p. 33",
-          "role": "address construction",
-          "placement": "proof"
+          "paperId": "molter2026-running-time",
+          "editionId": "arxiv-v1",
+          "locator": "Theorem 7, Section 9",
+          "role": "running-time lower bound",
+          "placement": "statement"
         }
       ],
-      "proofs": [
-        {
-          "proofId": "distinct-vectors-fixed-coefficient",
-          "revision": 1,
-          "theorem": "dv-fixed-coefficient"
-        }
-      ],
+      "proofs": [],
       "assessments": {
         "eth": {
           "hypothesisRevision": 1,
@@ -213,9 +193,11 @@
       "comparison": "For any fixed c below 1/2, choose γ strictly between max(0,c) and 1. The W[1] bound then excludes the full historical running-time family for the same binary matrices and column budgets.",
       "evidence": [
         {
-          "proofId": "distinct-vectors-fixed-coefficient",
-          "revision": 1,
-          "theorem": "dv-fixed-coefficient"
+          "paperId": "molter2026-running-time",
+          "editionId": "arxiv-v1",
+          "locator": "Theorem 7, Section 9",
+          "role": "running-time lower bound",
+          "placement": "statement"
         },
         {
           "paperId": "ps2020",

@@ -111,14 +111,15 @@ test('the launch history records one initial snapshot with the released totals',
   const read = path => readFileSync(join(dir, 'dist/site', path), 'utf8');
   const catalogue = JSON.parse(read('api/v1/atlas.json'));
   const history = read('about/index.html').split('<section id="version-history">')[1];
-  assert.equal((history.match(/<section class="change-day">/g) ?? []).length, 1);
+  assert.equal((history.match(/<h4>Initial private launch candidate</g) ?? []).length, 1);
   assert.match(history, /<time datetime="2026-11-19">19 November 2026<\/time>/);
   assert.match(history, /<h4>Initial private launch candidate<\/h4>/);
   assert.ok(history.indexOf('<h4>Search filters and original references</h4>') >= 0);
   assert.ok(history.indexOf('Search filters and original references') < history.indexOf('Initial private launch candidate'));
   assert.ok(history.includes(`${catalogue.problems.length} problems and ${catalogue.cases.length} parameterizations.`));
   assert.match(history, /<p>Hendrik Molter<\/p>/);
-  assert.doesNotMatch(history, /\/commit\/[a-f0-9]{40}|Read review|Read challenge|Problem added|Lower bounds changed/);
+  const initialEntry = history.split('<h4>Initial private launch candidate</h4>')[1].split('</li>')[0];
+  assert.doesNotMatch(initialEntry, /\/commit\/[a-f0-9]{40}|Read review|Read challenge|Problem added|Lower bounds changed/);
 });
 
 test('a later bound move links history to the new statement', t => {
@@ -198,12 +199,12 @@ test('proof headings distinguish authorship from human verification', t => {
   const manuscript = id => data.proofs.find(proof => proof.id === id).revisions
     .reduce((latest, entry) => entry.revision > latest.revision ? entry : latest);
   const external = {origin:'external', kind:'human', authors:['Test Author']};
-  manuscript('closest-string-balanced').authorship = external;
+  manuscript('dominating-set-order-sh').authorship = external;
   manuscript('three-coloring-sh-converse').authorship = external;
   const review = data.reviews.find(r => r.object.id === 'three-coloring-sh-converse' &&
     r.object.revision === manuscript('three-coloring-sh-converse').revision && r.type === 'agent');
   data.reviews.push({...review, id:'fixture-human-review', type:'human'});
-  delete manuscript('distinct-vectors-fixed-coefficient').authorship.authors;
+  delete manuscript('closest-string-balanced-kxk').authorship.authors;
   writeFileSync(registry,JSON.stringify(data));
   execFileSync(process.execPath,['website/build.mjs'],{cwd:dir});
   const output = path => readFileSync(join(dir,'dist/site',path),'utf8');
@@ -214,9 +215,9 @@ test('proof headings distinguish authorship from human verification', t => {
     assert.ok(html.includes('<h1>' + mathText(title)));
     assert.ok(html.includes('<dt>Verdict</dt><dd><span class="status" data-status="' + review.verdict + '">'));
   }
-  const heading = path => output('bounds/' + path + '/index.html').match(/<h3 id="proof">([^<]+)/)[1];
-  assert.equal(heading('distinct-vectors-budget/dv-w1-fixed-coefficient'),'Proof by AI');
-  assert.equal(heading('lms-closest-string-radius-alphabet/cs-w1-balanced'),'Proof manuscript');
+  const heading = path => output('bounds/' + path + '/index.html').match(/<h[34] id="proof">([^<]+)/)[1];
+  assert.equal(heading('lms-closest-string-radius-alphabet/cs-kxk-balanced'),'Proof by AI');
+  assert.equal(heading('dominating-set-order/ds-order-sh-fixed-power'),'Proof manuscript');
   const sh = output('bounds/lms-3color-order/color-sh-fixed-power/index.html');
   const [forward, converse] = sh.split('aria-label="Statement implies SH"');
   assert.ok(forward.includes('ETH is Dead, Long Live SH') && !forward.includes('Test Author'));
@@ -226,10 +227,10 @@ test('proof headings distinguish authorship from human verification', t => {
   const [claim, support] = literature.split('aria-label="ETH implies Statement"');
   assert.ok(!claim.includes('source-edition') && support.includes('source-edition'));
   assert.ok(!sh.includes('Under SH, no deterministic algorithm'));
-  const derived = output('bounds/distinct-vectors-budget/dv-w1-fixed-coefficient/index.html');
+  const derived = output('bounds/lms-closest-string-radius-alphabet/cs-kxk-balanced/index.html');
   assert.ok(derived.indexOf('Proof by AI') < derived.indexOf('<h2>Recovery of a historical ETH bound'));
-  assert.match(output('proofs/closest-string-balanced/r1/cs-balanced/citation.txt'),/^Test Author\./);
-  assert.match(output('proofs/distinct-vectors-fixed-coefficient/r1/dv-fixed-coefficient/citation.txt'),/^Atlas\./);
+  assert.match(output('proofs/dominating-set-order-sh/r1/dominating-set-order-sh/citation.txt'),/^Test Author\./);
+  assert.match(output('proofs/closest-string-balanced-kxk/r1/closest-string-balanced-kxk/citation.txt'),/^Atlas\./);
 });
 
 test('links the preferred publication and labels the exact edition inspected for a locator', t => {

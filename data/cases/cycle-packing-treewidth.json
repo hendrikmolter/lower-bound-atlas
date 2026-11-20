@@ -93,7 +93,7 @@
         "large-girth"
       ],
       "status": "established",
-      "provenance": "atlas",
+      "provenance": "literature",
       "assumptions": [
         {
           "id": "w1",
@@ -101,14 +101,16 @@
         }
       ],
       "assumptionOperator": "all",
-      "sources": [],
-      "proofs": [
+      "sources": [
         {
-          "proofId": "cycle-packing-degree-six",
-          "revision": 1,
-          "theorem": "cycle-packing-degree-six"
+          "paperId": "molter2026-running-time",
+          "editionId": "arxiv-v1",
+          "locator": "Theorem 10, Section 13",
+          "role": "running-time lower bound",
+          "placement": "statement"
         }
       ],
+      "proofs": [],
       "reader": {
         "revision": 1,
         "label": "Effective bound in width times its logarithm",
@@ -124,11 +126,13 @@
               {
                 "boundRevision": 1,
                 "hypothesisRevision": 1,
-                "reviewId": "cycle-packing-degree-six-review",
-                "proof": {
-                  "proofId": "cycle-packing-degree-six",
-                  "revision": 1,
-                  "theorem": "cycle-packing-degree-six"
+                "reviewId": "cp-tw-w1-effective-molter-source-review",
+                "source": {
+                  "paperId": "molter2026-running-time",
+                  "editionId": "arxiv-v1",
+                  "locator": "Theorem 10, Section 13",
+                  "role": "forward implication",
+                  "placement": "forward"
                 }
               }
             ]
@@ -209,9 +213,11 @@
       "comparison": "The exclusion reaches the same width scale with a computable exponent and convergence. The more restricted graphs suffice to exclude a general solver, and normalized explicit graph inputs and the listed certificates have polynomial length.",
       "evidence": [
         {
-          "proofId": "cycle-packing-degree-six",
-          "revision": 1,
-          "theorem": "cycle-packing-degree-six"
+          "paperId": "molter2026-running-time",
+          "editionId": "arxiv-v1",
+          "locator": "Theorem 10, Section 13",
+          "role": "running-time lower bound",
+          "placement": "statement"
         }
       ]
     }

@@ -93,7 +93,7 @@
       "id": "chromatic-tw-w1",
       "revision": 1,
       "status": "established",
-      "provenance": "atlas",
+      "provenance": "literature",
       "assumptionOperator": "all",
       "assumptions": [
         {
@@ -120,20 +120,14 @@
       },
       "sources": [
         {
-          "paperId": "df1995",
-          "editionId": "journal",
-          "locator": "W[1]-completeness of Independent Set, with Clique by complementation",
-          "role": "source completeness",
-          "placement": "proof"
+          "paperId": "molter2026-running-time",
+          "editionId": "arxiv-v1",
+          "locator": "Theorem 2, Section 4",
+          "role": "running-time lower bound",
+          "placement": "statement"
         }
       ],
-      "proofs": [
-        {
-          "proofId": "chromatic-number-treewidth-w1",
-          "revision": 1,
-          "theorem": "tw-w1"
-        }
-      ]
+      "proofs": []
     }
   ],
   "resolutions": [],
@@ -178,9 +172,11 @@
       "comparison": "The exclusion reaches the historical exponent scale t log₂ t for exponents with effective convergence.",
       "evidence": [
         {
-          "proofId": "chromatic-number-treewidth-w1",
-          "revision": 1,
-          "theorem": "tw-w1"
+          "paperId": "molter2026-running-time",
+          "editionId": "arxiv-v1",
+          "locator": "Theorem 2, Section 4",
+          "role": "running-time lower bound",
+          "placement": "statement"
         }
       ]
     },
