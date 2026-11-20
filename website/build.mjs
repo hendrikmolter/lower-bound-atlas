@@ -906,14 +906,42 @@ function assumptionPages() {
   }
 }
 
-function paperUse(page, ref) {
-  const suffix = ' · ' + escape(sourceLocator(ref)) + ' · ' + escape(ref.role);
-  if (ref.type === 'assumption') return premiseLink(page, ref, { exact: true }) + suffix;
-  const record = registries.cases.get(ref.caseId);
-  if (ref.type === 'resolution') return link(page, routes.case(ref.caseId), record.title + ' · ' + assumptionLabel(ref.id) + ' assessment',
-    'assessment-' + ref.id) + suffix;
-  const { version } = boundVersions.get(boundKey(ref));
-  return objectLink(page, ref, problemLabels(record)[0] + ' · ' + (boundCopy(version).label ?? 'Full statement')) + suffix;
+function paperUsesList(page, uses) {
+  const rows = [];
+  const groups = new Map();
+  for (const ref of uses) {
+    const locator = sourceLocator(ref);
+    if (ref.type !== 'bound') {
+      const target = ref.type === 'assumption' ? premiseLink(page, ref, {exact: true})
+        : link(page, routes.case(ref.caseId), registries.cases.get(ref.caseId).title + ' · ' + assumptionLabel(ref.id) + ' assessment', 'assessment-' + ref.id);
+      rows.push(target + ' · ' + escape(locator) + ' · ' + escape(ref.role));
+      continue;
+    }
+    const record = registries.cases.get(ref.caseId);
+    const key = JSON.stringify([problemKey(record), locator]);
+    if (!groups.has(key)) {
+      const group = {name: problemLabels(record)[0], locator, targets: new Map()};
+      groups.set(key, group);
+      rows.push(group);
+    }
+    const targets = groups.get(key).targets;
+    const id = boundKey(ref);
+    if (!targets.has(id)) targets.set(id, {ref, parameter: problemLabels(record)[1], roles: new Set()});
+    targets.get(id).roles.add(ref.role);
+  }
+  return items(rows.map(group => {
+    if (typeof group === 'string') return group;
+    const targets = [...group.targets.values()].sort((a,b) => byName(a.parameter,b.parameter));
+    const links = targets.map(({ref,parameter,roles}) => {
+      const {version} = boundVersions.get(boundKey(ref));
+      const label = targets.some(other => other.ref !== ref && other.parameter === parameter)
+        ? parameter + ' · ' + boundTitle(version) : parameter;
+      const details = [...roles].filter(role => role !== 'running-time lower bound' &&
+        !(role === 'forward implication' && roles.has('running-time lower bound')));
+      return objectLink(page, ref, label) + (details.length ? ' (' + escape(details.join(', ')) + ')' : '');
+    });
+    return escape(group.name) + ' · ' + escape(group.locator) + ' · ' + links.join(' · ');
+  }));
 }
 
 function paperCitation(page, paper, edition) {
@@ -956,7 +984,7 @@ function paperPages() {
         <div class="actions">${edition.preferredUrl ? anchor(edition.preferredUrl, edition.doi ? 'DOI · ' + edition.doi : 'Open original edition') : ''}
         ${edition.openUrl && edition.openUrl !== edition.preferredUrl ? anchor(edition.openUrl, 'Open full text') : ''}${paperCitation(page, paper, edition)}</div>
         ${paragraphs(edition.access)}
-        <h3>Recorded uses</h3>${items(editionUses.map(ref => paperUse(page, ref))) || paragraphs('No use of this edition is recorded.')}</section>`;
+        <h3>Recorded uses</h3>${paperUsesList(page, editionUses) || paragraphs('No use of this edition is recorded.')}</section>`;
     });
     catalogPage(page, preferred.title ?? paper.title, paper.authors.join(', '), editions.join(''), { crumbs: [[index, 'Papers']] });
     write(api + '/papers/' + paper.id + '.json', json(paper));
