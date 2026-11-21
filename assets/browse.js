@@ -109,6 +109,7 @@
     }
     arranged.sort((a,b) => {
       let rank = 0;
+      if (kind === 'paper' && !f.sort) rank = a.group.node.dataset.authorRank - b.group.node.dataset.authorRank;
       if (f.sort === 'bounds') rank = b.total - a.total;
       if (f.sort === 'parameters') rank = b.parameters - a.parameters;
       if (f.sort === 'newest' || f.sort === 'oldest') rank = (!a.year - !b.year) || (f.sort === 'newest' ? b.year-a.year : a.year-b.year);
