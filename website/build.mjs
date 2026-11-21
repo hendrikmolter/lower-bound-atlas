@@ -890,10 +890,12 @@ function assumptionPages() {
         catalogPage(page, text?.title ?? version.name, '', `
           <section class="problem-box"${historical ? ' id="original-eth"' : ''}><h2>${historical ? 'Original ETH' : 'Statement'}</h2>${definition}</section>
           ${variants}
-          ${historical ? '<section><h2>Historical status</h2><p>Original ETH implies uniform ETH, which in turn implies strongly uniform ETH. The 2026 preprint refutes all three because its deterministic 3-SAT algorithm has an ' +
-            link(page,'notation/index.html','effectively sublinear exponent','effective-little-o') + '. ' +
-            anchor(uniformETH.refutation,'The Exponential Time Hypothesis is False') + '.</p></section>' +
-            '<section><h2>Recovery under another hypothesis</h2><p>If a lower bound implies strongly uniform ETH, the refutation rules out recovering that bound from any true hypothesis. For a bound excluding only algorithms with an effectively sublinear exponent, this implication must hold for that version of the bound.</p></section>' : ''}
+          ${historical ? '<section id="historical-status"><h2>Historical status</h2><p>In October 2026, OpenAI and Anthropic each reported a deterministic algorithm for counting the satisfying assignments of a 3-CNF formula. Anthropic describes the two results as independent and concurrent.</p>' +
+            '<p>Either algorithm, with its claimed running time, would decide 3-SAT with an ' +
+            link(page,'notation/index.html','effectively sublinear exponent','effective-little-o') + '. This would refute strongly uniform ETH and hence also uniform ETH and original ETH.</p>' +
+            '<ul><li>OpenAI, ' + anchor(uniformETH.refutation,'The Exponential Time Hypothesis is False') + ' (October 2026), Theorem 1.1.</li>' +
+            '<li>Anthropic, ' + anchor('https://hexagonmath.org/pdf/2610.00577','A 2^(o(n)) Time Algorithm for 3-SAT') + ' (October 2026), Main Theorem and provenance note.</li></ul></section>' +
+            '<section><h2>Recovery under another hypothesis</h2><p>If either reported result holds, a lower bound that implies strongly uniform ETH cannot follow from any true hypothesis. For a bound excluding only algorithms with an effectively sublinear exponent, the implication must hold for that version of the bound.</p></section>' : ''}
           ${source}${catalog}
           <details class="reader-details"><summary>Record details</summary>
           ${facts([['Identifier', record.id], ['Revision', String(version.revision)], ['Aliases', version.aliases.join(', ')], ['Model', version.model], ['Quantifiers', version.quantifiers], ['Conventions', version.conventions], ['Source note', version.access]])}
@@ -1268,7 +1270,7 @@ function aboutPage() {
     <li>Open a pull request against <code>main</code>. The maintainer reviews the proposal and merges accepted changes. Entries selected for publication appear when the website is next built and published.</li></ol>
     <p>The ${repoFile('CONTRIBUTING.md','contribution guide on GitHub')} includes the commands and a worked example. To suggest an entry or report a correction without preparing an edit, ${anchor(repository + '/issues/new','open a GitHub issue')} with the statement and source.</p></section>
     <section id="background"><h2>Scientific background</h2>
-    <p>Many published running-time lower bounds rely on the Exponential Time Hypothesis (ETH). A 2026 preprint reports a deterministic subexponential-time algorithm for 3-SAT. If the result holds, it refutes ETH. The atlas asks which historical lower bounds can be recovered under another hypothesis. ${link(page,routes.assumption('eth'),'ETH formulations and the reported refutation')}.</p>
+    <p>Many published running-time lower bounds rely on the Exponential Time Hypothesis (ETH). In October 2026, OpenAI and Anthropic each reported a deterministic subexponential-time algorithm for 3-SAT. Either result, if correct, would refute ETH. The atlas asks which historical lower bounds can be recovered under another hypothesis. ${link(page,routes.assumption('eth'),'ETH formulations and the reported refutations','historical-status')}.</p>
     <p>Recovery is assessed for a particular running time and input class. Sometimes another hypothesis yields the full exclusion; sometimes it yields a weaker exponent or requires effective convergence. When a bound itself implies ETH, an exact recovery would also prove ETH from the alternative hypothesis. ${link(page,'assumptions/index.html','Browse the hypotheses')}.</p></section>
     <section id="maintainer"><h2>Creation and maintenance</h2>
     <p>Hendrik Molter (Hasso Plattner Institute, Potsdam) created the atlas and is currently its sole maintainer. It grew out of a research collection of published lower bounds, reductions and proof notes. ChatGPT agents assisted with source checks, proof drafting and independent reviews, and with building the database and website.</p>
