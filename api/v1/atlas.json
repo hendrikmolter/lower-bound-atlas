@@ -32060,7 +32060,7 @@
       "id": "uniform-eth",
       "name": "Uniform ETH",
       "reference": "https://doi.org/10.1007/978-3-642-33293-7_4",
-      "referenceLabel": "Chen, Eickmeyer and Flum",
+      "referenceLabel": "Yijia Chen, Kord Eickmeyer and Jörg Flum, The Exponential Time Hypothesis and the Parameterized Clique Problem (IPEC 2012)",
       "refutation": "https://github.com/openai/math/tree/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026",
       "revision": 4,
       "statement": "No single deterministic algorithm decides 3-SAT in time 2^(o(n)) L^(O(1)), where n is the number of variables and L is the input length in bits."
@@ -32072,7 +32072,7 @@
       "id": "strongly-uniform-eth",
       "name": "Strongly uniform ETH",
       "reference": "https://doi.org/10.1007/978-3-642-33293-7_4",
-      "referenceLabel": "Chen, Eickmeyer and Flum",
+      "referenceLabel": "Yijia Chen, Kord Eickmeyer and Jörg Flum, The Exponential Time Hypothesis and the Parameterized Clique Problem (IPEC 2012)",
       "refutation": "https://github.com/openai/math/tree/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026",
       "revision": 1,
       "statement": "No single deterministic algorithm decides 3-SAT in time 2^(o_eff(n)) L^(O(1)), where n is the number of variables and L is the input length in bits."
