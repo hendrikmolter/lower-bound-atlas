@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
   <title>Weighted normalized circuit satisfiability | Lower Bound Atlas</title>
-  <link rel="stylesheet" href="../../assets/style.css?v=6e915d28aa4f323ef56abf4219c6ab64aa1d5cae">
+  <link rel="stylesheet" href="../../assets/style.css?v=e6073c7e5ee58c77ccf689f306fa0a7717fc3f37">
   
 </head>
 <body>
@@ -27,8 +27,14 @@
       <dt>Question</dt><dd>Decide whether exactly k input variables can be set to true to satisfy the circuit.</dd></dl><div class="input-restrictions"><strong>Input restrictions</strong><ul><li>The circuit has depth t. Unbounded-fan-in AND and OR gates alternate, the output gate is AND, and the inputs are literals.</li></ul></div></section>
       
       <section id="comparisons"><h2 id="bounds">Lower bounds by hypothesis</h2>
+      <form class="bound-filter" data-bound-filter hidden aria-label="Filter lower bounds">
+    <fieldset><legend>Show lower bounds</legend><label><input type="radio" name="bounds" value="all" checked> All</label>
+    <label><input type="radio" name="bounds" value="recorded"> All recorded</label></fieldset>
+    <fieldset><legend>Hypotheses</legend><label><input type="checkbox" name="hypothesis" value="eth" checked> ETH</label><label><input type="checkbox" name="hypothesis" value="sh" checked> SH</label><label><input type="checkbox" name="hypothesis" value="w1" checked> FPT ≠ W[1]</label><label><input type="checkbox" name="hypothesis" value="np_qp" checked> NP ⊈ QP</label><label><input type="checkbox" name="hypothesis" value="kxk" checked> <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>×</mo><mi>k</mi></mrow><annotation encoding="text/plain">k × k</annotation></semantics></math> Clique Hypothesis</label></fieldset></form>
+    <p data-bound-empty role="status" hidden>No lower bounds match these filters.</p>
+    <script defer src="../../assets/bound-filter.js"></script>
       <h3>Notation</h3><ul class="runtime-symbols"><li><i>n</i> — number of Boolean input variables</li><li><i>B</i> — bit length of the circuit and its weight specification, including gate identifiers and wiring</li></ul>
-      <article class="hypothesis-card" id="assessment-eth"><h3><a href="../../assumptions/eth/index.html">ETH</a> (historical)</h3>
+      <article class="hypothesis-card" id="assessment-eth" data-hypothesis="eth"><h3><a href="../../assumptions/eth/index.html">ETH</a> (historical)</h3>
         <section class="bound-row" id="nc-eth-full"><h4>Bound in the full input length</h4>
         
         
@@ -43,10 +49,10 @@
         <div class="excluded-time"><span>Running time excluded under ETH</span><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>n</mi><mrow><mrow><mi>o</mi><mrow><mo>(</mo><mi>k</mi><mo>)</mo></mrow></mrow></mrow></msup><mo>&#x2062;</mo><msup><mi>B</mi><mrow><mrow><mi>𝒪</mi><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></mrow></msup></mrow><annotation encoding="text/plain">n^(o(k)) B^(O(1))</annotation></semantics></math></div><p class="runtime-qualification">The circuit depth <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>≥</mo><mn>2</mn></mrow><annotation encoding="text/plain">t ≥ 2</annotation></semantics></math> is fixed.</p><p class="runtime-qualification">The exponent is bounded by <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>/</mo><mrow><mi>r</mi><mrow><mo>(</mo><mi>k</mi><mo>)</mo></mrow></mrow></mrow><annotation encoding="text/plain">k/r(k)</annotation></semantics></math> for an unbounded nondecreasing function r.</p>
         <div class="bound-links"><div class="actions"><a href="../../bounds/weighted-normalized-depth-t-circuit-weight/nc-eth-input-count/index.html">Full statement</a></div>
     </div><ul class="bound-citations"><li><a href="https://doi.org/10.1016/j.ic.2005.05.001">Tight Lower Bounds for Certain Parameterized NP-Hard Problems</a></li></ul>
-        <p><a href="#nc-eth-full">Superseding bound</a>. On the same explicit circuits <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>≤</mo><mi>B</mi></mrow><annotation encoding="text/plain">n ≤ B</annotation></semantics></math>. A running time <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>n</mi><mrow><mrow><mi>o</mi><mrow><mo>(</mo><mi>k</mi><mo>)</mo></mrow></mrow></mrow></msup><mo>&#x2062;</mo><msup><mi>B</mi><mrow><mrow><mi>𝒪</mi><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></mrow></msup></mrow><annotation encoding="text/plain">n^(o(k)) B^(O(1))</annotation></semantics></math> is therefore at most <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>B</mi><mrow><mrow><mi>o</mi><mrow><mo>(</mo><mi>k</mi><mo>)</mo></mrow></mrow></mrow></msup></mrow><annotation encoding="text/plain">B^(o(k))</annotation></semantics></math>, within the full-input exclusion under the recorded source conventions.</p></section></details></article><article class="hypothesis-card" id="assessment-sh"><h3><a href="../../assumptions/sh/index.html">SH</a></h3>
+        <p><a href="#nc-eth-full">Superseding bound</a>. On the same explicit circuits <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>≤</mo><mi>B</mi></mrow><annotation encoding="text/plain">n ≤ B</annotation></semantics></math>. A running time <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>n</mi><mrow><mrow><mi>o</mi><mrow><mo>(</mo><mi>k</mi><mo>)</mo></mrow></mrow></mrow></msup><mo>&#x2062;</mo><msup><mi>B</mi><mrow><mrow><mi>𝒪</mi><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></mrow></msup></mrow><annotation encoding="text/plain">n^(o(k)) B^(O(1))</annotation></semantics></math> is therefore at most <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>B</mi><mrow><mrow><mi>o</mi><mrow><mo>(</mo><mi>k</mi><mo>)</mo></mrow></mrow></mrow></msup></mrow><annotation encoding="text/plain">B^(o(k))</annotation></semantics></math>, within the full-input exclusion under the recorded source conventions.</p></section></details></article><article class="hypothesis-card" id="assessment-sh" data-hypothesis="sh"><h3><a href="../../assumptions/sh/index.html">SH</a></h3>
         <p>No lower bound recorded for this parameterization.</p>
         
-        </article><article class="hypothesis-card" id="assessment-w1"><h3><a href="../../assumptions/w1/index.html">FPT ≠ W[1]</a></h3>
+        </article><article class="hypothesis-card" id="assessment-w1" data-hypothesis="w1"><h3><a href="../../assumptions/w1/index.html">FPT ≠ W[1]</a></h3>
         <section class="bound-row" id="nc-w1-candidate"><h4>Bound in the number of circuit inputs</h4>
         
         
@@ -61,10 +67,10 @@
     </div><ul class="bound-citations"><li><a href="https://doi.org/10.1016/j.ic.2005.05.001">Tight Lower Bounds for Certain Parameterized NP-Hard Problems</a></li></ul>
         </section>
         
-        </article><article class="hypothesis-card" id="assessment-np_qp"><h3><a href="../../assumptions/np_qp/index.html">NP ⊈ QP</a></h3>
+        </article><article class="hypothesis-card" id="assessment-np_qp" data-hypothesis="np_qp"><h3><a href="../../assumptions/np_qp/index.html">NP ⊈ QP</a></h3>
         <p>No lower bound recorded for this parameterization.</p>
         
-        </article><article class="hypothesis-card" id="assessment-kxk"><h3><a href="../../assumptions/kxk/index.html"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>×</mo><mi>k</mi></mrow><annotation encoding="text/plain">k × k</annotation></semantics></math> Clique Hypothesis</a></h3>
+        </article><article class="hypothesis-card" id="assessment-kxk" data-hypothesis="kxk"><h3><a href="../../assumptions/kxk/index.html"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>×</mo><mi>k</mi></mrow><annotation encoding="text/plain">k × k</annotation></semantics></math> Clique Hypothesis</a></h3>
         <p>No lower bound recorded for this parameterization.</p>
         
         </article></section>

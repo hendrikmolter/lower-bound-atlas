@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
   <title>Independent Set | Lower Bound Atlas</title>
-  <link rel="stylesheet" href="../../assets/style.css?v=6e915d28aa4f323ef56abf4219c6ab64aa1d5cae">
+  <link rel="stylesheet" href="../../assets/style.css?v=e6073c7e5ee58c77ccf689f306fa0a7717fc3f37">
   
 </head>
 <body>
@@ -27,8 +27,14 @@
       <dt>Question</dt><dd>Does G have at least k pairwise nonadjacent vertices?</dd></dl></section>
       
       <section id="comparisons"><h2 id="bounds">Lower bounds by hypothesis</h2>
+      <form class="bound-filter" data-bound-filter hidden aria-label="Filter lower bounds">
+    <fieldset><legend>Show lower bounds</legend><label><input type="radio" name="bounds" value="all" checked> All</label>
+    <label><input type="radio" name="bounds" value="recorded"> All recorded</label></fieldset>
+    <fieldset><legend>Hypotheses</legend><label><input type="checkbox" name="hypothesis" value="eth" checked> ETH</label><label><input type="checkbox" name="hypothesis" value="sh" checked> SH</label><label><input type="checkbox" name="hypothesis" value="w1" checked> FPT ≠ W[1]</label><label><input type="checkbox" name="hypothesis" value="np_qp" checked> NP ⊈ QP</label><label><input type="checkbox" name="hypothesis" value="kxk" checked> <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>×</mo><mi>k</mi></mrow><annotation encoding="text/plain">k × k</annotation></semantics></math> Clique Hypothesis</label></fieldset></form>
+    <p data-bound-empty role="status" hidden>No lower bounds match these filters.</p>
+    <script defer src="../../assets/bound-filter.js"></script>
       <h3>Notation</h3><ul class="runtime-symbols"><li><i>n</i> — number of vertices of G</li><li><i>N</i> — complete binary input length, including a supplied certificate if present</li><li><i>ε</i> — fixed positive exponent saving</li></ul>
-      <article class="hypothesis-card" id="assessment-eth"><h3><a href="../../assumptions/eth/index.html">ETH</a> (historical)</h3>
+      <article class="hypothesis-card" id="assessment-eth" data-hypothesis="eth"><h3><a href="../../assumptions/eth/index.html">ETH</a> (historical)</h3>
         <section class="bound-row" id="independent-set-linear-rank-width-eth"><h4>Subexponential bound in squared width</h4>
         
         
@@ -37,7 +43,7 @@
     </div><ul class="bound-citations"><li><a href="https://doi.org/10.4230/LIPIcs.STACS.2023.11">Tight Lower Bounds for Problems Parameterized by Rank-Width</a></li></ul>
         </section>
         
-        </article><article class="hypothesis-card" id="assessment-sh"><h3><a href="../../assumptions/sh/index.html">SH</a></h3>
+        </article><article class="hypothesis-card" id="assessment-sh" data-hypothesis="sh"><h3><a href="../../assumptions/sh/index.html">SH</a></h3>
         <section class="bound-row" id="independent-set-linear-rank-width-sh-degree"><h4>Fixed-power bound below squared width on triangle-free graphs</h4>
         
         <div class="input-restrictions"><strong>Input restrictions</strong><ul><li>The input graph has no triangle.</li></ul></div>
@@ -46,7 +52,7 @@
     </div>
         </section>
         
-        </article><article class="hypothesis-card" id="assessment-w1"><h3><a href="../../assumptions/w1/index.html">FPT ≠ W[1]</a></h3>
+        </article><article class="hypothesis-card" id="assessment-w1" data-hypothesis="w1"><h3><a href="../../assumptions/w1/index.html">FPT ≠ W[1]</a></h3>
         <section class="bound-row" id="independent-set-linear-rank-width-w1-effective"><h4>Effective quadratic-width bound on triangle-free graphs</h4>
         
         <div class="input-restrictions"><strong>Input restrictions</strong><ul><li>The input graph has no triangle.</li></ul></div>
@@ -55,10 +61,10 @@
     </div><ul class="bound-citations"><li><a href="https://doi.org/10.48550/arXiv.2611.26080">Running-Time Lower Bounds under FPT ≠ W[1]</a></li></ul>
         </section>
         
-        </article><article class="hypothesis-card" id="assessment-np_qp"><h3><a href="../../assumptions/np_qp/index.html">NP ⊈ QP</a></h3>
+        </article><article class="hypothesis-card" id="assessment-np_qp" data-hypothesis="np_qp"><h3><a href="../../assumptions/np_qp/index.html">NP ⊈ QP</a></h3>
         <p>No lower bound recorded for this parameterization.</p>
         
-        </article><article class="hypothesis-card" id="assessment-kxk"><h3><a href="../../assumptions/kxk/index.html"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>×</mo><mi>k</mi></mrow><annotation encoding="text/plain">k × k</annotation></semantics></math> Clique Hypothesis</a></h3>
+        </article><article class="hypothesis-card" id="assessment-kxk" data-hypothesis="kxk"><h3><a href="../../assumptions/kxk/index.html"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>×</mo><mi>k</mi></mrow><annotation encoding="text/plain">k × k</annotation></semantics></math> Clique Hypothesis</a></h3>
         <p>No lower bound recorded for this parameterization.</p>
         
         </article></section>

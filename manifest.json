@@ -2,6 +2,7 @@
   "apiVersion": "v1",
   "assets": [
     "assets/LICENSE-MIT.txt",
+    "assets/bound-filter.js",
     "assets/browse.js",
     "assets/evidence/classical-graph-sh-converse-independent.md",
     "assets/evidence/clique-literature-equivalences.md",
@@ -663,6 +664,7 @@
     "api/v1/reviews/weighted-q-cnf-w1-membership-independent.json",
     "assets/LICENSE-CONTENT.md",
     "assets/LICENSE-MIT.txt",
+    "assets/bound-filter.js",
     "assets/browse.js",
     "assets/evidence/classical-graph-sh-converse-independent.md",
     "assets/evidence/clique-literature-equivalences.md",
@@ -2565,5 +2567,5 @@
   "registryRevision": 3,
   "releaseValidated": true,
   "schemaVersion": 1,
-  "sourceCommit": "6e915d28aa4f323ef56abf4219c6ab64aa1d5cae"
+  "sourceCommit": "e6073c7e5ee58c77ccf689f306fa0a7717fc3f37"
 }
