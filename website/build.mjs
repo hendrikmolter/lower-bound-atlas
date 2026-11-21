@@ -873,20 +873,31 @@ function assumptionPages() {
         const applications = applicationCards(page, record, page === pinned ? version.revision : undefined);
         const choices = key => applications.map(item => key === 'task' ? [item.record.task, item.name] : [item.record.parameter, item.parameter]);
         const selections = applications.length > 1 ? [['task', 'Problem', choices('task')], ['parameter', 'Parameter', choices('parameter')]] : [];
-        let source = '';
-        if (version.source) {
-          source = `<section><h2>${version.source.role === 'class definitions' ? 'Source for the class definitions' : 'Defining source'}</h2><p>
-            ${sourceLink(page, version.source, { authors: true, role: false })}</p></section>`;
-        }
         const definition = paragraphs(text?.statement ?? version.definition);
         const catalog = applications.length ? filters('Find a recorded bound', selections, [sortBounds]) +
           results(applications.map(item => item.markup), 'parameterization', 'parameterizations', 'Lower bounds by problem', 'No matching lower bounds.')
           : '<section><h2>Lower bounds by problem</h2><p>No lower bounds recorded under this hypothesis.</p></section>';
         const formulations = (db.formulations ?? []).filter(f => f.hypothesisId === record.id && f.hypothesisRevision === version.revision);
         const historical = record.id === 'eth' && uniformETH?.hypothesisRevision === version.revision && uniformETH.refutation;
+        const citedFormulations = new Map();
+        for (const f of formulations) {
+          if (!citedFormulations.has(f.reference)) citedFormulations.set(f.reference, {label:f.referenceLabel ?? 'Source', names:[]});
+          citedFormulations.get(f.reference).names.push(f.name);
+        }
+        const definitions = [];
+        if (version.source) {
+          const label = historical ? 'Original ETH' : version.name;
+          definitions.push((formulations.length ? '<strong>' + escape(label) + '.</strong> ' : '') +
+            sourceLink(page, version.source, { authors:true, role:false }));
+        }
+        for (const [url, {label, names}] of citedFormulations) {
+          definitions.push('<strong>' + escape(names.join(' and ')) + '.</strong> ' + anchor(url,label));
+        }
+        const heading = definitions.length > 1 ? 'Defining sources' : version.source?.role === 'class definitions' ? 'Source for the class definitions' : 'Defining source';
+        const source = definitions.length ? '<section id="defining-sources"><h2>' + heading + '</h2>' +
+          (definitions.length === 1 ? '<p>' + definitions[0] + '</p>' : '<ul>' + definitions.map(item => '<li>' + item + '</li>').join('') + '</ul>') + '</section>' : '';
         const variants = formulations.map(f => '<section class="problem-box" id="' + escape(f.id) + '"><h2>' + escape(f.name) + '</h2>' +
-          paragraphs(f.statement) + '<p>' + anchor(f.reference, f.referenceLabel ?? 'Source') + ' · ' +
-          link(page,pinned,'Cite this formulation',f.id) + '</p></section>').join('');
+          paragraphs(f.statement) + '</section>').join('');
         catalogPage(page, text?.title ?? version.name, '', `
           <section class="problem-box"${historical ? ' id="original-eth"' : ''}><h2>${historical ? 'Original ETH' : 'Statement'}</h2>${definition}</section>
           ${variants}

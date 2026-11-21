@@ -2439,7 +2439,7 @@
           "locator": "IPZ Corollary 1, Lemma 10 and Theorem 3."
         }
       ],
-      "referenceLabel": "Chen, Eickmeyer and Flum"
+      "referenceLabel": "Yijia Chen, Kord Eickmeyer and Jörg Flum, The Exponential Time Hypothesis and the Parameterized Clique Problem (IPEC 2012)"
     },
     {
       "id": "strongly-uniform-eth",
@@ -2451,7 +2451,7 @@
       "reference": "https://doi.org/10.1007/978-3-642-33293-7_4",
       "refutation": "https://github.com/openai/math/tree/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026",
       "equivalences": [],
-      "referenceLabel": "Chen, Eickmeyer and Flum"
+      "referenceLabel": "Yijia Chen, Kord Eickmeyer and Jörg Flum, The Exponential Time Hypothesis and the Parameterized Clique Problem (IPEC 2012)"
     }
   ],
   "problems": [
