@@ -894,7 +894,7 @@ function assumptionPages() {
             '<p>Either algorithm, with its claimed running time, would decide 3-SAT with an ' +
             link(page,'notation/index.html','effectively sublinear exponent','effective-little-o') + '. This would refute strongly uniform ETH and hence also uniform ETH and original ETH.</p>' +
             '<ul><li>OpenAI, ' + anchor(uniformETH.refutation,'The Exponential Time Hypothesis is False') + ' (October 2026), Theorem 1.1.</li>' +
-            '<li>Anthropic, ' + anchor('https://hexagonmath.org/pdf/2610.00577','A 2^(o(n)) Time Algorithm for 3-SAT') + ' (October 2026), Main Theorem and provenance note.</li></ul></section>' +
+            '<li>Anthropic, <a href="https://hexagonmath.org/pdf/2610.00577">A ' + mathText('2^(o(n))') + ' Time Algorithm for 3-SAT</a> (October 2026), Main Theorem and provenance note.</li></ul></section>' +
             '<section><h2>Recovery under another hypothesis</h2><p>If either reported result holds, a lower bound that implies strongly uniform ETH cannot follow from any true hypothesis. For a bound excluding only algorithms with an effectively sublinear exponent, the implication must hold for that version of the bound.</p></section>' : ''}
           ${source}${catalog}
           <details class="reader-details"><summary>Record details</summary>
