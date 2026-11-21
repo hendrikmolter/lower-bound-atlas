@@ -596,6 +596,18 @@ function restrictionLinks(page, problem) {
       link(page, routes.problem(related.id), related.name) + ' (' + mathText(condition) + ')')) + '</section>').join('');
 }
 
+const displayHypotheses = hypothesisOrder.filter(id => registries.assumptions.has(id));
+function boundFilter(page) {
+  const choices = displayHypotheses.map(id => '<label><input type="checkbox" name="hypothesis" value="' +
+    escape(id) + '" checked> ' + mathText(assumptionLabel(id)) + '</label>').join('');
+  return `<form class="bound-filter" data-bound-filter hidden aria-label="Filter lower bounds">
+    <fieldset><legend>Show lower bounds</legend><label><input type="radio" name="bounds" value="all" checked> All</label>
+    <label><input type="radio" name="bounds" value="recorded"> All recorded</label></fieldset>
+    <fieldset><legend>Hypotheses</legend>${choices}</fieldset></form>
+    <p data-bound-empty role="status" hidden>No lower bounds match these filters.</p>
+    <script defer src="${relativeUrl(page,'assets/bound-filter.js')}"></script>`;
+}
+
 function casePages() {
   for (const record of db.cases) {
     const page = routes.case(record.id);
@@ -611,12 +623,14 @@ function casePages() {
       continue;
     }
     if (!records.length) continue;
-    const entries = records.map(c => '<article class="case-card"><h3>' + link(page,routes.case(c.id),problemLabels(c)[1]) +
+    const entries = records.map(c => '<article class="case-card" data-parameter-card data-recorded="' +
+      escape([...new Set(c.bounds.filter(b => !b.hardnessBaseline).flatMap(b => b.assumptions.map(h => h.id)))].join(' ')) +
+      '"><h3>' + link(page,routes.case(c.id),problemLabels(c)[1]) +
       '</h3>' + paragraphs(c.reader?.parameter ?? c.parameter) + paragraphs(c.reader?.additionalInput) +
       restrictions(c.inputConditions.filter(condition => condition.level === 'problem')) + '</article>');
     catalogPage(page, problem.name, '', '<section class="problem-box"><dl><dt>Input</dt><dd>' +
       mathText(problem.input) + '</dd><dt>Question</dt><dd>' + mathText(problem.question) +
-      '</dd></dl></section>' + restrictionLinks(page,problem) + '<section><h2>Recorded parameterizations</h2><div class="case-list">' + entries.join('') +
+      '</dd></dl></section>' + restrictionLinks(page,problem) + '<section><h2>Recorded parameterizations</h2>' + boundFilter(page) + '<div class="case-list">' + entries.join('') +
       '</div></section>', {crumbs:[['index.html','Problems']]});
   }
 }
@@ -632,7 +646,7 @@ function casePage(record, page) {
     function row(bound, hypothesisId, witness) {
       const wording = boundCopy(bound);
       const id = bound.assumptions[0].id === hypothesisId ? bound.id : hypothesisId + '-' + bound.id;
-      const section = `<section class="bound-row" id="${escape(id)}"${witness ? ' data-superseded-by="' + escape(witness.stronger) + '"' : ''}>`;
+      const section = `<section class="bound-row" id="${escape(id)}"${bound.hardnessBaseline ? ' data-hardness-only' : ''}${witness ? ' data-superseded-by="' + escape(witness.stronger) + '"' : ''}>`;
       if (bound.hardnessBaseline) {
         return section + paragraphs(hardnessNotice(record,bound)) + problemActions(page,record,bound) + '</section>';
       }
@@ -657,14 +671,14 @@ function casePage(record, page) {
         ${equivalence + recoveryNotes + problemActions(page,record,bound)}
         ${witness ? '<p>' + anchor('#' + witness.stronger, 'Superseding bound') + '. ' + mathText(witness.reason) + '</p>' : ''}</section>`;
     }
-    const cards = hypothesisOrder.filter(id => registries.assumptions.has(id)).map(id => {
+    const cards = displayHypotheses.map(id => {
       const bounds = record.bounds.filter(b => b.assumptions.some(p => p.id === id));
       const witnesses = supersessions(record.id, id, bounds, record.supersessions);
       const earlier = bounds.filter(b => witnesses.has(b.id));
       const current = bounds.filter(b => !witnesses.has(b.id));
       const label = assumptionLabel(id);
       const comment = copy.comments?.[id];
-      return `<article class="hypothesis-card" id="assessment-${escape(id)}"><h3>${premiseLink(page, {id, revision: registries.assumptions.get(id).revision})}${registries.assumptions.get(id).researchStatus === 'historical' ? ' (historical)' : ''}</h3>
+      return `<article class="hypothesis-card" id="assessment-${escape(id)}" data-hypothesis="${escape(id)}"><h3>${premiseLink(page, {id, revision: registries.assumptions.get(id).revision})}${registries.assumptions.get(id).researchStatus === 'historical' ? ' (historical)' : ''}</h3>
         ${current.map(b => row(b,id)).join('')}${!bounds.length ? paragraphs('No lower bound recorded for this parameterization.') : ''}
         ${paragraphs(comment)}
         ${earlier.length ? '<details class="reader-details" data-earlier-bounds><summary>Earlier ' + escape(label) + (earlier.length === 1 ? ' bound' : ' bounds') + '</summary>' + earlier.map(b => row(b,id,witnesses.get(b.id))).join('') + '</details>' : ''}</article>`;
@@ -681,6 +695,7 @@ function casePage(record, page) {
       <dt>Question</dt><dd>${mathText(definition?.question ?? copy.question ?? record.task)}</dd></dl>${problemConditions(record)}</section>${restrictionLinks(page,problem)}
       ${challenges.length ? '<section class="warning">' + heading('Corrections and challenges') + items(challenges.map(c => objectLink(page,c.object,challengedStatementLabel(c)))) + '</section>' : ''}
       <section id="comparisons">${heading('Lower bounds by hypothesis','bounds')}
+      ${boundFilter(page)}
       ${copy.symbols?.length ? '<h3>Notation</h3>' + symbolList(copy.symbols) : ''}
       ${paragraphs(copy.notation ?? (copy.symbols?.length ? '' : record.encoding))}${cards}</section>
       <details class="reader-details"><summary>Record details</summary>${facts([['Identifier',record.id],['Revision',String(record.revision)],['Aliases',record.aliases.join(', ')]])}
@@ -1305,6 +1320,7 @@ for (const file of ['STIXTwoMath-Regular.otf', 'STIXTwoText-Regular.otf', 'STIXT
   copy('website/fonts/' + file, 'assets/fonts/' + file);
 }
 copy('website/browse.js', 'assets/browse.js');
+copy('website/bound-filter.js', 'assets/bound-filter.js');
 copy('website/history.js', 'assets/history.js');
 browseIndex();
 casePages();
