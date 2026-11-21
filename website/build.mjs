@@ -461,8 +461,8 @@ function searchComparisons(record) {
     b.hypotheses.includes(e.hypothesis.id) && (!e.recovery || b.id === e.recovery.id)));
 }
 
-function filters(label, selects, sortOptions = []) {
-  selects = [...selects,['sort','Sort by',[['','Alphabetical (A–Z)'], ...sortOptions]]];
+function filters(label, selects, sortOptions = [], defaultSortLabel = 'Alphabetical (A–Z)') {
+  selects = [...selects,['sort','Sort by',[['',defaultSortLabel], ...sortOptions]]];
   const select = ([name, label, options]) => {
     if (['assumption','status'].includes(name)) {
       const summary = name === 'status' ? 'Any recovery status' : label === 'Cited for a lower bound under' ? 'All papers' : 'All hypotheses';
@@ -962,15 +962,31 @@ function paperCitation(page, paper, edition) {
 
 function paperPages() {
   const index = 'papers/index.html';
-  const cards = db.papers.map(paper => {
+  function authorKey(name) {
+    if (/\bGroup$/u.test(name)) return name;
+    const parts = name.trim().split(/\s+/u);
+    const suffix = /^(?:Jr\.?|Sr\.?|II|III|IV)$/u.test(parts.at(-1)) ? parts.pop() : '';
+    let start = parts.length - 1;
+    while (start > 0 && /^(?:de|der|van|von|la|le|den)$/u.test(parts[start - 1])) start--;
+    return [parts.slice(start).join(' '), parts.slice(0,start).join(' '), suffix].join(', ');
+  }
+  const papers = db.papers.map(paper => ({paper, authors:paper.authors.map(authorKey)}));
+  papers.sort((a,b) => {
+    for (let i = 0; i < Math.min(a.authors.length,b.authors.length); i++) {
+      const difference = byName(a.authors[i],b.authors[i]);
+      if (difference) return difference;
+    }
+    return a.authors.length - b.authors.length || byName(preferredEdition(a.paper).title ?? a.paper.title, preferredEdition(b.paper).title ?? b.paper.title);
+  });
+  const cards = papers.map(({paper},rank) => {
     const edition = preferredEdition(paper);
-    const attributes = searchAttributes({ id: paper.id, name: edition.title ?? paper.title, aliases: [], assumptions: [...(paperUses.get(paper.id) ?? [])], year: edition.label.match(/\b(?:19|20)\d{2}\b/)?.[0] ?? "",
+    const attributes = searchAttributes({ id: paper.id, name: edition.title ?? paper.title, 'author-rank':rank, aliases: [], assumptions: [...(paperUses.get(paper.id) ?? [])], year: edition.label.match(/\b(?:19|20)\d{2}\b/)?.[0] ?? "",
       search: [paper.title, ...paper.authors, ...paper.editions.flatMap(item => [item.title, item.label, item.doi].filter(Boolean))] });
     return `<article class="case-card" data-atlas-case${attributes}><h3>${preferredPaperLink(index, paper)}</h3>
       ${paragraphs(paper.authors.join(', ') + ' · ' + edition.label, 'muted')}<p>${link(index, routes.paper(paper.id), 'Editions and recorded uses', edition.id)}</p></article>`;
   });
   catalogPage(index, 'Original papers', 'Find the inspected editions and the statements that cite them.',
-    filters('Search papers', [['assumption','Cited for a lower bound under',hypothesisOptions]], [['newest','Newest publication first'],['oldest','Oldest publication first']]) + results(cards, 'paper', 'papers', 'Papers', 'No papers match this search.'), { active: 'Papers', browse: true });
+    filters('Search papers', [['assumption','Cited for a lower bound under',hypothesisOptions]], [['title','Title (A–Z)'],['newest','Newest publication first'],['oldest','Oldest publication first']], 'Authors (A–Z)') + results(cards, 'paper', 'papers', 'Papers', 'No papers match this search.'), { active: 'Papers', browse: true });
   for (const paper of db.papers) {
     const page = routes.paper(paper.id);
     const uses = db.reverse.papers[paper.id] ?? [];
