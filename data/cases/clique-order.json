@@ -96,7 +96,6 @@
         "For each fixed ε strictly between zero and 1."
       ],
       "reader": {
-        "explanation": "Complementing the graph turns a clique into an independent set of the same size and preserves the number of vertices. The complement can be constructed in time polynomial in the complete input length.",
         "label": "Fixed power saving in the exponent",
         "revision": 2,
         "title": "Clique by number of vertices under SH"
@@ -169,6 +168,10 @@
             ]
           }
         }
+      },
+      "sourceBasis": {
+        "kind": "derived",
+        "step": "Complementing the graph turns a clique into an independent set of the same size and preserves the number of vertices. The complement can be constructed in time polynomial in the complete input length."
       }
     }
   ],

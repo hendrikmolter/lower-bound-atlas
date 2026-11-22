@@ -223,6 +223,12 @@
         }
       }
     },
+    "sourceBasis": {
+      "anyOf": [
+        {"type":"object","properties":{"kind":{"const":"stated"}},"required":["kind"],"additionalProperties":false},
+        {"type":"object","properties":{"kind":{"const":"derived"},"step":{"type":"string","minLength":1}},"required":["kind","step"],"additionalProperties":false}
+      ]
+    },
     "direction": {
       "type": "object",
       "required": [
@@ -238,6 +244,7 @@
             "disproved"
           ]
         },
+        "sourceBasis": {"$ref":"#/$defs/sourceBasis"},
         "evidence": {
           "type": "array",
           "items": {
@@ -388,6 +395,7 @@
           "type": "string",
           "minLength": 1
         },
+        "sourceBasis": {"$ref":"#/$defs/sourceBasis"},
         "runtime": {
           "type": "string",
           "minLength": 1
@@ -553,10 +561,7 @@
                 ]
               }
             },
-            "explanation": {
-              "type": "string",
-              "minLength": 1
-            }
+            "explanation": false
           }
         },
         "inputConditions": {
@@ -824,9 +829,7 @@
               "type": "string",
               "minLength": 1
             },
-            "comments": {
-              "type": "object"
-            },
+            "comments": false,
             "symbols": {
               "type": "array",
               "items": {
@@ -1519,6 +1522,8 @@
                 "type": "string",
                 "minLength": 1
               },
+              "forwardBasis": {"$ref":"#/$defs/sourceBasis"},
+              "reverseBasis": {"$ref":"#/$defs/sourceBasis"},
               "reverseSource": {
                 "type": "string",
                 "minLength": 1

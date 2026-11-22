@@ -84,7 +84,6 @@
         "The parameter factor f is an arbitrary computable function and the exponent of B is an arbitrary fixed constant."
       ],
       "reader": {
-        "explanation": "The parameterized reduction to Max-Cut constructs a clique-width expression. Adding as many isolated vertices as the Max-Cut graph has vertices converts the instance to Maximum Bisection. Complementation then sends a lower threshold b on the resulting 2n-vertex graph to the upper threshold n²−b. The complement expression is constructible from the original expression with at most twice as many labels. The constructed complement expression is supplied with the Minimum Bisection instance.",
         "label": "Fixed-parameter tractability",
         "revision": 1,
         "title": "Minimum Bisection under FPT ≠ W[1]: Fixed-parameter tractability"

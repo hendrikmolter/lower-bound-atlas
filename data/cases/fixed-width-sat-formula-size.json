@@ -33,7 +33,6 @@
         "Separately for each fixed integer r ≥ 3."
       ],
       "reader": {
-        "explanation": "At fixed width, bounding s bounds the number of literal occurrences as well.",
         "label": "Subexponential-time bound",
         "revision": 1,
         "title": "Fixed-width SAT under ETH: Subexponential-time bound"
@@ -61,7 +60,11 @@
         }
       ],
       "statement": "Under ETH, no deterministic algorithm solves the stated decision problem within the stated running time.",
-      "status": "established"
+      "status": "established",
+      "sourceBasis": {
+        "kind": "derived",
+        "step": "At fixed width, bounding s bounds the number of literal occurrences as well."
+      }
     },
     {
       "assessments": {
@@ -93,7 +96,6 @@
         "For each fixed integer r≥3 and each fixed 0<ε<1."
       ],
       "reader": {
-        "explanation": "At fixed width the sum of clauses and declared variables also bounds the number of literal occurrences.",
         "label": "Fixed-power exclusion",
         "revision": 1,
         "title": "Fixed-width SAT under SH: Fixed-power exclusion"
@@ -115,7 +117,11 @@
         }
       ],
       "statement": "Under SH, no deterministic algorithm solves the stated decision problem within the stated running time.",
-      "status": "established"
+      "status": "established",
+      "sourceBasis": {
+        "kind": "derived",
+        "step": "At fixed width the sum of clauses and declared variables also bounds the number of literal occurrences."
+      }
     }
   ],
   "coverage": "Lower bounds for total formula size.",

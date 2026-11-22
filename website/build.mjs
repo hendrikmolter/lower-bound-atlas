@@ -688,10 +688,8 @@ function casePage(record, page) {
       const earlier = bounds.filter(b => witnesses.has(b.id));
       const current = bounds.filter(b => !witnesses.has(b.id));
       const label = assumptionLabel(id);
-      const comment = copy.comments?.[id];
       return `<article class="hypothesis-card" id="assessment-${escape(id)}" data-hypothesis="${escape(id)}"><h3>${premiseLink(page, {id, revision: registries.assumptions.get(id).revision})}${registries.assumptions.get(id).researchStatus === 'historical' ? ' (historical)' : ''}</h3>
         ${current.map(b => row(b,id)).join('')}${!bounds.length ? paragraphs('No lower bound recorded for this parameterization.') : ''}
-        ${paragraphs(comment)}
         ${earlier.length ? '<details class="reader-details" data-earlier-bounds><summary>Earlier ' + escape(label) + (earlier.length === 1 ? ' bound' : ' bounds') + '</summary>' + earlier.map(b => row(b,id,witnesses.get(b.id))).join('') + '</details>' : ''}</article>`;
     }).join('');
     const parameterLinks = alphabeticalCases.filter(other => problemKey(other) === problemKey(record)).map(other => {
@@ -747,6 +745,11 @@ function equivalenceSection(page, target, forward, converse) {
     implicationRow('Statement',name,converse) + '</section>';
 }
 
+function sourceStep(basis) {
+  return basis?.kind === 'derived' ? '<div class="source-step"><strong>Derivation from the cited sources</strong>' +
+    paragraphs(basis.step) + '</div>' : '';
+}
+
 function boundPages() {
   for (const { record, version } of boundVersions.values()) {
     const ref = boundRef(record.id, version);
@@ -774,7 +777,7 @@ function boundPages() {
           if (e.proof) addProof(e.proof);
           else if (e.source) sources.push(e.source);
         }
-        return paperReferences(page,sources) + [...manuscripts.values()].map(item => {
+        return paperReferences(page,sources) + sourceStep(direction?.sourceBasis ?? (includeStatement ? version.sourceBasis : undefined)) + [...manuscripts.values()].map(item => {
           const id = proofAnchor ? '' : ' id="proof"';
           proofAnchor = true;
           return manuscriptCredit(page,item,headingLevel,id);
@@ -797,9 +800,9 @@ function boundPages() {
       const implication = premiseHasEquivalence ? '' : implicationRow(premiseName,'Statement',evidenceFor(forwardEvidence,true,3),2);
       const equivalences = formulationEvidence.map(({formulation: f,evidence: e}) =>
         equivalenceSection(page,f,
-          items([e,...(e.additionalForwardSources ?? [])].map(ref => anchor(ref.source,ref.locator))) +
+          items([e,...(e.additionalForwardSources ?? [])].map(ref => anchor(ref.source,ref.locator))) + sourceStep(e.forwardBasis) +
             (isPremise(f) ? evidenceFor(undefined,true) : ''),
-          items([anchor(e.reverseSource ?? e.source,e.reverseLocator ?? e.locator)]))).join('');
+          items([anchor(e.reverseSource ?? e.source,e.reverseLocator ?? e.locator)]) + sourceStep(e.reverseBasis))).join('');
       const comparisons = assessed.map(([id,a]) => {
         const target = {id,revision:a.hypothesisRevision};
         return equivalenceSection(page,target,evidenceFor(a.forward,isPremise(target)),evidenceFor(a.converse));
@@ -832,7 +835,7 @@ function boundPages() {
           paragraphs(copy.runtime ?? version.runtime,'statement') + paragraphs(statementText) +
           paragraphs(version.model) + paragraphs(version.inputFactor)}
         ${copy.notation ? link(page,'notation/index.html',copy.notationLabel ?? 'Notation',copy.notation) : ''}
-        </section>${implication}${equivalences}${runtime.explanation ? '<section><h2>Source note</h2>' + paragraphs(runtime.explanation) + '</section>' : ''}${comparisons}
+        </section>${implication}${equivalences}${comparisons}
         ${historical ? '<section><h2>Historical status</h2><p>' + historical + '</p></section>' : ''}
         ${challenges ? '<section class="warning"><h2>Challenges and corrections</h2>' + challenges + '</section>' : ''}
         ${recoverySection ? '<section><h2>Recovery of a historical ETH bound</h2>' + recoverySection + '</section>' : ''}

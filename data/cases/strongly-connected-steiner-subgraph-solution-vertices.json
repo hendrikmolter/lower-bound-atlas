@@ -133,7 +133,6 @@
         "The parameter factor f is an arbitrary computable function and the exponent of B is an arbitrary fixed constant."
       ],
       "reader": {
-        "explanation": "The reduction bounds the total number of selected vertices, including terminals, in an unweighted directed graph.",
         "label": "Fixed-parameter tractability",
         "revision": 1,
         "title": "Strongly Connected Steiner Subgraph under FPT ≠ W[1]: Fixed-parameter tractability"

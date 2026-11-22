@@ -61,8 +61,7 @@
       },
       "reader": {
         "revision": 1,
-        "label": "Bound in the full input length",
-        "explanation": "The journal uses the premise that some SNP problem has no subexponential-time algorithm. Positive-rate variable-3SAT ETH implies this premise."
+        "label": "Bound in the full input length"
       },
       "inputConditions": [],
       "runtimeSymbols": [
@@ -73,7 +72,11 @@
       "qualifications": [
         "The circuit depth t ≥ 2 is fixed.",
         "The function f is recursive, subject to the source’s computability and inverse-function conventions."
-      ]
+      ],
+      "sourceBasis": {
+        "kind": "derived",
+        "step": "The journal uses the premise that some SNP problem has no subexponential-time algorithm. Positive-rate variable-3SAT ETH implies this premise."
+      }
     },
     {
       "id": "nc-eth-input-count",
@@ -126,8 +129,7 @@
       },
       "reader": {
         "revision": 1,
-        "label": "Bound in the number of circuit inputs",
-        "explanation": "ETH implies FPT ≠ W[1]. The W-hierarchy inclusion then gives the premise of the cited input-count theorem."
+        "label": "Bound in the number of circuit inputs"
       },
       "inputConditions": [],
       "runtimeSymbols": [
@@ -139,7 +141,11 @@
       "qualifications": [
         "The circuit depth t ≥ 2 is fixed.",
         "The exponent is bounded by k/r(k) for an unbounded nondecreasing function r."
-      ]
+      ],
+      "sourceBasis": {
+        "kind": "derived",
+        "step": "ETH implies FPT ≠ W[1]. The W-hierarchy inclusion then gives the premise of the cited input-count theorem."
+      }
     },
     {
       "id": "nc-w1-candidate",
@@ -192,8 +198,7 @@
       },
       "reader": {
         "revision": 1,
-        "label": "Bound in the number of circuit inputs",
-        "explanation": "The cited result assumes FPT ≠ W[t−1], which follows from FPT ≠ W[1] at each of these fixed depths."
+        "label": "Bound in the number of circuit inputs"
       },
       "inputConditions": [],
       "runtimeSymbols": [
@@ -205,7 +210,11 @@
       "qualifications": [
         "The circuit depth t ≥ 2 is fixed.",
         "The function f is recursive, subject to the source’s computability and inverse-function conventions."
-      ]
+      ],
+      "sourceBasis": {
+        "kind": "derived",
+        "step": "The cited result assumes FPT ≠ W[t−1], which follows from FPT ≠ W[1] at each of these fixed depths."
+      }
     },
     {
       "id": "nc-w1-input-count",

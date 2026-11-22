@@ -79,8 +79,7 @@
       "reader": {
         "revision": 1,
         "label": "Subexponential bound in squared width",
-        "title": "Subexponential bound in squared width under ETH",
-        "explanation": "The cited preprint states these width interfaces. Its monopolar hard family is the scope used here."
+        "title": "Subexponential bound in squared width under ETH"
       }
     },
     {
@@ -126,7 +125,6 @@
         "revision": 1,
         "label": "Effective quadratic-width bound on monopolar graphs",
         "title": "Effective quadratic-width bound on monopolar graphs under FPT ≠ W[1]",
-        "explanation": "The bound follows by applying the construction of Liu and Meng to a compact CNF encoding of Multicolored Clique and using the effective convergence cutoff.",
         "historicalNote": [
           "Liu and Meng state the quadratic lower bound under ETH in Theorem 3.1 and Corollary 3.10. The FPT ≠ W[1] exclusion is a direct consequence of their construction and the source-size calculation in the linked derivation."
         ]

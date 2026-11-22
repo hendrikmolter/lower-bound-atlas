@@ -42,7 +42,6 @@
       "provenance": "literature",
       "qualifications": [],
       "reader": {
-        "explanation": "Exercise 14.2(e) asks for a linear reduction from 3SAT to Hamiltonian Cycle. After sparsification, the source has linearly many variables and clauses, so the graph order is linear in the source variable count.",
         "label": "Exponent in number of vertices",
         "revision": 1,
         "title": "Exponent in number of vertices under ETH"
@@ -63,7 +62,11 @@
         }
       ],
       "statement": "Under ETH, no deterministic algorithm solves Hamiltonian Cycle within the stated running time.",
-      "status": "established"
+      "status": "established",
+      "sourceBasis": {
+        "kind": "derived",
+        "step": "Exercise 14.2(e) asks for a linear reduction from 3SAT to Hamiltonian Cycle. After sparsification, the source has linearly many variables and clauses, so the graph order is linear in the source variable count."
+      }
     },
     {
       "assessments": {

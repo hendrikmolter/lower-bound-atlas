@@ -76,8 +76,11 @@
       "reader": {
         "revision": 1,
         "label": "Subexponential bound in squared width",
-        "title": "Subexponential bound in squared width under ETH",
-        "explanation": "The published theorem is stated by linear rank-width. Rank-width is at most linear rank-width, and taking a monotone upper envelope preserves the exponent scale."
+        "title": "Subexponential bound in squared width under ETH"
+      },
+      "sourceBasis": {
+        "kind": "derived",
+        "step": "The published theorem is stated by linear rank-width. Rank-width is at most linear rank-width, and taking a monotone upper envelope preserves the exponent scale."
       }
     },
     {

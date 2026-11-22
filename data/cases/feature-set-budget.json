@@ -33,7 +33,6 @@
         "For any recursive f subject to the source convention that the complexity functions and their inverses be easily computable."
       ],
       "reader": {
-        "explanation": "The source gives hardness for the second level of the linear-reduction hierarchy and thereby the stated consequence under FPT ≠ W[1]. Standard W[2]-hardness alone does not supply this exponent.",
         "label": "Linear-reduction lower bound",
         "revision": 1,
         "title": "Feature Set under FPT ≠ W[1]: Linear-reduction lower bound"
@@ -55,7 +54,11 @@
         }
       ],
       "statement": "Under FPT ≠ W[1], no deterministic algorithm solves the stated decision problem within the stated running time.",
-      "status": "established"
+      "status": "established",
+      "sourceBasis": {
+        "kind": "derived",
+        "step": "The source gives hardness for the second level of the linear-reduction hierarchy and thereby the stated consequence under FPT ≠ W[1]. Standard W[2]-hardness alone does not supply this exponent."
+      }
     },
     {
       "assessments": {
@@ -138,7 +141,6 @@
         "For source-admissible recursive f."
       ],
       "reader": {
-        "explanation": "The input-size clock uses the complete representation.",
         "label": "Sublinear exponent in the solution budget",
         "revision": 1,
         "title": "Feature Set under ETH: Sublinear exponent in the solution budget"
@@ -189,7 +191,6 @@
       "provenance": "literature",
       "qualifications": [],
       "reader": {
-        "explanation": "This follows from the earlier W[1] bound and the source implication from ordinary ETH, with the same candidate space and without a parameter-dependent prefactor.",
         "label": "Sublinear exponent in the feature count",
         "revision": 1,
         "title": "Feature Set under ETH: Sublinear exponent in the feature count"
@@ -218,7 +219,11 @@
         }
       ],
       "statement": "Under ETH, no deterministic algorithm solves the stated decision problem within the stated running time.",
-      "status": "established"
+      "status": "established",
+      "sourceBasis": {
+        "kind": "derived",
+        "step": "This follows from the earlier W[1] bound and the source implication from ordinary ETH, with the same candidate space and without a parameter-dependent prefactor."
+      }
     }
   ],
   "coverage": "Lower bounds for number of selected features.",

@@ -455,6 +455,29 @@ test('requires a claim-specific reason for citing a nonpreferred edition', t => 
   h.call('validate');
 });
 
+test('public notes require a cited derivation instead of a general comment', t => {
+  const record = caseRecord();
+  const b = record.bounds[0];
+  const h = harness(t, fixture(), record);
+  b.reader = {revision:1, explanation:'Unscoped paragraph.'};
+  record.reader = {comments:{eth:'Another unscoped paragraph.'}};
+  h.write();
+  const errors = h.failed('INVALID_SCHEMA','validate').error.details.join();
+  assert.match(errors,/reader.explanation is not permitted/);
+  assert.match(errors,/reader.comments is not permitted/);
+  delete b.reader;
+  delete record.reader;
+  b.sourceBasis = {kind:'stated',step:'Unexpected.'};
+  h.write();
+  assert.match(h.failed('INVALID_SCHEMA','validate').error.details.join(),/sourceBasis/);
+  b.sourceBasis.kind = 'derived';
+  h.write();
+  h.call('validate');
+  b.sources = [];
+  h.write();
+  assert.match(h.failed('INVALID_ATLAS','validate').error.details.join(),/needs a cited source/);
+});
+
 test('requires a preferred edition that belongs to its paper', t => {
   const data = fixture();
   const h = harness(t, data);

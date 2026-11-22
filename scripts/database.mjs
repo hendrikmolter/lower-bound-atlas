@@ -70,6 +70,8 @@ function matchType(value, type) {
 }
 
 function schemaErrors(value, rule, path) {
+  if (rule === false) return [path + ' is not permitted'];
+  if (rule === true) return [];
   if (rule.$ref) return schemaErrors(value, schema.$defs[rule.$ref.split('/').at(-1)], path);
   if (rule.anyOf) {
     return rule.anyOf.some(sub => schemaErrors(value, sub, path).length === 0) ? [] : [path + ' has no valid reference shape'];
@@ -229,6 +231,14 @@ export function validateAtlas(load, { release = false, website = false } = {}) {
   if (release || website) selectRelease(db);
   const errors = [];
   const fail = message => errors.push(message);
+  function checkSourceBasis(basis, hasSource, context) {
+    if (basis === undefined) return;
+    if (!hasSource || !basis || !['stated','derived'].includes(basis.kind) ||
+        Object.keys(basis).some(key => !['kind','step'].includes(key)) ||
+        (basis.kind === 'derived' ? typeof basis.step !== 'string' || !basis.step.trim() : basis.step !== undefined)) {
+      fail(context + ': a derived implication needs a cited source and a derivation step; a stated implication has no note');
+    }
+  }
   const assumptions = index(db.assumptions, 'assumptions', fail);
   const cases = index(db.cases, 'cases', fail);
   const problems = index(db.problems ?? [], 'problems', fail);
@@ -262,6 +272,8 @@ export function validateAtlas(load, { release = false, website = false } = {}) {
       if (!findVersion(assumptions.get(f.hypothesisId), f.hypothesisRevision) ||
           !urlOk(f.reference) || (f.refutation !== undefined && !urlOk(f.refutation))) fail('Invalid hypothesis formulation: ' + f.id);
       for (const e of f.equivalences) {
+        checkSourceBasis(e.forwardBasis, e.source, f.id + ' forward');
+        checkSourceBasis(e.reverseBasis, e.reverseSource ?? e.source, f.id + ' converse');
         const target = cases.get(e.caseId)?.bounds.find(b => b.id === e.boundId);
         if (e.additionalForwardSources?.some(ref => !urlOk(ref.source) || !ref.locator)) fail('Invalid additional forward reference: ' + e.boundId);
         if (!findVersion(target, e.boundRevision) || !urlOk(e.source) ||
@@ -465,6 +477,7 @@ export function validateAtlas(load, { release = false, website = false } = {}) {
     const contexts = new Map();
     for (const version of versions) {
       const problem = problems.get(version.problemId);
+      if (version.reader?.comments !== undefined) fail(record.id + ': general reader comments are not allowed');
       if (!problem && ((db.problems && version === record) || version.problemId !== undefined)) {
         fail(record.id + ': expected a registered problemId');
       }
@@ -511,6 +524,8 @@ export function validateAtlas(load, { release = false, website = false } = {}) {
             fail(context + ': a hardness baseline requires the FPT ≠ W[1] hypothesis and a cited hardness result');
           }
           const hasRuntimeFields = snapshot.qualifications !== undefined || snapshot.runtimeSymbols !== undefined;
+          if (snapshot.reader?.explanation !== undefined) fail(context + ': general reader explanations are not allowed');
+          checkSourceBasis(snapshot.sourceBasis, snapshot.sources.some(s => !s.placement || ['statement','forward'].includes(s.placement)), context);
           if (version.problemRevision && version === record && snapshot === bound &&
               (snapshot.model !== undefined || snapshot.restrictions !== undefined)) {
             fail(context + ': use structured input conditions and modelException for a nonstandard model');
@@ -587,6 +602,7 @@ export function validateAtlas(load, { release = false, website = false } = {}) {
               fail(context + ': missing assessed ' + hypothesis + ' convention revision');
             }
             for (const direction of [assessment.forward, assessment.converse]) {
+              checkSourceBasis(direction.sourceBasis, direction.evidence.some(e => e.source), context);
               if (['established', 'disproved'].includes(direction.status) && direction.evidence.length === 0) {
                 fail(context + ': directional verdict needs evidence');
               }

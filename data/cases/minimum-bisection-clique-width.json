@@ -31,7 +31,6 @@
         "For every computable function f."
       ],
       "reader": {
-        "explanation": "An algorithm for intrinsic clique-width could ignore the supplied expression. Intrinsic clique-width is at most the width of that expression, and nondecreasing upper envelopes of the prefactor and exponent preserve the little-o scale.",
         "label": "Sublinear exponent in clique-width",
         "revision": 1,
         "title": "Sublinear exponent in clique-width under ETH"
@@ -52,7 +51,11 @@
         }
       ],
       "statement": "Under ETH, no deterministic algorithm solves Minimum Bisection within the stated running time.",
-      "status": "established"
+      "status": "established",
+      "sourceBasis": {
+        "kind": "derived",
+        "step": "An algorithm for intrinsic clique-width could ignore the supplied expression. Intrinsic clique-width is at most the width of that expression, and nondecreasing upper envelopes of the prefactor and exponent preserve the little-o scale."
+      }
     },
     {
       "assessments": {
@@ -85,7 +88,6 @@
         "The parameter factor f is an arbitrary computable function and the exponent of B is an arbitrary fixed constant."
       ],
       "reader": {
-        "explanation": "The parameterized reduction to Max-Cut constructs a clique-width expression. Adding as many isolated vertices as the Max-Cut graph has vertices converts the instance to Maximum Bisection. Complementation then sends a lower threshold b on the resulting 2n-vertex graph to the upper threshold n²−b. The complement expression is constructible from the original expression with at most twice as many labels. An algorithm for intrinsic clique-width can ignore the expression. Its parameter factor can be replaced by a computable nondecreasing majorant because intrinsic width is at most the expression width.",
         "label": "Fixed-parameter tractability",
         "revision": 1,
         "title": "Minimum Bisection under FPT ≠ W[1]: Fixed-parameter tractability"

@@ -31,7 +31,6 @@
         "For every fixed integer r≥3."
       ],
       "reader": {
-        "explanation": "Width is fixed separately before the input.",
         "label": "Subexponential-time bound",
         "revision": 1,
         "title": "Fixed-width SAT under ETH: Subexponential-time bound"
@@ -92,7 +91,6 @@
         "Separately for each fixed integer a≥2, with the fixed clause-width bound r=2a."
       ],
       "reader": {
-        "explanation": "The statement concerns formulas of width at most 2a.",
         "label": "Bound for fixed even clause width",
         "revision": 1,
         "title": "Fixed-width SAT under the k × k Clique Hypothesis: Bound for fixed even clause width"
@@ -146,7 +144,6 @@
         "Separately for each fixed integer r≥3 and each fixed 0<ε<1."
       ],
       "reader": {
-        "explanation": "The whole fixed-power family is equivalent to SH for each separately fixed clause width.",
         "label": "Fixed-power exclusion",
         "revision": 1,
         "title": "Fixed-width SAT under SH: Fixed-power exclusion"

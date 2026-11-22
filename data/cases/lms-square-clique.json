@@ -218,8 +218,7 @@
       "inputConditions": [],
       "reader": {
         "revision": 2,
-        "label": "Defining lower bound",
-        "explanation": "This exclusion is the defining statement of the k × k Clique Hypothesis."
+        "label": "Defining lower bound"
       },
       "runtimeSymbols": [
         "k",

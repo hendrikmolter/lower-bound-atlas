@@ -93,7 +93,6 @@
         "The parameter factor f is an arbitrary computable function and the exponent of B is an arbitrary fixed constant."
       ],
       "reader": {
-        "explanation": "For a Clique instance with target ℓ, take one variable per position, with host vertices as values. For each pair of positions, list the ordered adjacent host pairs in a binary constraint table. These tables require distinct adjacent images and have a clique as the primal graph, so its treewidth is ℓ−1 for ℓ≥2. After answering targets ℓ below two or above the host order directly, the tables have size polynomial in the complete source encoding.",
         "label": "Fixed-parameter tractability",
         "revision": 1,
         "title": "Explicit-table CSP under FPT ≠ W[1]: Fixed-parameter tractability"

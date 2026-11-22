@@ -20,7 +20,6 @@
         "The bound excludes every computable prefactor f."
       ],
       "reader": {
-        "explanation": "The hard instances given by the source have equal-sized color classes and the same number of edges between each pair of classes.",
         "label": "Exponent sublinear in the number of color classes",
         "revision": 1,
         "title": "Multicolored Clique by number of color classes under ETH"
@@ -75,7 +74,6 @@
         "For each fixed ε strictly between zero and 1."
       ],
       "reader": {
-        "explanation": "The clause-grouping graph in the source already has one independent color class per group. A clique of size k uses exactly one vertex from every class.",
         "label": "Fixed power saving in the number of color classes",
         "revision": 1,
         "title": "Multicolored Clique by number of color classes under SH"
@@ -97,7 +95,11 @@
         }
       ],
       "statement": "Under SH, no deterministic algorithm decides Multicolored Clique within the stated running time.",
-      "status": "established"
+      "status": "established",
+      "sourceBasis": {
+        "kind": "derived",
+        "step": "The clause-grouping graph in the source already has one independent color class per group. A clique of size k uses exactly one vertex from every class."
+      }
     },
     {
       "assumptionOperator": "all",
@@ -117,7 +119,6 @@
         "The bound excludes every computable prefactor f."
       ],
       "reader": {
-        "explanation": "The color-copy reduction proves hardness from Clique. Deleting same-color edges and asking for a clique of size k proves membership in W[1].",
         "label": "Fixed-parameter tractability",
         "revision": 2,
         "title": "Multicolored Clique by number of color classes under FPT ≠ W[1]"
@@ -209,7 +210,6 @@
         "The bound excludes every computable prefactor f."
       ],
       "reader": {
-        "explanation": "The square hypothesis gives the stated exclusion for Clique. The color-copy construction preserves k and multiplies the graph order by k, which can be absorbed into the computable prefactor.",
         "label": "Exponent sublinear in the number of color classes",
         "revision": 1,
         "title": "Multicolored Clique by number of color classes under the k × k Clique Hypothesis"
@@ -238,7 +238,11 @@
         }
       ],
       "statement": "Under the k × k Clique Hypothesis, no deterministic algorithm decides Multicolored Clique within the stated running time.",
-      "status": "established"
+      "status": "established",
+      "sourceBasis": {
+        "kind": "derived",
+        "step": "The square hypothesis gives the stated exclusion for Clique. The color-copy construction preserves k and multiplies the graph order by k, which can be absorbed into the computable prefactor."
+      }
     }
   ],
   "coverage": "Selected literature bounds for this parameterization.",

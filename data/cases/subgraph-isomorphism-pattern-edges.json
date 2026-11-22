@@ -133,7 +133,6 @@
         "The parameter factor f is an arbitrary computable function and the exponent of B is an arbitrary fixed constant."
       ],
       "reader": {
-        "explanation": "Use a complete graph on ℓ vertices as the pattern for a Clique instance with target ℓ. An injective edge-preserving image is an ℓ-clique, and the pattern has exactly ℓ(ℓ−1)/2 edges. Cases with ℓ greater than the host order can be answered directly.",
         "label": "Fixed-parameter tractability",
         "revision": 1,
         "title": "Subgraph Isomorphism under FPT ≠ W[1]: Fixed-parameter tractability"

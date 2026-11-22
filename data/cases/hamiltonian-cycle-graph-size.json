@@ -120,7 +120,6 @@
         "Separately for every fixed 0 < a < 1."
       ],
       "reader": {
-        "explanation": "The forward direction uses a linear-size reduction from satisfiability. The converse encodes a cycle traversal in a CNF of near-linear bit length in the number of vertices plus edges.",
         "label": "Fixed-power exponent in the number of vertices plus edges",
         "revision": 1,
         "title": "Fixed-power bounds under SH"

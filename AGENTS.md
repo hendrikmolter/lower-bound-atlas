@@ -1,5 +1,7 @@
 # Agent README
 
+The [public content rules](CONTRIBUTING.md#public-content-rules) govern every Atlas contribution, including database text, generated pages, templates, proofs and guide pages. Before adding reader-facing text, identify the rule that authorizes it and its place on the page. If none applies, leave the text out and ask the maintainer about a reusable rule. A free-text field or an example from another entry is insufficient authorization.
+
 Work from the repository root with Node.js 20 or newer. For a lookup, use the CLI or the website’s JSON export. For a contribution, work in a fresh clone on a branch. Return the proposed changes for review unless the requester also asks you to submit them.
 
 ## Find an entry or select a result

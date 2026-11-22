@@ -32,7 +32,6 @@
       "provenance": "literature",
       "qualifications": [],
       "reader": {
-        "explanation": "A rooted out-star demand counts one more vertex than the nonroot terminal set. The underlying unweighted Steiner Tree bound transfers by replacing each undirected edge by both unit-cost orientations.",
         "label": "Subexponential-time bound",
         "revision": 1,
         "title": "Directed Steiner Tree under ETH: Subexponential-time bound"
@@ -60,7 +59,11 @@
         }
       ],
       "statement": "Under ETH, no deterministic algorithm solves the stated decision problem within the stated running time.",
-      "status": "established"
+      "status": "established",
+      "sourceBasis": {
+        "kind": "derived",
+        "step": "A rooted out-star demand counts one more vertex than the nonroot terminal set. The underlying unweighted Steiner Tree bound transfers by replacing each undirected edge by both unit-cost orientations."
+      }
     }
   ],
   "coverage": "Lower bounds for number of terminals.",

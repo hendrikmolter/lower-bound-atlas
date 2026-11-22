@@ -32,7 +32,6 @@
       "provenance": "literature",
       "qualifications": [],
       "reader": {
-        "explanation": "On the hard instances the explicit input length is polynomial in k, so a fixed polynomial factor is absorbed in the exponent.",
         "label": "Subexponential bound in k log k",
         "revision": 1,
         "title": "Subexponential bound in k log k under ETH"
@@ -53,7 +52,11 @@
         }
       ],
       "statement": "Under ETH, no deterministic algorithm solves Integer Linear Programming Feasibility within the stated running time.",
-      "status": "established"
+      "status": "established",
+      "sourceBasis": {
+        "kind": "derived",
+        "step": "On the hard instances the explicit input length is polynomial in k, so a fixed polynomial factor is absorbed in the exponent."
+      }
     },
     {
       "assessments": {
@@ -87,8 +90,7 @@
       "reader": {
         "revision": 1,
         "label": "Subexponential bound in k log k for binary coefficients",
-        "title": "Binary-coefficient integer linear programming under ETH",
-        "explanation": "The source excludes this running time already when the number of columns and the largest right-hand side entry are O(k log₂ k), with a nonnegative right-hand side. These instances are valid inputs to the general binary-coefficient task, so the same running time is excluded for an algorithm on that task."
+        "title": "Binary-coefficient integer linear programming under ETH"
       },
       "revision": 1,
       "runtime": "2^(o(k log₂ k)) N^(O(1))",
@@ -106,7 +108,11 @@
         }
       ],
       "statement": "Under ETH, no deterministic algorithm decides the reported binary-coefficient feasibility problem within the stated running time.",
-      "status": "established"
+      "status": "established",
+      "sourceBasis": {
+        "kind": "derived",
+        "step": "The source excludes this running time already when the number of columns and the largest right-hand side entry are O(k log₂ k), with a nonnegative right-hand side. These instances are valid inputs to the general binary-coefficient task, so the same running time is excluded for an algorithm on that task."
+      }
     },
     {
       "id": "ilp-equations-w1-effective",
@@ -175,8 +181,7 @@
       "reader": {
         "revision": 2,
         "label": "Effective sublinear exponent with an all-ones right-hand side",
-        "title": "All-ones right-hand-side integer programming under FPT ≠ W[1]",
-        "explanation": "The column count is unrestricted. The proof uses Lin’s incidence matrix with exact-one rows in place of covering constraints."
+        "title": "All-ones right-hand-side integer programming under FPT ≠ W[1]"
       },
       "exponentDomain": "nonnegative"
     }

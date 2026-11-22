@@ -97,8 +97,7 @@
       },
       "reader": {
         "revision": 1,
-        "label": "Tower bound at fixed quantifier depth",
-        "explanation": "The source treats the matrix as a set of clauses or terms and uses positive-rate variable-3SAT ETH. The polynomial factor counts the variables in the matrix."
+        "label": "Tower bound at fixed quantifier depth"
       },
       "inputConditions": [],
       "runtimeSymbols": [

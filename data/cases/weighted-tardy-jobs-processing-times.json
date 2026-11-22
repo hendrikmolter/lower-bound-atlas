@@ -29,7 +29,6 @@
       "provenance": "literature",
       "qualifications": [],
       "reader": {
-        "explanation": "The paper states its lower bound in the job count. On the constructed instances the scheduling numbers have polynomial bit length in the source graph size, so a fixed polynomial in the total bit length is absorbed by the source lower bound.",
         "label": "Exponent sublinear in k / log k",
         "revision": 1,
         "title": "Exponent sublinear in k / log k under ETH"
@@ -51,7 +50,11 @@
         }
       ],
       "statement": "Under ETH, no deterministic algorithm solves Weighted Number of Tardy Jobs on One Machine within the stated running time.",
-      "status": "established"
+      "status": "established",
+      "sourceBasis": {
+        "kind": "derived",
+        "step": "The paper states its lower bound in the job count. On the constructed instances the scheduling numbers have polynomial bit length in the source graph size, so a fixed polynomial in the total bit length is absorbed by the source lower bound."
+      }
     },
     {
       "assessments": {

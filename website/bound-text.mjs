@@ -7,8 +7,7 @@ export function runtimeDetails(record, bound) {
       legacy: true,
       runtime: reader.runtime ?? bound.runtime,
       qualifications: reader.scope ? [reader.scope] : [],
-      symbols: [],
-      explanation: ''
+      symbols: []
     };
   }
   const definitions = [...(record.reader?.parameterSymbols ?? []), ...(record.reader?.symbols ?? [])];
@@ -16,8 +15,7 @@ export function runtimeDetails(record, bound) {
     legacy: false,
     runtime: bound.runtime,
     qualifications: bound.qualifications,
-    symbols: bound.runtimeSymbols.map(symbol => definitions.find(item => item.symbol === symbol)),
-    explanation: reader.explanation ?? ''
+    symbols: bound.runtimeSymbols.map(symbol => definitions.find(item => item.symbol === symbol))
   };
 }
 

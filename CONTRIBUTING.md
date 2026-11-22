@@ -4,6 +4,8 @@ Begin in a fresh clone, on a branch. Check for an existing case, theorem, and pa
 
 ## Contribution rights and attribution
 
+See the [public content rules](#public-content-rules) before drafting reader-facing text.
+
 By submitting an original contribution for inclusion, you agree to license its software portions under the MIT License and its Atlas content portions under CC BY 4.0, as described in the [licensing and attribution notice](LICENSE.md). Submit material you have the right to license on these terms. For third-party material, identify the source, copyright holder and applicable terms, preserve required notices, and explain what permits redistribution. Link to papers and cite the relevant theorem or page. Include copies of external material only when redistribution is permitted. Credit the original theorem authors, the authors of any new proof, and the Atlas contributors in their respective records. Describe AI assistance where relevant to authorship or verification.
 
 ## Maintainer decisions
@@ -88,7 +90,24 @@ On problem pages, list the lower bound as stated in its source. Preserve the siz
 
 The shared `problems` registry owns each public problem name, input and question. The parameter label belongs in the case’s `reader.parameterLabel`. Keep the formula in the bound’s `runtime`. For effective little-o, write `o_eff(scale)` and set `exponentDomain` to `nonnegative`, `computable-integer`, or `upper-bounded-integer`, according to the theorem. The reader links to the shared definition and prints the additional exponent requirement in each view. Put other quantifiers, including any parameter-dependent prefactor, in `qualifications`. Keep graph promises and their quantifiers in structured input conditions. Use an empty qualifications array when none are needed. Register parameter symbols in `reader.parameterSymbols` and other symbols in `reader.symbols`. The bound’s ordered `runtimeSymbols` list selects their definitions by symbol.
 
-Use the bound’s `statement` to introduce the exclusion in prose. Its revision-specific `reader` object holds the short label and any additional `explanation` for the full statement, such as why a source theorem uses a different premise. Mark each citation’s `placement` as `statement`, `forward`, `proof`, `correction`, or `context`. Record equivalence evidence by direction in the assessments or hypothesis formulation.
+Use the bound’s `statement` to introduce the exclusion. Its revision-specific `reader` object supplies the short label. Mark each citation’s `placement` as `statement`, `forward`, `proof`, `correction`, or `context`. Record equivalence evidence by direction in the assessments or hypothesis formulation.
+
+## Public content rules
+
+These rules govern new and revised reader-facing content throughout the Atlas, including database entries, templates, generated pages, guides and downloadable material. For every addition, identify the applicable rule, the evidence or user task that justifies the text, and the designated place for it. Apply the same rule to every comparable entry. An available text field, an existing paragraph or a one-off template branch does not authorize an addition.
+
+| Purpose | When and where it belongs |
+| --- | --- |
+| Definition and scope | State the problem, parameter or hypothesis in its definition. Put domain conditions on the problem and theorem-specific promises on the bound. |
+| Mathematical statement | Put the exclusion, quantifiers and exceptional model requirements in their respective bound fields. Define symbols beside the statement. Define reusable notation once on the notation page. |
+| Sources and implications | Cite the source and exact location for each supported direction. Use the derivation rule below when a mathematical step connects the cited result to the displayed implication. Give edition and access information with the bibliographic record. |
+| Proof and verification | Put the argument in the proof and the verification scope in the review. Display authorship, verification and challenges from their records. |
+| Recovery and historical context | Describe the recorded comparison with a particular historical bound in its recovery assessment. Put the status of a hypothesis, its history and relationships on the hypothesis page. Entry-specific historical context must identify a documented result relevant to that entry. |
+| Navigation and guidance | Use shared labels, instructions and status messages that help readers operate a feature. Put general instructions, project background, maintenance, release history and required notices on their designated guide or policy pages. |
+
+For a directly stated implication, give the citation without a note. For a derived implication, record `sourceBasis` with `kind: "derived"` and a short `step` identifying the extra mathematical argument. A recorded `kind: "stated"` accepts no paragraph. Omitting the field produces citation-only display. The bound-level field applies to its stated premises implying the bound. An assessment can specify the basis on each direction independently, and formulation comparisons use `forwardBasis` and `reverseBasis`. Keep qualifiers in the statement and proof details in the proof.
+
+If a proposed addition serves another purpose, pause that addition and tell the maintainer what it would explain, why the existing rules do not cover it, and which general rule would cover comparable cases. Add the rule and its placement only after maintainer approval. During review, identify the authorizing rule for each new type of text and check that shared templates apply it consistently. Validation checks the structure; reviewers check that the text actually serves the stated purpose.
 
 Use a comparison note on a problem overview only for a documented recovery of an ETH bound. Specify whether the recovery is exact, effective, or up to scale. Cite papers used solely as proof prerequisites in the proof record.
 

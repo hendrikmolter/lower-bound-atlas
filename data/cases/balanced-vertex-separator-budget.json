@@ -152,7 +152,6 @@
         "The parameter factor f is an arbitrary computable function and the exponent of B is an arbitrary fixed constant."
       ],
       "reader": {
-        "explanation": "The hardness reduction uses the vertex-deletion budget. Balance is measured against the order of the original graph.",
         "label": "Fixed-parameter tractability",
         "revision": 1,
         "title": "Balanced Vertex Separator under FPT ≠ W[1]: Fixed-parameter tractability"

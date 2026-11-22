@@ -20,7 +20,6 @@
         "The bound excludes every computable prefactor f."
       ],
       "reader": {
-        "explanation": "The original theorem uses the full instance measure and subexponential solvability of SNP. For explicit graphs after oversized thresholds are decided directly, the encoding length and graph order are polynomially related. The survey and textbook state the graph-order ETH form.",
         "label": "Exponent sublinear in the solution size",
         "revision": 1,
         "title": "Clique by solution size under ETH"
@@ -75,7 +74,6 @@
         "For each fixed ε strictly between zero and 1."
       ],
       "reader": {
-        "explanation": "The fixed-power savings apply with a prefactor bounded by an exponential of a fixed polynomial in k.",
         "label": "Fixed power saving in the solution size",
         "revision": 1,
         "title": "Clique by solution size under SH"
@@ -117,7 +115,6 @@
         "The bound excludes every computable prefactor f."
       ],
       "reader": {
-        "explanation": "W[1]-completeness applies to the threshold decision question because a clique of size at least k has a subset of exactly k vertices.",
         "label": "Fixed-parameter tractability",
         "revision": 2,
         "title": "Clique by solution size under FPT ≠ W[1]"
