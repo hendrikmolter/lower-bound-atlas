@@ -57,14 +57,14 @@
         {
           "paperId": "bodlaender2025-linear-structure",
           "editionId": "journal",
-          "locator": "Theorem 6, logarithmic pathwidth. Treewidth is at most pathwidth, so an effective sublinear exponent in treewidth would yield an FPT algorithm for Clique.",
+          "locator": "Theorem 6 (logarithmic pathwidth).",
           "role": "unrestricted lower bound",
           "placement": "statement"
         },
         {
           "paperId": "bodlaender2022-tree-structured",
           "editionId": "proceedings",
-          "locator": "Theorem 11, Independent Set parameterized by logarithmic treewidth. The supplied tree decomposition can be discarded for the unrestricted problem.",
+          "locator": "Theorem 11 (logarithmic treewidth).",
           "role": "unrestricted lower bound",
           "placement": "statement"
         }
@@ -80,7 +80,11 @@
         "B"
       ],
       "qualifications": [],
-      "exponentDomain": "nonnegative"
+      "exponentDomain": "nonnegative",
+      "sourceBasis": {
+        "kind": "derived",
+        "step": "Theorem 6 gives W[1]-hardness through XNLP-hardness for pathwidth divided by the logarithm of the graph order. For a Clique instance of length M and parameter k, the reduction therefore produces a graph of pathwidth at most g(k)(1+log₂ M) for a computable g. Treewidth satisfies the same upper bound. Using the effective cutoff with accuracy 1/g(k) bounds the exponential factor by a computable function of k times M. The resulting Clique algorithm would be fixed-parameter tractable. Theorem 11 of the IPEC paper gives the width bound directly for Independent Set; the solver can ignore the supplied tree decomposition."
+      }
     }
   ],
   "coverage": "Selected literature bounds for this parameterization.",
@@ -152,14 +156,14 @@
         {
           "paperId": "bodlaender2025-linear-structure",
           "editionId": "journal",
-          "locator": "Theorem 6, logarithmic pathwidth. Treewidth is at most pathwidth, so an effective sublinear exponent in treewidth would yield an FPT algorithm for Clique.",
+          "locator": "Theorem 6 (logarithmic pathwidth).",
           "role": "unrestricted lower bound",
           "placement": "statement"
         },
         {
           "paperId": "bodlaender2022-tree-structured",
           "editionId": "proceedings",
-          "locator": "Theorem 11, Independent Set parameterized by logarithmic treewidth. The supplied tree decomposition can be discarded for the unrestricted problem.",
+          "locator": "Theorem 11 (logarithmic treewidth).",
           "role": "unrestricted lower bound",
           "placement": "statement"
         }

@@ -125,13 +125,17 @@
         {
           "paperId": "bodlaender2025-linear-structure",
           "editionId": "journal",
-          "locator": "Theorem 9 and the construction of Lemma 4, especially Claim 12. The lemma fixes the number of colors. For source length S, taking q of order √(log S) keeps the construction polynomial. Encoding choices in base q and adding a q-clique to enforce the lists gives t log(t+2) at most a computable parameter factor times log S.",
+          "locator": "Theorem 9, Lemma 4 and Claim 12.",
           "role": "source construction for the unrestricted bound",
           "placement": "statement"
         }
       ],
       "proofs": [],
-      "exponentDomain": "nonnegative"
+      "exponentDomain": "nonnegative",
+      "sourceBasis": {
+        "kind": "derived",
+        "step": "Lemma 4 fixes the number of colors q. In its construction for a Chained Positive CNF-SAT instance of length S and parameter k, choose q of order √(log S). Encoding the choices in base q uses at most 1+log_q S digits per group. The connector branches can be processed separately, so Claim 12 bounds the width by 2k(1+log_q S)+3. Adding a clique of q colors enforces the lists at an additional width cost of at most q. The graph still has polynomial size, and t log₂(t+2) is at most a computable function of k times 1+log₂ S. Composing with the Clique reduction supplied by Theorem 9, the effective cutoff would turn a solver within the displayed time into an FPT algorithm for Clique."
+      }
     }
   ],
   "resolutions": [],
@@ -178,7 +182,7 @@
         {
           "paperId": "bodlaender2025-linear-structure",
           "editionId": "journal",
-          "locator": "Theorem 9 and the construction of Lemma 4, especially Claim 12. The lemma fixes the number of colors. For source length S, taking q of order √(log S) keeps the construction polynomial. Encoding choices in base q and adding a q-clique to enforce the lists gives t log(t+2) at most a computable parameter factor times log S.",
+          "locator": "Theorem 9, Lemma 4 and Claim 12.",
           "role": "source construction for the unrestricted bound",
           "placement": "statement"
         }
