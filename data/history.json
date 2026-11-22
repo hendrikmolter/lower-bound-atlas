@@ -489,5 +489,12 @@
     "contributor": "Hendrik Molter with ChatGPT",
     "title": "Published reductions for Dominating Set by treewidth",
     "summary": "The connected bipartite bound with a computable factor in the solution budget is recorded as a corollary of the small-universe Set Cover and red-blue domination reductions."
+  },
+  {
+    "kind": "update",
+    "date": "2026-11-22",
+    "contributor": "Hendrik Molter with ChatGPT",
+    "title": "Closest String by radius under FPT ≠ W[1]",
+    "summary": "The radius and balanced-alphabet entries credit the effective CNF-SAT lower bound of Cai and Juedes and the Closest String construction of Lokshtanov, Marx and Saurabh. The recovery loses a logarithmic factor in the exponent."
   }
 ]
