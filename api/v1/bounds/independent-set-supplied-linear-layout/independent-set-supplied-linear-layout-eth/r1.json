@@ -15,7 +15,6 @@
   "provenance": "literature",
   "qualifications": [],
   "reader": {
-    "explanation": "The source constructs a vertex order. The false-twin expansion preserves low supplied width, and a rank decomposition can be supplied by using the order along a caterpillar.",
     "label": "Subexponential bound in squared width",
     "revision": 1,
     "title": "Subexponential bound in squared width under ETH"
@@ -27,6 +26,10 @@
     "p",
     "n"
   ],
+  "sourceBasis": {
+    "kind": "derived",
+    "step": "The source constructs a vertex order. The false-twin expansion preserves low supplied width, and a rank decomposition can be supplied by using the order along a caterpillar."
+  },
   "sources": [
     {
       "editionId": "proceedings",

@@ -100,7 +100,6 @@
         "For each fixed 0<ε<1."
       ],
       "reader": {
-        "explanation": "Deleting unused variables gives at most 3m occurring variables. The reverse bound uses the sparse clause-count comparison in Corollary 2.3.",
         "label": "Fixed-power exclusion",
         "revision": 1,
         "title": "3SAT under SH: Fixed-power exclusion"
@@ -112,6 +111,10 @@
         "m",
         "B"
       ],
+      "sourceBasis": {
+        "kind": "derived",
+        "step": "Deleting unused variables leaves at most three variables per clause, so the variable-plus-clause measure is linear in the clause count."
+      },
       "sources": [
         {
           "editionId": "v2",

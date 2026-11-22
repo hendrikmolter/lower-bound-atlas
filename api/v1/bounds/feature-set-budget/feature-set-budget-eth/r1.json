@@ -32,7 +32,6 @@
     "For source-admissible recursive f."
   ],
   "reader": {
-    "explanation": "The input-size clock uses the complete representation.",
     "label": "Sublinear exponent in the solution budget",
     "revision": 1,
     "title": "Feature Set under ETH: Sublinear exponent in the solution budget"

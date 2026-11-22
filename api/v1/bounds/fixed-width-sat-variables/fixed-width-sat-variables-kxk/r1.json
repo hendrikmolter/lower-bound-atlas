@@ -32,7 +32,6 @@
     "Separately for each fixed integer a≥2, with the fixed clause-width bound r=2a."
   ],
   "reader": {
-    "explanation": "The statement concerns formulas of width at most 2a.",
     "label": "Bound for fixed even clause width",
     "revision": 1,
     "title": "Fixed-width SAT under the k × k Clique Hypothesis: Bound for fixed even clause width"

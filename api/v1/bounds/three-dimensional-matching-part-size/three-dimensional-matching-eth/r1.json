@@ -30,7 +30,6 @@
   "provenance": "literature",
   "qualifications": [],
   "reader": {
-    "explanation": "The reduction gives q=6M for a formula with M clauses. The set of distinct triples has size at most q³, so the displayed polynomial factor can be absorbed into the exponent.",
     "label": "Subexponential bound in the common part size",
     "revision": 1,
     "title": "Subexponential bound in the common part size under ETH"
@@ -42,6 +41,10 @@
     "q",
     "m"
   ],
+  "sourceBasis": {
+    "kind": "derived",
+    "step": "The reduction gives q=6M for a formula with M clauses. The set of distinct triples has size at most q³, so the displayed polynomial factor can be absorbed into the exponent."
+  },
   "sources": [
     {
       "editionId": "journal",

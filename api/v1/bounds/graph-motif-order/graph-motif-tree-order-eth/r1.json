@@ -32,7 +32,6 @@
   "provenance": "literature",
   "qualifications": [],
   "reader": {
-    "explanation": "The source construction produces trees of diameter at most four.",
     "label": "Subexponential bound on trees",
     "revision": 1,
     "title": "Subexponential bound on trees under ETH"

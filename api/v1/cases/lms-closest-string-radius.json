@@ -210,7 +210,6 @@
       "provenance": "literature",
       "qualifications": [],
       "reader": {
-        "explanation": "Number the occurring variables consecutively, discard tautologies and repeated literals, and add two fresh variables forced to opposite values by unit clauses. For each clause, write its satisfying bits in the corresponding positions and fill every other position with one auxiliary symbol. Make one word for each choice of filler. With L+1 fillers, at least one filler is absent from any center. Its words force a satisfying bit in each clause, and every satisfying assignment agrees with every word. The two unit clauses ensure that both bits and all fillers occur, so q=d+4. For n original variables the radius is d=n+1, preserving effective sublinearity, and the encoding has polynomial length. A finite nonnegative exponent with a computable convergence threshold has a computable effectively sublinear upper bound: use a fixed integer bound before the first threshold, and thereafter take the least of the bounds d/j for all j from 1 to d whose threshold has been reached, rounding up. Every fixed precision is eventually reached.",
         "label": "Effective linear-exponent bound",
         "revision": 1
       },
@@ -223,6 +222,10 @@
         "L",
         "q"
       ],
+      "sourceBasis": {
+        "kind": "derived",
+        "step": "Add opposite unit clauses on two fresh variables. With L=n+2 positions and L+1 filler symbols, the two clauses ensure that both truth values and all fillers occur, giving q=d+4. Some filler is absent from every length-L center. The words using that filler require a satisfying literal in every clause. Conversely, a satisfying assignment agrees with every word. The encoding is polynomial and d=n+1 preserves the effective exponent scale."
+      },
       "sources": [
         {
           "editionId": "journal",

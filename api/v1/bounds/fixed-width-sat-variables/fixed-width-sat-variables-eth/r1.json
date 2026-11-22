@@ -32,7 +32,6 @@
     "For every fixed integer r≥3."
   ],
   "reader": {
-    "explanation": "Width is fixed separately before the input.",
     "label": "Subexponential-time bound",
     "revision": 1,
     "title": "Fixed-width SAT under ETH: Subexponential-time bound"

@@ -33,7 +33,6 @@
       "provenance": "literature",
       "qualifications": [],
       "reader": {
-        "explanation": "Corollary 13 gives the parameter dependence. Theorem 12 uses a reduction of polynomial size in the source clique parameter, so adding a fixed polynomial input factor preserves the contradiction.",
         "label": "Subexponential bound in k log k",
         "revision": 1,
         "title": "Subexponential bound in k log k under ETH"
@@ -45,6 +44,10 @@
         "k",
         "N"
       ],
+      "sourceBasis": {
+        "kind": "derived",
+        "step": "Corollary 13 gives the parameter dependence. Theorem 12 uses a reduction of polynomial size in the source clique parameter, so adding a fixed polynomial input factor preserves the contradiction."
+      },
       "sources": [
         {
           "editionId": "journal",

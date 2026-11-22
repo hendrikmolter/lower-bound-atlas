@@ -32,7 +32,6 @@
     "Separately for each fixed integer r ≥ 3."
   ],
   "reader": {
-    "explanation": "At fixed width, bounding s bounds the number of literal occurrences as well.",
     "label": "Subexponential-time bound",
     "revision": 1,
     "title": "Fixed-width SAT under ETH: Subexponential-time bound"
@@ -44,6 +43,10 @@
     "s",
     "B"
   ],
+  "sourceBasis": {
+    "kind": "derived",
+    "step": "At fixed width, bounding s bounds the number of literal occurrences as well."
+  },
   "sources": [
     {
       "editionId": "journal",

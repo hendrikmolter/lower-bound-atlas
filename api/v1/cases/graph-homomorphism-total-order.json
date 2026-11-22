@@ -35,7 +35,6 @@
       "provenance": "literature",
       "qualifications": [],
       "reader": {
-        "explanation": "Apply the source theorem with h(n)=n and p≤2n. A fixed polynomial in the explicit graph encoding is absorbed by the positive-rate gap.",
         "label": "Subexponential-time bound in total order",
         "revision": 1,
         "title": "Graph Homomorphism under ETH: Subexponential-time bound in total order"
@@ -47,6 +46,10 @@
         "p",
         "B"
       ],
+      "sourceBasis": {
+        "kind": "derived",
+        "step": "Apply the source theorem with h(n)=n and p≤2n. A fixed polynomial in the explicit graph encoding is absorbed by the positive-rate gap."
+      },
       "sources": [
         {
           "editionId": "journal",
@@ -94,7 +97,6 @@
         "For each fixed 0<ε<1."
       ],
       "reader": {
-        "explanation": "The input vertex count is summed over the two explicit graphs.",
         "label": "Fixed-power exclusion",
         "revision": 1,
         "title": "Graph Homomorphism under SH: Fixed-power exclusion"

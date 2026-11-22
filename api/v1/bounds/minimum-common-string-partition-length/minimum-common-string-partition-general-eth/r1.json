@@ -30,7 +30,6 @@
   "provenance": "literature",
   "qualifications": [],
   "reader": {
-    "explanation": "This reduction allows the alphabet to grow with the instance. Its symbols have polynomial-size explicit encodings.",
     "label": "Subexponential bound in the common string length",
     "revision": 1,
     "title": "Subexponential bound in the common string length under ETH"
@@ -41,6 +40,10 @@
   "runtimeSymbols": [
     "n"
   ],
+  "sourceBasis": {
+    "kind": "derived",
+    "step": "This reduction allows the alphabet to grow with the instance. Its symbols have polynomial-size explicit encodings."
+  },
   "sources": [
     {
       "editionId": "proceedings",

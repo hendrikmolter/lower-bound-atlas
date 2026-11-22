@@ -17,7 +17,6 @@
   "provenance": "literature",
   "qualifications": [],
   "reader": {
-    "explanation": "The published theorem writes the polynomial factor in graph order n. On standard explicit unweighted inputs, one can normalize the budget to at most n − 1 and relabel vertices, so all threshold queries have length polynomial in n. Polynomially many such queries recover the minimum cost.",
     "label": "Sublinear exponent in the number of terminals",
     "revision": 1,
     "title": "Steiner Tree by terminal count under ETH"
@@ -29,6 +28,10 @@
     "k",
     "B"
   ],
+  "sourceBasis": {
+    "kind": "derived",
+    "step": "The published theorem writes the polynomial factor in graph order n. On standard explicit unweighted inputs, one can normalize the budget to at most n − 1 and relabel vertices, so all threshold queries have length polynomial in n. Polynomially many such queries recover the minimum cost."
+  },
   "sources": [
     {
       "editionId": "focs",

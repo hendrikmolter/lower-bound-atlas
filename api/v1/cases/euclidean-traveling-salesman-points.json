@@ -39,7 +39,6 @@
         "Separately for each fixed integer d ≥ 2."
       ],
       "reader": {
-        "explanation": "On the integer-grid instances a tour of length at most n exists exactly when the induced grid graph has a Hamiltonian cycle. This also excludes an exact optimal-tour algorithm.",
         "label": "Dimension-dependent subexponential bound",
         "revision": 1,
         "title": "Euclidean Traveling Salesman under ETH: Dimension-dependent subexponential bound"
@@ -52,6 +51,10 @@
         "d",
         "B"
       ],
+      "sourceBasis": {
+        "kind": "derived",
+        "step": "On the integer-grid instances a tour of length at most n exists exactly when the induced grid graph has a Hamiltonian cycle. This also excludes an exact optimal-tour algorithm."
+      },
       "sources": [
         {
           "editionId": "journal",
@@ -101,7 +104,6 @@
         "Separately for each fixed integer d≥2 and fixed 0<ε<1−1/d."
       ],
       "reader": {
-        "explanation": "The original source reduction produces integer-grid inputs with threshold n.",
         "label": "Fixed-power exclusion",
         "revision": 1,
         "title": "Euclidean Traveling Salesman under SH: Fixed-power exclusion"

@@ -18,7 +18,6 @@
       "provenance": "literature",
       "qualifications": [],
       "reader": {
-        "explanation": "The reduction has a linear number of items in the combined number of variables and clauses. Its item bit lengths are polynomial, so the ETH argument also excludes a fixed polynomial factor in the complete input length.",
         "label": "Sublinear exponent in the number of items",
         "revision": 1,
         "title": "Subset Sum by item count under ETH"
@@ -30,6 +29,10 @@
         "p",
         "B"
       ],
+      "sourceBasis": {
+        "kind": "derived",
+        "step": "The reduction has a linear number of items in the combined number of variables and clauses. Its item bit lengths are polynomial, so the ETH argument also excludes a fixed polynomial factor in the complete input length."
+      },
       "sources": [
         {
           "editionId": "journal",

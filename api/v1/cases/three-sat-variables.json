@@ -91,7 +91,6 @@
       "provenance": "literature",
       "qualifications": [],
       "reader": {
-        "explanation": "The log factor multiplies the square root. The reduction encodes each row choice and incompatibility in a width-three formula with quadratically many variables.",
         "label": "Square-root exponent with a logarithmic factor",
         "revision": 1,
         "title": "3SAT under the k × k Clique Hypothesis: Square-root exponent with a logarithmic factor"
@@ -103,6 +102,10 @@
         "n",
         "B"
       ],
+      "sourceBasis": {
+        "kind": "derived",
+        "step": "The log factor multiplies the square root. The reduction encodes each row choice and incompatibility in a width-three formula with quadratically many variables."
+      },
       "sources": [
         {
           "editionId": "v3",
@@ -150,7 +153,6 @@
         "For each fixed 0<ε<1."
       ],
       "reader": {
-        "explanation": "Theorem 2.4 gives the equivalence to the whole variable-count exclusion family.",
         "label": "Fixed-power exclusion",
         "revision": 1,
         "title": "3SAT under SH: Fixed-power exclusion"

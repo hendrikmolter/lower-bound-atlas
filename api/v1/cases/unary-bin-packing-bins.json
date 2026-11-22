@@ -91,7 +91,6 @@
       "provenance": "literature",
       "qualifications": [],
       "reader": {
-        "explanation": "The source measures the capacity T and the number of items n separately. Conversion of its normalized hard inputs to unary has time polynomial in n and T, which can be absorbed into the displayed little-o rates.",
         "label": "Joint item-count and capacity bound",
         "revision": 1,
         "title": "Joint item-count and capacity bound under ETH"
@@ -104,6 +103,10 @@
         "k",
         "T"
       ],
+      "sourceBasis": {
+        "kind": "derived",
+        "step": "The source measures the capacity T and the number of items n separately. Conversion of its normalized hard inputs to unary has time polynomial in n and T, which can be absorbed into the displayed little-o rates."
+      },
       "sources": [
         {
           "editionId": "proceedings",

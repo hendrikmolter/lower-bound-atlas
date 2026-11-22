@@ -47,7 +47,6 @@
     "The function f is recursive, subject to the source’s computability and inverse-function conventions."
   ],
   "reader": {
-    "explanation": "The cited result assumes FPT ≠ W[t−1], which follows from FPT ≠ W[1] at each of these fixed depths.",
     "label": "Bound in the number of circuit inputs",
     "revision": 1
   },
@@ -60,6 +59,10 @@
     "n",
     "B"
   ],
+  "sourceBasis": {
+    "kind": "derived",
+    "step": "The cited result assumes FPT ≠ W[t−1], which follows from FPT ≠ W[1] at each of these fixed depths."
+  },
   "sources": [
     {
       "editionId": "journal",

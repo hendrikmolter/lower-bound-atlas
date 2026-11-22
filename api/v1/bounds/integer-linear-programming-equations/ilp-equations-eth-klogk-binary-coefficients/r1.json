@@ -32,7 +32,6 @@
   "provenance": "literature",
   "qualifications": [],
   "reader": {
-    "explanation": "The source excludes this running time already when the number of columns and the largest right-hand side entry are O(k log₂ k), with a nonnegative right-hand side. These instances are valid inputs to the general binary-coefficient task, so the same running time is excluded for an algorithm on that task.",
     "label": "Subexponential bound in k log k for binary coefficients",
     "revision": 1,
     "title": "Binary-coefficient integer linear programming under ETH"
@@ -44,6 +43,10 @@
     "k",
     "N"
   ],
+  "sourceBasis": {
+    "kind": "derived",
+    "step": "The source excludes this running time already when the number of columns and the largest right-hand side entry are O(k log₂ k), with a nonnegative right-hand side. These instances are valid inputs to the general binary-coefficient task, so the same running time is excluded for an algorithm on that task."
+  },
   "sources": [
     {
       "editionId": "journal",

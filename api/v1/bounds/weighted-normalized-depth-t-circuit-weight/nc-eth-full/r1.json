@@ -47,7 +47,6 @@
     "The function f is recursive, subject to the source’s computability and inverse-function conventions."
   ],
   "reader": {
-    "explanation": "The journal uses the premise that some SNP problem has no subexponential-time algorithm. Positive-rate variable-3SAT ETH implies this premise.",
     "label": "Bound in the full input length",
     "revision": 1
   },
@@ -59,6 +58,10 @@
     "k",
     "B"
   ],
+  "sourceBasis": {
+    "kind": "derived",
+    "step": "The journal uses the premise that some SNP problem has no subexponential-time algorithm. Positive-rate variable-3SAT ETH implies this premise."
+  },
   "sources": [
     {
       "editionId": "journal",

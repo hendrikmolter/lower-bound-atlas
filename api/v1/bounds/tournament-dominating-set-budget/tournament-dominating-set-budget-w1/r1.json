@@ -32,7 +32,6 @@
     "For every recursive f within the source convention for easily computable complexity functions and inverses."
   ],
   "reader": {
-    "explanation": "The cited theorem establishes hardness for the second level of the linear-reduction hierarchy. Combined with Theorem 2.2 and with the source convention on admissible complexity functions, this excludes this complete-input running time. On explicit tournaments the number of vertices and input size are polynomially related.",
     "label": "Sublinear exponent in the budget under FPT ≠ W[1]",
     "revision": 1,
     "title": "Dominating Set on tournaments under FPT ≠ W[1]"
@@ -44,6 +43,10 @@
     "k",
     "N"
   ],
+  "sourceBasis": {
+    "kind": "derived",
+    "step": "The cited theorem establishes hardness for the second level of the linear-reduction hierarchy. Combined with Theorem 2.2 and with the source convention on admissible complexity functions, this excludes this complete-input running time. On explicit tournaments the number of vertices and input size are polynomially related."
+  },
   "sources": [
     {
       "editionId": "journal",

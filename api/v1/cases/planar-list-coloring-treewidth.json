@@ -77,7 +77,6 @@
         "The parameter factor f is an arbitrary computable function and the exponent of B is an arbitrary fixed constant."
       ],
       "reader": {
-        "explanation": "The reduction from Grid Tiling produces planar graphs with intrinsic treewidth bounded by a function of the source parameter. The lists and palette are part of the input.",
         "label": "Fixed-parameter tractability",
         "revision": 1,
         "title": "Planar List Coloring under FPT ≠ W[1]: Fixed-parameter tractability"

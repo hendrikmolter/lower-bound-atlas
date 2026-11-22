@@ -15,7 +15,6 @@
   "provenance": "literature",
   "qualifications": [],
   "reader": {
-    "explanation": "The sources use a polynomial factor in graph order. The reductions use explicit instances with distinct endpoints, so their demand lists and complete encodings have length polynomial in graph order.",
     "label": "Bound in the treewidth",
     "revision": 1
   },
@@ -26,6 +25,10 @@
     "t",
     "B"
   ],
+  "sourceBasis": {
+    "kind": "derived",
+    "step": "The sources use a polynomial factor in graph order. The reductions use explicit instances with distinct endpoints, so their demand lists and complete encodings have length polynomial in graph order."
+  },
   "sources": [
     {
       "editionId": "journal",

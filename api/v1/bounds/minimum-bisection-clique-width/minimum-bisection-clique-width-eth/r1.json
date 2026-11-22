@@ -32,7 +32,6 @@
     "For every computable function f."
   ],
   "reader": {
-    "explanation": "An algorithm for intrinsic clique-width could ignore the supplied expression. Intrinsic clique-width is at most the width of that expression, and nondecreasing upper envelopes of the prefactor and exponent preserve the little-o scale.",
     "label": "Sublinear exponent in clique-width",
     "revision": 1,
     "title": "Sublinear exponent in clique-width under ETH"
@@ -44,6 +43,10 @@
     "t",
     "n"
   ],
+  "sourceBasis": {
+    "kind": "derived",
+    "step": "An algorithm for intrinsic clique-width could ignore the supplied expression. Intrinsic clique-width is at most the width of that expression, and nondecreasing upper envelopes of the prefactor and exponent preserve the little-o scale."
+  },
   "sources": [
     {
       "editionId": "journal",

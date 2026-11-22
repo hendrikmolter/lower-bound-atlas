@@ -111,7 +111,6 @@
       "provenance": "literature",
       "qualifications": [],
       "reader": {
-        "explanation": "The reduction from 3-SAT uses a clique budget logarithmic in the number of variables and produces a graph of polynomial size. A solver within the stated time would give a quasipolynomial-time algorithm for 3-SAT.",
         "label": "Polynomial powers in the exponent",
         "revision": 2
       },
@@ -124,6 +123,10 @@
         "k",
         "n"
       ],
+      "sourceBasis": {
+        "kind": "derived",
+        "step": "The reduction from 3-SAT uses a clique budget logarithmic in the number of variables and produces a graph of polynomial size. A solver within the stated time would give a quasipolynomial-time algorithm for 3-SAT."
+      },
       "sources": [
         {
           "editionId": "journal",

@@ -46,7 +46,6 @@
     "For each fixed integer q ≥ 1."
   ],
   "reader": {
-    "explanation": "The source treats the matrix as a set of clauses or terms and uses positive-rate variable-3SAT ETH. The polynomial factor counts the variables in the matrix.",
     "label": "Tower bound at fixed quantifier depth",
     "revision": 1
   },

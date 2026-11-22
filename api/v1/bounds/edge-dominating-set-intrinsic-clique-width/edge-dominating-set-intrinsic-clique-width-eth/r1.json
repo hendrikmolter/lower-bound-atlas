@@ -32,7 +32,6 @@
     "For every computable f."
   ],
   "reader": {
-    "explanation": "The source theorem excludes the graph-order clock even when an expression of bounded width is available. An intrinsic-clock algorithm would also accept those graphs, as intrinsic clique-width is at most the supplied width. A nondecreasing majorant of a sublinear exponent remains sublinear.",
     "label": "Sublinear exponent in expression width",
     "revision": 1,
     "title": "Edge Dominating Set by intrinsic clique-width under ETH"
@@ -44,6 +43,10 @@
     "t",
     "n"
   ],
+  "sourceBasis": {
+    "kind": "derived",
+    "step": "The source theorem excludes the graph-order clock even when an expression of bounded width is available. An intrinsic-clock algorithm would also accept those graphs, as intrinsic clique-width is at most the supplied width. A nondecreasing majorant of a sublinear exponent remains sublinear."
+  },
   "sources": [
     {
       "editionId": "journal",

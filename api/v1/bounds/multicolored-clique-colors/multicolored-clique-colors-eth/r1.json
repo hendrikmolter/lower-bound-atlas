@@ -17,7 +17,6 @@
     "The bound excludes every computable prefactor f."
   ],
   "reader": {
-    "explanation": "The hard instances given by the source have equal-sized color classes and the same number of edges between each pair of classes.",
     "label": "Exponent sublinear in the number of color classes",
     "revision": 1,
     "title": "Multicolored Clique by number of color classes under ETH"

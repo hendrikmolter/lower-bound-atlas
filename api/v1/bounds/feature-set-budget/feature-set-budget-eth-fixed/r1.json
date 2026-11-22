@@ -30,7 +30,6 @@
   "provenance": "literature",
   "qualifications": [],
   "reader": {
-    "explanation": "This follows from the earlier W[1] bound and the source implication from ordinary ETH, with the same candidate space and without a parameter-dependent prefactor.",
     "label": "Sublinear exponent in the feature count",
     "revision": 1,
     "title": "Feature Set under ETH: Sublinear exponent in the feature count"
@@ -43,6 +42,10 @@
     "N",
     "M"
   ],
+  "sourceBasis": {
+    "kind": "derived",
+    "step": "This follows from the earlier W[1] bound and the source implication from ordinary ETH, with the same candidate space and without a parameter-dependent prefactor."
+  },
   "sources": [
     {
       "editionId": "journal",

@@ -115,7 +115,6 @@
         "For every fixed 0<ε<1."
       ],
       "reader": {
-        "explanation": "The same construction keeps both the deletion budget and the sum of graph order and size linear in the variable-plus-clause count of the source formula.",
         "historicalNote": [
           "This bound follows by composing the cited reductions with the SH exponent transfer. The cubic bipartite graph before crossing replacement has linear size in the formula. The local path reduction adds a constant number of vertices, and the final line graph is four-regular with deletion budget one plus a third of its order."
         ],
@@ -133,6 +132,10 @@
         "ε",
         "N"
       ],
+      "sourceBasis": {
+        "kind": "derived",
+        "step": "The same construction keeps both the deletion budget and the sum of graph order and size linear in the variable-plus-clause count of the source formula."
+      },
       "sources": [
         {
           "editionId": "journal",

@@ -50,7 +50,6 @@
     "For every fixed C ≥ 0."
   ],
   "reader": {
-    "explanation": "The column count is unrestricted. The proof uses Lin’s incidence matrix with exact-one rows in place of covering constraints.",
     "label": "Effective sublinear exponent with an all-ones right-hand side",
     "revision": 2,
     "title": "All-ones right-hand-side integer programming under FPT ≠ W[1]"

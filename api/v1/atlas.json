@@ -269,7 +269,6 @@
             "The parameter factor f is an arbitrary computable function and the exponent of B is an arbitrary fixed constant."
           ],
           "reader": {
-            "explanation": "The hardness reduction uses the vertex-deletion budget. Balance is measured against the order of the original graph.",
             "label": "Fixed-parameter tractability",
             "revision": 1,
             "title": "Balanced Vertex Separator under FPT ≠ W[1]: Fixed-parameter tractability"
@@ -1103,7 +1102,6 @@
             "The bound excludes every computable prefactor f."
           ],
           "reader": {
-            "explanation": "The original theorem uses the full instance measure and subexponential solvability of SNP. For explicit graphs after oversized thresholds are decided directly, the encoding length and graph order are polynomially related. The survey and textbook state the graph-order ETH form.",
             "label": "Exponent sublinear in the solution size",
             "revision": 1,
             "title": "Clique by solution size under ETH"
@@ -1206,7 +1204,6 @@
             "For each fixed ε strictly between zero and 1."
           ],
           "reader": {
-            "explanation": "The fixed-power savings apply with a prefactor bounded by an exponential of a fixed polynomial in k.",
             "label": "Fixed power saving in the solution size",
             "revision": 1,
             "title": "Clique by solution size under SH"
@@ -1293,7 +1290,6 @@
             "The bound excludes every computable prefactor f."
           ],
           "reader": {
-            "explanation": "W[1]-completeness applies to the threshold decision question because a clique of size at least k has a subset of exactly k vertices.",
             "label": "Fixed-parameter tractability",
             "revision": 2,
             "title": "Clique by solution size under FPT ≠ W[1]"
@@ -1634,7 +1630,6 @@
             "For each fixed ε strictly between zero and 1."
           ],
           "reader": {
-            "explanation": "Complementing the graph turns a clique into an independent set of the same size and preserves the number of vertices. The complement can be constructed in time polynomial in the complete input length.",
             "label": "Fixed power saving in the exponent",
             "revision": 2,
             "title": "Clique by number of vertices under SH"
@@ -1649,6 +1644,10 @@
             "ε",
             "B"
           ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "Complementing the graph turns a clique into an independent set of the same size and preserves the number of vertices. The complement can be constructed in time polynomial in the complete input length."
+          },
           "sources": [
             {
               "editionId": "v2",
@@ -2760,7 +2759,6 @@
           "provenance": "literature",
           "qualifications": [],
           "reader": {
-            "explanation": "The reduction produces normalized explicit instances whose encoding size is polynomial in the source formula size. Its hardness proof also excludes adding a fixed polynomial input factor.",
             "label": "Subexponential bound in the number of edges",
             "revision": 1,
             "title": "Subexponential bound in the number of edges under ETH"
@@ -2771,6 +2769,10 @@
           "runtimeSymbols": [
             "m"
           ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "The reduction produces normalized explicit instances whose encoding size is polynomial in the source formula size. Its hardness proof also excludes adding a fixed polynomial input factor."
+          },
           "sources": [
             {
               "editionId": "journal",
@@ -3048,7 +3050,6 @@
             "The parameter factor f is an arbitrary computable function and the exponent of B is an arbitrary fixed constant."
           ],
           "reader": {
-            "explanation": "The reduction from Dominating Set preserves the solution budget. W[2]-hardness excludes fixed-parameter tractability under FPT ≠ W[1] because W[1] is contained in W[2].",
             "label": "Fixed-parameter tractability",
             "revision": 1,
             "title": "Connected Dominating Set under FPT ≠ W[1]: Fixed-parameter tractability"
@@ -3267,7 +3268,6 @@
           "provenance": "literature",
           "qualifications": [],
           "reader": {
-            "explanation": "The proof first gives the linear-budget reduction to Connected Vertex Cover and then uses it for an edge-domination result.",
             "label": "Subexponential-time bound",
             "revision": 1,
             "title": "Connected Vertex Cover under ETH: Subexponential-time bound"
@@ -4188,7 +4188,6 @@
           "provenance": "literature",
           "qualifications": [],
           "reader": {
-            "explanation": "A rooted out-star demand counts one more vertex than the nonroot terminal set. The underlying unweighted Steiner Tree bound transfers by replacing each undirected edge by both unit-cost orientations.",
             "label": "Subexponential-time bound",
             "revision": 1,
             "title": "Directed Steiner Tree under ETH: Subexponential-time bound"
@@ -4200,6 +4199,10 @@
             "p",
             "n"
           ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "A rooted out-star demand counts one more vertex than the nonroot terminal set. The underlying unweighted Steiner Tree bound transfers by replacing each undirected edge by both unit-cost orientations."
+          },
           "sources": [
             {
               "editionId": "proceedings",
@@ -4953,7 +4956,6 @@
           "provenance": "literature",
           "qualifications": [],
           "reader": {
-            "explanation": "The cited preprint states these width interfaces. Its monopolar hard family is the scope used here.",
             "label": "Subexponential bound in squared width",
             "revision": 1,
             "title": "Subexponential bound in squared width under ETH"
@@ -5030,7 +5032,6 @@
           "provenance": "literature",
           "qualifications": [],
           "reader": {
-            "explanation": "The bound follows by applying the construction of Liu and Meng to a compact CNF encoding of Multicolored Clique and using the effective convergence cutoff.",
             "historicalNote": [
               "Liu and Meng state the quadratic lower bound under ETH in Theorem 3.1 and Corollary 3.10. The FPT ≠ W[1] exclusion is a direct consequence of their construction and the source-size calculation in the linked derivation."
             ],
@@ -5551,7 +5552,6 @@
           "provenance": "literature",
           "qualifications": [],
           "reader": {
-            "explanation": "The cited preprint states these width interfaces. Its monopolar hard family is the scope used here.",
             "label": "Subexponential bound in squared width",
             "revision": 1,
             "title": "Subexponential bound in squared width under ETH"
@@ -5628,7 +5628,6 @@
           "provenance": "literature",
           "qualifications": [],
           "reader": {
-            "explanation": "The bound follows by applying the construction of Liu and Meng to a compact CNF encoding of Multicolored Clique and using the effective convergence cutoff.",
             "historicalNote": [
               "Liu and Meng state the quadratic lower bound under ETH in Theorem 3.1 and Corollary 3.10. The FPT ≠ W[1] exclusion is a direct consequence of their construction and the source-size calculation in the linked derivation."
             ],
@@ -5815,7 +5814,6 @@
           "provenance": "literature",
           "qualifications": [],
           "reader": {
-            "explanation": "The cited preprint states these width interfaces. Its monopolar hard family is the scope used here.",
             "label": "Subexponential bound in squared width",
             "revision": 1,
             "title": "Subexponential bound in squared width under ETH"
@@ -5892,7 +5890,6 @@
           "provenance": "literature",
           "qualifications": [],
           "reader": {
-            "explanation": "The bound follows by applying the construction of Liu and Meng to a compact CNF encoding of Multicolored Clique and using the effective convergence cutoff.",
             "historicalNote": [
               "Liu and Meng state the quadratic lower bound under ETH in Theorem 3.1 and Corollary 3.10. The FPT ≠ W[1] exclusion is a direct consequence of their construction and the source-size calculation in the linked derivation."
             ],
@@ -6080,7 +6077,6 @@
           "provenance": "literature",
           "qualifications": [],
           "reader": {
-            "explanation": "The cited preprint states these width interfaces. Its monopolar hard family is the scope used here.",
             "label": "Subexponential bound in squared width",
             "revision": 1,
             "title": "Subexponential bound in squared width under ETH"
@@ -6157,7 +6153,6 @@
           "provenance": "literature",
           "qualifications": [],
           "reader": {
-            "explanation": "The bound follows by applying the construction of Liu and Meng to a compact CNF encoding of Multicolored Clique and using the effective convergence cutoff.",
             "historicalNote": [
               "Liu and Meng state the quadratic lower bound under ETH in Theorem 3.1 and Corollary 3.10. The FPT ≠ W[1] exclusion is a direct consequence of their construction and the source-size calculation in the linked derivation."
             ],
@@ -6721,7 +6716,6 @@
           "provenance": "literature",
           "qualifications": [],
           "reader": {
-            "explanation": "The reduction from 3-SAT uses a clique budget logarithmic in the number of variables and produces a graph of polynomial size. A solver within the stated time would give a quasipolynomial-time algorithm for 3-SAT.",
             "label": "Polynomial powers in the exponent",
             "revision": 2
           },
@@ -6734,6 +6728,10 @@
             "k",
             "n"
           ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "The reduction from 3-SAT uses a clique budget logarithmic in the number of variables and produces a graph of polynomial size. A solver within the stated time would give a quasipolynomial-time algorithm for 3-SAT."
+          },
           "sources": [
             {
               "editionId": "journal",
@@ -7220,7 +7218,6 @@
             "For every computable f."
           ],
           "reader": {
-            "explanation": "The source theorem excludes the graph-order clock even when an expression of bounded width is available. An intrinsic-clock algorithm would also accept those graphs, as intrinsic clique-width is at most the supplied width. A nondecreasing majorant of a sublinear exponent remains sublinear.",
             "label": "Sublinear exponent in expression width",
             "revision": 1,
             "title": "Edge Dominating Set by intrinsic clique-width under ETH"
@@ -7232,6 +7229,10 @@
             "t",
             "n"
           ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "The source theorem excludes the graph-order clock even when an expression of bounded width is available. An intrinsic-clock algorithm would also accept those graphs, as intrinsic clique-width is at most the supplied width. A nondecreasing majorant of a sublinear exponent remains sublinear."
+          },
           "sources": [
             {
               "editionId": "journal",
@@ -7432,7 +7433,6 @@
             "Separately for each fixed integer d ≥ 2."
           ],
           "reader": {
-            "explanation": "On the integer-grid instances a tour of length at most n exists exactly when the induced grid graph has a Hamiltonian cycle. This also excludes an exact optimal-tour algorithm.",
             "label": "Dimension-dependent subexponential bound",
             "revision": 1,
             "title": "Euclidean Traveling Salesman under ETH: Dimension-dependent subexponential bound"
@@ -7445,6 +7445,10 @@
             "d",
             "B"
           ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "On the integer-grid instances a tour of length at most n exists exactly when the induced grid graph has a Hamiltonian cycle. This also excludes an exact optimal-tour algorithm."
+          },
           "sources": [
             {
               "editionId": "journal",
@@ -7494,7 +7498,6 @@
             "Separately for each fixed integer d≥2 and fixed 0<ε<1−1/d."
           ],
           "reader": {
-            "explanation": "The original source reduction produces integer-grid inputs with threshold n.",
             "label": "Fixed-power exclusion",
             "revision": 1,
             "title": "Euclidean Traveling Salesman under SH: Fixed-power exclusion"
@@ -7762,7 +7765,6 @@
             "The parameter factor f is an arbitrary computable function and the exponent of B is an arbitrary fixed constant."
           ],
           "reader": {
-            "explanation": "For a Clique instance with target ℓ, take one variable per position, with host vertices as values. For each pair of positions, list the ordered adjacent host pairs in a binary constraint table. These tables require distinct adjacent images and have a clique as the primal graph, so its treewidth is ℓ−1 for ℓ≥2. After answering targets ℓ below two or above the host order directly, the tables have size polynomial in the complete source encoding.",
             "label": "Fixed-parameter tractability",
             "revision": 1,
             "title": "Explicit-table CSP under FPT ≠ W[1]: Fixed-parameter tractability"
@@ -7916,7 +7918,6 @@
             "For source-admissible recursive f."
           ],
           "reader": {
-            "explanation": "The input-size clock uses the complete representation.",
             "label": "Sublinear exponent in the solution budget",
             "revision": 1,
             "title": "Feature Set under ETH: Sublinear exponent in the solution budget"
@@ -7973,7 +7974,6 @@
           "provenance": "literature",
           "qualifications": [],
           "reader": {
-            "explanation": "This follows from the earlier W[1] bound and the source implication from ordinary ETH, with the same candidate space and without a parameter-dependent prefactor.",
             "label": "Sublinear exponent in the feature count",
             "revision": 1,
             "title": "Feature Set under ETH: Sublinear exponent in the feature count"
@@ -7986,6 +7986,10 @@
             "N",
             "M"
           ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "This follows from the earlier W[1] bound and the source implication from ordinary ETH, with the same candidate space and without a parameter-dependent prefactor."
+          },
           "sources": [
             {
               "editionId": "journal",
@@ -8040,7 +8044,6 @@
             "For any recursive f subject to the source convention that the complexity functions and their inverses be easily computable."
           ],
           "reader": {
-            "explanation": "The source gives hardness for the second level of the linear-reduction hierarchy and thereby the stated consequence under FPT ≠ W[1]. Standard W[2]-hardness alone does not supply this exponent.",
             "label": "Linear-reduction lower bound",
             "revision": 1,
             "title": "Feature Set under FPT ≠ W[1]: Linear-reduction lower bound"
@@ -8053,6 +8056,10 @@
             "N",
             "M"
           ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "The source gives hardness for the second level of the linear-reduction hierarchy and thereby the stated consequence under FPT ≠ W[1]. Standard W[2]-hardness alone does not supply this exponent."
+          },
           "sources": [
             {
               "editionId": "journal",
@@ -8436,7 +8443,6 @@
             "For every fixed 0<ε<1."
           ],
           "reader": {
-            "explanation": "The same construction keeps both the deletion budget and the sum of graph order and size linear in the variable-plus-clause count of the source formula.",
             "historicalNote": [
               "This bound follows by composing the cited reductions with the SH exponent transfer. The cubic bipartite graph before crossing replacement has linear size in the formula. The local path reduction adds a constant number of vertices, and the final line graph is four-regular with deletion budget one plus a third of its order."
             ],
@@ -8454,6 +8460,10 @@
             "ε",
             "N"
           ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "The same construction keeps both the deletion budget and the sum of graph order and size linear in the variable-plus-clause count of the source formula."
+          },
           "sources": [
             {
               "editionId": "journal",
@@ -8771,7 +8781,6 @@
             "For every fixed 0<ε<1."
           ],
           "reader": {
-            "explanation": "The same construction keeps both the deletion budget and the sum of graph order and size linear in the variable-plus-clause count of the source formula.",
             "historicalNote": [
               "This bound follows by composing the cited reductions with the SH exponent transfer. The cubic bipartite graph before crossing replacement has linear size in the formula. The local path reduction adds a constant number of vertices, and the final line graph is four-regular with deletion budget one plus a third of its order."
             ],
@@ -8789,6 +8798,10 @@
             "ε",
             "N"
           ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "The same construction keeps both the deletion budget and the sum of graph order and size linear in the variable-plus-clause count of the source formula."
+          },
           "sources": [
             {
               "editionId": "journal",
@@ -9028,7 +9041,6 @@
             "Separately for each fixed integer r ≥ 3."
           ],
           "reader": {
-            "explanation": "At fixed width, bounding s bounds the number of literal occurrences as well.",
             "label": "Subexponential-time bound",
             "revision": 1,
             "title": "Fixed-width SAT under ETH: Subexponential-time bound"
@@ -9040,6 +9052,10 @@
             "s",
             "B"
           ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "At fixed width, bounding s bounds the number of literal occurrences as well."
+          },
           "sources": [
             {
               "editionId": "journal",
@@ -9094,7 +9110,6 @@
             "For each fixed integer r≥3 and each fixed 0<ε<1."
           ],
           "reader": {
-            "explanation": "At fixed width the sum of clauses and declared variables also bounds the number of literal occurrences.",
             "label": "Fixed-power exclusion",
             "revision": 1,
             "title": "Fixed-width SAT under SH: Fixed-power exclusion"
@@ -9107,6 +9122,10 @@
             "r",
             "B"
           ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "At fixed width the sum of clauses and declared variables also bounds the number of literal occurrences."
+          },
           "sources": [
             {
               "editionId": "v2",
@@ -9315,7 +9334,6 @@
             "For every fixed integer r≥3."
           ],
           "reader": {
-            "explanation": "Width is fixed separately before the input.",
             "label": "Subexponential-time bound",
             "revision": 1,
             "title": "Fixed-width SAT under ETH: Subexponential-time bound"
@@ -9382,7 +9400,6 @@
             "Separately for each fixed integer a≥2, with the fixed clause-width bound r=2a."
           ],
           "reader": {
-            "explanation": "The statement concerns formulas of width at most 2a.",
             "label": "Bound for fixed even clause width",
             "revision": 1,
             "title": "Fixed-width SAT under the k × k Clique Hypothesis: Bound for fixed even clause width"
@@ -9442,7 +9459,6 @@
             "Separately for each fixed integer r≥3 and each fixed 0<ε<1."
           ],
           "reader": {
-            "explanation": "The whole fixed-power family is equivalent to SH for each separately fixed clause width.",
             "label": "Fixed-power exclusion",
             "revision": 1,
             "title": "Fixed-width SAT under SH: Fixed-power exclusion"
@@ -10131,7 +10147,6 @@
           "provenance": "literature",
           "qualifications": [],
           "reader": {
-            "explanation": "Apply the source theorem with h(n)=n and p≤2n. A fixed polynomial in the explicit graph encoding is absorbed by the positive-rate gap.",
             "label": "Subexponential-time bound in total order",
             "revision": 1,
             "title": "Graph Homomorphism under ETH: Subexponential-time bound in total order"
@@ -10143,6 +10158,10 @@
             "p",
             "B"
           ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "Apply the source theorem with h(n)=n and p≤2n. A fixed polynomial in the explicit graph encoding is absorbed by the positive-rate gap."
+          },
           "sources": [
             {
               "editionId": "journal",
@@ -10190,7 +10209,6 @@
             "For each fixed 0<ε<1."
           ],
           "reader": {
-            "explanation": "The input vertex count is summed over the two explicit graphs.",
             "label": "Fixed-power exclusion",
             "revision": 1,
             "title": "Graph Homomorphism under SH: Fixed-power exclusion"
@@ -10436,7 +10454,6 @@
           "provenance": "literature",
           "qualifications": [],
           "reader": {
-            "explanation": "The source construction produces trees of diameter at most four.",
             "label": "Subexponential bound on trees",
             "revision": 1,
             "title": "Subexponential bound on trees under ETH"
@@ -11160,7 +11177,6 @@
             "Separately for every fixed 0 < a < 1."
           ],
           "reader": {
-            "explanation": "The forward direction uses a linear-size reduction from satisfiability. The converse encodes a cycle traversal in a CNF of near-linear bit length in the number of vertices plus edges.",
             "label": "Fixed-power exponent in the number of vertices plus edges",
             "revision": 1,
             "title": "Fixed-power bounds under SH"
@@ -11366,7 +11382,6 @@
           "provenance": "literature",
           "qualifications": [],
           "reader": {
-            "explanation": "Exercise 14.2(e) asks for a linear reduction from 3SAT to Hamiltonian Cycle. After sparsification, the source has linearly many variables and clauses, so the graph order is linear in the source variable count.",
             "label": "Exponent in number of vertices",
             "revision": 1,
             "title": "Exponent in number of vertices under ETH"
@@ -11378,6 +11393,10 @@
             "n",
             "B"
           ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "Exercise 14.2(e) asks for a linear reduction from 3SAT to Hamiltonian Cycle. After sparsification, the source has linearly many variables and clauses, so the graph order is linear in the source variable count."
+          },
           "sources": [
             {
               "editionId": "book",
@@ -13443,7 +13462,6 @@
           "provenance": "literature",
           "qualifications": [],
           "reader": {
-            "explanation": "The published theorem is stated by linear rank-width. Rank-width is at most linear rank-width, and taking a monotone upper envelope preserves the exponent scale.",
             "label": "Subexponential bound in squared width",
             "revision": 1,
             "title": "Subexponential bound in squared width under ETH"
@@ -13455,6 +13473,10 @@
             "p",
             "n"
           ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "The published theorem is stated by linear rank-width. Rank-width is at most linear rank-width, and taking a monotone upper envelope preserves the exponent scale."
+          },
           "sources": [
             {
               "editionId": "proceedings",
@@ -13815,7 +13837,6 @@
           "provenance": "literature",
           "qualifications": [],
           "reader": {
-            "explanation": "The source constructs a vertex order. The false-twin expansion preserves low supplied width, and a rank decomposition can be supplied by using the order along a caterpillar.",
             "label": "Subexponential bound in squared width",
             "revision": 1,
             "title": "Subexponential bound in squared width under ETH"
@@ -13827,6 +13848,10 @@
             "p",
             "n"
           ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "The source constructs a vertex order. The false-twin expansion preserves low supplied width, and a rank decomposition can be supplied by using the order along a caterpillar."
+          },
           "sources": [
             {
               "editionId": "proceedings",
@@ -14195,7 +14220,6 @@
           "provenance": "literature",
           "qualifications": [],
           "reader": {
-            "explanation": "The source constructs a vertex order. The false-twin expansion preserves low supplied width, and a rank decomposition can be supplied by using the order along a caterpillar.",
             "label": "Subexponential bound in squared width",
             "revision": 1,
             "title": "Subexponential bound in squared width under ETH"
@@ -14207,6 +14231,10 @@
             "p",
             "n"
           ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "The source constructs a vertex order. The false-twin expansion preserves low supplied width, and a rank decomposition can be supplied by using the order along a caterpillar."
+          },
           "sources": [
             {
               "editionId": "proceedings",
@@ -14841,7 +14869,6 @@
           "provenance": "literature",
           "qualifications": [],
           "reader": {
-            "explanation": "On the hard instances the explicit input length is polynomial in k, so a fixed polynomial factor is absorbed in the exponent.",
             "label": "Subexponential bound in k log k",
             "revision": 1,
             "title": "Subexponential bound in k log k under ETH"
@@ -14853,6 +14880,10 @@
             "k",
             "N"
           ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "On the hard instances the explicit input length is polynomial in k, so a fixed polynomial factor is absorbed in the exponent."
+          },
           "sources": [
             {
               "editionId": "journal",
@@ -14900,7 +14931,6 @@
           "provenance": "literature",
           "qualifications": [],
           "reader": {
-            "explanation": "The source excludes this running time already when the number of columns and the largest right-hand side entry are O(k log₂ k), with a nonnegative right-hand side. These instances are valid inputs to the general binary-coefficient task, so the same running time is excluded for an algorithm on that task.",
             "label": "Subexponential bound in k log k for binary coefficients",
             "revision": 1,
             "title": "Binary-coefficient integer linear programming under ETH"
@@ -14912,6 +14942,10 @@
             "k",
             "N"
           ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "The source excludes this running time already when the number of columns and the largest right-hand side entry are O(k log₂ k), with a nonnegative right-hand side. These instances are valid inputs to the general binary-coefficient task, so the same running time is excluded for an algorithm on that task."
+          },
           "sources": [
             {
               "editionId": "journal",
@@ -14977,7 +15011,6 @@
             "For every fixed C ≥ 0."
           ],
           "reader": {
-            "explanation": "The column count is unrestricted. The proof uses Lin’s incidence matrix with exact-one rows in place of covering constraints.",
             "label": "Effective sublinear exponent with an all-ones right-hand side",
             "revision": 2,
             "title": "All-ones right-hand-side integer programming under FPT ≠ W[1]"
@@ -16237,7 +16270,6 @@
           "provenance": "literature",
           "qualifications": [],
           "reader": {
-            "explanation": "Number the occurring variables consecutively, discard tautologies and repeated literals, and add two fresh variables forced to opposite values by unit clauses. For each clause, write its satisfying bits in the corresponding positions and fill every other position with one auxiliary symbol. Make one word for each choice of filler. With L+1 fillers, at least one filler is absent from any center. Its words force a satisfying bit in each clause, and every satisfying assignment agrees with every word. The two unit clauses ensure that both bits and all fillers occur, so q=d+4. For n original variables the radius is d=n+1, preserving effective sublinearity, and the encoding has polynomial length. A finite nonnegative exponent with a computable convergence threshold has a computable effectively sublinear upper bound: use a fixed integer bound before the first threshold, and thereafter take the least of the bounds d/j for all j from 1 to d whose threshold has been reached, rounding up. Every fixed precision is eventually reached.",
             "label": "Effective linear-exponent bound",
             "revision": 1
           },
@@ -16250,6 +16282,10 @@
             "L",
             "q"
           ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "Add opposite unit clauses on two fresh variables. With L=n+2 positions and L+1 filler symbols, the two clauses ensure that both truth values and all fillers occur, giving q=d+4. Some filler is absent from every length-L center. The words using that filler require a satisfying literal in every clause. Conversely, a satisfying assignment agrees with every word. The encoding is polynomial and d=n+1 preserves the effective exponent scale."
+          },
           "sources": [
             {
               "editionId": "journal",
@@ -16860,7 +16896,6 @@
             "There is no alphabet-dependent prefactor."
           ],
           "reader": {
-            "explanation": "Number the occurring variables consecutively, discard tautologies and repeated literals, and add two fresh variables forced to opposite values by unit clauses. For each clause, write its satisfying bits in the corresponding positions and fill every other position with one auxiliary symbol. Make one word for each choice of filler. With 2L−1 fillers, at least one filler is absent from any center. Its words force a satisfying bit in each clause, and every satisfying assignment agrees with every word. The two unit clauses ensure that both bits and all fillers occur, so q=2d+3. For n original variables the radius is d=n+1, preserving effective sublinearity, and the encoding has polynomial length.",
             "label": "One agreement with a balanced alphabet",
             "revision": 1
           },
@@ -16872,6 +16907,10 @@
             "N",
             "C"
           ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "Add opposite unit clauses on two fresh variables. With L=n+2 positions and 2L−1 filler symbols, the two clauses ensure that both truth values and all fillers occur, giving q=2d+3. Some filler is absent from every length-L center. The words using that filler require a satisfying literal in every clause. Conversely, a satisfying assignment agrees with every word. The encoding is polynomial and d=n+1 preserves the effective exponent scale."
+          },
           "sources": [
             {
               "editionId": "journal",
@@ -17362,7 +17401,6 @@
           "provenance": "literature",
           "qualifications": [],
           "reader": {
-            "explanation": "This exclusion is the defining statement of the k × k Clique Hypothesis.",
             "label": "Defining lower bound",
             "revision": 2
           },
@@ -18453,7 +18491,6 @@
           "provenance": "literature",
           "qualifications": [],
           "reader": {
-            "explanation": "Corollary 13 gives the parameter dependence. Theorem 12 uses a reduction of polynomial size in the source clique parameter, so adding a fixed polynomial input factor preserves the contradiction.",
             "label": "Subexponential bound in k log k",
             "revision": 1,
             "title": "Subexponential bound in k log k under ETH"
@@ -18465,6 +18502,10 @@
             "k",
             "N"
           ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "Corollary 13 gives the parameter dependence. Theorem 12 uses a reduction of polynomial size in the source clique parameter, so adding a fixed polynomial input factor preserves the contradiction."
+          },
           "sources": [
             {
               "editionId": "journal",
@@ -18685,7 +18726,6 @@
           "provenance": "literature",
           "qualifications": [],
           "reader": {
-            "explanation": "The Cycle Packing lower bound under this hypothesis combines with the reduction in Lemma C.22. The reduction attaches a private three-vertex path and its closing edges at each vertex. A spanning cycle cover uses either a private triangle or a private four-cycle through the attachment vertex. The threshold increases by the original number of vertices, the complete output size grows polynomially, and the supplied width increases by at most three.",
             "label": "Sublinear exponent at the p log p scale",
             "revision": 1,
             "title": "Maximum Cycle Cover under the k × k Clique Hypothesis"
@@ -18697,6 +18737,10 @@
             "p",
             "B"
           ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "The Cycle Packing lower bound under this hypothesis combines with the reduction in Lemma C.22. The reduction attaches a private three-vertex path and its closing edges at each vertex. A spanning cycle cover uses either a private triangle or a private four-cycle through the attachment vertex. The threshold increases by the original number of vertices, the complete output size grows polynomially, and the supplied width increases by at most three."
+          },
           "sources": [
             {
               "editionId": "v3",
@@ -19067,7 +19111,6 @@
             "For every computable function f."
           ],
           "reader": {
-            "explanation": "An algorithm for intrinsic clique-width could ignore the supplied expression. Intrinsic clique-width is at most the width of that expression, and nondecreasing upper envelopes of the prefactor and exponent preserve the little-o scale.",
             "label": "Sublinear exponent in clique-width",
             "revision": 1,
             "title": "Sublinear exponent in clique-width under ETH"
@@ -19079,6 +19122,10 @@
             "t",
             "n"
           ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "An algorithm for intrinsic clique-width could ignore the supplied expression. Intrinsic clique-width is at most the width of that expression, and nondecreasing upper envelopes of the prefactor and exponent preserve the little-o scale."
+          },
           "sources": [
             {
               "editionId": "journal",
@@ -19127,7 +19174,6 @@
             "The parameter factor f is an arbitrary computable function and the exponent of B is an arbitrary fixed constant."
           ],
           "reader": {
-            "explanation": "The parameterized reduction to Max-Cut constructs a clique-width expression. Adding as many isolated vertices as the Max-Cut graph has vertices converts the instance to Maximum Bisection. Complementation then sends a lower threshold b on the resulting 2n-vertex graph to the upper threshold n²−b. The complement expression is constructible from the original expression with at most twice as many labels. An algorithm for intrinsic clique-width can ignore the expression. Its parameter factor can be replaced by a computable nondecreasing majorant because intrinsic width is at most the expression width.",
             "label": "Fixed-parameter tractability",
             "revision": 1,
             "title": "Minimum Bisection under FPT ≠ W[1]: Fixed-parameter tractability"
@@ -19344,7 +19390,6 @@
             "The parameter factor f is an arbitrary computable function and the exponent of B is an arbitrary fixed constant."
           ],
           "reader": {
-            "explanation": "The parameterized reduction to Max-Cut constructs a clique-width expression. Adding as many isolated vertices as the Max-Cut graph has vertices converts the instance to Maximum Bisection. Complementation then sends a lower threshold b on the resulting 2n-vertex graph to the upper threshold n²−b. The complement expression is constructible from the original expression with at most twice as many labels. The constructed complement expression is supplied with the Minimum Bisection instance.",
             "label": "Fixed-parameter tractability",
             "revision": 1,
             "title": "Minimum Bisection under FPT ≠ W[1]: Fixed-parameter tractability"
@@ -19558,7 +19603,6 @@
           "provenance": "literature",
           "qualifications": [],
           "reader": {
-            "explanation": "This reduction allows the alphabet to grow with the instance. Its symbols have polynomial-size explicit encodings.",
             "label": "Subexponential bound in the common string length",
             "revision": 1,
             "title": "Subexponential bound in the common string length under ETH"
@@ -19569,6 +19613,10 @@
           "runtimeSymbols": [
             "n"
           ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "This reduction allows the alphabet to grow with the instance. Its symbols have polynomial-size explicit encodings."
+          },
           "sources": [
             {
               "editionId": "proceedings",
@@ -20132,7 +20180,6 @@
             "The bound excludes every computable prefactor f."
           ],
           "reader": {
-            "explanation": "The hard instances given by the source have equal-sized color classes and the same number of edges between each pair of classes.",
             "label": "Exponent sublinear in the number of color classes",
             "revision": 1,
             "title": "Multicolored Clique by number of color classes under ETH"
@@ -20191,7 +20238,6 @@
             "The bound excludes every computable prefactor f."
           ],
           "reader": {
-            "explanation": "The square hypothesis gives the stated exclusion for Clique. The color-copy construction preserves k and multiplies the graph order by k, which can be absorbed into the computable prefactor.",
             "label": "Exponent sublinear in the number of color classes",
             "revision": 1,
             "title": "Multicolored Clique by number of color classes under the k × k Clique Hypothesis"
@@ -20204,6 +20250,10 @@
             "k",
             "n"
           ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "The square hypothesis gives the stated exclusion for Clique. The color-copy construction preserves k and multiplies the graph order by k, which can be absorbed into the computable prefactor."
+          },
           "sources": [
             {
               "editionId": "v3",
@@ -20243,7 +20293,6 @@
             "For each fixed ε strictly between zero and 1."
           ],
           "reader": {
-            "explanation": "The clause-grouping graph in the source already has one independent color class per group. A clique of size k uses exactly one vertex from every class.",
             "label": "Fixed power saving in the number of color classes",
             "revision": 1,
             "title": "Multicolored Clique by number of color classes under SH"
@@ -20256,6 +20305,10 @@
             "n",
             "ε"
           ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "The clause-grouping graph in the source already has one independent color class per group. A clique of size k uses exactly one vertex from every class."
+          },
           "sources": [
             {
               "editionId": "notes",
@@ -20342,7 +20395,6 @@
             "The bound excludes every computable prefactor f."
           ],
           "reader": {
-            "explanation": "The color-copy reduction proves hardness from Clique. Deleting same-color edges and asking for a clique of size k proves membership in W[1].",
             "label": "Fixed-parameter tractability",
             "revision": 2,
             "title": "Multicolored Clique by number of color classes under FPT ≠ W[1]"
@@ -21017,7 +21069,6 @@
             "The parameter factor f is an arbitrary computable function and the exponent of B is an arbitrary fixed constant."
           ],
           "reader": {
-            "explanation": "The original reduction starts from Perfect Code. Interpreting red vertices as ground elements and each blue vertex neighborhood as a listed set preserves the budget and every odd-intersection test. The textbook also gives a reduction from Multicolored Clique.",
             "label": "Fixed-parameter tractability",
             "revision": 1,
             "title": "Odd Set under FPT ≠ W[1]: Fixed-parameter tractability"
@@ -23567,7 +23618,6 @@
             "The parameter factor f is an arbitrary computable function and the exponent of B is an arbitrary fixed constant."
           ],
           "reader": {
-            "explanation": "The reduction from Grid Tiling produces planar graphs with intrinsic treewidth bounded by a function of the source parameter. The lists and palette are part of the input.",
             "label": "Fixed-parameter tractability",
             "revision": 1,
             "title": "Planar List Coloring under FPT ≠ W[1]: Fixed-parameter tractability"
@@ -24825,7 +24875,6 @@
             "For each fixed integer q ≥ 1."
           ],
           "reader": {
-            "explanation": "The source treats the matrix as a set of clauses or terms and uses positive-rate variable-3SAT ETH. The polynomial factor counts the variables in the matrix.",
             "label": "Tower bound at fixed quantifier depth",
             "revision": 1
           },
@@ -25510,7 +25559,6 @@
           "provenance": "literature",
           "qualifications": [],
           "reader": {
-            "explanation": "The published theorem writes the polynomial factor in graph order n. On standard explicit unweighted inputs, one can normalize the budget to at most n − 1 and relabel vertices, so all threshold queries have length polynomial in n. Polynomially many such queries recover the minimum cost.",
             "label": "Sublinear exponent in the number of terminals",
             "revision": 1,
             "title": "Steiner Tree by terminal count under ETH"
@@ -25522,6 +25570,10 @@
             "k",
             "B"
           ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "The published theorem writes the polynomial factor in graph order n. On standard explicit unweighted inputs, one can normalize the budget to at most n − 1 and relabel vertices, so all threshold queries have length polynomial in n. Polynomially many such queries recover the minimum cost."
+          },
           "sources": [
             {
               "editionId": "focs",
@@ -25767,7 +25819,6 @@
             "The parameter factor f is an arbitrary computable function and the exponent of B is an arbitrary fixed constant."
           ],
           "reader": {
-            "explanation": "The reduction bounds the total number of selected vertices, including terminals, in an unweighted directed graph.",
             "label": "Fixed-parameter tractability",
             "revision": 1,
             "title": "Strongly Connected Steiner Subgraph under FPT ≠ W[1]: Fixed-parameter tractability"
@@ -26076,7 +26127,6 @@
             "The parameter factor f is an arbitrary computable function and the exponent of B is an arbitrary fixed constant."
           ],
           "reader": {
-            "explanation": "Use a complete graph on ℓ vertices as the pattern for a Clique instance with target ℓ. An injective edge-preserving image is an ℓ-clique, and the pattern has exactly ℓ(ℓ−1)/2 edges. Cases with ℓ greater than the host order can be answered directly.",
             "label": "Fixed-parameter tractability",
             "revision": 1,
             "title": "Subgraph Isomorphism under FPT ≠ W[1]: Fixed-parameter tractability"
@@ -26306,7 +26356,6 @@
           "provenance": "literature",
           "qualifications": [],
           "reader": {
-            "explanation": "The reduction has a linear number of items in the combined number of variables and clauses. Its item bit lengths are polynomial, so the ETH argument also excludes a fixed polynomial factor in the complete input length.",
             "label": "Sublinear exponent in the number of items",
             "revision": 1,
             "title": "Subset Sum by item count under ETH"
@@ -26318,6 +26367,10 @@
             "p",
             "B"
           ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "The reduction has a linear number of items in the combined number of variables and clauses. Its item bit lengths are polynomial, so the ETH argument also excludes a fixed polynomial factor in the complete input length."
+          },
           "sources": [
             {
               "editionId": "journal",
@@ -26557,7 +26610,6 @@
           "provenance": "literature",
           "qualifications": [],
           "reader": {
-            "explanation": "The reduction gives q=6M for a formula with M clauses. The set of distinct triples has size at most q³, so the displayed polynomial factor can be absorbed into the exponent.",
             "label": "Subexponential bound in the common part size",
             "revision": 1,
             "title": "Subexponential bound in the common part size under ETH"
@@ -26569,6 +26621,10 @@
             "q",
             "m"
           ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "The reduction gives q=6M for a formula with M clauses. The set of distinct triples has size at most q³, so the displayed polynomial factor can be absorbed into the exponent."
+          },
           "sources": [
             {
               "editionId": "journal",
@@ -26763,7 +26819,6 @@
             "For each fixed 0<ε<1."
           ],
           "reader": {
-            "explanation": "Deleting unused variables gives at most 3m occurring variables. The reverse bound uses the sparse clause-count comparison in Corollary 2.3.",
             "label": "Fixed-power exclusion",
             "revision": 1,
             "title": "3SAT under SH: Fixed-power exclusion"
@@ -26775,6 +26830,10 @@
             "m",
             "B"
           ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "Deleting unused variables leaves at most three variables per clause, so the variable-plus-clause measure is linear in the clause count."
+          },
           "sources": [
             {
               "editionId": "v2",
@@ -27035,7 +27094,6 @@
           "provenance": "literature",
           "qualifications": [],
           "reader": {
-            "explanation": "The log factor multiplies the square root. The reduction encodes each row choice and incompatibility in a width-three formula with quadratically many variables.",
             "label": "Square-root exponent with a logarithmic factor",
             "revision": 1,
             "title": "3SAT under the k × k Clique Hypothesis: Square-root exponent with a logarithmic factor"
@@ -27047,6 +27105,10 @@
             "n",
             "B"
           ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "The log factor multiplies the square root. The reduction encodes each row choice and incompatibility in a width-three formula with quadratically many variables."
+          },
           "sources": [
             {
               "editionId": "v3",
@@ -27094,7 +27156,6 @@
             "For each fixed 0<ε<1."
           ],
           "reader": {
-            "explanation": "Theorem 2.4 gives the equivalence to the whole variable-count exclusion family.",
             "label": "Fixed-power exclusion",
             "revision": 1,
             "title": "3SAT under SH: Fixed-power exclusion"
@@ -27492,7 +27553,6 @@
             "For every recursive f within the source convention for easily computable complexity functions and inverses."
           ],
           "reader": {
-            "explanation": "The cited theorem establishes hardness for the second level of the linear-reduction hierarchy. Combined with Theorem 2.2 and with the source convention on admissible complexity functions, this excludes this complete-input running time. On explicit tournaments the number of vertices and input size are polynomially related.",
             "label": "Sublinear exponent in the budget under FPT ≠ W[1]",
             "revision": 1,
             "title": "Dominating Set on tournaments under FPT ≠ W[1]"
@@ -27504,6 +27564,10 @@
             "k",
             "N"
           ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "The cited theorem establishes hardness for the second level of the linear-reduction hierarchy. Combined with Theorem 2.2 and with the source convention on admissible complexity functions, this excludes this complete-input running time. On explicit tournaments the number of vertices and input size are polynomially related."
+          },
           "sources": [
             {
               "editionId": "journal",
@@ -27694,7 +27758,6 @@
             "There exists δ > 0 such that the exclusion holds for every fixed C ≥ 0."
           ],
           "reader": {
-            "explanation": "The proof distinguishes two adjacent treewidth thresholds on graphs with a linear number of vertices from bounded-occurrence 3-SAT. The journal and checked author version use different theorem numbers.",
             "label": "Positive exponential rate in the number of vertices",
             "revision": 1,
             "title": "Treewidth computation by graph order under ETH"
@@ -28036,7 +28099,6 @@
           "provenance": "literature",
           "qualifications": [],
           "reader": {
-            "explanation": "The source measures the capacity T and the number of items n separately. Conversion of its normalized hard inputs to unary has time polynomial in n and T, which can be absorbed into the displayed little-o rates.",
             "label": "Joint item-count and capacity bound",
             "revision": 1,
             "title": "Joint item-count and capacity bound under ETH"
@@ -28049,6 +28111,10 @@
             "k",
             "T"
           ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "The source measures the capacity T and the number of items n separately. Conversion of its normalized hard inputs to unary has time polynomial in n and T, which can be absorbed into the displayed little-o rates."
+          },
           "sources": [
             {
               "editionId": "proceedings",
@@ -30611,7 +30677,6 @@
           "provenance": "literature",
           "qualifications": [],
           "reader": {
-            "explanation": "The sources use a polynomial factor in graph order. The reductions use explicit instances with distinct endpoints, so their demand lists and complete encodings have length polynomial in graph order.",
             "label": "Bound in the treewidth",
             "revision": 1
           },
@@ -30622,6 +30687,10 @@
             "t",
             "B"
           ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "The sources use a polynomial factor in graph order. The reductions use explicit instances with distinct endpoints, so their demand lists and complete encodings have length polynomial in graph order."
+          },
           "sources": [
             {
               "editionId": "journal",
@@ -31373,7 +31442,6 @@
             "The function f is recursive, subject to the source’s computability and inverse-function conventions."
           ],
           "reader": {
-            "explanation": "The journal uses the premise that some SNP problem has no subexponential-time algorithm. Positive-rate variable-3SAT ETH implies this premise.",
             "label": "Bound in the full input length",
             "revision": 1
           },
@@ -31385,6 +31453,10 @@
             "k",
             "B"
           ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "The journal uses the premise that some SNP problem has no subexponential-time algorithm. Positive-rate variable-3SAT ETH implies this premise."
+          },
           "sources": [
             {
               "editionId": "journal",
@@ -31447,7 +31519,6 @@
             "The exponent is bounded by k/r(k) for an unbounded nondecreasing function r."
           ],
           "reader": {
-            "explanation": "ETH implies FPT ≠ W[1]. The W-hierarchy inclusion then gives the premise of the cited input-count theorem.",
             "label": "Bound in the number of circuit inputs",
             "revision": 1
           },
@@ -31460,6 +31531,10 @@
             "n",
             "B"
           ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "ETH implies FPT ≠ W[1]. The W-hierarchy inclusion then gives the premise of the cited input-count theorem."
+          },
           "sources": [
             {
               "editionId": "journal",
@@ -31522,7 +31597,6 @@
             "The function f is recursive, subject to the source’s computability and inverse-function conventions."
           ],
           "reader": {
-            "explanation": "The cited result assumes FPT ≠ W[t−1], which follows from FPT ≠ W[1] at each of these fixed depths.",
             "label": "Bound in the number of circuit inputs",
             "revision": 1
           },
@@ -31535,6 +31609,10 @@
             "n",
             "B"
           ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "The cited result assumes FPT ≠ W[t−1], which follows from FPT ≠ W[1] at each of these fixed depths."
+          },
           "sources": [
             {
               "editionId": "journal",
@@ -31800,7 +31878,6 @@
           "provenance": "literature",
           "qualifications": [],
           "reader": {
-            "explanation": "The paper states its lower bound in the job count. On the constructed instances the scheduling numbers have polynomial bit length in the source graph size, so a fixed polynomial in the total bit length is absorbed by the source lower bound.",
             "label": "Exponent sublinear in k / log k",
             "revision": 1,
             "title": "Exponent sublinear in k / log k under ETH"
@@ -31813,6 +31890,10 @@
             "n",
             "N"
           ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "The paper states its lower bound in the job count. On the constructed instances the scheduling numbers have polynomial bit length in the source graph size, so a fixed polynomial in the total bit length is absorbed by the source lower bound."
+          },
           "sources": [
             {
               "editionId": "journal",
@@ -32003,7 +32084,6 @@
           "provenance": "literature",
           "qualifications": [],
           "reader": {
-            "explanation": "The paper states its lower bound in the job count. On the constructed instances the scheduling numbers have polynomial bit length in the source graph size, so a fixed polynomial in the total bit length is absorbed by the source lower bound.",
             "label": "Exponent sublinear in k / log k",
             "revision": 1,
             "title": "Exponent sublinear in k / log k under ETH"
@@ -32016,6 +32096,10 @@
             "n",
             "N"
           ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "The paper states its lower bound in the job count. On the constructed instances the scheduling numbers have polynomial bit length in the source graph size, so a fixed polynomial in the total bit length is absorbed by the source lower bound."
+          },
           "sources": [
             {
               "editionId": "journal",

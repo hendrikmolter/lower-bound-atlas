@@ -59,7 +59,6 @@
     "The bound excludes every computable prefactor f."
   ],
   "reader": {
-    "explanation": "W[1]-completeness applies to the threshold decision question because a clique of size at least k has a subset of exactly k vertices.",
     "label": "Fixed-parameter tractability",
     "revision": 2,
     "title": "Clique by solution size under FPT ≠ W[1]"

@@ -32,7 +32,6 @@
     "For each fixed 0<ε<1."
   ],
   "reader": {
-    "explanation": "Theorem 2.4 gives the equivalence to the whole variable-count exclusion family.",
     "label": "Fixed-power exclusion",
     "revision": 1,
     "title": "3SAT under SH: Fixed-power exclusion"

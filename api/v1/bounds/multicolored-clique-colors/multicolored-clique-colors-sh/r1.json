@@ -17,7 +17,6 @@
     "For each fixed ε strictly between zero and 1."
   ],
   "reader": {
-    "explanation": "The clause-grouping graph in the source already has one independent color class per group. A clique of size k uses exactly one vertex from every class.",
     "label": "Fixed power saving in the number of color classes",
     "revision": 1,
     "title": "Multicolored Clique by number of color classes under SH"
@@ -30,6 +29,10 @@
     "n",
     "ε"
   ],
+  "sourceBasis": {
+    "kind": "derived",
+    "step": "The clause-grouping graph in the source already has one independent color class per group. A clique of size k uses exactly one vertex from every class."
+  },
   "sources": [
     {
       "editionId": "notes",

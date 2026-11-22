@@ -126,7 +126,6 @@
       "provenance": "literature",
       "qualifications": [],
       "reader": {
-        "explanation": "The Cycle Packing lower bound under this hypothesis combines with the reduction in Lemma C.22. The reduction attaches a private three-vertex path and its closing edges at each vertex. A spanning cycle cover uses either a private triangle or a private four-cycle through the attachment vertex. The threshold increases by the original number of vertices, the complete output size grows polynomially, and the supplied width increases by at most three.",
         "label": "Sublinear exponent at the p log p scale",
         "revision": 1,
         "title": "Maximum Cycle Cover under the k × k Clique Hypothesis"
@@ -138,6 +137,10 @@
         "p",
         "B"
       ],
+      "sourceBasis": {
+        "kind": "derived",
+        "step": "The Cycle Packing lower bound under this hypothesis combines with the reduction in Lemma C.22. The reduction attaches a private three-vertex path and its closing edges at each vertex. A spanning cycle cover uses either a private triangle or a private four-cycle through the attachment vertex. The threshold increases by the original number of vertices, the complete output size grows polynomially, and the supplied width increases by at most three."
+      },
       "sources": [
         {
           "editionId": "v3",

@@ -20,7 +20,6 @@
       "provenance": "literature",
       "qualifications": [],
       "reader": {
-        "explanation": "The cited preprint states these width interfaces. Its monopolar hard family is the scope used here.",
         "label": "Subexponential bound in squared width",
         "revision": 1,
         "title": "Subexponential bound in squared width under ETH"
@@ -97,7 +96,6 @@
       "provenance": "literature",
       "qualifications": [],
       "reader": {
-        "explanation": "The bound follows by applying the construction of Liu and Meng to a compact CNF encoding of Multicolored Clique and using the effective convergence cutoff.",
         "historicalNote": [
           "Liu and Meng state the quadratic lower bound under ETH in Theorem 3.1 and Corollary 3.10. The FPT ≠ W[1] exclusion is a direct consequence of their construction and the source-size calculation in the linked derivation."
         ],

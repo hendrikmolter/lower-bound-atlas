@@ -32,7 +32,6 @@
     "For any recursive f subject to the source convention that the complexity functions and their inverses be easily computable."
   ],
   "reader": {
-    "explanation": "The source gives hardness for the second level of the linear-reduction hierarchy and thereby the stated consequence under FPT ≠ W[1]. Standard W[2]-hardness alone does not supply this exponent.",
     "label": "Linear-reduction lower bound",
     "revision": 1,
     "title": "Feature Set under FPT ≠ W[1]: Linear-reduction lower bound"
@@ -45,6 +44,10 @@
     "N",
     "M"
   ],
+  "sourceBasis": {
+    "kind": "derived",
+    "step": "The source gives hardness for the second level of the linear-reduction hierarchy and thereby the stated consequence under FPT ≠ W[1]. Standard W[2]-hardness alone does not supply this exponent."
+  },
   "sources": [
     {
       "editionId": "journal",

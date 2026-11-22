@@ -33,7 +33,6 @@
     "The parameter factor f is an arbitrary computable function and the exponent of B is an arbitrary fixed constant."
   ],
   "reader": {
-    "explanation": "The reduction from Dominating Set preserves the solution budget. W[2]-hardness excludes fixed-parameter tractability under FPT ≠ W[1] because W[1] is contained in W[2].",
     "label": "Fixed-parameter tractability",
     "revision": 1,
     "title": "Connected Dominating Set under FPT ≠ W[1]: Fixed-parameter tractability"

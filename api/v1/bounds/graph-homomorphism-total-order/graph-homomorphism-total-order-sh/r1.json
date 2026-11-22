@@ -32,7 +32,6 @@
     "For each fixed 0<ε<1."
   ],
   "reader": {
-    "explanation": "The input vertex count is summed over the two explicit graphs.",
     "label": "Fixed-power exclusion",
     "revision": 1,
     "title": "Graph Homomorphism under SH: Fixed-power exclusion"

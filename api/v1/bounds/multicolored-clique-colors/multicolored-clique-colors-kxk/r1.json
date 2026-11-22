@@ -17,7 +17,6 @@
     "The bound excludes every computable prefactor f."
   ],
   "reader": {
-    "explanation": "The square hypothesis gives the stated exclusion for Clique. The color-copy construction preserves k and multiplies the graph order by k, which can be absorbed into the computable prefactor.",
     "label": "Exponent sublinear in the number of color classes",
     "revision": 1,
     "title": "Multicolored Clique by number of color classes under the k × k Clique Hypothesis"
@@ -30,6 +29,10 @@
     "k",
     "n"
   ],
+  "sourceBasis": {
+    "kind": "derived",
+    "step": "The square hypothesis gives the stated exclusion for Clique. The color-copy construction preserves k and multiplies the graph order by k, which can be absorbed into the computable prefactor."
+  },
   "sources": [
     {
       "editionId": "v3",

@@ -20,7 +20,6 @@
         "There exists δ > 0 such that the exclusion holds for every fixed C ≥ 0."
       ],
       "reader": {
-        "explanation": "The proof distinguishes two adjacent treewidth thresholds on graphs with a linear number of vertices from bounded-occurrence 3-SAT. The journal and checked author version use different theorem numbers.",
         "label": "Positive exponential rate in the number of vertices",
         "revision": 1,
         "title": "Treewidth computation by graph order under ETH"

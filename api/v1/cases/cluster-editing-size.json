@@ -35,7 +35,6 @@
       "provenance": "literature",
       "qualifications": [],
       "reader": {
-        "explanation": "The reduction produces normalized explicit instances whose encoding size is polynomial in the source formula size. Its hardness proof also excludes adding a fixed polynomial input factor.",
         "label": "Subexponential bound in the number of edges",
         "revision": 1,
         "title": "Subexponential bound in the number of edges under ETH"
@@ -46,6 +45,10 @@
       "runtimeSymbols": [
         "m"
       ],
+      "sourceBasis": {
+        "kind": "derived",
+        "step": "The reduction produces normalized explicit instances whose encoding size is polynomial in the source formula size. Its hardness proof also excludes adding a fixed polynomial input factor."
+      },
       "sources": [
         {
           "editionId": "journal",

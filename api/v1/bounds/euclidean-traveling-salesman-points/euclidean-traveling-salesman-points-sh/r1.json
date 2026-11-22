@@ -34,7 +34,6 @@
     "Separately for each fixed integer d≥2 and fixed 0<ε<1−1/d."
   ],
   "reader": {
-    "explanation": "The original source reduction produces integer-grid inputs with threshold n.",
     "label": "Fixed-power exclusion",
     "revision": 1,
     "title": "Euclidean Traveling Salesman under SH: Fixed-power exclusion"

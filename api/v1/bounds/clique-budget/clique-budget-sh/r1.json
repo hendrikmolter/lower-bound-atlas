@@ -17,7 +17,6 @@
     "For each fixed ε strictly between zero and 1."
   ],
   "reader": {
-    "explanation": "The fixed-power savings apply with a prefactor bounded by an exponential of a fixed polynomial in k.",
     "label": "Fixed power saving in the solution size",
     "revision": 1,
     "title": "Clique by solution size under SH"

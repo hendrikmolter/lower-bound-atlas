@@ -33,7 +33,6 @@
     "The parameter factor f is an arbitrary computable function and the exponent of B is an arbitrary fixed constant."
   ],
   "reader": {
-    "explanation": "The original reduction starts from Perfect Code. Interpreting red vertices as ground elements and each blue vertex neighborhood as a listed set preserves the budget and every odd-intersection test. The textbook also gives a reduction from Multicolored Clique.",
     "label": "Fixed-parameter tractability",
     "revision": 1,
     "title": "Odd Set under FPT ≠ W[1]: Fixed-parameter tractability"

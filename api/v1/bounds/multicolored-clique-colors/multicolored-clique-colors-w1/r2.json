@@ -71,7 +71,6 @@
     "The bound excludes every computable prefactor f."
   ],
   "reader": {
-    "explanation": "The color-copy reduction proves hardness from Clique. Deleting same-color edges and asking for a clique of size k proves membership in W[1].",
     "label": "Fixed-parameter tractability",
     "revision": 2,
     "title": "Multicolored Clique by number of color classes under FPT ≠ W[1]"

@@ -17,7 +17,6 @@
     "The bound excludes every computable prefactor f."
   ],
   "reader": {
-    "explanation": "The original theorem uses the full instance measure and subexponential solvability of SNP. For explicit graphs after oversized thresholds are decided directly, the encoding length and graph order are polynomially related. The survey and textbook state the graph-order ETH form.",
     "label": "Exponent sublinear in the solution size",
     "revision": 1,
     "title": "Clique by solution size under ETH"

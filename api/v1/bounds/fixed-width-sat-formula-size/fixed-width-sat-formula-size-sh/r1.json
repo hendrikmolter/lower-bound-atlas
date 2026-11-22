@@ -32,7 +32,6 @@
     "For each fixed integer r≥3 and each fixed 0<ε<1."
   ],
   "reader": {
-    "explanation": "At fixed width the sum of clauses and declared variables also bounds the number of literal occurrences.",
     "label": "Fixed-power exclusion",
     "revision": 1,
     "title": "Fixed-width SAT under SH: Fixed-power exclusion"
@@ -45,6 +44,10 @@
     "r",
     "B"
   ],
+  "sourceBasis": {
+    "kind": "derived",
+    "step": "At fixed width the sum of clauses and declared variables also bounds the number of literal occurrences."
+  },
   "sources": [
     {
       "editionId": "v2",

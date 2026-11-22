@@ -30,7 +30,6 @@
   "provenance": "literature",
   "qualifications": [],
   "reader": {
-    "explanation": "The proof first gives the linear-budget reduction to Connected Vertex Cover and then uses it for an edge-domination result.",
     "label": "Subexponential-time bound",
     "revision": 1,
     "title": "Connected Vertex Cover under ETH: Subexponential-time bound"

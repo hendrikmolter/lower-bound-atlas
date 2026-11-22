@@ -32,7 +32,6 @@
     "Separately for each fixed integer r≥3 and each fixed 0<ε<1."
   ],
   "reader": {
-    "explanation": "The whole fixed-power family is equivalent to SH for each separately fixed clause width.",
     "label": "Fixed-power exclusion",
     "revision": 1,
     "title": "Fixed-width SAT under SH: Fixed-power exclusion"
