@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
   <title>About &amp; guide | Lower Bound Atlas</title>
-  <link rel="stylesheet" href="../assets/style.css?v=e6073c7e5ee58c77ccf689f306fa0a7717fc3f37">
+  <link rel="stylesheet" href="../assets/style.css?v=9226990474a054e11aaa6d463c603ccb4e97dc8d">
   
 </head>
 <body>
@@ -25,7 +25,7 @@
     <p>Start with a <a href="../index.html">problem</a> and choose a parameterization. On each hypothesis card, read the excluded running time together with its input restrictions and quantifiers. Open “Full statement” for the precise claim, the original paper and, for an atlas-derived result, the proof.</p>
     <p>To find out what survives under another hypothesis, select that hypothesis and a recovery status in the problem list. Each match identifies the historical ETH bound being compared. When citing a result, cite its original paper or proof. The statement’s revision permalink identifies the exact atlas entry you consulted.</p></section>
     <section id="working-with-agents"><h2>Working with agents</h2>
-    <p>Give your agent the <a href="../api/v1/atlas.json">JSON export</a> to explore the current edition. To prepare a contribution, give it a clone of the <a href="https://github.com/hendrikmolter/lower-bound-atlas">repository</a> with the <a href="https://github.com/hendrikmolter/lower-bound-atlas/blob/e6073c7e5ee58c77ccf689f306fa0a7717fc3f37/AGENTS.md">agent README</a>.</p>
+    <p>Give your agent the <a href="../api/v1/atlas.json">JSON export</a> to explore the current edition. To prepare a contribution, give it a clone of the <a href="https://github.com/hendrikmolter/lower-bound-atlas">repository</a> with the <a href="https://github.com/hendrikmolter/lower-bound-atlas/blob/9226990474a054e11aaa6d463c603ccb4e97dc8d/AGENTS.md">agent README</a>.</p>
     <h3>Look up a result</h3><p>You can paste this example prompt into your agent.</p><blockquote>Find the Distinct Vectors lower bound under FPT ≠ W[1]. Give the parameter, the excluded running time, and the range of its coefficient. Identify the historical ETH bound it recovers. Link to the original paper and the atlas proof.</blockquote>
     <h3>Propose an entry</h3><p>To let your agent choose a result, use this prompt.</p><blockquote>Read AGENTS.md first. Propose one missing published lower bound for the atlas and show me the changes for review.</blockquote>
     <p>If you already have a result in mind, replace the bracketed text below.</p><blockquote>Read AGENTS.md first. Add the [hypothesis] lower bound for [problem] parameterized by [parameter], from [paper link or DOI, theorem number]. Show me the proposed changes for review.</blockquote></section>
@@ -33,7 +33,7 @@
     <ol><li>Search the atlas for the problem, parameterization and hypothesis. If the bound is missing or needs a correction, identify the precise statement and its source, preferably a DOI and theorem number.</li>
     <li>Prepare the entry on a branch in your copy of the repository. External contributors can use a GitHub fork. Credit the contributor in the version history and run the atlas checks. For a new derivation, include the proof PDF and LaTeX source and obtain an independent correctness review.</li>
     <li>Open a pull request against <code>main</code>. The maintainer reviews the proposal and merges accepted changes. Entries selected for publication appear when the website is next built and published.</li></ol>
-    <p>The <a href="https://github.com/hendrikmolter/lower-bound-atlas/blob/e6073c7e5ee58c77ccf689f306fa0a7717fc3f37/CONTRIBUTING.md">contribution guide on GitHub</a> includes the commands and a worked example. To suggest an entry or report a correction without preparing an edit, <a href="https://github.com/hendrikmolter/lower-bound-atlas/issues/new">open a GitHub issue</a> with the statement and source.</p></section>
+    <p>The <a href="https://github.com/hendrikmolter/lower-bound-atlas/blob/9226990474a054e11aaa6d463c603ccb4e97dc8d/CONTRIBUTING.md">contribution guide on GitHub</a> includes the commands and a worked example. To suggest an entry or report a correction without preparing an edit, <a href="https://github.com/hendrikmolter/lower-bound-atlas/issues/new">open a GitHub issue</a> with the statement and source.</p></section>
     <section id="background"><h2>Scientific background</h2>
     <p>Many published running-time lower bounds rely on the Exponential Time Hypothesis (ETH). In October 2026, OpenAI and Anthropic each reported a deterministic subexponential-time algorithm for 3-SAT. Either result, if correct, would refute ETH. The atlas asks which historical lower bounds can be recovered under another hypothesis. <a href="../assumptions/eth/index.html#historical-status">ETH formulations and the reported refutations</a>.</p>
     <p>Recovery is assessed for a particular running time and input class. Sometimes another hypothesis yields the full exclusion; sometimes it yields a weaker exponent or requires effective convergence. When a bound itself implies ETH, an exact recovery would also prove ETH from the alternative hypothesis. <a href="../assumptions/index.html">Browse the hypotheses</a>.</p></section>
@@ -47,7 +47,9 @@
     <p>Please cite the original paper or proof for each mathematical result. If you found it through the Atlas, citing the Atlas as well is optional. To cite a specific entry, use the statement’s revision permalink.</p>
     <p>If you reproduce or adapt Atlas content, credit Lower Bound Atlas and any named authors or contributors, link to the source and license, and indicate any changes. <a href="../assets/LICENSE-CONTENT.md">Licensing and attribution notice</a>.</p></section>
     <section id="version-history"><h2>Version history</h2><p>This history starts with the private launch candidate. Subsequent entries record additions, revisions, reviews, challenges and corrections. For changes to the data, proofs and website, see the <a href="https://github.com/hendrikmolter/lower-bound-atlas/commits/main/">repository history</a>.</p>
-    <section class="change-day"><h3><time datetime="2026-11-20">20 November 2026</time></h3>
+    <section class="change-day"><h3><time datetime="2026-11-22">22 November 2026</time></h3>
+      <ul><li><div><h4>Earlier sources for three treewidth lower bounds</h4><p>The Chromatic Number, Independent Set and Odd Cycle Transversal entries now credit the published constructions underlying their unrestricted bounds. The latter two entries identify the separate source for the additional graph restrictions.</p></div>
+        <div class="change-result"><p>Hendrik Molter with ChatGPT</p></div></li></ul></section><section class="change-day"><h3><time datetime="2026-11-20">20 November 2026</time></h3>
       <ul><li><div><h4>Preprint citations for running-time lower bounds</h4><p>Seventeen bounds under FPT ≠ W[1] now cite Theorems 1–12 of Hendrik Molter’s arXiv preprint, with corresponding source references for historical ETH recoveries and forward implications.</p></div>
         <div class="change-result"><p>Hendrik Molter with ChatGPT</p></div></li><li><div><p class="change-context">Cycle Packing</p>
       <h4><a href="../bounds/cycle-packing-supplied-pathwidth/cp-pw-w1-effective/r1/index.html" aria-label="Effective bound in width times its logarithm under FPT ≠ W[1]">Effective bound in width times its logarithm under FPT ≠ W[1]</a></h4></div>

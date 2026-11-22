@@ -425,6 +425,8 @@
     "api/v1/papers/akiyama-nishizeki-saito1980.json",
     "api/v1/papers/bdw2026-bin-packing.json",
     "api/v1/papers/bkn2023-rankwidth.json",
+    "api/v1/papers/bodlaender2022-tree-structured.json",
+    "api/v1/papers/bodlaender2025-linear-structure.json",
     "api/v1/papers/bonnet2026-treewidth.json",
     "api/v1/papers/bovz2016-vector.json",
     "api/v1/papers/bs2017-graph-motif.json",
@@ -2135,6 +2137,12 @@
     "papers/bkn2023-rankwidth/index.html",
     "papers/bkn2023-rankwidth/proceedings.bib",
     "papers/bkn2023-rankwidth/proceedings.txt",
+    "papers/bodlaender2022-tree-structured/index.html",
+    "papers/bodlaender2022-tree-structured/proceedings.bib",
+    "papers/bodlaender2022-tree-structured/proceedings.txt",
+    "papers/bodlaender2025-linear-structure/index.html",
+    "papers/bodlaender2025-linear-structure/journal.bib",
+    "papers/bodlaender2025-linear-structure/journal.txt",
     "papers/bonnet2026-treewidth/arxiv-v2.bib",
     "papers/bonnet2026-treewidth/arxiv-v2.txt",
     "papers/bonnet2026-treewidth/index.html",
@@ -2564,8 +2572,8 @@
   ],
   "generator": "lower-bound-atlas/website",
   "preview": false,
-  "registryRevision": 3,
+  "registryRevision": 4,
   "releaseValidated": true,
   "schemaVersion": 1,
-  "sourceCommit": "e6073c7e5ee58c77ccf689f306fa0a7717fc3f37"
+  "sourceCommit": "9226990474a054e11aaa6d463c603ccb4e97dc8d"
 }

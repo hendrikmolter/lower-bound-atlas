@@ -1,0 +1,1 @@
+Hans L. Bodlaender, Carla Groenland, Hugo Jacob, Lars Jaffke, Paloma T. Lima. XNLP-Completeness for Parameterized Problems on Graphs with a Linear Structure. Algorithmica 87 (2025), 465–506. https://doi.org/10.1007/s00453-024-01274-9

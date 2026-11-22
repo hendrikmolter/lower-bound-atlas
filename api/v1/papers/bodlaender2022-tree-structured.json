@@ -1,0 +1,23 @@
+{
+  "authors": [
+    "Hans L. Bodlaender",
+    "Carla Groenland",
+    "Hugo Jacob",
+    "Marcin Pilipczuk",
+    "Michał Pilipczuk"
+  ],
+  "editions": [
+    {
+      "doi": "10.4230/LIPIcs.IPEC.2022.6",
+      "id": "proceedings",
+      "kind": "proceedings",
+      "label": "IPEC 2022, LIPIcs 249, 6:1–6:17",
+      "preferredUrl": "https://doi.org/10.4230/LIPIcs.IPEC.2022.6",
+      "primaryUrl": "https://doi.org/10.4230/LIPIcs.IPEC.2022.6"
+    }
+  ],
+  "id": "bodlaender2022-tree-structured",
+  "preferredEditionId": "proceedings",
+  "preferredUrl": "https://doi.org/10.4230/LIPIcs.IPEC.2022.6",
+  "title": "On the Complexity of Problems on Tree-Structured Graphs"
+}

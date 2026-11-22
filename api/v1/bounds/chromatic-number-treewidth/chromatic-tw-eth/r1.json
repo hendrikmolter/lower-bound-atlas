@@ -32,6 +32,13 @@
       "paperId": "lms2018",
       "placement": "statement",
       "role": "published reduction"
+    },
+    {
+      "editionId": "bulletin",
+      "locator": "Theorem 6.3, the treewidth bound for Chromatic Number",
+      "paperId": "lms2011",
+      "placement": "statement",
+      "role": "explicit benchmark statement"
     }
   ],
   "statement": "Under ETH, no deterministic algorithm decides Chromatic Number within the stated running time.",

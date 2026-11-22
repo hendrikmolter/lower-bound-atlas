@@ -1,0 +1,1 @@
+Hans L. Bodlaender, Carla Groenland, Hugo Jacob, Marcin Pilipczuk, Michał Pilipczuk. On the Complexity of Problems on Tree-Structured Graphs. IPEC 2022, LIPIcs 249, 6:1–6:17. https://doi.org/10.4230/LIPIcs.IPEC.2022.6

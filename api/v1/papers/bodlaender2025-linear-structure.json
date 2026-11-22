@@ -1,0 +1,23 @@
+{
+  "authors": [
+    "Hans L. Bodlaender",
+    "Carla Groenland",
+    "Hugo Jacob",
+    "Lars Jaffke",
+    "Paloma T. Lima"
+  ],
+  "editions": [
+    {
+      "doi": "10.1007/s00453-024-01274-9",
+      "id": "journal",
+      "kind": "journal",
+      "label": "Algorithmica 87 (2025), 465–506",
+      "preferredUrl": "https://doi.org/10.1007/s00453-024-01274-9",
+      "primaryUrl": "https://doi.org/10.1007/s00453-024-01274-9"
+    }
+  ],
+  "id": "bodlaender2025-linear-structure",
+  "preferredEditionId": "journal",
+  "preferredUrl": "https://doi.org/10.1007/s00453-024-01274-9",
+  "title": "XNLP-Completeness for Parameterized Problems on Graphs with a Linear Structure"
+}
