@@ -482,5 +482,12 @@
     "contributor": "Hendrik Molter with ChatGPT",
     "title": "Earlier sources for three treewidth lower bounds",
     "summary": "The treewidth entries for Chromatic Number, Independent Set and Odd Cycle Transversal credit the published constructions of Bodlaender and coauthors for the bounds on unrestricted graphs."
+  },
+  {
+    "kind": "update",
+    "date": "2026-11-22",
+    "contributor": "Hendrik Molter with ChatGPT",
+    "title": "Published reductions for Dominating Set by treewidth",
+    "summary": "The connected bipartite bound with a computable factor in the solution budget is recorded as a corollary of the small-universe Set Cover and red-blue domination reductions."
   }
 ]

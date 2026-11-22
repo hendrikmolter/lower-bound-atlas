@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "edition": "v1.0.0",
-  "revision": 4,
+  "revision": 5,
   "assumptions": [
     {
       "id": "eth",
@@ -1523,6 +1523,45 @@
           "label": "IPEC 2022, LIPIcs 249, 6:1–6:17",
           "doi": "10.4230/LIPIcs.IPEC.2022.6",
           "primaryUrl": "https://doi.org/10.4230/LIPIcs.IPEC.2022.6"
+        }
+      ]
+    },
+    {
+      "id": "bgns2024-xnlp",
+      "title": "Parameterized problems complete for nondeterministic FPT time and logarithmic space",
+      "authors": [
+        "Hans L. Bodlaender",
+        "Carla Groenland",
+        "Jesper Nederlof",
+        "Céline M. F. Swennenhuis"
+      ],
+      "preferredEditionId": "journal",
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "journal",
+          "label": "Information and Computation 300 (2024), 105195",
+          "doi": "10.1016/j.ic.2024.105195",
+          "primaryUrl": "https://doi.org/10.1016/j.ic.2024.105195"
+        }
+      ]
+    },
+    {
+      "id": "klm2019-dominating-set",
+      "title": "On the Parameterized Complexity of Approximating Dominating Set",
+      "authors": [
+        "Karthik C. S.",
+        "Bundit Laekhanukit",
+        "Pasin Manurangsi"
+      ],
+      "preferredEditionId": "journal",
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "journal",
+          "label": "Journal of the ACM 66(5) (2019), Article 33",
+          "doi": "10.1145/3325116",
+          "primaryUrl": "https://doi.org/10.1145/3325116"
         }
       ]
     }
