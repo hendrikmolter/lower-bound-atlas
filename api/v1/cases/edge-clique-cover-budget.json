@@ -57,21 +57,20 @@
               {
                 "boundRevision": 2,
                 "hypothesisRevision": 1,
-                "proof": {
-                  "proofId": "ecc-np-qp-converse",
-                  "revision": 1,
-                  "theorem": "ecc-np-qp-converse"
-                },
-                "reviewId": "ecc-np-qp-converse-independent",
+                "reviewId": "ecc-budget-np-qp-literature-audit",
                 "source": {
                   "editionId": "journal",
-                  "locator": "§2, Rules 1 and 3′, and Theorem 1, pp. 2.2:4–2.2:7",
+                  "locator": "§2, Rules 1 and 3′ and Theorem 1, pp. 2.2:4–2.2:7",
                   "paperId": "gramm-guo-hueffner-niedermeier2009",
                   "placement": "proof",
-                  "role": "exponential kernel argument"
+                  "role": "exponential kernel"
                 }
               }
             ],
+            "sourceBasis": {
+              "kind": "derived",
+              "step": "The kernel has at most 2^k vertices and therefore 2^{O(k+1)} bits. Under NP ⊆ QP, solving this NP decision problem on the kernel takes 2^{k^{O(1)}} time, in addition to polynomial preprocessing."
+            },
             "status": "established"
           },
           "forward": {
@@ -80,13 +79,13 @@
               {
                 "boundRevision": 2,
                 "hypothesisRevision": 1,
-                "reviewId": "ecc-budget-np-qp-equivalence-review",
+                "reviewId": "ecc-budget-np-qp-literature-audit",
                 "source": {
                   "editionId": "journal",
                   "locator": "Theorem 1 and Corollary 3, p. 70",
                   "paperId": "cygan-pilipczuk-pilipczuk-ecc",
                   "placement": "forward",
-                  "role": "reduction with logarithmic clique budget"
+                  "role": "published lower bound"
                 }
               }
             ],
@@ -115,7 +114,7 @@
         "revision": 2
       },
       "reviewIds": [
-        "ecc-budget-np-qp-equivalence-review"
+        "ecc-budget-np-qp-literature-audit"
       ],
       "revision": 2,
       "runtime": "2^(k^(O(1))) n^(O(1))",
@@ -123,10 +122,6 @@
         "k",
         "n"
       ],
-      "sourceBasis": {
-        "kind": "derived",
-        "step": "The reduction from 3-SAT uses a clique budget logarithmic in the number of variables and produces a graph of polynomial size. A solver within the stated time would give a quasipolynomial-time algorithm for 3-SAT."
-      },
       "sources": [
         {
           "editionId": "journal",

@@ -1,0 +1,100 @@
+{
+  "assessments": {
+    "sh": {
+      "converse": {
+        "effectiveStatus": "unknown",
+        "evidence": [],
+        "status": "unknown"
+      },
+      "forward": {
+        "effectiveStatus": "established",
+        "evidence": [
+          {
+            "boundRevision": 2,
+            "hypothesisRevision": 1,
+            "reviewId": "hamiltonian-path-order-sh-source-audit-r2",
+            "source": {
+              "editionId": "v2",
+              "locator": "Table 1, induced-grid row, p. 4",
+              "paperId": "sh26",
+              "placement": "forward",
+              "role": "induced-grid fixed-power lower bound for Hamiltonian Cycle"
+            }
+          },
+          {
+            "boundRevision": 2,
+            "hypothesisRevision": 1,
+            "reviewId": "hamiltonian-path-order-sh-source-audit-r2",
+            "source": {
+              "editionId": "journal",
+              "locator": "Theorem 4.7",
+              "paperId": "deberg-et-al2020-geometric",
+              "placement": "forward",
+              "role": "reduction to induced grid graphs"
+            }
+          }
+        ],
+        "sourceBasis": {
+          "kind": "derived",
+          "step": "Choose a dimension for the desired exponent. Split one vertex of the Hamiltonian Cycle instance into two copies with the same neighbors and put a private leaf on each copy. The forced path endpoints give an equivalent Hamiltonian Path instance with only three more vertices."
+        },
+        "status": "established"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "hypothesis-implies-bound"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "sh",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "hamiltonian-path-order-sh",
+  "inputConditions": [],
+  "inputFactor": "B^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [
+    "Separately for every fixed 0 < a < 1."
+  ],
+  "reader": {
+    "label": "Fixed-power exponent in the number of vertices",
+    "revision": 2,
+    "title": "Fixed-power bounds under SH"
+  },
+  "reviewIds": [
+    "hamiltonian-path-order-sh-source-audit-r2"
+  ],
+  "revision": 2,
+  "runtime": "2^(O(n^a)) B^(O(1))",
+  "runtimeSymbols": [
+    "n",
+    "B"
+  ],
+  "sourceBasis": {
+    "kind": "derived",
+    "step": "Choose a dimension for the desired exponent. Split one vertex of the Hamiltonian Cycle instance into two copies with the same neighbors and put a private leaf on each copy. The forced path endpoints give an equivalent Hamiltonian Path instance with only three more vertices."
+  },
+  "sources": [
+    {
+      "editionId": "v2",
+      "locator": "Table 1, induced-grid row, p. 4",
+      "paperId": "sh26",
+      "placement": "forward",
+      "role": "induced-grid fixed-power lower bound for Hamiltonian Cycle"
+    },
+    {
+      "editionId": "journal",
+      "locator": "Theorem 4.7",
+      "paperId": "deberg-et-al2020-geometric",
+      "placement": "forward",
+      "role": "reduction to induced grid graphs"
+    }
+  ],
+  "statement": "Under SH, no deterministic algorithm can decide Hamiltonian Path within the stated running time.",
+  "status": "established",
+  "supported": true
+}

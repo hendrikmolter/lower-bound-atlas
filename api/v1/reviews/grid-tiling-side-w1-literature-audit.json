@@ -1,0 +1,19 @@
+{
+  "applicable": true,
+  "date": "2026-11-22",
+  "evidence": "evidence/literature-corollaries-2026-11-22.md",
+  "id": "grid-tiling-side-w1-literature-audit",
+  "independent": true,
+  "label": "Agent verified",
+  "object": {
+    "caseId": "grid-tiling-side",
+    "id": "grid-tiling-side-w1",
+    "revision": 2,
+    "type": "bound"
+  },
+  "reviewer": "Codex agent /root/others",
+  "scope": "Theorem II.6 covers decision Grid Tiling parameterized by grid side. Definition II.4 and Remark II.5 include the full array with one table per cell.",
+  "stale": false,
+  "type": "agent",
+  "verdict": "verified"
+}

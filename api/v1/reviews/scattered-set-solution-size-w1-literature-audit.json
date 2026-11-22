@@ -1,0 +1,19 @@
+{
+  "applicable": true,
+  "date": "2026-11-22",
+  "evidence": "evidence/literature-corollaries-2026-11-22.md",
+  "id": "scattered-set-solution-size-w1-literature-audit",
+  "independent": true,
+  "label": "Agent verified",
+  "object": {
+    "caseId": "scattered-set-solution-size",
+    "id": "scattered-set-solution-size-w1",
+    "revision": 1,
+    "type": "bound"
+  },
+  "reviewer": "Codex agent /root/others",
+  "scope": "The distance-two specialization gives hardness. The graph-power characterization yields membership via a polynomial reduction at the same solution size.",
+  "stale": false,
+  "type": "agent",
+  "verdict": "verified"
+}

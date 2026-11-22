@@ -1,1 +1,0 @@
-Atlas. A square-clique lower bound for Closest String with a balanced alphabet · Theorem 1. closest-string-balanced-kxk, theorem closest-string-balanced-kxk, proof revision 1. Edition v1.0.0, Git commit c6a7b0dabb4367a2fbd4dbba5e5db882e8949557. https://github.com/hendrikmolter/lower-bound-atlas/blob/c6a7b0dabb4367a2fbd4dbba5e5db882e8949557/proofs/closest-string-balanced-kxk.tex

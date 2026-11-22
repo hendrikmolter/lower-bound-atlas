@@ -47,7 +47,51 @@
       "supported": true
     },
     {
-      "assessments": {},
+      "assessments": {
+        "sh": {
+          "converse": {
+            "effectiveStatus": "unknown",
+            "evidence": [],
+            "status": "unknown"
+          },
+          "forward": {
+            "effectiveStatus": "established",
+            "evidence": [
+              {
+                "boundRevision": 2,
+                "hypothesisRevision": 1,
+                "reviewId": "subset-sum-item-count-sh-source-audit-r2",
+                "source": {
+                  "editionId": "journal",
+                  "locator": "§3, Lemma 13 proof, p. 8",
+                  "paperId": "etscheid-kratsch-mnich-rog-lin2017",
+                  "placement": "forward",
+                  "role": "3-SAT reduction with a linear number of Subset Sum items"
+                }
+              },
+              {
+                "boundRevision": 2,
+                "hypothesisRevision": 1,
+                "reviewId": "subset-sum-item-count-sh-source-audit-r2",
+                "source": {
+                  "editionId": "v2",
+                  "locator": "Lemma 2.1 and Theorem 3.1, pp. 5–6 and 8",
+                  "paperId": "sh26",
+                  "placement": "forward",
+                  "role": "size formulation of SH and exponent transfer"
+                }
+              }
+            ],
+            "sourceBasis": {
+              "kind": "derived",
+              "step": "The digit reduction produces O(v+m) positive binary items for v variables and m clauses. A fixed power saving in the item count would give the same power saving in v+m for 3-SAT."
+            },
+            "status": "established"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "hypothesis-implies-bound"
+        }
+      },
       "assumptionOperator": "all",
       "assumptions": [
         {
@@ -59,37 +103,44 @@
       "id": "subset-sum-item-count-sh",
       "inputConditions": [],
       "inputFactor": "B^(O(1))",
-      "proofs": [
-        {
-          "proofId": "subset-sum-item-count-sh",
-          "revision": 2,
-          "theorem": "subset-sum-item-count-sh"
-        }
-      ],
-      "provenance": "atlas",
+      "proofs": [],
+      "provenance": "literature",
       "qualifications": [
         "For each fixed ε strictly between zero and 1."
       ],
       "reader": {
         "label": "Fixed power saving in the exponent",
-        "revision": 1,
+        "revision": 2,
         "title": "Subset Sum by item count under SH"
       },
-      "reviewIds": [],
-      "revision": 1,
+      "reviewIds": [
+        "subset-sum-item-count-sh-source-audit-r2"
+      ],
+      "revision": 2,
       "runtime": "2^(O(p^(1−ε))) B^(O(1))",
       "runtimeSymbols": [
         "p",
         "ε",
         "B"
       ],
+      "sourceBasis": {
+        "kind": "derived",
+        "step": "The digit reduction produces O(v+m) positive binary items for v variables and m clauses. A fixed power saving in the item count would give the same power saving in v+m for 3-SAT."
+      },
       "sources": [
         {
+          "editionId": "journal",
+          "locator": "§3, Lemma 13 proof, p. 8",
+          "paperId": "etscheid-kratsch-mnich-rog-lin2017",
+          "placement": "forward",
+          "role": "3-SAT reduction with a linear number of Subset Sum items"
+        },
+        {
           "editionId": "v2",
-          "locator": "Lemma 2.1, pp. 5–6",
+          "locator": "Lemma 2.1 and Theorem 3.1, pp. 5–6 and 8",
           "paperId": "sh26",
-          "placement": "proof",
-          "role": "fixed-width SAT size formulation of SH"
+          "placement": "forward",
+          "role": "size formulation of SH and exponent transfer"
         }
       ],
       "statement": "Under SH, no deterministic algorithm decides Subset Sum within the stated running time.",
@@ -144,10 +195,17 @@
       "evidence": [
         {
           "editionId": "journal",
-          "locator": "Lemma 13 and proof, §3, p. 8",
+          "locator": "§3, Lemma 13 proof, p. 8",
           "paperId": "etscheid-kratsch-mnich-rog-lin2017",
-          "placement": "statement",
-          "role": "published linear-item ETH reduction"
+          "placement": "forward",
+          "role": "3-SAT reduction with a linear number of Subset Sum items"
+        },
+        {
+          "editionId": "v2",
+          "locator": "Lemma 2.1 and Theorem 3.1, pp. 5–6 and 8",
+          "paperId": "sh26",
+          "placement": "forward",
+          "role": "size formulation of SH and exponent transfer"
         }
       ],
       "hypothesis": {
@@ -157,7 +215,7 @@
       "recoveredScale": "p^(1−ε)",
       "recovery": {
         "id": "subset-sum-item-count-sh",
-        "revision": 1
+        "revision": 2
       },
       "scale": "degree",
       "target": {
@@ -196,10 +254,17 @@
       "evidence": [
         {
           "editionId": "journal",
-          "locator": "Lemma 13 and proof, §3, p. 8",
+          "locator": "§3, Lemma 13 proof, p. 8",
           "paperId": "etscheid-kratsch-mnich-rog-lin2017",
-          "placement": "statement",
-          "role": "published linear-item ETH reduction"
+          "placement": "forward",
+          "role": "3-SAT reduction with a linear number of Subset Sum items"
+        },
+        {
+          "editionId": "v2",
+          "locator": "Lemma 2.1 and Theorem 3.1, pp. 5–6 and 8",
+          "paperId": "sh26",
+          "placement": "forward",
+          "role": "size formulation of SH and exponent transfer"
         }
       ],
       "hypothesis": {
@@ -209,7 +274,7 @@
       "recoveredScale": "p^(1−ε)",
       "recovery": {
         "id": "subset-sum-item-count-sh",
-        "revision": 1
+        "revision": 2
       },
       "scale": "degree",
       "status": "degree",
@@ -232,7 +297,7 @@
     }
   ],
   "resolutions": [],
-  "revision": 4,
+  "revision": 5,
   "task": "Does a subset of the item indices have values summing to T?",
   "title": "Subset Sum by item count",
   "variant": "Subset Sum"

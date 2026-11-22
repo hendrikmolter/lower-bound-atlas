@@ -12,8 +12,8 @@
     "type": "proof"
   },
   "reviewer": "Codex agent natural_batch",
-  "scope": "Both implications. Checks the explicit CNF encoding, triangle construction, branching and residual queries, and deterministic whole fixed-power quantifiers.",
-  "sourceSha256": "bf1ae82b104cedd384facca43eb568e8c88fa5a00a4657d2baf596394cdb9d54",
+  "scope": "Both implications, including the explicit CNF encoding, triangle construction, branching and residual queries, and deterministic fixed-power quantifiers. The 22 November citation audit confirmed that the text change is limited to credit for the prior branching rule.",
+  "sourceSha256": "1f151ecd300ae91f60a5ff999b95dc45d35f83d6caad844e110e2c62d98d2726",
   "stale": false,
   "type": "agent",
   "verdict": "verified"

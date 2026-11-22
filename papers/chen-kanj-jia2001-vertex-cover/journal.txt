@@ -1,0 +1,1 @@
+Jianer Chen, Iyad A. Kanj, Weijia Jia. Vertex Cover: Further Observations and Further Improvements. Journal of Algorithms 41(2) (2001), pp. 280–301. https://doi.org/10.1006/jagm.2001.1186

@@ -1,0 +1,1 @@
+Claude. A 2^{o(n)} Time Algorithm for 3-SAT. Hexagon:2610.00577v1, October 2026. https://hexagonmath.org/2610.00577v1

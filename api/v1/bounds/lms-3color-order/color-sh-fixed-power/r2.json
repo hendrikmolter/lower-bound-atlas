@@ -1,0 +1,116 @@
+{
+  "assessments": {
+    "eth": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "unassessed"
+    },
+    "sh": {
+      "converse": {
+        "effectiveStatus": "established",
+        "evidence": [
+          {
+            "boundRevision": 2,
+            "hypothesisRevision": 1,
+            "reviewId": "color-sh-fixed-power-source-audit-r2",
+            "source": {
+              "editionId": "v2",
+              "locator": "Theorem 2.4, p. 7",
+              "paperId": "sh26",
+              "placement": "proof",
+              "role": "SH is equivalent to Weak ETH for 3-SAT by variable count"
+            }
+          },
+          {
+            "boundRevision": 2,
+            "hypothesisRevision": 1,
+            "reviewId": "color-sh-fixed-power-source-audit-r2",
+            "source": {
+              "editionId": "v1",
+              "locator": "Corollary 7 proof, pp. 21–22",
+              "paperId": "claude2026-subexponential-sat",
+              "placement": "proof",
+              "role": "linear-variable graph-to-3-CNF encoding"
+            }
+          }
+        ],
+        "sourceBasis": {
+          "kind": "derived",
+          "step": "Use three indicator variables per vertex, require exactly one color per vertex, and forbid equal colors across edges. The 3-CNF uses 3n variables, so failure of SH would give a fixed-power algorithm by graph order."
+        },
+        "status": "established"
+      },
+      "forward": {
+        "effectiveStatus": "established",
+        "evidence": [
+          {
+            "boundRevision": 2,
+            "hypothesisRevision": 1,
+            "reviewId": "color-sh-fixed-power-source-audit-r2",
+            "source": {
+              "editionId": "v2",
+              "locator": "Table 1, 3-Coloring row, p. 4, and Theorem 3.1, p. 8",
+              "paperId": "sh26",
+              "role": "preprint implication"
+            }
+          }
+        ],
+        "status": "established"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "established-equivalent"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "sh",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "color-sh-fixed-power",
+  "inputConditions": [],
+  "inputFactor": "B^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [
+    "For every fixed 0 < a < 1."
+  ],
+  "reader": {
+    "label": "Fixed-power bounds",
+    "revision": 2,
+    "subject": "The full family of bounds",
+    "title": "Fixed-power bounds under SH"
+  },
+  "reviewIds": [
+    "color-sh-fixed-power-source-audit-r2"
+  ],
+  "revision": 2,
+  "runtime": "2^(O(n^a)) B^(O(1))",
+  "runtimeSymbols": [
+    "n",
+    "B"
+  ],
+  "sources": [
+    {
+      "editionId": "v2",
+      "locator": "Table 1, 3-Coloring row, p. 4, and Theorem 3.1, p. 8",
+      "paperId": "sh26",
+      "placement": "forward",
+      "role": "benchmark"
+    }
+  ],
+  "statement": "Under SH, no deterministic algorithm decides 3-Coloring within the stated running time.",
+  "status": "established",
+  "supported": true
+}

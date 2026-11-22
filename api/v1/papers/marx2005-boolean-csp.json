@@ -1,0 +1,20 @@
+{
+  "authors": [
+    "Dániel Marx"
+  ],
+  "editions": [
+    {
+      "access": "The published abstract states the exact-weight dichotomy for every fixed finite family of Boolean relations.",
+      "doi": "10.1007/s00037-005-0195-9",
+      "id": "journal",
+      "kind": "journal",
+      "label": "Computational Complexity 14 (2005), pp. 153–183",
+      "preferredUrl": "https://doi.org/10.1007/s00037-005-0195-9",
+      "primaryUrl": "https://doi.org/10.1007/s00037-005-0195-9"
+    }
+  ],
+  "id": "marx2005-boolean-csp",
+  "preferredEditionId": "journal",
+  "preferredUrl": "https://doi.org/10.1007/s00037-005-0195-9",
+  "title": "Parameterized complexity of constraint satisfaction problems"
+}

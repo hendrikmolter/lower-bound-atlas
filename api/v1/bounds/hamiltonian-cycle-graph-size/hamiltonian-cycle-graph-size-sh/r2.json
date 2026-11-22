@@ -1,0 +1,117 @@
+{
+  "assessments": {
+    "sh": {
+      "converse": {
+        "effectiveStatus": "established",
+        "evidence": [
+          {
+            "boundRevision": 2,
+            "hypothesisRevision": 1,
+            "reviewId": "hamiltonian-cycle-graph-size-sh-source-audit-r2",
+            "source": {
+              "editionId": "proceedings",
+              "locator": "§2, pp. 40:2–40:3",
+              "paperId": "zhou2024-hamiltonian-encoding",
+              "placement": "proof",
+              "role": "binary distance encoding of Hamiltonian Cycle"
+            }
+          }
+        ],
+        "sourceBasis": {
+          "kind": "derived",
+          "step": "Replace every undirected edge by two opposite arcs. The degree constraints take linear size and the binary distance increment takes O(log n) gates per arc, giving a CNF of near-linear bit length in the graph size. A fixed power saving for SAT then gives a fixed power saving for Hamiltonian Cycle."
+        },
+        "status": "established"
+      },
+      "forward": {
+        "effectiveStatus": "established",
+        "evidence": [
+          {
+            "boundRevision": 2,
+            "hypothesisRevision": 1,
+            "reviewId": "hamiltonian-cycle-graph-size-sh-source-audit-r2",
+            "source": {
+              "editionId": "v2",
+              "locator": "Table 1, induced-grid row, p. 4",
+              "paperId": "sh26",
+              "placement": "forward",
+              "role": "induced-grid fixed-power lower bound for Hamiltonian Cycle"
+            }
+          },
+          {
+            "boundRevision": 2,
+            "hypothesisRevision": 1,
+            "reviewId": "hamiltonian-cycle-graph-size-sh-source-audit-r2",
+            "source": {
+              "editionId": "journal",
+              "locator": "Theorem 4.7",
+              "paperId": "deberg-et-al2020-geometric",
+              "placement": "forward",
+              "role": "reduction to induced grid graphs"
+            }
+          }
+        ],
+        "sourceBasis": {
+          "kind": "derived",
+          "step": "Choose the dimension separately for each fixed power below one. The number of edges of a fixed-dimensional grid graph is at most its dimension times its number of vertices, so the same exclusion holds in graph size."
+        },
+        "status": "established"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "established-equivalent"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "sh",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "hamiltonian-cycle-graph-size-sh",
+  "inputConditions": [],
+  "inputFactor": "B^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [
+    "Separately for every fixed 0 < a < 1."
+  ],
+  "reader": {
+    "label": "Fixed-power exponent in the number of vertices plus edges",
+    "revision": 2,
+    "title": "Fixed-power bounds under SH"
+  },
+  "reviewIds": [
+    "hamiltonian-cycle-graph-size-sh-source-audit-r2"
+  ],
+  "revision": 2,
+  "runtime": "2^(O(s^a)) B^(O(1))",
+  "runtimeSymbols": [
+    "s",
+    "B"
+  ],
+  "sourceBasis": {
+    "kind": "derived",
+    "step": "Choose the dimension separately for each fixed power below one. The number of edges of a fixed-dimensional grid graph is at most its dimension times its number of vertices, so the same exclusion holds in graph size."
+  },
+  "sources": [
+    {
+      "editionId": "v2",
+      "locator": "Table 1, induced-grid row, p. 4",
+      "paperId": "sh26",
+      "placement": "forward",
+      "role": "induced-grid fixed-power lower bound for Hamiltonian Cycle"
+    },
+    {
+      "editionId": "journal",
+      "locator": "Theorem 4.7",
+      "paperId": "deberg-et-al2020-geometric",
+      "placement": "forward",
+      "role": "reduction to induced grid graphs"
+    }
+  ],
+  "statement": "Under SH, no deterministic algorithm can decide Hamiltonian Cycle within the stated running time.",
+  "status": "established",
+  "supported": true
+}

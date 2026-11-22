@@ -16,7 +16,7 @@ The \emph{Satisfiability Hypothesis} (SH) excludes a deterministic CNF satisfiab
 SH holds if and only if, for every fixed $0<\varepsilon<1$, there is no deterministic algorithm for \textup{\textsc{Dominating Set}} running in $2^{O(n^{1-\varepsilon})}B^{O(1)}$ time.
 \end{theorem}
 
-The reduction from CNF gives a graph with linearly many vertices in the formula length. In the other direction a dense graph can lead to too many occurrences in the CNF encoding. We first branch on vertices that cover many remaining demands and encode the resulting instances separately.
+The reduction from CNF gives a graph with linearly many vertices in the formula length. In the other direction a dense graph can lead to too many occurrences in the CNF encoding. We first branch on vertices that cover many remaining demands, using the candidate-side branching rule of Bonnet et al.~\cite[Proposition~5, proof item~2]{bekp}, and encode the resulting instances separately.
 
 \begin{proof}
 Suppose first that \textsc{Dominating Set} has an algorithm with the stated running time for some fixed $\varepsilon$. Consider a CNF input of bit length $S$. An empty clause is an immediate NO instance, and a formula with no clauses is an immediate YES instance. To reduce clause width, express each clause as a binary OR circuit over its literals. For each gate introduce a fresh output variable $z$, encode $z\leftrightarrow(x\vee y)$ by $(\neg x\vee z)$, $(\neg y\vee z)$ and $(x\vee y\vee\neg z)$, and assert each clause's circuit output with a unit clause. A one-literal clause is retained directly. This preserves satisfiability and yields $O(S)$ occurring variables and clauses of width at most three in polynomial time.
@@ -46,8 +46,11 @@ O\bigl(n^{1-\alpha}\log(n+2)+
 The two powers of $n$ are strictly below one. Hence for some fixed $\varepsilon\in(0,1)$ the resulting \textsc{Dominating Set} algorithm runs in $2^{O(n^{1-\varepsilon})}B^{O(1)}$ time.
 \end{proof}
 
-\begin{thebibliography}{1}
+\begin{thebibliography}{2}
 \bibitem{sh} MIT Hardness Group, Josh Brunner, Erik D. Demaine, Fabian Frei, Timothy Gomez, Markus Hecher, Jeffery Li, and Jayson Lynch.
 \emph{ETH is Dead, Long Live SH}. \href{https://arxiv.org/abs/2611.02650v2}{arXiv:2611.02650v2}, 2026. Definition of SH and Lemma~2.1.
+\bibitem{bekp} E. Bonnet, B. Escoffier, E. J. Kim, and V. Th. Paschos.
+\emph{On Subexponential and FPT-Time Inapproximability}. Algorithmica 71(3):541--565, 2015.
+\href{https://doi.org/10.1007/s00453-014-9889-1}{DOI}.
 \end{thebibliography}
 \end{document}

@@ -17,12 +17,7 @@
               {
                 "boundRevision": 2,
                 "hypothesisRevision": 1,
-                "proof": {
-                  "proofId": "six-w1-memberships",
-                  "revision": 1,
-                  "theorem": "open-to-closed-regions"
-                },
-                "reviewId": "unit-square-independent-set-budget-eth-closed-scope",
+                "reviewId": "unit-square-independent-set-budget-eth-literature-audit",
                 "source": {
                   "editionId": "book",
                   "locator": "Exercise 14.13 and bibliographic notes, pp. 517 and 520",
@@ -30,8 +25,24 @@
                   "placement": "statement",
                   "role": "benchmark"
                 }
+              },
+              {
+                "boundRevision": 2,
+                "hypothesisRevision": 1,
+                "reviewId": "unit-square-independent-set-budget-eth-literature-audit",
+                "source": {
+                  "editionId": "thesis",
+                  "locator": "Theorems 4.1.8 and 4.1.10, pp. 32–33, and discussion following Theorem 4.3.15, p. 40",
+                  "paperId": "van-leeuwen2009-geometric-objects",
+                  "placement": "proof",
+                  "role": "open-to-closed transfer for scalable objects"
+                }
               }
             ],
+            "sourceBasis": {
+              "kind": "derived",
+              "step": "A common rational expansion of the centers, keeping each region’s size fixed, preserves the intersection graph, selection budget and number of regions. The coordinates still have polynomial bit length."
+            },
             "status": "established"
           },
           "hypothesisRevision": 1,
@@ -75,7 +86,7 @@
         "title": "Exponent in solution budget under ETH"
       },
       "reviewIds": [
-        "unit-square-independent-set-budget-eth-closed-scope"
+        "unit-square-independent-set-budget-eth-literature-audit"
       ],
       "revision": 2,
       "runtime": "f(k) n^(o(k^(1/2))) B^(O(1))",
@@ -132,12 +143,7 @@
               {
                 "boundRevision": 2,
                 "hypothesisRevision": 1,
-                "proof": {
-                  "proofId": "six-w1-memberships",
-                  "revision": 1,
-                  "theorem": "open-to-closed-regions"
-                },
-                "reviewId": "unit-square-independent-set-budget-kxk-closed-scope",
+                "reviewId": "unit-square-independent-set-budget-kxk-literature-audit",
                 "source": {
                   "editionId": "v3",
                   "locator": "§3, Proposition 1, pp. 3–4, and Table 1, second row, p. 5 (Unit Disk Independent Set and Grid Tiling transfer starting bounds)",
@@ -145,8 +151,24 @@
                   "placement": "statement",
                   "role": "benchmark"
                 }
+              },
+              {
+                "boundRevision": 2,
+                "hypothesisRevision": 1,
+                "reviewId": "unit-square-independent-set-budget-kxk-literature-audit",
+                "source": {
+                  "editionId": "thesis",
+                  "locator": "Theorems 4.1.8 and 4.1.10, pp. 32–33, and discussion following Theorem 4.3.15, p. 40",
+                  "paperId": "van-leeuwen2009-geometric-objects",
+                  "placement": "proof",
+                  "role": "open-to-closed transfer for scalable objects"
+                }
               }
             ],
+            "sourceBasis": {
+              "kind": "derived",
+              "step": "A common rational expansion of the centers, keeping each region’s size fixed, preserves the intersection graph, selection budget and number of regions. The coordinates still have polynomial bit length."
+            },
             "status": "established"
           },
           "hypothesisRevision": 1,
@@ -190,7 +212,7 @@
         "title": "Exponent in solution budget under the k × k Clique Hypothesis"
       },
       "reviewIds": [
-        "unit-square-independent-set-budget-kxk-closed-scope"
+        "unit-square-independent-set-budget-kxk-literature-audit"
       ],
       "revision": 2,
       "runtime": "f(k) n^(o(k^(1/2))) B^(O(1))",
@@ -263,14 +285,20 @@
               {
                 "boundRevision": 2,
                 "hypothesisRevision": 1,
-                "proof": {
-                  "proofId": "six-w1-memberships",
-                  "revision": 1,
-                  "theorem": "unit-square-independent-set-w1-membership"
-                },
-                "reviewId": "unit-square-independent-set-w1-membership-independent"
+                "reviewId": "unit-square-independent-set-budget-w1-literature-audit",
+                "source": {
+                  "editionId": "esa",
+                  "locator": "Abstract and §2, Theorem 1",
+                  "paperId": "marx2005-geometric",
+                  "placement": "proof",
+                  "role": "W[1]-completeness of the geometric intersection-graph problem"
+                }
               }
             ],
+            "sourceBasis": {
+              "kind": "derived",
+              "step": "Compute intersections between all pairs of the explicitly supplied closed unit squares and solve Independent Set on the resulting graph with the same selection budget."
+            },
             "status": "established"
           },
           "forward": {
@@ -279,12 +307,7 @@
               {
                 "boundRevision": 2,
                 "hypothesisRevision": 1,
-                "proof": {
-                  "proofId": "six-w1-memberships",
-                  "revision": 1,
-                  "theorem": "open-to-closed-regions"
-                },
-                "reviewId": "unit-square-independent-set-budget-w1-hardness-scope",
+                "reviewId": "unit-square-independent-set-budget-w1-literature-audit",
                 "source": {
                   "editionId": "esa",
                   "locator": "Theorem 1, Section 2",
@@ -292,8 +315,24 @@
                   "placement": "forward",
                   "role": "published hardness direction"
                 }
+              },
+              {
+                "boundRevision": 2,
+                "hypothesisRevision": 1,
+                "reviewId": "unit-square-independent-set-budget-w1-literature-audit",
+                "source": {
+                  "editionId": "thesis",
+                  "locator": "Theorems 4.1.8 and 4.1.10, pp. 32–33, and discussion following Theorem 4.3.15, p. 40",
+                  "paperId": "van-leeuwen2009-geometric-objects",
+                  "placement": "proof",
+                  "role": "open-to-closed transfer for scalable objects"
+                }
               }
             ],
+            "sourceBasis": {
+              "kind": "derived",
+              "step": "A common rational expansion of the centers, keeping each region’s size fixed, preserves the intersection graph, selection budget and number of regions. The coordinates still have polynomial bit length."
+            },
             "status": "established"
           },
           "hypothesisRevision": 1,
@@ -323,7 +362,7 @@
         "title": "Fixed-parameter tractability under FPT ≠ W[1]"
       },
       "reviewIds": [
-        "unit-square-independent-set-budget-w1-hardness-scope"
+        "unit-square-independent-set-budget-w1-literature-audit"
       ],
       "revision": 2,
       "runtime": "f(k) B^(O(1))",
@@ -402,16 +441,11 @@
           "role": "benchmark"
         },
         {
-          "editionId": "book",
-          "locator": "Exercise 14.13 and bibliographic notes, pp. 517 and 520",
-          "paperId": "cygan2015",
-          "placement": "statement",
-          "role": "benchmark"
-        },
-        {
-          "proofId": "six-w1-memberships",
-          "revision": 1,
-          "theorem": "open-to-closed-regions"
+          "editionId": "thesis",
+          "locator": "Theorems 4.1.8 and 4.1.10, pp. 32–33, and discussion following Theorem 4.3.15, p. 40",
+          "paperId": "van-leeuwen2009-geometric-objects",
+          "placement": "proof",
+          "role": "open-to-closed transfer for scalable objects"
         }
       ],
       "hypothesis": {
@@ -451,16 +485,11 @@
           "role": "benchmark"
         },
         {
-          "editionId": "book",
-          "locator": "Exercise 14.13 and bibliographic notes, pp. 517 and 520",
-          "paperId": "cygan2015",
-          "placement": "statement",
-          "role": "benchmark"
-        },
-        {
-          "proofId": "six-w1-memberships",
-          "revision": 1,
-          "theorem": "open-to-closed-regions"
+          "editionId": "thesis",
+          "locator": "Theorems 4.1.8 and 4.1.10, pp. 32–33, and discussion following Theorem 4.3.15, p. 40",
+          "paperId": "van-leeuwen2009-geometric-objects",
+          "placement": "proof",
+          "role": "open-to-closed transfer for scalable objects"
         }
       ],
       "hypothesis": {

@@ -7,14 +7,20 @@
           {
             "boundRevision": 1,
             "hypothesisRevision": 1,
-            "proof": {
-              "proofId": "six-w1-memberships",
-              "revision": 1,
-              "theorem": "planar-scattered-set-w1-membership"
-            },
-            "reviewId": "planar-scattered-set-w1-membership-independent"
+            "reviewId": "planar-scattered-set-solution-size-w1-literature-audit",
+            "source": {
+              "editionId": "journal",
+              "locator": "§3.1, Graphs and their powers",
+              "paperId": "hoang2024-distance-independent-set",
+              "placement": "proof",
+              "role": "graph-power characterization of distance-d Independent Set"
+            }
           }
         ],
+        "sourceBasis": {
+          "kind": "derived",
+          "step": "For d ≥ 2, compute the (d−1)-st graph power of the planar input and ask for an independent set of the same size. For d = 1, compare the budget with the vertex count."
+        },
         "status": "established"
       },
       "forward": {
@@ -23,7 +29,7 @@
           {
             "boundRevision": 1,
             "hypothesisRevision": 1,
-            "reviewId": "planar-scattered-set-solution-size-w1-hardness-scope",
+            "reviewId": "planar-scattered-set-solution-size-w1-literature-audit",
             "source": {
               "editionId": "book",
               "locator": "Theorem 14.32, pp. 497–499, reduction from Grid Tiling with inequalities",
@@ -59,7 +65,7 @@
     "revision": 1
   },
   "reviewIds": [
-    "planar-scattered-set-solution-size-w1-hardness-scope"
+    "planar-scattered-set-solution-size-w1-literature-audit"
   ],
   "revision": 1,
   "runtime": "f(k) B^(O(1))",

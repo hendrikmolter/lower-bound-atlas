@@ -92,30 +92,43 @@
             "effectiveStatus": "established",
             "evidence": [
               {
-                "boundRevision": 2,
-                "proof": {
-                  "proofId": "classical-graph-sh-converse",
-                  "revision": 2,
-                  "theorem": "vc-order-sh-converse"
-                },
-                "reviewId": "vc-order-sh-converse-review-r2",
+                "boundRevision": 3,
+                "hypothesisRevision": 1,
+                "reviewId": "vc-order-sh-source-audit-r3",
                 "source": {
                   "editionId": "v2",
-                  "locator": "Lemma 2.2, pp. 6–7 (decision interface)",
+                  "locator": "Theorem 2.4, p. 7",
                   "paperId": "sh26",
                   "placement": "proof",
-                  "role": "quantitative decision sparsification, preprint dependency"
+                  "role": "SH is equivalent to Weak ETH for 3-SAT by variable count"
+                }
+              },
+              {
+                "boundRevision": 3,
+                "hypothesisRevision": 1,
+                "reviewId": "vc-order-sh-source-audit-r3",
+                "source": {
+                  "editionId": "journal",
+                  "locator": "Theorem 5, proof, p. 526",
+                  "paperId": "ipz2001",
+                  "placement": "proof",
+                  "role": "linear-variable encoding of the size constraint and vertex-preserving graph reductions"
                 }
               }
             ],
+            "sourceBasis": {
+              "kind": "derived",
+              "step": "Use one Boolean selection variable per vertex, require one selected endpoint per edge, and use a linear-size cardinality circuit. The 3-CNF has O(n) variables, so failure of SH would give a fixed-power algorithm by graph order."
+            },
             "status": "established"
           },
           "forward": {
             "effectiveStatus": "established",
             "evidence": [
               {
-                "boundRevision": 2,
-                "reviewId": "vc-order-sh-source-review",
+                "boundRevision": 3,
+                "hypothesisRevision": 1,
+                "reviewId": "vc-order-sh-source-audit-r3",
                 "source": {
                   "editionId": "v2",
                   "locator": "Table 1, Vertex Cover by graph order, p. 4",
@@ -149,13 +162,13 @@
       ],
       "reader": {
         "label": "Fixed power saving in the exponent",
-        "revision": 2,
+        "revision": 3,
         "title": "Vertex Cover by graph order under SH"
       },
       "reviewIds": [
-        "vc-order-sh-source-review"
+        "vc-order-sh-source-audit-r3"
       ],
-      "revision": 2,
+      "revision": 3,
       "runtime": "2^(O(n^(1−ε))) B^(O(1))",
       "runtimeSymbols": [
         "n",
@@ -244,7 +257,7 @@
       "recoveredScale": "n^(1−ε)",
       "recovery": {
         "id": "vc-order-sh",
-        "revision": 2
+        "revision": 3
       },
       "scale": "degree",
       "target": {
@@ -311,7 +324,7 @@
       "recoveredScale": "n^(1−ε)",
       "recovery": {
         "id": "vc-order-sh",
-        "revision": 2
+        "revision": 3
       },
       "scale": "degree",
       "status": "degree",
@@ -353,7 +366,7 @@
     }
   ],
   "resolutions": [],
-  "revision": 6,
+  "revision": 7,
   "task": "Does G have a set of at most k vertices that includes an endpoint of every edge?",
   "title": "Vertex Cover by graph order",
   "variant": "Vertex Cover"

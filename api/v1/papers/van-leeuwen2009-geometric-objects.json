@@ -1,0 +1,20 @@
+{
+  "authors": [
+    "Erik Jan van Leeuwen"
+  ],
+  "editions": [
+    {
+      "access": "The deposited thesis was checked for Theorems 4.1.8 and 4.1.10 and the discussion following Theorem 4.3.15.",
+      "id": "thesis",
+      "kind": "thesis",
+      "label": "PhD thesis, University of Amsterdam, 2009",
+      "openUrl": "https://pure.uva.nl/ws/files/1075216/144795_thesis.pdf",
+      "preferredUrl": "https://dare.uva.nl/id/866f1b90-e266-48c5-85c8-7f1000ac4124",
+      "primaryUrl": "https://dare.uva.nl/id/866f1b90-e266-48c5-85c8-7f1000ac4124"
+    }
+  ],
+  "id": "van-leeuwen2009-geometric-objects",
+  "preferredEditionId": "thesis",
+  "preferredUrl": "https://dare.uva.nl/id/866f1b90-e266-48c5-85c8-7f1000ac4124",
+  "title": "Optimization and Approximation on Systems of Geometric Objects"
+}

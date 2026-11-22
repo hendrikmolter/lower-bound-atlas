@@ -1,0 +1,19 @@
+{
+  "applicable": true,
+  "date": "2026-11-22",
+  "evidence": "evidence/literature-corollaries-2026-11-22.md",
+  "id": "weighted-fixed-width-cnf-sat-weight-w1-literature-audit",
+  "independent": true,
+  "label": "Agent verified",
+  "object": {
+    "caseId": "weighted-fixed-width-cnf-sat-weight",
+    "id": "weighted-fixed-width-cnf-sat-weight-w1",
+    "revision": 2,
+    "type": "bound"
+  },
+  "reviewer": "Codex agent /root/others",
+  "scope": "The exact-weight Boolean constraint dichotomy supplies membership for every fixed width. The cited lower bound supports the hardness direction under the same parameterization.",
+  "stale": false,
+  "type": "agent",
+  "verdict": "verified"
+}

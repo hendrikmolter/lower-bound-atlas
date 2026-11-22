@@ -1,0 +1,1 @@
+Lower Bound Atlas. 3-Coloring · Fixed-power bounds under SH. lms-3color-order/color-sh-fixed-power, bound revision 2. Edition v1.0.0, Git commit 3223633fb998c94f550093f66f71d58128f2828f. https://github.com/hendrikmolter/lower-bound-atlas/blob/3223633fb998c94f550093f66f71d58128f2828f/data/cases/lms-3color-order.json

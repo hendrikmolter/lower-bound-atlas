@@ -1,0 +1,118 @@
+{
+  "assessments": {
+    "sh": {
+      "converse": {
+        "effectiveStatus": "established",
+        "evidence": [
+          {
+            "boundRevision": 3,
+            "hypothesisRevision": 1,
+            "reviewId": "clique-order-sh-source-audit-r3",
+            "source": {
+              "editionId": "v2",
+              "locator": "Theorem 2.4, p. 7",
+              "paperId": "sh26",
+              "placement": "proof",
+              "role": "SH is equivalent to Weak ETH for 3-SAT by variable count"
+            }
+          },
+          {
+            "boundRevision": 3,
+            "hypothesisRevision": 1,
+            "reviewId": "clique-order-sh-source-audit-r3",
+            "source": {
+              "editionId": "journal",
+              "locator": "Theorem 5, proof, p. 526",
+              "paperId": "ipz2001",
+              "placement": "proof",
+              "role": "linear-variable encoding of the size constraint and vertex-preserving graph reductions"
+            }
+          }
+        ],
+        "sourceBasis": {
+          "kind": "derived",
+          "step": "Complement the graph and use the independent-set encoding to 3-CNF on O(n) variables. A failure of SH would give a fixed-power 3-SAT algorithm by variable count."
+        },
+        "status": "established"
+      },
+      "forward": {
+        "effectiveStatus": "established",
+        "evidence": [
+          {
+            "boundRevision": 3,
+            "hypothesisRevision": 1,
+            "reviewId": "clique-order-sh-source-audit-r3",
+            "source": {
+              "editionId": "v2",
+              "locator": "Table 1, Independent Set, p. 4",
+              "paperId": "sh26",
+              "placement": "forward",
+              "role": "graph-order benchmark transferred by complementation"
+            }
+          }
+        ],
+        "sourceBasis": {
+          "kind": "derived",
+          "step": "Complementing the graph turns a clique into an independent set of the same size and preserves the number of vertices. The complement can be constructed in time polynomial in the complete input length."
+        },
+        "status": "established"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "established-equivalent"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "sh",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "clique-order-sh",
+  "inputConditions": [],
+  "inputFactor": "B^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [
+    "For each fixed ε strictly between zero and 1."
+  ],
+  "reader": {
+    "label": "Fixed power saving in the exponent",
+    "revision": 3,
+    "title": "Clique by number of vertices under SH"
+  },
+  "reviewIds": [
+    "clique-order-sh-source-audit-r3"
+  ],
+  "revision": 3,
+  "runtime": "2^(O(n^(1−ε))) B^(O(1))",
+  "runtimeSymbols": [
+    "n",
+    "ε",
+    "B"
+  ],
+  "sourceBasis": {
+    "kind": "derived",
+    "step": "Complementing the graph turns a clique into an independent set of the same size and preserves the number of vertices. The complement can be constructed in time polynomial in the complete input length."
+  },
+  "sources": [
+    {
+      "editionId": "v2",
+      "locator": "Table 1, Independent Set, p. 4",
+      "paperId": "sh26",
+      "placement": "forward",
+      "role": "graph-order benchmark for Independent Set"
+    },
+    {
+      "editionId": "journal",
+      "locator": "Theorem 5, p. 526",
+      "paperId": "ipz2001",
+      "placement": "forward",
+      "role": "graph complementation preserves the number of vertices"
+    }
+  ],
+  "statement": "Under SH, no deterministic algorithm decides Clique within the stated running time.",
+  "status": "established",
+  "supported": true
+}

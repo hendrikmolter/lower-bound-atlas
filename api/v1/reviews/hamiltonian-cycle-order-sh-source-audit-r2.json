@@ -1,0 +1,19 @@
+{
+  "applicable": true,
+  "date": "2026-11-22",
+  "evidence": "evidence/fixed-power-source-audit.md",
+  "id": "hamiltonian-cycle-order-sh-source-audit-r2",
+  "independent": true,
+  "label": "Agent verified",
+  "object": {
+    "caseId": "hamiltonian-cycle-order",
+    "id": "hamiltonian-cycle-order-sh",
+    "revision": 2,
+    "type": "bound"
+  },
+  "reviewer": "Codex citation audit agent",
+  "scope": "Checks the fixed-dimensional induced-grid exclusion, the parameter transfer and the scope of the graph-size converse where recorded.",
+  "stale": false,
+  "type": "agent",
+  "verdict": "verified"
+}

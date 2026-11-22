@@ -143,29 +143,43 @@
             "effectiveStatus": "established",
             "evidence": [
               {
-                "boundRevision": 1,
-                "proof": {
-                  "proofId": "three-coloring-sh-converse",
-                  "revision": 2,
-                  "theorem": "color-sh-converse"
-                },
-                "reviewId": "three-coloring-sh-converse-review-r2",
+                "boundRevision": 2,
+                "hypothesisRevision": 1,
+                "reviewId": "color-sh-fixed-power-source-audit-r2",
                 "source": {
                   "editionId": "v2",
-                  "locator": "Lemma 2.2, pp. 6–7 (decision interface)",
+                  "locator": "Theorem 2.4, p. 7",
                   "paperId": "sh26",
-                  "role": "preprint dependency"
+                  "placement": "proof",
+                  "role": "SH is equivalent to Weak ETH for 3-SAT by variable count"
+                }
+              },
+              {
+                "boundRevision": 2,
+                "hypothesisRevision": 1,
+                "reviewId": "color-sh-fixed-power-source-audit-r2",
+                "source": {
+                  "editionId": "v1",
+                  "locator": "Corollary 7 proof, pp. 21–22",
+                  "paperId": "claude2026-subexponential-sat",
+                  "placement": "proof",
+                  "role": "linear-variable graph-to-3-CNF encoding"
                 }
               }
             ],
+            "sourceBasis": {
+              "kind": "derived",
+              "step": "Use three indicator variables per vertex, require exactly one color per vertex, and forbid equal colors across edges. The 3-CNF uses 3n variables, so failure of SH would give a fixed-power algorithm by graph order."
+            },
             "status": "established"
           },
           "forward": {
             "effectiveStatus": "established",
             "evidence": [
               {
-                "boundRevision": 1,
-                "reviewId": "color-sh-review",
+                "boundRevision": 2,
+                "hypothesisRevision": 1,
+                "reviewId": "color-sh-fixed-power-source-audit-r2",
                 "source": {
                   "editionId": "v2",
                   "locator": "Table 1, 3-Coloring row, p. 4, and Theorem 3.1, p. 8",
@@ -198,14 +212,14 @@
       ],
       "reader": {
         "label": "Fixed-power bounds",
-        "revision": 1,
+        "revision": 2,
         "subject": "The full family of bounds",
         "title": "Fixed-power bounds under SH"
       },
       "reviewIds": [
-        "color-sh-review"
+        "color-sh-fixed-power-source-audit-r2"
       ],
-      "revision": 1,
+      "revision": 2,
       "runtime": "2^(O(n^a)) B^(O(1))",
       "runtimeSymbols": [
         "n",
@@ -218,13 +232,6 @@
           "paperId": "sh26",
           "placement": "forward",
           "role": "benchmark"
-        },
-        {
-          "editionId": "v2",
-          "locator": "Lemma 2.2, pp. 6–7 (decision interface)",
-          "paperId": "sh26",
-          "placement": "proof",
-          "role": "preprint dependency"
         }
       ],
       "statement": "Under SH, no deterministic algorithm decides 3-Coloring within the stated running time.",
@@ -286,7 +293,7 @@
       "recoveredScale": "n^(1−ε)",
       "recovery": {
         "id": "color-sh-fixed-power",
-        "revision": 1
+        "revision": 2
       },
       "scale": "degree",
       "target": {
@@ -346,7 +353,7 @@
       "recoveredScale": "n^(1−ε)",
       "recovery": {
         "id": "color-sh-fixed-power",
-        "revision": 1
+        "revision": 2
       },
       "scale": "degree",
       "status": "degree",
@@ -397,7 +404,7 @@
         },
         {
           "id": "color-sh-fixed-power",
-          "revision": 1
+          "revision": 2
         }
       ],
       "evidence": [
@@ -408,9 +415,16 @@
           "role": "benchmark"
         },
         {
-          "proofId": "three-coloring-sh-converse",
-          "revision": 2,
-          "theorem": "color-sh-converse"
+          "editionId": "v2",
+          "locator": "Table 1, p. 4, and Theorem 2.4, p. 7",
+          "paperId": "sh26",
+          "role": "fixed-power forward benchmark and SH equivalence for 3-SAT"
+        },
+        {
+          "editionId": "v1",
+          "locator": "Corollary 7 proof, pp. 21–22",
+          "paperId": "claude2026-subexponential-sat",
+          "role": "linear-variable 3-Coloring encoding into 3-SAT"
         }
       ],
       "reason": "The historical ETH bound implies uniform ETH. The SH comparison depends on the cited preprint.",
@@ -419,7 +433,7 @@
       "status": "open"
     }
   ],
-  "revision": 18,
+  "revision": 19,
   "task": "Decide whether the graph admits a proper coloring with at most three colors.",
   "title": "3-Coloring by graph order",
   "variant": "Ordinary unweighted 3-Coloring"

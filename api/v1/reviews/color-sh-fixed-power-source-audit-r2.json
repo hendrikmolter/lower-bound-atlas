@@ -1,0 +1,19 @@
+{
+  "applicable": true,
+  "date": "2026-11-22",
+  "evidence": "evidence/fixed-power-source-audit.md",
+  "id": "color-sh-fixed-power-source-audit-r2",
+  "independent": true,
+  "label": "Agent verified",
+  "object": {
+    "caseId": "lms-3color-order",
+    "id": "color-sh-fixed-power",
+    "revision": 2,
+    "type": "bound"
+  },
+  "reviewer": "Codex citation audit agent",
+  "scope": "Checks the published forward implication and the converse via the cited graph-to-3-CNF encoding and SH equivalence, including the vertex-cover kernel for the budget when applicable.",
+  "stale": false,
+  "type": "agent",
+  "verdict": "verified"
+}

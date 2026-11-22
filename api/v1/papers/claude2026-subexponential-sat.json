@@ -1,0 +1,20 @@
+{
+  "authors": [
+    "Claude"
+  ],
+  "editions": [
+    {
+      "access": "Corollary 7 proof, pp. 21–22, inspected for the explicit graph-to-3-CNF encodings.",
+      "id": "v1",
+      "kind": "preprint",
+      "label": "Hexagon:2610.00577v1, October 2026",
+      "openUrl": "https://hexagonmath.org/pdf/2610.00577v1",
+      "preferredUrl": "https://hexagonmath.org/2610.00577v1",
+      "primaryUrl": "https://hexagonmath.org/2610.00577v1"
+    }
+  ],
+  "id": "claude2026-subexponential-sat",
+  "preferredEditionId": "v1",
+  "preferredUrl": "https://hexagonmath.org/2610.00577v1",
+  "title": "A 2^{o(n)} Time Algorithm for 3-SAT"
+}

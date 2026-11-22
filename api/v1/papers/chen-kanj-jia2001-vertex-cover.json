@@ -1,0 +1,22 @@
+{
+  "authors": [
+    "Jianer Chen",
+    "Iyad A. Kanj",
+    "Weijia Jia"
+  ],
+  "editions": [
+    {
+      "access": "Theorem 2.2 checked for the 2k-vertex kernel.",
+      "doi": "10.1006/jagm.2001.1186",
+      "id": "journal",
+      "kind": "journal",
+      "label": "Journal of Algorithms 41(2) (2001), pp. 280–301",
+      "preferredUrl": "https://doi.org/10.1006/jagm.2001.1186",
+      "primaryUrl": "https://doi.org/10.1006/jagm.2001.1186"
+    }
+  ],
+  "id": "chen-kanj-jia2001-vertex-cover",
+  "preferredEditionId": "journal",
+  "preferredUrl": "https://doi.org/10.1006/jagm.2001.1186",
+  "title": "Vertex Cover: Further Observations and Further Improvements"
+}

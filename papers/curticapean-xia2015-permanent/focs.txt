@@ -1,0 +1,1 @@
+Radu Curticapean, Mingji Xia. Parameterizing the Permanent: Genus, Apices, Minors, Evaluation mod 2^k. FOCS 2015, pp. 994–1009. https://doi.org/10.1109/FOCS.2015.65

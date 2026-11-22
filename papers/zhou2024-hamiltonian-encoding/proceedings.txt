@@ -1,0 +1,1 @@
+Neng-Fa Zhou. Encoding the Hamiltonian Cycle Problem into SAT Based on Vertex Elimination. CP 2024, LIPIcs 307, pp. 40:1–40:8. https://doi.org/10.4230/LIPIcs.CP.2024.40

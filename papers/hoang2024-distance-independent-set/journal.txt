@@ -1,0 +1,1 @@
+Duc A. Hoang. On the complexity of distance-d independent set reconfiguration. Theoretical Computer Science 1009 (2024), Article 114682. https://doi.org/10.1016/j.tcs.2024.114682

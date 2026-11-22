@@ -1,0 +1,21 @@
+{
+  "authors": [
+    "Neng-Fa Zhou"
+  ],
+  "editions": [
+    {
+      "access": "Published §2 inspected for the binary distance encoding.",
+      "doi": "10.4230/LIPIcs.CP.2024.40",
+      "id": "proceedings",
+      "kind": "proceedings",
+      "label": "CP 2024, LIPIcs 307, pp. 40:1–40:8",
+      "openUrl": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol307-cp2024/LIPIcs.CP.2024.40/LIPIcs.CP.2024.40.pdf",
+      "preferredUrl": "https://doi.org/10.4230/LIPIcs.CP.2024.40",
+      "primaryUrl": "https://doi.org/10.4230/LIPIcs.CP.2024.40"
+    }
+  ],
+  "id": "zhou2024-hamiltonian-encoding",
+  "preferredEditionId": "proceedings",
+  "preferredUrl": "https://doi.org/10.4230/LIPIcs.CP.2024.40",
+  "title": "Encoding the Hamiltonian Cycle Problem into SAT Based on Vertex Elimination"
+}

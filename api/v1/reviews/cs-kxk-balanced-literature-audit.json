@@ -1,0 +1,19 @@
+{
+  "applicable": true,
+  "date": "2026-11-22",
+  "evidence": "evidence/literature-corollaries-2026-11-22.md",
+  "id": "cs-kxk-balanced-literature-audit",
+  "independent": true,
+  "label": "Agent verified",
+  "object": {
+    "caseId": "lms-closest-string-radius-alphabet",
+    "id": "cs-kxk-balanced",
+    "revision": 1,
+    "type": "bound"
+  },
+  "reviewer": "Codex agent /root/others",
+  "scope": "The published deterministic chain starts from the square-clique premise and uses the diagonal-block row sets. Row strings witness every symbol, and the total disjunction time preserves the exponent.",
+  "stale": false,
+  "type": "agent",
+  "verdict": "verified"
+}

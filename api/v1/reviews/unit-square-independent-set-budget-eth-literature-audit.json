@@ -1,0 +1,19 @@
+{
+  "applicable": true,
+  "date": "2026-11-22",
+  "evidence": "evidence/literature-corollaries-2026-11-22.md",
+  "id": "unit-square-independent-set-budget-eth-literature-audit",
+  "independent": true,
+  "label": "Agent verified",
+  "object": {
+    "caseId": "unit-square-independent-set-budget",
+    "id": "unit-square-independent-set-budget-eth",
+    "revision": 2,
+    "type": "bound"
+  },
+  "reviewer": "Codex agent /root/others",
+  "scope": "The size-preserving rational dilation from the cited separation construction preserves all intersections, the budget and the number of regions. Polynomial bit growth preserves the stated input factor.",
+  "stale": false,
+  "type": "agent",
+  "verdict": "verified"
+}

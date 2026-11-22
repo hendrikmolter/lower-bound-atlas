@@ -111,30 +111,55 @@
             "effectiveStatus": "established",
             "evidence": [
               {
-                "boundRevision": 2,
-                "proof": {
-                  "proofId": "classical-graph-sh-converse",
-                  "revision": 2,
-                  "theorem": "vc-budget-sh-converse"
-                },
-                "reviewId": "vc-budget-sh-converse-review-r2",
+                "boundRevision": 3,
+                "hypothesisRevision": 1,
+                "reviewId": "vc-budget-sh-source-audit-r3",
                 "source": {
                   "editionId": "v2",
-                  "locator": "Lemma 2.2, pp. 6–7 (decision interface)",
+                  "locator": "Theorem 2.4, p. 7",
                   "paperId": "sh26",
                   "placement": "proof",
-                  "role": "quantitative decision sparsification, preprint dependency"
+                  "role": "SH is equivalent to Weak ETH for 3-SAT by variable count"
+                }
+              },
+              {
+                "boundRevision": 3,
+                "hypothesisRevision": 1,
+                "reviewId": "vc-budget-sh-source-audit-r3",
+                "source": {
+                  "editionId": "journal",
+                  "locator": "Theorem 5, proof, p. 526",
+                  "paperId": "ipz2001",
+                  "placement": "proof",
+                  "role": "linear-variable encoding of the size constraint and vertex-preserving graph reductions"
+                }
+              },
+              {
+                "boundRevision": 3,
+                "hypothesisRevision": 1,
+                "reviewId": "vc-budget-sh-source-audit-r3",
+                "source": {
+                  "editionId": "journal",
+                  "locator": "Theorem 2.2",
+                  "paperId": "chen-kanj-jia2001-vertex-cover",
+                  "placement": "proof",
+                  "role": "polynomial-time kernel on at most twice the budget in vertices"
                 }
               }
             ],
+            "sourceBasis": {
+              "kind": "derived",
+              "step": "First apply the polynomial-time 2k-vertex kernel. The vertex-cover cardinality encoding gives a 3-CNF with O(k) variables, so failure of SH would give a fixed-power algorithm by budget."
+            },
             "status": "established"
           },
           "forward": {
             "effectiveStatus": "established",
             "evidence": [
               {
-                "boundRevision": 2,
-                "reviewId": "vc-budget-sh-source-review",
+                "boundRevision": 3,
+                "hypothesisRevision": 1,
+                "reviewId": "vc-budget-sh-source-audit-r3",
                 "source": {
                   "editionId": "v2",
                   "locator": "Table 1, Vertex Cover by solution budget, p. 4",
@@ -168,13 +193,13 @@
       ],
       "reader": {
         "label": "Fixed power saving in the exponent",
-        "revision": 2,
+        "revision": 3,
         "title": "Vertex Cover by solution size under SH"
       },
       "reviewIds": [
-        "vc-budget-sh-source-review"
+        "vc-budget-sh-source-audit-r3"
       ],
-      "revision": 2,
+      "revision": 3,
       "runtime": "2^(O(k^(1−ε))) B^(O(1))",
       "runtimeSymbols": [
         "k",
@@ -263,7 +288,7 @@
       "recoveredScale": "k^(1−ε)",
       "recovery": {
         "id": "vc-budget-sh",
-        "revision": 2
+        "revision": 3
       },
       "scale": "degree",
       "target": {
@@ -330,7 +355,7 @@
       "recoveredScale": "k^(1−ε)",
       "recovery": {
         "id": "vc-budget-sh",
-        "revision": 2
+        "revision": 3
       },
       "scale": "degree",
       "status": "degree",
@@ -372,7 +397,7 @@
     }
   ],
   "resolutions": [],
-  "revision": 6,
+  "revision": 7,
   "task": "Does G have a set of at most k vertices that includes an endpoint of every edge?",
   "title": "Vertex Cover by solution size",
   "variant": "Vertex Cover"

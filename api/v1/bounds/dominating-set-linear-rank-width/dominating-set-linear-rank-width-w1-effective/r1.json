@@ -47,12 +47,9 @@
       "theorem": "dominating-set-rankwidth"
     }
   ],
-  "provenance": "literature",
+  "provenance": "atlas",
   "qualifications": [],
   "reader": {
-    "historicalNote": [
-      "Liu and Meng state the quadratic lower bound under ETH in Theorem 3.1 and Corollary 3.10. The FPT ≠ W[1] exclusion is a direct consequence of their construction and the source-size calculation in the linked derivation."
-    ],
     "label": "Effective quadratic-width bound on monopolar graphs",
     "revision": 1,
     "title": "Effective quadratic-width bound on monopolar graphs under FPT ≠ W[1]"
@@ -64,6 +61,10 @@
     "p",
     "N"
   ],
+  "sourceBasis": {
+    "kind": "derived",
+    "step": "Liu and Meng’s construction gives a monopolar graph whose squared width is at most a constant times the number of variables in a compact Multicolored Clique encoding. The effective cutoff then gives a fixed-parameter algorithm for Multicolored Clique."
+  },
   "sources": [
     {
       "editionId": "v1",

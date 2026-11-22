@@ -1,0 +1,18 @@
+{
+  "applicable": true,
+  "date": "2026-11-22",
+  "evidence": "evidence/independent-set-rankwidth-sh-source-scope.md",
+  "id": "independent-set-supplied-linear-layout-sh-degree-source-review",
+  "label": "Agent verified",
+  "object": {
+    "caseId": "independent-set-supplied-linear-layout",
+    "id": "independent-set-supplied-linear-layout-sh-degree",
+    "revision": 1,
+    "type": "bound"
+  },
+  "reviewer": "Codex source audit",
+  "scope": "Forward implication from SH. Checked the 3-SAT exponent transfer, the triangle-free restriction, and the applicable width interface.",
+  "stale": false,
+  "type": "agent",
+  "verdict": "verified"
+}

@@ -1,0 +1,21 @@
+{
+  "authors": [
+    "Duc A. Hoang"
+  ],
+  "editions": [
+    {
+      "access": "The publisher’s Section 3.1 gives the static equivalence between distance-d Independent Set and Independent Set in the (d−1)-st graph power.",
+      "doi": "10.1016/j.tcs.2024.114682",
+      "id": "journal",
+      "kind": "journal",
+      "label": "Theoretical Computer Science 1009 (2024), Article 114682",
+      "openUrl": "https://arxiv.org/abs/2208.07199",
+      "preferredUrl": "https://doi.org/10.1016/j.tcs.2024.114682",
+      "primaryUrl": "https://doi.org/10.1016/j.tcs.2024.114682"
+    }
+  ],
+  "id": "hoang2024-distance-independent-set",
+  "preferredEditionId": "journal",
+  "preferredUrl": "https://doi.org/10.1016/j.tcs.2024.114682",
+  "title": "On the complexity of distance-d independent set reconfiguration"
+}

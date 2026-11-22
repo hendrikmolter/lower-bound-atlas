@@ -1,0 +1,1 @@
+Dániel Marx. Parameterized complexity of constraint satisfaction problems. Computational Complexity 14 (2005), pp. 153–183. https://doi.org/10.1007/s00037-005-0195-9

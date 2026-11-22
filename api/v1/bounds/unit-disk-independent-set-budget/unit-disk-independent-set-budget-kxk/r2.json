@@ -26,12 +26,7 @@
           {
             "boundRevision": 2,
             "hypothesisRevision": 1,
-            "proof": {
-              "proofId": "six-w1-memberships",
-              "revision": 1,
-              "theorem": "open-to-closed-regions"
-            },
-            "reviewId": "unit-disk-independent-set-budget-kxk-closed-scope",
+            "reviewId": "unit-disk-independent-set-budget-kxk-literature-audit",
             "source": {
               "editionId": "v3",
               "locator": "§3, Proposition 1, pp. 3–4, and Table 1, second row, p. 5",
@@ -39,8 +34,24 @@
               "placement": "statement",
               "role": "benchmark"
             }
+          },
+          {
+            "boundRevision": 2,
+            "hypothesisRevision": 1,
+            "reviewId": "unit-disk-independent-set-budget-kxk-literature-audit",
+            "source": {
+              "editionId": "thesis",
+              "locator": "Theorems 4.1.8 and 4.1.10, pp. 32–33, and discussion following Theorem 4.3.15, p. 40",
+              "paperId": "van-leeuwen2009-geometric-objects",
+              "placement": "proof",
+              "role": "open-to-closed transfer for scalable objects"
+            }
           }
         ],
+        "sourceBasis": {
+          "kind": "derived",
+          "step": "A common rational expansion of the centers, keeping each region’s size fixed, preserves the intersection graph, selection budget and number of regions. The coordinates still have polynomial bit length."
+        },
         "status": "established"
       },
       "hypothesisRevision": 1,
@@ -84,7 +95,7 @@
     "title": "Exponent in solution budget under the k × k Clique Hypothesis"
   },
   "reviewIds": [
-    "unit-disk-independent-set-budget-kxk-closed-scope"
+    "unit-disk-independent-set-budget-kxk-literature-audit"
   ],
   "revision": 2,
   "runtime": "f(k) n^(o(k^(1/2))) B^(O(1))",

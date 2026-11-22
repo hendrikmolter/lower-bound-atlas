@@ -159,14 +159,20 @@
               {
                 "boundRevision": 1,
                 "hypothesisRevision": 1,
-                "proof": {
-                  "proofId": "closest-string-balanced-kxk",
-                  "revision": 1,
-                  "theorem": "closest-string-balanced-kxk"
-                },
-                "reviewId": "closest-string-balanced-kxk-review"
+                "reviewId": "cs-kxk-balanced-literature-audit",
+                "source": {
+                  "editionId": "journal",
+                  "locator": "Corollary 2.6, Lemma 2.8 and Theorems 2.11, 2.12 and 3.1, pp. 681–687",
+                  "paperId": "lms2018",
+                  "placement": "forward",
+                  "role": "deterministic reduction from k × k Clique"
+                }
               }
             ],
+            "sourceBasis": {
+              "kind": "derived",
+              "step": "The reduction sets L = d + 1 and uses 2L + 1 ordinary and dummy symbols in total. The strings for the diagonal-block row sets use every one of those symbols, giving q = 2d + 3."
+            },
             "status": "established"
           },
           "hypothesisRevision": 1,
@@ -187,34 +193,41 @@
         "balanced-alphabet"
       ],
       "inputFactor": "N^(O(1))",
-      "proofs": [
-        {
-          "proofId": "closest-string-balanced-kxk",
-          "revision": 1,
-          "theorem": "closest-string-balanced-kxk"
-        }
-      ],
-      "provenance": "atlas",
+      "proofs": [],
+      "provenance": "literature",
       "qualifications": [],
       "reader": {
         "label": "Subexponential-time bound with a balanced alphabet",
         "revision": 1,
         "title": "Balanced-alphabet bound under the k × k Clique Hypothesis"
       },
-      "reviewIds": [],
+      "reviewIds": [
+        "cs-kxk-balanced-literature-audit"
+      ],
       "revision": 1,
       "runtime": "2^(o(d log₂ d)) N^(O(1))",
       "runtimeSymbols": [
         "d",
         "N"
       ],
+      "sourceBasis": {
+        "kind": "derived",
+        "step": "The reduction sets L = d + 1 and uses 2L + 1 ordinary and dummy symbols in total. The strings for the diagonal-block row sets use every one of those symbols, giving q = 2d + 3."
+      },
       "sources": [
         {
           "editionId": "journal",
           "locator": "Corollary 2.6, Lemma 2.8 and Theorems 2.11, 2.12 and 3.1, pp. 681–687",
           "paperId": "lms2018",
-          "placement": "proof",
-          "role": "deterministic disjunction and reduction chain"
+          "placement": "forward",
+          "role": "deterministic reduction from k × k Clique"
+        },
+        {
+          "editionId": "v3",
+          "locator": "§3, Table 1, first row, p. 5, covering Theorem 14.17 of Parameterized Algorithms",
+          "paperId": "szeider2026",
+          "placement": "context",
+          "role": "unrestricted Closest String bound under the same premise"
         }
       ],
       "statement": "Under the k × k Clique Hypothesis, no deterministic algorithm decides Closest String within the stated running time.",
@@ -490,9 +503,18 @@
       "effective": false,
       "evidence": [
         {
-          "proofId": "closest-string-balanced-kxk",
-          "revision": 1,
-          "theorem": "closest-string-balanced-kxk"
+          "editionId": "journal",
+          "locator": "Corollary 2.6, Lemma 2.8 and Theorems 2.11, 2.12 and 3.1, pp. 681–687",
+          "paperId": "lms2018",
+          "placement": "forward",
+          "role": "deterministic reduction from k × k Clique"
+        },
+        {
+          "editionId": "v3",
+          "locator": "§3, Table 1, first row, p. 5, covering Theorem 14.17 of Parameterized Algorithms",
+          "paperId": "szeider2026",
+          "placement": "context",
+          "role": "unrestricted Closest String bound under the same premise"
         }
       ],
       "hypothesis": {
@@ -518,9 +540,18 @@
       "effective": false,
       "evidence": [
         {
-          "proofId": "closest-string-balanced-kxk",
-          "revision": 1,
-          "theorem": "closest-string-balanced-kxk"
+          "editionId": "journal",
+          "locator": "Corollary 2.6, Lemma 2.8 and Theorems 2.11, 2.12 and 3.1, pp. 681–687",
+          "paperId": "lms2018",
+          "placement": "forward",
+          "role": "deterministic reduction from k × k Clique"
+        },
+        {
+          "editionId": "v3",
+          "locator": "§3, Table 1, first row, p. 5, covering Theorem 14.17 of Parameterized Algorithms",
+          "paperId": "szeider2026",
+          "placement": "context",
+          "role": "unrestricted Closest String bound under the same premise"
         }
       ],
       "hypothesis": {

@@ -1,0 +1,19 @@
+{
+  "applicable": true,
+  "date": "2026-11-22",
+  "evidence": "evidence/fixed-power-source-audit.md",
+  "id": "ds-order-sh-fixed-power-source-audit-r2",
+  "independent": true,
+  "label": "Agent verified",
+  "object": {
+    "caseId": "dominating-set-order",
+    "id": "ds-order-sh-fixed-power",
+    "revision": 2,
+    "type": "bound"
+  },
+  "reviewer": "Codex citation audit agent",
+  "scope": "Checks the induced-grid forward implication and the independently reviewed converse, including the prior high-coverage branching rule and its fixed-power threshold.",
+  "stale": false,
+  "type": "agent",
+  "verdict": "verified"
+}

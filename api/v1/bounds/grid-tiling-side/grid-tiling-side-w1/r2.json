@@ -35,12 +35,14 @@
           {
             "boundRevision": 2,
             "hypothesisRevision": 1,
-            "proof": {
-              "proofId": "six-w1-memberships",
-              "revision": 1,
-              "theorem": "grid-tiling-w1-membership"
-            },
-            "reviewId": "grid-tiling-w1-membership-independent"
+            "reviewId": "grid-tiling-side-w1-literature-audit",
+            "source": {
+              "editionId": "focs",
+              "locator": "Definition II.4, Remark II.5 and Theorem II.6, p. 998",
+              "paperId": "curticapean-xia2015-permanent",
+              "placement": "proof",
+              "role": "W[1]-completeness of Grid Tiling"
+            }
           }
         ],
         "status": "established"
@@ -51,7 +53,7 @@
           {
             "boundRevision": 2,
             "hypothesisRevision": 1,
-            "reviewId": "grid-tiling-side-w1-hardness-scope",
+            "reviewId": "grid-tiling-side-w1-literature-audit",
             "source": {
               "editionId": "book",
               "locator": "Theorem 14.28, pp. 490–491, reduction from k-Clique",
@@ -90,7 +92,7 @@
     "title": "Fixed-parameter tractability under FPT ≠ W[1]"
   },
   "reviewIds": [
-    "grid-tiling-side-w1-hardness-scope"
+    "grid-tiling-side-w1-literature-audit"
   ],
   "revision": 2,
   "runtime": "f(k) B^(O(1))",

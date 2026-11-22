@@ -1,0 +1,19 @@
+{
+  "applicable": true,
+  "date": "2026-11-22",
+  "evidence": "evidence/literature-corollaries-2026-11-22.md",
+  "id": "planar-scattered-set-solution-size-w1-literature-audit",
+  "independent": true,
+  "label": "Agent verified",
+  "object": {
+    "caseId": "planar-scattered-set-solution-size",
+    "id": "planar-scattered-set-solution-size-w1",
+    "revision": 1,
+    "type": "bound"
+  },
+  "reviewer": "Codex agent /root/others",
+  "scope": "The book reduction gives hardness on unweighted planar inputs with input distance threshold. Graph-power construction yields membership and does not need its output to be planar.",
+  "stale": false,
+  "type": "agent",
+  "verdict": "verified"
+}

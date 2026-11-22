@@ -1,0 +1,19 @@
+{
+  "applicable": true,
+  "date": "2026-11-22",
+  "evidence": "evidence/literature-corollaries-2026-11-22.md",
+  "id": "ecc-budget-np-qp-literature-audit",
+  "independent": true,
+  "label": "Agent verified",
+  "object": {
+    "caseId": "edge-clique-cover-budget",
+    "id": "ecc-budget-np-qp",
+    "revision": 2,
+    "type": "bound"
+  },
+  "reviewer": "Codex agent /root/others",
+  "scope": "Corollary 3 states the exclusion. The exponential kernel and an NP certificate give the converse under the deterministic QP convention.",
+  "stale": false,
+  "type": "agent",
+  "verdict": "verified"
+}

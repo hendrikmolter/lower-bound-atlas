@@ -1,0 +1,19 @@
+{
+  "applicable": true,
+  "date": "2026-11-22",
+  "evidence": "evidence/fixed-power-source-audit.md",
+  "id": "subset-sum-item-count-sh-source-audit-r2",
+  "independent": true,
+  "label": "Agent verified",
+  "object": {
+    "caseId": "subset-sum-item-count",
+    "id": "subset-sum-item-count-sh",
+    "revision": 2,
+    "type": "bound"
+  },
+  "reviewer": "Codex citation audit agent",
+  "scope": "Checks the digit reduction, the linear item count, polynomial bit length and the forward transfer from SH.",
+  "stale": false,
+  "type": "agent",
+  "verdict": "verified"
+}

@@ -85,16 +85,34 @@
             "effectiveStatus": "established",
             "evidence": [
               {
-                "boundRevision": 1,
+                "boundRevision": 2,
                 "hypothesisRevision": 1,
-                "proof": {
-                  "proofId": "hamiltonian-sh",
-                  "revision": 1,
-                  "theorem": "hamiltonian-sh-forward"
-                },
-                "reviewId": "hamiltonian-sh-forward-independent"
+                "reviewId": "hamiltonian-path-order-sh-source-audit-r2",
+                "source": {
+                  "editionId": "v2",
+                  "locator": "Table 1, induced-grid row, p. 4",
+                  "paperId": "sh26",
+                  "placement": "forward",
+                  "role": "induced-grid fixed-power lower bound for Hamiltonian Cycle"
+                }
+              },
+              {
+                "boundRevision": 2,
+                "hypothesisRevision": 1,
+                "reviewId": "hamiltonian-path-order-sh-source-audit-r2",
+                "source": {
+                  "editionId": "journal",
+                  "locator": "Theorem 4.7",
+                  "paperId": "deberg-et-al2020-geometric",
+                  "placement": "forward",
+                  "role": "reduction to induced grid graphs"
+                }
               }
             ],
+            "sourceBasis": {
+              "kind": "derived",
+              "step": "Choose a dimension for the desired exponent. Split one vertex of the Hamiltonian Cycle instance into two copies with the same neighbors and put a private leaf on each copy. The forced path endpoints give an equivalent Hamiltonian Path instance with only three more vertices."
+            },
             "status": "established"
           },
           "hypothesisRevision": 1,
@@ -112,43 +130,43 @@
       "id": "hamiltonian-path-order-sh",
       "inputConditions": [],
       "inputFactor": "B^(O(1))",
-      "proofs": [
-        {
-          "proofId": "hamiltonian-sh",
-          "revision": 1,
-          "theorem": "hamiltonian-sh-forward"
-        }
-      ],
-      "provenance": "atlas",
+      "proofs": [],
+      "provenance": "literature",
       "qualifications": [
         "Separately for every fixed 0 < a < 1."
       ],
       "reader": {
         "label": "Fixed-power exponent in the number of vertices",
-        "revision": 1,
+        "revision": 2,
         "title": "Fixed-power bounds under SH"
       },
-      "reviewIds": [],
-      "revision": 1,
+      "reviewIds": [
+        "hamiltonian-path-order-sh-source-audit-r2"
+      ],
+      "revision": 2,
       "runtime": "2^(O(n^a)) B^(O(1))",
       "runtimeSymbols": [
         "n",
         "B"
       ],
+      "sourceBasis": {
+        "kind": "derived",
+        "step": "Choose a dimension for the desired exponent. Split one vertex of the Hamiltonian Cycle instance into two copies with the same neighbors and put a private leaf on each copy. The forced path endpoints give an equivalent Hamiltonian Path instance with only three more vertices."
+      },
       "sources": [
         {
           "editionId": "v2",
-          "locator": "Definition of SH and footnotes 1–2, pp. 1–2",
+          "locator": "Table 1, induced-grid row, p. 4",
           "paperId": "sh26",
-          "placement": "context",
-          "role": "hypothesis and encoding conventions"
+          "placement": "forward",
+          "role": "induced-grid fixed-power lower bound for Hamiltonian Cycle"
         },
         {
           "editionId": "journal",
-          "locator": "§3, p. 526, following Theorem 5",
-          "paperId": "ipz2001",
-          "placement": "proof",
-          "role": "linear-size reduction to Hamiltonian Circuit"
+          "locator": "Theorem 4.7",
+          "paperId": "deberg-et-al2020-geometric",
+          "placement": "forward",
+          "role": "reduction to induced grid graphs"
         }
       ],
       "statement": "Under SH, no deterministic algorithm can decide Hamiltonian Path within the stated running time.",
@@ -188,9 +206,18 @@
       "effective": false,
       "evidence": [
         {
-          "proofId": "hamiltonian-sh",
-          "revision": 1,
-          "theorem": "hamiltonian-sh-forward"
+          "editionId": "v2",
+          "locator": "Table 1, induced-grid row, p. 4",
+          "paperId": "sh26",
+          "placement": "forward",
+          "role": "induced-grid fixed-power lower bound for Hamiltonian Cycle"
+        },
+        {
+          "editionId": "journal",
+          "locator": "Theorem 4.7",
+          "paperId": "deberg-et-al2020-geometric",
+          "placement": "forward",
+          "role": "reduction to induced grid graphs"
         }
       ],
       "hypothesis": {
@@ -200,7 +227,7 @@
       "recoveredScale": "n^a",
       "recovery": {
         "id": "hamiltonian-path-order-sh",
-        "revision": 1
+        "revision": 2
       },
       "scale": "degree",
       "target": {
@@ -238,9 +265,18 @@
       "effective": false,
       "evidence": [
         {
-          "proofId": "hamiltonian-sh",
-          "revision": 1,
-          "theorem": "hamiltonian-sh-forward"
+          "editionId": "v2",
+          "locator": "Table 1, induced-grid row, p. 4",
+          "paperId": "sh26",
+          "placement": "forward",
+          "role": "induced-grid fixed-power lower bound for Hamiltonian Cycle"
+        },
+        {
+          "editionId": "journal",
+          "locator": "Theorem 4.7",
+          "paperId": "deberg-et-al2020-geometric",
+          "placement": "forward",
+          "role": "reduction to induced grid graphs"
         }
       ],
       "hypothesis": {
@@ -250,7 +286,7 @@
       "recoveredScale": "n^a",
       "recovery": {
         "id": "hamiltonian-path-order-sh",
-        "revision": 1
+        "revision": 2
       },
       "scale": "degree",
       "status": "degree",
@@ -273,7 +309,7 @@
     }
   ],
   "resolutions": [],
-  "revision": 3,
+  "revision": 4,
   "task": "Does G contain a simple path through all vertices?",
   "title": "Hamiltonian Path by number of vertices",
   "variant": "Hamiltonian Path"
