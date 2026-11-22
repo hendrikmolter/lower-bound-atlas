@@ -76,10 +76,14 @@
         "t",
         "B"
       ],
+      "sourceBasis": {
+        "kind": "derived",
+        "step": "For a clique of size ℓ in an n-vertex graph, Lin gives a Set Cover instance with budget ℓ(ℓ−1)/2 and universe size at most g(ℓ) log₂ n for a computable g. Apply the construction of Bodlaender et al. to its incidence graph: join a new vertex to every set vertex and to a private leaf. After rejecting instances with an uncovered element, the graph is connected and bipartite, and its domination budget is k=ℓ(ℓ−1)/2+1. The universe vertices together with the new vertex form a vertex cover, so the treewidth is at most g(ℓ) log₂ n+1. Effective sublinearity therefore bounds the exponential factor by a computable function of ℓ times n, while f(k) depends only on ℓ. The claimed algorithm would thus decide Clique in fixed-parameter time."
+      },
       "sources": [
         {
           "editionId": "proceedings",
-          "locator": "Lemma 14, pp. 81:11–81:12. For clique size ℓ, the cover budget is ℓ(ℓ−1)/2 and the universe has size ℓ^O(1) log n.",
+          "locator": "Lemma 14, pp. 81:11–81:12.",
           "paperId": "lin2019",
           "placement": "statement",
           "role": "Full bound · small-universe Set Cover",
@@ -87,7 +91,7 @@
         },
         {
           "editionId": "proceedings",
-          "locator": "Proof of Corollary 12, p. 6:14. Apply the red-blue construction to the incidence graph, with sets blue. A hub adjacent to all sets and a private leaf increase the budget by one. After rejecting uncovered elements, the graph is connected and bipartite. The universe together with the hub is a vertex cover, so treewidth is at most the universe size plus one. Effective sublinearity then absorbs the treewidth exponent into an FPT running time for Clique.",
+          "locator": "Proof of Corollary 12, p. 6:14.",
           "paperId": "bodlaender2022-tree-structured",
           "placement": "statement",
           "role": "Full bound · reduction to Dominating Set",
@@ -103,7 +107,7 @@
         },
         {
           "editionId": "journal",
-          "locator": "Theorem 17 and Lemma 2. Hardness for logarithmic pathwidth implies the effective sublinear treewidth exclusion when f = 1.",
+          "locator": "Theorem 17 and Lemma 2.",
           "paperId": "bgns2024-xnlp",
           "placement": "statement",
           "role": "Unrestricted graphs, no solution-budget prefactor",
@@ -172,7 +176,7 @@
       "evidence": [
         {
           "editionId": "proceedings",
-          "locator": "Lemma 14, pp. 81:11–81:12. For clique size ℓ, the cover budget is ℓ(ℓ−1)/2 and the universe has size ℓ^O(1) log n.",
+          "locator": "Lemma 14, pp. 81:11–81:12.",
           "paperId": "lin2019",
           "placement": "statement",
           "role": "Full bound · small-universe Set Cover",
@@ -180,7 +184,7 @@
         },
         {
           "editionId": "proceedings",
-          "locator": "Proof of Corollary 12, p. 6:14. Apply the red-blue construction to the incidence graph, with sets blue. A hub adjacent to all sets and a private leaf increase the budget by one. After rejecting uncovered elements, the graph is connected and bipartite. The universe together with the hub is a vertex cover, so treewidth is at most the universe size plus one. Effective sublinearity then absorbs the treewidth exponent into an FPT running time for Clique.",
+          "locator": "Proof of Corollary 12, p. 6:14.",
           "paperId": "bodlaender2022-tree-structured",
           "placement": "statement",
           "role": "Full bound · reduction to Dominating Set",
@@ -244,7 +248,7 @@
       "evidence": [
         {
           "editionId": "proceedings",
-          "locator": "Lemma 14, pp. 81:11–81:12. For clique size ℓ, the cover budget is ℓ(ℓ−1)/2 and the universe has size ℓ^O(1) log n.",
+          "locator": "Lemma 14, pp. 81:11–81:12.",
           "paperId": "lin2019",
           "placement": "statement",
           "role": "Full bound · small-universe Set Cover",
@@ -252,7 +256,7 @@
         },
         {
           "editionId": "proceedings",
-          "locator": "Proof of Corollary 12, p. 6:14. Apply the red-blue construction to the incidence graph, with sets blue. A hub adjacent to all sets and a private leaf increase the budget by one. After rejecting uncovered elements, the graph is connected and bipartite. The universe together with the hub is a vertex cover, so treewidth is at most the universe size plus one. Effective sublinearity then absorbs the treewidth exponent into an FPT running time for Clique.",
+          "locator": "Proof of Corollary 12, p. 6:14.",
           "paperId": "bodlaender2022-tree-structured",
           "placement": "statement",
           "role": "Full bound · reduction to Dominating Set",
