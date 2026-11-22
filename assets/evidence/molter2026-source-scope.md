@@ -5,9 +5,6 @@ Codex source audit, 20 November 2026. The edition checked is [Hendrik Molter, ar
 | Theorem | Scope and comparison |
 | --- | --- |
 | 1 | Chromatic Number has a variable color budget and the parameter is the minimum vertex cover size. The single-exponential exclusion is a logarithmic-scale recovery of the historical vertex-cover exponent. |
-| 2 | Chromatic Number retains the treewidth times its logarithm scale, with a computable convergence cutoff. |
-| 3 | The treewidth bound for Independent Set holds on subcubic graphs with equal treewidth and pathwidth. Section 5.2 supplies the exact value and an optimal path decomposition. |
-| 4 | The Odd Cycle Transversal exclusion holds for every fixed girth slack in the stated range on connected subcubic graphs, including the equal-width instances with an optimal path decomposition from Section 6. |
 | 5 | The Independent Set exclusion at the squared-width scale applies to triangle-free graphs. The four Atlas bounds use intrinsic rank-width, intrinsic linear rank-width, the width of a supplied optimal rank decomposition, and the width of a supplied optimal vertex order. Sections 7.3–7.4 provide the optimal certificates. Their widths equal the corresponding intrinsic widths and their sizes are polynomial in graph order. |
 | 6 | The Closest String bound takes the radius as parameter. The construction in Section 8 uses length one above the radius and exactly the prescribed number of distinct symbols in the input words. The exponent scale loses a logarithmic factor from the historical balanced-alphabet lower bound. |
 | 7 | The Distinct Vectors task uses an explicit binary matrix with distinct rows. The excluded double-exponential family allows each fixed coefficient strictly between zero and one in the inner exponent, covering the smaller coefficients in the ETH benchmark. |

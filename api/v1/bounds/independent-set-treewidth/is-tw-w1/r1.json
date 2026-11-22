@@ -9,17 +9,13 @@
   ],
   "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
   "id": "is-tw-w1",
-  "inputConditions": [
-    "maximum-degree-three",
-    "equal-pathwidth"
-  ],
+  "inputConditions": [],
   "inputFactor": "B^(O(1))",
   "proofs": [],
   "provenance": "literature",
   "qualifications": [
     "The exponent h(t) is finite and nonnegative.",
-    "There is a computable function T such that h(t) ≤ η max(t, 1) whenever t ≥ T(η), for each positive rational η.",
-    "The proof also permits the solver to receive the exact width and an optimal path decomposition, counted in the complete input length."
+    "There is a computable function T such that h(t) ≤ η max(t, 1) whenever t ≥ T(η), for each positive rational η."
   ],
   "reader": {
     "label": "Effective little-o bound in the treewidth",
@@ -40,24 +36,14 @@
       "locator": "Theorem 6, logarithmic pathwidth. Treewidth is at most pathwidth, so an effective sublinear exponent in treewidth would yield an FPT algorithm for Clique.",
       "paperId": "bodlaender2025-linear-structure",
       "placement": "statement",
-      "role": "unrestricted lower bound",
-      "scopeLabel": "Unrestricted bound"
+      "role": "unrestricted lower bound"
     },
     {
       "editionId": "proceedings",
       "locator": "Theorem 11, Independent Set parameterized by logarithmic treewidth. The supplied tree decomposition can be discarded for the unrestricted problem.",
       "paperId": "bodlaender2022-tree-structured",
       "placement": "statement",
-      "role": "unrestricted lower bound",
-      "scopeLabel": "Unrestricted bound"
-    },
-    {
-      "editionId": "arxiv-v1",
-      "locator": "Theorem 3, Section 5",
-      "paperId": "molter2026-running-time",
-      "placement": "statement",
-      "role": "running-time lower bound",
-      "scopeLabel": "Bound under the stated restrictions"
+      "role": "unrestricted lower bound"
     }
   ],
   "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Independent Set within the stated running time.",

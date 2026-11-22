@@ -35,16 +35,7 @@
       "locator": "Theorem 9 and the construction of Lemma 4, especially Claim 12. The lemma fixes the number of colors. For source length S, taking q of order √(log S) keeps the construction polynomial. Encoding choices in base q and adding a q-clique to enforce the lists gives t log(t+2) at most a computable parameter factor times log S.",
       "paperId": "bodlaender2025-linear-structure",
       "placement": "statement",
-      "role": "source construction for the unrestricted bound",
-      "scopeLabel": "Published construction"
-    },
-    {
-      "editionId": "arxiv-v1",
-      "locator": "Theorem 2, Section 4",
-      "paperId": "molter2026-running-time",
-      "placement": "statement",
-      "role": "running-time lower bound",
-      "scopeLabel": "Explicit running-time statement"
+      "role": "source construction for the unrestricted bound"
     }
   ],
   "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Chromatic Number within the stated running time.",
