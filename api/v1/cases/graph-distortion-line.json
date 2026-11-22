@@ -171,6 +171,7 @@
         }
       ],
       "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "exponentDomain": "nonnegative",
       "id": "graph-distortion-line-w1",
       "inputConditions": [
         "bipartite"
@@ -178,9 +179,7 @@
       "inputFactor": "B^(O(1))",
       "proofs": [],
       "provenance": "literature",
-      "qualifications": [
-        "The exponent h is finite, nonnegative and o(d log₂ d) with a computable convergence modulus."
-      ],
+      "qualifications": [],
       "reader": {
         "label": "Effective subexponential lower bound",
         "revision": 1,
@@ -190,7 +189,7 @@
         "graph-distortion-line-w1-molter-source-review"
       ],
       "revision": 1,
-      "runtime": "2^(h(d)) B^(O(1))",
+      "runtime": "2^(o_eff(d log₂ d)) B^(O(1))",
       "runtimeSymbols": [
         "d",
         "B"

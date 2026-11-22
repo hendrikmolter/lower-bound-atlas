@@ -543,18 +543,15 @@
             }
           ],
           "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+          "exponentDomain": "nonnegative",
           "id": "chromatic-tw-w1",
           "inputConditions": [],
           "inputFactor": "N^(O(1))",
           "proofs": [],
           "provenance": "literature",
-          "qualifications": [
-            "The exponent h(t) is finite and nonnegative. There is a computable function T such that, for every positive integer j, h(t)≤t log₂(t)/j whenever t≥T(j)."
-          ],
+          "qualifications": [],
           "reader": {
             "label": "Effective little-o bound in the treewidth",
-            "notation": "effective-little-o",
-            "notationLabel": "Effective little-o",
             "revision": 1
           },
           "reviewIds": [],
@@ -3587,6 +3584,7 @@
             }
           ],
           "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+          "exponentDomain": "computable-integer",
           "id": "cp-pw-w1-effective",
           "inputConditions": [
             "connected-bipartite-degree-six",
@@ -3597,12 +3595,8 @@
           "inputFactor": "N^(O(1))",
           "proofs": [],
           "provenance": "literature",
-          "qualifications": [
-            "For every fixed 0<γ<1.",
-            "The exponent is a computable nonnegative integer function and has computable convergence to little-o at scale p log₂ p."
-          ],
+          "qualifications": [],
           "reader": {
-            "explanation": "The reduction sends compact Clique instances to connected graphs of large girth and produces an optimal path decomposition. Its explicit input length is polynomial in the per-instance host encoding for each fixed γ.",
             "label": "Effective bound in width times its logarithm",
             "revision": 1,
             "title": "Effective bound in width times its logarithm under FPT ≠ W[1]"
@@ -3647,7 +3641,7 @@
           "level": "bound"
         },
         {
-          "condition": "The girth is at least n^(1−γ).",
+          "condition": "For every fixed γ with 0 < γ < 1, the bound holds even when the girth is at least n^(1−γ).",
           "id": "large-girth",
           "level": "bound"
         },
@@ -3964,6 +3958,7 @@
             }
           ],
           "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+          "exponentDomain": "computable-integer",
           "id": "cp-tw-w1-effective",
           "inputConditions": [
             "connected-bipartite-degree-six",
@@ -3973,12 +3968,8 @@
           "inputFactor": "N^(O(1))",
           "proofs": [],
           "provenance": "literature",
-          "qualifications": [
-            "For every fixed 0<γ<1.",
-            "The exponent is a computable nonnegative integer function and has computable convergence to little-o at scale t log₂ t."
-          ],
+          "qualifications": [],
           "reader": {
-            "explanation": "The reduction sends compact Clique instances to connected graphs of large girth and produces an optimal path decomposition. Its explicit input length is polynomial in the per-instance host encoding for each fixed γ.",
             "label": "Effective bound in width times its logarithm",
             "revision": 1,
             "title": "Effective bound in width times its logarithm under FPT ≠ W[1]"
@@ -4023,7 +4014,7 @@
           "level": "bound"
         },
         {
-          "condition": "The girth is at least n^(1−γ).",
+          "condition": "For every fixed γ with 0 < γ < 1, the bound holds even when the girth is at least n^(1−γ).",
           "id": "large-girth",
           "level": "bound"
         }
@@ -5023,6 +5014,7 @@
             }
           ],
           "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+          "exponentDomain": "computable-integer",
           "id": "dominating-set-linear-rank-width-w1-effective",
           "inputConditions": [
             "monopolar"
@@ -5036,9 +5028,7 @@
             }
           ],
           "provenance": "literature",
-          "qualifications": [
-            "The exponent is a computable nonnegative integer function and has computable convergence to little-o at scale p^2."
-          ],
+          "qualifications": [],
           "reader": {
             "explanation": "The bound follows by applying the construction of Liu and Meng to a compact CNF encoding of Multicolored Clique and using the effective convergence cutoff.",
             "historicalNote": [
@@ -5622,6 +5612,7 @@
             }
           ],
           "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+          "exponentDomain": "computable-integer",
           "id": "dominating-set-rank-width-w1-effective",
           "inputConditions": [
             "monopolar"
@@ -5635,9 +5626,7 @@
             }
           ],
           "provenance": "literature",
-          "qualifications": [
-            "The exponent is a computable nonnegative integer function and has computable convergence to little-o at scale p^2."
-          ],
+          "qualifications": [],
           "reader": {
             "explanation": "The bound follows by applying the construction of Liu and Meng to a compact CNF encoding of Multicolored Clique and using the effective convergence cutoff.",
             "historicalNote": [
@@ -5887,6 +5876,7 @@
             }
           ],
           "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+          "exponentDomain": "computable-integer",
           "id": "dominating-set-supplied-linear-layout-w1-effective",
           "inputConditions": [
             "monopolar"
@@ -5900,9 +5890,7 @@
             }
           ],
           "provenance": "literature",
-          "qualifications": [
-            "The exponent is a computable nonnegative integer function and has computable convergence to little-o at scale p^2."
-          ],
+          "qualifications": [],
           "reader": {
             "explanation": "The bound follows by applying the construction of Liu and Meng to a compact CNF encoding of Multicolored Clique and using the effective convergence cutoff.",
             "historicalNote": [
@@ -6153,6 +6141,7 @@
             }
           ],
           "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+          "exponentDomain": "computable-integer",
           "id": "dominating-set-supplied-rank-decomposition-w1-effective",
           "inputConditions": [
             "monopolar"
@@ -6166,9 +6155,7 @@
             }
           ],
           "provenance": "literature",
-          "qualifications": [
-            "The exponent is a computable nonnegative integer function and has computable convergence to little-o at scale p^2."
-          ],
+          "qualifications": [],
           "reader": {
             "explanation": "The bound follows by applying the construction of Liu and Meng to a compact CNF encoding of Multicolored Clique and using the effective convergence cutoff.",
             "historicalNote": [
@@ -6390,6 +6377,7 @@
             }
           ],
           "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+          "exponentDomain": "computable-integer",
           "id": "ds-tw-w1",
           "inputConditions": [
             "connected-bipartite"
@@ -6398,13 +6386,10 @@
           "proofs": [],
           "provenance": "literature",
           "qualifications": [
-            "The prefactor f is any total computable positive integer-valued function of the solution budget k. The exponent h is computable and nonnegative integer-valued.",
-            "There is a computable function T such that h(t) ≤ η max(t, 1) whenever t ≥ T(η), for each positive rational η."
+            "The solution-budget factor f is any computable positive integer-valued function."
           ],
           "reader": {
             "label": "Effective little-o bound in the treewidth",
-            "notation": "effective-little-o",
-            "notationLabel": "Effective little-o",
             "revision": 1
           },
           "reviewIds": [],
@@ -9871,6 +9856,7 @@
             }
           ],
           "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+          "exponentDomain": "nonnegative",
           "id": "graph-distortion-line-w1",
           "inputConditions": [
             "bipartite"
@@ -9878,9 +9864,7 @@
           "inputFactor": "B^(O(1))",
           "proofs": [],
           "provenance": "literature",
-          "qualifications": [
-            "The exponent h is finite, nonnegative and o(d log₂ d) with a computable convergence modulus."
-          ],
+          "qualifications": [],
           "reader": {
             "label": "Effective subexponential lower bound",
             "revision": 1,
@@ -9890,7 +9874,7 @@
             "graph-distortion-line-w1-molter-source-review"
           ],
           "revision": 1,
-          "runtime": "2^(h(d)) B^(O(1))",
+          "runtime": "2^(o_eff(d log₂ d)) B^(O(1))",
           "runtimeSymbols": [
             "d",
             "B"
@@ -12860,6 +12844,7 @@
             }
           ],
           "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+          "exponentDomain": "computable-integer",
           "id": "independent-set-linear-rank-width-w1-effective",
           "inputConditions": [
             "triangle-free"
@@ -12867,11 +12852,8 @@
           "inputFactor": "N^(O(1))",
           "proofs": [],
           "provenance": "literature",
-          "qualifications": [
-            "The exponent is a computable nonnegative integer function and has computable convergence to little-o at scale p^2."
-          ],
+          "qualifications": [],
           "reader": {
-            "explanation": "The proof uses paths to replace selection cliques and a triangle-free padding graph to force optimal certificates.",
             "label": "Effective quadratic-width bound on triangle-free graphs",
             "revision": 1,
             "title": "Effective quadratic-width bound on triangle-free graphs under FPT ≠ W[1]"
@@ -13594,6 +13576,7 @@
             }
           ],
           "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+          "exponentDomain": "computable-integer",
           "id": "independent-set-rank-width-w1-effective",
           "inputConditions": [
             "triangle-free"
@@ -13601,11 +13584,8 @@
           "inputFactor": "N^(O(1))",
           "proofs": [],
           "provenance": "literature",
-          "qualifications": [
-            "The exponent is a computable nonnegative integer function and has computable convergence to little-o at scale p^2."
-          ],
+          "qualifications": [],
           "reader": {
-            "explanation": "The proof uses paths to replace selection cliques and a triangle-free padding graph to force optimal certificates.",
             "label": "Effective quadratic-width bound on triangle-free graphs",
             "revision": 1,
             "title": "Effective quadratic-width bound on triangle-free graphs under FPT ≠ W[1]"
@@ -13969,6 +13949,7 @@
             }
           ],
           "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+          "exponentDomain": "computable-integer",
           "id": "independent-set-supplied-linear-layout-w1-effective",
           "inputConditions": [
             "triangle-free",
@@ -13977,11 +13958,8 @@
           "inputFactor": "N^(O(1))",
           "proofs": [],
           "provenance": "literature",
-          "qualifications": [
-            "The exponent is a computable nonnegative integer function and has computable convergence to little-o at scale p^2."
-          ],
+          "qualifications": [],
           "reader": {
-            "explanation": "The proof uses paths to replace selection cliques and a triangle-free padding graph to force optimal certificates.",
             "label": "Effective quadratic-width bound on triangle-free graphs",
             "revision": 1,
             "title": "Effective quadratic-width bound on triangle-free graphs under FPT ≠ W[1]"
@@ -14351,6 +14329,7 @@
             }
           ],
           "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+          "exponentDomain": "computable-integer",
           "id": "independent-set-supplied-rank-decomposition-w1-effective",
           "inputConditions": [
             "triangle-free",
@@ -14359,11 +14338,8 @@
           "inputFactor": "N^(O(1))",
           "proofs": [],
           "provenance": "literature",
-          "qualifications": [
-            "The exponent is a computable nonnegative integer function and has computable convergence to little-o at scale p^2."
-          ],
+          "qualifications": [],
           "reader": {
-            "explanation": "The proof uses paths to replace selection cliques and a triangle-free padding graph to force optimal certificates.",
             "label": "Effective quadratic-width bound on triangle-free graphs",
             "revision": 1,
             "title": "Effective quadratic-width bound on triangle-free graphs under FPT ≠ W[1]"
@@ -14633,19 +14609,15 @@
             }
           ],
           "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+          "exponentDomain": "nonnegative",
           "id": "is-tw-w1",
           "inputConditions": [],
           "inputFactor": "B^(O(1))",
           "proofs": [],
           "provenance": "literature",
-          "qualifications": [
-            "The exponent h(t) is finite and nonnegative.",
-            "There is a computable function T such that h(t) ≤ η max(t, 1) whenever t ≥ T(η), for each positive rational η."
-          ],
+          "qualifications": [],
           "reader": {
             "label": "Effective little-o bound in the treewidth",
-            "notation": "effective-little-o",
-            "notationLabel": "Effective little-o",
             "revision": 1
           },
           "reviewIds": [],
@@ -14991,6 +14963,7 @@
             }
           ],
           "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+          "exponentDomain": "nonnegative",
           "id": "ilp-equations-w1-effective",
           "inputConditions": [
             "binary-coefficients",
@@ -15001,8 +14974,7 @@
           "proofs": [],
           "provenance": "literature",
           "qualifications": [
-            "For every fixed C ≥ 0 and every finite nonnegative function h, assume there is a computable threshold function T with h(k) ≤ k/j for every positive integer j and every k ≥ T(j).",
-            "The function h itself need not be computable."
+            "For every fixed C ≥ 0."
           ],
           "reader": {
             "explanation": "The column count is unrestricted. The proof uses Lin’s incidence matrix with exact-one rows in place of covering constraints.",
@@ -15014,10 +14986,9 @@
             "ilp-equations-w1-effective-molter-source-review"
           ],
           "revision": 2,
-          "runtime": "2^(h(k)) N^C",
+          "runtime": "2^(o_eff(k)) N^C",
           "runtimeSymbols": [
             "k",
-            "h",
             "N",
             "C"
           ],
@@ -15079,10 +15050,6 @@
           {
             "meaning": "total bit length of the input",
             "symbol": "N"
-          },
-          {
-            "meaning": "finite nonnegative exponent function with the stated computable convergence cutoff",
-            "symbol": "h"
           },
           {
             "meaning": "fixed nonnegative exponent of the complete input length",
@@ -16713,6 +16680,7 @@
             }
           ],
           "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+          "exponentDomain": "upper-bounded-integer",
           "id": "cs-w1-balanced",
           "inputConditions": [
             "one-agreement",
@@ -16722,12 +16690,10 @@
           "proofs": [],
           "provenance": "literature",
           "qualifications": [
-            "The nonnegative integer exponent has a computable upper bound and is effectively sublinear in d. The running time allows no additional factor depending on q."
+            "There is no alphabet-dependent prefactor."
           ],
           "reader": {
             "label": "One agreement with a balanced alphabet",
-            "notation": "effective-little-o",
-            "notationLabel": "Effective little-o",
             "revision": 1
           },
           "reviewIds": [],
@@ -18610,6 +18576,7 @@
             }
           ],
           "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+          "exponentDomain": "nonnegative",
           "id": "maximum-cycle-cover-supplied-pathwidth-w1",
           "inputConditions": [
             "connected-bipartite-degree-eight"
@@ -18618,13 +18585,10 @@
           "proofs": [],
           "provenance": "literature",
           "qualifications": [
-            "The exponent h(p) is finite and nonnegative and the ratio h(p) / max(1, p log₂(p+2)) converges to zero with a computable modulus.",
             "The supplied path decomposition and binary threshold count in the complete input length."
           ],
           "reader": {
             "label": "Effective little-o bound in the supplied pathwidth",
-            "notation": "effective-little-o",
-            "notationLabel": "Effective little-o",
             "revision": 1
           },
           "reviewIds": [],
@@ -20498,18 +20462,15 @@
             }
           ],
           "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+          "exponentDomain": "nonnegative",
           "id": "odd-cycle-transversal-treewidth-w1",
           "inputConditions": [],
           "inputFactor": "B^(O(1))",
           "proofs": [],
           "provenance": "literature",
-          "qualifications": [
-            "The exponent h(t) is finite and nonnegative and has a computable convergence modulus at the scale t."
-          ],
+          "qualifications": [],
           "reader": {
             "label": "Effective little-o bound in the treewidth",
-            "notation": "effective-little-o",
-            "notationLabel": "Effective little-o",
             "revision": 1
           },
           "reviewIds": [],
@@ -30189,6 +30150,7 @@
             }
           ],
           "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+          "exponentDomain": "nonnegative",
           "id": "vdp-pw-w1",
           "inputConditions": [
             "connected-bipartite-subcubic",
@@ -30199,13 +30161,9 @@
           "inputFactor": "B^(O(1))",
           "proofs": [],
           "provenance": "literature",
-          "qualifications": [
-            "The exponent h(p) is finite and nonnegative. There is a computable function T such that h(p) ≤ max(1, p log₂(max(2, p)))/j for every positive integer j and every p ≥ T(j)."
-          ],
+          "qualifications": [],
           "reader": {
             "label": "Effective little-o bound in the supplied path width",
-            "notation": "effective-little-o",
-            "notationLabel": "Effective little-o",
             "revision": 1
           },
           "reviewIds": [],
@@ -30534,6 +30492,7 @@
             }
           ],
           "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+          "exponentDomain": "nonnegative",
           "id": "vdp-tw-w1",
           "inputConditions": [
             "connected-bipartite-subcubic",
@@ -30543,13 +30502,9 @@
           "inputFactor": "B^(O(1))",
           "proofs": [],
           "provenance": "literature",
-          "qualifications": [
-            "The exponent h(t) is finite and nonnegative. There is a computable function T such that h(t) ≤ max(1, t log₂(max(2, t)))/j for every positive integer j and every t ≥ T(j)."
-          ],
+          "qualifications": [],
           "reader": {
             "label": "Effective little-o bound in the treewidth",
-            "notation": "effective-little-o",
-            "notationLabel": "Effective little-o",
             "revision": 1
           },
           "reviewIds": [],

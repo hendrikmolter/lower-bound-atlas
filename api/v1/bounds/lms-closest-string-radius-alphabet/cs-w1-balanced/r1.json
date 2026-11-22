@@ -37,6 +37,7 @@
     }
   ],
   "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "exponentDomain": "upper-bounded-integer",
   "id": "cs-w1-balanced",
   "inputConditions": [
     "one-agreement",
@@ -46,12 +47,10 @@
   "proofs": [],
   "provenance": "literature",
   "qualifications": [
-    "The nonnegative integer exponent has a computable upper bound and is effectively sublinear in d. The running time allows no additional factor depending on q."
+    "There is no alphabet-dependent prefactor."
   ],
   "reader": {
     "label": "One agreement with a balanced alphabet",
-    "notation": "effective-little-o",
-    "notationLabel": "Effective little-o",
     "revision": 1
   },
   "reviewIds": [],

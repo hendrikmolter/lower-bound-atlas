@@ -81,6 +81,7 @@
         }
       ],
       "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "exponentDomain": "computable-integer",
       "id": "dominating-set-supplied-rank-decomposition-w1-effective",
       "inputConditions": [
         "monopolar"
@@ -94,9 +95,7 @@
         }
       ],
       "provenance": "literature",
-      "qualifications": [
-        "The exponent is a computable nonnegative integer function and has computable convergence to little-o at scale p^2."
-      ],
+      "qualifications": [],
       "reader": {
         "explanation": "The bound follows by applying the construction of Liu and Meng to a compact CNF encoding of Multicolored Clique and using the effective convergence cutoff.",
         "historicalNote": [

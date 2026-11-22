@@ -36,6 +36,7 @@
     }
   ],
   "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "exponentDomain": "computable-integer",
   "id": "cp-pw-w1-effective",
   "inputConditions": [
     "connected-bipartite-degree-six",
@@ -46,12 +47,8 @@
   "inputFactor": "N^(O(1))",
   "proofs": [],
   "provenance": "literature",
-  "qualifications": [
-    "For every fixed 0<γ<1.",
-    "The exponent is a computable nonnegative integer function and has computable convergence to little-o at scale p log₂ p."
-  ],
+  "qualifications": [],
   "reader": {
-    "explanation": "The reduction sends compact Clique instances to connected graphs of large girth and produces an optimal path decomposition. Its explicit input length is polynomial in the per-instance host encoding for each fixed γ.",
     "label": "Effective bound in width times its logarithm",
     "revision": 1,
     "title": "Effective bound in width times its logarithm under FPT ≠ W[1]"

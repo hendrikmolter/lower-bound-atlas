@@ -158,6 +158,7 @@
         }
       ],
       "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "exponentDomain": "nonnegative",
       "id": "ilp-equations-w1-effective",
       "inputConditions": [
         "binary-coefficients",
@@ -168,8 +169,7 @@
       "proofs": [],
       "provenance": "literature",
       "qualifications": [
-        "For every fixed C ≥ 0 and every finite nonnegative function h, assume there is a computable threshold function T with h(k) ≤ k/j for every positive integer j and every k ≥ T(j).",
-        "The function h itself need not be computable."
+        "For every fixed C ≥ 0."
       ],
       "reader": {
         "explanation": "The column count is unrestricted. The proof uses Lin’s incidence matrix with exact-one rows in place of covering constraints.",
@@ -181,10 +181,9 @@
         "ilp-equations-w1-effective-molter-source-review"
       ],
       "revision": 2,
-      "runtime": "2^(h(k)) N^C",
+      "runtime": "2^(o_eff(k)) N^C",
       "runtimeSymbols": [
         "k",
-        "h",
         "N",
         "C"
       ],
@@ -246,10 +245,6 @@
       {
         "meaning": "total bit length of the input",
         "symbol": "N"
-      },
-      {
-        "meaning": "finite nonnegative exponent function with the stated computable convergence cutoff",
-        "symbol": "h"
       },
       {
         "meaning": "fixed nonnegative exponent of the complete input length",

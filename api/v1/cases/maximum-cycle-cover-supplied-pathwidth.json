@@ -212,6 +212,7 @@
         }
       ],
       "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "exponentDomain": "nonnegative",
       "id": "maximum-cycle-cover-supplied-pathwidth-w1",
       "inputConditions": [
         "connected-bipartite-degree-eight"
@@ -220,13 +221,10 @@
       "proofs": [],
       "provenance": "literature",
       "qualifications": [
-        "The exponent h(p) is finite and nonnegative and the ratio h(p) / max(1, p log₂(p+2)) converges to zero with a computable modulus.",
         "The supplied path decomposition and binary threshold count in the complete input length."
       ],
       "reader": {
         "label": "Effective little-o bound in the supplied pathwidth",
-        "notation": "effective-little-o",
-        "notationLabel": "Effective little-o",
         "revision": 1
       },
       "reviewIds": [],

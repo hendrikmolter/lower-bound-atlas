@@ -8,6 +8,7 @@
     }
   ],
   "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "exponentDomain": "nonnegative",
   "id": "vdp-tw-w1",
   "inputConditions": [
     "connected-bipartite-subcubic",
@@ -17,13 +18,9 @@
   "inputFactor": "B^(O(1))",
   "proofs": [],
   "provenance": "literature",
-  "qualifications": [
-    "The exponent h(t) is finite and nonnegative. There is a computable function T such that h(t) ≤ max(1, t log₂(max(2, t)))/j for every positive integer j and every t ≥ T(j)."
-  ],
+  "qualifications": [],
   "reader": {
     "label": "Effective little-o bound in the treewidth",
-    "notation": "effective-little-o",
-    "notationLabel": "Effective little-o",
     "revision": 1
   },
   "reviewIds": [],

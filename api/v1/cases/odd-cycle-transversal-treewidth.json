@@ -112,18 +112,15 @@
         }
       ],
       "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "exponentDomain": "nonnegative",
       "id": "odd-cycle-transversal-treewidth-w1",
       "inputConditions": [],
       "inputFactor": "B^(O(1))",
       "proofs": [],
       "provenance": "literature",
-      "qualifications": [
-        "The exponent h(t) is finite and nonnegative and has a computable convergence modulus at the scale t."
-      ],
+      "qualifications": [],
       "reader": {
         "label": "Effective little-o bound in the treewidth",
-        "notation": "effective-little-o",
-        "notationLabel": "Effective little-o",
         "revision": 1
       },
       "reviewIds": [],

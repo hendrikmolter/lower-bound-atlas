@@ -36,6 +36,7 @@
     }
   ],
   "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "exponentDomain": "computable-integer",
   "id": "independent-set-rank-width-w1-effective",
   "inputConditions": [
     "triangle-free"
@@ -43,11 +44,8 @@
   "inputFactor": "N^(O(1))",
   "proofs": [],
   "provenance": "literature",
-  "qualifications": [
-    "The exponent is a computable nonnegative integer function and has computable convergence to little-o at scale p^2."
-  ],
+  "qualifications": [],
   "reader": {
-    "explanation": "The proof uses paths to replace selection cliques and a triangle-free padding graph to force optimal certificates.",
     "label": "Effective quadratic-width bound on triangle-free graphs",
     "revision": 1,
     "title": "Effective quadratic-width bound on triangle-free graphs under FPT ≠ W[1]"
