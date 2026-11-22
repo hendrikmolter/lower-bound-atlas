@@ -775,7 +775,7 @@ function boundPages() {
         if (includeStatement) version.proofs.forEach(addProof);
         for (const e of direction?.evidence ?? []) {
           if (e.proof) addProof(e.proof);
-          else if (e.source) sources.push(e.source);
+          if (e.source) sources.push(e.source);
         }
         return paperReferences(page,sources) + sourceStep(direction?.sourceBasis ?? (includeStatement ? version.sourceBasis : undefined)) + [...manuscripts.values()].map(item => {
           const id = proofAnchor ? '' : ' id="proof"';

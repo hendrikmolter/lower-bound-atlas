@@ -234,6 +234,7 @@ test('proof headings distinguish authorship from human verification', t => {
   }
   const [forward, converse] = statement().split('aria-label="Statement implies SH"');
   assert.ok(forward.includes('ETH is Dead, Long Live SH') && !forward.includes('Test Author'));
+  assert.ok(converse.includes('On Subexponential and FPT-Time Inapproximability'));
   assert.ok(converse.includes('<h4 id="proof">Proof</h4>Test Author'));
   const literature = output('bounds/distinct-vectors-budget/dv-eth-column-budget/index.html');
   const [claim, support] = literature.split('aria-label="ETH implies Statement"');
