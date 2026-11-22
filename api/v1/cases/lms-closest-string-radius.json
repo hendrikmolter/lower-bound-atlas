@@ -159,6 +159,91 @@
       "statement": "Under the k × k Clique Hypothesis, no deterministic algorithm decides Closest String within the stated running time.",
       "status": "established",
       "supported": true
+    },
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "effectiveStatus": "unknown",
+            "evidence": [],
+            "status": "unknown"
+          },
+          "forward": {
+            "effectiveStatus": "unknown",
+            "evidence": [],
+            "status": "unknown"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unknown"
+        },
+        "sh": {
+          "converse": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "unassessed"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "w1",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "exponentDomain": "nonnegative",
+      "id": "cs-radius-w1",
+      "inputConditions": [
+        "one-agreement",
+        "exact-alphabet"
+      ],
+      "inputFactor": "N^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "explanation": "Number the occurring variables consecutively, discard tautologies and repeated literals, and add two fresh variables forced to opposite values by unit clauses. For each clause, write its satisfying bits in the corresponding positions and fill every other position with one auxiliary symbol. Make one word for each choice of filler. With L+1 fillers, at least one filler is absent from any center. Its words force a satisfying bit in each clause, and every satisfying assignment agrees with every word. The two unit clauses ensure that both bits and all fillers occur, so q=d+4. For n original variables the radius is d=n+1, preserving effective sublinearity, and the encoding has polynomial length. A finite nonnegative exponent with a computable convergence threshold has a computable effectively sublinear upper bound: use a fixed integer bound before the first threshold, and thereafter take the least of the bounds d/j for all j from 1 to d whose threshold has been reached, rounding up. Every fixed precision is eventually reached.",
+        "label": "Effective linear-exponent bound",
+        "revision": 1
+      },
+      "reviewIds": [],
+      "revision": 1,
+      "runtime": "2^(o_eff(d)) N^(O(1))",
+      "runtimeSymbols": [
+        "d",
+        "N",
+        "L",
+        "q"
+      ],
+      "sources": [
+        {
+          "editionId": "journal",
+          "locator": "Lemma 3.1 and Corollary 3.1 (Section 3). The paired-variable CNF-SAT source reduces to ordinary CNF-SAT on the same variables by adding the two clauses enforcing exactly one true variable in each pair.",
+          "paperId": "cai-juedes2003",
+          "placement": "statement",
+          "role": "source lower bound",
+          "scopeLabel": "CNF-SAT source"
+        },
+        {
+          "editionId": "journal",
+          "locator": "Theorem 3.1, proof in Section 3.1. Specialize the word construction to two truth-value symbols.",
+          "paperId": "lms2018",
+          "placement": "statement",
+          "role": "target construction",
+          "scopeLabel": "Closest String construction"
+        }
+      ],
+      "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Closest String within the stated running time.",
+      "status": "established",
+      "supported": true
     }
   ],
   "coverage": "Literature lower bounds in the Hamming radius.",
@@ -169,6 +254,16 @@
       "condition": "All input strings have the same length L.",
       "id": "common-length",
       "level": "problem"
+    },
+    {
+      "condition": "L=d+1",
+      "id": "one-agreement",
+      "level": "bound"
+    },
+    {
+      "condition": "q=d+4",
+      "id": "exact-alphabet",
+      "level": "bound"
     }
   ],
   "kind": "lower-bound-case",
@@ -190,6 +285,14 @@
       {
         "meaning": "Input length in bits.",
         "symbol": "N"
+      },
+      {
+        "meaning": "common word length",
+        "symbol": "L"
+      },
+      {
+        "meaning": "number of distinct symbols used in the input words",
+        "symbol": "q"
       }
     ]
   },
@@ -223,6 +326,43 @@
         "revision": 1
       },
       "scale": "full",
+      "target": {
+        "id": "cs-radius-eth",
+        "revision": 1
+      },
+      "targetScale": "d log₂ d"
+    },
+    {
+      "comparison": "The recovered exponent scale is d, a logarithmic factor below the historical scale d log₂ d, and requires effective convergence.",
+      "effective": true,
+      "evidence": [
+        {
+          "editionId": "journal",
+          "locator": "Lemma 3.1 and Corollary 3.1 (Section 3). The paired-variable CNF-SAT source reduces to ordinary CNF-SAT on the same variables by adding the two clauses enforcing exactly one true variable in each pair.",
+          "paperId": "cai-juedes2003",
+          "placement": "statement",
+          "role": "source lower bound",
+          "scopeLabel": "CNF-SAT source"
+        },
+        {
+          "editionId": "journal",
+          "locator": "Theorem 3.1, proof in Section 3.1. Specialize the word construction to two truth-value symbols.",
+          "paperId": "lms2018",
+          "placement": "statement",
+          "role": "target construction",
+          "scopeLabel": "Closest String construction"
+        }
+      ],
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "recoveredScale": "d",
+      "recovery": {
+        "id": "cs-radius-w1",
+        "revision": 1
+      },
+      "scale": "logarithmic",
       "target": {
         "id": "cs-radius-eth",
         "revision": 1
@@ -290,15 +430,42 @@
       }
     },
     {
+      "comparison": "The recovered exponent scale is d, a logarithmic factor below the historical scale d log₂ d, and requires effective convergence.",
+      "effective": true,
+      "evidence": [
+        {
+          "editionId": "journal",
+          "locator": "Lemma 3.1 and Corollary 3.1 (Section 3). The paired-variable CNF-SAT source reduces to ordinary CNF-SAT on the same variables by adding the two clauses enforcing exactly one true variable in each pair.",
+          "paperId": "cai-juedes2003",
+          "placement": "statement",
+          "role": "source lower bound",
+          "scopeLabel": "CNF-SAT source"
+        },
+        {
+          "editionId": "journal",
+          "locator": "Theorem 3.1, proof in Section 3.1. Specialize the word construction to two truth-value symbols.",
+          "paperId": "lms2018",
+          "placement": "statement",
+          "role": "target construction",
+          "scopeLabel": "Closest String construction"
+        }
+      ],
       "hypothesis": {
         "id": "w1",
         "revision": 1
       },
-      "status": "unresolved",
+      "recoveredScale": "d",
+      "recovery": {
+        "id": "cs-radius-w1",
+        "revision": 1
+      },
+      "scale": "logarithmic",
+      "status": "logarithmic",
       "target": {
         "id": "cs-radius-eth",
         "revision": 1
-      }
+      },
+      "targetScale": "d log₂ d"
     }
   ],
   "resolutions": [],

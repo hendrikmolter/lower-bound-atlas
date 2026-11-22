@@ -681,7 +681,8 @@
     "aliases": [],
     "assumptions": [
       "eth",
-      "kxk"
+      "kxk",
+      "w1"
     ],
     "family": "",
     "id": "lms-closest-string-radius",
@@ -692,6 +693,12 @@
         "bound": "cs-radius-kxk",
         "hypothesis": "kxk",
         "status": "recovered",
+        "target": "cs-radius-eth"
+      },
+      {
+        "bound": "cs-radius-w1",
+        "hypothesis": "w1",
+        "status": "logarithmic",
         "target": "cs-radius-eth"
       }
     ],
@@ -710,6 +717,9 @@
       "k × k Clique Hypothesis",
       "Square Clique Hypothesis",
       "k-by-k Clique Hypothesis",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
       "lms2018",
       "Slightly Superexponential Parameterized Problems",
       "Daniel Lokshtanov",
@@ -727,7 +737,11 @@
       "Saket Saurabh",
       "szeider2026",
       "After ETH: the k×k Clique Hypothesis",
-      "Stefan Szeider"
+      "Stefan Szeider",
+      "cai-juedes2003",
+      "On the Existence of Subexponential Parameterized Algorithms",
+      "Liming Cai",
+      "David Juedes"
     ],
     "statements": [
       {
@@ -741,6 +755,12 @@
           "kxk"
         ],
         "id": "cs-radius-kxk"
+      },
+      {
+        "hypotheses": [
+          "w1"
+        ],
+        "id": "cs-radius-w1"
       }
     ]
   },
@@ -807,9 +827,10 @@
       "Marcin Pilipczuk",
       "Michał Pilipczuk",
       "Saket Saurabh",
-      "molter2026-running-time",
-      "Running-Time Lower Bounds under FPT ≠ W[1]",
-      "Hendrik Molter"
+      "cai-juedes2003",
+      "On the Existence of Subexponential Parameterized Algorithms",
+      "Liming Cai",
+      "David Juedes"
     ],
     "statements": [
       {

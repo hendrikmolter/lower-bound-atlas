@@ -50,6 +50,7 @@
     "There is no alphabet-dependent prefactor."
   ],
   "reader": {
+    "explanation": "Number the occurring variables consecutively, discard tautologies and repeated literals, and add two fresh variables forced to opposite values by unit clauses. For each clause, write its satisfying bits in the corresponding positions and fill every other position with one auxiliary symbol. Make one word for each choice of filler. With 2L−1 fillers, at least one filler is absent from any center. Its words force a satisfying bit in each clause, and every satisfying assignment agrees with every word. The two unit clauses ensure that both bits and all fillers occur, so q=2d+3. For n original variables the radius is d=n+1, preserving effective sublinearity, and the encoding has polynomial length.",
     "label": "One agreement with a balanced alphabet",
     "revision": 1
   },
@@ -63,11 +64,20 @@
   ],
   "sources": [
     {
-      "editionId": "arxiv-v1",
-      "locator": "Theorem 6, Section 8",
-      "paperId": "molter2026-running-time",
+      "editionId": "journal",
+      "locator": "Lemma 3.1 and Corollary 3.1 (Section 3). The paired-variable CNF-SAT source reduces to ordinary CNF-SAT on the same variables by adding the two clauses enforcing exactly one true variable in each pair.",
+      "paperId": "cai-juedes2003",
       "placement": "statement",
-      "role": "running-time lower bound"
+      "role": "source lower bound",
+      "scopeLabel": "CNF-SAT source"
+    },
+    {
+      "editionId": "journal",
+      "locator": "Theorem 3.1, proof in Section 3.1. Specialize the word construction to two truth-value symbols.",
+      "paperId": "lms2018",
+      "placement": "statement",
+      "role": "target construction",
+      "scopeLabel": "Closest String construction"
     }
   ],
   "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Closest String within the stated running time.",

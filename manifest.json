@@ -194,6 +194,7 @@
     "api/v1/bounds/lms-closest-string-radius-alphabet/cs-w1-balanced/r1.json",
     "api/v1/bounds/lms-closest-string-radius/cs-radius-eth/r1.json",
     "api/v1/bounds/lms-closest-string-radius/cs-radius-kxk/r1.json",
+    "api/v1/bounds/lms-closest-string-radius/cs-radius-w1/r1.json",
     "api/v1/bounds/lms-square-clique/square-eth/r2.json",
     "api/v1/bounds/lms-square-clique/square-kxk/r2.json",
     "api/v1/bounds/lms-square-clique/square-sh/r1.json",
@@ -1424,6 +1425,12 @@
     "bounds/lms-closest-string-radius/cs-radius-kxk/r1/citation.bib",
     "bounds/lms-closest-string-radius/cs-radius-kxk/r1/citation.txt",
     "bounds/lms-closest-string-radius/cs-radius-kxk/r1/index.html",
+    "bounds/lms-closest-string-radius/cs-radius-w1/citation.bib",
+    "bounds/lms-closest-string-radius/cs-radius-w1/citation.txt",
+    "bounds/lms-closest-string-radius/cs-radius-w1/index.html",
+    "bounds/lms-closest-string-radius/cs-radius-w1/r1/citation.bib",
+    "bounds/lms-closest-string-radius/cs-radius-w1/r1/citation.txt",
+    "bounds/lms-closest-string-radius/cs-radius-w1/r1/index.html",
     "bounds/lms-square-clique/square-eth/citation.bib",
     "bounds/lms-square-clique/square-eth/citation.txt",
     "bounds/lms-square-clique/square-eth/index.html",
@@ -2569,5 +2576,5 @@
   "registryRevision": 5,
   "releaseValidated": true,
   "schemaVersion": 1,
-  "sourceCommit": "4dd6a2efae798b095d262a9c130e9a7da4e86192"
+  "sourceCommit": "e50ba09504012bb60499d83fa9dcab0fd1c66402"
 }
