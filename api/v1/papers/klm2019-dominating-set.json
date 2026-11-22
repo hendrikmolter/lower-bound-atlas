@@ -1,0 +1,21 @@
+{
+  "authors": [
+    "Karthik C. S.",
+    "Bundit Laekhanukit",
+    "Pasin Manurangsi"
+  ],
+  "editions": [
+    {
+      "doi": "10.1145/3325116",
+      "id": "journal",
+      "kind": "journal",
+      "label": "Journal of the ACM 66(5) (2019), Article 33",
+      "preferredUrl": "https://doi.org/10.1145/3325116",
+      "primaryUrl": "https://doi.org/10.1145/3325116"
+    }
+  ],
+  "id": "klm2019-dominating-set",
+  "preferredEditionId": "journal",
+  "preferredUrl": "https://doi.org/10.1145/3325116",
+  "title": "On the Parameterized Complexity of Approximating Dominating Set"
+}

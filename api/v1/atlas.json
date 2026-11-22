@@ -6395,14 +6395,8 @@
             "connected-bipartite"
           ],
           "inputFactor": "B^(O(1))",
-          "proofs": [
-            {
-              "proofId": "dominating-set-treewidth-w1-proof",
-              "revision": 1,
-              "theorem": "ds-treewidth"
-            }
-          ],
-          "provenance": "atlas",
+          "proofs": [],
+          "provenance": "literature",
           "qualifications": [
             "The prefactor f is any total computable positive integer-valued function of the solution budget k. The exponent h is computable and nonnegative integer-valued.",
             "There is a computable function T such that h(t) ≤ η max(t, 1) whenever t ≥ T(η), for each positive rational η."
@@ -6424,18 +6418,36 @@
           ],
           "sources": [
             {
-              "editionId": "journal",
-              "locator": "W[1]-completeness of Independent Set, with Clique by complementation",
-              "paperId": "df1995",
-              "placement": "proof",
-              "role": "source hardness"
+              "editionId": "proceedings",
+              "locator": "Lemma 14, pp. 81:11–81:12. For clique size ℓ, the cover budget is ℓ(ℓ−1)/2 and the universe has size ℓ^O(1) log n.",
+              "paperId": "lin2019",
+              "placement": "statement",
+              "role": "Full bound · small-universe Set Cover",
+              "scopeLabel": "Full bound · small-universe Set Cover"
             },
             {
               "editionId": "proceedings",
-              "locator": "Lemma 14 and proof, pp. 81:11–81:12",
-              "paperId": "lin2019",
-              "placement": "proof",
-              "role": "compact reduction to Set Cover"
+              "locator": "Proof of Corollary 12, p. 6:14. Apply the red-blue construction to the incidence graph, with sets blue. A hub adjacent to all sets and a private leaf increase the budget by one. After rejecting uncovered elements, the graph is connected and bipartite. The universe together with the hub is a vertex cover, so treewidth is at most the universe size plus one. Effective sublinearity then absorbs the treewidth exponent into an FPT running time for Clique.",
+              "paperId": "bodlaender2022-tree-structured",
+              "placement": "statement",
+              "role": "Full bound · reduction to Dominating Set",
+              "scopeLabel": "Full bound · reduction to Dominating Set"
+            },
+            {
+              "editionId": "journal",
+              "locator": "Credited by Lin at the start of Section 3.4 for the idea behind Lemma 14.",
+              "paperId": "klm2019-dominating-set",
+              "placement": "statement",
+              "role": "Origin of the Set Cover construction",
+              "scopeLabel": "Origin of the Set Cover construction"
+            },
+            {
+              "editionId": "journal",
+              "locator": "Theorem 17 and Lemma 2. Hardness for logarithmic pathwidth implies the effective sublinear treewidth exclusion when f = 1.",
+              "paperId": "bgns2024-xnlp",
+              "placement": "statement",
+              "role": "Unrestricted graphs, no solution-budget prefactor",
+              "scopeLabel": "Unrestricted graphs, no solution-budget prefactor"
             }
           ],
           "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Dominating Set within the stated running time.",
@@ -6499,9 +6511,20 @@
           "effective": true,
           "evidence": [
             {
-              "proofId": "dominating-set-treewidth-w1-proof",
-              "revision": 1,
-              "theorem": "ds-treewidth"
+              "editionId": "proceedings",
+              "locator": "Lemma 14, pp. 81:11–81:12. For clique size ℓ, the cover budget is ℓ(ℓ−1)/2 and the universe has size ℓ^O(1) log n.",
+              "paperId": "lin2019",
+              "placement": "statement",
+              "role": "Full bound · small-universe Set Cover",
+              "scopeLabel": "Full bound · small-universe Set Cover"
+            },
+            {
+              "editionId": "proceedings",
+              "locator": "Proof of Corollary 12, p. 6:14. Apply the red-blue construction to the incidence graph, with sets blue. A hub adjacent to all sets and a private leaf increase the budget by one. After rejecting uncovered elements, the graph is connected and bipartite. The universe together with the hub is a vertex cover, so treewidth is at most the universe size plus one. Effective sublinearity then absorbs the treewidth exponent into an FPT running time for Clique.",
+              "paperId": "bodlaender2022-tree-structured",
+              "placement": "statement",
+              "role": "Full bound · reduction to Dominating Set",
+              "scopeLabel": "Full bound · reduction to Dominating Set"
             }
           ],
           "hypothesis": {
@@ -6560,9 +6583,20 @@
           "effective": true,
           "evidence": [
             {
-              "proofId": "dominating-set-treewidth-w1-proof",
-              "revision": 1,
-              "theorem": "ds-treewidth"
+              "editionId": "proceedings",
+              "locator": "Lemma 14, pp. 81:11–81:12. For clique size ℓ, the cover budget is ℓ(ℓ−1)/2 and the universe has size ℓ^O(1) log n.",
+              "paperId": "lin2019",
+              "placement": "statement",
+              "role": "Full bound · small-universe Set Cover",
+              "scopeLabel": "Full bound · small-universe Set Cover"
+            },
+            {
+              "editionId": "proceedings",
+              "locator": "Proof of Corollary 12, p. 6:14. Apply the red-blue construction to the incidence graph, with sets blue. A hub adjacent to all sets and a private leaf increase the budget by one. After rejecting uncovered elements, the graph is connected and bipartite. The universe together with the hub is a vertex cover, so treewidth is at most the universe size plus one. Effective sublinearity then absorbs the treewidth exponent into an FPT running time for Clique.",
+              "paperId": "bodlaender2022-tree-structured",
+              "placement": "statement",
+              "role": "Full bound · reduction to Dominating Set",
+              "scopeLabel": "Full bound · reduction to Dominating Set"
             }
           ],
           "hypothesis": {
@@ -32149,6 +32183,28 @@
     },
     {
       "authors": [
+        "Hans L. Bodlaender",
+        "Carla Groenland",
+        "Jesper Nederlof",
+        "Céline M. F. Swennenhuis"
+      ],
+      "editions": [
+        {
+          "doi": "10.1016/j.ic.2024.105195",
+          "id": "journal",
+          "kind": "journal",
+          "label": "Information and Computation 300 (2024), 105195",
+          "preferredUrl": "https://doi.org/10.1016/j.ic.2024.105195",
+          "primaryUrl": "https://doi.org/10.1016/j.ic.2024.105195"
+        }
+      ],
+      "id": "bgns2024-xnlp",
+      "preferredEditionId": "journal",
+      "preferredUrl": "https://doi.org/10.1016/j.ic.2024.105195",
+      "title": "Parameterized problems complete for nondeterministic FPT time and logarithmic space"
+    },
+    {
+      "authors": [
         "Benjamin Bergougnoux",
         "Tuukka Korhonen",
         "Jesper Nederlof"
@@ -33133,6 +33189,27 @@
       "preferredEditionId": "journal",
       "preferredUrl": "https://doi.org/10.1016/j.jcss.2012.04.004",
       "title": "Bin Packing with Fixed Number of Bins Revisited"
+    },
+    {
+      "authors": [
+        "Karthik C. S.",
+        "Bundit Laekhanukit",
+        "Pasin Manurangsi"
+      ],
+      "editions": [
+        {
+          "doi": "10.1145/3325116",
+          "id": "journal",
+          "kind": "journal",
+          "label": "Journal of the ACM 66(5) (2019), Article 33",
+          "preferredUrl": "https://doi.org/10.1145/3325116",
+          "primaryUrl": "https://doi.org/10.1145/3325116"
+        }
+      ],
+      "id": "klm2019-dominating-set",
+      "preferredEditionId": "journal",
+      "preferredUrl": "https://doi.org/10.1145/3325116",
+      "title": "On the Parameterized Complexity of Approximating Dominating Set"
     },
     {
       "authors": [
@@ -34467,39 +34544,6 @@
         }
       ],
       "title": "An effective quadratic lower bound for unweighted Dominating Set"
-    },
-    {
-      "currentRevision": 1,
-      "id": "dominating-set-treewidth-w1-proof",
-      "revisions": [
-        {
-          "authorship": {
-            "authors": [
-              "Atlas"
-            ],
-            "kind": "ai",
-            "origin": "atlas"
-          },
-          "dependencies": [],
-          "dependencyCoverage": "complete",
-          "pdf": "proofs/dominating-set-treewidth-w1.pdf",
-          "revision": 1,
-          "source": "proofs/dominating-set-treewidth-w1.tex",
-          "theorems": [
-            {
-              "destination": "ds-treewidth",
-              "label": "ds-treewidth",
-              "number": "1",
-              "reviewIds": [
-                "dominating-set-treewidth-w1-independent"
-              ],
-              "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Dominating Set within the stated running time. f(k) 2^(o_eff(t)) B^(O(1)). The graph is connected and bipartite. The prefactor f is any total computable positive integer-valued function of the solution budget k. The exponent h is computable and nonnegative integer-valued. There is a computable function T such that h(t) ≤ η max(t, 1) whenever t ≥ T(η), for each positive rational η.",
-              "supports": true
-            }
-          ]
-        }
-      ],
-      "title": "An effective treewidth lower bound for Dominating Set"
     },
     {
       "currentRevision": 1,
@@ -36376,6 +36420,20 @@
           "type": "bound"
         }
       ],
+      "bgns2024-xnlp": [
+        {
+          "caseId": "dominating-set-treewidth",
+          "editionId": "journal",
+          "id": "ds-tw-w1",
+          "locator": "Theorem 17 and Lemma 2. Hardness for logarithmic pathwidth implies the effective sublinear treewidth exclusion when f = 1.",
+          "paperId": "bgns2024-xnlp",
+          "placement": "statement",
+          "revision": 1,
+          "role": "Unrestricted graphs, no solution-budget prefactor",
+          "scopeLabel": "Unrestricted graphs, no solution-budget prefactor",
+          "type": "bound"
+        }
+      ],
       "bkn2023-rankwidth": [
         {
           "caseId": "independent-set-linear-rank-width",
@@ -36423,6 +36481,18 @@
         }
       ],
       "bodlaender2022-tree-structured": [
+        {
+          "caseId": "dominating-set-treewidth",
+          "editionId": "proceedings",
+          "id": "ds-tw-w1",
+          "locator": "Proof of Corollary 12, p. 6:14. Apply the red-blue construction to the incidence graph, with sets blue. A hub adjacent to all sets and a private leaf increase the budget by one. After rejecting uncovered elements, the graph is connected and bipartite. The universe together with the hub is a vertex cover, so treewidth is at most the universe size plus one. Effective sublinearity then absorbs the treewidth exponent into an FPT running time for Clique.",
+          "paperId": "bodlaender2022-tree-structured",
+          "placement": "statement",
+          "revision": 1,
+          "role": "Full bound · reduction to Dominating Set",
+          "scopeLabel": "Full bound · reduction to Dominating Set",
+          "type": "bound"
+        },
         {
           "caseId": "independent-set-treewidth",
           "editionId": "proceedings",
@@ -38090,17 +38160,6 @@
           "type": "bound"
         },
         {
-          "caseId": "dominating-set-treewidth",
-          "editionId": "journal",
-          "id": "ds-tw-w1",
-          "locator": "W[1]-completeness of Independent Set, with Clique by complementation",
-          "paperId": "df1995",
-          "placement": "proof",
-          "revision": 1,
-          "role": "source hardness",
-          "type": "bound"
-        },
-        {
           "caseId": "grid-tiling-side",
           "editionId": "journal",
           "id": "grid-tiling-side-w1",
@@ -38920,6 +38979,20 @@
           "type": "bound"
         }
       ],
+      "klm2019-dominating-set": [
+        {
+          "caseId": "dominating-set-treewidth",
+          "editionId": "journal",
+          "id": "ds-tw-w1",
+          "locator": "Credited by Lin at the start of Section 3.4 for the idea behind Lemma 14.",
+          "paperId": "klm2019-dominating-set",
+          "placement": "statement",
+          "revision": 1,
+          "role": "Origin of the Set Cover construction",
+          "scopeLabel": "Origin of the Set Cover construction",
+          "type": "bound"
+        }
+      ],
       "koutecky2026-hard-side": [
         {
           "caseId": "clique-budget",
@@ -39153,11 +39226,12 @@
           "caseId": "dominating-set-treewidth",
           "editionId": "proceedings",
           "id": "ds-tw-w1",
-          "locator": "Lemma 14 and proof, pp. 81:11–81:12",
+          "locator": "Lemma 14, pp. 81:11–81:12. For clique size ℓ, the cover budget is ℓ(ℓ−1)/2 and the universe has size ℓ^O(1) log n.",
           "paperId": "lin2019",
-          "placement": "proof",
+          "placement": "statement",
           "revision": 1,
-          "role": "compact reduction to Set Cover",
+          "role": "Full bound · small-universe Set Cover",
+          "scopeLabel": "Full bound · small-universe Set Cover",
           "type": "bound"
         }
       ],
@@ -41235,17 +41309,6 @@
           "type": "bound"
         }
       ],
-      "dominating-set-treewidth-w1-proof": [
-        {
-          "applicable": true,
-          "caseId": "dominating-set-treewidth",
-          "id": "ds-tw-w1",
-          "proofRevision": 1,
-          "revision": 1,
-          "theorem": "ds-treewidth",
-          "type": "bound"
-        }
-      ],
       "ecc-np-qp-converse": [
         {
           "applicable": true,
@@ -41702,26 +41765,6 @@
       "reviewer": "Codex agent derived_shortlist",
       "scope": "Assuming deterministic FPT ≠ W[1], there is no deterministic effective 2^(o(p²)) N^(O(1)) Dominating Set algorithm on monopolar graphs by rank-width, linear rank-width, or the actual width of a supplied rank decomposition or vertex order.",
       "sourceSha256": "fa61733eeae80fa150716b31461435cdb7f52bb6be5a7b1e26f8930ecf566bad",
-      "stale": false,
-      "type": "agent",
-      "verdict": "verified"
-    },
-    {
-      "applicable": true,
-      "date": "2026-11-18",
-      "evidence": "evidence/dominating-set-treewidth-w1-independent.md",
-      "id": "dominating-set-treewidth-w1-independent",
-      "independent": true,
-      "label": "Agent verified",
-      "object": {
-        "id": "dominating-set-treewidth-w1-proof",
-        "revision": 1,
-        "theorem": "ds-treewidth",
-        "type": "proof"
-      },
-      "reviewer": "Codex agent secondary_natural",
-      "scope": "Checks Lin’s compact Set Cover interface, the connected bipartite graph, budget k, intrinsic width bound and the effective deterministic running-time transfer.",
-      "sourceSha256": "30c349aac9eab92dcb99e9bd50a0b67d8fa7ba97bef46213c81890232d73ddfe",
       "stale": false,
       "type": "agent",
       "verdict": "verified"
@@ -42709,6 +42752,6 @@
       "verdict": "verified"
     }
   ],
-  "revision": 4,
+  "revision": 5,
   "schemaVersion": 1
 }

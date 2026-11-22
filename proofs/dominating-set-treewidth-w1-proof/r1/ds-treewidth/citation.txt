@@ -1,1 +1,0 @@
-Atlas. An effective treewidth lower bound for Dominating Set · Theorem 1. dominating-set-treewidth-w1-proof, theorem ds-treewidth, proof revision 1. Edition v1.0.0, Git commit 477da0e5e9be6bf5a0ac157bcb33424e6c7aac7c. https://github.com/hendrikmolter/lower-bound-atlas/blob/477da0e5e9be6bf5a0ac157bcb33424e6c7aac7c/proofs/dominating-set-treewidth-w1.tex
