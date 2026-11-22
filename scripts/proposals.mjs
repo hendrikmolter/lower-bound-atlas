@@ -45,7 +45,7 @@ function serialWrite(path, action) {
 
 const criteria = {
   assumption: ['name', 'aliases', 'definition', 'model', 'quantifiers', 'conventions', 'source'],
-  bound: ['statement', 'runtime', 'runtimeSymbols', 'qualifications', 'inputFactor', 'model', 'inputConditions', 'assumptions', 'sources']
+  bound: ['statement', 'runtime', 'runtimeSymbols', 'exponentDomain', 'qualifications', 'inputFactor', 'model', 'inputConditions', 'assumptions', 'sources']
 };
 
 function values(record, field) {

@@ -93,13 +93,9 @@
       "inputFactor": "B^(O(1))",
       "proofs": [],
       "provenance": "literature",
-      "qualifications": [
-        "The exponent h(t) is finite and nonnegative. There is a computable function T such that h(t) ≤ max(1, t log₂(max(2, t)))/j for every positive integer j and every t ≥ T(j)."
-      ],
+      "qualifications": [],
       "reader": {
         "label": "Effective little-o bound in the treewidth",
-        "notation": "effective-little-o",
-        "notationLabel": "Effective little-o",
         "revision": 1
       },
       "revision": 1,
@@ -118,7 +114,8 @@
         }
       ],
       "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Vertex-Disjoint Paths within the stated running time.",
-      "status": "established"
+      "status": "established",
+      "exponentDomain": "nonnegative"
     }
   ],
   "coverage": "Literature bounds.",

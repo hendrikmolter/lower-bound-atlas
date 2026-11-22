@@ -26,7 +26,11 @@ export function runtimeFormula(record, bound) {
 }
 
 export function runtimeQualifications(record, bound) {
-  return runtimeDetails(record, bound).qualifications.map(text =>
+  const domain = {
+    'computable-integer': 'The exponent is a computable nonnegative integer-valued function.',
+    'upper-bounded-integer': 'The exponent is a nonnegative integer-valued function with a computable upper bound.'
+  }[bound.exponentDomain];
+  return [...runtimeDetails(record, bound).qualifications, ...(domain ? [domain] : [])].map(text =>
     '<p class="runtime-qualification">' + mathText(text) + '</p>').join('');
 }
 

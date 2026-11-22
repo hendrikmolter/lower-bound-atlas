@@ -96,9 +96,7 @@
         "p",
         "N"
       ],
-      "qualifications": [
-        "The exponent is a computable nonnegative integer function and has computable convergence to little-o at scale p^2."
-      ],
+      "qualifications": [],
       "inputConditions": [
         "triangle-free",
         "optimal-certificate"
@@ -125,8 +123,7 @@
       "reader": {
         "revision": 1,
         "label": "Effective quadratic-width bound on triangle-free graphs",
-        "title": "Effective quadratic-width bound on triangle-free graphs under FPT ≠ W[1]",
-        "explanation": "The proof uses paths to replace selection cliques and a triangle-free padding graph to force optimal certificates."
+        "title": "Effective quadratic-width bound on triangle-free graphs under FPT ≠ W[1]"
       },
       "assessments": {
         "w1": {
@@ -153,7 +150,8 @@
             "evidence": []
           }
         }
-      }
+      },
+      "exponentDomain": "computable-integer"
     },
     {
       "id": "independent-set-supplied-linear-layout-sh-degree",

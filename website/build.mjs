@@ -574,13 +574,19 @@ function manuscriptCredit(page, item, level, id = '') {
     artifactLinks(page,target) + relatedReviews(page,target);
 }
 
-function restrictions(conditions) {
-  return conditions.length ? '<div class="input-restrictions"><strong>Input restrictions</strong>' +
+function restrictions(conditions, label = 'Input restrictions') {
+  return conditions.length ? '<div class="input-restrictions"><strong>' + label + '</strong>' +
     items(conditions.map(c => mathText(c.condition))) + '</div>' : '';
 }
 
 function problemConditions(record) {
-  return restrictions(record.inputConditions.filter(c => c.level === 'problem'));
+  return restrictions(record.inputConditions.filter(c => c.level === 'problem'),'Problem domain');
+}
+
+function excludedTime(page, record, bound) {
+  const formula = runtimeFormula(record,bound);
+  return bound.exponentDomain ? formula + ' <small>' +
+    link(page,'notation/index.html','Effective little-o','effective-little-o') + '</small>' : formula;
 }
 
 function inputScope(record, bound) {
@@ -672,7 +678,7 @@ function casePage(record, page) {
       return `${section}${title ? '<h4>' + title + '</h4>' : ''}
         ${bound.status !== 'established' ? status(bound.status) : ''}${bound.assumptions.length > 1 ? premises(page,bound) : ''}
         ${inputScope(record,bound)}${modelException(bound)}
-        <div class="excluded-time"><span>${label}</span>${runtimeFormula(record,bound)}</div>${runtimeQualifications(record,bound)}
+        <div class="excluded-time"><span>${label}</span>${excludedTime(page,record,bound)}</div>${runtimeQualifications(record,bound)}
         ${equivalence + recoveryNotes + problemActions(page,record,bound)}
         ${witness ? '<p>' + anchor('#' + witness.stronger, 'Superseding bound') + '. ' + mathText(witness.reason) + '</p>' : ''}</section>`;
     }
@@ -819,14 +825,14 @@ function boundPages() {
         ${version.status !== 'established' ? '<p class="warning">' + status(version.status) + '</p>' : ''}
         <section class="problem-box"><h2 id="statement">Statement</h2>
         ${runtime.legacy ? paragraphs(record.reader?.boundContext) : ''}
-        ${restrictions(record.inputConditions.filter(c => c.level === 'problem' || version.inputConditions.includes(c.id)))}${modelException(version)}
-        ${!runtime.legacy ? paragraphs(statementText) + '<p class="statement">' + runtimeFormula(record,version) +
-          '</p>' + runtimeQualifications(record,version) + runtimeSymbols(record,version) + paragraphs(runtime.explanation) :
+        ${restrictions(record.inputConditions.filter(c => c.level === 'problem'),'Problem domain')}${inputScope(record,version)}${modelException(version)}
+        ${!runtime.legacy ? paragraphs(statementText) + '<p class="statement">' + excludedTime(page,record,version) +
+          '</p>' + runtimeQualifications(record,version) + runtimeSymbols(record,version) :
           copy.statement ? paragraphs(copy.statement) :
           paragraphs(copy.runtime ?? version.runtime,'statement') + paragraphs(statementText) +
           paragraphs(version.model) + paragraphs(version.inputFactor)}
         ${copy.notation ? link(page,'notation/index.html',copy.notationLabel ?? 'Notation',copy.notation) : ''}
-        </section>${implication}${equivalences}${comparisons}
+        </section>${implication}${equivalences}${runtime.explanation ? '<section><h2>Source note</h2>' + paragraphs(runtime.explanation) + '</section>' : ''}${comparisons}
         ${historical ? '<section><h2>Historical status</h2><p>' + historical + '</p></section>' : ''}
         ${challenges ? '<section class="warning"><h2>Challenges and corrections</h2>' + challenges + '</section>' : ''}
         ${recoverySection ? '<section><h2>Recovery of a historical ETH bound</h2>' + recoverySection + '</section>' : ''}
@@ -861,7 +867,7 @@ function applicationCards(page, hypothesis, revision) {
       const scope = version.status === 'conditional' || version.assumptions.length > 1
         ? paragraphs(version.statement) : '';
       const runtime = version.hardnessBaseline ? '' :
-        ' · ' + runtimeFormula(record,version) + runtimeQualifications(record,version);
+        ' · ' + excludedTime(page,record,version) + runtimeQualifications(record,version);
       return state + objectLink(page, ref, label || 'Full statement') + runtime +
         inputScope(record,version) + modelException(version) + scope;
     });
@@ -1335,8 +1341,8 @@ function notationPage() {
   catalogPage(page, 'Notation', '', `
     <section><h2>Default algorithmic model</h2><p>${escape(defaultModel)} Individual bounds specify any exceptions.</p></section>
     <section class="problem-box"><h2 id="effective-little-o">Effective little-o</h2>
-    ${paragraphs('An exponent h(d) is effectively sublinear in d if there is a total computable function T such that for every integer j ≥ 1 and all d ≥ T(j), we have h(d) ≤ d/j. Ordinary little-o requires such thresholds to exist. Effective little-o also requires a procedure that computes a threshold from j.')}
-    ${paragraphs('In an excluded running time, 2^(o_eff(d)) allows any exponent bounded above by a computable effectively sublinear function.')}</section>
+    ${paragraphs('For a scale s(t), write h(t) = o_eff(s(t)) if there is a total computable function T such that h(t) ≤ s(t)/j for every positive integer j and all t ≥ T(j). Here j specifies the required accuracy and T(j) is the threshold beyond which the inequality holds.')}
+    ${paragraphs('Exponents are finite and nonnegative. The threshold must be computable even when the exponent itself is not. Any additional requirement on the exponent is stated beside the running time.')}</section>
     <section><h2 id="indexed-convergence">When the exponent also depends on a parameter</h2>
     ${paragraphs('For h(d,q), one procedure computes T(q,j) from the parameter q and the accuracy index j. For every q ≥ 2 and j ≥ 1, all d ≥ T(q,j) must satisfy h(d,q) ≤ d/j. The threshold may depend on q.')}
     ${paragraphs('A computable upper envelope is a total computable function H with h(d,q) ≤ H(d,q) for every pair of arguments. In the Closest String theorem it also bounds the exponent below the convergence threshold. The exponent h itself need not be computable.')}</section>

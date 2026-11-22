@@ -111,13 +111,10 @@
       "proofs": [],
       "provenance": "literature",
       "qualifications": [
-        "The exponent h(p) is finite and nonnegative and the ratio h(p) / max(1, p log₂(p+2)) converges to zero with a computable modulus.",
         "The supplied path decomposition and binary threshold count in the complete input length."
       ],
       "reader": {
         "label": "Effective little-o bound in the supplied pathwidth",
-        "notation": "effective-little-o",
-        "notationLabel": "Effective little-o",
         "revision": 1
       },
       "revision": 1,
@@ -136,7 +133,8 @@
         }
       ],
       "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Maximum Cycle Cover within the stated running time.",
-      "status": "established"
+      "status": "established",
+      "exponentDomain": "nonnegative"
     },
     {
       "assessments": {

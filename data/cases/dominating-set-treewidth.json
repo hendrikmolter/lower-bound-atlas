@@ -90,9 +90,7 @@
       "proofs": [],
       "reader": {
         "revision": 1,
-        "label": "Effective little-o bound in the treewidth",
-        "notation": "effective-little-o",
-        "notationLabel": "Effective little-o"
+        "label": "Effective little-o bound in the treewidth"
       },
       "inputConditions": [
         "connected-bipartite"
@@ -104,9 +102,9 @@
         "B"
       ],
       "qualifications": [
-        "The prefactor f is any total computable positive integer-valued function of the solution budget k. The exponent h is computable and nonnegative integer-valued.",
-        "There is a computable function T such that h(t) ≤ η max(t, 1) whenever t ≥ T(η), for each positive rational η."
-      ]
+        "The solution-budget factor f is any computable positive integer-valued function."
+      ],
+      "exponentDomain": "computable-integer"
     }
   ],
   "coverage": "Selected literature bounds for this parameterization.",

@@ -116,14 +116,10 @@
         "t",
         "N"
       ],
-      "qualifications": [
-        "The exponent h(t) is finite and nonnegative. There is a computable function T such that, for every positive integer j, h(t)≤t log₂(t)/j whenever t≥T(j)."
-      ],
+      "qualifications": [],
       "reader": {
         "revision": 1,
-        "label": "Effective little-o bound in the treewidth",
-        "notation": "effective-little-o",
-        "notationLabel": "Effective little-o"
+        "label": "Effective little-o bound in the treewidth"
       },
       "sources": [
         {
@@ -134,7 +130,8 @@
           "placement": "statement"
         }
       ],
-      "proofs": []
+      "proofs": [],
+      "exponentDomain": "nonnegative"
     }
   ],
   "resolutions": [],

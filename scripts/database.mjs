@@ -519,6 +519,17 @@ export function validateAtlas(load, { release = false, website = false } = {}) {
             fail(context + ': current bounds require qualifications and runtimeSymbols');
           }
           if (hasRuntimeFields) {
+            if (version === record && snapshot === bound) {
+              const effective = snapshot.runtime.includes('o_eff(');
+              if (effective !== (snapshot.exponentDomain !== undefined) ||
+                  (effective && !['nonnegative','computable-integer','upper-bounded-integer'].includes(snapshot.exponentDomain))) {
+                fail(context + ': use o_eff with a registered exponentDomain');
+              }
+              if (effective && (snapshot.reader?.notation === 'effective-little-o' ||
+                  (snapshot.qualifications ?? []).some(q => /convergence|computable (?:cutoff|threshold|modulus)|effectively sublinear/i.test(q)))) {
+                fail(context + ': use the shared effective little-o definition');
+              }
+            }
             if (!Array.isArray(snapshot.qualifications) || !Array.isArray(snapshot.runtimeSymbols)) {
               fail(context + ': supply both qualifications and runtimeSymbols');
             }
@@ -539,7 +550,7 @@ export function validateAtlas(load, { release = false, website = false } = {}) {
           const exactFields = ['statement', 'runtime', 'inputFactor', 'assumptions', 'assumptionOperator'];
           const scope = owner.inputConditions.filter(c => c.level === 'problem' || selected.includes(c.id))
             .map(c => [c.id, c.condition]).sort(([a], [b]) => a.localeCompare(b));
-          const runtimeScope = [snapshot.qualifications ?? [],
+          const runtimeScope = [snapshot.exponentDomain, snapshot.qualifications ?? [],
             (snapshot.runtimeSymbols ?? []).map(symbol => [symbol, definitions.get(symbol)])];
           const statementVersion = json([...exactFields.map(field => snapshot[field]), problemScope, runtimeScope, algorithmModel(snapshot), scope]);
           if (statementVersions.has(objectKey(ref)) && statementVersions.get(objectKey(ref)) !== statementVersion) {

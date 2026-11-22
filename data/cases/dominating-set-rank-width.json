@@ -92,9 +92,7 @@
         "p",
         "N"
       ],
-      "qualifications": [
-        "The exponent is a computable nonnegative integer function and has computable convergence to little-o at scale p^2."
-      ],
+      "qualifications": [],
       "inputConditions": [
         "monopolar"
       ],
@@ -155,7 +153,8 @@
             "evidence": []
           }
         }
-      }
+      },
+      "exponentDomain": "computable-integer"
     }
   ],
   "resolutions": [],

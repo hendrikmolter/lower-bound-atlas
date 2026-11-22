@@ -595,6 +595,10 @@
             "minLength": 1
           }
         },
+        "exponentDomain": {
+          "enum": ["nonnegative", "computable-integer", "upper-bounded-integer"],
+          "description": "Domain of the effective little-o exponent. Nonnegative denotes arbitrary finite nonnegative exponents."
+        },
         "qualifications": {
           "type": "array",
           "items": {

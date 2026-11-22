@@ -94,6 +94,16 @@ test('renaming a problem and admitting another hypothesis require only data chan
   assert.deepEqual(names,[...names].sort(new Intl.Collator('en',{numeric:true,sensitivity:'base'}).compare));
   assert.ok(catalogue.includes('data-alphabetical'));
   const coloring = html('problems/chromatic-number');
+  for (const record of JSON.parse(readFileSync(join(dir,'dist/site/api/v1/atlas.json'))).cases) {
+    for (const bound of record.bounds.filter(b => b.exponentDomain)) {
+      const short = html('cases/' + record.id).split('class="bound-row" id="' + bound.id + '"')[1].split('</section>')[0];
+      const full = html('bounds/' + record.id + '/' + bound.id).split('id="statement"')[1].split('</section>')[0];
+      for (const view of [short,full]) assert.ok(view.includes('notation/index.html#effective-little-o'),bound.id);
+      for (const condition of record.inputConditions.filter(c => bound.inputConditions.includes(c.id))) {
+        for (const view of [short,full]) assert.ok(view.includes(mathText(condition.condition)),bound.id);
+      }
+    }
+  }
   assert.ok(coloring.indexOf('>Treewidth</a>') < coloring.indexOf('>Vertex cover number</a>'));
   assert.ok(coloring.includes('3-coloring/index.html">3-Coloring</a>'));
   assert.ok(html('problems/3-coloring').includes('chromatic-number/index.html">Chromatic Number</a>'));

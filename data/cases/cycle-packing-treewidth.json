@@ -83,10 +83,7 @@
         "n",
         "γ"
       ],
-      "qualifications": [
-        "For every fixed 0<γ<1.",
-        "The exponent is a computable nonnegative integer function and has computable convergence to little-o at scale t log₂ t."
-      ],
+      "qualifications": [],
       "inputConditions": [
         "connected-bipartite-degree-six",
         "equal-pathwidth",
@@ -114,8 +111,7 @@
       "reader": {
         "revision": 1,
         "label": "Effective bound in width times its logarithm",
-        "title": "Effective bound in width times its logarithm under FPT ≠ W[1]",
-        "explanation": "The reduction sends compact Clique instances to connected graphs of large girth and produces an optimal path decomposition. Its explicit input length is polynomial in the per-instance host encoding for each fixed γ."
+        "title": "Effective bound in width times its logarithm under FPT ≠ W[1]"
       },
       "assessments": {
         "w1": {
@@ -142,7 +138,8 @@
             "evidence": []
           }
         }
-      }
+      },
+      "exponentDomain": "computable-integer"
     }
   ],
   "resolutions": [],
@@ -185,7 +182,7 @@
     },
     {
       "id": "large-girth",
-      "condition": "The girth is at least n^(1−γ).",
+      "condition": "For every fixed γ with 0 < γ < 1, the bound holds even when the girth is at least n^(1−γ).",
       "level": "bound"
     }
   ],

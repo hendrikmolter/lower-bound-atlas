@@ -112,11 +112,10 @@
       "id": "ilp-equations-w1-effective",
       "revision": 2,
       "statement": "Under FPT ≠ W[1], no deterministic algorithm decides feasibility of Ax=b for the stated all-ones right-hand side within the stated running time.",
-      "runtime": "2^(h(k)) N^C",
+      "runtime": "2^(o_eff(k)) N^C",
       "inputFactor": "N^C",
       "runtimeSymbols": [
         "k",
-        "h",
         "N",
         "C"
       ],
@@ -126,8 +125,7 @@
         "nonzero-columns"
       ],
       "qualifications": [
-        "For every fixed C ≥ 0 and every finite nonnegative function h, assume there is a computable threshold function T with h(k) ≤ k/j for every positive integer j and every k ≥ T(j).",
-        "The function h itself need not be computable."
+        "For every fixed C ≥ 0."
       ],
       "assumptions": [
         {
@@ -179,7 +177,8 @@
         "label": "Effective sublinear exponent with an all-ones right-hand side",
         "title": "All-ones right-hand-side integer programming under FPT ≠ W[1]",
         "explanation": "The column count is unrestricted. The proof uses Lin’s incidence matrix with exact-one rows in place of covering constraints."
-      }
+      },
+      "exponentDomain": "nonnegative"
     }
   ],
   "coverage": "Published lower bounds.",
@@ -226,10 +225,6 @@
       {
         "meaning": "total bit length of the input",
         "symbol": "N"
-      },
-      {
-        "symbol": "h",
-        "meaning": "finite nonnegative exponent function with the stated computable convergence cutoff"
       },
       {
         "symbol": "C",

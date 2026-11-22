@@ -187,9 +187,7 @@
       },
       "reader": {
         "revision": 1,
-        "label": "One agreement with a balanced alphabet",
-        "notation": "effective-little-o",
-        "notationLabel": "Effective little-o"
+        "label": "One agreement with a balanced alphabet"
       },
       "inputConditions": [
         "one-agreement",
@@ -201,8 +199,9 @@
         "C"
       ],
       "qualifications": [
-        "The nonnegative integer exponent has a computable upper bound and is effectively sublinear in d. The running time allows no additional factor depending on q."
-      ]
+        "There is no alphabet-dependent prefactor."
+      ],
+      "exponentDomain": "upper-bounded-integer"
     },
     {
       "id": "cs-kxk-product",
