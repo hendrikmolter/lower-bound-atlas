@@ -59,24 +59,14 @@
           "editionId": "journal",
           "locator": "Theorem 6, logarithmic pathwidth. Treewidth is at most pathwidth, so an effective sublinear exponent in treewidth would yield an FPT algorithm for Clique.",
           "role": "unrestricted lower bound",
-          "placement": "statement",
-          "scopeLabel": "Unrestricted bound"
+          "placement": "statement"
         },
         {
           "paperId": "bodlaender2022-tree-structured",
           "editionId": "proceedings",
           "locator": "Theorem 11, Independent Set parameterized by logarithmic treewidth. The supplied tree decomposition can be discarded for the unrestricted problem.",
           "role": "unrestricted lower bound",
-          "placement": "statement",
-          "scopeLabel": "Unrestricted bound"
-        },
-        {
-          "paperId": "molter2026-running-time",
-          "editionId": "arxiv-v1",
-          "locator": "Theorem 3, Section 5",
-          "role": "running-time lower bound",
-          "placement": "statement",
-          "scopeLabel": "Bound under the stated restrictions"
+          "placement": "statement"
         }
       ],
       "proofs": [],
@@ -86,18 +76,14 @@
         "notation": "effective-little-o",
         "notationLabel": "Effective little-o"
       },
-      "inputConditions": [
-        "maximum-degree-three",
-        "equal-pathwidth"
-      ],
+      "inputConditions": [],
       "runtimeSymbols": [
         "t",
         "B"
       ],
       "qualifications": [
         "The exponent h(t) is finite and nonnegative.",
-        "There is a computable function T such that h(t) ≤ η max(t, 1) whenever t ≥ T(η), for each positive rational η.",
-        "The proof also permits the solver to receive the exact width and an optimal path decomposition, counted in the complete input length."
+        "There is a computable function T such that h(t) ≤ η max(t, 1) whenever t ≥ T(η), for each positive rational η."
       ]
     }
   ],
@@ -109,16 +95,6 @@
       "condition": "The graph is finite, simple, undirected, and unweighted.",
       "id": "graph-class",
       "level": "problem"
-    },
-    {
-      "id": "maximum-degree-three",
-      "condition": "The maximum degree of G is at most three.",
-      "level": "bound"
-    },
-    {
-      "id": "equal-pathwidth",
-      "condition": "The pathwidth of G equals its treewidth.",
-      "level": "bound"
     }
   ],
   "kind": "lower-bound-case",
@@ -175,31 +151,21 @@
       "effective": true,
       "targetScale": "t",
       "recoveredScale": "t",
-      "comparison": "The exclusion reaches the historical treewidth exponent scale for effectively sublinear exponents. It holds on graphs of maximum degree three whose pathwidth equals their treewidth.",
+      "comparison": "The exclusion reaches the historical treewidth exponent scale for effectively sublinear exponents.",
       "evidence": [
         {
           "paperId": "bodlaender2025-linear-structure",
           "editionId": "journal",
           "locator": "Theorem 6, logarithmic pathwidth. Treewidth is at most pathwidth, so an effective sublinear exponent in treewidth would yield an FPT algorithm for Clique.",
           "role": "unrestricted lower bound",
-          "placement": "statement",
-          "scopeLabel": "Unrestricted bound"
+          "placement": "statement"
         },
         {
           "paperId": "bodlaender2022-tree-structured",
           "editionId": "proceedings",
           "locator": "Theorem 11, Independent Set parameterized by logarithmic treewidth. The supplied tree decomposition can be discarded for the unrestricted problem.",
           "role": "unrestricted lower bound",
-          "placement": "statement",
-          "scopeLabel": "Unrestricted bound"
-        },
-        {
-          "paperId": "molter2026-running-time",
-          "editionId": "arxiv-v1",
-          "locator": "Theorem 3, Section 5",
-          "role": "running-time lower bound",
-          "placement": "statement",
-          "scopeLabel": "Bound under the stated restrictions"
+          "placement": "statement"
         }
       ]
     }

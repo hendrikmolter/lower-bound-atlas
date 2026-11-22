@@ -97,17 +97,12 @@
         }
       ],
       "id": "odd-cycle-transversal-treewidth-w1",
-      "inputConditions": [
-        "connected-subcubic",
-        "large-girth",
-        "equal-pathwidth"
-      ],
+      "inputConditions": [],
       "inputFactor": "B^(O(1))",
       "proofs": [],
       "provenance": "literature",
       "qualifications": [
-        "The exponent h(t) is finite and nonnegative and has a computable convergence modulus at the scale t.",
-        "The exact width and an optimal path decomposition can be supplied and count in the complete input length."
+        "The exponent h(t) is finite and nonnegative and has a computable convergence modulus at the scale t."
       ],
       "reader": {
         "label": "Effective little-o bound in the treewidth",
@@ -119,8 +114,7 @@
       "runtime": "2^(o_eff(t)) B^(O(1))",
       "runtimeSymbols": [
         "t",
-        "B",
-        "n"
+        "B"
       ],
       "sources": [
         {
@@ -128,16 +122,7 @@
           "editionId": "journal",
           "locator": "Theorem 6, logarithmic pathwidth. Treewidth is at most pathwidth, so an effective sublinear exponent in treewidth would yield an FPT algorithm for Clique.",
           "role": "unrestricted lower bound",
-          "placement": "statement",
-          "scopeLabel": "Unrestricted bound"
-        },
-        {
-          "paperId": "molter2026-running-time",
-          "editionId": "arxiv-v1",
-          "locator": "Theorem 4, Section 6",
-          "role": "running-time lower bound",
-          "placement": "statement",
-          "scopeLabel": "Bound under the stated restrictions"
+          "placement": "statement"
         }
       ],
       "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Odd Cycle Transversal within the stated running time.",
@@ -147,23 +132,7 @@
   "coverage": "Published lower bounds for treewidth.",
   "encoding": "A finite simple undirected graph G and a nonnegative integer b in binary.",
   "id": "odd-cycle-transversal-treewidth",
-  "inputConditions": [
-    {
-      "condition": "The graph is connected and has maximum degree at most three.",
-      "id": "connected-subcubic",
-      "level": "bound"
-    },
-    {
-      "condition": "For each fixed 0 < η < 1 the girth is at least n^(1−η), where n is the number of vertices.",
-      "id": "large-girth",
-      "level": "bound"
-    },
-    {
-      "condition": "The pathwidth of G equals its treewidth.",
-      "id": "equal-pathwidth",
-      "level": "bound"
-    }
-  ],
+  "inputConditions": [],
   "kind": "lower-bound-case",
   "parameter": "Treewidth.",
   "problemDefinitionHash": "f74309354477d932937e1abf49764c20e06d0ebb2cba764971c4d8290ef9c23c",
@@ -213,23 +182,14 @@
       "effective": true,
       "targetScale": "t",
       "recoveredScale": "t",
-      "comparison": "The exclusion reaches the historical treewidth exponent scale with computable convergence. It already holds for the stated high-girth subcubic hard instances with equal treewidth and pathwidth.",
+      "comparison": "The exclusion reaches the historical treewidth exponent scale for effectively sublinear exponents.",
       "evidence": [
         {
           "paperId": "bodlaender2025-linear-structure",
           "editionId": "journal",
           "locator": "Theorem 6, logarithmic pathwidth. Treewidth is at most pathwidth, so an effective sublinear exponent in treewidth would yield an FPT algorithm for Clique.",
           "role": "unrestricted lower bound",
-          "placement": "statement",
-          "scopeLabel": "Unrestricted bound"
-        },
-        {
-          "paperId": "molter2026-running-time",
-          "editionId": "arxiv-v1",
-          "locator": "Theorem 4, Section 6",
-          "role": "running-time lower bound",
-          "placement": "statement",
-          "scopeLabel": "Bound under the stated restrictions"
+          "placement": "statement"
         }
       ]
     }

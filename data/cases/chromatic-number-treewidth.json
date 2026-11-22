@@ -131,16 +131,7 @@
           "editionId": "journal",
           "locator": "Theorem 9 and the construction of Lemma 4, especially Claim 12. The lemma fixes the number of colors. For source length S, taking q of order √(log S) keeps the construction polynomial. Encoding choices in base q and adding a q-clique to enforce the lists gives t log(t+2) at most a computable parameter factor times log S.",
           "role": "source construction for the unrestricted bound",
-          "placement": "statement",
-          "scopeLabel": "Published construction"
-        },
-        {
-          "paperId": "molter2026-running-time",
-          "editionId": "arxiv-v1",
-          "locator": "Theorem 2, Section 4",
-          "role": "running-time lower bound",
-          "placement": "statement",
-          "scopeLabel": "Explicit running-time statement"
+          "placement": "statement"
         }
       ],
       "proofs": []
@@ -192,16 +183,7 @@
           "editionId": "journal",
           "locator": "Theorem 9 and the construction of Lemma 4, especially Claim 12. The lemma fixes the number of colors. For source length S, taking q of order √(log S) keeps the construction polynomial. Encoding choices in base q and adding a q-clique to enforce the lists gives t log(t+2) at most a computable parameter factor times log S.",
           "role": "source construction for the unrestricted bound",
-          "placement": "statement",
-          "scopeLabel": "Published construction"
-        },
-        {
-          "paperId": "molter2026-running-time",
-          "editionId": "arxiv-v1",
-          "locator": "Theorem 2, Section 4",
-          "role": "running-time lower bound",
-          "placement": "statement",
-          "scopeLabel": "Explicit running-time statement"
+          "placement": "statement"
         }
       ]
     },
