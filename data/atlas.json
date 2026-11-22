@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "edition": "v1.0.0",
-  "revision": 3,
+  "revision": 4,
   "assumptions": [
     {
       "id": "eth",
@@ -1481,6 +1481,48 @@
           "openUrl": "https://arxiv.org/html/2611.26080v1",
           "access": "Version 1 full text inspected. Theorems 1–12 establish deterministic running-time lower bounds under FPT ≠ W[1].",
           "doi": "10.48550/arXiv.2611.26080"
+        }
+      ]
+    },
+    {
+      "id": "bodlaender2025-linear-structure",
+      "title": "XNLP-Completeness for Parameterized Problems on Graphs with a Linear Structure",
+      "authors": [
+        "Hans L. Bodlaender",
+        "Carla Groenland",
+        "Hugo Jacob",
+        "Lars Jaffke",
+        "Paloma T. Lima"
+      ],
+      "preferredEditionId": "journal",
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "journal",
+          "label": "Algorithmica 87 (2025), 465–506",
+          "doi": "10.1007/s00453-024-01274-9",
+          "primaryUrl": "https://doi.org/10.1007/s00453-024-01274-9"
+        }
+      ]
+    },
+    {
+      "id": "bodlaender2022-tree-structured",
+      "title": "On the Complexity of Problems on Tree-Structured Graphs",
+      "authors": [
+        "Hans L. Bodlaender",
+        "Carla Groenland",
+        "Hugo Jacob",
+        "Marcin Pilipczuk",
+        "Michał Pilipczuk"
+      ],
+      "preferredEditionId": "proceedings",
+      "editions": [
+        {
+          "id": "proceedings",
+          "kind": "proceedings",
+          "label": "IPEC 2022, LIPIcs 249, 6:1–6:17",
+          "doi": "10.4230/LIPIcs.IPEC.2022.6",
+          "primaryUrl": "https://doi.org/10.4230/LIPIcs.IPEC.2022.6"
         }
       ]
     }

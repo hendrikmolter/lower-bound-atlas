@@ -359,6 +359,11 @@ function statementSources(bound) {
   return bound.sources.filter(source => !source.placement || ['statement','forward'].includes(source.placement));
 }
 
+function citationScope(sources) {
+  const labels = [...new Set(sources.map(source => source.scopeLabel).filter(Boolean))];
+  return labels.length ? escape(labels.join(' / ')) + ' · ' : '';
+}
+
 function hardnessNotice(record, bound) {
   const hardness = bound.hardnessBaseline + '-hardness';
   const bounds = record.bounds.filter(item => item.supported && item.status === 'established' &&
@@ -375,7 +380,7 @@ function problemActions(page, record, bound) {
   const ref = { caseId: record.id, id: bound.id };
   const sources = statementSources(bound);
   const citations = [...new Set(sources.map(source => source.paperId))]
-    .map(id => preferredPaperLink(page, registries.papers.get(id)));
+    .map(id => citationScope(sources.filter(source => source.paperId === id)) + preferredPaperLink(page, registries.papers.get(id)));
   const { notation, notationLabel } = boundCopy(bound);
   const corrections = bound.status === 'withdrawn' ? db.challenges.filter(c =>
     sameObject(c.object, boundRef(record.id, bound))).map(c => link(page, routes.challenge(c.id), 'Correction record')) : [];
@@ -716,7 +721,7 @@ function paperReferences(page, sources, { roles = false } = {}) {
   return items([...papers].map(([paperId, editions]) => {
     const paper = registries.papers.get(paperId);
     const splitEdition = [...editions.keys()].some(id => id !== paper.preferredEditionId);
-    return preferredPaperLink(page, paper, !editions.has(paper.preferredEditionId)) + ' · ' + escape(paper.authors.join(', ')) +
+    return citationScope(sources.filter(source => source.paperId === paperId)) + preferredPaperLink(page, paper, !editions.has(paper.preferredEditionId)) + ' · ' + escape(paper.authors.join(', ')) +
       [...editions].map(([editionId, locators]) =>
         (splitEdition ? '<br>' : ' · ') +
         inspectedEdition(page, paper, paper.editions.find(edition => edition.id === editionId), [...locators])).join('');

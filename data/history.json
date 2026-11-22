@@ -475,5 +475,12 @@
     "contributor": "Hendrik Molter with ChatGPT",
     "title": "Preprint citations for running-time lower bounds",
     "summary": "Seventeen bounds under FPT ≠ W[1] now cite Theorems 1–12 of Hendrik Molter’s arXiv preprint, with corresponding source references for historical ETH recoveries and forward implications."
+  },
+  {
+    "kind": "update",
+    "date": "2026-11-22",
+    "contributor": "Hendrik Molter with ChatGPT",
+    "title": "Earlier sources for three treewidth lower bounds",
+    "summary": "The Chromatic Number, Independent Set and Odd Cycle Transversal entries now credit the published constructions underlying their unrestricted bounds. The latter two entries identify the separate source for the additional graph restrictions."
   }
 ]

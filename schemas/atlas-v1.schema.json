@@ -123,6 +123,11 @@
           "type": "string",
           "minLength": 1
         },
+        "scopeLabel": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional reader-facing qualifier identifying the part of the bound supported by this citation."
+        },
         "editionId": {
           "type": "string",
           "pattern": "^[a-z0-9][a-z0-9_-]*$"

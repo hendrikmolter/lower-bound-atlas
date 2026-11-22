@@ -55,11 +55,28 @@
       "assumptionOperator": "all",
       "sources": [
         {
+          "paperId": "bodlaender2025-linear-structure",
+          "editionId": "journal",
+          "locator": "Theorem 6, logarithmic pathwidth. Treewidth is at most pathwidth, so an effective sublinear exponent in treewidth would yield an FPT algorithm for Clique.",
+          "role": "unrestricted lower bound",
+          "placement": "statement",
+          "scopeLabel": "Unrestricted bound"
+        },
+        {
+          "paperId": "bodlaender2022-tree-structured",
+          "editionId": "proceedings",
+          "locator": "Theorem 11, Independent Set parameterized by logarithmic treewidth. The supplied tree decomposition can be discarded for the unrestricted problem.",
+          "role": "unrestricted lower bound",
+          "placement": "statement",
+          "scopeLabel": "Unrestricted bound"
+        },
+        {
           "paperId": "molter2026-running-time",
           "editionId": "arxiv-v1",
           "locator": "Theorem 3, Section 5",
           "role": "running-time lower bound",
-          "placement": "statement"
+          "placement": "statement",
+          "scopeLabel": "Bound under the stated restrictions"
         }
       ],
       "proofs": [],
@@ -161,11 +178,28 @@
       "comparison": "The exclusion reaches the historical treewidth exponent scale for effectively sublinear exponents. It holds on graphs of maximum degree three whose pathwidth equals their treewidth.",
       "evidence": [
         {
+          "paperId": "bodlaender2025-linear-structure",
+          "editionId": "journal",
+          "locator": "Theorem 6, logarithmic pathwidth. Treewidth is at most pathwidth, so an effective sublinear exponent in treewidth would yield an FPT algorithm for Clique.",
+          "role": "unrestricted lower bound",
+          "placement": "statement",
+          "scopeLabel": "Unrestricted bound"
+        },
+        {
+          "paperId": "bodlaender2022-tree-structured",
+          "editionId": "proceedings",
+          "locator": "Theorem 11, Independent Set parameterized by logarithmic treewidth. The supplied tree decomposition can be discarded for the unrestricted problem.",
+          "role": "unrestricted lower bound",
+          "placement": "statement",
+          "scopeLabel": "Unrestricted bound"
+        },
+        {
           "paperId": "molter2026-running-time",
           "editionId": "arxiv-v1",
           "locator": "Theorem 3, Section 5",
           "role": "running-time lower bound",
-          "placement": "statement"
+          "placement": "statement",
+          "scopeLabel": "Bound under the stated restrictions"
         }
       ]
     }
