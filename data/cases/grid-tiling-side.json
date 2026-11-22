@@ -104,7 +104,7 @@
             "status": "established",
             "evidence": [
               {
-                "reviewId": "grid-tiling-side-w1-hardness-scope",
+                "reviewId": "grid-tiling-side-w1-literature-audit",
                 "boundRevision": 2,
                 "hypothesisRevision": 1,
                 "source": {
@@ -121,13 +121,15 @@
             "status": "established",
             "evidence": [
               {
-                "reviewId": "grid-tiling-w1-membership-independent",
                 "boundRevision": 2,
                 "hypothesisRevision": 1,
-                "proof": {
-                  "proofId": "six-w1-memberships",
-                  "revision": 1,
-                  "theorem": "grid-tiling-w1-membership"
+                "reviewId": "grid-tiling-side-w1-literature-audit",
+                "source": {
+                  "paperId": "curticapean-xia2015-permanent",
+                  "editionId": "focs",
+                  "locator": "Definition II.4, Remark II.5 and Theorem II.6, p. 998",
+                  "placement": "proof",
+                  "role": "W[1]-completeness of Grid Tiling"
                 }
               }
             ]
@@ -349,13 +351,13 @@
   ],
   "reviews": [
     {
-      "id": "grid-tiling-side-w1-hardness-scope",
+      "id": "grid-tiling-side-w1-literature-audit",
       "type": "agent",
-      "date": "2026-11-18",
-      "reviewer": "Codex agent /root/population_c",
+      "date": "2026-11-22",
+      "reviewer": "Codex agent /root/others",
       "verdict": "verified",
-      "scope": "The reduction from Clique in Theorem 14.28 lists the cell tables and preserves their side-length parameter. Its coordinate convention is interchangeable by swapping the two coordinates.",
-      "evidence": "evidence/six-w1-memberships-independent.md",
+      "scope": "Theorem II.6 covers decision Grid Tiling parameterized by grid side. Definition II.4 and Remark II.5 include the full array with one table per cell.",
+      "evidence": "evidence/literature-corollaries-2026-11-22.md",
       "object": {
         "type": "bound",
         "caseId": "grid-tiling-side",

@@ -79,19 +79,37 @@
             "status": "unknown"
           },
           "forward": {
+            "status": "established",
             "evidence": [
               {
-                "boundRevision": 1,
+                "boundRevision": 2,
                 "hypothesisRevision": 1,
-                "proof": {
-                  "proofId": "hamiltonian-sh",
-                  "revision": 1,
-                  "theorem": "hamiltonian-sh-forward"
-                },
-                "reviewId": "hamiltonian-sh-forward-independent"
+                "reviewId": "longest-path-budget-sh-source-audit-r2",
+                "source": {
+                  "paperId": "sh26",
+                  "editionId": "v2",
+                  "locator": "Table 1, induced-grid row, p. 4",
+                  "role": "induced-grid fixed-power lower bound for Hamiltonian Cycle",
+                  "placement": "forward"
+                }
+              },
+              {
+                "boundRevision": 2,
+                "hypothesisRevision": 1,
+                "reviewId": "longest-path-budget-sh-source-audit-r2",
+                "source": {
+                  "paperId": "deberg-et-al2020-geometric",
+                  "editionId": "journal",
+                  "locator": "Theorem 4.7",
+                  "role": "reduction to induced grid graphs",
+                  "placement": "forward"
+                }
               }
             ],
-            "status": "established"
+            "sourceBasis": {
+              "kind": "derived",
+              "step": "Choose a dimension for the desired exponent. Split one vertex and force the two copies to be endpoints by attaching private leaves. Set the requested path length in vertices to the order of the resulting graph."
+            }
           },
           "hypothesisRevision": 1
         }
@@ -106,23 +124,17 @@
       "id": "longest-path-budget-sh",
       "inputConditions": [],
       "inputFactor": "B^(O(1))",
-      "proofs": [
-        {
-          "proofId": "hamiltonian-sh",
-          "revision": 1,
-          "theorem": "hamiltonian-sh-forward"
-        }
-      ],
-      "provenance": "atlas",
+      "proofs": [],
+      "provenance": "literature",
       "qualifications": [
         "Separately for every fixed 0 < a < 1."
       ],
       "reader": {
         "label": "Fixed-power exponent in the requested number of vertices on the path",
-        "revision": 1,
+        "revision": 2,
         "title": "Fixed-power bounds under SH"
       },
-      "revision": 1,
+      "revision": 2,
       "runtime": "2^(O(k^a)) B^(O(1))",
       "runtimeSymbols": [
         "k",
@@ -130,22 +142,26 @@
       ],
       "sources": [
         {
-          "editionId": "v2",
-          "locator": "Definition of SH and footnotes 1–2, pp. 1–2",
           "paperId": "sh26",
-          "placement": "context",
-          "role": "hypothesis and encoding conventions"
+          "editionId": "v2",
+          "locator": "Table 1, induced-grid row, p. 4",
+          "role": "induced-grid fixed-power lower bound for Hamiltonian Cycle",
+          "placement": "forward"
         },
         {
+          "paperId": "deberg-et-al2020-geometric",
           "editionId": "journal",
-          "locator": "§3, p. 526, following Theorem 5",
-          "paperId": "ipz2001",
-          "placement": "proof",
-          "role": "linear-size reduction to Hamiltonian Circuit"
+          "locator": "Theorem 4.7",
+          "role": "reduction to induced grid graphs",
+          "placement": "forward"
         }
       ],
       "statement": "Under SH, no deterministic algorithm can decide whether a path has at least k vertices within the stated running time.",
-      "status": "established"
+      "status": "established",
+      "sourceBasis": {
+        "kind": "derived",
+        "step": "Choose a dimension for the desired exponent. Split one vertex and force the two copies to be endpoints by attaching private leaves. Set the requested path length in vertices to the order of the resulting graph."
+      }
     }
   ],
   "coverage": "Published lower bounds for path length.",
@@ -179,7 +195,7 @@
     ]
   },
   "resolutions": [],
-  "revision": 3,
+  "revision": 4,
   "task": "Does G contain a path on at least k distinct vertices?",
   "title": "Longest Path by path length",
   "variant": "Longest Path",
@@ -195,7 +211,7 @@
       },
       "recovery": {
         "id": "longest-path-budget-sh",
-        "revision": 1
+        "revision": 2
       },
       "scale": "degree",
       "effective": false,
@@ -204,9 +220,18 @@
       "comparison": "The SH result excludes every fixed power below one in the exponent of the requested number of vertices on the path.",
       "evidence": [
         {
-          "proofId": "hamiltonian-sh",
-          "revision": 1,
-          "theorem": "hamiltonian-sh-forward"
+          "paperId": "sh26",
+          "editionId": "v2",
+          "locator": "Table 1, induced-grid row, p. 4",
+          "role": "induced-grid fixed-power lower bound for Hamiltonian Cycle",
+          "placement": "forward"
+        },
+        {
+          "paperId": "deberg-et-al2020-geometric",
+          "editionId": "journal",
+          "locator": "Theorem 4.7",
+          "role": "reduction to induced grid graphs",
+          "placement": "forward"
         }
       ]
     }

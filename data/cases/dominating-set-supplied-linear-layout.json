@@ -97,7 +97,7 @@
         "monopolar"
       ],
       "status": "established",
-      "provenance": "literature",
+      "provenance": "atlas",
       "assumptions": [
         {
           "id": "w1",
@@ -124,10 +124,7 @@
       "reader": {
         "revision": 1,
         "label": "Effective quadratic-width bound on monopolar graphs",
-        "title": "Effective quadratic-width bound on monopolar graphs under FPT ≠ W[1]",
-        "historicalNote": [
-          "Liu and Meng state the quadratic lower bound under ETH in Theorem 3.1 and Corollary 3.10. The FPT ≠ W[1] exclusion is a direct consequence of their construction and the source-size calculation in the linked derivation."
-        ]
+        "title": "Effective quadratic-width bound on monopolar graphs under FPT ≠ W[1]"
       },
       "assessments": {
         "w1": {
@@ -153,7 +150,11 @@
           }
         }
       },
-      "exponentDomain": "computable-integer"
+      "exponentDomain": "computable-integer",
+      "sourceBasis": {
+        "kind": "derived",
+        "step": "Liu and Meng’s construction gives a monopolar graph whose squared width is at most a constant times the number of variables in a compact Multicolored Clique encoding. The effective cutoff then gives a fixed-parameter algorithm for Multicolored Clique."
+      }
     }
   ],
   "resolutions": [],

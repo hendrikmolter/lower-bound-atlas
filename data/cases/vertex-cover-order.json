@@ -95,10 +95,10 @@
       ],
       "reader": {
         "label": "Fixed power saving in the exponent",
-        "revision": 2,
+        "revision": 3,
         "title": "Vertex Cover by graph order under SH"
       },
-      "revision": 2,
+      "revision": 3,
       "runtime": "2^(O(n^(1−ε))) B^(O(1))",
       "runtimeSymbols": [
         "n",
@@ -123,8 +123,9 @@
             "status": "established",
             "evidence": [
               {
-                "boundRevision": 2,
-                "reviewId": "vc-order-sh-source-review",
+                "boundRevision": 3,
+                "hypothesisRevision": 1,
+                "reviewId": "vc-order-sh-source-audit-r3",
                 "source": {
                   "editionId": "v2",
                   "locator": "Table 1, Vertex Cover by graph order, p. 4",
@@ -139,22 +140,34 @@
             "status": "established",
             "evidence": [
               {
-                "boundRevision": 2,
-                "reviewId": "vc-order-sh-converse-review-r2",
-                "proof": {
-                  "proofId": "classical-graph-sh-converse",
-                  "revision": 2,
-                  "theorem": "vc-order-sh-converse"
-                },
+                "boundRevision": 3,
+                "hypothesisRevision": 1,
+                "reviewId": "vc-order-sh-source-audit-r3",
                 "source": {
                   "paperId": "sh26",
                   "editionId": "v2",
-                  "locator": "Lemma 2.2, pp. 6–7 (decision interface)",
-                  "role": "quantitative decision sparsification, preprint dependency",
+                  "locator": "Theorem 2.4, p. 7",
+                  "role": "SH is equivalent to Weak ETH for 3-SAT by variable count",
+                  "placement": "proof"
+                }
+              },
+              {
+                "boundRevision": 3,
+                "hypothesisRevision": 1,
+                "reviewId": "vc-order-sh-source-audit-r3",
+                "source": {
+                  "paperId": "ipz2001",
+                  "editionId": "journal",
+                  "locator": "Theorem 5, proof, p. 526",
+                  "role": "linear-variable encoding of the size constraint and vertex-preserving graph reductions",
                   "placement": "proof"
                 }
               }
-            ]
+            ],
+            "sourceBasis": {
+              "kind": "derived",
+              "step": "Use one Boolean selection variable per vertex, require one selected endpoint per edge, and use a linear-size cardinality circuit. The 3-CNF has O(n) variables, so failure of SH would give a fixed-power algorithm by graph order."
+            }
           }
         }
       }
@@ -202,44 +215,11 @@
     ]
   },
   "resolutions": [],
-  "revision": 6,
+  "revision": 7,
   "task": "Does G have a set of at most k vertices that includes an endpoint of every edge?",
   "title": "Vertex Cover by graph order",
   "variant": "Vertex Cover",
   "reviews": [
-    {
-      "id": "vc-order-sh-source-review",
-      "type": "agent",
-      "date": "2026-11-18",
-      "reviewer": "Codex agent secondary_natural",
-      "verdict": "verified",
-      "scope": "Checks the statement in Table 1 and its applicability to the deterministic exclusion for Vertex Cover by the number of vertices, with the full input polynomial.",
-      "evidence": "evidence/classical-graph-sh-converse-independent.md",
-      "object": {
-        "type": "bound",
-        "caseId": "vertex-cover-order",
-        "id": "vc-order-sh",
-        "revision": 2
-      },
-      "independent": true
-    },
-    {
-      "id": "vc-order-sh-converse-review",
-      "type": "agent",
-      "date": "2026-11-18",
-      "reviewer": "Codex agent secondary_natural",
-      "verdict": "verified",
-      "scope": "Checks the converse for Vertex Cover parameterized by the number of vertices, including the exponent after quantitative sparsification, the linear-variable selection encoding, and the kernel when parameterized by the budget.",
-      "evidence": "evidence/classical-graph-sh-converse-independent.md",
-      "object": {
-        "type": "proof",
-        "id": "classical-graph-sh-converse",
-        "revision": 1,
-        "theorem": "vc-order-sh-converse"
-      },
-      "independent": true,
-      "sourceSha256": "a45124649155337293a6ef01825717af11a995de79ac2463cceb640c22ee646c"
-    },
     {
       "id": "vc-order-eth-equivalence-review",
       "type": "agent",
@@ -255,23 +235,6 @@
         "revision": 2
       },
       "independent": true
-    },
-    {
-      "id": "vc-order-sh-converse-review-r2",
-      "type": "agent",
-      "date": "2026-11-19",
-      "reviewer": "Codex agent originals",
-      "verdict": "verified",
-      "scope": "Checked the v2 decision sparsification interface and fixed exponents, the linear-variable Independent Set and Vertex Cover encodings, and the use of the 2k-vertex kernel for the budget bound.",
-      "evidence": "evidence/sh-preprint-v2-proof-review.md",
-      "object": {
-        "type": "proof",
-        "id": "classical-graph-sh-converse",
-        "revision": 2,
-        "theorem": "vc-order-sh-converse"
-      },
-      "independent": true,
-      "sourceSha256": "1ae47f381036213689fc8c8b1b1b14d3d32094dda9482e2f2966f53657c97d52"
     }
   ],
   "recoveryAssessments": [
@@ -286,7 +249,7 @@
       },
       "recovery": {
         "id": "vc-order-sh",
-        "revision": 2
+        "revision": 3
       },
       "scale": "degree",
       "effective": false,

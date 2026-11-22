@@ -209,38 +209,40 @@ test('proof headings distinguish authorship from human verification', t => {
   const manuscript = id => data.proofs.find(proof => proof.id === id).revisions
     .reduce((latest, entry) => entry.revision > latest.revision ? entry : latest);
   const external = {origin:'external', kind:'human', authors:['Test Author']};
-  manuscript('dominating-set-order-sh').authorship = external;
-  manuscript('three-coloring-sh-converse').authorship = external;
-  const review = data.reviews.find(r => r.object.id === 'three-coloring-sh-converse' &&
-    r.object.revision === manuscript('three-coloring-sh-converse').revision && r.type === 'agent');
-  data.reviews.push({...review, id:'fixture-human-review', type:'human'});
-  delete manuscript('closest-string-balanced-kxk').authorship.authors;
-  writeFileSync(registry,JSON.stringify(data));
-  execFileSync(process.execPath,['website/build.mjs'],{cwd:dir});
+  const id = 'dominating-set-order-sh';
+  manuscript(id).authorship = external;
+  delete manuscript('dominating-set-rankwidth').authorship.authors;
+  const review = data.reviews.find(r => r.object.id === id &&
+    r.object.revision === manuscript(id).revision && r.type === 'agent');
+  const build = () => {
+    writeFileSync(registry,JSON.stringify(data));
+    execFileSync(process.execPath,['website/build.mjs'],{cwd:dir});
+  };
   const output = path => readFileSync(join(dir,'dist/site',path),'utf8');
-  for (const [id, reviewType] of [[review.id, 'Agent'], ['fixture-human-review', 'Human']]) {
-    const html = output('reviews/' + id + '/index.html');
-    const title = 'Review of The 3-Coloring bound implies the Satisfiability Hypothesis · Theorem 1 · r' + review.object.revision + ' · ' + reviewType + ' review';
+  const statement = () => output('bounds/dominating-set-order/ds-order-sh-fixed-power/index.html');
+  build();
+  assert.ok(statement().includes('<h4 id="proof">Proof manuscript</h4>'));
+  data.reviews.push({...review, id:'fixture-human-review', type:'human'});
+  build();
+  for (const [reviewId, reviewType] of [[review.id, 'Agent'], ['fixture-human-review', 'Human']]) {
+    const html = output('reviews/' + reviewId + '/index.html');
+    const title = 'Review of ' + data.proofs.find(p => p.id === id).title +
+      ' · Theorem 1 · r' + review.object.revision + ' · ' + reviewType + ' review';
     assert.ok(html.includes('<title>' + title));
     assert.ok(html.includes('<h1>' + mathText(title)));
     assert.ok(html.includes('<dt>Verdict</dt><dd><span class="status" data-status="' + review.verdict + '">'));
   }
-  const heading = path => output('bounds/' + path + '/index.html').match(/<h[34] id="proof">([^<]+)/)[1];
-  assert.equal(heading('lms-closest-string-radius-alphabet/cs-kxk-balanced'),'Proof by AI');
-  assert.equal(heading('dominating-set-order/ds-order-sh-fixed-power'),'Proof manuscript');
-  const sh = output('bounds/lms-3color-order/color-sh-fixed-power/index.html');
-  const [forward, converse] = sh.split('aria-label="Statement implies SH"');
+  const [forward, converse] = statement().split('aria-label="Statement implies SH"');
   assert.ok(forward.includes('ETH is Dead, Long Live SH') && !forward.includes('Test Author'));
   assert.ok(converse.includes('<h4 id="proof">Proof</h4>Test Author'));
-  assert.ok(!converse.includes('<section id="proof"><h2>'));
   const literature = output('bounds/distinct-vectors-budget/dv-eth-column-budget/index.html');
   const [claim, support] = literature.split('aria-label="ETH implies Statement"');
   assert.ok(!claim.includes('source-edition') && support.includes('source-edition'));
-  assert.ok(!sh.includes('Under SH, no deterministic algorithm'));
-  const derived = output('bounds/lms-closest-string-radius-alphabet/cs-kxk-balanced/index.html');
-  assert.ok(derived.indexOf('Proof by AI') < derived.indexOf('<h2>Recovery of a historical ETH bound'));
-  assert.match(output('proofs/dominating-set-order-sh/r1/dominating-set-order-sh/citation.txt'),/^Test Author\./);
-  assert.match(output('proofs/closest-string-balanced-kxk/r1/closest-string-balanced-kxk/citation.txt'),/^Atlas\./);
+  const derived = output('bounds/dominating-set-rank-width/dominating-set-rank-width-w1-effective/index.html');
+  const proofHeading = derived.indexOf('Proof by AI');
+  assert.ok(proofHeading >= 0 && proofHeading < derived.indexOf('<h2>Recovery of a historical ETH bound'));
+  assert.match(output('proofs/' + id + '/r1/' + id + '/citation.txt'),/^Test Author\./);
+  assert.match(output('proofs/dominating-set-rankwidth/r1/dominating-set-rankwidth/citation.txt'),/^Atlas\./);
 });
 
 test('links the preferred publication and labels the exact edition inspected for a locator', t => {

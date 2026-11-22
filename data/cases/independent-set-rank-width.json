@@ -167,7 +167,7 @@
         "triangle-free"
       ],
       "status": "established",
-      "provenance": "atlas",
+      "provenance": "literature",
       "assumptions": [
         {
           "id": "sh",
@@ -175,14 +175,23 @@
         }
       ],
       "assumptionOperator": "all",
-      "sources": [],
-      "proofs": [
+      "sources": [
         {
-          "proofId": "independent-set-rankwidth",
-          "revision": 2,
-          "theorem": "independent-set-rankwidth-sh"
+          "paperId": "molter2026-running-time",
+          "editionId": "arxiv-v1",
+          "locator": "Sections 7.1–7.3",
+          "role": "reduction to triangle-free Independent Set with optimal width certificates",
+          "placement": "forward"
+        },
+        {
+          "paperId": "sh26",
+          "editionId": "v2",
+          "locator": "Lemma 2.1, pp. 5–6, and Theorem 3.1, p. 8",
+          "role": "fixed-power lower bound transfer from 3-SAT under SH",
+          "placement": "forward"
         }
       ],
+      "proofs": [],
       "reader": {
         "revision": 1,
         "label": "Fixed-power bound below squared width on triangle-free graphs",
@@ -197,11 +206,25 @@
               {
                 "boundRevision": 1,
                 "hypothesisRevision": 1,
-                "reviewId": "independent-set-rankwidth-sh-r2-review",
-                "proof": {
-                  "proofId": "independent-set-rankwidth",
-                  "revision": 2,
-                  "theorem": "independent-set-rankwidth-sh"
+                "reviewId": "independent-set-rank-width-sh-degree-source-review",
+                "source": {
+                  "paperId": "molter2026-running-time",
+                  "editionId": "arxiv-v1",
+                  "locator": "Sections 7.1–7.3",
+                  "role": "reduction to triangle-free Independent Set with optimal width certificates",
+                  "placement": "forward"
+                }
+              },
+              {
+                "boundRevision": 1,
+                "hypothesisRevision": 1,
+                "reviewId": "independent-set-rank-width-sh-degree-source-review",
+                "source": {
+                  "paperId": "sh26",
+                  "editionId": "v2",
+                  "locator": "Lemma 2.1, pp. 5–6, and Theorem 3.1, p. 8",
+                  "role": "fixed-power lower bound transfer from 3-SAT under SH",
+                  "placement": "forward"
                 }
               }
             ]
@@ -211,6 +234,10 @@
             "evidence": []
           }
         }
+      },
+      "sourceBasis": {
+        "kind": "derived",
+        "step": "On a 3-CNF formula with s variables plus clauses, Molter’s reduction produces a triangle-free graph of width O(√s) in 2^{O(√s log(s+2))} time. Substituting the width bound gives a fixed power saving in the exponent for 3-SAT."
       }
     }
   ],
@@ -267,9 +294,18 @@
       "comparison": "For every fixed positive exponent saving below two, the recovery excludes the corresponding power of the same width. The restricted instances are valid inputs of the historical task and the normalized full graph encoding, including any supplied certificate, is polynomial in its order.",
       "evidence": [
         {
-          "proofId": "independent-set-rankwidth",
-          "revision": 2,
-          "theorem": "independent-set-rankwidth-sh"
+          "paperId": "molter2026-running-time",
+          "editionId": "arxiv-v1",
+          "locator": "Sections 7.1–7.3",
+          "role": "reduction to triangle-free Independent Set with optimal width certificates",
+          "placement": "forward"
+        },
+        {
+          "paperId": "sh26",
+          "editionId": "v2",
+          "locator": "Lemma 2.1, pp. 5–6, and Theorem 3.1, p. 8",
+          "role": "fixed-power lower bound transfer from 3-SAT under SH",
+          "placement": "forward"
         }
       ]
     }

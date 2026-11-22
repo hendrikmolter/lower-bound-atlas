@@ -66,34 +66,58 @@
       "assessments": {
         "sh": {
           "converse": {
+            "status": "established",
             "evidence": [
               {
-                "boundRevision": 1,
+                "boundRevision": 2,
                 "hypothesisRevision": 1,
-                "proof": {
-                  "proofId": "hamiltonian-sh",
-                  "revision": 1,
-                  "theorem": "hamiltonian-size-sh-converse"
-                },
-                "reviewId": "hamiltonian-size-sh-converse-independent"
+                "reviewId": "hamiltonian-cycle-graph-size-sh-source-audit-r2",
+                "source": {
+                  "paperId": "zhou2024-hamiltonian-encoding",
+                  "editionId": "proceedings",
+                  "locator": "§2, pp. 40:2–40:3",
+                  "role": "binary distance encoding of Hamiltonian Cycle",
+                  "placement": "proof"
+                }
               }
             ],
-            "status": "established"
+            "sourceBasis": {
+              "kind": "derived",
+              "step": "Replace every undirected edge by two opposite arcs. The degree constraints take linear size and the binary distance increment takes O(log n) gates per arc, giving a CNF of near-linear bit length in the graph size. A fixed power saving for SAT then gives a fixed power saving for Hamiltonian Cycle."
+            }
           },
           "forward": {
+            "status": "established",
             "evidence": [
               {
-                "boundRevision": 1,
+                "boundRevision": 2,
                 "hypothesisRevision": 1,
-                "proof": {
-                  "proofId": "hamiltonian-sh",
-                  "revision": 1,
-                  "theorem": "hamiltonian-sh-forward"
-                },
-                "reviewId": "hamiltonian-sh-forward-independent"
+                "reviewId": "hamiltonian-cycle-graph-size-sh-source-audit-r2",
+                "source": {
+                  "paperId": "sh26",
+                  "editionId": "v2",
+                  "locator": "Table 1, induced-grid row, p. 4",
+                  "role": "induced-grid fixed-power lower bound for Hamiltonian Cycle",
+                  "placement": "forward"
+                }
+              },
+              {
+                "boundRevision": 2,
+                "hypothesisRevision": 1,
+                "reviewId": "hamiltonian-cycle-graph-size-sh-source-audit-r2",
+                "source": {
+                  "paperId": "deberg-et-al2020-geometric",
+                  "editionId": "journal",
+                  "locator": "Theorem 4.7",
+                  "role": "reduction to induced grid graphs",
+                  "placement": "forward"
+                }
               }
             ],
-            "status": "established"
+            "sourceBasis": {
+              "kind": "derived",
+              "step": "Choose the dimension separately for each fixed power below one. The number of edges of a fixed-dimensional grid graph is at most its dimension times its number of vertices, so the same exclusion holds in graph size."
+            }
           },
           "hypothesisRevision": 1
         }
@@ -108,23 +132,17 @@
       "id": "hamiltonian-cycle-graph-size-sh",
       "inputConditions": [],
       "inputFactor": "B^(O(1))",
-      "proofs": [
-        {
-          "proofId": "hamiltonian-sh",
-          "revision": 1,
-          "theorem": "hamiltonian-sh-forward"
-        }
-      ],
-      "provenance": "atlas",
+      "proofs": [],
+      "provenance": "literature",
       "qualifications": [
         "Separately for every fixed 0 < a < 1."
       ],
       "reader": {
         "label": "Fixed-power exponent in the number of vertices plus edges",
-        "revision": 1,
+        "revision": 2,
         "title": "Fixed-power bounds under SH"
       },
-      "revision": 1,
+      "revision": 2,
       "runtime": "2^(O(s^a)) B^(O(1))",
       "runtimeSymbols": [
         "s",
@@ -132,22 +150,26 @@
       ],
       "sources": [
         {
-          "editionId": "v2",
-          "locator": "Definition of SH and footnotes 1–2, pp. 1–2",
           "paperId": "sh26",
-          "placement": "context",
-          "role": "hypothesis and encoding conventions"
+          "editionId": "v2",
+          "locator": "Table 1, induced-grid row, p. 4",
+          "role": "induced-grid fixed-power lower bound for Hamiltonian Cycle",
+          "placement": "forward"
         },
         {
+          "paperId": "deberg-et-al2020-geometric",
           "editionId": "journal",
-          "locator": "§3, p. 526, following Theorem 5",
-          "paperId": "ipz2001",
-          "placement": "proof",
-          "role": "linear-size reduction to Hamiltonian Circuit"
+          "locator": "Theorem 4.7",
+          "role": "reduction to induced grid graphs",
+          "placement": "forward"
         }
       ],
       "statement": "Under SH, no deterministic algorithm can decide Hamiltonian Cycle within the stated running time.",
-      "status": "established"
+      "status": "established",
+      "sourceBasis": {
+        "kind": "derived",
+        "step": "Choose the dimension separately for each fixed power below one. The number of edges of a fixed-dimensional grid graph is at most its dimension times its number of vertices, so the same exclusion holds in graph size."
+      }
     }
   ],
   "coverage": "Published lower bounds for number of vertices plus edges.",
@@ -177,7 +199,7 @@
     ]
   },
   "resolutions": [],
-  "revision": 3,
+  "revision": 4,
   "task": "Does G contain a simple cycle through all vertices?",
   "title": "Hamiltonian Cycle by number of vertices plus edges",
   "variant": "Hamiltonian Cycle",
@@ -193,7 +215,7 @@
       },
       "recovery": {
         "id": "hamiltonian-cycle-graph-size-sh",
-        "revision": 1
+        "revision": 2
       },
       "scale": "degree",
       "effective": false,
@@ -202,9 +224,18 @@
       "comparison": "The SH result excludes every fixed power below one in the exponent of the number of vertices plus edges.",
       "evidence": [
         {
-          "proofId": "hamiltonian-sh",
-          "revision": 1,
-          "theorem": "hamiltonian-sh-forward"
+          "paperId": "sh26",
+          "editionId": "v2",
+          "locator": "Table 1, induced-grid row, p. 4",
+          "role": "induced-grid fixed-power lower bound for Hamiltonian Cycle",
+          "placement": "forward"
+        },
+        {
+          "paperId": "deberg-et-al2020-geometric",
+          "editionId": "journal",
+          "locator": "Theorem 4.7",
+          "role": "reduction to induced grid graphs",
+          "placement": "forward"
         }
       ]
     }

@@ -19,7 +19,7 @@
       },
       {
         "id": "clique-order",
-        "revision": 5
+        "revision": 6
       },
       {
         "id": "closest-substring-constant-alphabet",
@@ -71,7 +71,7 @@
       },
       {
         "id": "dominating-set-order",
-        "revision": 4
+        "revision": 5
       },
       {
         "id": "dominating-set-rank-width",
@@ -151,15 +151,15 @@
       },
       {
         "id": "hamiltonian-cycle-graph-size",
-        "revision": 3
+        "revision": 4
       },
       {
         "id": "hamiltonian-cycle-order",
-        "revision": 3
+        "revision": 4
       },
       {
         "id": "hamiltonian-path-order",
-        "revision": 3
+        "revision": 4
       },
       {
         "id": "hitting-set-budget",
@@ -175,7 +175,7 @@
       },
       {
         "id": "independent-set-order",
-        "revision": 6
+        "revision": 7
       },
       {
         "id": "independent-set-rank-width",
@@ -203,7 +203,7 @@
       },
       {
         "id": "lms-3color-order",
-        "revision": 18
+        "revision": 19
       },
       {
         "id": "lms-closest-string-radius",
@@ -219,7 +219,7 @@
       },
       {
         "id": "longest-path-budget",
-        "revision": 3
+        "revision": 4
       },
       {
         "id": "max-cut-clique-width",
@@ -351,7 +351,7 @@
       },
       {
         "id": "subset-sum-item-count",
-        "revision": 4
+        "revision": 5
       },
       {
         "id": "three-dimensional-matching-part-size",
@@ -391,11 +391,11 @@
       },
       {
         "id": "vertex-cover-budget",
-        "revision": 6
+        "revision": 7
       },
       {
         "id": "vertex-cover-order",
-        "revision": 6
+        "revision": 7
       },
       {
         "id": "vertex-disjoint-paths-supplied-pathwidth",
@@ -496,5 +496,12 @@
     "contributor": "Hendrik Molter with ChatGPT",
     "title": "Closest String by radius under FPT ≠ W[1]",
     "summary": "The radius and balanced-alphabet entries credit the effective CNF-SAT lower bound of Cai and Juedes and the Closest String construction of Lokshtanov, Marx and Saurabh. The recovery loses a logarithmic factor in the exponent."
+  },
+  {
+    "kind": "update",
+    "date": "2026-11-22",
+    "contributor": "Hendrik Molter with ChatGPT",
+    "title": "Original sources for lower bounds and equivalences",
+    "summary": "The updated entries cite the graph encodings, kernels and reductions supporting each implication, including the restricted Closest String and Independent Set bounds."
   }
 ]

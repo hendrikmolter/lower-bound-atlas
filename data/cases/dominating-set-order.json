@@ -79,12 +79,12 @@
     },
     {
       "id": "ds-order-sh-fixed-power",
-      "revision": 1,
+      "revision": 2,
       "statement": "Under SH, no deterministic algorithm decides Dominating Set within the stated running time.",
       "runtime": "2^(O(n^a)) B^(O(1))",
       "inputFactor": "B^(O(1))",
       "status": "established",
-      "provenance": "atlas",
+      "provenance": "literature",
       "assumptions": [
         {
           "id": "sh",
@@ -96,18 +96,19 @@
         {
           "paperId": "sh26",
           "editionId": "v2",
-          "locator": "Definition of SH and footnotes 1–2, pp. 1–2, and Lemma 2.1, pp. 5–6",
-          "role": "hypothesis and encoding conventions",
-          "placement": "context"
-        }
-      ],
-      "proofs": [
+          "locator": "Table 1, induced-grid row, p. 4",
+          "role": "induced-grid fixed-power lower bound for Dominating Set",
+          "placement": "forward"
+        },
         {
-          "proofId": "dominating-set-order-sh",
-          "revision": 1,
-          "theorem": "dominating-set-order-sh"
+          "paperId": "deberg-et-al2020-geometric",
+          "editionId": "journal",
+          "locator": "Theorem 4.1",
+          "role": "reduction to induced grid graphs",
+          "placement": "forward"
         }
       ],
+      "proofs": [],
       "assessments": {
         "sh": {
           "hypothesisRevision": 1,
@@ -115,36 +116,65 @@
             "status": "established",
             "evidence": [
               {
-                "boundRevision": 1,
+                "boundRevision": 2,
                 "hypothesisRevision": 1,
-                "reviewId": "dominating-set-order-sh-review",
-                "proof": {
-                  "proofId": "dominating-set-order-sh",
-                  "revision": 1,
-                  "theorem": "dominating-set-order-sh"
+                "reviewId": "ds-order-sh-fixed-power-source-audit-r2",
+                "source": {
+                  "paperId": "sh26",
+                  "editionId": "v2",
+                  "locator": "Table 1, induced-grid row, p. 4",
+                  "role": "induced-grid fixed-power lower bound for Dominating Set",
+                  "placement": "forward"
+                }
+              },
+              {
+                "boundRevision": 2,
+                "hypothesisRevision": 1,
+                "reviewId": "ds-order-sh-fixed-power-source-audit-r2",
+                "source": {
+                  "paperId": "deberg-et-al2020-geometric",
+                  "editionId": "journal",
+                  "locator": "Theorem 4.1",
+                  "role": "reduction to induced grid graphs",
+                  "placement": "forward"
                 }
               }
-            ]
+            ],
+            "sourceBasis": {
+              "kind": "derived",
+              "step": "For each fixed power below one, choose a dimension in which the induced-grid bound excludes that power. These graphs are a subclass of the allowed inputs."
+            }
           },
           "converse": {
             "status": "established",
             "evidence": [
               {
-                "boundRevision": 1,
+                "boundRevision": 2,
                 "hypothesisRevision": 1,
-                "reviewId": "dominating-set-order-sh-review",
+                "reviewId": "ds-order-sh-fixed-power-source-audit-r2",
+                "source": {
+                  "paperId": "bonnet-escoffier-kim-paschos2015",
+                  "editionId": "journal",
+                  "locator": "§4.1, Proposition 5 proof, item 2",
+                  "role": "high-degree branching rule for generalized Dominating Set",
+                  "placement": "proof"
+                },
                 "proof": {
                   "proofId": "dominating-set-order-sh",
                   "revision": 1,
                   "theorem": "dominating-set-order-sh"
                 }
               }
-            ]
+            ],
+            "sourceBasis": {
+              "kind": "derived",
+              "step": "On the candidate-demand incidence graph, branch on candidates covering at least n^δ remaining demands. The number of inclusions per branch is at most n/n^δ, and the remaining incidences give a CNF of length O(n^(1+δ) polylog n). Choosing δ small enough transfers any fixed power saving for SAT."
+            }
           }
         }
       },
       "reader": {
-        "revision": 1,
+        "revision": 2,
         "label": "Fixed-power bounds",
         "title": "Fixed-power bounds under SH"
       },
@@ -155,7 +185,11 @@
       ],
       "qualifications": [
         "For every fixed 0 < a < 1."
-      ]
+      ],
+      "sourceBasis": {
+        "kind": "derived",
+        "step": "For each fixed power below one, choose a dimension in which the induced-grid bound excludes that power. These graphs are a subclass of the allowed inputs."
+      }
     }
   ],
   "coverage": "Selected literature bounds for this parameterization.",
@@ -196,7 +230,7 @@
     ]
   },
   "resolutions": [],
-  "revision": 4,
+  "revision": 5,
   "task": "Does G have a set of at most k vertices such that every vertex either belongs to the set or has a neighbor in the set?",
   "title": "Dominating Set by graph order",
   "variant": "Dominating Set",
@@ -230,7 +264,7 @@
       },
       "recovery": {
         "id": "ds-order-sh-fixed-power",
-        "revision": 1
+        "revision": 2
       },
       "scale": "degree",
       "effective": false,
@@ -239,9 +273,18 @@
       "comparison": "The SH bound excludes every fixed exponent below one in the number of vertices, with the same deterministic graph input and polynomial factor.",
       "evidence": [
         {
-          "proofId": "dominating-set-order-sh",
-          "revision": 1,
-          "theorem": "dominating-set-order-sh"
+          "paperId": "sh26",
+          "editionId": "v2",
+          "locator": "Table 1, induced-grid row, p. 4",
+          "role": "induced-grid fixed-power lower bound for Dominating Set",
+          "placement": "forward"
+        },
+        {
+          "paperId": "deberg-et-al2020-geometric",
+          "editionId": "journal",
+          "locator": "Theorem 4.1",
+          "role": "reduction to induced grid graphs",
+          "placement": "forward"
         }
       ]
     }

@@ -1,0 +1,9 @@
+# Source audit for Independent Set under SH
+
+The audit covers the forward implication on triangle-free graphs for intrinsic rank-width, intrinsic linear rank-width, a supplied optimal rank decomposition, and a supplied optimal vertex order. It uses the complete binary input length, including any certificate, and a fixed saving (0<epsilon<2).
+
+[Molter, arXiv:2611.26080v1, Sections 7.1–7.3](https://arxiv.org/html/2611.26080v1#S7) gives a satisfiability reduction to unweighted Independent Set. Section 7.2 preserves the threshold with private paths and false twins and proves triangle-freeness. Section 7.3 builds a bipartite padding graph deterministically and computes the optimum certificate separately for each width measure. The disjoint union has an optimal certificate because the padding graph has rank-width at least the constructed bound on the hard component’s linear rank-width. The supplied order or decomposition is part of the explicit output.
+
+For 3-CNF with s variables plus clauses, the construction takes (2^{O(sqrt{s}log(s+2))}) times a polynomial in the normalized source length and produces width (O(sqrt{s})) for all four interfaces. The complete binary output length is bounded by that construction time. On normalized 3-CNF the source length is polynomial in s. Theorem 3.1 of the SH paper therefore applies with (b=1/2) and, for instance, (alpha=3/4). Direct substitution gives time (2^{O(s^{1-gamma})}) for (gamma=min{1/4,epsilon/2}>0), contradicting the size formulation in Lemma 2.1. [MIT Hardness Group et al., arXiv:2611.02650v2, Lemma 2.1 and Theorem 3.1](https://arxiv.org/pdf/2611.02650v2)
+
+Table 1 and footnote e of the SH paper give the same exponent for Independent Set on general graphs. The verified implication uses Molter’s reduction to obtain the triangle-free restriction and the guarantee of optimality when a certificate is supplied. This review concerns the forward implication.

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "edition": "v1.0.0",
-  "revision": 5,
+  "revision": 6,
   "assumptions": [
     {
       "id": "eth",
@@ -1564,261 +1564,163 @@
           "primaryUrl": "https://doi.org/10.1145/3325116"
         }
       ]
+    },
+    {
+      "id": "claude2026-subexponential-sat",
+      "title": "A 2^{o(n)} Time Algorithm for 3-SAT",
+      "authors": [
+        "Claude"
+      ],
+      "preferredEditionId": "v1",
+      "editions": [
+        {
+          "id": "v1",
+          "kind": "preprint",
+          "label": "Hexagon:2610.00577v1, October 2026",
+          "primaryUrl": "https://hexagonmath.org/2610.00577v1",
+          "openUrl": "https://hexagonmath.org/pdf/2610.00577v1",
+          "access": "Corollary 7 proof, pp. 21–22, inspected for the explicit graph-to-3-CNF encodings."
+        }
+      ]
+    },
+    {
+      "id": "chen-kanj-jia2001-vertex-cover",
+      "title": "Vertex Cover: Further Observations and Further Improvements",
+      "authors": [
+        "Jianer Chen",
+        "Iyad A. Kanj",
+        "Weijia Jia"
+      ],
+      "preferredEditionId": "journal",
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "journal",
+          "label": "Journal of Algorithms 41(2) (2001), pp. 280–301",
+          "primaryUrl": "https://doi.org/10.1006/jagm.2001.1186",
+          "doi": "10.1006/jagm.2001.1186",
+          "access": "Theorem 2.2 checked for the 2k-vertex kernel."
+        }
+      ]
+    },
+    {
+      "id": "zhou2024-hamiltonian-encoding",
+      "title": "Encoding the Hamiltonian Cycle Problem into SAT Based on Vertex Elimination",
+      "authors": [
+        "Neng-Fa Zhou"
+      ],
+      "preferredEditionId": "proceedings",
+      "editions": [
+        {
+          "id": "proceedings",
+          "kind": "proceedings",
+          "label": "CP 2024, LIPIcs 307, pp. 40:1–40:8",
+          "primaryUrl": "https://doi.org/10.4230/LIPIcs.CP.2024.40",
+          "openUrl": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol307-cp2024/LIPIcs.CP.2024.40/LIPIcs.CP.2024.40.pdf",
+          "doi": "10.4230/LIPIcs.CP.2024.40",
+          "access": "Published §2 inspected for the binary distance encoding."
+        }
+      ]
+    },
+    {
+      "id": "bonnet-escoffier-kim-paschos2015",
+      "title": "On Subexponential and FPT-Time Inapproximability",
+      "authors": [
+        "Edouard Bonnet",
+        "Bruno Escoffier",
+        "Eun Jung Kim",
+        "Vangelis Th. Paschos"
+      ],
+      "preferredEditionId": "journal",
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "journal",
+          "label": "Algorithmica 71(3) (2015), pp. 541–565",
+          "primaryUrl": "https://doi.org/10.1007/s00453-014-9889-1",
+          "openUrl": "https://perso.ens-lyon.fr/edouard.bonnet/publi/jipec2013.pdf",
+          "doi": "10.1007/s00453-014-9889-1",
+          "access": "Author manuscript §4.1, Proposition 5, inspected for the high-degree branching rule."
+        }
+      ]
+    },
+    {
+      "id": "curticapean-xia2015-permanent",
+      "title": "Parameterizing the Permanent: Genus, Apices, Minors, Evaluation mod 2^k",
+      "authors": [
+        "Radu Curticapean",
+        "Mingji Xia"
+      ],
+      "preferredEditionId": "focs",
+      "editions": [
+        {
+          "id": "focs",
+          "kind": "proceedings",
+          "label": "FOCS 2015, pp. 994–1009",
+          "doi": "10.1109/FOCS.2015.65",
+          "primaryUrl": "https://doi.org/10.1109/FOCS.2015.65",
+          "openUrl": "https://ieee-focs.org/FOCS-2015-Papers/8191a994.pdf",
+          "access": "The IEEE proceedings text was checked for Definition II.4, Remark II.5 and Theorem II.6."
+        }
+      ]
+    },
+    {
+      "id": "hoang2024-distance-independent-set",
+      "title": "On the complexity of distance-d independent set reconfiguration",
+      "authors": [
+        "Duc A. Hoang"
+      ],
+      "preferredEditionId": "journal",
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "journal",
+          "label": "Theoretical Computer Science 1009 (2024), Article 114682",
+          "doi": "10.1016/j.tcs.2024.114682",
+          "primaryUrl": "https://doi.org/10.1016/j.tcs.2024.114682",
+          "openUrl": "https://arxiv.org/abs/2208.07199",
+          "access": "The publisher’s Section 3.1 gives the static equivalence between distance-d Independent Set and Independent Set in the (d−1)-st graph power."
+        }
+      ]
+    },
+    {
+      "id": "van-leeuwen2009-geometric-objects",
+      "title": "Optimization and Approximation on Systems of Geometric Objects",
+      "authors": [
+        "Erik Jan van Leeuwen"
+      ],
+      "preferredEditionId": "thesis",
+      "editions": [
+        {
+          "id": "thesis",
+          "kind": "thesis",
+          "label": "PhD thesis, University of Amsterdam, 2009",
+          "primaryUrl": "https://dare.uva.nl/id/866f1b90-e266-48c5-85c8-7f1000ac4124",
+          "openUrl": "https://pure.uva.nl/ws/files/1075216/144795_thesis.pdf",
+          "access": "The deposited thesis was checked for Theorems 4.1.8 and 4.1.10 and the discussion following Theorem 4.3.15."
+        }
+      ]
+    },
+    {
+      "id": "marx2005-boolean-csp",
+      "title": "Parameterized complexity of constraint satisfaction problems",
+      "authors": [
+        "Dániel Marx"
+      ],
+      "preferredEditionId": "journal",
+      "editions": [
+        {
+          "id": "journal",
+          "kind": "journal",
+          "label": "Computational Complexity 14 (2005), pp. 153–183",
+          "doi": "10.1007/s00037-005-0195-9",
+          "primaryUrl": "https://doi.org/10.1007/s00037-005-0195-9",
+          "access": "The published abstract states the exact-weight dichotomy for every fixed finite family of Boolean relations."
+        }
+      ]
     }
   ],
   "proofs": [
-    {
-      "id": "three-coloring-sh-converse",
-      "title": "The 3-Coloring bound implies the Satisfiability Hypothesis",
-      "revisions": [
-        {
-          "revision": 1,
-          "source": "proofs/three-coloring-sh-converse.tex",
-          "pdf": "proofs/three-coloring-sh-converse.pdf",
-          "theorems": [
-            {
-              "label": "color-sh-converse",
-              "number": "1",
-              "destination": "color-sh-converse",
-              "statement": "If for every fixed 0<a<1 there is no deterministic 3-Coloring algorithm in 2^{O(n^a)} B^{O(1)}, then SH holds."
-            }
-          ],
-          "dependencyCoverage": "complete",
-          "dependencies": [],
-          "authorship": {
-            "origin": "atlas",
-            "kind": "ai",
-            "authors": [
-              "Atlas"
-            ]
-          }
-        },
-        {
-          "revision": 2,
-          "source": "proofs/three-coloring-sh-converse-r2.tex",
-          "pdf": "proofs/three-coloring-sh-converse-r2.pdf",
-          "theorems": [
-            {
-              "label": "color-sh-converse",
-              "number": "1",
-              "destination": "color-sh-converse",
-              "statement": "If for every fixed 0<a<1 there is no deterministic 3-Coloring algorithm in 2^{O(n^a)} B^{O(1)}, then SH holds."
-            }
-          ],
-          "dependencyCoverage": "complete",
-          "dependencies": [],
-          "authorship": {
-            "origin": "atlas",
-            "kind": "ai",
-            "authors": [
-              "Atlas"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "classical-graph-sh-converse",
-      "title": "The Satisfiability Hypothesis from fixed-power graph bounds",
-      "revisions": [
-        {
-          "revision": 1,
-          "source": "proofs/classical-graph-sh-converse.tex",
-          "pdf": "proofs/classical-graph-sh-converse.pdf",
-          "theorems": [
-            {
-              "label": "is-order-sh-converse",
-              "number": "1(a)",
-              "destination": "is-order-sh-converse",
-              "statement": "The fixed-power exclusion for Independent Set parameterized by the number of vertices implies SH."
-            },
-            {
-              "label": "vc-order-sh-converse",
-              "number": "1(b)",
-              "destination": "vc-order-sh-converse",
-              "statement": "The fixed-power exclusion for Vertex Cover parameterized by the number of vertices implies SH."
-            },
-            {
-              "label": "vc-budget-sh-converse",
-              "number": "1(c)",
-              "destination": "vc-budget-sh-converse",
-              "statement": "The fixed-power exclusion for Vertex Cover parameterized by the solution budget implies SH."
-            }
-          ],
-          "dependencyCoverage": "complete",
-          "dependencies": [],
-          "authorship": {
-            "origin": "atlas",
-            "kind": "ai",
-            "authors": [
-              "Atlas"
-            ]
-          }
-        },
-        {
-          "revision": 2,
-          "source": "proofs/classical-graph-sh-converse-r2.tex",
-          "pdf": "proofs/classical-graph-sh-converse-r2.pdf",
-          "theorems": [
-            {
-              "label": "is-order-sh-converse",
-              "number": "1(a)",
-              "destination": "is-order-sh-converse",
-              "statement": "The fixed-power exclusion for Independent Set parameterized by the number of vertices implies SH."
-            },
-            {
-              "label": "vc-order-sh-converse",
-              "number": "1(b)",
-              "destination": "vc-order-sh-converse",
-              "statement": "The fixed-power exclusion for Vertex Cover parameterized by the number of vertices implies SH."
-            },
-            {
-              "label": "vc-budget-sh-converse",
-              "number": "1(c)",
-              "destination": "vc-budget-sh-converse",
-              "statement": "The fixed-power exclusion for Vertex Cover parameterized by the solution budget implies SH."
-            }
-          ],
-          "dependencyCoverage": "complete",
-          "dependencies": [],
-          "authorship": {
-            "origin": "atlas",
-            "kind": "ai",
-            "authors": [
-              "Atlas"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "ecc-np-qp-converse",
-      "title": "A converse for the Edge Clique Cover bound under NP ⊈ QP",
-      "revisions": [
-        {
-          "revision": 1,
-          "source": "proofs/ecc-np-qp-converse.tex",
-          "pdf": "proofs/ecc-np-qp-converse.pdf",
-          "theorems": [
-            {
-              "label": "ecc-np-qp-converse",
-              "number": "1",
-              "destination": "ecc-np-qp-converse",
-              "statement": "If Edge Clique Cover has no deterministic algorithm running in time 2^(k^(O(1))) n^(O(1)), then NP ⊈ QP."
-            }
-          ],
-          "dependencyCoverage": "complete",
-          "dependencies": [],
-          "authorship": {
-            "origin": "atlas",
-            "kind": "ai",
-            "authors": [
-              "Atlas"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "subset-sum-item-count-sh",
-      "title": "Subset Sum by item count under the Satisfiability Hypothesis",
-      "revisions": [
-        {
-          "revision": 1,
-          "source": "proofs/subset-sum-item-count-sh.tex",
-          "pdf": "proofs/subset-sum-item-count-sh.pdf",
-          "theorems": [
-            {
-              "label": "subset-sum-item-count-sh",
-              "number": "1",
-              "destination": "subset-sum-item-count-sh",
-              "statement": "Under SH, for each fixed 0 < ε < 1 there is no deterministic 2^(O(p^(1−ε))) B^(O(1))-time algorithm for positive binary Subset Sum by indexed item count."
-            }
-          ],
-          "dependencyCoverage": "partial",
-          "dependencies": [],
-          "authorship": {
-            "origin": "atlas",
-            "kind": "ai",
-            "authors": [
-              "Atlas"
-            ]
-          }
-        },
-        {
-          "revision": 2,
-          "source": "proofs/subset-sum-item-count-sh-r2.tex",
-          "pdf": "proofs/subset-sum-item-count-sh-r2.pdf",
-          "theorems": [
-            {
-              "label": "subset-sum-item-count-sh",
-              "number": "1",
-              "destination": "subset-sum-item-count-sh",
-              "statement": "Under SH, for each fixed 0 < ε < 1 there is no deterministic 2^(O(p^(1−ε))) B^(O(1))-time algorithm for positive binary Subset Sum by indexed item count."
-            }
-          ],
-          "dependencyCoverage": "partial",
-          "dependencies": [],
-          "authorship": {
-            "origin": "atlas",
-            "kind": "ai",
-            "authors": [
-              "Atlas"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "clique-order-sh-converse",
-      "title": "The Satisfiability Hypothesis from Clique by graph order",
-      "revisions": [
-        {
-          "revision": 1,
-          "source": "proofs/clique-order-sh-converse.tex",
-          "pdf": "proofs/clique-order-sh-converse.pdf",
-          "theorems": [
-            {
-              "label": "clique-order-sh-converse",
-              "number": "1",
-              "destination": "clique-order-sh-converse",
-              "statement": "The whole fixed-power exclusion family for Clique by number of vertices implies SH."
-            }
-          ],
-          "dependencyCoverage": "complete",
-          "dependencies": [],
-          "authorship": {
-            "origin": "atlas",
-            "kind": "ai",
-            "authors": [
-              "Atlas"
-            ]
-          }
-        },
-        {
-          "revision": 2,
-          "source": "proofs/clique-order-sh-converse-r2.tex",
-          "pdf": "proofs/clique-order-sh-converse-r2.pdf",
-          "theorems": [
-            {
-              "label": "clique-order-sh-converse",
-              "number": "1",
-              "destination": "clique-order-sh-converse",
-              "statement": "The whole fixed-power exclusion family for Clique by number of vertices implies SH."
-            }
-          ],
-          "dependencyCoverage": "complete",
-          "dependencies": [],
-          "authorship": {
-            "origin": "atlas",
-            "kind": "ai",
-            "authors": [
-              "Atlas"
-            ]
-          }
-        }
-      ]
-    },
     {
       "id": "dominating-set-order-sh",
       "title": "Dominating Set by number of vertices is equivalent to the Satisfiability Hypothesis",
@@ -1833,160 +1735,6 @@
               "number": "1",
               "destination": "dominating-set-order-sh",
               "statement": "SH is equivalent to the following exclusion: for every fixed 0 < ε < 1, no deterministic Dominating Set algorithm runs in 2^(O(n^(1−ε))) B^(O(1)) time, where n counts vertices and B is the complete binary input length."
-            }
-          ],
-          "dependencyCoverage": "complete",
-          "dependencies": [],
-          "authorship": {
-            "origin": "atlas",
-            "kind": "ai",
-            "authors": [
-              "Atlas"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "closest-string-balanced-kxk",
-      "title": "A square-clique lower bound for Closest String with a balanced alphabet",
-      "revisions": [
-        {
-          "revision": 1,
-          "source": "proofs/closest-string-balanced-kxk.tex",
-          "pdf": "proofs/closest-string-balanced-kxk.pdf",
-          "theorems": [
-            {
-              "label": "closest-string-balanced-kxk",
-              "number": "1",
-              "destination": "closest-string-balanced-kxk",
-              "statement": "Under the k × k Clique Hypothesis, no deterministic Closest String algorithm runs in 2^(o(d log₂ d)) N^(O(1)) time on instances of common length d+1 with exactly 2d+3 distinct symbols occurring in the input strings."
-            }
-          ],
-          "dependencyCoverage": "complete",
-          "dependencies": [],
-          "authorship": {
-            "origin": "atlas",
-            "kind": "ai",
-            "authors": [
-              "Atlas"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "hamiltonian-sh",
-      "title": "Fixed-power lower bounds for Hamiltonian Cycle, Hamiltonian Path, and Longest Path",
-      "revisions": [
-        {
-          "revision": 1,
-          "source": "proofs/hamiltonian-sh.tex",
-          "pdf": "proofs/hamiltonian-sh.pdf",
-          "dependencyCoverage": "complete",
-          "dependencies": [],
-          "authorship": {
-            "origin": "atlas",
-            "kind": "ai",
-            "authors": [
-              "Atlas"
-            ]
-          },
-          "theorems": [
-            {
-              "label": "hamiltonian-sh-forward",
-              "number": "1",
-              "destination": "hamiltonian-sh-forward",
-              "statement": "Under SH, for every fixed 0 < a < 1, no deterministic algorithm runs in 2^(O(p^a)) B^(O(1)) time for Hamiltonian Cycle by vertices or vertices plus edges, Hamiltonian Path by vertices, or Longest Path by the requested path length."
-            },
-            {
-              "label": "hamiltonian-size-sh-converse",
-              "number": "2",
-              "destination": "hamiltonian-size-sh-converse",
-              "statement": "The fixed-power exclusion family for Hamiltonian Cycle by number of vertices plus edges implies SH."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "six-w1-memberships",
-      "title": "Membership in W[1] for six parameterizations",
-      "revisions": [
-        {
-          "revision": 1,
-          "source": "proofs/six-w1-memberships.tex",
-          "pdf": "proofs/six-w1-memberships.pdf",
-          "theorems": [
-            {
-              "label": "grid-tiling-w1-membership",
-              "number": "1",
-              "destination": "grid-tiling-w1-membership",
-              "statement": "Equality Grid Tiling on explicit tables is in W[1] by grid side k."
-            },
-            {
-              "label": "unit-disk-independent-set-w1-membership",
-              "number": "2",
-              "destination": "unit-disk-independent-set-w1-membership",
-              "statement": "Independent Set of explicitly represented closed unit disks with rational centers is in W[1] by the requested number of disks."
-            },
-            {
-              "label": "unit-square-independent-set-w1-membership",
-              "number": "3",
-              "destination": "unit-square-independent-set-w1-membership",
-              "statement": "Independent Set of explicitly represented closed axis-parallel unit squares with rational coordinates is in W[1] by the requested number of squares."
-            },
-            {
-              "label": "scattered-set-w1-membership",
-              "number": "4",
-              "destination": "scattered-set-w1-membership",
-              "statement": "Scattered Set on explicit unweighted undirected graphs is in W[1] by the requested number of vertices."
-            },
-            {
-              "label": "planar-scattered-set-w1-membership",
-              "number": "5",
-              "destination": "planar-scattered-set-w1-membership",
-              "statement": "Scattered Set on explicit unweighted planar graphs is in W[1] by the requested number of vertices."
-            },
-            {
-              "label": "weighted-q-cnf-w1-membership",
-              "number": "6",
-              "destination": "weighted-q-cnf-w1-membership",
-              "statement": "For separately fixed q ≥ 2, explicit CNF of width at most q with exact satisfying weight k is in W[1] by k."
-            },
-            {
-              "label": "open-to-closed-regions",
-              "number": "7",
-              "destination": "open-to-closed-regions",
-              "statement": "Open rational unit disks and axis-parallel unit squares can be mapped in polynomial time to closed regions preserving every intersection, the number of regions, and the selection budget."
-            }
-          ],
-          "dependencyCoverage": "complete",
-          "dependencies": [],
-          "authorship": {
-            "origin": "atlas",
-            "kind": "ai",
-            "authors": [
-              "Atlas"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "independent-set-rankwidth",
-      "title": "A fixed-power lower bound for Independent Set on triangle-free graphs under SH",
-      "revisions": [
-        {
-          "revision": 2,
-          "source": "proofs/independent-set-rankwidth.tex",
-          "pdf": "proofs/independent-set-rankwidth.pdf",
-          "theorems": [
-            {
-              "label": "independent-set-rankwidth-sh",
-              "number": "1",
-              "destination": "independent-set-rankwidth-sh",
-              "statement": "Assuming deterministic SH, for every fixed 0<ε<2 there is no deterministic 2^(O(p^(2−ε))) N^(O(1)) Independent Set algorithm on triangle-free graphs by either intrinsic width, with or without an optimal corresponding certificate."
             }
           ],
           "dependencyCoverage": "complete",
@@ -2047,61 +1795,12 @@
       }
     },
     {
-      "id": "color-sh-review",
-      "type": "agent",
-      "date": "2026-11-18",
-      "reviewer": "Independent atlas proof reviewer",
-      "verdict": "verified",
-      "scope": "Both directions of the whole fixed-power family, with the converse conditional on the imported exact-v1 sparsification interface.",
-      "evidence": "evidence/three-coloring-independent.md",
-      "object": {
-        "type": "bound",
-        "caseId": "lms-3color-order",
-        "id": "color-sh-fixed-power",
-        "revision": 1
-      }
-    },
-    {
-      "id": "three-coloring-sh-converse-review",
-      "type": "agent",
-      "date": "2026-11-18",
-      "reviewer": "Independent agent reviewer",
-      "verdict": "verified",
-      "scope": "Converse only. Checks the encoding, the quantitative sparsification import, the choice of fixed exponents and the deterministic running time.",
-      "evidence": "evidence/three-coloring-sh-converse-independent.md",
-      "object": {
-        "type": "proof",
-        "id": "three-coloring-sh-converse",
-        "revision": 1,
-        "theorem": "color-sh-converse"
-      },
-      "independent": true,
-      "sourceSha256": "9f946a0078c62a6ae28959f44f9ad2f6df97133f59a14e8f715a53da497da49a"
-    },
-    {
-      "id": "ecc-np-qp-converse-independent",
-      "type": "agent",
-      "date": "2026-11-18",
-      "reviewer": "Codex agent audit_tracks",
-      "verdict": "verified",
-      "scope": "Checks kernel correctness and size, canonical input length, NP verification, and the exact deterministic exponent transfer.",
-      "evidence": "evidence/ecc-np-qp-converse-independent.md",
-      "object": {
-        "type": "proof",
-        "id": "ecc-np-qp-converse",
-        "revision": 1,
-        "theorem": "ecc-np-qp-converse"
-      },
-      "independent": true,
-      "sourceSha256": "38e011c0cc2494ad02b0570ebf328c111246b9f97eb973d64680af6b22ab75e1"
-    },
-    {
       "id": "dominating-set-order-sh-review",
       "type": "agent",
       "date": "2026-11-18",
       "reviewer": "Codex agent natural_batch",
       "verdict": "verified",
-      "scope": "Both implications. Checks the explicit CNF encoding, triangle construction, branching and residual queries, and deterministic whole fixed-power quantifiers.",
+      "scope": "Both implications, including the explicit CNF encoding, triangle construction, branching and residual queries, and deterministic fixed-power quantifiers. The 22 November citation audit confirmed that the text change is limited to credit for the prior branching rule.",
       "evidence": "evidence/dominating-set-order-sh-independent.md",
       "object": {
         "type": "proof",
@@ -2110,194 +1809,7 @@
         "theorem": "dominating-set-order-sh"
       },
       "independent": true,
-      "sourceSha256": "bf1ae82b104cedd384facca43eb568e8c88fa5a00a4657d2baf596394cdb9d54"
-    },
-    {
-      "id": "closest-string-balanced-kxk-review",
-      "type": "agent",
-      "date": "2026-11-18",
-      "reviewer": "Codex agent clique_batch",
-      "verdict": "verified",
-      "scope": "Forward implication. Checks the deterministic disjunction, reduction chain, used alphabet and common length, and the exact running time.",
-      "evidence": "evidence/closest-string-balanced-kxk-independent.md",
-      "object": {
-        "type": "proof",
-        "id": "closest-string-balanced-kxk",
-        "revision": 1,
-        "theorem": "closest-string-balanced-kxk"
-      },
-      "independent": true,
-      "sourceSha256": "0a30765d590e30160fe5c774b6be5a37fbc94d456530cf463dc7ed42cc17c504"
-    },
-    {
-      "id": "hamiltonian-sh-forward-independent",
-      "type": "agent",
-      "date": "2026-11-18",
-      "reviewer": "Codex agent derived_shortlist",
-      "verdict": "verified",
-      "scope": "Forward implication for Hamiltonian Cycle by vertices and by vertices plus edges, Hamiltonian Path by vertices, and Longest Path by requested path length.",
-      "evidence": "evidence/hamiltonian-sh-independent.md",
-      "object": {
-        "type": "proof",
-        "id": "hamiltonian-sh",
-        "revision": 1,
-        "theorem": "hamiltonian-sh-forward"
-      },
-      "independent": true,
-      "sourceSha256": "d4ef120a878f319e07c2844d228affc11af663e74ff6b5e9ee63d223dcf432cc"
-    },
-    {
-      "id": "hamiltonian-size-sh-converse-independent",
-      "type": "agent",
-      "date": "2026-11-18",
-      "reviewer": "Codex agent derived_shortlist",
-      "verdict": "verified",
-      "scope": "Converse for Hamiltonian Cycle by vertices plus edges.",
-      "evidence": "evidence/hamiltonian-sh-independent.md",
-      "object": {
-        "type": "proof",
-        "id": "hamiltonian-sh",
-        "revision": 1,
-        "theorem": "hamiltonian-size-sh-converse"
-      },
-      "independent": true,
-      "sourceSha256": "d4ef120a878f319e07c2844d228affc11af663e74ff6b5e9ee63d223dcf432cc"
-    },
-    {
-      "id": "grid-tiling-w1-membership-independent",
-      "type": "agent",
-      "date": "2026-11-18",
-      "reviewer": "Codex agent /root",
-      "verdict": "verified",
-      "scope": "Equality Grid Tiling on explicit tables is in W[1] by grid side k.",
-      "evidence": "evidence/six-w1-memberships-independent.md",
-      "object": {
-        "type": "proof",
-        "id": "six-w1-memberships",
-        "revision": 1,
-        "theorem": "grid-tiling-w1-membership"
-      },
-      "independent": true,
-      "sourceSha256": "f746b961e52ff19036f9e05aee729f20e4bf71d49d9c0eff9e19b4806aa94802"
-    },
-    {
-      "id": "unit-disk-independent-set-w1-membership-independent",
-      "type": "agent",
-      "date": "2026-11-18",
-      "reviewer": "Codex agent /root",
-      "verdict": "verified",
-      "scope": "Independent Set of explicitly represented closed unit disks with rational centers is in W[1] by the requested number of disks.",
-      "evidence": "evidence/six-w1-memberships-independent.md",
-      "object": {
-        "type": "proof",
-        "id": "six-w1-memberships",
-        "revision": 1,
-        "theorem": "unit-disk-independent-set-w1-membership"
-      },
-      "independent": true,
-      "sourceSha256": "f746b961e52ff19036f9e05aee729f20e4bf71d49d9c0eff9e19b4806aa94802"
-    },
-    {
-      "id": "unit-square-independent-set-w1-membership-independent",
-      "type": "agent",
-      "date": "2026-11-18",
-      "reviewer": "Codex agent /root",
-      "verdict": "verified",
-      "scope": "Independent Set of explicitly represented closed axis-parallel unit squares with rational coordinates is in W[1] by the requested number of squares.",
-      "evidence": "evidence/six-w1-memberships-independent.md",
-      "object": {
-        "type": "proof",
-        "id": "six-w1-memberships",
-        "revision": 1,
-        "theorem": "unit-square-independent-set-w1-membership"
-      },
-      "independent": true,
-      "sourceSha256": "f746b961e52ff19036f9e05aee729f20e4bf71d49d9c0eff9e19b4806aa94802"
-    },
-    {
-      "id": "scattered-set-w1-membership-independent",
-      "type": "agent",
-      "date": "2026-11-18",
-      "reviewer": "Codex agent /root",
-      "verdict": "verified",
-      "scope": "Scattered Set on explicit unweighted undirected graphs is in W[1] by the requested number of vertices.",
-      "evidence": "evidence/six-w1-memberships-independent.md",
-      "object": {
-        "type": "proof",
-        "id": "six-w1-memberships",
-        "revision": 1,
-        "theorem": "scattered-set-w1-membership"
-      },
-      "independent": true,
-      "sourceSha256": "f746b961e52ff19036f9e05aee729f20e4bf71d49d9c0eff9e19b4806aa94802"
-    },
-    {
-      "id": "planar-scattered-set-w1-membership-independent",
-      "type": "agent",
-      "date": "2026-11-18",
-      "reviewer": "Codex agent /root",
-      "verdict": "verified",
-      "scope": "Scattered Set on explicit unweighted planar graphs is in W[1] by the requested number of vertices.",
-      "evidence": "evidence/six-w1-memberships-independent.md",
-      "object": {
-        "type": "proof",
-        "id": "six-w1-memberships",
-        "revision": 1,
-        "theorem": "planar-scattered-set-w1-membership"
-      },
-      "independent": true,
-      "sourceSha256": "f746b961e52ff19036f9e05aee729f20e4bf71d49d9c0eff9e19b4806aa94802"
-    },
-    {
-      "id": "weighted-q-cnf-w1-membership-independent",
-      "type": "agent",
-      "date": "2026-11-18",
-      "reviewer": "Codex agent /root",
-      "verdict": "verified",
-      "scope": "For separately fixed q ≥ 2, explicit CNF of width at most q with exact satisfying weight k is in W[1] by k.",
-      "evidence": "evidence/six-w1-memberships-independent.md",
-      "object": {
-        "type": "proof",
-        "id": "six-w1-memberships",
-        "revision": 1,
-        "theorem": "weighted-q-cnf-w1-membership"
-      },
-      "independent": true,
-      "sourceSha256": "f746b961e52ff19036f9e05aee729f20e4bf71d49d9c0eff9e19b4806aa94802"
-    },
-    {
-      "id": "open-to-closed-regions-independent",
-      "type": "agent",
-      "date": "2026-11-18",
-      "reviewer": "Codex agent /root",
-      "verdict": "verified",
-      "scope": "Open rational unit disks and axis-parallel unit squares can be mapped in polynomial time to closed regions preserving every intersection, the number of regions, and the selection budget.",
-      "evidence": "evidence/six-w1-memberships-independent.md",
-      "object": {
-        "type": "proof",
-        "id": "six-w1-memberships",
-        "revision": 1,
-        "theorem": "open-to-closed-regions"
-      },
-      "independent": true,
-      "sourceSha256": "f746b961e52ff19036f9e05aee729f20e4bf71d49d9c0eff9e19b4806aa94802"
-    },
-    {
-      "id": "independent-set-rankwidth-sh-r2-review",
-      "type": "agent",
-      "date": "2026-11-20",
-      "reviewer": "Codex agent /root/paper_compare",
-      "verdict": "verified",
-      "scope": "Forward implication from SH for each fixed 0 < ε < 2 on triangle-free graphs. Checks rank-width and linear rank-width, each without a certificate or with an optimal certificate of the corresponding type.",
-      "evidence": "evidence/independent-set-rankwidth-sh-independent.md",
-      "object": {
-        "type": "proof",
-        "id": "independent-set-rankwidth",
-        "revision": 2,
-        "theorem": "independent-set-rankwidth-sh"
-      },
-      "independent": true,
-      "sourceSha256": "4eb08c9631732983d6faa17a5bd199db83c3906f70dda27e4d7a38bc95c92a41"
+      "sourceSha256": "1f151ecd300ae91f60a5ff999b95dc45d35f83d6caad844e110e2c62d98d2726"
     },
     {
       "id": "dominating-set-rankwidth-review",
@@ -2315,23 +1827,6 @@
       },
       "independent": true,
       "sourceSha256": "fa61733eeae80fa150716b31461435cdb7f52bb6be5a7b1e26f8930ecf566bad"
-    },
-    {
-      "id": "three-coloring-sh-converse-review-r2",
-      "type": "agent",
-      "date": "2026-11-19",
-      "reviewer": "Codex agent originals",
-      "verdict": "verified",
-      "scope": "Checked the v2 decision sparsification interface and fixed exponents, the three-variable-per-vertex coloring encoding, and the full-input polynomial overhead.",
-      "evidence": "evidence/sh-preprint-v2-proof-review.md",
-      "object": {
-        "type": "proof",
-        "id": "three-coloring-sh-converse",
-        "revision": 2,
-        "theorem": "color-sh-converse"
-      },
-      "independent": true,
-      "sourceSha256": "37e81a7db845fdff77e451dafc10866b3da9f9e1ad26f8f7424b414feb24de81"
     },
     {
       "id": "cp-pw-w1-effective-molter-source-review",
@@ -2451,6 +1946,242 @@
         "caseId": "integer-linear-programming-equations",
         "id": "ilp-equations-w1-effective",
         "revision": 2
+      }
+    },
+    {
+      "id": "is-order-sh-source-audit-r3",
+      "type": "agent",
+      "date": "2026-11-22",
+      "reviewer": "Codex citation audit agent",
+      "verdict": "verified",
+      "scope": "Checks the published forward implication and the converse via the cited graph-to-3-CNF encoding and SH equivalence, including the vertex-cover kernel for the budget when applicable.",
+      "evidence": "evidence/fixed-power-source-audit.md",
+      "object": {
+        "type": "bound",
+        "caseId": "independent-set-order",
+        "id": "is-order-sh",
+        "revision": 3
+      },
+      "independent": true
+    },
+    {
+      "id": "clique-order-sh-source-audit-r3",
+      "type": "agent",
+      "date": "2026-11-22",
+      "reviewer": "Codex citation audit agent",
+      "verdict": "verified",
+      "scope": "Checks the published forward implication and the converse via the cited graph-to-3-CNF encoding and SH equivalence, including the vertex-cover kernel for the budget when applicable.",
+      "evidence": "evidence/fixed-power-source-audit.md",
+      "object": {
+        "type": "bound",
+        "caseId": "clique-order",
+        "id": "clique-order-sh",
+        "revision": 3
+      },
+      "independent": true
+    },
+    {
+      "id": "vc-order-sh-source-audit-r3",
+      "type": "agent",
+      "date": "2026-11-22",
+      "reviewer": "Codex citation audit agent",
+      "verdict": "verified",
+      "scope": "Checks the published forward implication and the converse via the cited graph-to-3-CNF encoding and SH equivalence, including the vertex-cover kernel for the budget when applicable.",
+      "evidence": "evidence/fixed-power-source-audit.md",
+      "object": {
+        "type": "bound",
+        "caseId": "vertex-cover-order",
+        "id": "vc-order-sh",
+        "revision": 3
+      },
+      "independent": true
+    },
+    {
+      "id": "vc-budget-sh-source-audit-r3",
+      "type": "agent",
+      "date": "2026-11-22",
+      "reviewer": "Codex citation audit agent",
+      "verdict": "verified",
+      "scope": "Checks the published forward implication and the converse via the cited graph-to-3-CNF encoding and SH equivalence, including the vertex-cover kernel for the budget when applicable.",
+      "evidence": "evidence/fixed-power-source-audit.md",
+      "object": {
+        "type": "bound",
+        "caseId": "vertex-cover-budget",
+        "id": "vc-budget-sh",
+        "revision": 3
+      },
+      "independent": true
+    },
+    {
+      "id": "color-sh-fixed-power-source-audit-r2",
+      "type": "agent",
+      "date": "2026-11-22",
+      "reviewer": "Codex citation audit agent",
+      "verdict": "verified",
+      "scope": "Checks the published forward implication and the converse via the cited graph-to-3-CNF encoding and SH equivalence, including the vertex-cover kernel for the budget when applicable.",
+      "evidence": "evidence/fixed-power-source-audit.md",
+      "object": {
+        "type": "bound",
+        "caseId": "lms-3color-order",
+        "id": "color-sh-fixed-power",
+        "revision": 2
+      },
+      "independent": true
+    },
+    {
+      "id": "hamiltonian-cycle-order-sh-source-audit-r2",
+      "type": "agent",
+      "date": "2026-11-22",
+      "reviewer": "Codex citation audit agent",
+      "verdict": "verified",
+      "scope": "Checks the fixed-dimensional induced-grid exclusion, the parameter transfer and the scope of the graph-size converse where recorded.",
+      "evidence": "evidence/fixed-power-source-audit.md",
+      "object": {
+        "type": "bound",
+        "caseId": "hamiltonian-cycle-order",
+        "id": "hamiltonian-cycle-order-sh",
+        "revision": 2
+      },
+      "independent": true
+    },
+    {
+      "id": "hamiltonian-cycle-graph-size-sh-source-audit-r2",
+      "type": "agent",
+      "date": "2026-11-22",
+      "reviewer": "Codex citation audit agent",
+      "verdict": "verified",
+      "scope": "Checks the fixed-dimensional induced-grid exclusion, the parameter transfer and the scope of the graph-size converse where recorded.",
+      "evidence": "evidence/fixed-power-source-audit.md",
+      "object": {
+        "type": "bound",
+        "caseId": "hamiltonian-cycle-graph-size",
+        "id": "hamiltonian-cycle-graph-size-sh",
+        "revision": 2
+      },
+      "independent": true
+    },
+    {
+      "id": "hamiltonian-path-order-sh-source-audit-r2",
+      "type": "agent",
+      "date": "2026-11-22",
+      "reviewer": "Codex citation audit agent",
+      "verdict": "verified",
+      "scope": "Checks the fixed-dimensional induced-grid exclusion, the parameter transfer and the scope of the graph-size converse where recorded.",
+      "evidence": "evidence/fixed-power-source-audit.md",
+      "object": {
+        "type": "bound",
+        "caseId": "hamiltonian-path-order",
+        "id": "hamiltonian-path-order-sh",
+        "revision": 2
+      },
+      "independent": true
+    },
+    {
+      "id": "longest-path-budget-sh-source-audit-r2",
+      "type": "agent",
+      "date": "2026-11-22",
+      "reviewer": "Codex citation audit agent",
+      "verdict": "verified",
+      "scope": "Checks the fixed-dimensional induced-grid exclusion, the parameter transfer and the scope of the graph-size converse where recorded.",
+      "evidence": "evidence/fixed-power-source-audit.md",
+      "object": {
+        "type": "bound",
+        "caseId": "longest-path-budget",
+        "id": "longest-path-budget-sh",
+        "revision": 2
+      },
+      "independent": true
+    },
+    {
+      "id": "subset-sum-item-count-sh-source-audit-r2",
+      "type": "agent",
+      "date": "2026-11-22",
+      "reviewer": "Codex citation audit agent",
+      "verdict": "verified",
+      "scope": "Checks the digit reduction, the linear item count, polynomial bit length and the forward transfer from SH.",
+      "evidence": "evidence/fixed-power-source-audit.md",
+      "object": {
+        "type": "bound",
+        "caseId": "subset-sum-item-count",
+        "id": "subset-sum-item-count-sh",
+        "revision": 2
+      },
+      "independent": true
+    },
+    {
+      "id": "ds-order-sh-fixed-power-source-audit-r2",
+      "type": "agent",
+      "date": "2026-11-22",
+      "reviewer": "Codex citation audit agent",
+      "verdict": "verified",
+      "scope": "Checks the induced-grid forward implication and the independently reviewed converse, including the prior high-coverage branching rule and its fixed-power threshold.",
+      "evidence": "evidence/fixed-power-source-audit.md",
+      "object": {
+        "type": "bound",
+        "caseId": "dominating-set-order",
+        "id": "ds-order-sh-fixed-power",
+        "revision": 2
+      },
+      "independent": true
+    },
+    {
+      "id": "independent-set-linear-rank-width-sh-degree-source-review",
+      "type": "agent",
+      "date": "2026-11-22",
+      "reviewer": "Codex source audit",
+      "verdict": "verified",
+      "scope": "Forward implication from SH. Checked the 3-SAT exponent transfer, the triangle-free restriction, and the applicable width interface.",
+      "evidence": "evidence/independent-set-rankwidth-sh-source-scope.md",
+      "object": {
+        "type": "bound",
+        "caseId": "independent-set-linear-rank-width",
+        "id": "independent-set-linear-rank-width-sh-degree",
+        "revision": 1
+      }
+    },
+    {
+      "id": "independent-set-rank-width-sh-degree-source-review",
+      "type": "agent",
+      "date": "2026-11-22",
+      "reviewer": "Codex source audit",
+      "verdict": "verified",
+      "scope": "Forward implication from SH. Checked the 3-SAT exponent transfer, the triangle-free restriction, and the applicable width interface.",
+      "evidence": "evidence/independent-set-rankwidth-sh-source-scope.md",
+      "object": {
+        "type": "bound",
+        "caseId": "independent-set-rank-width",
+        "id": "independent-set-rank-width-sh-degree",
+        "revision": 1
+      }
+    },
+    {
+      "id": "independent-set-supplied-linear-layout-sh-degree-source-review",
+      "type": "agent",
+      "date": "2026-11-22",
+      "reviewer": "Codex source audit",
+      "verdict": "verified",
+      "scope": "Forward implication from SH. Checked the 3-SAT exponent transfer, the triangle-free restriction, and the applicable width interface.",
+      "evidence": "evidence/independent-set-rankwidth-sh-source-scope.md",
+      "object": {
+        "type": "bound",
+        "caseId": "independent-set-supplied-linear-layout",
+        "id": "independent-set-supplied-linear-layout-sh-degree",
+        "revision": 1
+      }
+    },
+    {
+      "id": "independent-set-supplied-rank-decomposition-sh-degree-source-review",
+      "type": "agent",
+      "date": "2026-11-22",
+      "reviewer": "Codex source audit",
+      "verdict": "verified",
+      "scope": "Forward implication from SH. Checked the 3-SAT exponent transfer, the triangle-free restriction, and the applicable width interface.",
+      "evidence": "evidence/independent-set-rankwidth-sh-source-scope.md",
+      "object": {
+        "type": "bound",
+        "caseId": "independent-set-supplied-rank-decomposition",
+        "id": "independent-set-supplied-rank-decomposition-sh-degree",
+        "revision": 1
       }
     }
   ],

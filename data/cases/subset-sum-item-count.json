@@ -53,23 +53,17 @@
       "id": "subset-sum-item-count-sh",
       "inputConditions": [],
       "inputFactor": "B^(O(1))",
-      "proofs": [
-        {
-          "proofId": "subset-sum-item-count-sh",
-          "revision": 2,
-          "theorem": "subset-sum-item-count-sh"
-        }
-      ],
-      "provenance": "atlas",
+      "proofs": [],
+      "provenance": "literature",
       "qualifications": [
         "For each fixed ε strictly between zero and 1."
       ],
       "reader": {
         "label": "Fixed power saving in the exponent",
-        "revision": 1,
+        "revision": 2,
         "title": "Subset Sum by item count under SH"
       },
-      "revision": 1,
+      "revision": 2,
       "runtime": "2^(O(p^(1−ε))) B^(O(1))",
       "runtimeSymbols": [
         "p",
@@ -78,15 +72,68 @@
       ],
       "sources": [
         {
-          "editionId": "v2",
-          "locator": "Lemma 2.1, pp. 5–6",
+          "paperId": "etscheid-kratsch-mnich-rog-lin2017",
+          "editionId": "journal",
+          "locator": "§3, Lemma 13 proof, p. 8",
+          "role": "3-SAT reduction with a linear number of Subset Sum items",
+          "placement": "forward"
+        },
+        {
           "paperId": "sh26",
-          "placement": "proof",
-          "role": "fixed-width SAT size formulation of SH"
+          "editionId": "v2",
+          "locator": "Lemma 2.1 and Theorem 3.1, pp. 5–6 and 8",
+          "role": "size formulation of SH and exponent transfer",
+          "placement": "forward"
         }
       ],
       "statement": "Under SH, no deterministic algorithm decides Subset Sum within the stated running time.",
-      "status": "established"
+      "status": "established",
+      "sourceBasis": {
+        "kind": "derived",
+        "step": "The digit reduction produces O(v+m) positive binary items for v variables and m clauses. A fixed power saving in the item count would give the same power saving in v+m for 3-SAT."
+      },
+      "assessments": {
+        "sh": {
+          "hypothesisRevision": 1,
+          "converse": {
+            "status": "unknown",
+            "evidence": []
+          },
+          "forward": {
+            "status": "established",
+            "evidence": [
+              {
+                "boundRevision": 2,
+                "hypothesisRevision": 1,
+                "reviewId": "subset-sum-item-count-sh-source-audit-r2",
+                "source": {
+                  "paperId": "etscheid-kratsch-mnich-rog-lin2017",
+                  "editionId": "journal",
+                  "locator": "§3, Lemma 13 proof, p. 8",
+                  "role": "3-SAT reduction with a linear number of Subset Sum items",
+                  "placement": "forward"
+                }
+              },
+              {
+                "boundRevision": 2,
+                "hypothesisRevision": 1,
+                "reviewId": "subset-sum-item-count-sh-source-audit-r2",
+                "source": {
+                  "paperId": "sh26",
+                  "editionId": "v2",
+                  "locator": "Lemma 2.1 and Theorem 3.1, pp. 5–6 and 8",
+                  "role": "size formulation of SH and exponent transfer",
+                  "placement": "forward"
+                }
+              }
+            ],
+            "sourceBasis": {
+              "kind": "derived",
+              "step": "The digit reduction produces O(v+m) positive binary items for v variables and m clauses. A fixed power saving in the item count would give the same power saving in v+m for 3-SAT."
+            }
+          }
+        }
+      }
     }
   ],
   "coverage": "Selected lower bounds for this parameterization.",
@@ -130,7 +177,7 @@
     ]
   },
   "resolutions": [],
-  "revision": 4,
+  "revision": 5,
   "task": "Does a subset of the item indices have values summing to T?",
   "title": "Subset Sum by item count",
   "variant": "Subset Sum",
@@ -146,7 +193,7 @@
       },
       "recovery": {
         "id": "subset-sum-item-count-sh",
-        "revision": 1
+        "revision": 2
       },
       "scale": "degree",
       "effective": false,
@@ -157,47 +204,19 @@
         {
           "paperId": "etscheid-kratsch-mnich-rog-lin2017",
           "editionId": "journal",
-          "locator": "Lemma 13 and proof, §3, p. 8",
-          "placement": "statement",
-          "role": "published linear-item ETH reduction"
+          "locator": "§3, Lemma 13 proof, p. 8",
+          "role": "3-SAT reduction with a linear number of Subset Sum items",
+          "placement": "forward"
+        },
+        {
+          "paperId": "sh26",
+          "editionId": "v2",
+          "locator": "Lemma 2.1 and Theorem 3.1, pp. 5–6 and 8",
+          "role": "size formulation of SH and exponent transfer",
+          "placement": "forward"
         }
       ]
     }
   ],
-  "reviews": [
-    {
-      "id": "subset-sum-item-count-sh-review",
-      "type": "agent",
-      "reviewer": "Codex agent gaps_batch",
-      "date": "2026-11-18",
-      "verdict": "verified",
-      "independent": true,
-      "scope": "Checks the exact deterministic SH forward implication, including binary encoding, positivity, all fixed power savings, and the complete input factor.",
-      "evidence": "evidence/subset-sum-item-count-sh-independent.md",
-      "object": {
-        "type": "proof",
-        "id": "subset-sum-item-count-sh",
-        "revision": 1,
-        "theorem": "subset-sum-item-count-sh"
-      },
-      "sourceSha256": "58dea1b6ad3c5f4c594f78a99b1370a59b27f9c70750eb6b7cc6b31871914380"
-    },
-    {
-      "id": "subset-sum-item-count-sh-review-r2",
-      "type": "agent",
-      "date": "2026-11-19",
-      "reviewer": "Codex agent originals",
-      "verdict": "verified",
-      "scope": "Checked the v2 fixed-width size characterization of SH and the indexed positive binary Subset Sum reduction, including the no-carry property, linear item count, and polynomial output length.",
-      "evidence": "evidence/sh-preprint-v2-proof-review.md",
-      "object": {
-        "type": "proof",
-        "id": "subset-sum-item-count-sh",
-        "revision": 2,
-        "theorem": "subset-sum-item-count-sh"
-      },
-      "independent": true,
-      "sourceSha256": "11d89eb042394d4eb72c62becd3db4de44fa4d40c93f67524f477319900b2801"
-    }
-  ]
+  "reviews": []
 }

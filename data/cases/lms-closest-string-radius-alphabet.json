@@ -298,7 +298,7 @@
       "runtime": "2^(o(d log₂ d)) N^(O(1))",
       "inputFactor": "N^(O(1))",
       "status": "established",
-      "provenance": "atlas",
+      "provenance": "literature",
       "assumptions": [
         {
           "id": "kxk",
@@ -311,17 +311,18 @@
           "paperId": "lms2018",
           "editionId": "journal",
           "locator": "Corollary 2.6, Lemma 2.8 and Theorems 2.11, 2.12 and 3.1, pp. 681–687",
-          "role": "deterministic disjunction and reduction chain",
-          "placement": "proof"
-        }
-      ],
-      "proofs": [
+          "placement": "forward",
+          "role": "deterministic reduction from k × k Clique"
+        },
         {
-          "proofId": "closest-string-balanced-kxk",
-          "revision": 1,
-          "theorem": "closest-string-balanced-kxk"
+          "paperId": "szeider2026",
+          "editionId": "v3",
+          "locator": "§3, Table 1, first row, p. 5, covering Theorem 14.17 of Parameterized Algorithms",
+          "placement": "context",
+          "role": "unrestricted Closest String bound under the same premise"
         }
       ],
+      "proofs": [],
       "assessments": {
         "kxk": {
           "hypothesisRevision": 1,
@@ -331,14 +332,20 @@
               {
                 "boundRevision": 1,
                 "hypothesisRevision": 1,
-                "reviewId": "closest-string-balanced-kxk-review",
-                "proof": {
-                  "proofId": "closest-string-balanced-kxk",
-                  "revision": 1,
-                  "theorem": "closest-string-balanced-kxk"
+                "reviewId": "cs-kxk-balanced-literature-audit",
+                "source": {
+                  "paperId": "lms2018",
+                  "editionId": "journal",
+                  "locator": "Corollary 2.6, Lemma 2.8 and Theorems 2.11, 2.12 and 3.1, pp. 681–687",
+                  "placement": "forward",
+                  "role": "deterministic reduction from k × k Clique"
                 }
               }
-            ]
+            ],
+            "sourceBasis": {
+              "kind": "derived",
+              "step": "The reduction sets L = d + 1 and uses 2L + 1 ordinary and dummy symbols in total. The strings for the diagonal-block row sets use every one of those symbols, giving q = 2d + 3."
+            }
           },
           "converse": {
             "status": "unassessed",
@@ -359,7 +366,11 @@
         "d",
         "N"
       ],
-      "qualifications": []
+      "qualifications": [],
+      "sourceBasis": {
+        "kind": "derived",
+        "step": "The reduction sets L = d + 1 and uses 2L + 1 ordinary and dummy symbols in total. The strings for the diagonal-block row sets use every one of those symbols, giving q = 2d + 3."
+      }
     }
   ],
   "resolutions": [
@@ -497,9 +508,18 @@
       "comparison": "The two exclusions have the same exponent, polynomial input factor, and promises on length and used alphabet size.",
       "evidence": [
         {
-          "proofId": "closest-string-balanced-kxk",
-          "revision": 1,
-          "theorem": "closest-string-balanced-kxk"
+          "paperId": "lms2018",
+          "editionId": "journal",
+          "locator": "Corollary 2.6, Lemma 2.8 and Theorems 2.11, 2.12 and 3.1, pp. 681–687",
+          "placement": "forward",
+          "role": "deterministic reduction from k × k Clique"
+        },
+        {
+          "paperId": "szeider2026",
+          "editionId": "v3",
+          "locator": "§3, Table 1, first row, p. 5, covering Theorem 14.17 of Parameterized Algorithms",
+          "placement": "context",
+          "role": "unrestricted Closest String bound under the same premise"
         }
       ]
     }
@@ -525,6 +545,24 @@
       "stronger": "cs-kxk-balanced",
       "strongerRevision": 1,
       "reason": "An algorithm on unrestricted inputs at exponent scale d log₂ q would work on the promised slice at scale d log₂ d, since q=2d+3 there. The exclusion on the slice therefore implies the unrestricted exclusion with its polynomial factor unchanged."
+    }
+  ],
+  "reviews": [
+    {
+      "id": "cs-kxk-balanced-literature-audit",
+      "type": "agent",
+      "date": "2026-11-22",
+      "reviewer": "Codex agent /root/others",
+      "verdict": "verified",
+      "scope": "The published deterministic chain starts from the square-clique premise and uses the diagonal-block row sets. Row strings witness every symbol, and the total disjunction time preserves the exponent.",
+      "evidence": "evidence/literature-corollaries-2026-11-22.md",
+      "object": {
+        "type": "bound",
+        "caseId": "lms-closest-string-radius-alphabet",
+        "id": "cs-kxk-balanced",
+        "revision": 1
+      },
+      "independent": true
     }
   ]
 }

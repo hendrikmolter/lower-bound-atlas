@@ -11,23 +11,34 @@
             "status": "established",
             "evidence": [
               {
-                "reviewId": "unit-square-independent-set-budget-eth-closed-scope",
                 "boundRevision": 2,
                 "hypothesisRevision": 1,
+                "reviewId": "unit-square-independent-set-budget-eth-literature-audit",
                 "source": {
                   "editionId": "book",
                   "locator": "Exercise 14.13 and bibliographic notes, pp. 517 and 520",
                   "paperId": "cygan2015",
                   "placement": "statement",
                   "role": "benchmark"
-                },
-                "proof": {
-                  "proofId": "six-w1-memberships",
-                  "revision": 1,
-                  "theorem": "open-to-closed-regions"
+                }
+              },
+              {
+                "boundRevision": 2,
+                "hypothesisRevision": 1,
+                "reviewId": "unit-square-independent-set-budget-eth-literature-audit",
+                "source": {
+                  "paperId": "van-leeuwen2009-geometric-objects",
+                  "editionId": "thesis",
+                  "locator": "Theorems 4.1.8 and 4.1.10, pp. 32–33, and discussion following Theorem 4.3.15, p. 40",
+                  "placement": "proof",
+                  "role": "open-to-closed transfer for scalable objects"
                 }
               }
-            ]
+            ],
+            "sourceBasis": {
+              "kind": "derived",
+              "step": "A common rational expansion of the centers, keeping each region’s size fixed, preserves the intersection graph, selection budget and number of regions. The coordinates still have polynomial bit length."
+            }
           },
           "converse": {
             "status": "unknown",
@@ -123,38 +134,55 @@
             "status": "established",
             "evidence": [
               {
-                "reviewId": "unit-square-independent-set-budget-w1-hardness-scope",
                 "boundRevision": 2,
                 "hypothesisRevision": 1,
+                "reviewId": "unit-square-independent-set-budget-w1-literature-audit",
                 "source": {
                   "paperId": "marx2005-geometric",
                   "editionId": "esa",
                   "locator": "Theorem 1, Section 2",
                   "placement": "forward",
                   "role": "published hardness direction"
-                },
-                "proof": {
-                  "proofId": "six-w1-memberships",
-                  "revision": 1,
-                  "theorem": "open-to-closed-regions"
+                }
+              },
+              {
+                "boundRevision": 2,
+                "hypothesisRevision": 1,
+                "reviewId": "unit-square-independent-set-budget-w1-literature-audit",
+                "source": {
+                  "paperId": "van-leeuwen2009-geometric-objects",
+                  "editionId": "thesis",
+                  "locator": "Theorems 4.1.8 and 4.1.10, pp. 32–33, and discussion following Theorem 4.3.15, p. 40",
+                  "placement": "proof",
+                  "role": "open-to-closed transfer for scalable objects"
                 }
               }
-            ]
+            ],
+            "sourceBasis": {
+              "kind": "derived",
+              "step": "A common rational expansion of the centers, keeping each region’s size fixed, preserves the intersection graph, selection budget and number of regions. The coordinates still have polynomial bit length."
+            }
           },
           "converse": {
             "status": "established",
             "evidence": [
               {
-                "reviewId": "unit-square-independent-set-w1-membership-independent",
                 "boundRevision": 2,
                 "hypothesisRevision": 1,
-                "proof": {
-                  "proofId": "six-w1-memberships",
-                  "revision": 1,
-                  "theorem": "unit-square-independent-set-w1-membership"
+                "reviewId": "unit-square-independent-set-budget-w1-literature-audit",
+                "source": {
+                  "paperId": "marx2005-geometric",
+                  "editionId": "esa",
+                  "locator": "Abstract and §2, Theorem 1",
+                  "placement": "proof",
+                  "role": "W[1]-completeness of the geometric intersection-graph problem"
                 }
               }
-            ]
+            ],
+            "sourceBasis": {
+              "kind": "derived",
+              "step": "Compute intersections between all pairs of the explicitly supplied closed unit squares and solve Independent Set on the resulting graph with the same selection budget."
+            }
           }
         }
       },
@@ -234,23 +262,34 @@
             "status": "established",
             "evidence": [
               {
-                "reviewId": "unit-square-independent-set-budget-kxk-closed-scope",
                 "boundRevision": 2,
                 "hypothesisRevision": 1,
+                "reviewId": "unit-square-independent-set-budget-kxk-literature-audit",
                 "source": {
                   "editionId": "v3",
                   "locator": "§3, Proposition 1, pp. 3–4, and Table 1, second row, p. 5 (Unit Disk Independent Set and Grid Tiling transfer starting bounds)",
                   "paperId": "szeider2026",
                   "placement": "statement",
                   "role": "benchmark"
-                },
-                "proof": {
-                  "proofId": "six-w1-memberships",
-                  "revision": 1,
-                  "theorem": "open-to-closed-regions"
+                }
+              },
+              {
+                "boundRevision": 2,
+                "hypothesisRevision": 1,
+                "reviewId": "unit-square-independent-set-budget-kxk-literature-audit",
+                "source": {
+                  "paperId": "van-leeuwen2009-geometric-objects",
+                  "editionId": "thesis",
+                  "locator": "Theorems 4.1.8 and 4.1.10, pp. 32–33, and discussion following Theorem 4.3.15, p. 40",
+                  "placement": "proof",
+                  "role": "open-to-closed transfer for scalable objects"
                 }
               }
-            ]
+            ],
+            "sourceBasis": {
+              "kind": "derived",
+              "step": "A common rational expansion of the centers, keeping each region’s size fixed, preserves the intersection graph, selection budget and number of regions. The coordinates still have polynomial bit length."
+            }
           },
           "converse": {
             "status": "unknown",
@@ -400,45 +439,24 @@
           "role": "benchmark"
         },
         {
-          "editionId": "book",
-          "locator": "Exercise 14.13 and bibliographic notes, pp. 517 and 520",
-          "paperId": "cygan2015",
-          "placement": "statement",
-          "role": "benchmark"
-        },
-        {
-          "proofId": "six-w1-memberships",
-          "revision": 1,
-          "theorem": "open-to-closed-regions"
+          "paperId": "van-leeuwen2009-geometric-objects",
+          "editionId": "thesis",
+          "locator": "Theorems 4.1.8 and 4.1.10, pp. 32–33, and discussion following Theorem 4.3.15, p. 40",
+          "placement": "proof",
+          "role": "open-to-closed transfer for scalable objects"
         }
       ]
     }
   ],
   "reviews": [
     {
-      "id": "unit-square-independent-set-budget-w1-hardness-scope",
+      "id": "unit-square-independent-set-budget-eth-literature-audit",
       "type": "agent",
-      "date": "2026-11-18",
-      "reviewer": "Codex agent /root/population_c",
+      "date": "2026-11-22",
+      "reviewer": "Codex agent /root/others",
       "verdict": "verified",
-      "scope": "Marx lists open unit squares with rational corners. Theorem 7 preserves disjointness and the budget when passing to closed unit squares.",
-      "evidence": "evidence/six-w1-memberships-independent.md",
-      "object": {
-        "type": "bound",
-        "caseId": "unit-square-independent-set-budget",
-        "id": "unit-square-independent-set-budget-w1",
-        "revision": 2
-      },
-      "independent": true
-    },
-    {
-      "id": "unit-square-independent-set-budget-eth-closed-scope",
-      "type": "agent",
-      "date": "2026-11-18",
-      "reviewer": "Codex agent /root/population_c",
-      "verdict": "verified",
-      "scope": "The boundary transfer preserves graph intersections, number of objects and selection budget. The polynomial growth in complete bit length is absorbed by the input factor.",
-      "evidence": "evidence/six-w1-memberships-independent.md",
+      "scope": "The size-preserving rational dilation from the cited separation construction preserves all intersections, the budget and the number of regions. Polynomial bit growth preserves the stated input factor.",
+      "evidence": "evidence/literature-corollaries-2026-11-22.md",
       "object": {
         "type": "bound",
         "caseId": "unit-square-independent-set-budget",
@@ -448,13 +466,29 @@
       "independent": true
     },
     {
-      "id": "unit-square-independent-set-budget-kxk-closed-scope",
+      "id": "unit-square-independent-set-budget-w1-literature-audit",
       "type": "agent",
-      "date": "2026-11-18",
-      "reviewer": "Codex agent /root/population_c",
+      "date": "2026-11-22",
+      "reviewer": "Codex agent /root/others",
       "verdict": "verified",
-      "scope": "The boundary transfer preserves graph intersections, number of objects and selection budget. The polynomial growth in complete bit length is absorbed by the input factor.",
-      "evidence": "evidence/six-w1-memberships-independent.md",
+      "scope": "The size-preserving rational dilation from the cited separation construction preserves all intersections, the budget and the number of regions. Polynomial bit growth preserves the stated input factor. Forming the explicit intersection graph supplies membership at the same budget.",
+      "evidence": "evidence/literature-corollaries-2026-11-22.md",
+      "object": {
+        "type": "bound",
+        "caseId": "unit-square-independent-set-budget",
+        "id": "unit-square-independent-set-budget-w1",
+        "revision": 2
+      },
+      "independent": true
+    },
+    {
+      "id": "unit-square-independent-set-budget-kxk-literature-audit",
+      "type": "agent",
+      "date": "2026-11-22",
+      "reviewer": "Codex agent /root/others",
+      "verdict": "verified",
+      "scope": "The size-preserving rational dilation from the cited separation construction preserves all intersections, the budget and the number of regions. Polynomial bit growth preserves the stated input factor.",
+      "evidence": "evidence/literature-corollaries-2026-11-22.md",
       "object": {
         "type": "bound",
         "caseId": "unit-square-independent-set-budget",

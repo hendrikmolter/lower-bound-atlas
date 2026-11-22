@@ -88,13 +88,13 @@
               {
                 "boundRevision": 2,
                 "hypothesisRevision": 1,
-                "reviewId": "ecc-budget-np-qp-equivalence-review",
+                "reviewId": "ecc-budget-np-qp-literature-audit",
                 "source": {
                   "paperId": "cygan-pilipczuk-pilipczuk-ecc",
                   "editionId": "journal",
                   "locator": "Theorem 1 and Corollary 3, p. 70",
                   "placement": "forward",
-                  "role": "reduction with logarithmic clique budget"
+                  "role": "published lower bound"
                 }
               }
             ]
@@ -105,27 +105,22 @@
               {
                 "boundRevision": 2,
                 "hypothesisRevision": 1,
-                "reviewId": "ecc-np-qp-converse-independent",
+                "reviewId": "ecc-budget-np-qp-literature-audit",
                 "source": {
                   "paperId": "gramm-guo-hueffner-niedermeier2009",
                   "editionId": "journal",
-                  "locator": "§2, Rules 1 and 3′, and Theorem 1, pp. 2.2:4–2.2:7",
+                  "locator": "§2, Rules 1 and 3′ and Theorem 1, pp. 2.2:4–2.2:7",
                   "placement": "proof",
-                  "role": "exponential kernel argument"
-                },
-                "proof": {
-                  "proofId": "ecc-np-qp-converse",
-                  "revision": 1,
-                  "theorem": "ecc-np-qp-converse"
+                  "role": "exponential kernel"
                 }
               }
-            ]
+            ],
+            "sourceBasis": {
+              "kind": "derived",
+              "step": "The kernel has at most 2^k vertices and therefore 2^{O(k+1)} bits. Under NP ⊆ QP, solving this NP decision problem on the kernel takes 2^{k^{O(1)}} time, in addition to polynomial preprocessing."
+            }
           }
         }
-      },
-      "sourceBasis": {
-        "kind": "derived",
-        "step": "The reduction from 3-SAT uses a clique budget logarithmic in the number of variables and produces a graph of polynomial size. A solver within the stated time would give a quasipolynomial-time algorithm for 3-SAT."
       }
     }
   ],
@@ -163,13 +158,13 @@
   "variant": "Edge Clique Cover with overlapping cliques allowed",
   "reviews": [
     {
-      "id": "ecc-budget-np-qp-equivalence-review",
+      "id": "ecc-budget-np-qp-literature-audit",
       "type": "agent",
-      "date": "2026-11-18",
-      "reviewer": "Codex agent audit_tracks",
+      "date": "2026-11-22",
+      "reviewer": "Codex agent /root/others",
       "verdict": "verified",
-      "scope": "The SAT reduction has logarithmic clique budget and polynomial graph size. The converse review checks the kernel and quasipolynomial-time transfer.",
-      "evidence": "evidence/ecc-np-qp-converse-independent.md",
+      "scope": "Corollary 3 states the exclusion. The exponential kernel and an NP certificate give the converse under the deterministic QP convention.",
+      "evidence": "evidence/literature-corollaries-2026-11-22.md",
       "object": {
         "type": "bound",
         "caseId": "edge-clique-cover-budget",

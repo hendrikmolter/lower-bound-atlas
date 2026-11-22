@@ -1,6 +1,6 @@
 {
   "id": "lms-3color-order",
-  "revision": 18,
+  "revision": 19,
   "title": "3-Coloring by graph order",
   "kind": "lower-bound-case",
   "aliases": [
@@ -122,7 +122,7 @@
     },
     {
       "id": "color-sh-fixed-power",
-      "revision": 1,
+      "revision": 2,
       "statement": "Under SH, no deterministic algorithm decides 3-Coloring within the stated running time.",
       "runtime": "2^(O(n^a)) B^(O(1))",
       "inputFactor": "B^(O(1))",
@@ -142,13 +142,6 @@
           "locator": "Table 1, 3-Coloring row, p. 4, and Theorem 3.1, p. 8",
           "role": "benchmark",
           "placement": "forward"
-        },
-        {
-          "paperId": "sh26",
-          "editionId": "v2",
-          "locator": "Lemma 2.2, pp. 6–7 (decision interface)",
-          "role": "preprint dependency",
-          "placement": "proof"
         }
       ],
       "proofs": [],
@@ -170,8 +163,9 @@
             "status": "established",
             "evidence": [
               {
-                "boundRevision": 1,
-                "reviewId": "color-sh-review",
+                "boundRevision": 2,
+                "hypothesisRevision": 1,
+                "reviewId": "color-sh-fixed-power-source-audit-r2",
                 "source": {
                   "paperId": "sh26",
                   "editionId": "v2",
@@ -185,26 +179,39 @@
             "status": "established",
             "evidence": [
               {
-                "boundRevision": 1,
-                "reviewId": "three-coloring-sh-converse-review-r2",
-                "proof": {
-                  "proofId": "three-coloring-sh-converse",
-                  "revision": 2,
-                  "theorem": "color-sh-converse"
-                },
+                "boundRevision": 2,
+                "hypothesisRevision": 1,
+                "reviewId": "color-sh-fixed-power-source-audit-r2",
                 "source": {
                   "paperId": "sh26",
                   "editionId": "v2",
-                  "locator": "Lemma 2.2, pp. 6–7 (decision interface)",
-                  "role": "preprint dependency"
+                  "locator": "Theorem 2.4, p. 7",
+                  "role": "SH is equivalent to Weak ETH for 3-SAT by variable count",
+                  "placement": "proof"
+                }
+              },
+              {
+                "boundRevision": 2,
+                "hypothesisRevision": 1,
+                "reviewId": "color-sh-fixed-power-source-audit-r2",
+                "source": {
+                  "paperId": "claude2026-subexponential-sat",
+                  "editionId": "v1",
+                  "locator": "Corollary 7 proof, pp. 21–22",
+                  "role": "linear-variable graph-to-3-CNF encoding",
+                  "placement": "proof"
                 }
               }
-            ]
+            ],
+            "sourceBasis": {
+              "kind": "derived",
+              "step": "Use three indicator variables per vertex, require exactly one color per vertex, and forbid equal colors across edges. The 3-CNF uses 3n variables, so failure of SH would give a fixed-power algorithm by graph order."
+            }
           }
         }
       },
       "reader": {
-        "revision": 1,
+        "revision": 2,
         "label": "Fixed-power bounds",
         "title": "Fixed-power bounds under SH",
         "subject": "The full family of bounds"
@@ -231,7 +238,7 @@
         },
         {
           "id": "color-sh-fixed-power",
-          "revision": 1
+          "revision": 2
         }
       ],
       "recovered": [],
@@ -243,9 +250,16 @@
           "role": "benchmark"
         },
         {
-          "proofId": "three-coloring-sh-converse",
-          "revision": 2,
-          "theorem": "color-sh-converse"
+          "paperId": "sh26",
+          "editionId": "v2",
+          "locator": "Table 1, p. 4, and Theorem 2.4, p. 7",
+          "role": "fixed-power forward benchmark and SH equivalence for 3-SAT"
+        },
+        {
+          "paperId": "claude2026-subexponential-sat",
+          "editionId": "v1",
+          "locator": "Corollary 7 proof, pp. 21–22",
+          "role": "linear-variable 3-Coloring encoding into 3-SAT"
         }
       ],
       "remainingGap": "Benchmark recovery under deterministic FPT ≠ W[1] is unestablished."
@@ -289,7 +303,7 @@
       },
       "recovery": {
         "id": "color-sh-fixed-power",
-        "revision": 1
+        "revision": 2
       },
       "scale": "degree",
       "effective": false,
