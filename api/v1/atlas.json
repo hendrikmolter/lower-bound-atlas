@@ -560,10 +560,14 @@
             "t",
             "N"
           ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "Lemma 4 fixes the number of colors q. In its construction for a Chained Positive CNF-SAT instance of length S and parameter k, choose q of order √(log S). Encoding the choices in base q uses at most 1+log_q S digits per group. The connector branches can be processed separately, so Claim 12 bounds the width by 2k(1+log_q S)+3. Adding a clique of q colors enforces the lists at an additional width cost of at most q. The graph still has polynomial size, and t log₂(t+2) is at most a computable function of k times 1+log₂ S. Composing with the Clique reduction supplied by Theorem 9, the effective cutoff would turn a solver within the displayed time into an FPT algorithm for Clique."
+          },
           "sources": [
             {
               "editionId": "journal",
-              "locator": "Theorem 9 and the construction of Lemma 4, especially Claim 12. The lemma fixes the number of colors. For source length S, taking q of order √(log S) keeps the construction polynomial. Encoding choices in base q and adding a q-clique to enforce the lists gives t log(t+2) at most a computable parameter factor times log S.",
+              "locator": "Theorem 9, Lemma 4 and Claim 12.",
               "paperId": "bodlaender2025-linear-structure",
               "placement": "statement",
               "role": "source construction for the unrestricted bound"
@@ -609,7 +613,7 @@
           "evidence": [
             {
               "editionId": "journal",
-              "locator": "Theorem 9 and the construction of Lemma 4, especially Claim 12. The lemma fixes the number of colors. For source length S, taking q of order √(log S) keeps the construction polynomial. Encoding choices in base q and adding a q-clique to enforce the lists gives t log(t+2) at most a computable parameter factor times log S.",
+              "locator": "Theorem 9, Lemma 4 and Claim 12.",
               "paperId": "bodlaender2025-linear-structure",
               "placement": "statement",
               "role": "source construction for the unrestricted bound"
@@ -732,7 +736,7 @@
           "evidence": [
             {
               "editionId": "journal",
-              "locator": "Theorem 9 and the construction of Lemma 4, especially Claim 12. The lemma fixes the number of colors. For source length S, taking q of order √(log S) keeps the construction polynomial. Encoding choices in base q and adding a q-clique to enforce the lists gives t log(t+2) at most a computable parameter factor times log S.",
+              "locator": "Theorem 9, Lemma 4 and Claim 12.",
               "paperId": "bodlaender2025-linear-structure",
               "placement": "statement",
               "role": "source construction for the unrestricted bound"
@@ -14659,17 +14663,21 @@
             "t",
             "B"
           ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "Theorem 6 gives W[1]-hardness through XNLP-hardness for pathwidth divided by the logarithm of the graph order. For a Clique instance of length M and parameter k, the reduction therefore produces a graph of pathwidth at most g(k)(1+log₂ M) for a computable g. Treewidth satisfies the same upper bound. Using the effective cutoff with accuracy 1/g(k) bounds the exponential factor by a computable function of k times M. The resulting Clique algorithm would be fixed-parameter tractable. Theorem 11 of the IPEC paper gives the width bound directly for Independent Set; the solver can ignore the supplied tree decomposition."
+          },
           "sources": [
             {
               "editionId": "journal",
-              "locator": "Theorem 6, logarithmic pathwidth. Treewidth is at most pathwidth, so an effective sublinear exponent in treewidth would yield an FPT algorithm for Clique.",
+              "locator": "Theorem 6 (logarithmic pathwidth).",
               "paperId": "bodlaender2025-linear-structure",
               "placement": "statement",
               "role": "unrestricted lower bound"
             },
             {
               "editionId": "proceedings",
-              "locator": "Theorem 11, Independent Set parameterized by logarithmic treewidth. The supplied tree decomposition can be discarded for the unrestricted problem.",
+              "locator": "Theorem 11 (logarithmic treewidth).",
               "paperId": "bodlaender2022-tree-structured",
               "placement": "statement",
               "role": "unrestricted lower bound"
@@ -14728,14 +14736,14 @@
           "evidence": [
             {
               "editionId": "journal",
-              "locator": "Theorem 6, logarithmic pathwidth. Treewidth is at most pathwidth, so an effective sublinear exponent in treewidth would yield an FPT algorithm for Clique.",
+              "locator": "Theorem 6 (logarithmic pathwidth).",
               "paperId": "bodlaender2025-linear-structure",
               "placement": "statement",
               "role": "unrestricted lower bound"
             },
             {
               "editionId": "proceedings",
-              "locator": "Theorem 11, Independent Set parameterized by logarithmic treewidth. The supplied tree decomposition can be discarded for the unrestricted problem.",
+              "locator": "Theorem 11 (logarithmic treewidth).",
               "paperId": "bodlaender2022-tree-structured",
               "placement": "statement",
               "role": "unrestricted lower bound"
@@ -14798,14 +14806,14 @@
           "evidence": [
             {
               "editionId": "journal",
-              "locator": "Theorem 6, logarithmic pathwidth. Treewidth is at most pathwidth, so an effective sublinear exponent in treewidth would yield an FPT algorithm for Clique.",
+              "locator": "Theorem 6 (logarithmic pathwidth).",
               "paperId": "bodlaender2025-linear-structure",
               "placement": "statement",
               "role": "unrestricted lower bound"
             },
             {
               "editionId": "proceedings",
-              "locator": "Theorem 11, Independent Set parameterized by logarithmic treewidth. The supplied tree decomposition can be discarded for the unrestricted problem.",
+              "locator": "Theorem 11 (logarithmic treewidth).",
               "paperId": "bodlaender2022-tree-structured",
               "placement": "statement",
               "role": "unrestricted lower bound"
@@ -16288,12 +16296,12 @@
           ],
           "sourceBasis": {
             "kind": "derived",
-            "step": "Add opposite unit clauses on two fresh variables. With L=n+2 positions and L+1 filler symbols, the two clauses ensure that both truth values and all fillers occur, giving q=d+4. Some filler is absent from every length-L center. The words using that filler require a satisfying literal in every clause. Conversely, a satisfying assignment agrees with every word. The encoding is polynomial and d=n+1 preserves the effective exponent scale."
+            "step": "Encode the requirement that exactly one variable in each pair is true by two CNF clauses per pair, preserving the variable count n. Specialize the word construction to two truth-value symbols. Add opposite unit clauses on two fresh variables. With L=n+2 positions and L+1 filler symbols, the two clauses ensure that both truth values and all fillers occur, giving q=d+4. For each length-L center, some filler is absent. The words using that filler require a satisfying literal in every clause. Conversely, a satisfying assignment agrees with every word. The encoding is polynomial and d=n+1 preserves the effective exponent scale."
           },
           "sources": [
             {
               "editionId": "journal",
-              "locator": "Lemma 3.1 and Corollary 3.1 (Section 3). The paired-variable CNF-SAT source reduces to ordinary CNF-SAT on the same variables by adding the two clauses enforcing exactly one true variable in each pair.",
+              "locator": "Lemma 3.1 and Corollary 3.1.",
               "paperId": "cai-juedes2003",
               "placement": "statement",
               "role": "source lower bound",
@@ -16301,7 +16309,7 @@
             },
             {
               "editionId": "journal",
-              "locator": "Theorem 3.1, proof in Section 3.1. Specialize the word construction to two truth-value symbols.",
+              "locator": "Theorem 3.1 and its proof in Section 3.1.",
               "paperId": "lms2018",
               "placement": "statement",
               "role": "target construction",
@@ -16405,7 +16413,7 @@
           "evidence": [
             {
               "editionId": "journal",
-              "locator": "Lemma 3.1 and Corollary 3.1 (Section 3). The paired-variable CNF-SAT source reduces to ordinary CNF-SAT on the same variables by adding the two clauses enforcing exactly one true variable in each pair.",
+              "locator": "Lemma 3.1 and Corollary 3.1.",
               "paperId": "cai-juedes2003",
               "placement": "statement",
               "role": "source lower bound",
@@ -16413,7 +16421,7 @@
             },
             {
               "editionId": "journal",
-              "locator": "Theorem 3.1, proof in Section 3.1. Specialize the word construction to two truth-value symbols.",
+              "locator": "Theorem 3.1 and its proof in Section 3.1.",
               "paperId": "lms2018",
               "placement": "statement",
               "role": "target construction",
@@ -16502,7 +16510,7 @@
           "evidence": [
             {
               "editionId": "journal",
-              "locator": "Lemma 3.1 and Corollary 3.1 (Section 3). The paired-variable CNF-SAT source reduces to ordinary CNF-SAT on the same variables by adding the two clauses enforcing exactly one true variable in each pair.",
+              "locator": "Lemma 3.1 and Corollary 3.1.",
               "paperId": "cai-juedes2003",
               "placement": "statement",
               "role": "source lower bound",
@@ -16510,7 +16518,7 @@
             },
             {
               "editionId": "journal",
-              "locator": "Theorem 3.1, proof in Section 3.1. Specialize the word construction to two truth-value symbols.",
+              "locator": "Theorem 3.1 and its proof in Section 3.1.",
               "paperId": "lms2018",
               "placement": "statement",
               "role": "target construction",
@@ -16913,12 +16921,12 @@
           ],
           "sourceBasis": {
             "kind": "derived",
-            "step": "Add opposite unit clauses on two fresh variables. With L=n+2 positions and 2L−1 filler symbols, the two clauses ensure that both truth values and all fillers occur, giving q=2d+3. Some filler is absent from every length-L center. The words using that filler require a satisfying literal in every clause. Conversely, a satisfying assignment agrees with every word. The encoding is polynomial and d=n+1 preserves the effective exponent scale."
+            "step": "Encode the requirement that exactly one variable in each pair is true by two CNF clauses per pair, preserving the variable count n. Specialize the word construction to two truth-value symbols. Add opposite unit clauses on two fresh variables. With L=n+2 positions and 2L−1 filler symbols, the two clauses ensure that both truth values and all fillers occur, giving q=2d+3. For each length-L center, some filler is absent. The words using that filler require a satisfying literal in every clause. Conversely, a satisfying assignment agrees with every word. The encoding is polynomial and d=n+1 preserves the effective exponent scale."
           },
           "sources": [
             {
               "editionId": "journal",
-              "locator": "Lemma 3.1 and Corollary 3.1 (Section 3). The paired-variable CNF-SAT source reduces to ordinary CNF-SAT on the same variables by adding the two clauses enforcing exactly one true variable in each pair.",
+              "locator": "Lemma 3.1 and Corollary 3.1.",
               "paperId": "cai-juedes2003",
               "placement": "statement",
               "role": "source lower bound",
@@ -16926,7 +16934,7 @@
             },
             {
               "editionId": "journal",
-              "locator": "Theorem 3.1, proof in Section 3.1. Specialize the word construction to two truth-value symbols.",
+              "locator": "Theorem 3.1 and its proof in Section 3.1.",
               "paperId": "lms2018",
               "placement": "statement",
               "role": "target construction",
@@ -16997,7 +17005,7 @@
           "evidence": [
             {
               "editionId": "journal",
-              "locator": "Lemma 3.1 and Corollary 3.1 (Section 3). The paired-variable CNF-SAT source reduces to ordinary CNF-SAT on the same variables by adding the two clauses enforcing exactly one true variable in each pair.",
+              "locator": "Lemma 3.1 and Corollary 3.1.",
               "paperId": "cai-juedes2003",
               "placement": "statement",
               "role": "source lower bound",
@@ -17005,7 +17013,7 @@
             },
             {
               "editionId": "journal",
-              "locator": "Theorem 3.1, proof in Section 3.1. Specialize the word construction to two truth-value symbols.",
+              "locator": "Theorem 3.1 and its proof in Section 3.1.",
               "paperId": "lms2018",
               "placement": "statement",
               "role": "target construction",
@@ -17111,7 +17119,7 @@
           "evidence": [
             {
               "editionId": "journal",
-              "locator": "Lemma 3.1 and Corollary 3.1 (Section 3). The paired-variable CNF-SAT source reduces to ordinary CNF-SAT on the same variables by adding the two clauses enforcing exactly one true variable in each pair.",
+              "locator": "Lemma 3.1 and Corollary 3.1.",
               "paperId": "cai-juedes2003",
               "placement": "statement",
               "role": "source lower bound",
@@ -17119,7 +17127,7 @@
             },
             {
               "editionId": "journal",
-              "locator": "Theorem 3.1, proof in Section 3.1. Specialize the word construction to two truth-value symbols.",
+              "locator": "Theorem 3.1 and its proof in Section 3.1.",
               "paperId": "lms2018",
               "placement": "statement",
               "role": "target construction",
@@ -20731,10 +20739,14 @@
             "t",
             "B"
           ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "Theorem 6 gives W[1]-hardness through XNLP-hardness for pathwidth divided by the logarithm of the graph order. For a Clique instance of length M and parameter k, the reduction therefore produces a graph of pathwidth at most g(k)(1+log₂ M) for a computable g. Treewidth satisfies the same upper bound. Using the effective cutoff with accuracy 1/g(k) bounds the exponential factor by a computable function of k times M. The resulting Clique algorithm would be fixed-parameter tractable."
+          },
           "sources": [
             {
               "editionId": "journal",
-              "locator": "Theorem 6, logarithmic pathwidth. Treewidth is at most pathwidth, so an effective sublinear exponent in treewidth would yield an FPT algorithm for Clique.",
+              "locator": "Theorem 6 (logarithmic pathwidth).",
               "paperId": "bodlaender2025-linear-structure",
               "placement": "statement",
               "role": "unrestricted lower bound"
@@ -20782,7 +20794,7 @@
           "evidence": [
             {
               "editionId": "journal",
-              "locator": "Theorem 6, logarithmic pathwidth. Treewidth is at most pathwidth, so an effective sublinear exponent in treewidth would yield an FPT algorithm for Clique.",
+              "locator": "Theorem 6 (logarithmic pathwidth).",
               "paperId": "bodlaender2025-linear-structure",
               "placement": "statement",
               "role": "unrestricted lower bound"
@@ -20845,7 +20857,7 @@
           "evidence": [
             {
               "editionId": "journal",
-              "locator": "Theorem 6, logarithmic pathwidth. Treewidth is at most pathwidth, so an effective sublinear exponent in treewidth would yield an FPT algorithm for Clique.",
+              "locator": "Theorem 6 (logarithmic pathwidth).",
               "paperId": "bodlaender2025-linear-structure",
               "placement": "statement",
               "role": "unrestricted lower bound"
@@ -36741,7 +36753,7 @@
           "caseId": "independent-set-treewidth",
           "editionId": "proceedings",
           "id": "is-tw-w1",
-          "locator": "Theorem 11, Independent Set parameterized by logarithmic treewidth. The supplied tree decomposition can be discarded for the unrestricted problem.",
+          "locator": "Theorem 11 (logarithmic treewidth).",
           "paperId": "bodlaender2022-tree-structured",
           "placement": "statement",
           "revision": 1,
@@ -36754,7 +36766,7 @@
           "caseId": "chromatic-number-treewidth",
           "editionId": "journal",
           "id": "chromatic-tw-w1",
-          "locator": "Theorem 9 and the construction of Lemma 4, especially Claim 12. The lemma fixes the number of colors. For source length S, taking q of order √(log S) keeps the construction polynomial. Encoding choices in base q and adding a q-clique to enforce the lists gives t log(t+2) at most a computable parameter factor times log S.",
+          "locator": "Theorem 9, Lemma 4 and Claim 12.",
           "paperId": "bodlaender2025-linear-structure",
           "placement": "statement",
           "revision": 1,
@@ -36765,7 +36777,7 @@
           "caseId": "independent-set-treewidth",
           "editionId": "journal",
           "id": "is-tw-w1",
-          "locator": "Theorem 6, logarithmic pathwidth. Treewidth is at most pathwidth, so an effective sublinear exponent in treewidth would yield an FPT algorithm for Clique.",
+          "locator": "Theorem 6 (logarithmic pathwidth).",
           "paperId": "bodlaender2025-linear-structure",
           "placement": "statement",
           "revision": 1,
@@ -36776,7 +36788,7 @@
           "caseId": "odd-cycle-transversal-treewidth",
           "editionId": "journal",
           "id": "odd-cycle-transversal-treewidth-w1",
-          "locator": "Theorem 6, logarithmic pathwidth. Treewidth is at most pathwidth, so an effective sublinear exponent in treewidth would yield an FPT algorithm for Clique.",
+          "locator": "Theorem 6 (logarithmic pathwidth).",
           "paperId": "bodlaender2025-linear-structure",
           "placement": "statement",
           "revision": 1,
@@ -36851,7 +36863,7 @@
           "caseId": "lms-closest-string-radius",
           "editionId": "journal",
           "id": "cs-radius-w1",
-          "locator": "Lemma 3.1 and Corollary 3.1 (Section 3). The paired-variable CNF-SAT source reduces to ordinary CNF-SAT on the same variables by adding the two clauses enforcing exactly one true variable in each pair.",
+          "locator": "Lemma 3.1 and Corollary 3.1.",
           "paperId": "cai-juedes2003",
           "placement": "statement",
           "revision": 1,
@@ -36863,7 +36875,7 @@
           "caseId": "lms-closest-string-radius-alphabet",
           "editionId": "journal",
           "id": "cs-w1-balanced",
-          "locator": "Lemma 3.1 and Corollary 3.1 (Section 3). The paired-variable CNF-SAT source reduces to ordinary CNF-SAT on the same variables by adding the two clauses enforcing exactly one true variable in each pair.",
+          "locator": "Lemma 3.1 and Corollary 3.1.",
           "paperId": "cai-juedes2003",
           "placement": "statement",
           "revision": 1,
@@ -40002,7 +40014,7 @@
           "caseId": "lms-closest-string-radius",
           "editionId": "journal",
           "id": "cs-radius-w1",
-          "locator": "Theorem 3.1, proof in Section 3.1. Specialize the word construction to two truth-value symbols.",
+          "locator": "Theorem 3.1 and its proof in Section 3.1.",
           "paperId": "lms2018",
           "placement": "statement",
           "revision": 1,
@@ -40058,7 +40070,7 @@
           "caseId": "lms-closest-string-radius-alphabet",
           "editionId": "journal",
           "id": "cs-w1-balanced",
-          "locator": "Theorem 3.1, proof in Section 3.1. Specialize the word construction to two truth-value symbols.",
+          "locator": "Theorem 3.1 and its proof in Section 3.1.",
           "paperId": "lms2018",
           "placement": "statement",
           "revision": 1,

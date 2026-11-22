@@ -62,12 +62,12 @@
   ],
   "sourceBasis": {
     "kind": "derived",
-    "step": "Add opposite unit clauses on two fresh variables. With L=n+2 positions and L+1 filler symbols, the two clauses ensure that both truth values and all fillers occur, giving q=d+4. Some filler is absent from every length-L center. The words using that filler require a satisfying literal in every clause. Conversely, a satisfying assignment agrees with every word. The encoding is polynomial and d=n+1 preserves the effective exponent scale."
+    "step": "Encode the requirement that exactly one variable in each pair is true by two CNF clauses per pair, preserving the variable count n. Specialize the word construction to two truth-value symbols. Add opposite unit clauses on two fresh variables. With L=n+2 positions and L+1 filler symbols, the two clauses ensure that both truth values and all fillers occur, giving q=d+4. For each length-L center, some filler is absent. The words using that filler require a satisfying literal in every clause. Conversely, a satisfying assignment agrees with every word. The encoding is polynomial and d=n+1 preserves the effective exponent scale."
   },
   "sources": [
     {
       "editionId": "journal",
-      "locator": "Lemma 3.1 and Corollary 3.1 (Section 3). The paired-variable CNF-SAT source reduces to ordinary CNF-SAT on the same variables by adding the two clauses enforcing exactly one true variable in each pair.",
+      "locator": "Lemma 3.1 and Corollary 3.1.",
       "paperId": "cai-juedes2003",
       "placement": "statement",
       "role": "source lower bound",
@@ -75,7 +75,7 @@
     },
     {
       "editionId": "journal",
-      "locator": "Theorem 3.1, proof in Section 3.1. Specialize the word construction to two truth-value symbols.",
+      "locator": "Theorem 3.1 and its proof in Section 3.1.",
       "paperId": "lms2018",
       "placement": "statement",
       "role": "target construction",

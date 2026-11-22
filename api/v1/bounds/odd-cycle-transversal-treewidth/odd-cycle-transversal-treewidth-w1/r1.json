@@ -55,10 +55,14 @@
     "t",
     "B"
   ],
+  "sourceBasis": {
+    "kind": "derived",
+    "step": "Theorem 6 gives W[1]-hardness through XNLP-hardness for pathwidth divided by the logarithm of the graph order. For a Clique instance of length M and parameter k, the reduction therefore produces a graph of pathwidth at most g(k)(1+log₂ M) for a computable g. Treewidth satisfies the same upper bound. Using the effective cutoff with accuracy 1/g(k) bounds the exponential factor by a computable function of k times M. The resulting Clique algorithm would be fixed-parameter tractable."
+  },
   "sources": [
     {
       "editionId": "journal",
-      "locator": "Theorem 6, logarithmic pathwidth. Treewidth is at most pathwidth, so an effective sublinear exponent in treewidth would yield an FPT algorithm for Clique.",
+      "locator": "Theorem 6 (logarithmic pathwidth).",
       "paperId": "bodlaender2025-linear-structure",
       "placement": "statement",
       "role": "unrestricted lower bound"
