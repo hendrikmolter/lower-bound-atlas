@@ -2395,12 +2395,13 @@
     "reviews/vc-order-eth-equivalence-review/index.html",
     "reviews/vc-order-sh-source-audit-r3/index.html",
     "reviews/weighted-fixed-width-cnf-sat-weight-w1-literature-audit/index.html",
-    "search.json"
+    "search.json",
+    "sitemap.xml"
   ],
   "generator": "lower-bound-atlas/website",
   "preview": false,
   "registryRevision": 6,
   "releaseValidated": true,
   "schemaVersion": 1,
-  "sourceCommit": "efeab0cb1b1695b7146c0a9bca47119e322e55fd"
+  "sourceCommit": "e4901f536a9f9534d753f58f36d02137bb74ecb1"
 }
