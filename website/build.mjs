@@ -57,6 +57,8 @@ function compareCases(a, b) {
 }
 const alphabeticalCases = [...db.cases].sort(compareCases);
 const emitted = new Set();
+const sitemapPages = new Set();
+const publicSite = 'https://hendrikmolter.github.io/lower-bound-atlas/';
 let previousFiles = [];
 try {
   const previous = JSON.parse(readFileSync(resolve(output, 'manifest.json'), 'utf8'));
@@ -197,7 +199,8 @@ function status(name, rule) {
   return `<span class="status" data-status="${escape(name)}">${escape(humanize(name) + (rule ? ' · ' + ruleName(rule) : ''))}</span>`;
 }
 
-function catalogPage(page, title, lead, body, { active, browse = false, crumbs = [] } = {}) {
+function catalogPage(page, title, lead, body, { active, browse = false, crumbs = [], documentTitle = title, inSitemap = true } = {}) {
+  if (inSitemap) sitemapPages.add(page);
   const nav = [
     ['index.html', 'Problems'], ['assumptions/index.html', 'Hypotheses'],
     ['papers/index.html', 'Papers'], ['notation/index.html', 'Notation'], ['about/index.html', 'About & guide']
@@ -211,7 +214,7 @@ function catalogPage(page, title, lead, body, { active, browse = false, crumbs =
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
-  <title>${escape(title)} | Lower Bound Atlas</title>
+  <title>${escape(documentTitle)} | Lower Bound Atlas</title>
   <link rel="stylesheet" href="${relativeUrl(page, 'assets/style.css')}${commit ? '?v=' + commit : ''}">
   ${browse ? `<script src="${relativeUrl(page, 'assets/browse.js')}" defer></script>` : ''}
 </head>
@@ -233,6 +236,7 @@ function catalogPage(page, title, lead, body, { active, browse = false, crumbs =
     <span>${options.release ? 'Release' : 'Local preview'} · ${escape(db.edition)}</span>
     ${link(page, api + '/atlas.json', 'JSON export')}
     ${link(page, 'manifest.json', 'Build manifest')}
+    ${link(page, 'sitemap.xml', 'Sitemap')}
     ${link(page, 'legal/index.html', 'Impressum', 'impressum')}
     ${link(page, 'legal/index.html', 'Privacy', 'privacy')}
   </footer>
@@ -557,7 +561,7 @@ function browseIndex() {
   ].filter(([name, , options]) => options.length > (['family', 'kind'].includes(name) ? 1 : 0));
   catalogPage(page, 'Browse lower bounds', 'Find conditional lower bounds by problem, parameter or hypothesis.',
     filters('Search problems', selects, [sortBounds,['parameters','Most parameterizations']]) + results(cardMarkup, 'problem', 'problems', 'Problems', 'No problems match these filters.'),
-    { active: 'Problems', browse: true });
+    { active: 'Problems', browse: true, documentTitle: 'Conditional running-time lower bounds for parameterized problems' });
   write('search.json', json(cards));
 }
 
@@ -642,7 +646,7 @@ function casePages() {
     catalogPage(page, problem.name, '', '<section class="problem-box"><dl><dt>Input</dt><dd>' +
       mathText(problem.input) + '</dd><dt>Question</dt><dd>' + mathText(problem.question) +
       '</dd></dl></section>' + restrictionLinks(page,problem) + '<section><h2>Recorded parameterizations</h2>' + boundFilter(page) + '<div class="case-list">' + entries.join('') +
-      '</div></section>', {crumbs:[['index.html','Problems']]});
+      '</div></section>', {crumbs:[['index.html','Problems']], documentTitle: problem.name + ' — running-time lower bounds'});
   }
 }
 
@@ -711,7 +715,11 @@ function casePage(record, page) {
       ${link(page,page,'Permalink')} · ${link(page,api+'/cases/'+record.id+'.json','JSON record')}</details>`;
     const crumbs = [['index.html','Problems']];
     if (problem && page !== routes.problem(problem.id)) crumbs.push([routes.problem(problem.id), name]);
-    catalogPage(page,name,'',body,{crumbs});
+    const problemPage = page === routes.problem(record.problemId);
+    const parameter = problemLabels(record)[1];
+    const documentTitle = (problemPage ? name : name + ' · ' + parameter) + ' — running-time lower bounds';
+    const inSitemap = problemPage || db.cases.some(c => c.problemId === record.problemId && c.id !== record.id);
+    catalogPage(page,name,'',body,{crumbs, documentTitle, inSitemap});
 }
 
 function paperReferences(page, sources, { roles = false } = {}) {
@@ -844,7 +852,8 @@ function boundPages() {
         ${items(history.map(b => objectLink(page,boundRef(record.id,b),'Earlier revision ' + b.revision)))}
         ${cite(page,ref,problemName + ' · ' + name)}</details>`;
       catalogPage(page,name,'',content,
-        {crumbs:[['index.html','Problems'],[routes.case(record.id),problemName]]});
+        {crumbs:[['index.html','Problems'],[routes.case(record.id),problemName]],
+          documentTitle: [problemName, problemLabels(record)[1], name].join(' · '), inSitemap: page !== revision});
     }
   }
 }
@@ -941,7 +950,8 @@ function assumptionPages() {
           ${facts([['Identifier', record.id], ['Revision', String(version.revision)], ['Aliases', version.aliases.join(', ')], ['Model', version.model], ['Quantifiers', version.quantifiers], ['Conventions', version.conventions], ['Source note', version.access]])}
           ${link(page, pinned, 'Revision permalink')} · ${link(page, current, 'Current definition and applications')} ·
           ${link(page, api + '/assumptions/' + record.id + '.json', 'JSON record')}</details>`,
-          { browse: applications.length > 0, crumbs: [[index, 'Hypotheses']] });
+          { browse: applications.length > 0, crumbs: [[index, 'Hypotheses']], inSitemap: page === current,
+            documentTitle: (text?.title ?? version.name) + ' — definition and lower bounds' });
       }
     }
     write(api + '/assumptions/' + record.id + '.json', json(record));
@@ -1103,7 +1113,7 @@ function proofPages() {
           ${citationMap.size ? `<section>${heading('Original papers from related bounds')}${paperReferences(page, [...citationMap.values()])}</section>` : ''}
           ${cite(page, ref, proof.title + ' · ' + theoremName)}`;
         catalogPage(page, theoremName + ' · ' + proof.title, '', body,
-          { crumbs: [[overview, proof.title]] });
+          { crumbs: [[overview, proof.title]], inSitemap: false });
         write(api + '/' + page.replace('/index.html', '.json'), json({ proofId: proof.id, revision: version.revision,
           source: version.source, pdf: version.pdf, authorship: version.authorship, dependencies, theorem }));
         return `<article class="bound-card"><h3>${objectLink(overview, ref, theoremName + ' · ' + theorem.label)}</h3>
@@ -1366,6 +1376,12 @@ catalogPage('legal/index.html', 'Legal notice and privacy', '', `
     <p><strong>Contact and contributions.</strong> Emails are kept as needed to answer requests or meet legal obligations. GitHub issues and pull requests are public. Contributions and author credits may remain in the project history. The operator relies on legitimate interests in secure hosting, answering inquiries and preserving the research record (Article 6(1)(f) GDPR).</p>
     <p><strong>Your rights.</strong> You may contact the operator to request access, correction, erasure or restriction of processing, or to object on grounds relating to your situation. You may also complain to a supervisory authority, including the <a href="https://www.lda.brandenburg.de/">Brandenburg data protection authority</a>.</p>
   </section>`);
+const locations = [...sitemapPages].sort().map(page => {
+  const url = new URL(urlPath(page.slice(0, -'index.html'.length)), publicSite);
+  return '  <url><loc>' + escape(url.href) + '</loc></url>';
+});
+write('sitemap.xml', ['<?xml version="1.0" encoding="UTF-8"?>',
+  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">', ...locations, '</urlset>', ''].join('\n'));
 write(api + '/atlas.json', json(db));
 removeObsoleteFiles();
 write('manifest.json', json({

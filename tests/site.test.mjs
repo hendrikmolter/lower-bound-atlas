@@ -82,6 +82,20 @@ test('renaming a problem and admitting another hypothesis require only data chan
   execFileSync(process.execPath,['website/build.mjs'],{cwd:dir});
   const html = path => readFileSync(join(dir,'dist/site',path,'index.html'),'utf8');
   assert.match(html('.'), /href="problems\/closest-string\/index.html">Renamed string problem<\/a>/);
+  const sitemap = readFileSync(join(dir,'dist/site/sitemap.xml'),'utf8');
+  const urls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(match => new URL(match[1]));
+  const paths = urls.map(url => url.pathname.slice('/lower-bound-atlas/'.length));
+  assert.equal(new Set(paths).size, paths.length);
+  for (const url of urls) {
+    assert.equal(url.origin, 'https://hendrikmolter.github.io');
+    assert.ok(url.pathname.startsWith('/lower-bound-atlas/'));
+    assert.ok(existsSync(join(dir,'dist/site',url.pathname.slice('/lower-bound-atlas/'.length),'index.html')));
+  }
+  assert.ok(paths.includes('problems/3-coloring/') && paths.includes('cases/lms-closest-string-radius/'));
+  assert.ok(paths.includes('assumptions/test-premise/') && !paths.includes('cases/lms-3color-order/'));
+  assert.ok(paths.includes('bounds/lms-3color-order/color-sh-fixed-power/'));
+  assert.ok(!paths.some(path => /\/r\d+\//.test(path)));
+  assert.ok(html('problems/closest-string').includes('<title>Renamed string problem — running-time lower bounds | Lower Bound Atlas</title>'));
   for (const id of ['lms-closest-string-radius','lms-closest-string-radius-alphabet']) {
     assert.ok(html('problems/closest-string').includes('cases/' + id + '/index.html'));
     assert.ok(html('cases/' + id).includes('<h1>Renamed string problem</h1>'));
