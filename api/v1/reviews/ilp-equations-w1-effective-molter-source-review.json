@@ -1,7 +1,7 @@
 {
   "applicable": true,
   "date": "2026-11-24",
-  "evidence": "evidence/molter2026-source-scope.md",
+  "evidence": "evidence/table-one-original-sources.md",
   "id": "ilp-equations-w1-effective-molter-source-review",
   "label": "Agent verified",
   "object": {
@@ -11,7 +11,7 @@
     "type": "bound"
   },
   "reviewer": "Atlas source audit",
-  "scope": "Checked the forward implication, including its running time, parameter and input restrictions, against §3, Consequences of Lin’s Set Cover reduction, p. 12, and Lemma 1, p. 10.",
+  "scope": "Checked the all-ones right-hand side and effective exponent using the exact-one interpretation of the incidence matrix in Lin’s Lemma 14.",
   "stale": false,
   "type": "agent",
   "verdict": "verified"

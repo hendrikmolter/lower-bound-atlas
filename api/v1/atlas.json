@@ -100,6 +100,231 @@
   ],
   "cases": [
     {
+      "aliases": [],
+      "bounds": [
+        {
+          "assessments": {},
+          "assumptionOperator": "all",
+          "assumptions": [
+            {
+              "id": "eth",
+              "revision": 1
+            }
+          ],
+          "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+          "id": "3-coloring-treewidth-eth",
+          "inputConditions": [],
+          "inputFactor": "n^(O(1))",
+          "proofs": [],
+          "provenance": "literature",
+          "qualifications": [],
+          "reader": {
+            "label": "Subexponential bound in treewidth",
+            "revision": 1,
+            "title": "Subexponential bound in treewidth under ETH"
+          },
+          "reviewIds": [],
+          "revision": 1,
+          "runtime": "2^(o(t)) n^(O(1))",
+          "runtimeSymbols": [
+            "t",
+            "n"
+          ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "A treewidth-subexponential algorithm would also be subexponential in the number of vertices, since treewidth is at most the graph order."
+          },
+          "sources": [
+            {
+              "editionId": "bulletin",
+              "locator": "Theorem 3.2, PDF p. 12",
+              "paperId": "lms2011",
+              "placement": "statement",
+              "role": "3-Coloring graph-order lower bound"
+            }
+          ],
+          "statement": "Under ETH, no deterministic algorithm decides 3-Coloring within the stated running time.",
+          "status": "established",
+          "supported": true
+        },
+        {
+          "assessments": {},
+          "assumptionOperator": "all",
+          "assumptions": [
+            {
+              "id": "w1",
+              "revision": 1
+            }
+          ],
+          "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+          "exponentDomain": "nonnegative",
+          "id": "3-coloring-treewidth-w1",
+          "inputConditions": [],
+          "inputFactor": "N^(O(1))",
+          "proofs": [],
+          "provenance": "literature",
+          "qualifications": [],
+          "reader": {
+            "label": "Effective subexponential bound in treewidth",
+            "revision": 1,
+            "title": "Effective subexponential bound in treewidth under FPT ≠ W[1]"
+          },
+          "reviewIds": [],
+          "revision": 1,
+          "runtime": "2^(o_eff(t)) N^(O(1))",
+          "runtimeSymbols": [
+            "t",
+            "N"
+          ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "The logarithmic-pathwidth hardness gives a fixed-parameter reduction from Clique whose output pathwidth is at most a computable parameter factor times the logarithm of the graph order. Treewidth is at most that pathwidth. The effective cutoff would turn the claimed solver into a fixed-parameter algorithm for Clique."
+          },
+          "sources": [
+            {
+              "editionId": "journal",
+              "locator": "§4.3, Lemma 4 and Claim 12",
+              "paperId": "bodlaender2025-linear-structure",
+              "placement": "statement",
+              "role": "fixed-palette logarithmic-pathwidth hardness"
+            }
+          ],
+          "statement": "Under FPT ≠ W[1], no deterministic algorithm decides 3-Coloring within the stated running time.",
+          "status": "established",
+          "supported": true
+        }
+      ],
+      "coverage": "Deterministic ETH and FPT ≠ W[1] bounds.",
+      "encoding": "A finite simple undirected graph G.",
+      "id": "3-coloring-treewidth",
+      "inputConditions": [],
+      "kind": "lower-bound-case",
+      "parameter": "The intrinsic treewidth t of G.",
+      "problemDefinitionHash": "cb2d7d5306bea1214e39349bb9aa3cc330bd40aa880f922d1d02dbeaf9b383d6",
+      "problemId": "3-coloring",
+      "problemRevision": 1,
+      "reader": {
+        "anchor": "treewidth",
+        "parameter": "The intrinsic treewidth t of G.",
+        "parameterLabel": "Treewidth",
+        "parameterSymbols": [
+          {
+            "meaning": "treewidth of G",
+            "symbol": "t"
+          }
+        ],
+        "symbols": [
+          {
+            "meaning": "number of vertices of G",
+            "symbol": "n"
+          },
+          {
+            "meaning": "complete binary input length",
+            "symbol": "N"
+          }
+        ]
+      },
+      "recoveryAssessments": [
+        {
+          "comparison": "The bound reaches the historical treewidth exponent scale on the same inputs, with a computable cutoff for each prescribed saving.",
+          "effective": true,
+          "evidence": [
+            {
+              "editionId": "journal",
+              "locator": "§4.3, Lemma 4 and Claim 12",
+              "paperId": "bodlaender2025-linear-structure",
+              "placement": "statement",
+              "role": "fixed-palette logarithmic-pathwidth hardness"
+            }
+          ],
+          "hypothesis": {
+            "id": "w1",
+            "revision": 1
+          },
+          "recoveredScale": "t",
+          "recovery": {
+            "id": "3-coloring-treewidth-w1",
+            "revision": 1
+          },
+          "scale": "full",
+          "target": {
+            "id": "3-coloring-treewidth-eth",
+            "revision": 1
+          },
+          "targetScale": "t"
+        }
+      ],
+      "recoveryComparisons": [
+        {
+          "hypothesis": {
+            "id": "kxk",
+            "revision": 1
+          },
+          "status": "unresolved",
+          "target": {
+            "id": "3-coloring-treewidth-eth",
+            "revision": 1
+          }
+        },
+        {
+          "hypothesis": {
+            "id": "np_qp",
+            "revision": 1
+          },
+          "status": "unresolved",
+          "target": {
+            "id": "3-coloring-treewidth-eth",
+            "revision": 1
+          }
+        },
+        {
+          "hypothesis": {
+            "id": "sh",
+            "revision": 1
+          },
+          "status": "unresolved",
+          "target": {
+            "id": "3-coloring-treewidth-eth",
+            "revision": 1
+          }
+        },
+        {
+          "comparison": "The bound reaches the historical treewidth exponent scale on the same inputs, with a computable cutoff for each prescribed saving.",
+          "effective": true,
+          "evidence": [
+            {
+              "editionId": "journal",
+              "locator": "§4.3, Lemma 4 and Claim 12",
+              "paperId": "bodlaender2025-linear-structure",
+              "placement": "statement",
+              "role": "fixed-palette logarithmic-pathwidth hardness"
+            }
+          ],
+          "hypothesis": {
+            "id": "w1",
+            "revision": 1
+          },
+          "recoveredScale": "t",
+          "recovery": {
+            "id": "3-coloring-treewidth-w1",
+            "revision": 1
+          },
+          "scale": "full",
+          "status": "effective",
+          "target": {
+            "id": "3-coloring-treewidth-eth",
+            "revision": 1
+          },
+          "targetScale": "t"
+        }
+      ],
+      "resolutions": [],
+      "revision": 1,
+      "task": "Can the vertices of G be colored with at most three colors so that adjacent vertices have different colors?",
+      "title": "3-Coloring by treewidth",
+      "variant": "3-Coloring"
+    },
+    {
       "aliases": [
         "book-balanced-vertex-separator-budget"
       ],
@@ -480,13 +705,112 @@
             },
             {
               "editionId": "bulletin",
-              "locator": "Theorem 6.3, the treewidth bound for Chromatic Number",
+              "locator": "Theorem 6.3, p. 62",
               "paperId": "lms2011",
               "placement": "statement",
               "role": "explicit benchmark statement"
             }
           ],
           "statement": "Under ETH, no deterministic algorithm decides Chromatic Number within the stated running time.",
+          "status": "established",
+          "supported": true
+        },
+        {
+          "assessments": {},
+          "assumptionOperator": "all",
+          "assumptions": [
+            {
+              "id": "eth",
+              "revision": 1
+            }
+          ],
+          "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+          "id": "chromatic-tw-fixed-q-eth",
+          "inputConditions": [
+            "fixed-color-budget"
+          ],
+          "inputFactor": "n^(O(1))",
+          "proofs": [],
+          "provenance": "literature",
+          "qualifications": [
+            "For every fixed integer q ≥ 3."
+          ],
+          "reader": {
+            "label": "Subexponential bound in treewidth · Fixed number of colors",
+            "revision": 1,
+            "title": "Subexponential bound in treewidth under ETH · Fixed number of colors"
+          },
+          "reviewIds": [],
+          "revision": 1,
+          "runtime": "2^(o(t)) n^(O(1))",
+          "runtimeSymbols": [
+            "t",
+            "n"
+          ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "For fixed q, add a clique of q−3 vertices adjacent to every vertex of the 3-Coloring instance. These vertices use q−3 colors and increase treewidth by at most q−3. The new graph has at most q colors exactly when the original graph has at most three."
+          },
+          "sources": [
+            {
+              "editionId": "bulletin",
+              "locator": "Theorem 3.2, PDF p. 12",
+              "paperId": "lms2011",
+              "placement": "statement",
+              "role": "3-Coloring graph-order lower bound"
+            }
+          ],
+          "statement": "Under ETH, no deterministic algorithm decides Chromatic Number within the stated running time.",
+          "status": "established",
+          "supported": true
+        },
+        {
+          "assessments": {},
+          "assumptionOperator": "all",
+          "assumptions": [
+            {
+              "id": "w1",
+              "revision": 1
+            }
+          ],
+          "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+          "exponentDomain": "nonnegative",
+          "id": "chromatic-tw-fixed-q-w1",
+          "inputConditions": [
+            "fixed-color-budget"
+          ],
+          "inputFactor": "N^(O(1))",
+          "proofs": [],
+          "provenance": "literature",
+          "qualifications": [
+            "For every fixed integer q ≥ 3."
+          ],
+          "reader": {
+            "label": "Effective subexponential bound in treewidth · Fixed number of colors",
+            "revision": 1,
+            "title": "Effective subexponential bound in treewidth under FPT ≠ W[1] · Fixed number of colors"
+          },
+          "reviewIds": [],
+          "revision": 1,
+          "runtime": "2^(o_eff(t)) N^(O(1))",
+          "runtimeSymbols": [
+            "t",
+            "N"
+          ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "The logarithmic-pathwidth hardness gives a fixed-parameter reduction from Clique whose output pathwidth is at most a computable parameter factor times the logarithm of the graph order. Treewidth is at most that pathwidth. The effective cutoff would turn the claimed solver into a fixed-parameter algorithm for Clique."
+          },
+          "sources": [
+            {
+              "editionId": "journal",
+              "locator": "§4.3, Lemma 4 and Claim 12",
+              "paperId": "bodlaender2025-linear-structure",
+              "placement": "statement",
+              "role": "fixed-palette logarithmic-pathwidth hardness"
+            }
+          ],
+          "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Chromatic Number within the stated running time.",
           "status": "established",
           "supported": true
         },
@@ -560,17 +884,20 @@
             "t",
             "N"
           ],
-          "sourceBasis": {
-            "kind": "derived",
-            "step": "Lemma 4 fixes the number of colors q. In its construction for a Chained Positive CNF-SAT instance of length S and parameter k, choose q of order √(log S). Encoding the choices in base q uses at most 1+log_q S digits per group. The connector branches can be processed separately, so Claim 12 bounds the width by 2k(1+log_q S)+3. Adding a clique of q colors enforces the lists at an additional width cost of at most q. The graph still has polynomial size, and t log₂(t+2) is at most a computable function of k times 1+log₂ S. Composing with the Clique reduction supplied by Theorem 9, the effective cutoff would turn a solver within the displayed time into an FPT algorithm for Clique."
-          },
           "sources": [
             {
+              "editionId": "arxiv-v2",
+              "locator": "Table 1, Proposition 1 and its proof in §3",
+              "paperId": "molter2026-running-time",
+              "placement": "statement",
+              "role": "variable-budget adaptation and effective running-time lower bound"
+            },
+            {
               "editionId": "journal",
-              "locator": "Theorem 9, Lemma 4 and Claim 12.",
+              "locator": "Theorem 9, Lemma 4 and Claim 12",
               "paperId": "bodlaender2025-linear-structure",
               "placement": "statement",
-              "role": "source construction for the unrestricted bound"
+              "role": "construction adapted in Molter’s Proposition 1"
             }
           ],
           "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Chromatic Number within the stated running time.",
@@ -580,8 +907,243 @@
       ],
       "coverage": "Deterministic ETH and SH bounds.",
       "encoding": "A finite simple undirected graph G and a positive integer ℓ.",
+      "history": [
+        {
+          "aliases": [
+            "Chromatic Number parameterized by treewidth"
+          ],
+          "bounds": [
+            {
+              "assumptionOperator": "all",
+              "assumptions": [
+                {
+                  "id": "eth",
+                  "revision": 1
+                }
+              ],
+              "id": "chromatic-tw-eth",
+              "inputConditions": [],
+              "inputFactor": "n^(O(1))",
+              "proofs": [],
+              "provenance": "literature",
+              "qualifications": [],
+              "reader": {
+                "label": "Slightly superexponential bound",
+                "revision": 1
+              },
+              "revision": 1,
+              "runtime": "2^(o(t log₂ t)) n^(O(1))",
+              "runtimeSymbols": [
+                "t",
+                "n"
+              ],
+              "sources": [
+                {
+                  "editionId": "journal",
+                  "locator": "Theorem 6.1 and its cover-size bound, pp. 698–699, with treewidth bounded by vertex cover number",
+                  "paperId": "lms2018",
+                  "placement": "statement",
+                  "role": "published reduction"
+                },
+                {
+                  "editionId": "bulletin",
+                  "locator": "Theorem 6.3, the treewidth bound for Chromatic Number",
+                  "paperId": "lms2011",
+                  "placement": "statement",
+                  "role": "explicit benchmark statement"
+                }
+              ],
+              "statement": "Under ETH, no deterministic algorithm decides Chromatic Number within the stated running time.",
+              "status": "established"
+            },
+            {
+              "assumptionOperator": "all",
+              "assumptions": [
+                {
+                  "id": "sh",
+                  "revision": 1
+                }
+              ],
+              "id": "chromatic-tw-sh",
+              "inputConditions": [],
+              "inputFactor": "N^(O(1))",
+              "proofs": [],
+              "provenance": "literature",
+              "qualifications": [
+                "For every fixed 0 < ε < 1."
+              ],
+              "reader": {
+                "label": "Fixed-power bounds",
+                "revision": 1
+              },
+              "revision": 1,
+              "runtime": "2^(O(t^(1−ε))) N^(O(1))",
+              "runtimeSymbols": [
+                "t",
+                "N"
+              ],
+              "sources": [
+                {
+                  "editionId": "v2",
+                  "locator": "Table 1, Chromatic Number row and footnote d, p. 4, and Theorem 3.1, p. 8",
+                  "paperId": "sh26",
+                  "placement": "statement",
+                  "role": "preprint lower bound"
+                }
+              ],
+              "statement": "Under SH, no deterministic algorithm decides Chromatic Number within the stated running time.",
+              "status": "established"
+            },
+            {
+              "assumptionOperator": "all",
+              "assumptions": [
+                {
+                  "id": "w1",
+                  "revision": 1
+                }
+              ],
+              "exponentDomain": "nonnegative",
+              "id": "chromatic-tw-w1",
+              "inputConditions": [],
+              "inputFactor": "N^(O(1))",
+              "proofs": [],
+              "provenance": "literature",
+              "qualifications": [],
+              "reader": {
+                "label": "Effective little-o bound in the treewidth",
+                "revision": 1
+              },
+              "revision": 1,
+              "runtime": "2^(o_eff(t log₂ t)) N^(O(1))",
+              "runtimeSymbols": [
+                "t",
+                "N"
+              ],
+              "sourceBasis": {
+                "kind": "derived",
+                "step": "Lemma 4 fixes the number of colors q. In its construction for a Chained Positive CNF-SAT instance of length S and parameter k, choose q of order √(log S). Encoding the choices in base q uses at most 1+log_q S digits per group. The connector branches can be processed separately, so Claim 12 bounds the width by 2k(1+log_q S)+3. Adding a clique of q colors enforces the lists at an additional width cost of at most q. The graph still has polynomial size, and t log₂(t+2) is at most a computable function of k times 1+log₂ S. Composing with the Clique reduction supplied by Theorem 9, the effective cutoff would turn a solver within the displayed time into an FPT algorithm for Clique."
+              },
+              "sources": [
+                {
+                  "editionId": "journal",
+                  "locator": "Theorem 9, Lemma 4 and Claim 12.",
+                  "paperId": "bodlaender2025-linear-structure",
+                  "placement": "statement",
+                  "role": "source construction for the unrestricted bound"
+                }
+              ],
+              "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Chromatic Number within the stated running time.",
+              "status": "established"
+            }
+          ],
+          "coverage": "Deterministic ETH and SH bounds.",
+          "encoding": "A finite simple undirected graph G and a positive integer ℓ.",
+          "id": "chromatic-number-treewidth",
+          "inputConditions": [],
+          "kind": "lower-bound-case",
+          "parameter": "The treewidth t of G.",
+          "problemDefinitionHash": "c8e3140a0aa9565f3bf5539eef4510570437e78f14e5838a5980852b66d1f794",
+          "problemId": "chromatic-number",
+          "problemRevision": 1,
+          "reader": {
+            "parameterLabel": "Treewidth",
+            "parameterSymbols": [
+              {
+                "meaning": "treewidth of G",
+                "symbol": "t"
+              }
+            ],
+            "symbols": [
+              {
+                "meaning": "number of vertices of G",
+                "symbol": "n"
+              },
+              {
+                "meaning": "complete binary input length",
+                "symbol": "N"
+              }
+            ]
+          },
+          "recoveryAssessments": [
+            {
+              "comparison": "The exclusion reaches the historical exponent scale t log₂ t for exponents with effective convergence.",
+              "effective": true,
+              "evidence": [
+                {
+                  "editionId": "journal",
+                  "locator": "Theorem 9, Lemma 4 and Claim 12.",
+                  "paperId": "bodlaender2025-linear-structure",
+                  "placement": "statement",
+                  "role": "source construction for the unrestricted bound"
+                }
+              ],
+              "hypothesis": {
+                "id": "w1",
+                "revision": 1
+              },
+              "recoveredScale": "t log₂ t",
+              "recovery": {
+                "id": "chromatic-tw-w1",
+                "revision": 1
+              },
+              "scale": "full",
+              "target": {
+                "id": "chromatic-tw-eth",
+                "revision": 1
+              },
+              "targetScale": "t log₂ t"
+            },
+            {
+              "comparison": "SH excludes every fixed exponent power below one in the treewidth t. This recovers degree one. The historical little-o family at t log₂ t remains unrecovered.",
+              "effective": false,
+              "evidence": [
+                {
+                  "editionId": "v2",
+                  "locator": "Table 1, Chromatic Number row and footnote d, p. 4, and Theorem 3.1, p. 8",
+                  "paperId": "sh26",
+                  "placement": "statement",
+                  "role": "preprint lower bound"
+                },
+                {
+                  "editionId": "journal",
+                  "locator": "Theorem 6.1 and its cover-size bound, pp. 698–699, with treewidth bounded by vertex cover number",
+                  "paperId": "lms2018",
+                  "placement": "statement",
+                  "role": "published reduction"
+                }
+              ],
+              "hypothesis": {
+                "id": "sh",
+                "revision": 1
+              },
+              "recoveredScale": "t^(1−ε)",
+              "recovery": {
+                "id": "chromatic-tw-sh",
+                "revision": 1
+              },
+              "scale": "degree",
+              "target": {
+                "id": "chromatic-tw-eth",
+                "revision": 1
+              },
+              "targetScale": "t log₂ t"
+            }
+          ],
+          "resolutions": [],
+          "revision": 3,
+          "task": "Can the vertices of G be colored with at most ℓ colors so that adjacent vertices have different colors?",
+          "title": "Chromatic Number by treewidth",
+          "variant": "Undirected graph coloring with an input color budget"
+        }
+      ],
       "id": "chromatic-number-treewidth",
-      "inputConditions": [],
+      "inputConditions": [
+        {
+          "condition": "The input color budget is the fixed integer q.",
+          "id": "fixed-color-budget",
+          "level": "bound"
+        }
+      ],
       "kind": "lower-bound-case",
       "parameter": "The treewidth t of G.",
       "problemDefinitionHash": "c8e3140a0aa9565f3bf5539eef4510570437e78f14e5838a5980852b66d1f794",
@@ -612,11 +1174,18 @@
           "effective": true,
           "evidence": [
             {
+              "editionId": "arxiv-v2",
+              "locator": "Table 1, Proposition 1 and its proof in §3",
+              "paperId": "molter2026-running-time",
+              "placement": "statement",
+              "role": "variable-budget adaptation and effective running-time lower bound"
+            },
+            {
               "editionId": "journal",
-              "locator": "Theorem 9, Lemma 4 and Claim 12.",
+              "locator": "Theorem 9, Lemma 4 and Claim 12",
               "paperId": "bodlaender2025-linear-structure",
               "placement": "statement",
-              "role": "source construction for the unrestricted bound"
+              "role": "construction adapted in Molter’s Proposition 1"
             }
           ],
           "hypothesis": {
@@ -669,6 +1238,34 @@
             "revision": 1
           },
           "targetScale": "t log₂ t"
+        },
+        {
+          "comparison": "The bound reaches the historical treewidth exponent scale on the same inputs, with a computable cutoff for each prescribed saving.",
+          "effective": true,
+          "evidence": [
+            {
+              "editionId": "journal",
+              "locator": "§4.3, Lemma 4 and Claim 12",
+              "paperId": "bodlaender2025-linear-structure",
+              "placement": "statement",
+              "role": "fixed-palette logarithmic-pathwidth hardness"
+            }
+          ],
+          "hypothesis": {
+            "id": "w1",
+            "revision": 1
+          },
+          "recoveredScale": "t",
+          "recovery": {
+            "id": "chromatic-tw-fixed-q-w1",
+            "revision": 1
+          },
+          "scale": "full",
+          "target": {
+            "id": "chromatic-tw-fixed-q-eth",
+            "revision": 1
+          },
+          "targetScale": "t"
         }
       ],
       "recoveryComparisons": [
@@ -735,11 +1332,18 @@
           "effective": true,
           "evidence": [
             {
+              "editionId": "arxiv-v2",
+              "locator": "Table 1, Proposition 1 and its proof in §3",
+              "paperId": "molter2026-running-time",
+              "placement": "statement",
+              "role": "variable-budget adaptation and effective running-time lower bound"
+            },
+            {
               "editionId": "journal",
-              "locator": "Theorem 9, Lemma 4 and Claim 12.",
+              "locator": "Theorem 9, Lemma 4 and Claim 12",
               "paperId": "bodlaender2025-linear-structure",
               "placement": "statement",
-              "role": "source construction for the unrestricted bound"
+              "role": "construction adapted in Molter’s Proposition 1"
             }
           ],
           "hypothesis": {
@@ -758,10 +1362,72 @@
             "revision": 1
           },
           "targetScale": "t log₂ t"
+        },
+        {
+          "hypothesis": {
+            "id": "kxk",
+            "revision": 1
+          },
+          "status": "unresolved",
+          "target": {
+            "id": "chromatic-tw-fixed-q-eth",
+            "revision": 1
+          }
+        },
+        {
+          "hypothesis": {
+            "id": "np_qp",
+            "revision": 1
+          },
+          "status": "unresolved",
+          "target": {
+            "id": "chromatic-tw-fixed-q-eth",
+            "revision": 1
+          }
+        },
+        {
+          "hypothesis": {
+            "id": "sh",
+            "revision": 1
+          },
+          "status": "unresolved",
+          "target": {
+            "id": "chromatic-tw-fixed-q-eth",
+            "revision": 1
+          }
+        },
+        {
+          "comparison": "The bound reaches the historical treewidth exponent scale on the same inputs, with a computable cutoff for each prescribed saving.",
+          "effective": true,
+          "evidence": [
+            {
+              "editionId": "journal",
+              "locator": "§4.3, Lemma 4 and Claim 12",
+              "paperId": "bodlaender2025-linear-structure",
+              "placement": "statement",
+              "role": "fixed-palette logarithmic-pathwidth hardness"
+            }
+          ],
+          "hypothesis": {
+            "id": "w1",
+            "revision": 1
+          },
+          "recoveredScale": "t",
+          "recovery": {
+            "id": "chromatic-tw-fixed-q-w1",
+            "revision": 1
+          },
+          "scale": "full",
+          "status": "effective",
+          "target": {
+            "id": "chromatic-tw-fixed-q-eth",
+            "revision": 1
+          },
+          "targetScale": "t"
         }
       ],
       "resolutions": [],
-      "revision": 3,
+      "revision": 4,
       "task": "Can the vertices of G be colored with at most ℓ colors so that adjacent vertices have different colors?",
       "title": "Chromatic Number by treewidth",
       "variant": "Undirected graph coloring with an input color budget"
@@ -2902,6 +3568,238 @@
       "variant": "Cluster Editing"
     },
     {
+      "aliases": [],
+      "bounds": [
+        {
+          "assessments": {},
+          "assumptionOperator": "all",
+          "assumptions": [
+            {
+              "id": "eth",
+              "revision": 1
+            }
+          ],
+          "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+          "id": "cnf-sat-variables-eth",
+          "inputConditions": [],
+          "inputFactor": "L^(O(1))",
+          "proofs": [],
+          "provenance": "literature",
+          "qualifications": [],
+          "reader": {
+            "label": "Historical subexponential-time exclusion",
+            "revision": 1
+          },
+          "reviewIds": [],
+          "revision": 1,
+          "runtime": "2^(o(n)) L^(O(1))",
+          "runtimeSymbols": [
+            "n",
+            "L"
+          ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "A CNF-SAT algorithm with the stated running time applies in particular to width-three formulas with the same variable count."
+          },
+          "sources": [
+            {
+              "editionId": "journal",
+              "locator": "Introduction and Corollary 1",
+              "paperId": "ipz2001",
+              "placement": "statement",
+              "role": "historical 3SAT hypothesis by number of variables"
+            }
+          ],
+          "statement": "Under ETH, no deterministic algorithm decides CNF-SAT within the stated running time.",
+          "status": "established",
+          "supported": true
+        },
+        {
+          "assessments": {},
+          "assumptionOperator": "all",
+          "assumptions": [
+            {
+              "id": "w1",
+              "revision": 1
+            }
+          ],
+          "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+          "exponentDomain": "nonnegative",
+          "id": "cnf-sat-variables-w1-effective",
+          "inputConditions": [],
+          "inputFactor": "L^(O(1))",
+          "proofs": [],
+          "provenance": "literature",
+          "qualifications": [],
+          "reader": {
+            "label": "Effective subexponential-time exclusion",
+            "revision": 1
+          },
+          "reviewIds": [],
+          "revision": 1,
+          "runtime": "2^(o_eff(n)) L^(O(1))",
+          "runtimeSymbols": [
+            "n",
+            "L"
+          ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "For each paired variable pair in the Cai–Juedes construction, two CNF clauses enforce exactly one true variable without adding variables. The CNF has O(h log r) variables for source weight h and r source variables. A computable exponent cutoff then bounds CNF-SAT time by a fixed power of r times a computable function of h, which would decide the W[1]-hard source problem in FPT time."
+          },
+          "sources": [
+            {
+              "editionId": "journal",
+              "locator": "Lemma 3.1 and Corollary 3.1, §3, pp. 796–799",
+              "paperId": "cai-juedes2003",
+              "placement": "statement",
+              "role": "paired-variable SAT reduction"
+            }
+          ],
+          "statement": "Under FPT ≠ W[1], no deterministic algorithm decides CNF-SAT within the stated running time.",
+          "status": "established",
+          "supported": true
+        }
+      ],
+      "coverage": "Historical ETH and effective bounds under FPT ≠ W[1].",
+      "encoding": "An explicitly listed Boolean CNF formula with no fixed bound on clause width.",
+      "id": "cnf-sat-variables",
+      "inputConditions": [],
+      "kind": "lower-bound-case",
+      "parameter": "The number of occurring variables n.",
+      "problemDefinitionHash": "54cf10990fe9340228a42aed97a04ed82b03121133efa71b568e030acd07d735",
+      "problemId": "cnf-sat",
+      "problemRevision": 1,
+      "reader": {
+        "parameter": "The number of occurring variables n.",
+        "parameterLabel": "Number of variables",
+        "parameterSymbols": [
+          {
+            "meaning": "number of occurring variables",
+            "symbol": "n"
+          }
+        ],
+        "symbols": [
+          {
+            "meaning": "complete binary formula input length",
+            "symbol": "L"
+          }
+        ]
+      },
+      "recoveryAssessments": [
+        {
+          "comparison": "Both exclusions use the number of occurring variables. The recovery requires a computable convergence cutoff and uses the same polynomial factor in the complete input length.",
+          "effective": true,
+          "evidence": [
+            {
+              "editionId": "journal",
+              "locator": "Lemma 3.1 and Corollary 3.1, §3, pp. 796–799",
+              "paperId": "cai-juedes2003",
+              "placement": "statement",
+              "role": "paired-variable SAT reduction"
+            },
+            {
+              "editionId": "journal",
+              "locator": "Introduction and Corollary 1",
+              "paperId": "ipz2001",
+              "placement": "statement",
+              "role": "historical 3SAT hypothesis by number of variables"
+            }
+          ],
+          "hypothesis": {
+            "id": "w1",
+            "revision": 1
+          },
+          "recoveredScale": "n",
+          "recovery": {
+            "id": "cnf-sat-variables-w1-effective",
+            "revision": 1
+          },
+          "scale": "full",
+          "target": {
+            "id": "cnf-sat-variables-eth",
+            "revision": 1
+          },
+          "targetScale": "n"
+        }
+      ],
+      "recoveryComparisons": [
+        {
+          "hypothesis": {
+            "id": "kxk",
+            "revision": 1
+          },
+          "status": "unresolved",
+          "target": {
+            "id": "cnf-sat-variables-eth",
+            "revision": 1
+          }
+        },
+        {
+          "hypothesis": {
+            "id": "np_qp",
+            "revision": 1
+          },
+          "status": "unresolved",
+          "target": {
+            "id": "cnf-sat-variables-eth",
+            "revision": 1
+          }
+        },
+        {
+          "hypothesis": {
+            "id": "sh",
+            "revision": 1
+          },
+          "status": "unresolved",
+          "target": {
+            "id": "cnf-sat-variables-eth",
+            "revision": 1
+          }
+        },
+        {
+          "comparison": "Both exclusions use the number of occurring variables. The recovery requires a computable convergence cutoff and uses the same polynomial factor in the complete input length.",
+          "effective": true,
+          "evidence": [
+            {
+              "editionId": "journal",
+              "locator": "Lemma 3.1 and Corollary 3.1, §3, pp. 796–799",
+              "paperId": "cai-juedes2003",
+              "placement": "statement",
+              "role": "paired-variable SAT reduction"
+            },
+            {
+              "editionId": "journal",
+              "locator": "Introduction and Corollary 1",
+              "paperId": "ipz2001",
+              "placement": "statement",
+              "role": "historical 3SAT hypothesis by number of variables"
+            }
+          ],
+          "hypothesis": {
+            "id": "w1",
+            "revision": 1
+          },
+          "recoveredScale": "n",
+          "recovery": {
+            "id": "cnf-sat-variables-w1-effective",
+            "revision": 1
+          },
+          "scale": "full",
+          "status": "effective",
+          "target": {
+            "id": "cnf-sat-variables-eth",
+            "revision": 1
+          },
+          "targetScale": "n"
+        }
+      ],
+      "resolutions": [],
+      "revision": 1,
+      "task": "Does the formula have a satisfying assignment?",
+      "title": "CNF-SAT by number of variables",
+      "variant": "Boolean CNF satisfiability"
+    },
+    {
       "aliases": [
         "book-connected-dominating-set-budget"
       ],
@@ -4399,6 +5297,58 @@
           "supported": true
         },
         {
+          "assessments": {},
+          "assumptionOperator": "all",
+          "assumptions": [
+            {
+              "id": "w1",
+              "revision": 1
+            }
+          ],
+          "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+          "exponentDomain": "nonnegative",
+          "id": "dv-w1-effective",
+          "inputConditions": [],
+          "inputFactor": "N^(O(1))",
+          "proofs": [],
+          "provenance": "literature",
+          "qualifications": [],
+          "reader": {
+            "label": "Effective double-exponential bound",
+            "revision": 1
+          },
+          "reviewIds": [],
+          "revision": 1,
+          "runtime": "2^(o_eff(2^k)) N^(O(1))",
+          "runtimeSymbols": [
+            "k",
+            "N"
+          ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "Lin’s Set Cover reduction has a universe of size O(h³ log n) and a budget depending only on h for an n-vertex Multicolored Clique instance with h colors. Froese’s binary address forces one column per address bit, and the two rows at each address must be separated by a selected set containing the corresponding element. The extra budget is the ceiling of the logarithm of the universe size, so 2^k ≤ g(h)(1+log n) for a computable g. Reject a universe element with no incident set before building the matrix. A computable cutoff for an exponent in o_eff(2^k) gives a fixed-parameter algorithm for Multicolored Clique."
+          },
+          "sources": [
+            {
+              "editionId": "proceedings",
+              "locator": "Lemma 14 and proof, §3.4, pp. 81:11–81:12",
+              "paperId": "lin2019",
+              "placement": "statement",
+              "role": "Set Cover reduction with a logarithmic-size universe"
+            },
+            {
+              "editionId": "thesis",
+              "locator": "Theorem 4.1 and proof, §4.1.1, pp. 33–34",
+              "paperId": "froese2012-binary-distinct-vectors",
+              "placement": "statement",
+              "role": "binary address reduction from Hitting Set"
+            }
+          ],
+          "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Distinct Vectors within the stated running time.",
+          "status": "established",
+          "supported": true
+        },
+        {
           "assessments": {
             "eth": {
               "converse": {
@@ -4456,20 +5406,24 @@
             "k",
             "N"
           ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "Lin’s Set Cover reduction has a universe of size O(h³ log n) and a budget depending only on h for an n-vertex Multicolored Clique instance with h colors. Froese’s binary address forces one column per address bit, and the two rows at each address must be separated by a selected set containing the corresponding element. The extra budget is the ceiling of the logarithm of the universe size, so 2^k ≤ g(h)(1+log n) for a computable g. Reject a universe element with no incident set before building the matrix. A computable cutoff for an exponent in o_eff(2^k) gives a fixed-parameter algorithm for Multicolored Clique. For each fixed γ < 1, the exponent O(2^(γ k)) admits such a cutoff."
+          },
           "sources": [
-            {
-              "editionId": "arxiv-v2",
-              "locator": "§3, Consequences of Lin’s Set Cover reduction, pp. 11–12",
-              "paperId": "molter2026-running-time",
-              "placement": "statement",
-              "role": "fixed-coefficient consequence of the effective lower bound"
-            },
             {
               "editionId": "proceedings",
               "locator": "Lemma 14 and proof, §3.4, pp. 81:11–81:12",
               "paperId": "lin2019",
               "placement": "statement",
-              "role": "Set Cover construction with a logarithmic-size universe"
+              "role": "Set Cover reduction with a logarithmic-size universe"
+            },
+            {
+              "editionId": "thesis",
+              "locator": "Theorem 4.1 and proof, §4.1.1, pp. 33–34",
+              "paperId": "froese2012-binary-distinct-vectors",
+              "placement": "statement",
+              "role": "binary address reduction from Hitting Set"
             }
           ],
           "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Distinct Vectors within the stated running time.",
@@ -4477,8 +5431,239 @@
           "supported": true
         }
       ],
-      "coverage": "The published ETH bound and the fixed-coefficient bound under FPT ≠ W[1] for the column budget.",
+      "coverage": "Historical ETH and effective and fixed-coefficient bounds under FPT ≠ W[1] for the column budget.",
       "encoding": "Explicit binary matrix with m rows and n columns and an integer budget k.",
+      "history": [
+        {
+          "aliases": [
+            "Binary Distinct Vectors",
+            "Binary Test Cover"
+          ],
+          "bounds": [
+            {
+              "assessments": {
+                "eth": {
+                  "converse": {
+                    "evidence": [],
+                    "status": "unassessed"
+                  },
+                  "forward": {
+                    "evidence": [],
+                    "status": "unassessed"
+                  },
+                  "hypothesisRevision": 1
+                },
+                "sh": {
+                  "converse": {
+                    "evidence": [],
+                    "status": "unassessed"
+                  },
+                  "forward": {
+                    "evidence": [],
+                    "status": "unassessed"
+                  },
+                  "hypothesisRevision": 1
+                }
+              },
+              "assumptionOperator": "all",
+              "assumptions": [
+                {
+                  "id": "eth",
+                  "revision": 1
+                }
+              ],
+              "id": "dv-eth-column-budget",
+              "inputConditions": [],
+              "inputFactor": "(m+n)^(O(1))",
+              "proofs": [],
+              "provenance": "literature",
+              "qualifications": [
+                "For every fixed ε > 0, let c = 1/2 − ε."
+              ],
+              "reader": {
+                "label": "Double-exponential bound",
+                "revision": 1
+              },
+              "revision": 1,
+              "runtime": "2^(O(2^(c k))) (m+n)^(O(1))",
+              "runtimeSymbols": [
+                "k",
+                "m",
+                "n"
+              ],
+              "sources": [
+                {
+                  "editionId": "journal",
+                  "locator": "Theorem 1, p. 1",
+                  "paperId": "ps2020",
+                  "placement": "statement",
+                  "role": "benchmark"
+                }
+              ],
+              "statement": "Under ETH, no deterministic algorithm decides Distinct Vectors within the stated running time.",
+              "status": "established"
+            },
+            {
+              "assessments": {
+                "eth": {
+                  "converse": {
+                    "evidence": [],
+                    "status": "unassessed"
+                  },
+                  "forward": {
+                    "evidence": [],
+                    "status": "unassessed"
+                  },
+                  "hypothesisRevision": 1
+                },
+                "sh": {
+                  "converse": {
+                    "evidence": [],
+                    "status": "unassessed"
+                  },
+                  "forward": {
+                    "evidence": [],
+                    "status": "unassessed"
+                  },
+                  "hypothesisRevision": 1
+                }
+              },
+              "assumptionOperator": "all",
+              "assumptions": [
+                {
+                  "id": "w1",
+                  "revision": 1
+                }
+              ],
+              "id": "dv-w1-fixed-coefficient",
+              "inputConditions": [],
+              "inputFactor": "N^(O(1))",
+              "proofs": [],
+              "provenance": "literature",
+              "qualifications": [
+                "For every fixed 0 < γ < 1."
+              ],
+              "reader": {
+                "label": "Double-exponential bound",
+                "revision": 1
+              },
+              "revision": 1,
+              "runtime": "2^(O(2^(γ k))) N^(O(1))",
+              "runtimeSymbols": [
+                "k",
+                "N"
+              ],
+              "sources": [
+                {
+                  "editionId": "arxiv-v2",
+                  "locator": "§3, Consequences of Lin’s Set Cover reduction, pp. 11–12",
+                  "paperId": "molter2026-running-time",
+                  "placement": "statement",
+                  "role": "fixed-coefficient consequence of the effective lower bound"
+                },
+                {
+                  "editionId": "proceedings",
+                  "locator": "Lemma 14 and proof, §3.4, pp. 81:11–81:12",
+                  "paperId": "lin2019",
+                  "placement": "statement",
+                  "role": "Set Cover construction with a logarithmic-size universe"
+                }
+              ],
+              "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Distinct Vectors within the stated running time.",
+              "status": "established"
+            }
+          ],
+          "coverage": "The published ETH bound and the fixed-coefficient bound under FPT ≠ W[1] for the column budget.",
+          "encoding": "Explicit binary matrix with m rows and n columns and an integer budget k.",
+          "id": "distinct-vectors-budget",
+          "inputConditions": [
+            {
+              "condition": "The rows are pairwise distinct.",
+              "id": "distinct-rows",
+              "level": "problem"
+            }
+          ],
+          "kind": "lower-bound-case",
+          "parameter": "Number of selected columns k",
+          "problemDefinitionHash": "da29b648fc0b00df95164f86cd2dad9b07223e338b680d8e70f867bf81297225",
+          "problemId": "distinct-vectors",
+          "problemRevision": 1,
+          "reader": {
+            "boundContext": "The binary matrix has m rows and n columns; k is the column budget.",
+            "parameter": "The column budget k.",
+            "parameterLabel": "Number of selected columns",
+            "parameterSymbols": [
+              {
+                "meaning": "maximum number of selected columns",
+                "symbol": "k"
+              }
+            ],
+            "symbols": [
+              {
+                "meaning": "number of rows",
+                "symbol": "m"
+              },
+              {
+                "meaning": "number of columns",
+                "symbol": "n"
+              },
+              {
+                "meaning": "input length in bits, including the binary column budget",
+                "symbol": "N"
+              }
+            ]
+          },
+          "recoveryAssessments": [
+            {
+              "comparison": "The same binary matrix task is covered for every fixed 0 < γ < 1. For any historical coefficient c < 1/2, choose γ strictly between max(0,c) and 1 to exclude its running time.",
+              "effective": false,
+              "evidence": [
+                {
+                  "editionId": "arxiv-v2",
+                  "locator": "§3, Consequences of Lin’s Set Cover reduction, pp. 11–12",
+                  "paperId": "molter2026-running-time",
+                  "placement": "statement",
+                  "role": "fixed-coefficient consequence of the effective lower bound"
+                },
+                {
+                  "editionId": "proceedings",
+                  "locator": "Lemma 14 and proof, §3.4, pp. 81:11–81:12",
+                  "paperId": "lin2019",
+                  "placement": "statement",
+                  "role": "Set Cover construction with a logarithmic-size universe"
+                },
+                {
+                  "editionId": "journal",
+                  "locator": "Theorem 1, p. 1",
+                  "paperId": "ps2020",
+                  "placement": "statement",
+                  "role": "benchmark"
+                }
+              ],
+              "hypothesis": {
+                "id": "w1",
+                "revision": 1
+              },
+              "recoveredScale": "2^(γ k), 0 < γ < 1",
+              "recovery": {
+                "id": "dv-w1-fixed-coefficient",
+                "revision": 1
+              },
+              "scale": "full",
+              "target": {
+                "id": "dv-eth-column-budget",
+                "revision": 1
+              },
+              "targetScale": "2^(c k), c=1/2−ε"
+            }
+          ],
+          "resolutions": [],
+          "revision": 3,
+          "task": "Decide whether at most k columns distinguish all pairs of rows.",
+          "title": "Distinct Vectors",
+          "variant": "Selecting columns of a binary matrix"
+        }
+      ],
       "id": "distinct-vectors-budget",
       "inputConditions": [
         {
@@ -4523,18 +5708,18 @@
           "effective": false,
           "evidence": [
             {
-              "editionId": "arxiv-v2",
-              "locator": "§3, Consequences of Lin’s Set Cover reduction, pp. 11–12",
-              "paperId": "molter2026-running-time",
-              "placement": "statement",
-              "role": "fixed-coefficient consequence of the effective lower bound"
-            },
-            {
               "editionId": "proceedings",
               "locator": "Lemma 14 and proof, §3.4, pp. 81:11–81:12",
               "paperId": "lin2019",
               "placement": "statement",
-              "role": "Set Cover construction with a logarithmic-size universe"
+              "role": "Set Cover reduction with a logarithmic-size universe"
+            },
+            {
+              "editionId": "thesis",
+              "locator": "Theorem 4.1 and proof, §4.1.1, pp. 33–34",
+              "paperId": "froese2012-binary-distinct-vectors",
+              "placement": "statement",
+              "role": "binary address reduction from Hitting Set"
             },
             {
               "editionId": "journal",
@@ -4551,6 +5736,48 @@
           "recoveredScale": "2^(γ k), 0 < γ < 1",
           "recovery": {
             "id": "dv-w1-fixed-coefficient",
+            "revision": 1
+          },
+          "scale": "full",
+          "target": {
+            "id": "dv-eth-column-budget",
+            "revision": 1
+          },
+          "targetScale": "2^(c k), c=1/2−ε"
+        },
+        {
+          "comparison": "For every historical coefficient c < 1/2, O(2^(c k)) has a computable convergence cutoff relative to 2^k. The effective exclusion therefore covers the historical running-time family on the same binary matrices.",
+          "effective": false,
+          "evidence": [
+            {
+              "editionId": "proceedings",
+              "locator": "Lemma 14 and proof, §3.4, pp. 81:11–81:12",
+              "paperId": "lin2019",
+              "placement": "statement",
+              "role": "Set Cover reduction with a logarithmic-size universe"
+            },
+            {
+              "editionId": "thesis",
+              "locator": "Theorem 4.1 and proof, §4.1.1, pp. 33–34",
+              "paperId": "froese2012-binary-distinct-vectors",
+              "placement": "statement",
+              "role": "binary address reduction from Hitting Set"
+            },
+            {
+              "editionId": "journal",
+              "locator": "Theorem 1, p. 1",
+              "paperId": "ps2020",
+              "placement": "statement",
+              "role": "benchmark"
+            }
+          ],
+          "hypothesis": {
+            "id": "w1",
+            "revision": 1
+          },
+          "recoveredScale": "2^k",
+          "recovery": {
+            "id": "dv-w1-effective",
             "revision": 1
           },
           "scale": "full",
@@ -4600,18 +5827,18 @@
           "effective": false,
           "evidence": [
             {
-              "editionId": "arxiv-v2",
-              "locator": "§3, Consequences of Lin’s Set Cover reduction, pp. 11–12",
-              "paperId": "molter2026-running-time",
-              "placement": "statement",
-              "role": "fixed-coefficient consequence of the effective lower bound"
-            },
-            {
               "editionId": "proceedings",
               "locator": "Lemma 14 and proof, §3.4, pp. 81:11–81:12",
               "paperId": "lin2019",
               "placement": "statement",
-              "role": "Set Cover construction with a logarithmic-size universe"
+              "role": "Set Cover reduction with a logarithmic-size universe"
+            },
+            {
+              "editionId": "thesis",
+              "locator": "Theorem 4.1 and proof, §4.1.1, pp. 33–34",
+              "paperId": "froese2012-binary-distinct-vectors",
+              "placement": "statement",
+              "role": "binary address reduction from Hitting Set"
             },
             {
               "editionId": "journal",
@@ -4637,10 +5864,64 @@
             "revision": 1
           },
           "targetScale": "2^(c k), c=1/2−ε"
+        },
+        {
+          "comparison": "For every historical coefficient c < 1/2, O(2^(c k)) has a computable convergence cutoff relative to 2^k. The effective exclusion therefore covers the historical running-time family on the same binary matrices.",
+          "effective": false,
+          "evidence": [
+            {
+              "editionId": "proceedings",
+              "locator": "Lemma 14 and proof, §3.4, pp. 81:11–81:12",
+              "paperId": "lin2019",
+              "placement": "statement",
+              "role": "Set Cover reduction with a logarithmic-size universe"
+            },
+            {
+              "editionId": "thesis",
+              "locator": "Theorem 4.1 and proof, §4.1.1, pp. 33–34",
+              "paperId": "froese2012-binary-distinct-vectors",
+              "placement": "statement",
+              "role": "binary address reduction from Hitting Set"
+            },
+            {
+              "editionId": "journal",
+              "locator": "Theorem 1, p. 1",
+              "paperId": "ps2020",
+              "placement": "statement",
+              "role": "benchmark"
+            }
+          ],
+          "hypothesis": {
+            "id": "w1",
+            "revision": 1
+          },
+          "recoveredScale": "2^k",
+          "recovery": {
+            "id": "dv-w1-effective",
+            "revision": 1
+          },
+          "scale": "full",
+          "status": "recovered",
+          "target": {
+            "id": "dv-eth-column-budget",
+            "revision": 1
+          },
+          "targetScale": "2^(c k), c=1/2−ε"
         }
       ],
       "resolutions": [],
-      "revision": 3,
+      "revision": 4,
+      "supersessions": [
+        {
+          "hypothesis": "w1",
+          "problem": "distinct-vectors-budget",
+          "reason": "For every fixed γ < 1, the ratio 2^(γ k) / 2^k tends effectively to zero. The effective exclusion covers every fixed-coefficient bound on the same binary matrices.",
+          "stronger": "dv-w1-effective",
+          "strongerRevision": 1,
+          "weaker": "dv-w1-fixed-coefficient",
+          "weakerRevision": 1
+        }
+      ],
       "task": "Decide whether at most k columns distinguish all pairs of rows.",
       "title": "Distinct Vectors",
       "variant": "Selecting columns of a binary matrix"
@@ -5020,14 +6301,18 @@
                     "hypothesisRevision": 1,
                     "reviewId": "dominating-set-linear-rank-width-w1-effective-molter-source-review",
                     "source": {
-                      "editionId": "arxiv-v2",
-                      "locator": "Table 1 and §3, “Dominating Set with a supplied vertex order”",
-                      "paperId": "molter2026-running-time",
+                      "editionId": "v1",
+                      "locator": "Section 3.2, Lemmas 3.5–3.6, and Appendix C, proof of Theorem C.1",
+                      "paperId": "liu-meng2026-rankwidth",
                       "placement": "forward",
-                      "role": "effective running-time lower bound"
+                      "role": "monopolar construction, width witnesses, and arbitrary-clause interface used for the effective FPT ≠ W[1] consequence"
                     }
                   }
                 ],
+                "sourceBasis": {
+                  "kind": "derived",
+                  "step": "Encode the k vertices of a clique choice in O(k log n) Boolean variables, using clauses to forbid invalid vertices, repetitions and nonedges. Liu and Meng’s reduction then supplies a monopolar graph and a vertex order of width p with p² = O(k log n), in fixed-parameter time. The intrinsic width is at most the width of the order. The computable cutoff for the exponent converts any algorithm with the displayed running time into a fixed-parameter algorithm for Clique."
+                },
                 "status": "established"
               },
               "hypothesisRevision": 1,
@@ -5065,14 +6350,11 @@
             "p",
             "N"
           ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "Encode the k vertices of a clique choice in O(k log n) Boolean variables, using clauses to forbid invalid vertices, repetitions and nonedges. Liu and Meng’s reduction then supplies a monopolar graph and a vertex order of width p with p² = O(k log n), in fixed-parameter time. The intrinsic width is at most the width of the order. The computable cutoff for the exponent converts any algorithm with the displayed running time into a fixed-parameter algorithm for Clique."
+          },
           "sources": [
-            {
-              "editionId": "arxiv-v2",
-              "locator": "Table 1 and §3, “Dominating Set with a supplied vertex order”",
-              "paperId": "molter2026-running-time",
-              "placement": "forward",
-              "role": "effective running-time lower bound"
-            },
             {
               "editionId": "v1",
               "locator": "Section 3.2, Lemmas 3.5–3.6, and Appendix C, proof of Theorem C.1",
@@ -5132,11 +6414,11 @@
           "effective": true,
           "evidence": [
             {
-              "editionId": "arxiv-v2",
-              "locator": "Table 1 and §3, “Dominating Set with a supplied vertex order”",
-              "paperId": "molter2026-running-time",
+              "editionId": "v1",
+              "locator": "Section 3.2, Lemmas 3.5–3.6, and Appendix C, proof of Theorem C.1",
+              "paperId": "liu-meng2026-rankwidth",
               "placement": "forward",
-              "role": "effective running-time lower bound"
+              "role": "monopolar construction, width witnesses, and arbitrary-clause interface used for the effective FPT ≠ W[1] consequence"
             }
           ],
           "hypothesis": {
@@ -5195,11 +6477,11 @@
           "effective": true,
           "evidence": [
             {
-              "editionId": "arxiv-v2",
-              "locator": "Table 1 and §3, “Dominating Set with a supplied vertex order”",
-              "paperId": "molter2026-running-time",
+              "editionId": "v1",
+              "locator": "Section 3.2, Lemmas 3.5–3.6, and Appendix C, proof of Theorem C.1",
+              "paperId": "liu-meng2026-rankwidth",
               "placement": "forward",
-              "role": "effective running-time lower bound"
+              "role": "monopolar construction, width witnesses, and arbitrary-clause interface used for the effective FPT ≠ W[1] consequence"
             }
           ],
           "hypothesis": {
@@ -5676,14 +6958,18 @@
                     "hypothesisRevision": 1,
                     "reviewId": "dominating-set-rank-width-w1-effective-molter-source-review",
                     "source": {
-                      "editionId": "arxiv-v2",
-                      "locator": "Table 1 and §3, “Dominating Set with a supplied vertex order”",
-                      "paperId": "molter2026-running-time",
+                      "editionId": "v1",
+                      "locator": "Section 3.2, Lemmas 3.5–3.6, and Appendix C, proof of Theorem C.1",
+                      "paperId": "liu-meng2026-rankwidth",
                       "placement": "forward",
-                      "role": "effective running-time lower bound"
+                      "role": "monopolar construction, width witnesses, and arbitrary-clause interface used for the effective FPT ≠ W[1] consequence"
                     }
                   }
                 ],
+                "sourceBasis": {
+                  "kind": "derived",
+                  "step": "Encode the k vertices of a clique choice in O(k log n) Boolean variables, using clauses to forbid invalid vertices, repetitions and nonedges. Liu and Meng’s reduction then supplies a monopolar graph and a vertex order of width p with p² = O(k log n), in fixed-parameter time. The intrinsic width is at most the width of the order. The computable cutoff for the exponent converts any algorithm with the displayed running time into a fixed-parameter algorithm for Clique."
+                },
                 "status": "established"
               },
               "hypothesisRevision": 1,
@@ -5721,14 +7007,11 @@
             "p",
             "N"
           ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "Encode the k vertices of a clique choice in O(k log n) Boolean variables, using clauses to forbid invalid vertices, repetitions and nonedges. Liu and Meng’s reduction then supplies a monopolar graph and a vertex order of width p with p² = O(k log n), in fixed-parameter time. The intrinsic width is at most the width of the order. The computable cutoff for the exponent converts any algorithm with the displayed running time into a fixed-parameter algorithm for Clique."
+          },
           "sources": [
-            {
-              "editionId": "arxiv-v2",
-              "locator": "Table 1 and §3, “Dominating Set with a supplied vertex order”",
-              "paperId": "molter2026-running-time",
-              "placement": "forward",
-              "role": "effective running-time lower bound"
-            },
             {
               "editionId": "v1",
               "locator": "Section 3.2, Lemmas 3.5–3.6, and Appendix C, proof of Theorem C.1",
@@ -5788,11 +7071,11 @@
           "effective": true,
           "evidence": [
             {
-              "editionId": "arxiv-v2",
-              "locator": "Table 1 and §3, “Dominating Set with a supplied vertex order”",
-              "paperId": "molter2026-running-time",
+              "editionId": "v1",
+              "locator": "Section 3.2, Lemmas 3.5–3.6, and Appendix C, proof of Theorem C.1",
+              "paperId": "liu-meng2026-rankwidth",
               "placement": "forward",
-              "role": "effective running-time lower bound"
+              "role": "monopolar construction, width witnesses, and arbitrary-clause interface used for the effective FPT ≠ W[1] consequence"
             }
           ],
           "hypothesis": {
@@ -5851,11 +7134,11 @@
           "effective": true,
           "evidence": [
             {
-              "editionId": "arxiv-v2",
-              "locator": "Table 1 and §3, “Dominating Set with a supplied vertex order”",
-              "paperId": "molter2026-running-time",
+              "editionId": "v1",
+              "locator": "Section 3.2, Lemmas 3.5–3.6, and Appendix C, proof of Theorem C.1",
+              "paperId": "liu-meng2026-rankwidth",
               "placement": "forward",
-              "role": "effective running-time lower bound"
+              "role": "monopolar construction, width witnesses, and arbitrary-clause interface used for the effective FPT ≠ W[1] consequence"
             }
           ],
           "hypothesis": {
@@ -5944,14 +7227,18 @@
                     "hypothesisRevision": 1,
                     "reviewId": "dominating-set-supplied-linear-layout-w1-effective-molter-source-review",
                     "source": {
-                      "editionId": "arxiv-v2",
-                      "locator": "Table 1 and §3, “Dominating Set with a supplied vertex order”",
-                      "paperId": "molter2026-running-time",
+                      "editionId": "v1",
+                      "locator": "Section 3.2, Lemmas 3.5–3.6, and Appendix C, proof of Theorem C.1",
+                      "paperId": "liu-meng2026-rankwidth",
                       "placement": "forward",
-                      "role": "effective running-time lower bound"
+                      "role": "monopolar construction, width witnesses, and arbitrary-clause interface used for the effective FPT ≠ W[1] consequence"
                     }
                   }
                 ],
+                "sourceBasis": {
+                  "kind": "derived",
+                  "step": "Encode the k vertices of a clique choice in O(k log n) Boolean variables, using clauses to forbid invalid vertices, repetitions and nonedges. Liu and Meng’s reduction then supplies a monopolar graph and a vertex order of width p with p² = O(k log n), in fixed-parameter time. The computable cutoff for the exponent converts any algorithm with the displayed running time into a fixed-parameter algorithm for Clique."
+                },
                 "status": "established"
               },
               "hypothesisRevision": 1,
@@ -5989,14 +7276,11 @@
             "p",
             "N"
           ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "Encode the k vertices of a clique choice in O(k log n) Boolean variables, using clauses to forbid invalid vertices, repetitions and nonedges. Liu and Meng’s reduction then supplies a monopolar graph and a vertex order of width p with p² = O(k log n), in fixed-parameter time. The computable cutoff for the exponent converts any algorithm with the displayed running time into a fixed-parameter algorithm for Clique."
+          },
           "sources": [
-            {
-              "editionId": "arxiv-v2",
-              "locator": "Table 1 and §3, “Dominating Set with a supplied vertex order”",
-              "paperId": "molter2026-running-time",
-              "placement": "forward",
-              "role": "effective running-time lower bound"
-            },
             {
               "editionId": "v1",
               "locator": "Section 3.2, Lemmas 3.5–3.6, and Appendix C, proof of Theorem C.1",
@@ -6057,11 +7341,11 @@
           "effective": true,
           "evidence": [
             {
-              "editionId": "arxiv-v2",
-              "locator": "Table 1 and §3, “Dominating Set with a supplied vertex order”",
-              "paperId": "molter2026-running-time",
+              "editionId": "v1",
+              "locator": "Section 3.2, Lemmas 3.5–3.6, and Appendix C, proof of Theorem C.1",
+              "paperId": "liu-meng2026-rankwidth",
               "placement": "forward",
-              "role": "effective running-time lower bound"
+              "role": "monopolar construction, width witnesses, and arbitrary-clause interface used for the effective FPT ≠ W[1] consequence"
             }
           ],
           "hypothesis": {
@@ -6120,11 +7404,11 @@
           "effective": true,
           "evidence": [
             {
-              "editionId": "arxiv-v2",
-              "locator": "Table 1 and §3, “Dominating Set with a supplied vertex order”",
-              "paperId": "molter2026-running-time",
+              "editionId": "v1",
+              "locator": "Section 3.2, Lemmas 3.5–3.6, and Appendix C, proof of Theorem C.1",
+              "paperId": "liu-meng2026-rankwidth",
               "placement": "forward",
-              "role": "effective running-time lower bound"
+              "role": "monopolar construction, width witnesses, and arbitrary-clause interface used for the effective FPT ≠ W[1] consequence"
             }
           ],
           "hypothesis": {
@@ -6213,14 +7497,18 @@
                     "hypothesisRevision": 1,
                     "reviewId": "dominating-set-supplied-rank-decomposition-w1-effective-molter-source-review",
                     "source": {
-                      "editionId": "arxiv-v2",
-                      "locator": "Table 1 and §3, “Dominating Set with a supplied vertex order”",
-                      "paperId": "molter2026-running-time",
+                      "editionId": "v1",
+                      "locator": "Section 3.2, Lemmas 3.5–3.6, and Appendix C, proof of Theorem C.1",
+                      "paperId": "liu-meng2026-rankwidth",
                       "placement": "forward",
-                      "role": "effective running-time lower bound"
+                      "role": "monopolar construction, width witnesses, and arbitrary-clause interface used for the effective FPT ≠ W[1] consequence"
                     }
                   }
                 ],
+                "sourceBasis": {
+                  "kind": "derived",
+                  "step": "Encode the k vertices of a clique choice in O(k log n) Boolean variables, using clauses to forbid invalid vertices, repetitions and nonedges. Liu and Meng’s reduction then supplies a monopolar graph and a vertex order of width p with p² = O(k log n), in fixed-parameter time. Placing the leaves of a caterpillar in this order gives a rank decomposition whose cuts are prefix cuts or singleton cuts. The computable cutoff for the exponent converts any algorithm with the displayed running time into a fixed-parameter algorithm for Clique."
+                },
                 "status": "established"
               },
               "hypothesisRevision": 1,
@@ -6260,16 +7548,9 @@
           ],
           "sourceBasis": {
             "kind": "derived",
-            "step": "Convert the order in the cited reduction to a caterpillar rank decomposition in polynomial time. Its cuts are prefix cuts or singleton cuts, so its width is at most the larger of one and the maximum prefix cut rank. The same effective transfer applies to that width."
+            "step": "Encode the k vertices of a clique choice in O(k log n) Boolean variables, using clauses to forbid invalid vertices, repetitions and nonedges. Liu and Meng’s reduction then supplies a monopolar graph and a vertex order of width p with p² = O(k log n), in fixed-parameter time. Placing the leaves of a caterpillar in this order gives a rank decomposition whose cuts are prefix cuts or singleton cuts. The computable cutoff for the exponent converts any algorithm with the displayed running time into a fixed-parameter algorithm for Clique."
           },
           "sources": [
-            {
-              "editionId": "arxiv-v2",
-              "locator": "Table 1 and §3, “Dominating Set with a supplied vertex order”",
-              "paperId": "molter2026-running-time",
-              "placement": "forward",
-              "role": "effective running-time lower bound"
-            },
             {
               "editionId": "v1",
               "locator": "Section 3.2, Lemmas 3.5–3.6, and Appendix C, proof of Theorem C.1",
@@ -6330,11 +7611,11 @@
           "effective": true,
           "evidence": [
             {
-              "editionId": "arxiv-v2",
-              "locator": "Table 1 and §3, “Dominating Set with a supplied vertex order”",
-              "paperId": "molter2026-running-time",
+              "editionId": "v1",
+              "locator": "Section 3.2, Lemmas 3.5–3.6, and Appendix C, proof of Theorem C.1",
+              "paperId": "liu-meng2026-rankwidth",
               "placement": "forward",
-              "role": "effective running-time lower bound"
+              "role": "monopolar construction, width witnesses, and arbitrary-clause interface used for the effective FPT ≠ W[1] consequence"
             }
           ],
           "hypothesis": {
@@ -6393,11 +7674,11 @@
           "effective": true,
           "evidence": [
             {
-              "editionId": "arxiv-v2",
-              "locator": "Table 1 and §3, “Dominating Set with a supplied vertex order”",
-              "paperId": "molter2026-running-time",
+              "editionId": "v1",
+              "locator": "Section 3.2, Lemmas 3.5–3.6, and Appendix C, proof of Theorem C.1",
+              "paperId": "liu-meng2026-rankwidth",
               "placement": "forward",
-              "role": "effective running-time lower bound"
+              "role": "monopolar construction, width witnesses, and arbitrary-clause interface used for the effective FPT ≠ W[1] consequence"
             }
           ],
           "hypothesis": {
@@ -9106,6 +10387,331 @@
       "task": "Can at most k vertices be deleted so that the remaining graph is a forest?",
       "title": "Feedback Vertex Set by vertex-plus-edge count",
       "variant": "Feedback Vertex Set"
+    },
+    {
+      "aliases": [],
+      "bounds": [
+        {
+          "assessments": {
+            "eth": {
+              "converse": {
+                "effectiveStatus": "unassessed",
+                "evidence": [],
+                "status": "unassessed"
+              },
+              "forward": {
+                "effectiveStatus": "established",
+                "evidence": [
+                  {
+                    "boundRevision": 1,
+                    "hypothesisRevision": 1,
+                    "reviewId": "fvs-tw-eth-literature-source-review",
+                    "source": {
+                      "editionId": "journal",
+                      "locator": "Corollary 2, p. 524, and Theorem 5, p. 526",
+                      "paperId": "ipz2001",
+                      "placement": "forward",
+                      "role": "sparsification and linear-order reduction to Vertex Cover"
+                    }
+                  },
+                  {
+                    "boundRevision": 1,
+                    "hypothesisRevision": 1,
+                    "reviewId": "fvs-tw-eth-literature-source-review",
+                    "source": {
+                      "editionId": "bulletin",
+                      "locator": "Theorem 3.3, p. 52",
+                      "paperId": "lms2011",
+                      "placement": "forward",
+                      "role": "historical lower bound for Vertex Cover by graph order"
+                    }
+                  },
+                  {
+                    "boundRevision": 1,
+                    "hypothesisRevision": 1,
+                    "reviewId": "fvs-tw-eth-literature-source-review",
+                    "source": {
+                      "editionId": "journal",
+                      "locator": "§4.4, Feedback Vertex Set paragraph, p. 1324",
+                      "paperId": "deberg-et-al2020-geometric",
+                      "placement": "forward",
+                      "role": "edge-triangle reduction from Vertex Cover"
+                    }
+                  }
+                ],
+                "sourceBasis": {
+                  "kind": "derived",
+                  "step": "Add one private vertex adjacent to both ends of each edge of the Vertex Cover instance. A cover leaves a forest. Conversely, any feedback vertex set hits each edge triangle, so replacing any selected private vertex with an endpoint yields a cover of no larger size. A bag for each private vertex and its endpoints gives treewidth at most max(n−1, 2) for original order n, with polynomial encoding size."
+                },
+                "status": "established"
+              },
+              "hypothesisRevision": 1,
+              "verdict": "hypothesis-implies-bound"
+            }
+          },
+          "assumptionOperator": "all",
+          "assumptions": [
+            {
+              "id": "eth",
+              "revision": 1
+            }
+          ],
+          "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+          "id": "fvs-tw-eth",
+          "inputConditions": [],
+          "inputFactor": "B^(O(1))",
+          "proofs": [],
+          "provenance": "literature",
+          "qualifications": [],
+          "reader": {
+            "label": "Exponential dependence on treewidth",
+            "revision": 1
+          },
+          "reviewIds": [
+            "fvs-tw-eth-literature-source-review"
+          ],
+          "revision": 1,
+          "runtime": "2^(o(t)) B^(O(1))",
+          "runtimeSymbols": [
+            "t",
+            "B"
+          ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "Add one private vertex adjacent to both ends of each edge of the Vertex Cover instance. A cover leaves a forest. Conversely, any feedback vertex set hits each edge triangle, so replacing any selected private vertex with an endpoint yields a cover of no larger size. A bag for each private vertex and its endpoints gives treewidth at most max(n−1, 2) for original order n, with polynomial encoding size."
+          },
+          "sources": [
+            {
+              "editionId": "journal",
+              "locator": "Corollary 2, p. 524, and Theorem 5, p. 526",
+              "paperId": "ipz2001",
+              "placement": "forward",
+              "role": "sparsification and linear-order reduction to Vertex Cover"
+            },
+            {
+              "editionId": "bulletin",
+              "locator": "Theorem 3.3, p. 52",
+              "paperId": "lms2011",
+              "placement": "forward",
+              "role": "historical lower bound for Vertex Cover by graph order"
+            },
+            {
+              "editionId": "journal",
+              "locator": "§4.4, Feedback Vertex Set paragraph, p. 1324",
+              "paperId": "deberg-et-al2020-geometric",
+              "placement": "forward",
+              "role": "edge-triangle reduction from Vertex Cover"
+            }
+          ],
+          "statement": "Under ETH, no deterministic algorithm decides Feedback Vertex Set within the stated running time.",
+          "status": "established",
+          "supported": true
+        },
+        {
+          "assessments": {
+            "w1": {
+              "converse": {
+                "effectiveStatus": "unassessed",
+                "evidence": [],
+                "status": "unassessed"
+              },
+              "forward": {
+                "effectiveStatus": "established",
+                "evidence": [
+                  {
+                    "boundRevision": 1,
+                    "hypothesisRevision": 1,
+                    "reviewId": "fvs-tw-w1-effective-literature-source-review",
+                    "source": {
+                      "editionId": "journal",
+                      "locator": "Theorem 6 and §4.3, Lemma 5 and Claim 15",
+                      "paperId": "bodlaender2025-linear-structure",
+                      "placement": "forward",
+                      "role": "XNLP-hardness for logarithmic pathwidth"
+                    }
+                  }
+                ],
+                "sourceBasis": {
+                  "kind": "derived",
+                  "step": "Logarithmic-pathwidth Feedback Vertex Set is XNLP-hard, so it is W[1]-hard. A graph’s treewidth is at most the width of the supplied path decomposition, which can be discarded. For a Clique input of order n and parameter k, the output treewidth is at most g(k)(1+log₂ n) for a computable g. Use the computable cutoff for a slope at most 1/g(k). Above the cutoff the exponential factor is polynomial in n, and below it the computable exponent has a finite maximum controlled by k. The polynomial-size reduction output then gives an FPT algorithm for Clique."
+                },
+                "status": "established"
+              },
+              "hypothesisRevision": 1,
+              "verdict": "hypothesis-implies-bound"
+            }
+          },
+          "assumptionOperator": "all",
+          "assumptions": [
+            {
+              "id": "w1",
+              "revision": 1
+            }
+          ],
+          "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+          "exponentDomain": "nonnegative",
+          "id": "fvs-tw-w1-effective",
+          "inputConditions": [],
+          "inputFactor": "B^(O(1))",
+          "proofs": [],
+          "provenance": "literature",
+          "qualifications": [],
+          "reader": {
+            "label": "Effective little-o bound in the treewidth",
+            "revision": 1
+          },
+          "reviewIds": [
+            "fvs-tw-w1-effective-literature-source-review"
+          ],
+          "revision": 1,
+          "runtime": "2^(o_eff(t)) B^(O(1))",
+          "runtimeSymbols": [
+            "t",
+            "B"
+          ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "Logarithmic-pathwidth Feedback Vertex Set is XNLP-hard, so it is W[1]-hard. A graph’s treewidth is at most the width of the supplied path decomposition, which can be discarded. For a Clique input of order n and parameter k, the output treewidth is at most g(k)(1+log₂ n) for a computable g. Use the computable cutoff for a slope at most 1/g(k). Above the cutoff the exponential factor is polynomial in n, and below it the computable exponent has a finite maximum controlled by k. The polynomial-size reduction output then gives an FPT algorithm for Clique."
+          },
+          "sources": [
+            {
+              "editionId": "journal",
+              "locator": "Theorem 6 and §4.3, Lemma 5 and Claim 15",
+              "paperId": "bodlaender2025-linear-structure",
+              "placement": "forward",
+              "role": "XNLP-hardness for logarithmic pathwidth"
+            }
+          ],
+          "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Feedback Vertex Set within the stated running time.",
+          "status": "established",
+          "supported": true
+        }
+      ],
+      "coverage": "Literature bounds for intrinsic treewidth.",
+      "encoding": "A finite simple undirected graph G and a nonnegative integer budget k. The graph and budget are encoded explicitly in binary.",
+      "id": "feedback-vertex-set-treewidth",
+      "inputConditions": [],
+      "kind": "lower-bound-case",
+      "parameter": "The intrinsic treewidth t of G.",
+      "problemDefinitionHash": "09e27bd6f632865edef13554cd25eaf63637ed95ca1c1a506a9869810c6ad716",
+      "problemId": "feedback-vertex-set",
+      "problemRevision": 1,
+      "reader": {
+        "anchor": "treewidth",
+        "parameter": "The intrinsic treewidth t of G.",
+        "parameterLabel": "Treewidth",
+        "parameterSymbols": [
+          {
+            "meaning": "treewidth of the input graph",
+            "symbol": "t"
+          }
+        ],
+        "symbols": [
+          {
+            "meaning": "complete binary input length",
+            "symbol": "B"
+          }
+        ]
+      },
+      "recoveryAssessments": [
+        {
+          "comparison": "The two exclusions have the same problem, parameter, linear exponent scale, and polynomial factor in the full input length. The recovery requires a computable exponent and computable convergence.",
+          "effective": true,
+          "evidence": [
+            {
+              "editionId": "journal",
+              "locator": "Theorem 6 and §4.3, Lemma 5 and Claim 15",
+              "paperId": "bodlaender2025-linear-structure",
+              "placement": "forward",
+              "role": "XNLP-hardness for logarithmic pathwidth"
+            }
+          ],
+          "hypothesis": {
+            "id": "w1",
+            "revision": 1
+          },
+          "recoveredScale": "t",
+          "recovery": {
+            "id": "fvs-tw-w1-effective",
+            "revision": 1
+          },
+          "scale": "full",
+          "target": {
+            "id": "fvs-tw-eth",
+            "revision": 1
+          },
+          "targetScale": "t"
+        }
+      ],
+      "recoveryComparisons": [
+        {
+          "hypothesis": {
+            "id": "kxk",
+            "revision": 1
+          },
+          "status": "unresolved",
+          "target": {
+            "id": "fvs-tw-eth",
+            "revision": 1
+          }
+        },
+        {
+          "hypothesis": {
+            "id": "np_qp",
+            "revision": 1
+          },
+          "status": "unresolved",
+          "target": {
+            "id": "fvs-tw-eth",
+            "revision": 1
+          }
+        },
+        {
+          "hypothesis": {
+            "id": "sh",
+            "revision": 1
+          },
+          "status": "unresolved",
+          "target": {
+            "id": "fvs-tw-eth",
+            "revision": 1
+          }
+        },
+        {
+          "comparison": "The two exclusions have the same problem, parameter, linear exponent scale, and polynomial factor in the full input length. The recovery requires a computable exponent and computable convergence.",
+          "effective": true,
+          "evidence": [
+            {
+              "editionId": "journal",
+              "locator": "Theorem 6 and §4.3, Lemma 5 and Claim 15",
+              "paperId": "bodlaender2025-linear-structure",
+              "placement": "forward",
+              "role": "XNLP-hardness for logarithmic pathwidth"
+            }
+          ],
+          "hypothesis": {
+            "id": "w1",
+            "revision": 1
+          },
+          "recoveredScale": "t",
+          "recovery": {
+            "id": "fvs-tw-w1-effective",
+            "revision": 1
+          },
+          "scale": "full",
+          "status": "effective",
+          "target": {
+            "id": "fvs-tw-eth",
+            "revision": 1
+          },
+          "targetScale": "t"
+        }
+      ],
+      "resolutions": [],
+      "revision": 1,
+      "task": "Can at most k vertices be deleted so that the remaining graph is a forest?",
+      "title": "Feedback Vertex Set by treewidth",
+      "variant": "Undirected Feedback Vertex Set"
     },
     {
       "aliases": [
@@ -15005,10 +16611,10 @@
           "sources": [
             {
               "editionId": "journal",
-              "locator": "Theorem 6 (logarithmic pathwidth).",
+              "locator": "§4.3, Theorem 6 (logarithmic pathwidth)",
               "paperId": "bodlaender2025-linear-structure",
               "placement": "statement",
-              "role": "unrestricted lower bound"
+              "role": "logarithmic pathwidth hardness"
             },
             {
               "editionId": "proceedings",
@@ -15071,10 +16677,10 @@
           "evidence": [
             {
               "editionId": "journal",
-              "locator": "Theorem 6 (logarithmic pathwidth).",
+              "locator": "§4.3, Theorem 6 (logarithmic pathwidth)",
               "paperId": "bodlaender2025-linear-structure",
               "placement": "statement",
-              "role": "unrestricted lower bound"
+              "role": "logarithmic pathwidth hardness"
             },
             {
               "editionId": "proceedings",
@@ -15141,10 +16747,10 @@
           "evidence": [
             {
               "editionId": "journal",
-              "locator": "Theorem 6 (logarithmic pathwidth).",
+              "locator": "§4.3, Theorem 6 (logarithmic pathwidth)",
               "paperId": "bodlaender2025-linear-structure",
               "placement": "statement",
-              "role": "unrestricted lower bound"
+              "role": "logarithmic pathwidth hardness"
             },
             {
               "editionId": "proceedings",
@@ -15322,14 +16928,18 @@
                     "hypothesisRevision": 1,
                     "reviewId": "ilp-equations-w1-effective-molter-source-review",
                     "source": {
-                      "editionId": "arxiv-v2",
-                      "locator": "§3, Consequences of Lin’s Set Cover reduction, p. 12, and Lemma 1, p. 10",
-                      "paperId": "molter2026-running-time",
+                      "editionId": "proceedings",
+                      "locator": "Lemma 14 and proof, §3.4, pp. 81:11–81:12",
+                      "paperId": "lin2019",
                       "placement": "forward",
-                      "role": "forward implication"
+                      "role": "Set Cover construction underlying the exact-cover encoding"
                     }
                   }
                 ],
+                "sourceBasis": {
+                  "kind": "derived",
+                  "step": "In Lin’s construction, the universe size equals the Set Cover budget times the common set size. A cover within budget is therefore an exact cover, and each exact cover meets the budget. The binary incidence matrix encodes exact cover as Ax=1 with a nonzero column for every set. Its O(h³ log n) rows allow the effective exponent cutoff to give a fixed-parameter algorithm for Multicolored Clique."
+                },
                 "status": "established"
               },
               "hypothesisRevision": 1,
@@ -15372,20 +16982,17 @@
             "N",
             "C"
           ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "In Lin’s construction, the universe size equals the Set Cover budget times the common set size. A cover within budget is therefore an exact cover, and each exact cover meets the budget. The binary incidence matrix encodes exact cover as Ax=1 with a nonzero column for every set. Its O(h³ log n) rows allow the effective exponent cutoff to give a fixed-parameter algorithm for Multicolored Clique."
+          },
           "sources": [
-            {
-              "editionId": "arxiv-v2",
-              "locator": "§3, Consequences of Lin’s Set Cover reduction, p. 12, and Lemma 1, p. 10",
-              "paperId": "molter2026-running-time",
-              "placement": "statement",
-              "role": "effective lower bound for binary incidence matrices with an all-ones right-hand side"
-            },
             {
               "editionId": "proceedings",
               "locator": "Lemma 14 and proof, §3.4, pp. 81:11–81:12",
               "paperId": "lin2019",
               "placement": "statement",
-              "role": "Set Cover construction used for the exact-cover count"
+              "role": "Set Cover construction underlying the exact-cover encoding"
             }
           ],
           "statement": "Under FPT ≠ W[1], no deterministic algorithm decides feasibility of Ax=b for the stated all-ones right-hand side within the stated running time.",
@@ -15450,18 +17057,11 @@
           "effective": true,
           "evidence": [
             {
-              "editionId": "arxiv-v2",
-              "locator": "§3, Consequences of Lin’s Set Cover reduction, p. 12, and Lemma 1, p. 10",
-              "paperId": "molter2026-running-time",
-              "placement": "statement",
-              "role": "effective lower bound for binary incidence matrices with an all-ones right-hand side"
-            },
-            {
               "editionId": "proceedings",
               "locator": "Lemma 14 and proof, §3.4, pp. 81:11–81:12",
               "paperId": "lin2019",
               "placement": "statement",
-              "role": "Set Cover construction used for the exact-cover count"
+              "role": "Set Cover construction underlying the exact-cover encoding"
             }
           ],
           "hypothesis": {
@@ -15564,18 +17164,11 @@
           "effective": true,
           "evidence": [
             {
-              "editionId": "arxiv-v2",
-              "locator": "§3, Consequences of Lin’s Set Cover reduction, p. 12, and Lemma 1, p. 10",
-              "paperId": "molter2026-running-time",
-              "placement": "statement",
-              "role": "effective lower bound for binary incidence matrices with an all-ones right-hand side"
-            },
-            {
               "editionId": "proceedings",
               "locator": "Lemma 14 and proof, §3.4, pp. 81:11–81:12",
               "paperId": "lin2019",
               "placement": "statement",
-              "role": "Set Cover construction used for the exact-cover count"
+              "role": "Set Cover construction underlying the exact-cover encoding"
             }
           ],
           "hypothesis": {
@@ -15690,6 +17283,105 @@
             }
           ],
           "statement": "Under ETH, no deterministic algorithm solves List Coloring within the stated running time.",
+          "status": "established",
+          "supported": true
+        },
+        {
+          "assessments": {},
+          "assumptionOperator": "all",
+          "assumptions": [
+            {
+              "id": "eth",
+              "revision": 1
+            }
+          ],
+          "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+          "id": "list-coloring-treewidth-fixed-q-eth",
+          "inputConditions": [
+            "fixed-common-palette"
+          ],
+          "inputFactor": "n^(O(1))",
+          "proofs": [],
+          "provenance": "literature",
+          "qualifications": [
+            "For every fixed integer q ≥ 3."
+          ],
+          "reader": {
+            "label": "Subexponential bound in treewidth · Fixed common palette",
+            "revision": 1,
+            "title": "Subexponential bound in treewidth under ETH · Fixed common palette"
+          },
+          "reviewIds": [],
+          "revision": 1,
+          "runtime": "2^(o(t)) n^(O(1))",
+          "runtimeSymbols": [
+            "t",
+            "n"
+          ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "Give every vertex of a 3-Coloring instance the list {1, 2, 3}, a subset of the fixed palette [q]. The graph and treewidth are unchanged. A treewidth-subexponential algorithm would also be subexponential in the number of vertices, since treewidth is at most the graph order."
+          },
+          "sources": [
+            {
+              "editionId": "bulletin",
+              "locator": "Theorem 3.2, PDF p. 12",
+              "paperId": "lms2011",
+              "placement": "statement",
+              "role": "3-Coloring graph-order lower bound"
+            }
+          ],
+          "statement": "Under ETH, no deterministic algorithm decides List Coloring within the stated running time.",
+          "status": "established",
+          "supported": true
+        },
+        {
+          "assessments": {},
+          "assumptionOperator": "all",
+          "assumptions": [
+            {
+              "id": "w1",
+              "revision": 1
+            }
+          ],
+          "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+          "exponentDomain": "nonnegative",
+          "id": "list-coloring-treewidth-fixed-q-w1",
+          "inputConditions": [
+            "fixed-common-palette"
+          ],
+          "inputFactor": "B^(O(1))",
+          "proofs": [],
+          "provenance": "literature",
+          "qualifications": [
+            "For every fixed integer q ≥ 3."
+          ],
+          "reader": {
+            "label": "Effective subexponential bound in treewidth · Fixed common palette",
+            "revision": 1,
+            "title": "Effective subexponential bound in treewidth under FPT ≠ W[1] · Fixed common palette"
+          },
+          "reviewIds": [],
+          "revision": 1,
+          "runtime": "2^(o_eff(t)) B^(O(1))",
+          "runtimeSymbols": [
+            "t",
+            "B"
+          ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "The logarithmic-pathwidth hardness gives a fixed-parameter reduction from Clique whose output pathwidth is at most a computable parameter factor times the logarithm of the graph order. Treewidth is at most that pathwidth. The effective cutoff would turn the claimed solver into a fixed-parameter algorithm for Clique."
+          },
+          "sources": [
+            {
+              "editionId": "journal",
+              "locator": "§4.3, Lemma 4 and Claim 12",
+              "paperId": "bodlaender2025-linear-structure",
+              "placement": "statement",
+              "role": "fixed-palette logarithmic-pathwidth hardness"
+            }
+          ],
+          "statement": "Under FPT ≠ W[1], no deterministic algorithm decides List Coloring within the stated running time.",
           "status": "established",
           "supported": true
         },
@@ -15848,8 +17540,309 @@
       ],
       "coverage": "Published lower bounds for treewidth.",
       "encoding": "A finite simple undirected graph G with one explicitly listed finite color set per vertex.",
+      "history": [
+        {
+          "aliases": [
+            "lms-listcolor-tw"
+          ],
+          "bounds": [
+            {
+              "assessments": {
+                "eth": {
+                  "converse": {
+                    "evidence": [],
+                    "status": "unknown"
+                  },
+                  "forward": {
+                    "evidence": [],
+                    "status": "unassessed"
+                  },
+                  "hypothesisRevision": 1
+                },
+                "sh": {
+                  "converse": {
+                    "evidence": [],
+                    "status": "unknown"
+                  },
+                  "forward": {
+                    "evidence": [],
+                    "status": "unassessed"
+                  },
+                  "hypothesisRevision": 1
+                }
+              },
+              "assumptionOperator": "all",
+              "assumptions": [
+                {
+                  "id": "eth",
+                  "revision": 1
+                }
+              ],
+              "id": "list-coloring-treewidth-eth",
+              "inputConditions": [],
+              "inputFactor": "B^(o(t))",
+              "proofs": [],
+              "provenance": "literature",
+              "qualifications": [
+                "The parameter factor f is an arbitrary computable function."
+              ],
+              "reader": {
+                "label": "Exponent in treewidth",
+                "revision": 1,
+                "title": "Exponent in treewidth under ETH"
+              },
+              "revision": 1,
+              "runtime": "f(t) B^(o(t))",
+              "runtimeSymbols": [
+                "t",
+                "B"
+              ],
+              "sources": [
+                {
+                  "editionId": "journal",
+                  "locator": "§2.1, Theorem 1 and its reduction, pp. 145–146",
+                  "paperId": "fellows-et-al2011-colorful-treewidth",
+                  "placement": "forward",
+                  "role": "Original polynomial-time reduction from Multicolored Clique, with treewidth at most the number of colors"
+                },
+                {
+                  "editionId": "book",
+                  "locator": "Theorem 14.29, pp. 492–493 (planar hard instances)",
+                  "paperId": "cygan2015",
+                  "placement": "statement",
+                  "role": "benchmark"
+                },
+                {
+                  "editionId": "bulletin",
+                  "locator": "Theorem 6.5",
+                  "paperId": "lms2011",
+                  "placement": "statement",
+                  "role": "benchmark"
+                }
+              ],
+              "statement": "Under ETH, no deterministic algorithm solves List Coloring within the stated running time.",
+              "status": "established"
+            },
+            {
+              "assessments": {
+                "eth": {
+                  "converse": {
+                    "evidence": [],
+                    "status": "unknown"
+                  },
+                  "forward": {
+                    "evidence": [],
+                    "status": "unassessed"
+                  },
+                  "hypothesisRevision": 1
+                },
+                "sh": {
+                  "converse": {
+                    "evidence": [],
+                    "status": "unknown"
+                  },
+                  "forward": {
+                    "evidence": [],
+                    "status": "unassessed"
+                  },
+                  "hypothesisRevision": 1
+                }
+              },
+              "assumptionOperator": "all",
+              "assumptions": [
+                {
+                  "id": "w1",
+                  "revision": 1
+                }
+              ],
+              "hardnessBaseline": "W[1]",
+              "id": "list-coloring-treewidth-w1",
+              "inputConditions": [],
+              "inputFactor": "B^(O(1))",
+              "proofs": [],
+              "provenance": "literature",
+              "qualifications": [
+                "The parameter factor f is an arbitrary computable function."
+              ],
+              "reader": {
+                "label": "Fixed-parameter tractability",
+                "revision": 1,
+                "title": "Fixed-parameter tractability under FPT ≠ W[1]"
+              },
+              "revision": 1,
+              "runtime": "f(t) B^(O(1))",
+              "runtimeSymbols": [
+                "t",
+                "B"
+              ],
+              "sources": [
+                {
+                  "editionId": "journal",
+                  "locator": "§2.1, Theorem 1 and its reduction, pp. 145–146",
+                  "paperId": "fellows-et-al2011-colorful-treewidth",
+                  "placement": "statement",
+                  "role": "W[1]-hardness"
+                }
+              ],
+              "statement": "Under FPT ≠ W[1], no deterministic algorithm solves List Coloring within the stated running time.",
+              "status": "established"
+            },
+            {
+              "assessments": {
+                "eth": {
+                  "converse": {
+                    "evidence": [],
+                    "status": "unknown"
+                  },
+                  "forward": {
+                    "evidence": [],
+                    "status": "unassessed"
+                  },
+                  "hypothesisRevision": 1
+                },
+                "sh": {
+                  "converse": {
+                    "evidence": [],
+                    "status": "unknown"
+                  },
+                  "forward": {
+                    "evidence": [],
+                    "status": "unassessed"
+                  },
+                  "hypothesisRevision": 1
+                }
+              },
+              "assumptionOperator": "all",
+              "assumptions": [
+                {
+                  "id": "kxk",
+                  "revision": 1
+                }
+              ],
+              "id": "list-coloring-treewidth-kxk",
+              "inputConditions": [],
+              "inputFactor": "B^(o(t))",
+              "proofs": [],
+              "provenance": "literature",
+              "qualifications": [
+                "The parameter factor f is an arbitrary computable function."
+              ],
+              "reader": {
+                "label": "Exponent in treewidth",
+                "revision": 1,
+                "title": "Exponent in treewidth under the k × k Clique Hypothesis"
+              },
+              "revision": 1,
+              "runtime": "f(t) B^(o(t))",
+              "runtimeSymbols": [
+                "t",
+                "B"
+              ],
+              "sources": [
+                {
+                  "editionId": "v3",
+                  "locator": "§3, Proposition 1, pp. 3–4, and Table 1, second row, p. 5",
+                  "paperId": "szeider2026",
+                  "placement": "statement",
+                  "role": "benchmark"
+                },
+                {
+                  "editionId": "book",
+                  "locator": "Theorem 14.29, pp. 492–493",
+                  "paperId": "cygan2015",
+                  "placement": "statement",
+                  "role": "underlying reduction"
+                }
+              ],
+              "statement": "Under the k × k Clique Hypothesis, no deterministic algorithm solves List Coloring within the stated running time.",
+              "status": "established"
+            }
+          ],
+          "coverage": "Published lower bounds for treewidth.",
+          "encoding": "A finite simple undirected graph G with one explicitly listed finite color set per vertex.",
+          "id": "list-coloring-treewidth",
+          "inputConditions": [],
+          "kind": "lower-bound-case",
+          "parameter": "Treewidth.",
+          "problemDefinitionHash": "bcd7d72dee1b5ef94ec8fd4bdd1b96b9f5569fe6c596223c8a03f29c3aab5feb",
+          "problemId": "list-coloring",
+          "problemRevision": 1,
+          "reader": {
+            "anchor": "treewidth",
+            "parameter": "Treewidth.",
+            "parameterLabel": "Treewidth",
+            "parameterSymbols": [
+              {
+                "meaning": "treewidth of the input graph",
+                "symbol": "t"
+              }
+            ],
+            "symbols": [
+              {
+                "meaning": "complete explicit binary input length",
+                "symbol": "B"
+              }
+            ]
+          },
+          "recoveryAssessments": [
+            {
+              "comparison": "The published transfer gives the same rate for the same problem and explicit input convention, including arbitrary computable parameter prefactors.",
+              "effective": false,
+              "evidence": [
+                {
+                  "editionId": "book",
+                  "locator": "Theorem 14.29, pp. 492–493 (planar hard instances)",
+                  "paperId": "cygan2015",
+                  "placement": "statement",
+                  "role": "benchmark"
+                },
+                {
+                  "editionId": "bulletin",
+                  "locator": "Theorem 6.5",
+                  "paperId": "lms2011",
+                  "placement": "statement",
+                  "role": "benchmark"
+                },
+                {
+                  "editionId": "v3",
+                  "locator": "§3, Proposition 1, pp. 3–4, and Table 1, second row, p. 5",
+                  "paperId": "szeider2026",
+                  "placement": "statement",
+                  "role": "benchmark"
+                }
+              ],
+              "hypothesis": {
+                "id": "kxk",
+                "revision": 1
+              },
+              "recoveredScale": "B^(o(t))",
+              "recovery": {
+                "id": "list-coloring-treewidth-kxk",
+                "revision": 1
+              },
+              "scale": "full",
+              "target": {
+                "id": "list-coloring-treewidth-eth",
+                "revision": 1
+              },
+              "targetScale": "B^(o(t))"
+            }
+          ],
+          "resolutions": [],
+          "revision": 4,
+          "task": "Can each vertex be assigned a color from its list so that adjacent vertices receive distinct colors?",
+          "title": "List Coloring by treewidth",
+          "variant": "List Coloring"
+        }
+      ],
       "id": "list-coloring-treewidth",
-      "inputConditions": [],
+      "inputConditions": [
+        {
+          "condition": "The available palette is [q]. Every vertex list is a subset of this same palette.",
+          "id": "fixed-common-palette",
+          "level": "bound"
+        }
+      ],
       "kind": "lower-bound-case",
       "parameter": "Treewidth.",
       "problemDefinitionHash": "bcd7d72dee1b5ef94ec8fd4bdd1b96b9f5569fe6c596223c8a03f29c3aab5feb",
@@ -15869,6 +17862,10 @@
           {
             "meaning": "complete explicit binary input length",
             "symbol": "B"
+          },
+          {
+            "meaning": "number of vertices of G",
+            "symbol": "n"
           }
         ]
       },
@@ -15914,6 +17911,34 @@
             "revision": 1
           },
           "targetScale": "B^(o(t))"
+        },
+        {
+          "comparison": "The bound reaches the historical treewidth exponent scale on the same inputs, with a computable cutoff for each prescribed saving.",
+          "effective": true,
+          "evidence": [
+            {
+              "editionId": "journal",
+              "locator": "§4.3, Lemma 4 and Claim 12",
+              "paperId": "bodlaender2025-linear-structure",
+              "placement": "statement",
+              "role": "fixed-palette logarithmic-pathwidth hardness"
+            }
+          ],
+          "hypothesis": {
+            "id": "w1",
+            "revision": 1
+          },
+          "recoveredScale": "t",
+          "recovery": {
+            "id": "list-coloring-treewidth-fixed-q-w1",
+            "revision": 1
+          },
+          "scale": "full",
+          "target": {
+            "id": "list-coloring-treewidth-fixed-q-eth",
+            "revision": 1
+          },
+          "targetScale": "t"
         }
       ],
       "recoveryComparisons": [
@@ -15992,10 +18017,72 @@
             "id": "list-coloring-treewidth-eth",
             "revision": 1
           }
+        },
+        {
+          "hypothesis": {
+            "id": "kxk",
+            "revision": 1
+          },
+          "status": "unresolved",
+          "target": {
+            "id": "list-coloring-treewidth-fixed-q-eth",
+            "revision": 1
+          }
+        },
+        {
+          "hypothesis": {
+            "id": "np_qp",
+            "revision": 1
+          },
+          "status": "unresolved",
+          "target": {
+            "id": "list-coloring-treewidth-fixed-q-eth",
+            "revision": 1
+          }
+        },
+        {
+          "hypothesis": {
+            "id": "sh",
+            "revision": 1
+          },
+          "status": "unresolved",
+          "target": {
+            "id": "list-coloring-treewidth-fixed-q-eth",
+            "revision": 1
+          }
+        },
+        {
+          "comparison": "The bound reaches the historical treewidth exponent scale on the same inputs, with a computable cutoff for each prescribed saving.",
+          "effective": true,
+          "evidence": [
+            {
+              "editionId": "journal",
+              "locator": "§4.3, Lemma 4 and Claim 12",
+              "paperId": "bodlaender2025-linear-structure",
+              "placement": "statement",
+              "role": "fixed-palette logarithmic-pathwidth hardness"
+            }
+          ],
+          "hypothesis": {
+            "id": "w1",
+            "revision": 1
+          },
+          "recoveredScale": "t",
+          "recovery": {
+            "id": "list-coloring-treewidth-fixed-q-w1",
+            "revision": 1
+          },
+          "scale": "full",
+          "status": "effective",
+          "target": {
+            "id": "list-coloring-treewidth-fixed-q-eth",
+            "revision": 1
+          },
+          "targetScale": "t"
         }
       ],
       "resolutions": [],
-      "revision": 4,
+      "revision": 5,
       "task": "Can each vertex be assigned a color from its list so that adjacent vertices receive distinct colors?",
       "title": "List Coloring by treewidth",
       "variant": "List Coloring"
@@ -21109,7 +23196,7 @@
           "sources": [
             {
               "editionId": "bulletin",
-              "locator": "Theorem 6.2",
+              "locator": "Theorem 6.2, p. 62",
               "paperId": "lms2011",
               "placement": "statement",
               "role": "benchmark"
@@ -21183,10 +23270,10 @@
           "sources": [
             {
               "editionId": "journal",
-              "locator": "Theorem 6 (logarithmic pathwidth).",
+              "locator": "§4.3, Theorem 6 and Lemma 5 (logarithmic pathwidth)",
               "paperId": "bodlaender2025-linear-structure",
               "placement": "statement",
-              "role": "unrestricted lower bound"
+              "role": "logarithmic pathwidth hardness"
             }
           ],
           "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Odd Cycle Transversal within the stated running time.",
@@ -21231,10 +23318,10 @@
           "evidence": [
             {
               "editionId": "journal",
-              "locator": "Theorem 6 (logarithmic pathwidth).",
+              "locator": "§4.3, Theorem 6 and Lemma 5 (logarithmic pathwidth)",
               "paperId": "bodlaender2025-linear-structure",
               "placement": "statement",
-              "role": "unrestricted lower bound"
+              "role": "logarithmic pathwidth hardness"
             }
           ],
           "hypothesis": {
@@ -21294,10 +23381,10 @@
           "evidence": [
             {
               "editionId": "journal",
-              "locator": "Theorem 6 (logarithmic pathwidth).",
+              "locator": "§4.3, Theorem 6 and Lemma 5 (logarithmic pathwidth)",
               "paperId": "bodlaender2025-linear-structure",
               "placement": "statement",
-              "role": "unrestricted lower bound"
+              "role": "logarithmic pathwidth hardness"
             }
           ],
           "hypothesis": {
@@ -25451,6 +27538,331 @@
       "task": "Decide whether the formula is true.",
       "title": "Quantified Boolean satisfiability",
       "variant": "Closed prenex quantified Boolean formulas with a fixed number of alternating quantifier blocks"
+    },
+    {
+      "aliases": [],
+      "bounds": [
+        {
+          "assessments": {
+            "eth": {
+              "converse": {
+                "effectiveStatus": "unassessed",
+                "evidence": [],
+                "status": "unassessed"
+              },
+              "forward": {
+                "effectiveStatus": "established",
+                "evidence": [
+                  {
+                    "boundRevision": 1,
+                    "hypothesisRevision": 1,
+                    "reviewId": "rbds-tw-eth-literature-source-review",
+                    "source": {
+                      "editionId": "journal",
+                      "locator": "Corollary 2, p. 524, and Theorem 5, p. 526",
+                      "paperId": "ipz2001",
+                      "placement": "forward",
+                      "role": "sparsification and linear-order reduction to Vertex Cover"
+                    }
+                  },
+                  {
+                    "boundRevision": 1,
+                    "hypothesisRevision": 1,
+                    "reviewId": "rbds-tw-eth-literature-source-review",
+                    "source": {
+                      "editionId": "bulletin",
+                      "locator": "Theorem 3.3, p. 52",
+                      "paperId": "lms2011",
+                      "placement": "forward",
+                      "role": "historical lower bound for Vertex Cover by graph order"
+                    }
+                  },
+                  {
+                    "boundRevision": 1,
+                    "hypothesisRevision": 1,
+                    "reviewId": "rbds-tw-eth-literature-source-review",
+                    "source": {
+                      "editionId": "proceedings",
+                      "locator": "§5.3, Theorem 11 and Corollary 12, pp. 6:13–6:14",
+                      "paperId": "bodlaender2022-tree-structured",
+                      "placement": "forward",
+                      "role": "edge-subdivision reduction from Vertex Cover"
+                    }
+                  }
+                ],
+                "sourceBasis": {
+                  "kind": "derived",
+                  "step": "Subdivide every edge of a Vertex Cover instance. The blue original vertices dominate the red subdivision vertices exactly when they cover all original edges. A single bag with all original vertices and an attached bag for each subdivision gives treewidth at most max(n−1, 2) for original order n. The new explicit encoding has polynomial size."
+                },
+                "status": "established"
+              },
+              "hypothesisRevision": 1,
+              "verdict": "hypothesis-implies-bound"
+            }
+          },
+          "assumptionOperator": "all",
+          "assumptions": [
+            {
+              "id": "eth",
+              "revision": 1
+            }
+          ],
+          "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+          "id": "rbds-tw-eth",
+          "inputConditions": [],
+          "inputFactor": "B^(O(1))",
+          "proofs": [],
+          "provenance": "literature",
+          "qualifications": [],
+          "reader": {
+            "label": "Exponential dependence on treewidth",
+            "revision": 1
+          },
+          "reviewIds": [
+            "rbds-tw-eth-literature-source-review"
+          ],
+          "revision": 1,
+          "runtime": "2^(o(t)) B^(O(1))",
+          "runtimeSymbols": [
+            "t",
+            "B"
+          ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "Subdivide every edge of a Vertex Cover instance. The blue original vertices dominate the red subdivision vertices exactly when they cover all original edges. A single bag with all original vertices and an attached bag for each subdivision gives treewidth at most max(n−1, 2) for original order n. The new explicit encoding has polynomial size."
+          },
+          "sources": [
+            {
+              "editionId": "journal",
+              "locator": "Corollary 2, p. 524, and Theorem 5, p. 526",
+              "paperId": "ipz2001",
+              "placement": "forward",
+              "role": "sparsification and linear-order reduction to Vertex Cover"
+            },
+            {
+              "editionId": "bulletin",
+              "locator": "Theorem 3.3, p. 52",
+              "paperId": "lms2011",
+              "placement": "forward",
+              "role": "historical lower bound for Vertex Cover by graph order"
+            },
+            {
+              "editionId": "proceedings",
+              "locator": "§5.3, Theorem 11 and Corollary 12, pp. 6:13–6:14",
+              "paperId": "bodlaender2022-tree-structured",
+              "placement": "forward",
+              "role": "edge-subdivision reduction from Vertex Cover"
+            }
+          ],
+          "statement": "Under ETH, no deterministic algorithm decides Red-Blue Dominating Set within the stated running time.",
+          "status": "established",
+          "supported": true
+        },
+        {
+          "assessments": {
+            "w1": {
+              "converse": {
+                "effectiveStatus": "unassessed",
+                "evidence": [],
+                "status": "unassessed"
+              },
+              "forward": {
+                "effectiveStatus": "established",
+                "evidence": [
+                  {
+                    "boundRevision": 1,
+                    "hypothesisRevision": 1,
+                    "reviewId": "rbds-tw-w1-effective-literature-source-review",
+                    "source": {
+                      "editionId": "proceedings",
+                      "locator": "§5.3, Theorem 11 and Corollary 12, pp. 6:13–6:14",
+                      "paperId": "bodlaender2022-tree-structured",
+                      "placement": "forward",
+                      "role": "XALP-completeness for logarithmic treewidth"
+                    }
+                  }
+                ],
+                "sourceBasis": {
+                  "kind": "derived",
+                  "step": "Logarithmic-treewidth Red-Blue Dominating Set is XALP-hard, so it is W[1]-hard. The edge-subdivision construction has an explicit blue/red partition. Discard the supplied decomposition. For a Clique input of order n and parameter k, the output treewidth is at most g(k)(1+log₂ n) for a computable g. Use the computable cutoff for a slope at most 1/g(k). Above the cutoff the exponential factor is polynomial in n, and below it the computable exponent has a finite maximum controlled by k. The polynomial-size reduction output then gives an FPT algorithm for Clique."
+                },
+                "status": "established"
+              },
+              "hypothesisRevision": 1,
+              "verdict": "hypothesis-implies-bound"
+            }
+          },
+          "assumptionOperator": "all",
+          "assumptions": [
+            {
+              "id": "w1",
+              "revision": 1
+            }
+          ],
+          "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+          "exponentDomain": "nonnegative",
+          "id": "rbds-tw-w1-effective",
+          "inputConditions": [],
+          "inputFactor": "B^(O(1))",
+          "proofs": [],
+          "provenance": "literature",
+          "qualifications": [],
+          "reader": {
+            "label": "Effective little-o bound in the treewidth",
+            "revision": 1
+          },
+          "reviewIds": [
+            "rbds-tw-w1-effective-literature-source-review"
+          ],
+          "revision": 1,
+          "runtime": "2^(o_eff(t)) B^(O(1))",
+          "runtimeSymbols": [
+            "t",
+            "B"
+          ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "Logarithmic-treewidth Red-Blue Dominating Set is XALP-hard, so it is W[1]-hard. The edge-subdivision construction has an explicit blue/red partition. Discard the supplied decomposition. For a Clique input of order n and parameter k, the output treewidth is at most g(k)(1+log₂ n) for a computable g. Use the computable cutoff for a slope at most 1/g(k). Above the cutoff the exponential factor is polynomial in n, and below it the computable exponent has a finite maximum controlled by k. The polynomial-size reduction output then gives an FPT algorithm for Clique."
+          },
+          "sources": [
+            {
+              "editionId": "proceedings",
+              "locator": "§5.3, Theorem 11 and Corollary 12, pp. 6:13–6:14",
+              "paperId": "bodlaender2022-tree-structured",
+              "placement": "forward",
+              "role": "XALP-completeness for logarithmic treewidth"
+            }
+          ],
+          "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Red-Blue Dominating Set within the stated running time.",
+          "status": "established",
+          "supported": true
+        }
+      ],
+      "coverage": "Literature bounds for intrinsic treewidth.",
+      "encoding": "A finite simple undirected bipartite graph G with specified blue and red vertex classes and a nonnegative integer budget k. The graph and budget are encoded explicitly in binary.",
+      "id": "red-blue-dominating-set-treewidth",
+      "inputConditions": [],
+      "kind": "lower-bound-case",
+      "parameter": "The intrinsic treewidth t of G.",
+      "problemDefinitionHash": "9768d86e08be560f17af4092ee319fea8079d4094e5af4f3d600a4d9c547f636",
+      "problemId": "red-blue-dominating-set",
+      "problemRevision": 1,
+      "reader": {
+        "anchor": "treewidth",
+        "parameter": "The intrinsic treewidth t of G.",
+        "parameterLabel": "Treewidth",
+        "parameterSymbols": [
+          {
+            "meaning": "treewidth of the input graph",
+            "symbol": "t"
+          }
+        ],
+        "symbols": [
+          {
+            "meaning": "complete binary input length",
+            "symbol": "B"
+          }
+        ]
+      },
+      "recoveryAssessments": [
+        {
+          "comparison": "The two exclusions have the same problem, parameter, linear exponent scale, and polynomial factor in the full input length. The recovery requires a computable exponent and computable convergence.",
+          "effective": true,
+          "evidence": [
+            {
+              "editionId": "proceedings",
+              "locator": "§5.3, Theorem 11 and Corollary 12, pp. 6:13–6:14",
+              "paperId": "bodlaender2022-tree-structured",
+              "placement": "forward",
+              "role": "XALP-completeness for logarithmic treewidth"
+            }
+          ],
+          "hypothesis": {
+            "id": "w1",
+            "revision": 1
+          },
+          "recoveredScale": "t",
+          "recovery": {
+            "id": "rbds-tw-w1-effective",
+            "revision": 1
+          },
+          "scale": "full",
+          "target": {
+            "id": "rbds-tw-eth",
+            "revision": 1
+          },
+          "targetScale": "t"
+        }
+      ],
+      "recoveryComparisons": [
+        {
+          "hypothesis": {
+            "id": "kxk",
+            "revision": 1
+          },
+          "status": "unresolved",
+          "target": {
+            "id": "rbds-tw-eth",
+            "revision": 1
+          }
+        },
+        {
+          "hypothesis": {
+            "id": "np_qp",
+            "revision": 1
+          },
+          "status": "unresolved",
+          "target": {
+            "id": "rbds-tw-eth",
+            "revision": 1
+          }
+        },
+        {
+          "hypothesis": {
+            "id": "sh",
+            "revision": 1
+          },
+          "status": "unresolved",
+          "target": {
+            "id": "rbds-tw-eth",
+            "revision": 1
+          }
+        },
+        {
+          "comparison": "The two exclusions have the same problem, parameter, linear exponent scale, and polynomial factor in the full input length. The recovery requires a computable exponent and computable convergence.",
+          "effective": true,
+          "evidence": [
+            {
+              "editionId": "proceedings",
+              "locator": "§5.3, Theorem 11 and Corollary 12, pp. 6:13–6:14",
+              "paperId": "bodlaender2022-tree-structured",
+              "placement": "forward",
+              "role": "XALP-completeness for logarithmic treewidth"
+            }
+          ],
+          "hypothesis": {
+            "id": "w1",
+            "revision": 1
+          },
+          "recoveredScale": "t",
+          "recovery": {
+            "id": "rbds-tw-w1-effective",
+            "revision": 1
+          },
+          "scale": "full",
+          "status": "effective",
+          "target": {
+            "id": "rbds-tw-eth",
+            "revision": 1
+          },
+          "targetScale": "t"
+        }
+      ],
+      "resolutions": [],
+      "revision": 1,
+      "task": "Is there a set of at most k blue vertices such that every red vertex has a neighbor in the set?",
+      "title": "Red-Blue Dominating Set by treewidth",
+      "variant": "Bipartite Red-Blue Dominating Set"
     },
     {
       "aliases": [],
@@ -30927,6 +33339,312 @@
       "aliases": [],
       "bounds": [
         {
+          "assessments": {
+            "eth": {
+              "converse": {
+                "effectiveStatus": "unassessed",
+                "evidence": [],
+                "status": "unassessed"
+              },
+              "forward": {
+                "effectiveStatus": "established",
+                "evidence": [
+                  {
+                    "boundRevision": 1,
+                    "hypothesisRevision": 1,
+                    "reviewId": "vc-tw-eth-literature-source-review",
+                    "source": {
+                      "editionId": "journal",
+                      "locator": "Corollary 2, p. 524, and Theorem 5, p. 526",
+                      "paperId": "ipz2001",
+                      "placement": "forward",
+                      "role": "sparsification and linear-order reduction to Vertex Cover"
+                    }
+                  },
+                  {
+                    "boundRevision": 1,
+                    "hypothesisRevision": 1,
+                    "reviewId": "vc-tw-eth-literature-source-review",
+                    "source": {
+                      "editionId": "bulletin",
+                      "locator": "Theorem 3.3, p. 52",
+                      "paperId": "lms2011",
+                      "placement": "forward",
+                      "role": "historical lower bound for Vertex Cover by graph order"
+                    }
+                  }
+                ],
+                "sourceBasis": {
+                  "kind": "derived",
+                  "step": "The Vertex Cover instances produced from sparse 3-SAT have linear graph order, and treewidth is bounded by that order. A solver with the stated dependence on treewidth would solve sparse 3-SAT in subexponential time."
+                },
+                "status": "established"
+              },
+              "hypothesisRevision": 1,
+              "verdict": "hypothesis-implies-bound"
+            }
+          },
+          "assumptionOperator": "all",
+          "assumptions": [
+            {
+              "id": "eth",
+              "revision": 1
+            }
+          ],
+          "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+          "id": "vc-tw-eth",
+          "inputConditions": [],
+          "inputFactor": "B^(O(1))",
+          "proofs": [],
+          "provenance": "literature",
+          "qualifications": [],
+          "reader": {
+            "label": "Exponential dependence on treewidth",
+            "revision": 1
+          },
+          "reviewIds": [
+            "vc-tw-eth-literature-source-review"
+          ],
+          "revision": 1,
+          "runtime": "2^(o(t)) B^(O(1))",
+          "runtimeSymbols": [
+            "t",
+            "B"
+          ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "The Vertex Cover instances produced from sparse 3-SAT have linear graph order, and treewidth is bounded by that order. A solver with the stated dependence on treewidth would solve sparse 3-SAT in subexponential time."
+          },
+          "sources": [
+            {
+              "editionId": "journal",
+              "locator": "Corollary 2, p. 524, and Theorem 5, p. 526",
+              "paperId": "ipz2001",
+              "placement": "forward",
+              "role": "sparsification and linear-order reduction to Vertex Cover"
+            },
+            {
+              "editionId": "bulletin",
+              "locator": "Theorem 3.3, p. 52",
+              "paperId": "lms2011",
+              "placement": "forward",
+              "role": "historical lower bound for Vertex Cover by graph order"
+            }
+          ],
+          "statement": "Under ETH, no deterministic algorithm decides Vertex Cover within the stated running time.",
+          "status": "established",
+          "supported": true
+        },
+        {
+          "assessments": {
+            "w1": {
+              "converse": {
+                "effectiveStatus": "unassessed",
+                "evidence": [],
+                "status": "unassessed"
+              },
+              "forward": {
+                "effectiveStatus": "established",
+                "evidence": [
+                  {
+                    "boundRevision": 1,
+                    "hypothesisRevision": 1,
+                    "reviewId": "vc-tw-w1-effective-literature-source-review",
+                    "source": {
+                      "editionId": "proceedings",
+                      "locator": "§5.3, Theorem 11 and Corollary 12, pp. 6:13–6:14",
+                      "paperId": "bodlaender2022-tree-structured",
+                      "placement": "forward",
+                      "role": "XALP-completeness for logarithmic treewidth"
+                    }
+                  }
+                ],
+                "sourceBasis": {
+                  "kind": "derived",
+                  "step": "Logarithmic-treewidth Vertex Cover is XALP-hard, so it is W[1]-hard. Discard the supplied decomposition from the reduction output. For a Clique input of order n and parameter k, the output treewidth is at most g(k)(1+log₂ n) for a computable g. Use the computable cutoff for a slope at most 1/g(k). Above the cutoff the exponential factor is polynomial in n, and below it the computable exponent has a finite maximum controlled by k. The polynomial-size reduction output then gives an FPT algorithm for Clique."
+                },
+                "status": "established"
+              },
+              "hypothesisRevision": 1,
+              "verdict": "hypothesis-implies-bound"
+            }
+          },
+          "assumptionOperator": "all",
+          "assumptions": [
+            {
+              "id": "w1",
+              "revision": 1
+            }
+          ],
+          "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+          "exponentDomain": "nonnegative",
+          "id": "vc-tw-w1-effective",
+          "inputConditions": [],
+          "inputFactor": "B^(O(1))",
+          "proofs": [],
+          "provenance": "literature",
+          "qualifications": [],
+          "reader": {
+            "label": "Effective little-o bound in the treewidth",
+            "revision": 1
+          },
+          "reviewIds": [
+            "vc-tw-w1-effective-literature-source-review"
+          ],
+          "revision": 1,
+          "runtime": "2^(o_eff(t)) B^(O(1))",
+          "runtimeSymbols": [
+            "t",
+            "B"
+          ],
+          "sourceBasis": {
+            "kind": "derived",
+            "step": "Logarithmic-treewidth Vertex Cover is XALP-hard, so it is W[1]-hard. Discard the supplied decomposition from the reduction output. For a Clique input of order n and parameter k, the output treewidth is at most g(k)(1+log₂ n) for a computable g. Use the computable cutoff for a slope at most 1/g(k). Above the cutoff the exponential factor is polynomial in n, and below it the computable exponent has a finite maximum controlled by k. The polynomial-size reduction output then gives an FPT algorithm for Clique."
+          },
+          "sources": [
+            {
+              "editionId": "proceedings",
+              "locator": "§5.3, Theorem 11 and Corollary 12, pp. 6:13–6:14",
+              "paperId": "bodlaender2022-tree-structured",
+              "placement": "forward",
+              "role": "XALP-completeness for logarithmic treewidth"
+            }
+          ],
+          "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Vertex Cover within the stated running time.",
+          "status": "established",
+          "supported": true
+        }
+      ],
+      "coverage": "Literature bounds for intrinsic treewidth.",
+      "encoding": "A finite, simple, undirected, unweighted graph G and a nonnegative integer k. The graph and budget are encoded explicitly in binary.",
+      "id": "vertex-cover-treewidth",
+      "inputConditions": [],
+      "kind": "lower-bound-case",
+      "parameter": "The intrinsic treewidth t of G.",
+      "problemDefinitionHash": "a9ccce0fb0f65dac9528ed3bef390b32af53184cadd36074247a21390fa6a792",
+      "problemId": "vertex-cover",
+      "problemRevision": 1,
+      "reader": {
+        "anchor": "treewidth",
+        "parameter": "The intrinsic treewidth t of G.",
+        "parameterLabel": "Treewidth",
+        "parameterSymbols": [
+          {
+            "meaning": "treewidth of the input graph",
+            "symbol": "t"
+          }
+        ],
+        "symbols": [
+          {
+            "meaning": "complete binary input length",
+            "symbol": "B"
+          }
+        ]
+      },
+      "recoveryAssessments": [
+        {
+          "comparison": "The two exclusions have the same problem, parameter, linear exponent scale, and polynomial factor in the full input length. The recovery requires a computable exponent and computable convergence.",
+          "effective": true,
+          "evidence": [
+            {
+              "editionId": "proceedings",
+              "locator": "§5.3, Theorem 11 and Corollary 12, pp. 6:13–6:14",
+              "paperId": "bodlaender2022-tree-structured",
+              "placement": "forward",
+              "role": "XALP-completeness for logarithmic treewidth"
+            }
+          ],
+          "hypothesis": {
+            "id": "w1",
+            "revision": 1
+          },
+          "recoveredScale": "t",
+          "recovery": {
+            "id": "vc-tw-w1-effective",
+            "revision": 1
+          },
+          "scale": "full",
+          "target": {
+            "id": "vc-tw-eth",
+            "revision": 1
+          },
+          "targetScale": "t"
+        }
+      ],
+      "recoveryComparisons": [
+        {
+          "hypothesis": {
+            "id": "kxk",
+            "revision": 1
+          },
+          "status": "unresolved",
+          "target": {
+            "id": "vc-tw-eth",
+            "revision": 1
+          }
+        },
+        {
+          "hypothesis": {
+            "id": "np_qp",
+            "revision": 1
+          },
+          "status": "unresolved",
+          "target": {
+            "id": "vc-tw-eth",
+            "revision": 1
+          }
+        },
+        {
+          "hypothesis": {
+            "id": "sh",
+            "revision": 1
+          },
+          "status": "unresolved",
+          "target": {
+            "id": "vc-tw-eth",
+            "revision": 1
+          }
+        },
+        {
+          "comparison": "The two exclusions have the same problem, parameter, linear exponent scale, and polynomial factor in the full input length. The recovery requires a computable exponent and computable convergence.",
+          "effective": true,
+          "evidence": [
+            {
+              "editionId": "proceedings",
+              "locator": "§5.3, Theorem 11 and Corollary 12, pp. 6:13–6:14",
+              "paperId": "bodlaender2022-tree-structured",
+              "placement": "forward",
+              "role": "XALP-completeness for logarithmic treewidth"
+            }
+          ],
+          "hypothesis": {
+            "id": "w1",
+            "revision": 1
+          },
+          "recoveredScale": "t",
+          "recovery": {
+            "id": "vc-tw-w1-effective",
+            "revision": 1
+          },
+          "scale": "full",
+          "status": "effective",
+          "target": {
+            "id": "vc-tw-eth",
+            "revision": 1
+          },
+          "targetScale": "t"
+        }
+      ],
+      "resolutions": [],
+      "revision": 1,
+      "task": "Does G have a set of at most k vertices that includes an endpoint of every edge?",
+      "title": "Vertex Cover by treewidth",
+      "variant": "Vertex Cover"
+    },
+    {
+      "aliases": [],
+      "bounds": [
+        {
           "assessments": {},
           "assumptionOperator": "all",
           "assumptions": [
@@ -33908,6 +36626,25 @@
     },
     {
       "authors": [
+        "Vincent Froese"
+      ],
+      "editions": [
+        {
+          "access": "Theorem 4.1 and proof inspected. This thesis gives the binary address construction. The later joint journal paper uses an unbounded-alphabet construction for its Hitting Set reduction.",
+          "id": "thesis",
+          "kind": "thesis",
+          "label": "Master’s thesis, Technische Universität Berlin, 2012",
+          "preferredUrl": "https://fpt.akt.tu-berlin.de/publications/theses/MA-vincent-froese.pdf",
+          "primaryUrl": "https://fpt.akt.tu-berlin.de/publications/theses/MA-vincent-froese.pdf"
+        }
+      ],
+      "id": "froese2012-binary-distinct-vectors",
+      "preferredEditionId": "thesis",
+      "preferredUrl": "https://fpt.akt.tu-berlin.de/publications/theses/MA-vincent-froese.pdf",
+      "title": "Combinatorial Feature Selection: Parameterized Algorithms and Complexity"
+    },
+    {
+      "authors": [
         "Esther Galby",
         "Sándor Kisfaludi-Bak",
         "Dániel Marx",
@@ -35335,6 +38072,20 @@
       "name": "Graph Motif",
       "question": "Is there a set of vertices that induces a connected subgraph and whose colors, counted with multiplicity, form M?",
       "revision": 1
+    },
+    {
+      "id": "cnf-sat",
+      "input": "An explicitly listed Boolean formula in conjunctive normal form.",
+      "name": "CNF-SAT",
+      "question": "Does the formula have a satisfying assignment?",
+      "revision": 1
+    },
+    {
+      "id": "red-blue-dominating-set",
+      "input": "A finite simple undirected bipartite graph G with specified blue and red vertex classes and a nonnegative integer budget k.",
+      "name": "Red-Blue Dominating Set",
+      "question": "Is there a set of at most k blue vertices such that every red vertex has a neighbor in the set?",
+      "revision": 1
     }
   ],
   "proofs": [
@@ -35383,6 +38134,12 @@
     "assumptions": {
       "eth": [
         {
+          "caseId": "3-coloring-treewidth",
+          "id": "3-coloring-treewidth-eth",
+          "revision": 1,
+          "type": "bound"
+        },
+        {
           "caseId": "balanced-vertex-separator-budget",
           "id": "balanced-vertex-separator-budget-eth",
           "revision": 1,
@@ -35391,6 +38148,12 @@
         {
           "caseId": "chromatic-number-treewidth",
           "id": "chromatic-tw-eth",
+          "revision": 1,
+          "type": "bound"
+        },
+        {
+          "caseId": "chromatic-number-treewidth",
+          "id": "chromatic-tw-fixed-q-eth",
           "revision": 1,
           "type": "bound"
         },
@@ -35439,6 +38202,12 @@
         {
           "caseId": "cluster-editing-size",
           "id": "cluster-editing-size-eth",
+          "revision": 1,
+          "type": "bound"
+        },
+        {
+          "caseId": "cnf-sat-variables",
+          "id": "cnf-sat-variables-eth",
           "revision": 1,
           "type": "bound"
         },
@@ -35581,6 +38350,12 @@
           "type": "bound"
         },
         {
+          "caseId": "feedback-vertex-set-treewidth",
+          "id": "fvs-tw-eth",
+          "revision": 1,
+          "type": "bound"
+        },
+        {
           "caseId": "fixed-width-sat-formula-size",
           "id": "fixed-width-sat-formula-size-eth",
           "revision": 1,
@@ -35709,6 +38484,12 @@
         {
           "caseId": "list-coloring-treewidth",
           "id": "list-coloring-treewidth-eth",
+          "revision": 1,
+          "type": "bound"
+        },
+        {
+          "caseId": "list-coloring-treewidth",
+          "id": "list-coloring-treewidth-fixed-q-eth",
           "revision": 1,
           "type": "bound"
         },
@@ -35917,6 +38698,12 @@
           "type": "bound"
         },
         {
+          "caseId": "red-blue-dominating-set-treewidth",
+          "id": "rbds-tw-eth",
+          "revision": 1,
+          "type": "bound"
+        },
+        {
           "caseId": "scattered-set-solution-size",
           "id": "scattered-set-solution-size-eth",
           "revision": 1,
@@ -36022,6 +38809,12 @@
           "caseId": "vertex-cover-order",
           "id": "vc-order-eth",
           "revision": 2,
+          "type": "bound"
+        },
+        {
+          "caseId": "vertex-cover-treewidth",
+          "id": "vc-tw-eth",
+          "revision": 1,
           "type": "bound"
         },
         {
@@ -36489,8 +39282,20 @@
       ],
       "w1": [
         {
+          "caseId": "3-coloring-treewidth",
+          "id": "3-coloring-treewidth-w1",
+          "revision": 1,
+          "type": "bound"
+        },
+        {
           "caseId": "balanced-vertex-separator-budget",
           "id": "balanced-vertex-separator-budget-w1-baseline",
+          "revision": 1,
+          "type": "bound"
+        },
+        {
+          "caseId": "chromatic-number-treewidth",
+          "id": "chromatic-tw-fixed-q-w1",
           "revision": 1,
           "type": "bound"
         },
@@ -36519,6 +39324,12 @@
           "type": "bound"
         },
         {
+          "caseId": "cnf-sat-variables",
+          "id": "cnf-sat-variables-w1-effective",
+          "revision": 1,
+          "type": "bound"
+        },
+        {
           "caseId": "connected-dominating-set-budget",
           "id": "connected-dominating-set-budget-w1-baseline",
           "revision": 1,
@@ -36533,6 +39344,12 @@
         {
           "caseId": "cycle-packing-treewidth",
           "id": "cp-tw-w1-effective",
+          "revision": 1,
+          "type": "bound"
+        },
+        {
+          "caseId": "distinct-vectors-budget",
+          "id": "dv-w1-effective",
           "revision": 1,
           "type": "bound"
         },
@@ -36609,6 +39426,12 @@
           "type": "bound"
         },
         {
+          "caseId": "feedback-vertex-set-treewidth",
+          "id": "fvs-tw-w1-effective",
+          "revision": 1,
+          "type": "bound"
+        },
+        {
           "caseId": "graph-distortion-line",
           "id": "graph-distortion-line-w1",
           "revision": 1,
@@ -36666,6 +39489,12 @@
           "caseId": "integer-linear-programming-equations",
           "id": "ilp-equations-w1-effective",
           "revision": 2,
+          "type": "bound"
+        },
+        {
+          "caseId": "list-coloring-treewidth",
+          "id": "list-coloring-treewidth-fixed-q-w1",
+          "revision": 1,
           "type": "bound"
         },
         {
@@ -36765,6 +39594,12 @@
           "type": "bound"
         },
         {
+          "caseId": "red-blue-dominating-set-treewidth",
+          "id": "rbds-tw-w1-effective",
+          "revision": 1,
+          "type": "bound"
+        },
+        {
           "caseId": "scattered-set-solution-size",
           "id": "scattered-set-solution-size-w1",
           "revision": 1,
@@ -36816,6 +39651,12 @@
           "caseId": "unit-square-independent-set-budget",
           "id": "unit-square-independent-set-budget-w1",
           "revision": 2,
+          "type": "bound"
+        },
+        {
+          "caseId": "vertex-cover-treewidth",
+          "id": "vc-tw-w1-effective",
+          "revision": 1,
           "type": "bound"
         },
         {
@@ -37048,40 +39889,117 @@
           "revision": 1,
           "role": "unrestricted lower bound",
           "type": "bound"
+        },
+        {
+          "caseId": "red-blue-dominating-set-treewidth",
+          "editionId": "proceedings",
+          "id": "rbds-tw-eth",
+          "locator": "§5.3, Theorem 11 and Corollary 12, pp. 6:13–6:14",
+          "paperId": "bodlaender2022-tree-structured",
+          "placement": "forward",
+          "revision": 1,
+          "role": "edge-subdivision reduction from Vertex Cover",
+          "type": "bound"
+        },
+        {
+          "caseId": "red-blue-dominating-set-treewidth",
+          "editionId": "proceedings",
+          "id": "rbds-tw-w1-effective",
+          "locator": "§5.3, Theorem 11 and Corollary 12, pp. 6:13–6:14",
+          "paperId": "bodlaender2022-tree-structured",
+          "placement": "forward",
+          "revision": 1,
+          "role": "XALP-completeness for logarithmic treewidth",
+          "type": "bound"
+        },
+        {
+          "caseId": "vertex-cover-treewidth",
+          "editionId": "proceedings",
+          "id": "vc-tw-w1-effective",
+          "locator": "§5.3, Theorem 11 and Corollary 12, pp. 6:13–6:14",
+          "paperId": "bodlaender2022-tree-structured",
+          "placement": "forward",
+          "revision": 1,
+          "role": "XALP-completeness for logarithmic treewidth",
+          "type": "bound"
         }
       ],
       "bodlaender2025-linear-structure": [
         {
-          "caseId": "chromatic-number-treewidth",
+          "caseId": "3-coloring-treewidth",
           "editionId": "journal",
-          "id": "chromatic-tw-w1",
-          "locator": "Theorem 9, Lemma 4 and Claim 12.",
+          "id": "3-coloring-treewidth-w1",
+          "locator": "§4.3, Lemma 4 and Claim 12",
           "paperId": "bodlaender2025-linear-structure",
           "placement": "statement",
           "revision": 1,
-          "role": "source construction for the unrestricted bound",
+          "role": "fixed-palette logarithmic-pathwidth hardness",
+          "type": "bound"
+        },
+        {
+          "caseId": "chromatic-number-treewidth",
+          "editionId": "journal",
+          "id": "chromatic-tw-fixed-q-w1",
+          "locator": "§4.3, Lemma 4 and Claim 12",
+          "paperId": "bodlaender2025-linear-structure",
+          "placement": "statement",
+          "revision": 1,
+          "role": "fixed-palette logarithmic-pathwidth hardness",
+          "type": "bound"
+        },
+        {
+          "caseId": "chromatic-number-treewidth",
+          "editionId": "journal",
+          "id": "chromatic-tw-w1",
+          "locator": "Theorem 9, Lemma 4 and Claim 12",
+          "paperId": "bodlaender2025-linear-structure",
+          "placement": "statement",
+          "revision": 1,
+          "role": "construction adapted in Molter’s Proposition 1",
+          "type": "bound"
+        },
+        {
+          "caseId": "feedback-vertex-set-treewidth",
+          "editionId": "journal",
+          "id": "fvs-tw-w1-effective",
+          "locator": "Theorem 6 and §4.3, Lemma 5 and Claim 15",
+          "paperId": "bodlaender2025-linear-structure",
+          "placement": "forward",
+          "revision": 1,
+          "role": "XNLP-hardness for logarithmic pathwidth",
           "type": "bound"
         },
         {
           "caseId": "independent-set-treewidth",
           "editionId": "journal",
           "id": "is-tw-w1",
-          "locator": "Theorem 6 (logarithmic pathwidth).",
+          "locator": "§4.3, Theorem 6 (logarithmic pathwidth)",
           "paperId": "bodlaender2025-linear-structure",
           "placement": "statement",
           "revision": 1,
-          "role": "unrestricted lower bound",
+          "role": "logarithmic pathwidth hardness",
+          "type": "bound"
+        },
+        {
+          "caseId": "list-coloring-treewidth",
+          "editionId": "journal",
+          "id": "list-coloring-treewidth-fixed-q-w1",
+          "locator": "§4.3, Lemma 4 and Claim 12",
+          "paperId": "bodlaender2025-linear-structure",
+          "placement": "statement",
+          "revision": 1,
+          "role": "fixed-palette logarithmic-pathwidth hardness",
           "type": "bound"
         },
         {
           "caseId": "odd-cycle-transversal-treewidth",
           "editionId": "journal",
           "id": "odd-cycle-transversal-treewidth-w1",
-          "locator": "Theorem 6 (logarithmic pathwidth).",
+          "locator": "§4.3, Theorem 6 and Lemma 5 (logarithmic pathwidth)",
           "paperId": "bodlaender2025-linear-structure",
           "placement": "statement",
           "revision": 1,
-          "role": "unrestricted lower bound",
+          "role": "logarithmic pathwidth hardness",
           "type": "bound"
         }
       ],
@@ -37161,6 +40079,17 @@
         }
       ],
       "cai-juedes2003": [
+        {
+          "caseId": "cnf-sat-variables",
+          "editionId": "journal",
+          "id": "cnf-sat-variables-w1-effective",
+          "locator": "Lemma 3.1 and Corollary 3.1, §3, pp. 796–799",
+          "paperId": "cai-juedes2003",
+          "placement": "statement",
+          "revision": 1,
+          "role": "paired-variable SAT reduction",
+          "type": "bound"
+        },
         {
           "caseId": "lms-closest-string-radius",
           "editionId": "journal",
@@ -38766,6 +41695,17 @@
           "type": "bound"
         },
         {
+          "caseId": "feedback-vertex-set-treewidth",
+          "editionId": "journal",
+          "id": "fvs-tw-eth",
+          "locator": "§4.4, Feedback Vertex Set paragraph, p. 1324",
+          "paperId": "deberg-et-al2020-geometric",
+          "placement": "forward",
+          "revision": 1,
+          "role": "edge-triangle reduction from Vertex Cover",
+          "type": "bound"
+        },
+        {
           "caseId": "hamiltonian-cycle-graph-size",
           "editionId": "journal",
           "id": "hamiltonian-cycle-graph-size-sh",
@@ -39227,6 +42167,30 @@
           "type": "bound"
         }
       ],
+      "froese2012-binary-distinct-vectors": [
+        {
+          "caseId": "distinct-vectors-budget",
+          "editionId": "thesis",
+          "id": "dv-w1-effective",
+          "locator": "Theorem 4.1 and proof, §4.1.1, pp. 33–34",
+          "paperId": "froese2012-binary-distinct-vectors",
+          "placement": "statement",
+          "revision": 1,
+          "role": "binary address reduction from Hitting Set",
+          "type": "bound"
+        },
+        {
+          "caseId": "distinct-vectors-budget",
+          "editionId": "thesis",
+          "id": "dv-w1-fixed-coefficient",
+          "locator": "Theorem 4.1 and proof, §4.1.1, pp. 33–34",
+          "paperId": "froese2012-binary-distinct-vectors",
+          "placement": "statement",
+          "revision": 1,
+          "role": "binary address reduction from Hitting Set",
+          "type": "bound"
+        }
+      ],
       "galby-et-al2024-directed-steiner": [
         {
           "caseId": "directed-steiner-tree-terminals",
@@ -39510,6 +42474,17 @@
           "type": "bound"
         },
         {
+          "caseId": "cnf-sat-variables",
+          "editionId": "journal",
+          "id": "cnf-sat-variables-eth",
+          "locator": "Introduction and Corollary 1",
+          "paperId": "ipz2001",
+          "placement": "statement",
+          "revision": 1,
+          "role": "historical 3SAT hypothesis by number of variables",
+          "type": "bound"
+        },
+        {
           "caseId": "connected-vertex-cover-budget",
           "editionId": "journal",
           "id": "connected-vertex-cover-budget-eth",
@@ -39540,6 +42515,17 @@
           "placement": "forward",
           "revision": 1,
           "role": "Original linear-size sparse SAT transfer to Vertex Cover",
+          "type": "bound"
+        },
+        {
+          "caseId": "feedback-vertex-set-treewidth",
+          "editionId": "journal",
+          "id": "fvs-tw-eth",
+          "locator": "Corollary 2, p. 524, and Theorem 5, p. 526",
+          "paperId": "ipz2001",
+          "placement": "forward",
+          "revision": 1,
+          "role": "sparsification and linear-order reduction to Vertex Cover",
           "type": "bound"
         },
         {
@@ -39640,6 +42626,17 @@
           "type": "bound"
         },
         {
+          "caseId": "red-blue-dominating-set-treewidth",
+          "editionId": "journal",
+          "id": "rbds-tw-eth",
+          "locator": "Corollary 2, p. 524, and Theorem 5, p. 526",
+          "paperId": "ipz2001",
+          "placement": "forward",
+          "revision": 1,
+          "role": "sparsification and linear-order reduction to Vertex Cover",
+          "type": "bound"
+        },
+        {
           "caseId": "three-sat-clauses",
           "editionId": "journal",
           "id": "three-sat-clauses-eth",
@@ -39724,6 +42721,17 @@
           "placement": "proof",
           "revision": 3,
           "role": "linear-variable encoding of the size constraint and vertex-preserving graph reductions",
+          "type": "bound"
+        },
+        {
+          "caseId": "vertex-cover-treewidth",
+          "editionId": "journal",
+          "id": "vc-tw-eth",
+          "locator": "Corollary 2, p. 524, and Theorem 5, p. 526",
+          "paperId": "ipz2001",
+          "placement": "forward",
+          "revision": 1,
+          "role": "sparsification and linear-order reduction to Vertex Cover",
           "type": "bound"
         }
       ],
@@ -39997,12 +43005,23 @@
         {
           "caseId": "distinct-vectors-budget",
           "editionId": "proceedings",
+          "id": "dv-w1-effective",
+          "locator": "Lemma 14 and proof, §3.4, pp. 81:11–81:12",
+          "paperId": "lin2019",
+          "placement": "statement",
+          "revision": 1,
+          "role": "Set Cover reduction with a logarithmic-size universe",
+          "type": "bound"
+        },
+        {
+          "caseId": "distinct-vectors-budget",
+          "editionId": "proceedings",
           "id": "dv-w1-fixed-coefficient",
           "locator": "Lemma 14 and proof, §3.4, pp. 81:11–81:12",
           "paperId": "lin2019",
           "placement": "statement",
           "revision": 1,
-          "role": "Set Cover construction with a logarithmic-size universe",
+          "role": "Set Cover reduction with a logarithmic-size universe",
           "type": "bound"
         },
         {
@@ -40025,7 +43044,18 @@
           "paperId": "lin2019",
           "placement": "statement",
           "revision": 2,
-          "role": "Set Cover construction used for the exact-cover count",
+          "role": "Set Cover construction underlying the exact-cover encoding",
+          "type": "bound"
+        },
+        {
+          "caseId": "integer-linear-programming-equations",
+          "editionId": "proceedings",
+          "id": "ilp-equations-w1-effective",
+          "locator": "Lemma 14 and proof, §3.4, pp. 81:11–81:12",
+          "paperId": "lin2019",
+          "placement": "forward",
+          "revision": 2,
+          "role": "Set Cover construction underlying the exact-cover encoding",
           "type": "bound"
         }
       ],
@@ -40121,14 +43151,36 @@
       ],
       "lms2011": [
         {
+          "caseId": "3-coloring-treewidth",
+          "editionId": "bulletin",
+          "id": "3-coloring-treewidth-eth",
+          "locator": "Theorem 3.2, PDF p. 12",
+          "paperId": "lms2011",
+          "placement": "statement",
+          "revision": 1,
+          "role": "3-Coloring graph-order lower bound",
+          "type": "bound"
+        },
+        {
           "caseId": "chromatic-number-treewidth",
           "editionId": "bulletin",
           "id": "chromatic-tw-eth",
-          "locator": "Theorem 6.3, the treewidth bound for Chromatic Number",
+          "locator": "Theorem 6.3, p. 62",
           "paperId": "lms2011",
           "placement": "statement",
           "revision": 1,
           "role": "explicit benchmark statement",
+          "type": "bound"
+        },
+        {
+          "caseId": "chromatic-number-treewidth",
+          "editionId": "bulletin",
+          "id": "chromatic-tw-fixed-q-eth",
+          "locator": "Theorem 3.2, PDF p. 12",
+          "paperId": "lms2011",
+          "placement": "statement",
+          "revision": 1,
+          "role": "3-Coloring graph-order lower bound",
           "type": "bound"
         },
         {
@@ -40242,6 +43294,17 @@
           "type": "bound"
         },
         {
+          "caseId": "feedback-vertex-set-treewidth",
+          "editionId": "bulletin",
+          "id": "fvs-tw-eth",
+          "locator": "Theorem 3.3, p. 52",
+          "paperId": "lms2011",
+          "placement": "forward",
+          "revision": 1,
+          "role": "historical lower bound for Vertex Cover by graph order",
+          "type": "bound"
+        },
+        {
           "caseId": "fixed-width-sat-variables",
           "editionId": "bulletin",
           "id": "fixed-width-sat-variables-eth",
@@ -40305,6 +43368,17 @@
           "placement": "statement",
           "revision": 1,
           "role": "benchmark",
+          "type": "bound"
+        },
+        {
+          "caseId": "list-coloring-treewidth",
+          "editionId": "bulletin",
+          "id": "list-coloring-treewidth-fixed-q-eth",
+          "locator": "Theorem 3.2, PDF p. 12",
+          "paperId": "lms2011",
+          "placement": "statement",
+          "revision": 1,
+          "role": "3-Coloring graph-order lower bound",
           "type": "bound"
         },
         {
@@ -40372,7 +43446,7 @@
           "caseId": "odd-cycle-transversal-treewidth",
           "editionId": "bulletin",
           "id": "odd-cycle-transversal-treewidth-eth",
-          "locator": "Theorem 6.2",
+          "locator": "Theorem 6.2, p. 62",
           "paperId": "lms2011",
           "placement": "statement",
           "revision": 1,
@@ -40410,6 +43484,17 @@
           "placement": "statement",
           "revision": 1,
           "role": "benchmark",
+          "type": "bound"
+        },
+        {
+          "caseId": "red-blue-dominating-set-treewidth",
+          "editionId": "bulletin",
+          "id": "rbds-tw-eth",
+          "locator": "Theorem 3.3, p. 52",
+          "paperId": "lms2011",
+          "placement": "forward",
+          "revision": 1,
+          "role": "historical lower bound for Vertex Cover by graph order",
           "type": "bound"
         },
         {
@@ -40474,6 +43559,17 @@
           "placement": "statement",
           "revision": 2,
           "role": "benchmark",
+          "type": "bound"
+        },
+        {
+          "caseId": "vertex-cover-treewidth",
+          "editionId": "bulletin",
+          "id": "vc-tw-eth",
+          "locator": "Theorem 3.3, p. 52",
+          "paperId": "lms2011",
+          "placement": "forward",
+          "revision": 1,
+          "role": "historical lower bound for Vertex Cover by graph order",
           "type": "bound"
         }
       ],
@@ -40975,6 +44071,17 @@
       ],
       "molter2026-running-time": [
         {
+          "caseId": "chromatic-number-treewidth",
+          "editionId": "arxiv-v2",
+          "id": "chromatic-tw-w1",
+          "locator": "Table 1, Proposition 1 and its proof in §3",
+          "paperId": "molter2026-running-time",
+          "placement": "statement",
+          "revision": 1,
+          "role": "variable-budget adaptation and effective running-time lower bound",
+          "type": "bound"
+        },
+        {
           "caseId": "chromatic-number-vertex-cover",
           "editionId": "arxiv-v2",
           "id": "chromatic-vc-w1",
@@ -41030,61 +44137,6 @@
           "type": "bound"
         },
         {
-          "caseId": "distinct-vectors-budget",
-          "editionId": "arxiv-v2",
-          "id": "dv-w1-fixed-coefficient",
-          "locator": "§3, Consequences of Lin’s Set Cover reduction, pp. 11–12",
-          "paperId": "molter2026-running-time",
-          "placement": "statement",
-          "revision": 1,
-          "role": "fixed-coefficient consequence of the effective lower bound",
-          "type": "bound"
-        },
-        {
-          "caseId": "dominating-set-linear-rank-width",
-          "editionId": "arxiv-v2",
-          "id": "dominating-set-linear-rank-width-w1-effective",
-          "locator": "Table 1 and §3, “Dominating Set with a supplied vertex order”",
-          "paperId": "molter2026-running-time",
-          "placement": "forward",
-          "revision": 1,
-          "role": "effective running-time lower bound",
-          "type": "bound"
-        },
-        {
-          "caseId": "dominating-set-rank-width",
-          "editionId": "arxiv-v2",
-          "id": "dominating-set-rank-width-w1-effective",
-          "locator": "Table 1 and §3, “Dominating Set with a supplied vertex order”",
-          "paperId": "molter2026-running-time",
-          "placement": "forward",
-          "revision": 1,
-          "role": "effective running-time lower bound",
-          "type": "bound"
-        },
-        {
-          "caseId": "dominating-set-supplied-linear-layout",
-          "editionId": "arxiv-v2",
-          "id": "dominating-set-supplied-linear-layout-w1-effective",
-          "locator": "Table 1 and §3, “Dominating Set with a supplied vertex order”",
-          "paperId": "molter2026-running-time",
-          "placement": "forward",
-          "revision": 1,
-          "role": "effective running-time lower bound",
-          "type": "bound"
-        },
-        {
-          "caseId": "dominating-set-supplied-rank-decomposition",
-          "editionId": "arxiv-v2",
-          "id": "dominating-set-supplied-rank-decomposition-w1-effective",
-          "locator": "Table 1 and §3, “Dominating Set with a supplied vertex order”",
-          "paperId": "molter2026-running-time",
-          "placement": "forward",
-          "revision": 1,
-          "role": "effective running-time lower bound",
-          "type": "bound"
-        },
-        {
           "caseId": "graph-distortion-line",
           "editionId": "arxiv-v2",
           "id": "graph-distortion-line-w1",
@@ -41191,28 +44243,6 @@
           "paperId": "molter2026-running-time",
           "placement": "forward",
           "revision": 1,
-          "role": "forward implication",
-          "type": "bound"
-        },
-        {
-          "caseId": "integer-linear-programming-equations",
-          "editionId": "arxiv-v2",
-          "id": "ilp-equations-w1-effective",
-          "locator": "§3, Consequences of Lin’s Set Cover reduction, p. 12, and Lemma 1, p. 10",
-          "paperId": "molter2026-running-time",
-          "placement": "statement",
-          "revision": 2,
-          "role": "effective lower bound for binary incidence matrices with an all-ones right-hand side",
-          "type": "bound"
-        },
-        {
-          "caseId": "integer-linear-programming-equations",
-          "editionId": "arxiv-v2",
-          "id": "ilp-equations-w1-effective",
-          "locator": "§3, Consequences of Lin’s Set Cover reduction, p. 12, and Lemma 1, p. 10",
-          "paperId": "molter2026-running-time",
-          "placement": "forward",
-          "revision": 2,
           "role": "forward implication",
           "type": "bound"
         },
@@ -42427,7 +45457,7 @@
     {
       "applicable": true,
       "date": "2026-11-24",
-      "evidence": "evidence/molter2026-source-scope.md",
+      "evidence": "evidence/table-one-original-sources.md",
       "id": "dominating-set-linear-rank-width-w1-effective-molter-source-review",
       "label": "Agent verified",
       "object": {
@@ -42437,7 +45467,7 @@
         "type": "bound"
       },
       "reviewer": "Independent Atlas source audit",
-      "scope": "Checked the effective quadratic exclusion on monopolar graphs for the recorded width interface against §3 and Table 1, including the layout conversion where required.",
+      "scope": "Checked the effective quadratic exclusion on monopolar graphs using Liu and Meng’s construction for arbitrary CNF, its supplied order and the width guarantee for this parameterization.",
       "stale": false,
       "type": "agent",
       "verdict": "verified"
@@ -42465,7 +45495,7 @@
     {
       "applicable": true,
       "date": "2026-11-24",
-      "evidence": "evidence/molter2026-source-scope.md",
+      "evidence": "evidence/table-one-original-sources.md",
       "id": "dominating-set-rank-width-w1-effective-molter-source-review",
       "label": "Agent verified",
       "object": {
@@ -42475,7 +45505,7 @@
         "type": "bound"
       },
       "reviewer": "Independent Atlas source audit",
-      "scope": "Checked the effective quadratic exclusion on monopolar graphs for the recorded width interface against §3 and Table 1, including the layout conversion where required.",
+      "scope": "Checked the effective quadratic exclusion on monopolar graphs using Liu and Meng’s construction for arbitrary CNF, its supplied order and the width guarantee for this parameterization.",
       "stale": false,
       "type": "agent",
       "verdict": "verified"
@@ -42483,7 +45513,7 @@
     {
       "applicable": true,
       "date": "2026-11-24",
-      "evidence": "evidence/molter2026-source-scope.md",
+      "evidence": "evidence/table-one-original-sources.md",
       "id": "dominating-set-supplied-linear-layout-w1-effective-molter-source-review",
       "label": "Agent verified",
       "object": {
@@ -42493,7 +45523,7 @@
         "type": "bound"
       },
       "reviewer": "Independent Atlas source audit",
-      "scope": "Checked the effective quadratic exclusion on monopolar graphs for the recorded width interface against §3 and Table 1, including the layout conversion where required.",
+      "scope": "Checked the effective quadratic exclusion on monopolar graphs using Liu and Meng’s construction for arbitrary CNF, its supplied order and the width guarantee for this parameterization.",
       "stale": false,
       "type": "agent",
       "verdict": "verified"
@@ -42501,7 +45531,7 @@
     {
       "applicable": true,
       "date": "2026-11-24",
-      "evidence": "evidence/molter2026-source-scope.md",
+      "evidence": "evidence/table-one-original-sources.md",
       "id": "dominating-set-supplied-rank-decomposition-w1-effective-molter-source-review",
       "label": "Agent verified",
       "object": {
@@ -42511,7 +45541,7 @@
         "type": "bound"
       },
       "reviewer": "Independent Atlas source audit",
-      "scope": "Checked the effective quadratic exclusion on monopolar graphs for the recorded width interface against §3 and Table 1, including the layout conversion where required.",
+      "scope": "Checked the effective quadratic exclusion on monopolar graphs using Liu and Meng’s construction for arbitrary CNF, its supplied order and the width guarantee for this parameterization.",
       "stale": false,
       "type": "agent",
       "verdict": "verified"
@@ -42605,6 +45635,44 @@
       },
       "reviewer": "Codex agent /root/apply_novelty",
       "scope": "Checked the SH consequence of the cited published reductions by vertices plus edges. Checked the connected simple cubic bipartite root, the linear parameter blowup, and polynomial complete encoding length.",
+      "stale": false,
+      "type": "agent",
+      "verdict": "verified"
+    },
+    {
+      "applicable": true,
+      "date": "2026-11-24",
+      "evidence": "evidence/table-one-original-sources.md",
+      "id": "fvs-tw-eth-literature-source-review",
+      "independent": true,
+      "label": "Agent verified",
+      "object": {
+        "caseId": "feedback-vertex-set-treewidth",
+        "id": "fvs-tw-eth",
+        "revision": 1,
+        "type": "bound"
+      },
+      "reviewer": "Codex source audit",
+      "scope": "Forward implication for intrinsic treewidth. Add one private vertex adjacent to both ends of each edge of the Vertex Cover instance. A cover leaves a forest. Conversely, any feedback vertex set hits each edge triangle, so replacing any selected private vertex with an endpoint yields a cover of no larger size. A bag for each private vertex and its endpoints gives treewidth at most max(n−1, 2) for original order n, with polynomial encoding size.",
+      "stale": false,
+      "type": "agent",
+      "verdict": "verified"
+    },
+    {
+      "applicable": true,
+      "date": "2026-11-24",
+      "evidence": "evidence/table-one-original-sources.md",
+      "id": "fvs-tw-w1-effective-literature-source-review",
+      "independent": true,
+      "label": "Agent verified",
+      "object": {
+        "caseId": "feedback-vertex-set-treewidth",
+        "id": "fvs-tw-w1-effective",
+        "revision": 1,
+        "type": "bound"
+      },
+      "reviewer": "Codex source audit",
+      "scope": "Forward implication for intrinsic treewidth. Logarithmic-pathwidth Feedback Vertex Set is XNLP-hard, so it is W[1]-hard. A graph’s treewidth is at most the width of the supplied path decomposition, which can be discarded. For a Clique input of order n and parameter k, the output treewidth is at most g(k)(1+log₂ n) for a computable g. Use the computable cutoff for a slope at most 1/g(k). Above the cutoff the exponential factor is polynomial in n, and below it the computable exponent has a finite maximum controlled by k. The polynomial-size reduction output then gives an FPT algorithm for Clique.",
       "stale": false,
       "type": "agent",
       "verdict": "verified"
@@ -42706,7 +45774,7 @@
     {
       "applicable": true,
       "date": "2026-11-24",
-      "evidence": "evidence/molter2026-source-scope.md",
+      "evidence": "evidence/table-one-original-sources.md",
       "id": "ilp-equations-w1-effective-molter-source-review",
       "label": "Agent verified",
       "object": {
@@ -42716,7 +45784,7 @@
         "type": "bound"
       },
       "reviewer": "Atlas source audit",
-      "scope": "Checked the forward implication, including its running time, parameter and input restrictions, against §3, Consequences of Lin’s Set Cover reduction, p. 12, and Lemma 1, p. 10.",
+      "scope": "Checked the all-ones right-hand side and effective exponent using the exact-one interpretation of the incidence matrix in Lin’s Lemma 14.",
       "stale": false,
       "type": "agent",
       "verdict": "verified"
@@ -42975,6 +46043,44 @@
       },
       "reviewer": "Codex agent /root/others",
       "scope": "The book reduction gives hardness on unweighted planar inputs with input distance threshold. Graph-power construction yields membership and does not need its output to be planar.",
+      "stale": false,
+      "type": "agent",
+      "verdict": "verified"
+    },
+    {
+      "applicable": true,
+      "date": "2026-11-24",
+      "evidence": "evidence/table-one-original-sources.md",
+      "id": "rbds-tw-eth-literature-source-review",
+      "independent": true,
+      "label": "Agent verified",
+      "object": {
+        "caseId": "red-blue-dominating-set-treewidth",
+        "id": "rbds-tw-eth",
+        "revision": 1,
+        "type": "bound"
+      },
+      "reviewer": "Codex source audit",
+      "scope": "Forward implication for intrinsic treewidth. Subdivide every edge of a Vertex Cover instance. The blue original vertices dominate the red subdivision vertices exactly when they cover all original edges. A single bag with all original vertices and an attached bag for each subdivision gives treewidth at most max(n−1, 2) for original order n. The new explicit encoding has polynomial size.",
+      "stale": false,
+      "type": "agent",
+      "verdict": "verified"
+    },
+    {
+      "applicable": true,
+      "date": "2026-11-24",
+      "evidence": "evidence/table-one-original-sources.md",
+      "id": "rbds-tw-w1-effective-literature-source-review",
+      "independent": true,
+      "label": "Agent verified",
+      "object": {
+        "caseId": "red-blue-dominating-set-treewidth",
+        "id": "rbds-tw-w1-effective",
+        "revision": 1,
+        "type": "bound"
+      },
+      "reviewer": "Codex source audit",
+      "scope": "Forward implication for intrinsic treewidth. Logarithmic-treewidth Red-Blue Dominating Set is XALP-hard, so it is W[1]-hard. The edge-subdivision construction has an explicit blue/red partition. Discard the supplied decomposition. For a Clique input of order n and parameter k, the output treewidth is at most g(k)(1+log₂ n) for a computable g. Use the computable cutoff for a slope at most 1/g(k). Above the cutoff the exponential factor is polynomial in n, and below it the computable exponent has a finite maximum controlled by k. The polynomial-size reduction output then gives an FPT algorithm for Clique.",
       "stale": false,
       "type": "agent",
       "verdict": "verified"
@@ -43247,6 +46353,44 @@
     },
     {
       "applicable": true,
+      "date": "2026-11-24",
+      "evidence": "evidence/table-one-original-sources.md",
+      "id": "vc-tw-eth-literature-source-review",
+      "independent": true,
+      "label": "Agent verified",
+      "object": {
+        "caseId": "vertex-cover-treewidth",
+        "id": "vc-tw-eth",
+        "revision": 1,
+        "type": "bound"
+      },
+      "reviewer": "Codex source audit",
+      "scope": "Forward implication for intrinsic treewidth. The Vertex Cover instances produced from sparse 3-SAT have linear graph order, and treewidth is bounded by that order. A solver with the stated dependence on treewidth would solve sparse 3-SAT in subexponential time.",
+      "stale": false,
+      "type": "agent",
+      "verdict": "verified"
+    },
+    {
+      "applicable": true,
+      "date": "2026-11-24",
+      "evidence": "evidence/table-one-original-sources.md",
+      "id": "vc-tw-w1-effective-literature-source-review",
+      "independent": true,
+      "label": "Agent verified",
+      "object": {
+        "caseId": "vertex-cover-treewidth",
+        "id": "vc-tw-w1-effective",
+        "revision": 1,
+        "type": "bound"
+      },
+      "reviewer": "Codex source audit",
+      "scope": "Forward implication for intrinsic treewidth. Logarithmic-treewidth Vertex Cover is XALP-hard, so it is W[1]-hard. Discard the supplied decomposition from the reduction output. For a Clique input of order n and parameter k, the output treewidth is at most g(k)(1+log₂ n) for a computable g. Use the computable cutoff for a slope at most 1/g(k). Above the cutoff the exponential factor is polynomial in n, and below it the computable exponent has a finite maximum controlled by k. The polynomial-size reduction output then gives an FPT algorithm for Clique.",
+      "stale": false,
+      "type": "agent",
+      "verdict": "verified"
+    },
+    {
+      "applicable": true,
       "date": "2026-11-22",
       "evidence": "evidence/literature-corollaries-2026-11-22.md",
       "id": "weighted-fixed-width-cnf-sat-weight-w1-literature-audit",
@@ -43265,6 +46409,6 @@
       "verdict": "verified"
     }
   ],
-  "revision": 8,
+  "revision": 9,
   "schemaVersion": 1
 }

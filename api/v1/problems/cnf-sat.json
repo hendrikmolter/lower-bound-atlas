@@ -1,0 +1,10 @@
+{
+  "id": "cnf-sat",
+  "input": "An explicitly listed Boolean formula in conjunctive normal form.",
+  "name": "CNF-SAT",
+  "parameterizations": [
+    "cnf-sat-variables"
+  ],
+  "question": "Does the formula have a satisfying assignment?",
+  "revision": 1
+}

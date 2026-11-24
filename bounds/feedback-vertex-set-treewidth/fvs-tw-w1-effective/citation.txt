@@ -1,0 +1,1 @@
+Lower Bound Atlas. Feedback Vertex Set · Effective little-o bound in the treewidth under FPT ≠ W[1]. feedback-vertex-set-treewidth/fvs-tw-w1-effective, bound revision 1. Edition v1.0.0, Git commit 066fd0bcbb1bdc9a77c5e14b591fc5c5b0e70786. https://github.com/hendrikmolter/lower-bound-atlas/blob/066fd0bcbb1bdc9a77c5e14b591fc5c5b0e70786/data/cases/feedback-vertex-set-treewidth.json

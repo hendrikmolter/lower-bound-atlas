@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Vertex Cover · Treewidth — running-time lower bounds | Lower Bound Atlas</title>
+  <link rel="stylesheet" href="../../assets/style.css?v=066fd0bcbb1bdc9a77c5e14b591fc5c5b0e70786">
+  
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header"><nav class="site-nav" aria-label="Main">
+    <a href="../../index.html" class="site-brand">Lower Bound Atlas</a>
+    <div class="nav-links"><a href="../../index.html">Problems</a><a href="../../assumptions/index.html">Hypotheses</a><a href="../../papers/index.html">Papers</a><a href="../../notation/index.html">Notation</a><a href="../../about/index.html">About &amp; guide</a></div>
+  </nav></header>
+  <main id="main-content" tabindex="-1">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../../index.html">Problems</a><span aria-hidden="true"> / </span><a href="../../problems/vertex-cover/index.html">Vertex Cover</a></nav>
+    <header class="hero">
+      <h1>Vertex Cover</h1>
+      
+    </header>
+    <nav class="param-nav" aria-label="Recorded parameterizations"><strong>Recorded parameterizations</strong><a href="../vertex-cover-order/index.html#vertices">Number of vertices</a> <a href="../vertex-cover-budget/index.html#solution-size">Solution size</a> <a href="#treewidth" aria-current="location">Treewidth</a></nav>
+      <section id="treewidth" class="problem-box" aria-label="Problem definition"><dl>
+      <dt>Input</dt><dd>A finite, simple, undirected, unweighted graph G and a nonnegative integer k.</dd>
+      <dt>Parameter</dt><dd>The intrinsic treewidth t of G.</dd>
+      <dt>Question</dt><dd>Does G have a set of at most k vertices that includes an endpoint of every edge?</dd></dl></section><section><h2>Restricted problems</h2><ul><li><a href="../../problems/planar-vertex-cover/index.html">Planar Vertex Cover</a> (G is planar)</li></ul></section>
+      
+      <section id="comparisons"><h2 id="bounds">Lower bounds by hypothesis</h2>
+      <form class="bound-filter" data-bound-filter hidden aria-label="Filter lower bounds">
+    <fieldset><legend>Show lower bounds</legend><label><input type="radio" name="bounds" value="all" checked> All</label>
+    <label><input type="radio" name="bounds" value="recorded"> All recorded</label></fieldset>
+    <fieldset><legend>Hypotheses</legend><label><input type="checkbox" name="hypothesis" value="eth" checked> ETH</label><label><input type="checkbox" name="hypothesis" value="sh" checked> SH</label><label><input type="checkbox" name="hypothesis" value="w1" checked> FPT ≠ W[1]</label><label><input type="checkbox" name="hypothesis" value="np_qp" checked> NP ⊈ QP</label><label><input type="checkbox" name="hypothesis" value="kxk" checked> <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>×</mo><mi>k</mi></mrow><annotation encoding="text/plain">k × k</annotation></semantics></math> Clique Hypothesis</label></fieldset></form>
+    <p data-bound-empty role="status" hidden>No lower bounds match these filters.</p>
+    <script defer src="../../assets/bound-filter.js"></script>
+      <h3>Notation</h3><ul class="runtime-symbols"><li><i>B</i> — complete binary input length</li></ul>
+      <article class="hypothesis-card" id="assessment-eth" data-hypothesis="eth"><h3><a href="../../assumptions/eth/index.html">ETH</a> (historical)</h3>
+        <section class="bound-row" id="vc-tw-eth"><h4>Exponential dependence on treewidth</h4>
+        
+        
+        <div class="excluded-time"><span>Running time excluded under ETH</span><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mrow><mrow><mi>o</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow></mrow></mrow></msup><mo>&#x2062;</mo><msup><mi>B</mi><mrow><mrow><mi>𝒪</mi><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></mrow></msup></mrow><annotation encoding="text/plain">2^(o(t)) B^(O(1))</annotation></semantics></math></div>
+        <div class="bound-links"><div class="actions"><a href="../../bounds/vertex-cover-treewidth/vc-tw-eth/index.html">Full statement</a></div>
+    </div><ul class="bound-citations"><li><a href="https://doi.org/10.1006/jcss.2001.1774">Which Problems Have Strongly Exponential Complexity?</a></li><li><a href="https://bulletin.eatcs.org/index.php/beatcs/article/view/92">Lower bounds based on the Exponential Time Hypothesis</a></li></ul>
+        </section>
+        </article><article class="hypothesis-card" id="assessment-sh" data-hypothesis="sh"><h3><a href="../../assumptions/sh/index.html">SH</a></h3>
+        <p>No lower bound recorded for this parameterization.</p>
+        </article><article class="hypothesis-card" id="assessment-w1" data-hypothesis="w1"><h3><a href="../../assumptions/w1/index.html">FPT ≠ W[1]</a></h3>
+        <section class="bound-row" id="vc-tw-w1-effective"><h4>Effective little-o bound in the treewidth</h4>
+        
+        
+        <div class="excluded-time"><span>Excluded running time</span><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mrow><mrow><msub><mi>o</mi><mtext>eff</mtext></msub><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow></mrow></mrow></msup><mo>&#x2062;</mo><msup><mi>B</mi><mrow><mrow><mi>𝒪</mi><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></mrow></msup></mrow><annotation encoding="text/plain">2^(o_eff(t)) B^(O(1))</annotation></semantics></math> <small><a href="../../notation/index.html#effective-little-o">Effective little-o</a></small></div>
+        <p>Effectively recovered · ETH target: <a href="../../bounds/vertex-cover-treewidth/vc-tw-eth/r1/index.html" aria-label="Exponential dependence on treewidth">Exponential dependence on treewidth</a>.</p><div class="bound-links"><div class="actions"><a href="../../bounds/vertex-cover-treewidth/vc-tw-w1-effective/index.html">Full statement</a></div>
+    </div><ul class="bound-citations"><li><a href="https://doi.org/10.4230/LIPIcs.IPEC.2022.6">On the Complexity of Problems on Tree-Structured Graphs</a></li></ul>
+        </section>
+        </article><article class="hypothesis-card" id="assessment-np_qp" data-hypothesis="np_qp"><h3><a href="../../assumptions/np_qp/index.html">NP ⊈ QP</a></h3>
+        <p>No lower bound recorded for this parameterization.</p>
+        </article><article class="hypothesis-card" id="assessment-kxk" data-hypothesis="kxk"><h3><a href="../../assumptions/kxk/index.html"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>×</mo><mi>k</mi></mrow><annotation encoding="text/plain">k × k</annotation></semantics></math> Clique Hypothesis</a></h3>
+        <p>No lower bound recorded for this parameterization.</p>
+        </article></section>
+      <details class="reader-details"><summary>Record details</summary><dl class="details-grid"><div><dt>Identifier</dt><dd>vertex-cover-treewidth</dd></div><div><dt>Revision</dt><dd>1</dd></div></dl>
+      <a href="index.html">Permalink</a> · <a href="../../api/v1/cases/vertex-cover-treewidth.json">JSON record</a></details>
+  </main>
+  <footer class="site-footer">
+    <span>Release · v1.0.0</span>
+    <a href="../../api/v1/atlas.json">JSON export</a>
+    <a href="../../manifest.json">Build manifest</a>
+    <a href="../../sitemap.xml">Sitemap</a>
+    <a href="../../legal/index.html#impressum">Impressum</a>
+    <a href="../../legal/index.html#privacy">Privacy</a>
+  </footer>
+</body>
+</html>

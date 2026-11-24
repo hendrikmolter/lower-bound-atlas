@@ -1,0 +1,325 @@
+{
+  "aliases": [],
+  "bounds": [
+    {
+      "assessments": {
+        "eth": {
+          "converse": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "effectiveStatus": "established",
+            "evidence": [
+              {
+                "boundRevision": 1,
+                "hypothesisRevision": 1,
+                "reviewId": "fvs-tw-eth-literature-source-review",
+                "source": {
+                  "editionId": "journal",
+                  "locator": "Corollary 2, p. 524, and Theorem 5, p. 526",
+                  "paperId": "ipz2001",
+                  "placement": "forward",
+                  "role": "sparsification and linear-order reduction to Vertex Cover"
+                }
+              },
+              {
+                "boundRevision": 1,
+                "hypothesisRevision": 1,
+                "reviewId": "fvs-tw-eth-literature-source-review",
+                "source": {
+                  "editionId": "bulletin",
+                  "locator": "Theorem 3.3, p. 52",
+                  "paperId": "lms2011",
+                  "placement": "forward",
+                  "role": "historical lower bound for Vertex Cover by graph order"
+                }
+              },
+              {
+                "boundRevision": 1,
+                "hypothesisRevision": 1,
+                "reviewId": "fvs-tw-eth-literature-source-review",
+                "source": {
+                  "editionId": "journal",
+                  "locator": "§4.4, Feedback Vertex Set paragraph, p. 1324",
+                  "paperId": "deberg-et-al2020-geometric",
+                  "placement": "forward",
+                  "role": "edge-triangle reduction from Vertex Cover"
+                }
+              }
+            ],
+            "sourceBasis": {
+              "kind": "derived",
+              "step": "Add one private vertex adjacent to both ends of each edge of the Vertex Cover instance. A cover leaves a forest. Conversely, any feedback vertex set hits each edge triangle, so replacing any selected private vertex with an endpoint yields a cover of no larger size. A bag for each private vertex and its endpoints gives treewidth at most max(n−1, 2) for original order n, with polynomial encoding size."
+            },
+            "status": "established"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "hypothesis-implies-bound"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "id": "fvs-tw-eth",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "label": "Exponential dependence on treewidth",
+        "revision": 1
+      },
+      "reviewIds": [
+        "fvs-tw-eth-literature-source-review"
+      ],
+      "revision": 1,
+      "runtime": "2^(o(t)) B^(O(1))",
+      "runtimeSymbols": [
+        "t",
+        "B"
+      ],
+      "sourceBasis": {
+        "kind": "derived",
+        "step": "Add one private vertex adjacent to both ends of each edge of the Vertex Cover instance. A cover leaves a forest. Conversely, any feedback vertex set hits each edge triangle, so replacing any selected private vertex with an endpoint yields a cover of no larger size. A bag for each private vertex and its endpoints gives treewidth at most max(n−1, 2) for original order n, with polynomial encoding size."
+      },
+      "sources": [
+        {
+          "editionId": "journal",
+          "locator": "Corollary 2, p. 524, and Theorem 5, p. 526",
+          "paperId": "ipz2001",
+          "placement": "forward",
+          "role": "sparsification and linear-order reduction to Vertex Cover"
+        },
+        {
+          "editionId": "bulletin",
+          "locator": "Theorem 3.3, p. 52",
+          "paperId": "lms2011",
+          "placement": "forward",
+          "role": "historical lower bound for Vertex Cover by graph order"
+        },
+        {
+          "editionId": "journal",
+          "locator": "§4.4, Feedback Vertex Set paragraph, p. 1324",
+          "paperId": "deberg-et-al2020-geometric",
+          "placement": "forward",
+          "role": "edge-triangle reduction from Vertex Cover"
+        }
+      ],
+      "statement": "Under ETH, no deterministic algorithm decides Feedback Vertex Set within the stated running time.",
+      "status": "established",
+      "supported": true
+    },
+    {
+      "assessments": {
+        "w1": {
+          "converse": {
+            "effectiveStatus": "unassessed",
+            "evidence": [],
+            "status": "unassessed"
+          },
+          "forward": {
+            "effectiveStatus": "established",
+            "evidence": [
+              {
+                "boundRevision": 1,
+                "hypothesisRevision": 1,
+                "reviewId": "fvs-tw-w1-effective-literature-source-review",
+                "source": {
+                  "editionId": "journal",
+                  "locator": "Theorem 6 and §4.3, Lemma 5 and Claim 15",
+                  "paperId": "bodlaender2025-linear-structure",
+                  "placement": "forward",
+                  "role": "XNLP-hardness for logarithmic pathwidth"
+                }
+              }
+            ],
+            "sourceBasis": {
+              "kind": "derived",
+              "step": "Logarithmic-pathwidth Feedback Vertex Set is XNLP-hard, so it is W[1]-hard. A graph’s treewidth is at most the width of the supplied path decomposition, which can be discarded. For a Clique input of order n and parameter k, the output treewidth is at most g(k)(1+log₂ n) for a computable g. Use the computable cutoff for a slope at most 1/g(k). Above the cutoff the exponential factor is polynomial in n, and below it the computable exponent has a finite maximum controlled by k. The polynomial-size reduction output then gives an FPT algorithm for Clique."
+            },
+            "status": "established"
+          },
+          "hypothesisRevision": 1,
+          "verdict": "hypothesis-implies-bound"
+        }
+      },
+      "assumptionOperator": "all",
+      "assumptions": [
+        {
+          "id": "w1",
+          "revision": 1
+        }
+      ],
+      "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+      "exponentDomain": "nonnegative",
+      "id": "fvs-tw-w1-effective",
+      "inputConditions": [],
+      "inputFactor": "B^(O(1))",
+      "proofs": [],
+      "provenance": "literature",
+      "qualifications": [],
+      "reader": {
+        "label": "Effective little-o bound in the treewidth",
+        "revision": 1
+      },
+      "reviewIds": [
+        "fvs-tw-w1-effective-literature-source-review"
+      ],
+      "revision": 1,
+      "runtime": "2^(o_eff(t)) B^(O(1))",
+      "runtimeSymbols": [
+        "t",
+        "B"
+      ],
+      "sourceBasis": {
+        "kind": "derived",
+        "step": "Logarithmic-pathwidth Feedback Vertex Set is XNLP-hard, so it is W[1]-hard. A graph’s treewidth is at most the width of the supplied path decomposition, which can be discarded. For a Clique input of order n and parameter k, the output treewidth is at most g(k)(1+log₂ n) for a computable g. Use the computable cutoff for a slope at most 1/g(k). Above the cutoff the exponential factor is polynomial in n, and below it the computable exponent has a finite maximum controlled by k. The polynomial-size reduction output then gives an FPT algorithm for Clique."
+      },
+      "sources": [
+        {
+          "editionId": "journal",
+          "locator": "Theorem 6 and §4.3, Lemma 5 and Claim 15",
+          "paperId": "bodlaender2025-linear-structure",
+          "placement": "forward",
+          "role": "XNLP-hardness for logarithmic pathwidth"
+        }
+      ],
+      "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Feedback Vertex Set within the stated running time.",
+      "status": "established",
+      "supported": true
+    }
+  ],
+  "coverage": "Literature bounds for intrinsic treewidth.",
+  "encoding": "A finite simple undirected graph G and a nonnegative integer budget k. The graph and budget are encoded explicitly in binary.",
+  "id": "feedback-vertex-set-treewidth",
+  "inputConditions": [],
+  "kind": "lower-bound-case",
+  "parameter": "The intrinsic treewidth t of G.",
+  "problemDefinitionHash": "09e27bd6f632865edef13554cd25eaf63637ed95ca1c1a506a9869810c6ad716",
+  "problemId": "feedback-vertex-set",
+  "problemRevision": 1,
+  "reader": {
+    "anchor": "treewidth",
+    "parameter": "The intrinsic treewidth t of G.",
+    "parameterLabel": "Treewidth",
+    "parameterSymbols": [
+      {
+        "meaning": "treewidth of the input graph",
+        "symbol": "t"
+      }
+    ],
+    "symbols": [
+      {
+        "meaning": "complete binary input length",
+        "symbol": "B"
+      }
+    ]
+  },
+  "recoveryAssessments": [
+    {
+      "comparison": "The two exclusions have the same problem, parameter, linear exponent scale, and polynomial factor in the full input length. The recovery requires a computable exponent and computable convergence.",
+      "effective": true,
+      "evidence": [
+        {
+          "editionId": "journal",
+          "locator": "Theorem 6 and §4.3, Lemma 5 and Claim 15",
+          "paperId": "bodlaender2025-linear-structure",
+          "placement": "forward",
+          "role": "XNLP-hardness for logarithmic pathwidth"
+        }
+      ],
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "recoveredScale": "t",
+      "recovery": {
+        "id": "fvs-tw-w1-effective",
+        "revision": 1
+      },
+      "scale": "full",
+      "target": {
+        "id": "fvs-tw-eth",
+        "revision": 1
+      },
+      "targetScale": "t"
+    }
+  ],
+  "recoveryComparisons": [
+    {
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "fvs-tw-eth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "np_qp",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "fvs-tw-eth",
+        "revision": 1
+      }
+    },
+    {
+      "hypothesis": {
+        "id": "sh",
+        "revision": 1
+      },
+      "status": "unresolved",
+      "target": {
+        "id": "fvs-tw-eth",
+        "revision": 1
+      }
+    },
+    {
+      "comparison": "The two exclusions have the same problem, parameter, linear exponent scale, and polynomial factor in the full input length. The recovery requires a computable exponent and computable convergence.",
+      "effective": true,
+      "evidence": [
+        {
+          "editionId": "journal",
+          "locator": "Theorem 6 and §4.3, Lemma 5 and Claim 15",
+          "paperId": "bodlaender2025-linear-structure",
+          "placement": "forward",
+          "role": "XNLP-hardness for logarithmic pathwidth"
+        }
+      ],
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "recoveredScale": "t",
+      "recovery": {
+        "id": "fvs-tw-w1-effective",
+        "revision": 1
+      },
+      "scale": "full",
+      "status": "effective",
+      "target": {
+        "id": "fvs-tw-eth",
+        "revision": 1
+      },
+      "targetScale": "t"
+    }
+  ],
+  "resolutions": [],
+  "revision": 1,
+  "task": "Can at most k vertices be deleted so that the remaining graph is a forest?",
+  "title": "Feedback Vertex Set by treewidth",
+  "variant": "Undirected Feedback Vertex Set"
+}

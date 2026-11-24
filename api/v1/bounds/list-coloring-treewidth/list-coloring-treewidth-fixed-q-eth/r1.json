@@ -1,0 +1,49 @@
+{
+  "assessments": {},
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "list-coloring-treewidth-fixed-q-eth",
+  "inputConditions": [
+    "fixed-common-palette"
+  ],
+  "inputFactor": "n^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [
+    "For every fixed integer q ≥ 3."
+  ],
+  "reader": {
+    "label": "Subexponential bound in treewidth · Fixed common palette",
+    "revision": 1,
+    "title": "Subexponential bound in treewidth under ETH · Fixed common palette"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "2^(o(t)) n^(O(1))",
+  "runtimeSymbols": [
+    "t",
+    "n"
+  ],
+  "sourceBasis": {
+    "kind": "derived",
+    "step": "Give every vertex of a 3-Coloring instance the list {1, 2, 3}, a subset of the fixed palette [q]. The graph and treewidth are unchanged. A treewidth-subexponential algorithm would also be subexponential in the number of vertices, since treewidth is at most the graph order."
+  },
+  "sources": [
+    {
+      "editionId": "bulletin",
+      "locator": "Theorem 3.2, PDF p. 12",
+      "paperId": "lms2011",
+      "placement": "statement",
+      "role": "3-Coloring graph-order lower bound"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm decides List Coloring within the stated running time.",
+  "status": "established",
+  "supported": true
+}

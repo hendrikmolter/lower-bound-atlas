@@ -4,7 +4,8 @@
   "name": "Vertex Cover",
   "parameterizations": [
     "vertex-cover-order",
-    "vertex-cover-budget"
+    "vertex-cover-budget",
+    "vertex-cover-treewidth"
   ],
   "question": "Does G have a set of at most k vertices that includes an endpoint of every edge?",
   "revision": 1

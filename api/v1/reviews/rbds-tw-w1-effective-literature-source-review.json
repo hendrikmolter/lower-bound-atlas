@@ -1,0 +1,19 @@
+{
+  "applicable": true,
+  "date": "2026-11-24",
+  "evidence": "evidence/table-one-original-sources.md",
+  "id": "rbds-tw-w1-effective-literature-source-review",
+  "independent": true,
+  "label": "Agent verified",
+  "object": {
+    "caseId": "red-blue-dominating-set-treewidth",
+    "id": "rbds-tw-w1-effective",
+    "revision": 1,
+    "type": "bound"
+  },
+  "reviewer": "Codex source audit",
+  "scope": "Forward implication for intrinsic treewidth. Logarithmic-treewidth Red-Blue Dominating Set is XALP-hard, so it is W[1]-hard. The edge-subdivision construction has an explicit blue/red partition. Discard the supplied decomposition. For a Clique input of order n and parameter k, the output treewidth is at most g(k)(1+log₂ n) for a computable g. Use the computable cutoff for a slope at most 1/g(k). Above the cutoff the exponential factor is polynomial in n, and below it the computable exponent has a finite maximum controlled by k. The polynomial-size reduction output then gives an FPT algorithm for Clique.",
+  "stale": false,
+  "type": "agent",
+  "verdict": "verified"
+}

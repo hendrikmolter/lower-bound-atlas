@@ -1,0 +1,45 @@
+{
+  "assessments": {},
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "3-coloring-treewidth-eth",
+  "inputConditions": [],
+  "inputFactor": "n^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [],
+  "reader": {
+    "label": "Subexponential bound in treewidth",
+    "revision": 1,
+    "title": "Subexponential bound in treewidth under ETH"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "2^(o(t)) n^(O(1))",
+  "runtimeSymbols": [
+    "t",
+    "n"
+  ],
+  "sourceBasis": {
+    "kind": "derived",
+    "step": "A treewidth-subexponential algorithm would also be subexponential in the number of vertices, since treewidth is at most the graph order."
+  },
+  "sources": [
+    {
+      "editionId": "bulletin",
+      "locator": "Theorem 3.2, PDF p. 12",
+      "paperId": "lms2011",
+      "placement": "statement",
+      "role": "3-Coloring graph-order lower bound"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm decides 3-Coloring within the stated running time.",
+  "status": "established",
+  "supported": true
+}

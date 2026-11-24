@@ -4,6 +4,7 @@
   "name": "Feedback Vertex Set",
   "parameterizations": [
     "feedback-vertex-set-budget",
+    "feedback-vertex-set-treewidth",
     "feedback-vertex-set-graph-size"
   ],
   "question": "Can at most k vertices be deleted so that the remaining graph is a forest?",

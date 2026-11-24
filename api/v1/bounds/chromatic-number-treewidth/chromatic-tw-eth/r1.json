@@ -35,7 +35,7 @@
     },
     {
       "editionId": "bulletin",
-      "locator": "Theorem 6.3, the treewidth bound for Chromatic Number",
+      "locator": "Theorem 6.3, p. 62",
       "paperId": "lms2011",
       "placement": "statement",
       "role": "explicit benchmark statement"

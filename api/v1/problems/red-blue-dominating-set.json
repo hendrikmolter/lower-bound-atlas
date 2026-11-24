@@ -1,0 +1,10 @@
+{
+  "id": "red-blue-dominating-set",
+  "input": "A finite simple undirected bipartite graph G with specified blue and red vertex classes and a nonnegative integer budget k.",
+  "name": "Red-Blue Dominating Set",
+  "parameterizations": [
+    "red-blue-dominating-set-treewidth"
+  ],
+  "question": "Is there a set of at most k blue vertices such that every red vertex has a neighbor in the set?",
+  "revision": 1
+}

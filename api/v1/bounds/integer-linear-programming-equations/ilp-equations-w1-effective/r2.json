@@ -14,14 +14,18 @@
             "hypothesisRevision": 1,
             "reviewId": "ilp-equations-w1-effective-molter-source-review",
             "source": {
-              "editionId": "arxiv-v2",
-              "locator": "§3, Consequences of Lin’s Set Cover reduction, p. 12, and Lemma 1, p. 10",
-              "paperId": "molter2026-running-time",
+              "editionId": "proceedings",
+              "locator": "Lemma 14 and proof, §3.4, pp. 81:11–81:12",
+              "paperId": "lin2019",
               "placement": "forward",
-              "role": "forward implication"
+              "role": "Set Cover construction underlying the exact-cover encoding"
             }
           }
         ],
+        "sourceBasis": {
+          "kind": "derived",
+          "step": "In Lin’s construction, the universe size equals the Set Cover budget times the common set size. A cover within budget is therefore an exact cover, and each exact cover meets the budget. The binary incidence matrix encodes exact cover as Ax=1 with a nonzero column for every set. Its O(h³ log n) rows allow the effective exponent cutoff to give a fixed-parameter algorithm for Multicolored Clique."
+        },
         "status": "established"
       },
       "hypothesisRevision": 1,
@@ -64,20 +68,17 @@
     "N",
     "C"
   ],
+  "sourceBasis": {
+    "kind": "derived",
+    "step": "In Lin’s construction, the universe size equals the Set Cover budget times the common set size. A cover within budget is therefore an exact cover, and each exact cover meets the budget. The binary incidence matrix encodes exact cover as Ax=1 with a nonzero column for every set. Its O(h³ log n) rows allow the effective exponent cutoff to give a fixed-parameter algorithm for Multicolored Clique."
+  },
   "sources": [
-    {
-      "editionId": "arxiv-v2",
-      "locator": "§3, Consequences of Lin’s Set Cover reduction, p. 12, and Lemma 1, p. 10",
-      "paperId": "molter2026-running-time",
-      "placement": "statement",
-      "role": "effective lower bound for binary incidence matrices with an all-ones right-hand side"
-    },
     {
       "editionId": "proceedings",
       "locator": "Lemma 14 and proof, §3.4, pp. 81:11–81:12",
       "paperId": "lin2019",
       "placement": "statement",
-      "role": "Set Cover construction used for the exact-cover count"
+      "role": "Set Cover construction underlying the exact-cover encoding"
     }
   ],
   "statement": "Under FPT ≠ W[1], no deterministic algorithm decides feasibility of Ax=b for the stated all-ones right-hand side within the stated running time.",

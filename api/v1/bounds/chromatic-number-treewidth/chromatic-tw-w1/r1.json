@@ -26,17 +26,20 @@
     "t",
     "N"
   ],
-  "sourceBasis": {
-    "kind": "derived",
-    "step": "Lemma 4 fixes the number of colors q. In its construction for a Chained Positive CNF-SAT instance of length S and parameter k, choose q of order √(log S). Encoding the choices in base q uses at most 1+log_q S digits per group. The connector branches can be processed separately, so Claim 12 bounds the width by 2k(1+log_q S)+3. Adding a clique of q colors enforces the lists at an additional width cost of at most q. The graph still has polynomial size, and t log₂(t+2) is at most a computable function of k times 1+log₂ S. Composing with the Clique reduction supplied by Theorem 9, the effective cutoff would turn a solver within the displayed time into an FPT algorithm for Clique."
-  },
   "sources": [
     {
+      "editionId": "arxiv-v2",
+      "locator": "Table 1, Proposition 1 and its proof in §3",
+      "paperId": "molter2026-running-time",
+      "placement": "statement",
+      "role": "variable-budget adaptation and effective running-time lower bound"
+    },
+    {
       "editionId": "journal",
-      "locator": "Theorem 9, Lemma 4 and Claim 12.",
+      "locator": "Theorem 9, Lemma 4 and Claim 12",
       "paperId": "bodlaender2025-linear-structure",
       "placement": "statement",
-      "role": "source construction for the unrestricted bound"
+      "role": "construction adapted in Molter’s Proposition 1"
     }
   ],
   "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Chromatic Number within the stated running time.",

@@ -1,7 +1,7 @@
 {
   "applicable": true,
   "date": "2026-11-24",
-  "evidence": "evidence/molter2026-source-scope.md",
+  "evidence": "evidence/table-one-original-sources.md",
   "id": "dominating-set-supplied-linear-layout-w1-effective-molter-source-review",
   "label": "Agent verified",
   "object": {
@@ -11,7 +11,7 @@
     "type": "bound"
   },
   "reviewer": "Independent Atlas source audit",
-  "scope": "Checked the effective quadratic exclusion on monopolar graphs for the recorded width interface against §3 and Table 1, including the layout conversion where required.",
+  "scope": "Checked the effective quadratic exclusion on monopolar graphs using Liu and Meng’s construction for arbitrary CNF, its supplied order and the width guarantee for this parameterization.",
   "stale": false,
   "type": "agent",
   "verdict": "verified"

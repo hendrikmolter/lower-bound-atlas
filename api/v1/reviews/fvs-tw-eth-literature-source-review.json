@@ -1,0 +1,19 @@
+{
+  "applicable": true,
+  "date": "2026-11-24",
+  "evidence": "evidence/table-one-original-sources.md",
+  "id": "fvs-tw-eth-literature-source-review",
+  "independent": true,
+  "label": "Agent verified",
+  "object": {
+    "caseId": "feedback-vertex-set-treewidth",
+    "id": "fvs-tw-eth",
+    "revision": 1,
+    "type": "bound"
+  },
+  "reviewer": "Codex source audit",
+  "scope": "Forward implication for intrinsic treewidth. Add one private vertex adjacent to both ends of each edge of the Vertex Cover instance. A cover leaves a forest. Conversely, any feedback vertex set hits each edge triangle, so replacing any selected private vertex with an endpoint yields a cover of no larger size. A bag for each private vertex and its endpoints gives treewidth at most max(n−1, 2) for original order n, with polynomial encoding size.",
+  "stale": false,
+  "type": "agent",
+  "verdict": "verified"
+}

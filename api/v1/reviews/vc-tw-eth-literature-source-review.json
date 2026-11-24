@@ -1,0 +1,19 @@
+{
+  "applicable": true,
+  "date": "2026-11-24",
+  "evidence": "evidence/table-one-original-sources.md",
+  "id": "vc-tw-eth-literature-source-review",
+  "independent": true,
+  "label": "Agent verified",
+  "object": {
+    "caseId": "vertex-cover-treewidth",
+    "id": "vc-tw-eth",
+    "revision": 1,
+    "type": "bound"
+  },
+  "reviewer": "Codex source audit",
+  "scope": "Forward implication for intrinsic treewidth. The Vertex Cover instances produced from sparse 3-SAT have linear graph order, and treewidth is bounded by that order. A solver with the stated dependence on treewidth would solve sparse 3-SAT in subexponential time.",
+  "stale": false,
+  "type": "agent",
+  "verdict": "verified"
+}

@@ -1,0 +1,1 @@
+Lower Bound Atlas. CNF-SAT · Effective subexponential-time exclusion under FPT ≠ W[1]. cnf-sat-variables/cnf-sat-variables-w1-effective, bound revision 1. Edition v1.0.0, Git commit 066fd0bcbb1bdc9a77c5e14b591fc5c5b0e70786. https://github.com/hendrikmolter/lower-bound-atlas/blob/066fd0bcbb1bdc9a77c5e14b591fc5c5b0e70786/data/cases/cnf-sat-variables.json

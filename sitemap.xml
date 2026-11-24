@@ -7,9 +7,13 @@
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/assumptions/np_qp/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/assumptions/sh/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/assumptions/w1/</loc></url>
+  <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/3-coloring-treewidth/3-coloring-treewidth-eth/</loc></url>
+  <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/3-coloring-treewidth/3-coloring-treewidth-w1/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/balanced-vertex-separator-budget/balanced-vertex-separator-budget-eth/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/balanced-vertex-separator-budget/balanced-vertex-separator-budget-kxk/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/chromatic-number-treewidth/chromatic-tw-eth/</loc></url>
+  <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/chromatic-number-treewidth/chromatic-tw-fixed-q-eth/</loc></url>
+  <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/chromatic-number-treewidth/chromatic-tw-fixed-q-w1/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/chromatic-number-treewidth/chromatic-tw-sh/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/chromatic-number-treewidth/chromatic-tw-w1/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/chromatic-number-vertex-cover/chromatic-vc-eth/</loc></url>
@@ -27,6 +31,8 @@
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/cluster-editing-budget/cluster-editing-budget-eth/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/cluster-editing-order/cluster-editing-order-eth/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/cluster-editing-size/cluster-editing-size-eth/</loc></url>
+  <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/cnf-sat-variables/cnf-sat-variables-eth/</loc></url>
+  <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/cnf-sat-variables/cnf-sat-variables-w1-effective/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/connected-dominating-set-budget/connected-dominating-set-budget-eth/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/connected-dominating-set-budget/connected-dominating-set-budget-kxk/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/connected-vertex-cover-budget/connected-vertex-cover-budget-eth/</loc></url>
@@ -37,6 +43,7 @@
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/cycle-packing-treewidth/cp-tw-w1-effective/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/directed-steiner-tree-terminals/directed-steiner-tree-terminals-eth/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/distinct-vectors-budget/dv-eth-column-budget/</loc></url>
+  <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/distinct-vectors-budget/dv-w1-effective/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/distinct-vectors-budget/dv-w1-fixed-coefficient/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/dominating-set-budget/ds-budget-eth/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/dominating-set-budget/ds-budget-kxk/</loc></url>
@@ -68,6 +75,8 @@
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/feedback-vertex-set-budget/feedback-vertex-set-budget-sh-cubic-line/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/feedback-vertex-set-graph-size/feedback-vertex-set-graph-size-eth/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/feedback-vertex-set-graph-size/feedback-vertex-set-graph-size-sh-cubic-line/</loc></url>
+  <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/feedback-vertex-set-treewidth/fvs-tw-eth/</loc></url>
+  <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/feedback-vertex-set-treewidth/fvs-tw-w1-effective/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/fixed-width-sat-formula-size/fixed-width-sat-formula-size-eth/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/fixed-width-sat-formula-size/fixed-width-sat-formula-size-sh/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/fixed-width-sat-variables/fixed-width-sat-variables-eth/</loc></url>
@@ -113,6 +122,8 @@
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/integer-linear-programming-equations/ilp-equations-eth-klogk/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/integer-linear-programming-equations/ilp-equations-w1-effective/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/list-coloring-treewidth/list-coloring-treewidth-eth/</loc></url>
+  <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/list-coloring-treewidth/list-coloring-treewidth-fixed-q-eth/</loc></url>
+  <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/list-coloring-treewidth/list-coloring-treewidth-fixed-q-w1/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/list-coloring-treewidth/list-coloring-treewidth-kxk/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/lms-3color-order/color-eth-historical/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/lms-3color-order/color-sh-fixed-power/</loc></url>
@@ -173,6 +184,8 @@
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/planar-vertex-cover-order/pvc-order-eth/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/planar-vertex-cover-order/pvc-order-sh/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/qbf-fixed-block-width/qbf-eth-primal-treewidth/</loc></url>
+  <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/red-blue-dominating-set-treewidth/rbds-tw-eth/</loc></url>
+  <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/red-blue-dominating-set-treewidth/rbds-tw-w1-effective/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/scattered-set-solution-size/scattered-set-solution-size-eth/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/scattered-set-solution-size/scattered-set-solution-size-kxk/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/set-cover-budget/set-cover-budget-eth/</loc></url>
@@ -206,6 +219,8 @@
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/vertex-cover-budget/vc-budget-sh/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/vertex-cover-order/vc-order-eth/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/vertex-cover-order/vc-order-sh/</loc></url>
+  <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/vertex-cover-treewidth/vc-tw-eth/</loc></url>
+  <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/vertex-cover-treewidth/vc-tw-w1-effective/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/vertex-disjoint-paths-supplied-pathwidth/vdp-pw-eth/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/vertex-disjoint-paths-supplied-pathwidth/vdp-pw-kxk/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/vertex-disjoint-paths-supplied-pathwidth/vdp-pw-w1/</loc></url>
@@ -221,6 +236,7 @@
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/weighted-normalized-depth-t-circuit-weight/nc-w1-input-count/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/weighted-tardy-jobs-processing-times/weighted-tardy-jobs-processing-times-eth/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/bounds/weighted-tardy-jobs-weights/weighted-tardy-jobs-weights-eth/</loc></url>
+  <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/cases/3-coloring-treewidth/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/cases/chromatic-number-treewidth/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/cases/chromatic-number-vertex-cover/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/cases/clique-budget/</loc></url>
@@ -242,6 +258,7 @@
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/cases/edge-dominating-set-intrinsic-clique-width/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/cases/feedback-vertex-set-budget/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/cases/feedback-vertex-set-graph-size/</loc></url>
+  <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/cases/feedback-vertex-set-treewidth/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/cases/fixed-width-sat-formula-size/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/cases/fixed-width-sat-variables/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/cases/hamiltonian-cycle-graph-size/</loc></url>
@@ -253,6 +270,7 @@
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/cases/independent-set-supplied-linear-layout/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/cases/independent-set-supplied-rank-decomposition/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/cases/independent-set-treewidth/</loc></url>
+  <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/cases/lms-3color-order/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/cases/lms-closest-string-radius-alphabet/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/cases/lms-closest-string-radius/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/cases/max-cut-clique-width/</loc></url>
@@ -271,6 +289,7 @@
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/cases/three-sat-variables/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/cases/vertex-cover-budget/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/cases/vertex-cover-order/</loc></url>
+  <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/cases/vertex-cover-treewidth/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/cases/vertex-disjoint-paths-supplied-pathwidth/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/cases/vertex-disjoint-paths-treewidth/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/cases/weighted-tardy-jobs-processing-times/</loc></url>
@@ -316,6 +335,7 @@
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/papers/fgls2014-clique-width/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/papers/fhp2020/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/papers/firbas-sorge2026-cluster-editing/</loc></url>
+  <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/papers/froese2012-binary-distinct-vectors/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/papers/galby-et-al2024-directed-steiner/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/papers/ganian-dehaan-kanj-szeider2020/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/papers/garey-johnson-stockmeyer1976/</loc></url>
@@ -363,6 +383,7 @@
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/problems/closest-string/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/problems/closest-substring-constant-alphabet/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/problems/cluster-editing/</loc></url>
+  <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/problems/cnf-sat/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/problems/connected-dominating-set/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/problems/connected-vertex-cover/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/problems/cycle-packing/</loc></url>
@@ -408,6 +429,7 @@
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/problems/planar-strongly-connected-steiner-subgraph/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/problems/planar-vertex-cover/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/problems/quantified-boolean-satisfiability/</loc></url>
+  <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/problems/red-blue-dominating-set/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/problems/scattered-set/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/problems/set-cover/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/problems/square-clique/</loc></url>
@@ -448,6 +470,8 @@
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/reviews/ecc-budget-np-qp-literature-audit/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/reviews/feedback-vertex-set-budget-sh-cubic-line-source-review/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/reviews/feedback-vertex-set-graph-size-sh-cubic-line-source-review/</loc></url>
+  <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/reviews/fvs-tw-eth-literature-source-review/</loc></url>
+  <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/reviews/fvs-tw-w1-effective-literature-source-review/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/reviews/graph-distortion-line-w1-molter-source-review/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/reviews/grid-tiling-side-w1-literature-audit/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/reviews/hamiltonian-cycle-graph-size-sh-source-audit-r2/</loc></url>
@@ -469,6 +493,8 @@
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/reviews/longest-path-budget-sh-source-audit-r2/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/reviews/multicolored-clique-colors-w1-equivalence-review/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/reviews/planar-scattered-set-solution-size-w1-literature-audit/</loc></url>
+  <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/reviews/rbds-tw-eth-literature-source-review/</loc></url>
+  <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/reviews/rbds-tw-w1-effective-literature-source-review/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/reviews/scattered-set-solution-size-w1-literature-audit/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/reviews/square-eth-equivalence-review/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/reviews/square-kxk-equivalence-review/</loc></url>
@@ -483,5 +509,7 @@
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/reviews/vc-budget-sh-source-audit-r3/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/reviews/vc-order-eth-equivalence-review/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/reviews/vc-order-sh-source-audit-r3/</loc></url>
+  <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/reviews/vc-tw-eth-literature-source-review/</loc></url>
+  <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/reviews/vc-tw-w1-effective-literature-source-review/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/reviews/weighted-fixed-width-cnf-sat-weight-w1-literature-audit/</loc></url>
 </urlset>

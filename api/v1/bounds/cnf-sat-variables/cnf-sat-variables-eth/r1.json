@@ -1,0 +1,44 @@
+{
+  "assessments": {},
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "cnf-sat-variables-eth",
+  "inputConditions": [],
+  "inputFactor": "L^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [],
+  "reader": {
+    "label": "Historical subexponential-time exclusion",
+    "revision": 1
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "2^(o(n)) L^(O(1))",
+  "runtimeSymbols": [
+    "n",
+    "L"
+  ],
+  "sourceBasis": {
+    "kind": "derived",
+    "step": "A CNF-SAT algorithm with the stated running time applies in particular to width-three formulas with the same variable count."
+  },
+  "sources": [
+    {
+      "editionId": "journal",
+      "locator": "Introduction and Corollary 1",
+      "paperId": "ipz2001",
+      "placement": "statement",
+      "role": "historical 3SAT hypothesis by number of variables"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm decides CNF-SAT within the stated running time.",
+  "status": "established",
+  "supported": true
+}

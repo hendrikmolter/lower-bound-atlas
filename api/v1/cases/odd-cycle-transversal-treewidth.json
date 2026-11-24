@@ -63,7 +63,7 @@
       "sources": [
         {
           "editionId": "bulletin",
-          "locator": "Theorem 6.2",
+          "locator": "Theorem 6.2, p. 62",
           "paperId": "lms2011",
           "placement": "statement",
           "role": "benchmark"
@@ -137,10 +137,10 @@
       "sources": [
         {
           "editionId": "journal",
-          "locator": "Theorem 6 (logarithmic pathwidth).",
+          "locator": "§4.3, Theorem 6 and Lemma 5 (logarithmic pathwidth)",
           "paperId": "bodlaender2025-linear-structure",
           "placement": "statement",
-          "role": "unrestricted lower bound"
+          "role": "logarithmic pathwidth hardness"
         }
       ],
       "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Odd Cycle Transversal within the stated running time.",
@@ -185,10 +185,10 @@
       "evidence": [
         {
           "editionId": "journal",
-          "locator": "Theorem 6 (logarithmic pathwidth).",
+          "locator": "§4.3, Theorem 6 and Lemma 5 (logarithmic pathwidth)",
           "paperId": "bodlaender2025-linear-structure",
           "placement": "statement",
-          "role": "unrestricted lower bound"
+          "role": "logarithmic pathwidth hardness"
         }
       ],
       "hypothesis": {
@@ -248,10 +248,10 @@
       "evidence": [
         {
           "editionId": "journal",
-          "locator": "Theorem 6 (logarithmic pathwidth).",
+          "locator": "§4.3, Theorem 6 and Lemma 5 (logarithmic pathwidth)",
           "paperId": "bodlaender2025-linear-structure",
           "placement": "statement",
-          "role": "unrestricted lower bound"
+          "role": "logarithmic pathwidth hardness"
         }
       ],
       "hypothesis": {

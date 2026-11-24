@@ -1,0 +1,52 @@
+{
+  "assessments": {},
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "w1",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "exponentDomain": "nonnegative",
+  "id": "dv-w1-effective",
+  "inputConditions": [],
+  "inputFactor": "N^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [],
+  "reader": {
+    "label": "Effective double-exponential bound",
+    "revision": 1
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "2^(o_eff(2^k)) N^(O(1))",
+  "runtimeSymbols": [
+    "k",
+    "N"
+  ],
+  "sourceBasis": {
+    "kind": "derived",
+    "step": "Lin’s Set Cover reduction has a universe of size O(h³ log n) and a budget depending only on h for an n-vertex Multicolored Clique instance with h colors. Froese’s binary address forces one column per address bit, and the two rows at each address must be separated by a selected set containing the corresponding element. The extra budget is the ceiling of the logarithm of the universe size, so 2^k ≤ g(h)(1+log n) for a computable g. Reject a universe element with no incident set before building the matrix. A computable cutoff for an exponent in o_eff(2^k) gives a fixed-parameter algorithm for Multicolored Clique."
+  },
+  "sources": [
+    {
+      "editionId": "proceedings",
+      "locator": "Lemma 14 and proof, §3.4, pp. 81:11–81:12",
+      "paperId": "lin2019",
+      "placement": "statement",
+      "role": "Set Cover reduction with a logarithmic-size universe"
+    },
+    {
+      "editionId": "thesis",
+      "locator": "Theorem 4.1 and proof, §4.1.1, pp. 33–34",
+      "paperId": "froese2012-binary-distinct-vectors",
+      "placement": "statement",
+      "role": "binary address reduction from Hitting Set"
+    }
+  ],
+  "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Distinct Vectors within the stated running time.",
+  "status": "established",
+  "supported": true
+}

@@ -1,0 +1,19 @@
+{
+  "authors": [
+    "Vincent Froese"
+  ],
+  "editions": [
+    {
+      "access": "Theorem 4.1 and proof inspected. This thesis gives the binary address construction. The later joint journal paper uses an unbounded-alphabet construction for its Hitting Set reduction.",
+      "id": "thesis",
+      "kind": "thesis",
+      "label": "Master’s thesis, Technische Universität Berlin, 2012",
+      "preferredUrl": "https://fpt.akt.tu-berlin.de/publications/theses/MA-vincent-froese.pdf",
+      "primaryUrl": "https://fpt.akt.tu-berlin.de/publications/theses/MA-vincent-froese.pdf"
+    }
+  ],
+  "id": "froese2012-binary-distinct-vectors",
+  "preferredEditionId": "thesis",
+  "preferredUrl": "https://fpt.akt.tu-berlin.de/publications/theses/MA-vincent-froese.pdf",
+  "title": "Combinatorial Feature Selection: Parameterized Algorithms and Complexity"
+}

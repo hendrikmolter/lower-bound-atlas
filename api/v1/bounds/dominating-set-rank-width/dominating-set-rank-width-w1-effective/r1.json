@@ -14,14 +14,18 @@
             "hypothesisRevision": 1,
             "reviewId": "dominating-set-rank-width-w1-effective-molter-source-review",
             "source": {
-              "editionId": "arxiv-v2",
-              "locator": "Table 1 and §3, “Dominating Set with a supplied vertex order”",
-              "paperId": "molter2026-running-time",
+              "editionId": "v1",
+              "locator": "Section 3.2, Lemmas 3.5–3.6, and Appendix C, proof of Theorem C.1",
+              "paperId": "liu-meng2026-rankwidth",
               "placement": "forward",
-              "role": "effective running-time lower bound"
+              "role": "monopolar construction, width witnesses, and arbitrary-clause interface used for the effective FPT ≠ W[1] consequence"
             }
           }
         ],
+        "sourceBasis": {
+          "kind": "derived",
+          "step": "Encode the k vertices of a clique choice in O(k log n) Boolean variables, using clauses to forbid invalid vertices, repetitions and nonedges. Liu and Meng’s reduction then supplies a monopolar graph and a vertex order of width p with p² = O(k log n), in fixed-parameter time. The intrinsic width is at most the width of the order. The computable cutoff for the exponent converts any algorithm with the displayed running time into a fixed-parameter algorithm for Clique."
+        },
         "status": "established"
       },
       "hypothesisRevision": 1,
@@ -59,14 +63,11 @@
     "p",
     "N"
   ],
+  "sourceBasis": {
+    "kind": "derived",
+    "step": "Encode the k vertices of a clique choice in O(k log n) Boolean variables, using clauses to forbid invalid vertices, repetitions and nonedges. Liu and Meng’s reduction then supplies a monopolar graph and a vertex order of width p with p² = O(k log n), in fixed-parameter time. The intrinsic width is at most the width of the order. The computable cutoff for the exponent converts any algorithm with the displayed running time into a fixed-parameter algorithm for Clique."
+  },
   "sources": [
-    {
-      "editionId": "arxiv-v2",
-      "locator": "Table 1 and §3, “Dominating Set with a supplied vertex order”",
-      "paperId": "molter2026-running-time",
-      "placement": "forward",
-      "role": "effective running-time lower bound"
-    },
     {
       "editionId": "v1",
       "locator": "Section 3.2, Lemmas 3.5–3.6, and Appendix C, proof of Theorem C.1",

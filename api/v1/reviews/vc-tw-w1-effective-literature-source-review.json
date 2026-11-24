@@ -1,0 +1,19 @@
+{
+  "applicable": true,
+  "date": "2026-11-24",
+  "evidence": "evidence/table-one-original-sources.md",
+  "id": "vc-tw-w1-effective-literature-source-review",
+  "independent": true,
+  "label": "Agent verified",
+  "object": {
+    "caseId": "vertex-cover-treewidth",
+    "id": "vc-tw-w1-effective",
+    "revision": 1,
+    "type": "bound"
+  },
+  "reviewer": "Codex source audit",
+  "scope": "Forward implication for intrinsic treewidth. Logarithmic-treewidth Vertex Cover is XALP-hard, so it is W[1]-hard. Discard the supplied decomposition from the reduction output. For a Clique input of order n and parameter k, the output treewidth is at most g(k)(1+log₂ n) for a computable g. Use the computable cutoff for a slope at most 1/g(k). Above the cutoff the exponential factor is polynomial in n, and below it the computable exponent has a finite maximum controlled by k. The polynomial-size reduction output then gives an FPT algorithm for Clique.",
+  "stale": false,
+  "type": "agent",
+  "verdict": "verified"
+}

@@ -1,0 +1,97 @@
+{
+  "assessments": {
+    "eth": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "established",
+        "evidence": [
+          {
+            "boundRevision": 1,
+            "hypothesisRevision": 1,
+            "reviewId": "vc-tw-eth-literature-source-review",
+            "source": {
+              "editionId": "journal",
+              "locator": "Corollary 2, p. 524, and Theorem 5, p. 526",
+              "paperId": "ipz2001",
+              "placement": "forward",
+              "role": "sparsification and linear-order reduction to Vertex Cover"
+            }
+          },
+          {
+            "boundRevision": 1,
+            "hypothesisRevision": 1,
+            "reviewId": "vc-tw-eth-literature-source-review",
+            "source": {
+              "editionId": "bulletin",
+              "locator": "Theorem 3.3, p. 52",
+              "paperId": "lms2011",
+              "placement": "forward",
+              "role": "historical lower bound for Vertex Cover by graph order"
+            }
+          }
+        ],
+        "sourceBasis": {
+          "kind": "derived",
+          "step": "The Vertex Cover instances produced from sparse 3-SAT have linear graph order, and treewidth is bounded by that order. A solver with the stated dependence on treewidth would solve sparse 3-SAT in subexponential time."
+        },
+        "status": "established"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "hypothesis-implies-bound"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "vc-tw-eth",
+  "inputConditions": [],
+  "inputFactor": "B^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [],
+  "reader": {
+    "label": "Exponential dependence on treewidth",
+    "revision": 1
+  },
+  "reviewIds": [
+    "vc-tw-eth-literature-source-review"
+  ],
+  "revision": 1,
+  "runtime": "2^(o(t)) B^(O(1))",
+  "runtimeSymbols": [
+    "t",
+    "B"
+  ],
+  "sourceBasis": {
+    "kind": "derived",
+    "step": "The Vertex Cover instances produced from sparse 3-SAT have linear graph order, and treewidth is bounded by that order. A solver with the stated dependence on treewidth would solve sparse 3-SAT in subexponential time."
+  },
+  "sources": [
+    {
+      "editionId": "journal",
+      "locator": "Corollary 2, p. 524, and Theorem 5, p. 526",
+      "paperId": "ipz2001",
+      "placement": "forward",
+      "role": "sparsification and linear-order reduction to Vertex Cover"
+    },
+    {
+      "editionId": "bulletin",
+      "locator": "Theorem 3.3, p. 52",
+      "paperId": "lms2011",
+      "placement": "forward",
+      "role": "historical lower bound for Vertex Cover by graph order"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm decides Vertex Cover within the stated running time.",
+  "status": "established",
+  "supported": true
+}

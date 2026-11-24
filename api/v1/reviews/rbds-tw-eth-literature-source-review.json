@@ -1,0 +1,19 @@
+{
+  "applicable": true,
+  "date": "2026-11-24",
+  "evidence": "evidence/table-one-original-sources.md",
+  "id": "rbds-tw-eth-literature-source-review",
+  "independent": true,
+  "label": "Agent verified",
+  "object": {
+    "caseId": "red-blue-dominating-set-treewidth",
+    "id": "rbds-tw-eth",
+    "revision": 1,
+    "type": "bound"
+  },
+  "reviewer": "Codex source audit",
+  "scope": "Forward implication for intrinsic treewidth. Subdivide every edge of a Vertex Cover instance. The blue original vertices dominate the red subdivision vertices exactly when they cover all original edges. A single bag with all original vertices and an attached bag for each subdivision gives treewidth at most max(n−1, 2) for original order n. The new explicit encoding has polynomial size.",
+  "stale": false,
+  "type": "agent",
+  "verdict": "verified"
+}

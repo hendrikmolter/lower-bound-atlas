@@ -1,0 +1,116 @@
+{
+  "assessments": {
+    "eth": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "established",
+        "evidence": [
+          {
+            "boundRevision": 1,
+            "hypothesisRevision": 1,
+            "reviewId": "rbds-tw-eth-literature-source-review",
+            "source": {
+              "editionId": "journal",
+              "locator": "Corollary 2, p. 524, and Theorem 5, p. 526",
+              "paperId": "ipz2001",
+              "placement": "forward",
+              "role": "sparsification and linear-order reduction to Vertex Cover"
+            }
+          },
+          {
+            "boundRevision": 1,
+            "hypothesisRevision": 1,
+            "reviewId": "rbds-tw-eth-literature-source-review",
+            "source": {
+              "editionId": "bulletin",
+              "locator": "Theorem 3.3, p. 52",
+              "paperId": "lms2011",
+              "placement": "forward",
+              "role": "historical lower bound for Vertex Cover by graph order"
+            }
+          },
+          {
+            "boundRevision": 1,
+            "hypothesisRevision": 1,
+            "reviewId": "rbds-tw-eth-literature-source-review",
+            "source": {
+              "editionId": "proceedings",
+              "locator": "§5.3, Theorem 11 and Corollary 12, pp. 6:13–6:14",
+              "paperId": "bodlaender2022-tree-structured",
+              "placement": "forward",
+              "role": "edge-subdivision reduction from Vertex Cover"
+            }
+          }
+        ],
+        "sourceBasis": {
+          "kind": "derived",
+          "step": "Subdivide every edge of a Vertex Cover instance. The blue original vertices dominate the red subdivision vertices exactly when they cover all original edges. A single bag with all original vertices and an attached bag for each subdivision gives treewidth at most max(n−1, 2) for original order n. The new explicit encoding has polynomial size."
+        },
+        "status": "established"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "hypothesis-implies-bound"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "rbds-tw-eth",
+  "inputConditions": [],
+  "inputFactor": "B^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [],
+  "reader": {
+    "label": "Exponential dependence on treewidth",
+    "revision": 1
+  },
+  "reviewIds": [
+    "rbds-tw-eth-literature-source-review"
+  ],
+  "revision": 1,
+  "runtime": "2^(o(t)) B^(O(1))",
+  "runtimeSymbols": [
+    "t",
+    "B"
+  ],
+  "sourceBasis": {
+    "kind": "derived",
+    "step": "Subdivide every edge of a Vertex Cover instance. The blue original vertices dominate the red subdivision vertices exactly when they cover all original edges. A single bag with all original vertices and an attached bag for each subdivision gives treewidth at most max(n−1, 2) for original order n. The new explicit encoding has polynomial size."
+  },
+  "sources": [
+    {
+      "editionId": "journal",
+      "locator": "Corollary 2, p. 524, and Theorem 5, p. 526",
+      "paperId": "ipz2001",
+      "placement": "forward",
+      "role": "sparsification and linear-order reduction to Vertex Cover"
+    },
+    {
+      "editionId": "bulletin",
+      "locator": "Theorem 3.3, p. 52",
+      "paperId": "lms2011",
+      "placement": "forward",
+      "role": "historical lower bound for Vertex Cover by graph order"
+    },
+    {
+      "editionId": "proceedings",
+      "locator": "§5.3, Theorem 11 and Corollary 12, pp. 6:13–6:14",
+      "paperId": "bodlaender2022-tree-structured",
+      "placement": "forward",
+      "role": "edge-subdivision reduction from Vertex Cover"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm decides Red-Blue Dominating Set within the stated running time.",
+  "status": "established",
+  "supported": true
+}

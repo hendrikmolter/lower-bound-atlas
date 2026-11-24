@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Distinct Vectors · Number of selected columns · Effective double-exponential bound under FPT ≠ W[1] | Lower Bound Atlas</title>
+  <link rel="stylesheet" href="../../../assets/style.css?v=066fd0bcbb1bdc9a77c5e14b591fc5c5b0e70786">
+  
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header"><nav class="site-nav" aria-label="Main">
+    <a href="../../../index.html" class="site-brand">Lower Bound Atlas</a>
+    <div class="nav-links"><a href="../../../index.html">Problems</a><a href="../../../assumptions/index.html">Hypotheses</a><a href="../../../papers/index.html">Papers</a><a href="../../../notation/index.html">Notation</a><a href="../../../about/index.html">About &amp; guide</a></div>
+  </nav></header>
+  <main id="main-content" tabindex="-1">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../../../index.html">Problems</a><span aria-hidden="true"> / </span><a href="../../../cases/distinct-vectors-budget/index.html">Distinct Vectors</a></nav>
+    <header class="hero">
+      <h1>Effective double-exponential bound under FPT ≠ W[1]</h1>
+      
+    </header>
+    
+        
+        
+        <section class="problem-box"><h2 id="statement">Statement</h2>
+        
+        <div class="input-restrictions"><strong>Problem domain</strong><ul><li>The rows are pairwise distinct.</li></ul></div>
+        <p>No deterministic algorithm decides Distinct Vectors within the stated running time.</p><p class="statement"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mrow><mrow><msub><mi>o</mi><mtext>eff</mtext></msub><mrow><mo>(</mo><msup><mn>2</mn><mi>k</mi></msup><mo>)</mo></mrow></mrow></mrow></msup><mo>&#x2062;</mo><msup><mi>N</mi><mrow><mrow><mi>𝒪</mi><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></mrow></msup></mrow><annotation encoding="text/plain">2^(o_eff(2^k)) N^(O(1))</annotation></semantics></math> <small><a href="../../../notation/index.html#effective-little-o">Effective little-o</a></small></p><ul class="runtime-symbols"><li><i>k</i> — maximum number of selected columns</li><li><i>N</i> — input length in bits, including the binary column budget</li></ul>
+        
+        </section><section class="implication"><h2 aria-label="FPT ≠ W[1] implies Statement">FPT ≠ W[1] <span aria-hidden="true">⇒</span> Statement</h2><div class="implication-evidence"><ul><li><a href="https://doi.org/10.4230/LIPIcs.ICALP.2019.81">A Simple Gap-Producing Reduction for the Parameterized Set Cover Problem</a> · Bingkai Lin · <span class="source-edition"><a href="../../../papers/lin2019/index.html#proceedings">ICALP 2019, LIPIcs 132, 81:1–81:15</a> · Lemma 14 and proof, §3.4, pp. 81:11–81:12 · <a href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol132-icalp2019/LIPIcs.ICALP.2019.81/LIPIcs.ICALP.2019.81.pdf">Open full text</a></span></li><li><a href="https://fpt.akt.tu-berlin.de/publications/theses/MA-vincent-froese.pdf">Combinatorial Feature Selection: Parameterized Algorithms and Complexity</a> · Vincent Froese · <span class="source-edition"><a href="../../../papers/froese2012-binary-distinct-vectors/index.html#thesis">Master’s thesis, Technische Universität Berlin, 2012</a> · Theorem 4.1 and proof, §4.1.1, pp. 33–34</span></li></ul><div class="source-step"><strong>Derivation from the cited sources</strong><p>Lin’s Set Cover reduction has a universe of size O(h³ log n) and a budget depending only on h for an n-vertex Multicolored Clique instance with h colors. Froese’s binary address forces one column per address bit, and the two rows at each address must be separated by a selected set containing the corresponding element. The extra budget is the ceiling of the logarithm of the universe size, so <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mi>k</mi></msup><mo>≤</mo><mrow><mi>g</mi><mrow><mo>(</mo><mi>h</mi><mo>)</mo></mrow></mrow><mo>&#x2062;</mo><mrow><mo>(</mo><mn>1</mn><mo>+</mo><mi>log</mi><mo>&#x2062;</mo><mi>n</mi><mo>)</mo></mrow></mrow><annotation encoding="text/plain">2^k ≤ g(h)(1+log n)</annotation></semantics></math> for a computable g. Reject a universe element with no incident set before building the matrix. A computable cutoff for an exponent in <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><msub><mi>o</mi><mtext>eff</mtext></msub><mrow><mo>(</mo><msup><mn>2</mn><mi>k</mi></msup><mo>)</mo></mrow></mrow></mrow><annotation encoding="text/plain">o_eff(2^k)</annotation></semantics></math> gives a fixed-parameter algorithm for Multicolored Clique.</p></div></div></section>
+        
+        
+        <section><h2>Recovery of a historical ETH bound</h2><p>Recovered · ETH target: <a href="../dv-eth-column-budget/r1/index.html" aria-label="Double-exponential bound">Double-exponential bound</a></p><p>For every historical coefficient <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>&lt;</mo><mn>1</mn><mo>/</mo><mn>2</mn></mrow><annotation encoding="text/plain">c &lt; 1/2</annotation></semantics></math>, <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi>𝒪</mi><mrow><mo>(</mo><msup><mn>2</mn><mrow><mi>c</mi><mo>&#x2062;</mo><mi>k</mi></mrow></msup><mo>)</mo></mrow></mrow></mrow><annotation encoding="text/plain">O(2^(c k))</annotation></semantics></math> has a computable convergence cutoff relative to <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mi>k</mi></msup></mrow><annotation encoding="text/plain">2^k</annotation></semantics></math>. The effective exclusion therefore covers the historical running-time family on the same binary matrices.</p></section>
+        <details class="reader-details"><summary>Citation and record details</summary>
+        <p><a href="r1/index.html">Revision permalink</a> · <a href="../../../api/v1/bounds/distinct-vectors-budget/dv-w1-effective/r1.json">JSON record</a></p>
+        
+        <section class="panel" id="cite"><h2>Cite this revision</h2>
+    <p class="citation">Lower Bound Atlas. Distinct Vectors · Effective double-exponential bound under FPT ≠ W[1]. distinct-vectors-budget/dv-w1-effective, bound revision 1. Edition v1.0.0, Git commit 066fd0bcbb1bdc9a77c5e14b591fc5c5b0e70786. https://github.com/hendrikmolter/lower-bound-atlas/blob/066fd0bcbb1bdc9a77c5e14b591fc5c5b0e70786/data/cases/distinct-vectors-budget.json
+</p>
+    <div class="actions"><a href="citation.txt" download>Plain-text citation</a>
+    <a href="citation.bib" download>BibTeX citation</a><a href="https://github.com/hendrikmolter/lower-bound-atlas/blob/066fd0bcbb1bdc9a77c5e14b591fc5c5b0e70786/data/cases/distinct-vectors-budget.json">Source at cited commit</a></div></section></details>
+  </main>
+  <footer class="site-footer">
+    <span>Release · v1.0.0</span>
+    <a href="../../../api/v1/atlas.json">JSON export</a>
+    <a href="../../../manifest.json">Build manifest</a>
+    <a href="../../../sitemap.xml">Sitemap</a>
+    <a href="../../../legal/index.html#impressum">Impressum</a>
+    <a href="../../../legal/index.html#privacy">Privacy</a>
+  </footer>
+</body>
+</html>

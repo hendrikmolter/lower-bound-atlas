@@ -1,0 +1,1 @@
+Lower Bound Atlas. 3-Coloring · Effective subexponential bound in treewidth under FPT ≠ W[1]. 3-coloring-treewidth/3-coloring-treewidth-w1, bound revision 1. Edition v1.0.0, Git commit 066fd0bcbb1bdc9a77c5e14b591fc5c5b0e70786. https://github.com/hendrikmolter/lower-bound-atlas/blob/066fd0bcbb1bdc9a77c5e14b591fc5c5b0e70786/data/cases/3-coloring-treewidth.json

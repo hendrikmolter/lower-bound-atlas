@@ -1,0 +1,116 @@
+{
+  "assessments": {
+    "eth": {
+      "converse": {
+        "effectiveStatus": "unassessed",
+        "evidence": [],
+        "status": "unassessed"
+      },
+      "forward": {
+        "effectiveStatus": "established",
+        "evidence": [
+          {
+            "boundRevision": 1,
+            "hypothesisRevision": 1,
+            "reviewId": "fvs-tw-eth-literature-source-review",
+            "source": {
+              "editionId": "journal",
+              "locator": "Corollary 2, p. 524, and Theorem 5, p. 526",
+              "paperId": "ipz2001",
+              "placement": "forward",
+              "role": "sparsification and linear-order reduction to Vertex Cover"
+            }
+          },
+          {
+            "boundRevision": 1,
+            "hypothesisRevision": 1,
+            "reviewId": "fvs-tw-eth-literature-source-review",
+            "source": {
+              "editionId": "bulletin",
+              "locator": "Theorem 3.3, p. 52",
+              "paperId": "lms2011",
+              "placement": "forward",
+              "role": "historical lower bound for Vertex Cover by graph order"
+            }
+          },
+          {
+            "boundRevision": 1,
+            "hypothesisRevision": 1,
+            "reviewId": "fvs-tw-eth-literature-source-review",
+            "source": {
+              "editionId": "journal",
+              "locator": "§4.4, Feedback Vertex Set paragraph, p. 1324",
+              "paperId": "deberg-et-al2020-geometric",
+              "placement": "forward",
+              "role": "edge-triangle reduction from Vertex Cover"
+            }
+          }
+        ],
+        "sourceBasis": {
+          "kind": "derived",
+          "step": "Add one private vertex adjacent to both ends of each edge of the Vertex Cover instance. A cover leaves a forest. Conversely, any feedback vertex set hits each edge triangle, so replacing any selected private vertex with an endpoint yields a cover of no larger size. A bag for each private vertex and its endpoints gives treewidth at most max(n−1, 2) for original order n, with polynomial encoding size."
+        },
+        "status": "established"
+      },
+      "hypothesisRevision": 1,
+      "verdict": "hypothesis-implies-bound"
+    }
+  },
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "fvs-tw-eth",
+  "inputConditions": [],
+  "inputFactor": "B^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [],
+  "reader": {
+    "label": "Exponential dependence on treewidth",
+    "revision": 1
+  },
+  "reviewIds": [
+    "fvs-tw-eth-literature-source-review"
+  ],
+  "revision": 1,
+  "runtime": "2^(o(t)) B^(O(1))",
+  "runtimeSymbols": [
+    "t",
+    "B"
+  ],
+  "sourceBasis": {
+    "kind": "derived",
+    "step": "Add one private vertex adjacent to both ends of each edge of the Vertex Cover instance. A cover leaves a forest. Conversely, any feedback vertex set hits each edge triangle, so replacing any selected private vertex with an endpoint yields a cover of no larger size. A bag for each private vertex and its endpoints gives treewidth at most max(n−1, 2) for original order n, with polynomial encoding size."
+  },
+  "sources": [
+    {
+      "editionId": "journal",
+      "locator": "Corollary 2, p. 524, and Theorem 5, p. 526",
+      "paperId": "ipz2001",
+      "placement": "forward",
+      "role": "sparsification and linear-order reduction to Vertex Cover"
+    },
+    {
+      "editionId": "bulletin",
+      "locator": "Theorem 3.3, p. 52",
+      "paperId": "lms2011",
+      "placement": "forward",
+      "role": "historical lower bound for Vertex Cover by graph order"
+    },
+    {
+      "editionId": "journal",
+      "locator": "§4.4, Feedback Vertex Set paragraph, p. 1324",
+      "paperId": "deberg-et-al2020-geometric",
+      "placement": "forward",
+      "role": "edge-triangle reduction from Vertex Cover"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm decides Feedback Vertex Set within the stated running time.",
+  "status": "established",
+  "supported": true
+}

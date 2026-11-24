@@ -78,6 +78,66 @@
     ]
   },
   {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "w1"
+    ],
+    "family": "",
+    "id": "3-coloring-treewidth",
+    "kind": "lower-bound-case",
+    "name": "3-Coloring by treewidth",
+    "recoveries": [
+      {
+        "bound": "3-coloring-treewidth-w1",
+        "hypothesis": "w1",
+        "status": "effective",
+        "target": "3-coloring-treewidth-eth"
+      }
+    ],
+    "search": [
+      "3-Coloring",
+      "Treewidth",
+      "3-Coloring by treewidth",
+      "3-Coloring",
+      "The intrinsic treewidth t of G.",
+      "Can the vertices of G be colored with at most three colors so that adjacent vertices have different colors?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "lms2011",
+      "Lower bounds based on the Exponential Time Hypothesis",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Saket Saurabh",
+      "bodlaender2025-linear-structure",
+      "XNLP-Completeness for Parameterized Problems on Graphs with a Linear Structure",
+      "Hans L. Bodlaender",
+      "Carla Groenland",
+      "Hugo Jacob",
+      "Lars Jaffke",
+      "Paloma T. Lima"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "3-coloring-treewidth-eth"
+      },
+      {
+        "hypotheses": [
+          "w1"
+        ],
+        "id": "3-coloring-treewidth-w1"
+      }
+    ]
+  },
+  {
     "aliases": [
       "lms-three-sat-clauses"
     ],
@@ -330,8 +390,8 @@
     ],
     "assumptions": [
       "eth",
-      "sh",
-      "w1"
+      "w1",
+      "sh"
     ],
     "family": "",
     "id": "chromatic-number-treewidth",
@@ -349,6 +409,17 @@
         "hypothesis": "w1",
         "status": "effective",
         "target": "chromatic-tw-eth"
+      },
+      {
+        "hypothesis": "sh",
+        "status": "unresolved",
+        "target": "chromatic-tw-fixed-q-eth"
+      },
+      {
+        "bound": "chromatic-tw-fixed-q-w1",
+        "hypothesis": "w1",
+        "status": "effective",
+        "target": "chromatic-tw-fixed-q-eth"
       }
     ],
     "search": [
@@ -362,13 +433,13 @@
       "Exponential Time Hypothesis",
       "ETH",
       "positive-rate ETH",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
       "sh",
       "Satisfiability Hypothesis",
       "SH",
       "SAT power index one",
-      "w1",
-      "FPT ≠ W[1]",
-      "deterministic W[1] separation",
       "lms2018",
       "Slightly Superexponential Parameterized Problems",
       "Daniel Lokshtanov",
@@ -379,6 +450,13 @@
       "Daniel Lokshtanov",
       "Dániel Marx",
       "Saket Saurabh",
+      "bodlaender2025-linear-structure",
+      "XNLP-Completeness for Parameterized Problems on Graphs with a Linear Structure",
+      "Hans L. Bodlaender",
+      "Carla Groenland",
+      "Hugo Jacob",
+      "Lars Jaffke",
+      "Paloma T. Lima",
       "sh26",
       "ETH is Dead, Long Live SH",
       "MIT Hardness Group",
@@ -389,13 +467,9 @@
       "Markus Hecher",
       "Jeffery Li",
       "Jayson Lynch",
-      "bodlaender2025-linear-structure",
-      "XNLP-Completeness for Parameterized Problems on Graphs with a Linear Structure",
-      "Hans L. Bodlaender",
-      "Carla Groenland",
-      "Hugo Jacob",
-      "Lars Jaffke",
-      "Paloma T. Lima"
+      "molter2026-running-time",
+      "Running-Time Lower Bounds under FPT ≠ W[1]",
+      "Hendrik Molter"
     ],
     "statements": [
       {
@@ -403,6 +477,18 @@
           "eth"
         ],
         "id": "chromatic-tw-eth"
+      },
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "chromatic-tw-fixed-q-eth"
+      },
+      {
+        "hypotheses": [
+          "w1"
+        ],
+        "id": "chromatic-tw-fixed-q-w1"
       },
       {
         "hypotheses": [
@@ -959,6 +1045,63 @@
     ]
   },
   {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "w1"
+    ],
+    "family": "",
+    "id": "cnf-sat-variables",
+    "kind": "lower-bound-case",
+    "name": "CNF-SAT by number of variables",
+    "recoveries": [
+      {
+        "bound": "cnf-sat-variables-w1-effective",
+        "hypothesis": "w1",
+        "status": "effective",
+        "target": "cnf-sat-variables-eth"
+      }
+    ],
+    "search": [
+      "CNF-SAT",
+      "Number of variables",
+      "CNF-SAT by number of variables",
+      "Boolean CNF satisfiability",
+      "The number of occurring variables n.",
+      "Does the formula have a satisfying assignment?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "ipz2001",
+      "Which Problems Have Strongly Exponential Complexity?",
+      "Russell Impagliazzo",
+      "Ramamohan Paturi",
+      "Francis Zane",
+      "cai-juedes2003",
+      "On the Existence of Subexponential Parameterized Algorithms",
+      "Liming Cai",
+      "David Juedes"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "cnf-sat-variables-eth"
+      },
+      {
+        "hypotheses": [
+          "w1"
+        ],
+        "id": "cnf-sat-variables-w1-effective"
+      }
+    ]
+  },
+  {
     "aliases": [
       "book-connected-dominating-set-budget"
     ],
@@ -1384,7 +1527,7 @@
     "name": "Distinct Vectors",
     "recoveries": [
       {
-        "bound": "dv-w1-fixed-coefficient",
+        "bound": "dv-w1-effective",
         "hypothesis": "w1",
         "status": "recovered",
         "target": "dv-eth-column-budget"
@@ -1408,12 +1551,12 @@
       "A Double-Exponential Lower Bound for the Distinct Vectors Problem",
       "Marcin Pilipczuk",
       "Manuel Sorge",
-      "molter2026-running-time",
-      "Running-Time Lower Bounds under FPT ≠ W[1]",
-      "Hendrik Molter",
       "lin2019",
       "A Simple Gap-Producing Reduction for the Parameterized Set Cover Problem",
-      "Bingkai Lin"
+      "Bingkai Lin",
+      "froese2012-binary-distinct-vectors",
+      "Combinatorial Feature Selection: Parameterized Algorithms and Complexity",
+      "Vincent Froese"
     ],
     "statements": [
       {
@@ -1426,7 +1569,7 @@
         "hypotheses": [
           "w1"
         ],
-        "id": "dv-w1-fixed-coefficient"
+        "id": "dv-w1-effective"
       }
     ]
   },
@@ -1465,10 +1608,7 @@
       "liu-meng2026-rankwidth",
       "Lower Bounds for Domination-Type Problems Parameterized by Rank-Width",
       "Chenghua Liu",
-      "Boning Meng",
-      "molter2026-running-time",
-      "Running-Time Lower Bounds under FPT ≠ W[1]",
-      "Hendrik Molter"
+      "Boning Meng"
     ],
     "statements": [
       {
@@ -1596,10 +1736,7 @@
       "liu-meng2026-rankwidth",
       "Lower Bounds for Domination-Type Problems Parameterized by Rank-Width",
       "Chenghua Liu",
-      "Boning Meng",
-      "molter2026-running-time",
-      "Running-Time Lower Bounds under FPT ≠ W[1]",
-      "Hendrik Molter"
+      "Boning Meng"
     ],
     "statements": [
       {
@@ -1803,10 +1940,7 @@
       "liu-meng2026-rankwidth",
       "Lower Bounds for Domination-Type Problems Parameterized by Rank-Width",
       "Chenghua Liu",
-      "Boning Meng",
-      "molter2026-running-time",
-      "Running-Time Lower Bounds under FPT ≠ W[1]",
-      "Hendrik Molter"
+      "Boning Meng"
     ],
     "statements": [
       {
@@ -1858,10 +1992,7 @@
       "liu-meng2026-rankwidth",
       "Lower Bounds for Domination-Type Problems Parameterized by Rank-Width",
       "Chenghua Liu",
-      "Boning Meng",
-      "molter2026-running-time",
-      "Running-Time Lower Bounds under FPT ≠ W[1]",
-      "Hendrik Molter"
+      "Boning Meng"
     ],
     "statements": [
       {
@@ -2461,6 +2592,78 @@
           "sh"
         ],
         "id": "feedback-vertex-set-budget-sh-cubic-line"
+      }
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "w1"
+    ],
+    "family": "",
+    "id": "feedback-vertex-set-treewidth",
+    "kind": "lower-bound-case",
+    "name": "Feedback Vertex Set by treewidth",
+    "recoveries": [
+      {
+        "bound": "fvs-tw-w1-effective",
+        "hypothesis": "w1",
+        "status": "effective",
+        "target": "fvs-tw-eth"
+      }
+    ],
+    "search": [
+      "Feedback Vertex Set",
+      "Treewidth",
+      "Feedback Vertex Set by treewidth",
+      "Undirected Feedback Vertex Set",
+      "The intrinsic treewidth t of G.",
+      "Can at most k vertices be deleted so that the remaining graph is a forest?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "ipz2001",
+      "Which Problems Have Strongly Exponential Complexity?",
+      "Russell Impagliazzo",
+      "Ramamohan Paturi",
+      "Francis Zane",
+      "lms2011",
+      "Lower bounds based on the Exponential Time Hypothesis",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Saket Saurabh",
+      "deberg-et-al2020-geometric",
+      "A Framework for Exponential-Time-Hypothesis–Tight Algorithms and Lower Bounds in Geometric Intersection Graphs",
+      "Mark de Berg",
+      "Hans L. Bodlaender",
+      "Sándor Kisfaludi-Bak",
+      "Dániel Marx",
+      "Tom C. van der Zanden",
+      "bodlaender2025-linear-structure",
+      "XNLP-Completeness for Parameterized Problems on Graphs with a Linear Structure",
+      "Hans L. Bodlaender",
+      "Carla Groenland",
+      "Hugo Jacob",
+      "Lars Jaffke",
+      "Paloma T. Lima"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "fvs-tw-eth"
+      },
+      {
+        "hypotheses": [
+          "w1"
+        ],
+        "id": "fvs-tw-w1-effective"
       }
     ]
   },
@@ -4043,9 +4246,6 @@
       "Dušan Knop",
       "Michał Pilipczuk",
       "Marcin Wrochna",
-      "molter2026-running-time",
-      "Running-Time Lower Bounds under FPT ≠ W[1]",
-      "Hendrik Molter",
       "lin2019",
       "A Simple Gap-Producing Reduction for the Parameterized Set Cover Problem",
       "Bingkai Lin"
@@ -4164,8 +4364,8 @@
     ],
     "assumptions": [
       "eth",
-      "kxk",
-      "w1"
+      "w1",
+      "kxk"
     ],
     "family": "",
     "id": "list-coloring-treewidth",
@@ -4177,6 +4377,22 @@
         "hypothesis": "kxk",
         "status": "recovered",
         "target": "list-coloring-treewidth-eth"
+      },
+      {
+        "hypothesis": "w1",
+        "status": "unresolved",
+        "target": "list-coloring-treewidth-eth"
+      },
+      {
+        "hypothesis": "kxk",
+        "status": "unresolved",
+        "target": "list-coloring-treewidth-fixed-q-eth"
+      },
+      {
+        "bound": "list-coloring-treewidth-fixed-q-w1",
+        "hypothesis": "w1",
+        "status": "effective",
+        "target": "list-coloring-treewidth-fixed-q-eth"
       }
     ],
     "search": [
@@ -4191,13 +4407,13 @@
       "Exponential Time Hypothesis",
       "ETH",
       "positive-rate ETH",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
       "kxk",
       "k × k Clique Hypothesis",
       "Square Clique Hypothesis",
       "k-by-k Clique Hypothesis",
-      "w1",
-      "FPT ≠ W[1]",
-      "deterministic W[1] separation",
       "fellows-et-al2011-colorful-treewidth",
       "On the Complexity of Some Colorful Problems Parameterized by Treewidth",
       "Michael R. Fellows",
@@ -4222,6 +4438,13 @@
       "Daniel Lokshtanov",
       "Dániel Marx",
       "Saket Saurabh",
+      "bodlaender2025-linear-structure",
+      "XNLP-Completeness for Parameterized Problems on Graphs with a Linear Structure",
+      "Hans L. Bodlaender",
+      "Carla Groenland",
+      "Hugo Jacob",
+      "Lars Jaffke",
+      "Paloma T. Lima",
       "szeider2026",
       "After ETH: the k×k Clique Hypothesis",
       "Stefan Szeider"
@@ -4232,6 +4455,18 @@
           "eth"
         ],
         "id": "list-coloring-treewidth-eth"
+      },
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "list-coloring-treewidth-fixed-q-eth"
+      },
+      {
+        "hypotheses": [
+          "w1"
+        ],
+        "id": "list-coloring-treewidth-fixed-q-w1"
       },
       {
         "hypotheses": [
@@ -5934,6 +6169,71 @@
     "aliases": [],
     "assumptions": [
       "eth",
+      "w1"
+    ],
+    "family": "",
+    "id": "red-blue-dominating-set-treewidth",
+    "kind": "lower-bound-case",
+    "name": "Red-Blue Dominating Set by treewidth",
+    "recoveries": [
+      {
+        "bound": "rbds-tw-w1-effective",
+        "hypothesis": "w1",
+        "status": "effective",
+        "target": "rbds-tw-eth"
+      }
+    ],
+    "search": [
+      "Red-Blue Dominating Set",
+      "Treewidth",
+      "Red-Blue Dominating Set by treewidth",
+      "Bipartite Red-Blue Dominating Set",
+      "The intrinsic treewidth t of G.",
+      "Is there a set of at most k blue vertices such that every red vertex has a neighbor in the set?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "ipz2001",
+      "Which Problems Have Strongly Exponential Complexity?",
+      "Russell Impagliazzo",
+      "Ramamohan Paturi",
+      "Francis Zane",
+      "lms2011",
+      "Lower bounds based on the Exponential Time Hypothesis",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Saket Saurabh",
+      "bodlaender2022-tree-structured",
+      "On the Complexity of Problems on Tree-Structured Graphs",
+      "Hans L. Bodlaender",
+      "Carla Groenland",
+      "Hugo Jacob",
+      "Marcin Pilipczuk",
+      "Michał Pilipczuk"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "rbds-tw-eth"
+      },
+      {
+        "hypotheses": [
+          "w1"
+        ],
+        "id": "rbds-tw-w1-effective"
+      }
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
       "kxk",
       "w1"
     ],
@@ -6644,6 +6944,71 @@
           "sh"
         ],
         "id": "vc-budget-sh"
+      }
+    ]
+  },
+  {
+    "aliases": [],
+    "assumptions": [
+      "eth",
+      "w1"
+    ],
+    "family": "",
+    "id": "vertex-cover-treewidth",
+    "kind": "lower-bound-case",
+    "name": "Vertex Cover by treewidth",
+    "recoveries": [
+      {
+        "bound": "vc-tw-w1-effective",
+        "hypothesis": "w1",
+        "status": "effective",
+        "target": "vc-tw-eth"
+      }
+    ],
+    "search": [
+      "Vertex Cover",
+      "Treewidth",
+      "Vertex Cover by treewidth",
+      "Vertex Cover",
+      "The intrinsic treewidth t of G.",
+      "Does G have a set of at most k vertices that includes an endpoint of every edge?",
+      "eth",
+      "Exponential Time Hypothesis",
+      "ETH",
+      "positive-rate ETH",
+      "w1",
+      "FPT ≠ W[1]",
+      "deterministic W[1] separation",
+      "ipz2001",
+      "Which Problems Have Strongly Exponential Complexity?",
+      "Russell Impagliazzo",
+      "Ramamohan Paturi",
+      "Francis Zane",
+      "lms2011",
+      "Lower bounds based on the Exponential Time Hypothesis",
+      "Daniel Lokshtanov",
+      "Dániel Marx",
+      "Saket Saurabh",
+      "bodlaender2022-tree-structured",
+      "On the Complexity of Problems on Tree-Structured Graphs",
+      "Hans L. Bodlaender",
+      "Carla Groenland",
+      "Hugo Jacob",
+      "Marcin Pilipczuk",
+      "Michał Pilipczuk"
+    ],
+    "statements": [
+      {
+        "hypotheses": [
+          "eth"
+        ],
+        "id": "vc-tw-eth"
+      },
+      {
+        "hypotheses": [
+          "w1"
+        ],
+        "id": "vc-tw-w1-effective"
       }
     ]
   },

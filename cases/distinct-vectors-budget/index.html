@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
   <title>Distinct Vectors · Number of selected columns — running-time lower bounds | Lower Bound Atlas</title>
-  <link rel="stylesheet" href="../../assets/style.css?v=32285f8c2c282d949eb92b60a69311b708a31855">
+  <link rel="stylesheet" href="../../assets/style.css?v=066fd0bcbb1bdc9a77c5e14b591fc5c5b0e70786">
   
 </head>
 <body>
@@ -45,19 +45,25 @@
         </article><article class="hypothesis-card" id="assessment-sh" data-hypothesis="sh"><h3><a href="../../assumptions/sh/index.html">SH</a></h3>
         <p>No lower bound recorded for this parameterization.</p>
         </article><article class="hypothesis-card" id="assessment-w1" data-hypothesis="w1"><h3><a href="../../assumptions/w1/index.html">FPT ≠ W[1]</a></h3>
-        <section class="bound-row" id="dv-w1-fixed-coefficient"><h4>Double-exponential bound</h4>
+        <section class="bound-row" id="dv-w1-effective"><h4>Effective double-exponential bound</h4>
+        
+        
+        <div class="excluded-time"><span>Excluded running time</span><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mrow><mrow><msub><mi>o</mi><mtext>eff</mtext></msub><mrow><mo>(</mo><msup><mn>2</mn><mi>k</mi></msup><mo>)</mo></mrow></mrow></mrow></msup><mo>&#x2062;</mo><msup><mi>N</mi><mrow><mrow><mi>𝒪</mi><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></mrow></msup></mrow><annotation encoding="text/plain">2^(o_eff(2^k)) N^(O(1))</annotation></semantics></math> <small><a href="../../notation/index.html#effective-little-o">Effective little-o</a></small></div>
+        <p>Recovered · ETH target: <a href="../../bounds/distinct-vectors-budget/dv-eth-column-budget/r1/index.html" aria-label="Double-exponential bound">Double-exponential bound</a>.</p><div class="bound-links"><div class="actions"><a href="../../bounds/distinct-vectors-budget/dv-w1-effective/index.html">Full statement</a></div>
+    </div><ul class="bound-citations"><li><a href="https://doi.org/10.4230/LIPIcs.ICALP.2019.81">A Simple Gap-Producing Reduction for the Parameterized Set Cover Problem</a></li><li><a href="https://fpt.akt.tu-berlin.de/publications/theses/MA-vincent-froese.pdf">Combinatorial Feature Selection: Parameterized Algorithms and Complexity</a></li></ul>
+        </section>
+        <details class="reader-details" data-earlier-bounds><summary>Earlier FPT ≠ W[1] bound</summary><section class="bound-row" id="dv-w1-fixed-coefficient" data-superseded-by="dv-w1-effective"><h4>Double-exponential bound</h4>
         
         
         <div class="excluded-time"><span>Excluded running time</span><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mrow><mrow><mi>𝒪</mi><mrow><mo>(</mo><msup><mn>2</mn><mrow><mi>γ</mi><mo>&#x2062;</mo><mi>k</mi></mrow></msup><mo>)</mo></mrow></mrow></mrow></msup><mo>&#x2062;</mo><msup><mi>N</mi><mrow><mrow><mi>𝒪</mi><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></mrow></msup></mrow><annotation encoding="text/plain">2^(O(2^(γ k))) N^(O(1))</annotation></semantics></math></div><p class="runtime-qualification">For every fixed <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>&lt;</mo><mi>γ</mi><mo>&lt;</mo><mn>1</mn></mrow><annotation encoding="text/plain">0 &lt; γ &lt; 1</annotation></semantics></math>.</p>
         <p>Recovered · ETH target: <a href="../../bounds/distinct-vectors-budget/dv-eth-column-budget/r1/index.html" aria-label="Double-exponential bound">Double-exponential bound</a>.</p><div class="bound-links"><div class="actions"><a href="../../bounds/distinct-vectors-budget/dv-w1-fixed-coefficient/index.html">Full statement</a></div>
-    </div><ul class="bound-citations"><li><a href="https://doi.org/10.48550/arXiv.2611.26080">Running-Time Lower Bounds under FPT ≠ W[1]</a></li><li><a href="https://doi.org/10.4230/LIPIcs.ICALP.2019.81">A Simple Gap-Producing Reduction for the Parameterized Set Cover Problem</a></li></ul>
-        </section>
-        </article><article class="hypothesis-card" id="assessment-np_qp" data-hypothesis="np_qp"><h3><a href="../../assumptions/np_qp/index.html">NP ⊈ QP</a></h3>
+    </div><ul class="bound-citations"><li><a href="https://doi.org/10.4230/LIPIcs.ICALP.2019.81">A Simple Gap-Producing Reduction for the Parameterized Set Cover Problem</a></li><li><a href="https://fpt.akt.tu-berlin.de/publications/theses/MA-vincent-froese.pdf">Combinatorial Feature Selection: Parameterized Algorithms and Complexity</a></li></ul>
+        <p><a href="#dv-w1-effective">Superseding bound</a>. For every fixed <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>γ</mi><mo>&lt;</mo><mn>1</mn></mrow><annotation encoding="text/plain">γ &lt; 1</annotation></semantics></math>, the ratio <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mrow><mi>γ</mi><mo>&#x2062;</mo><mi>k</mi></mrow></msup><mo>/</mo><msup><mn>2</mn><mi>k</mi></msup></mrow><annotation encoding="text/plain">2^(γ k) / 2^k</annotation></semantics></math> tends effectively to zero. The effective exclusion covers every fixed-coefficient bound on the same binary matrices.</p></section></details></article><article class="hypothesis-card" id="assessment-np_qp" data-hypothesis="np_qp"><h3><a href="../../assumptions/np_qp/index.html">NP ⊈ QP</a></h3>
         <p>No lower bound recorded for this parameterization.</p>
         </article><article class="hypothesis-card" id="assessment-kxk" data-hypothesis="kxk"><h3><a href="../../assumptions/kxk/index.html"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>×</mo><mi>k</mi></mrow><annotation encoding="text/plain">k × k</annotation></semantics></math> Clique Hypothesis</a></h3>
         <p>No lower bound recorded for this parameterization.</p>
         </article></section>
-      <details class="reader-details"><summary>Record details</summary><dl class="details-grid"><div><dt>Identifier</dt><dd>distinct-vectors-budget</dd></div><div><dt>Revision</dt><dd>3</dd></div><div><dt>Aliases</dt><dd>Binary Distinct Vectors, Binary Test Cover</dd></div></dl>
+      <details class="reader-details"><summary>Record details</summary><dl class="details-grid"><div><dt>Identifier</dt><dd>distinct-vectors-budget</dd></div><div><dt>Revision</dt><dd>4</dd></div><div><dt>Aliases</dt><dd>Binary Distinct Vectors, Binary Test Cover</dd></div></dl>
       <a href="index.html">Permalink</a> · <a href="../../api/v1/cases/distinct-vectors-budget.json">JSON record</a></details>
   </main>
   <footer class="site-footer">

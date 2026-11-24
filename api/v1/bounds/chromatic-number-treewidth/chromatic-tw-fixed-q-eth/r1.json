@@ -1,0 +1,49 @@
+{
+  "assessments": {},
+  "assumptionOperator": "all",
+  "assumptions": [
+    {
+      "id": "eth",
+      "revision": 1
+    }
+  ],
+  "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
+  "id": "chromatic-tw-fixed-q-eth",
+  "inputConditions": [
+    "fixed-color-budget"
+  ],
+  "inputFactor": "n^(O(1))",
+  "proofs": [],
+  "provenance": "literature",
+  "qualifications": [
+    "For every fixed integer q ≥ 3."
+  ],
+  "reader": {
+    "label": "Subexponential bound in treewidth · Fixed number of colors",
+    "revision": 1,
+    "title": "Subexponential bound in treewidth under ETH · Fixed number of colors"
+  },
+  "reviewIds": [],
+  "revision": 1,
+  "runtime": "2^(o(t)) n^(O(1))",
+  "runtimeSymbols": [
+    "t",
+    "n"
+  ],
+  "sourceBasis": {
+    "kind": "derived",
+    "step": "For fixed q, add a clique of q−3 vertices adjacent to every vertex of the 3-Coloring instance. These vertices use q−3 colors and increase treewidth by at most q−3. The new graph has at most q colors exactly when the original graph has at most three."
+  },
+  "sources": [
+    {
+      "editionId": "bulletin",
+      "locator": "Theorem 3.2, PDF p. 12",
+      "paperId": "lms2011",
+      "placement": "statement",
+      "role": "3-Coloring graph-order lower bound"
+    }
+  ],
+  "statement": "Under ETH, no deterministic algorithm decides Chromatic Number within the stated running time.",
+  "status": "established",
+  "supported": true
+}
