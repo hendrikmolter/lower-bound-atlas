@@ -503,5 +503,12 @@
     "contributor": "Hendrik Molter with ChatGPT",
     "title": "Original sources for lower bounds and equivalences",
     "summary": "The updated entries cite the graph encodings, kernels and reductions supporting each implication, including the restricted Closest String and Independent Set bounds."
+  },
+  {
+    "kind": "update",
+    "date": "2026-11-24",
+    "contributor": "Hendrik Molter with ChatGPT",
+    "title": "Cluster Editing by edit budget and uniform ETH",
+    "summary": "The degree-six lower bound is equivalent to uniform ETH. The reverse implication uses the transfer theorem of Firbas and Sorge."
   }
 ]

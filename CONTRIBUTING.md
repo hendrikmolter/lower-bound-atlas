@@ -47,6 +47,8 @@ Inspect the diff. The main registry owns the premise and edition, and the case o
 
 ## Choosing a citation
 
+Register a paper together with its first recorded use. This can be a defining source for a hypothesis or formulation, a source for either direction of an implication, or another structured citation such as a restriction, recovery comparison or proof dependency. When removing a final use, remove the paper record as well.
+
 When the same passage supports a statement, an implication or another parameterization, reuse its edition and locator verbatim. Record each role separately. Use distinct locators when different passages supply the evidence. The paper page groups uses by edition, problem and locator and links each applicable statement once in that group.
 
 Look up the publication history with the publisher or authors. An extended journal version can have a different title. For a paper, prefer the journal version, followed by the published conference version, followed by a preprint or other unpublished manuscript. For a book, cite the newest published edition. Check the publisher’s edition number and date since a reprint or corrected printing can retain the same edition number.
@@ -59,7 +61,7 @@ A current citation to a nonpreferred edition must supply an `editionReason` spec
 
 ## Walk through an atlas proof
 
-For a complete example, follow the Closest String case from the W[1]-based recovery to its proof ID, revision, theorem label, source, PDF and corresponding review. To propose another project-derived bound:
+The Atlas primarily documents the literature. Cite the original proof whenever it establishes the recorded direction. If a short mathematical step connects the cited theorems to the statement, record the sources and that step under the public derivation rule. Reserve a self-contained Atlas manuscript for an exceptional result requiring a substantive additional argument. The Dominating Set rank-width entry illustrates this workflow.
 
 1. Write a self-contained LaTeX proof of the exact exclusion. State the premise, input model and encoding, parameter, restrictions, quantifiers and input-polynomial factor. Give precise sources for imported results and an addressable PDF destination for each theorem.
 2. Compile the PDF and add source and PDF in `proofs/`. In the proposal, reference the proof ID, revision and theorem. Use `provenance: "atlas"` and `status: "proposed"` for a new argument awaiting review. For each directional assessment, report evidence separately for the forward and converse implications.
@@ -147,7 +149,7 @@ For each new bound, write down the hypothesis, the excluded algorithm family, an
 
 Check the size measure and any kernel used in the reverse direction. For ETH, identify the exact formulation on each side: ordinary little-o, little-o with effective convergence, or a positive exponential rate. For a complexity-class hypothesis, check the membership direction as well as hardness. A reduction establishing hardness on a restricted family does not automatically transfer an equivalence for that family to the unrestricted problem.
 
-In the contribution summary, give the resulting assessment or identify the direction for which supporting evidence is still missing. Leave that direction unassessed when the search is inconclusive. If it takes an additional Atlas argument, use the independent proof workflow before recording an established implication.
+In the contribution summary, give the resulting assessment or identify the direction for which supporting evidence is still missing. Leave that direction unassessed when the search is inconclusive. Have each established direction independently checked against the pinned bound. For a short consequence, cite the sources and record the transfer in the directional derivation field. Use the independent manuscript workflow when the additional argument warrants its own proof.
 
 ### Credit in the version history
 

@@ -497,6 +497,51 @@ test('rejects duplicate edition DOI identities despite casing differences', t =>
   assert.match(h.failed('INVALID_ATLAS', 'validate').error.details.join(), /DOI identity collision/);
 });
 
+test('requires a recorded citation for each paper and omits held-only sources from release', t => {
+  const data = fixture();
+  const record = caseRecord();
+  const paper = id => ({
+    id, title: id, authors: ['A. Tester'], preferredEditionId: 'journal',
+    editions: [{ id: 'journal', label: id, kind: 'journal', doi: '10.5678/' + id }]
+  });
+  const source = id => ({ paperId: id, editionId: 'journal', locator: 'Theorem 1', role: 'proof' });
+  data.papers.push(paper('formulation-only'), paper('assessment-only'), paper('held-only'), paper('orphan'));
+  data.formulations = [{
+    id: 'alternate-eth', revision: 1, hypothesisId: 'eth', hypothesisRevision: 1,
+    name: 'Alternate ETH', statement: 'An exact definition.',
+    reference: 'https://doi.org/10.5678/FORMULATION-ONLY#page=2',
+    equivalences: [{
+      caseId: record.id, boundId: 'benchmark', boundRevision: 1,
+      forward: 'Forward argument.', reverse: 'Converse argument.',
+      source: 'https://doi.org/10.5678/assessment-only', locator: 'Theorem 1',
+      reverseSource: 'https://doi.org/10.5678/FORMULATION-ONLY#page=2', reverseLocator: 'Lemma 2'
+    }]
+  }];
+  data.reviews.push({
+    ...review('assessment-review', 'unused'),
+    object: { type: 'bound', caseId: record.id, id: 'benchmark', revision: 1 }
+  });
+  record.bounds[0].assessments.eth.forward = direction('established', [{
+    boundRevision: 1, hypothesisRevision: 1, reviewId: 'assessment-review', source: source('assessment-only')
+  }]);
+  record.bounds.push(bound('held', { includeInRelease: false, sources: [source('held-only')] }));
+  const h = harness(t, data, record);
+  assert.deepEqual(h.failed('INVALID_ATLAS', 'validate').error.details,
+    ['orphan: registered paper has no recorded citation']);
+  data.papers.pop();
+  h.write();
+  assert.deepEqual(h.exportData().papers.map(item => item.id),
+    ['assessment-only', 'formulation-only', 'held-only', 'test-piece']);
+  const released = JSON.parse(h.call('export', '--release'));
+  assert.deepEqual(released.papers.map(item => item.id),
+    ['assessment-only', 'formulation-only', 'test-piece']);
+  assert.equal(released.reverse.papers['assessment-only'].length, 1);
+  assert.deepEqual(released.reverse.papers['formulation-only'], [{
+    type: 'bound', caseId: record.id, id: 'benchmark', revision: 1,
+    paperId: 'formulation-only', editionId: 'journal', locator: 'Lemma 2', role: 'converse implication'
+  }]);
+});
+
 test('prefers registered publications and the latest registered book edition', t => {
   const data = fixture();
   const paper = data.papers[0];

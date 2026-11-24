@@ -181,6 +181,68 @@ function checkHistory(record, context, fail) {
   }
 }
 
+function normalizedSourceUrl(value) {
+  if (!urlOk(value)) return undefined;
+  const url = new URL(value);
+  url.hash = '';
+  return url.hostname === 'doi.org' ? url.href.toLowerCase() : url.href;
+}
+
+function editionSourceUrls(edition) {
+  return new Set([paperUrl(edition), edition.primaryUrl, edition.openUrl]
+    .map(normalizedSourceUrl).filter(Boolean));
+}
+
+function citedPaperIds({ papers, assumptions, formulations, cases }) {
+  const ids = new Set();
+  const addCitation = ref => {
+    if (ref?.paperId) ids.add(ref.paperId);
+  };
+  for (const record of cases) {
+    for (const version of [record, ...(record.history ?? [])]) {
+      for (const bound of version.bounds) {
+        for (const snapshot of [bound, ...(bound.history ?? [])]) {
+          snapshot.sources.forEach(addCitation);
+          for (const { forward, converse } of Object.values(snapshot.assessments ?? {})) {
+            for (const evidence of [...forward.evidence, ...converse.evidence]) addCitation(evidence.source);
+          }
+        }
+      }
+      for (const resolution of version.resolutions) resolution.evidence.forEach(addCitation);
+      for (const recovery of version.recoveryAssessments ?? []) recovery.evidence.forEach(addCitation);
+    }
+  }
+
+  // Some shared hypothesis sources are stored as URLs instead of edition pins.
+  const sourceUrls = new Set();
+  const addUrl = value => {
+    const url = normalizedSourceUrl(value);
+    if (url) sourceUrls.add(url);
+  };
+  for (const assumption of assumptions) {
+    for (const version of [assumption, ...(assumption.history ?? [])]) {
+      addCitation(version.source);
+      addUrl(version.refutation);
+    }
+  }
+  for (const formulation of formulations ?? []) {
+    for (const version of [formulation, ...(formulation.history ?? [])]) {
+      addUrl(version.reference);
+      addUrl(version.refutation);
+      for (const link of version.equivalences ?? []) {
+        addUrl(link.source);
+        addUrl(link.reverseSource);
+        for (const source of link.additionalForwardSources ?? []) addUrl(source.source);
+      }
+    }
+  }
+  for (const paper of papers) {
+    if (ids.has(paper.id)) continue;
+    if (paper.editions.some(edition => [...editionSourceUrls(edition)].some(url => sourceUrls.has(url)))) ids.add(paper.id);
+  }
+  return ids;
+}
+
 // Select the edition before checking its references or generating any backlinks and assets.
 function selectRelease(db) {
   const heldProofs = new Set();
@@ -228,9 +290,14 @@ function selectRelease(db) {
 
 export function validateAtlas(load, { release = false, website = false } = {}) {
   const db = collect(load);
-  if (release || website) selectRelease(db);
   const errors = [];
   const fail = message => errors.push(message);
+  const cited = citedPaperIds(db);
+  for (const paper of db.papers) {
+    if (!cited.has(paper.id)) fail(paper.id + ': registered paper has no recorded citation');
+  }
+  const selectedRelease = release || website;
+  if (selectedRelease) selectRelease(db);
   function checkSourceBasis(basis, hasSource, context) {
     if (basis === undefined) return;
     if (!hasSource || !basis || !['stated','derived'].includes(basis.kind) ||
@@ -808,7 +875,7 @@ export function validateAtlas(load, { release = false, website = false } = {}) {
   }
   if (errors.length) throw new AtlasError('INVALID_ATLAS', 'Atlas validation failed', errors);
 
-  return { db, usable, isCurrent, assessmentState, lookup, freshReview, hashMatches, releaseHypotheses: release && launchAssumptions };
+  return { db, usable, isCurrent, assessmentState, lookup, freshReview, hashMatches, selectedRelease, releaseHypotheses: release && launchAssumptions };
 }
 
 function linkFromKey(key) {
@@ -831,6 +898,34 @@ function addBacklink(map, id, ref) {
   (map[id] ??= []).push(ref);
 }
 
+function formulationBoundSources(result) {
+  const editions = new Map();
+  for (const paper of result.papers) {
+    for (const edition of paper.editions) {
+      for (const url of editionSourceUrls(edition)) {
+        if (editions.has(url)) editions.set(url, undefined);
+        else editions.set(url, { paperId: paper.id, editionId: edition.id });
+      }
+    }
+  }
+  const sources = new Map();
+  for (const formulation of result.formulations ?? []) {
+    for (const link of formulation.equivalences ?? []) {
+      const key = objectKey({ type: 'bound', caseId: link.caseId, id: link.boundId, revision: link.boundRevision });
+      const entry = sources.get(key) ?? [];
+      const add = (url, locator, direction) => {
+        const edition = editions.get(normalizedSourceUrl(url));
+        if (edition) entry.push({ ...edition, locator, direction });
+      };
+      add(link.source, link.locator, 'forward');
+      for (const extra of link.additionalForwardSources ?? []) add(extra.source, extra.locator, 'forward');
+      add(link.reverseSource ?? link.source, link.reverseLocator ?? link.locator, 'converse');
+      sources.set(key, entry);
+    }
+  }
+  return sources;
+}
+
 export function exportAtlas(validation) {
   const { db, usable, isCurrent, assessmentState, freshReview, hashMatches } = validation;
   const result = structuredClone(db);
@@ -851,6 +946,10 @@ export function exportAtlas(validation) {
       }
     }
   }
+  if (validation.selectedRelease) {
+    const cited = citedPaperIds(result);
+    result.papers = result.papers.filter(paper => cited.has(paper.id));
+  }
   delete result.proposalIds;
   for (const record of result.cases) delete record.proposalIds;
   const reverse = {
@@ -859,6 +958,7 @@ export function exportAtlas(validation) {
     proofs: Object.create(null),
     dependencies: Object.create(null)
   };
+  const formulationSources = formulationBoundSources(result);
   for (const kind of ['assumptions', 'cases', 'papers', 'proofs', 'reviews', 'challenges']) result[kind] = ordered(result[kind]);
   result.apiVersion = 'v1';
   for (const paper of result.papers) {
@@ -897,6 +997,7 @@ export function exportAtlas(validation) {
       bound.supported = usable(ref);
       bound.reviewIds = result.reviews.filter(review => objectKey(review.object) === objectKey(ref)).map(review => review.id);
       const evidenceSources = [...bound.sources];
+      const structuredSources = { forward: bound.sources.filter(s => !s.placement || ['statement', 'forward'].includes(s.placement)), converse: [] };
       const proofLinks = new Map(bound.proofs.map(link => [objectKey(proofRef(link)),link]));
       bound.assessments ??= {};
       for (const [hypothesis, assessment] of Object.entries(bound.assessments)) {
@@ -907,8 +1008,15 @@ export function exportAtlas(validation) {
           for (const {proof} of assessment[direction].evidence) {
             if (proof) proofLinks.set(objectKey(proofRef(proof)),proof);
           }
-          evidenceSources.push(...assessment[direction].evidence.flatMap(evidence => evidence.source ? [evidence.source] : []));
+          const sources = assessment[direction].evidence.flatMap(evidence => evidence.source ? [evidence.source] : []);
+          structuredSources[direction].push(...sources);
+          evidenceSources.push(...sources);
         }
+      }
+      for (const { direction, ...source } of formulationSources.get(objectKey(ref)) ?? []) {
+        const duplicate = structuredSources[direction].some(citation =>
+          citation.paperId === source.paperId && citation.editionId === source.editionId);
+        if (!duplicate) evidenceSources.push({ ...source, role: direction + ' implication' });
       }
       for (const premise of bound.assumptions) addBacklink(reverse.assumptions, premise.id, ref);
       const seen = new Set();
