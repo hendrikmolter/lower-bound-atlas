@@ -94,44 +94,60 @@
   },
   "recoveryComparisons": [
     {
+      "formulation": {
+        "id": "uniform-eth",
+        "revision": 4
+      },
       "hypothesis": {
         "id": "kxk",
         "revision": 1
       },
-      "status": "unresolved",
+      "status": "equivalence",
       "target": {
         "id": "cluster-editing-budget-eth",
         "revision": 1
       }
     },
     {
+      "formulation": {
+        "id": "uniform-eth",
+        "revision": 4
+      },
       "hypothesis": {
         "id": "np_qp",
         "revision": 1
       },
-      "status": "unresolved",
+      "status": "equivalence",
       "target": {
         "id": "cluster-editing-budget-eth",
         "revision": 1
       }
     },
     {
+      "formulation": {
+        "id": "uniform-eth",
+        "revision": 4
+      },
       "hypothesis": {
         "id": "sh",
         "revision": 1
       },
-      "status": "unresolved",
+      "status": "equivalence",
       "target": {
         "id": "cluster-editing-budget-eth",
         "revision": 1
       }
     },
     {
+      "formulation": {
+        "id": "uniform-eth",
+        "revision": 4
+      },
       "hypothesis": {
         "id": "w1",
         "revision": 1
       },
-      "status": "unresolved",
+      "status": "equivalence",
       "target": {
         "id": "cluster-editing-budget-eth",
         "revision": 1

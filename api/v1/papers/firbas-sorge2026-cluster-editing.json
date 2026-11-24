@@ -1,0 +1,22 @@
+{
+  "authors": [
+    "Alexander Firbas",
+    "Manuel Sorge"
+  ],
+  "editions": [
+    {
+      "access": "Theorem 1.3 and its proof in §5.2, pp. 25–26.",
+      "doi": "10.48550/arXiv.2611.27956",
+      "id": "v1",
+      "kind": "preprint",
+      "label": "arXiv:2611.27956v1, 20 November 2026",
+      "openUrl": "https://arxiv.org/html/2611.27956v1",
+      "preferredUrl": "https://doi.org/10.48550/arXiv.2611.27956",
+      "primaryUrl": "https://doi.org/10.48550/arXiv.2611.27956"
+    }
+  ],
+  "id": "firbas-sorge2026-cluster-editing",
+  "preferredEditionId": "v1",
+  "preferredUrl": "https://doi.org/10.48550/arXiv.2611.27956",
+  "title": "Cluster Editing in Subexponential Fixed-Parameter Time"
+}

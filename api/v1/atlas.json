@@ -2551,44 +2551,60 @@
       },
       "recoveryComparisons": [
         {
+          "formulation": {
+            "id": "uniform-eth",
+            "revision": 4
+          },
           "hypothesis": {
             "id": "kxk",
             "revision": 1
           },
-          "status": "unresolved",
+          "status": "equivalence",
           "target": {
             "id": "cluster-editing-budget-eth",
             "revision": 1
           }
         },
         {
+          "formulation": {
+            "id": "uniform-eth",
+            "revision": 4
+          },
           "hypothesis": {
             "id": "np_qp",
             "revision": 1
           },
-          "status": "unresolved",
+          "status": "equivalence",
           "target": {
             "id": "cluster-editing-budget-eth",
             "revision": 1
           }
         },
         {
+          "formulation": {
+            "id": "uniform-eth",
+            "revision": 4
+          },
           "hypothesis": {
             "id": "sh",
             "revision": 1
           },
-          "status": "unresolved",
+          "status": "equivalence",
           "target": {
             "id": "cluster-editing-budget-eth",
             "revision": 1
           }
         },
         {
+          "formulation": {
+            "id": "uniform-eth",
+            "revision": 4
+          },
           "hypothesis": {
             "id": "w1",
             "revision": 1
           },
-          "status": "unresolved",
+          "status": "equivalence",
           "target": {
             "id": "cluster-editing-budget-eth",
             "revision": 1
@@ -32974,6 +32990,31 @@
           "locator": "IPZ Corollary 1, Lemma 10 and Theorem 3.",
           "reverse": "A uniform variable-subexponential solver for 3SAT transfers to every fixed width using the fixed-rate IPZ sparsification and width reduction. After normalizing the occurring variables, each branch has O_j(n) clauses for sparsification tolerance 1/j. Its width-three image has O_j(n) variables, and one call costs 2^o(n). Interleave the resulting correct decision algorithms for all j, using a fixed positive share of time for each fixed j. The first response has a single uniform subexponential worst-case clock, since the exponent contribution n/j for arbitrarily large fixed j is available in the analysis.",
           "source": "https://doi.org/10.1006/jcss.2001.1774"
+        },
+        {
+          "additionalForwardSources": [
+            {
+              "locator": "Russell Impagliazzo, Ramamohan Paturi and Francis Zane, Which Problems Have Strongly Exponential Complexity?, Journal of Computer and System Sciences 63 (2001), pp. 512–530. Corollary 1 and its proof, fixed-width decision sparsification.",
+              "source": "https://doi.org/10.1006/jcss.2001.1774"
+            }
+          ],
+          "boundId": "cluster-editing-budget-eth",
+          "boundRevision": 1,
+          "caseId": "cluster-editing-budget",
+          "forward": "IPZ sparsification at rate 1/j gives at most 2^(v/j) formulas with O_j(v) clauses each. The degree-six reduction gives each a budget O_j(v). Interleaving these algorithms over j turns a subexponential Cluster Editing solver into one subexponential 3-SAT solver.",
+          "forwardBasis": {
+            "kind": "derived",
+            "step": "IPZ sparsification at rate 1/j gives at most 2^(v/j) formulas with O_j(v) clauses each. The degree-six reduction gives each a budget O_j(v). Interleaving these algorithms over j turns a subexponential Cluster Editing solver into one subexponential 3-SAT solver."
+          },
+          "locator": "Christian Komusiewicz and Johannes Uhlmann, Cluster Editing with Locally Bounded Modifications, Discrete Applied Mathematics 160 (2012), pp. 2259–2270. Section 2, Theorems 1 and 2 and their 3-SAT reduction.",
+          "reverse": "An m-clause 3-SAT formula has at most 3m occurring variables. If uniform ETH fails, the transfer therefore takes 2^(O(k log(r)/r)+o(k)) times a polynomial in the graph size for each fixed r. Run the transfer for all admissible r in parallel. Every fixed r is eventually admissible, and log(r)/r tends to zero, giving one subexponential algorithm in k, including on graphs of maximum degree six.",
+          "reverseBasis": {
+            "kind": "derived",
+            "step": "An m-clause 3-SAT formula has at most 3m occurring variables. If uniform ETH fails, the transfer therefore takes 2^(O(k log(r)/r)+o(k)) times a polynomial in the graph size for each fixed r. Run the transfer for all admissible r in parallel. Every fixed r is eventually admissible, and log(r)/r tends to zero, giving one subexponential algorithm in k, including on graphs of maximum degree six."
+          },
+          "reverseLocator": "Alexander Firbas and Manuel Sorge, Cluster Editing in Subexponential Fixed-Parameter Time, arXiv:2611.27956v1, Theorem 1.3 and its proof in Section 5.2.",
+          "reverseSource": "https://doi.org/10.48550/arXiv.2611.27956",
+          "source": "https://doi.org/10.1016/j.dam.2012.05.019"
         }
       ],
       "hypothesisId": "eth",
@@ -33904,22 +33945,25 @@
     },
     {
       "authors": [
-        "Vincent Froese"
+        "Alexander Firbas",
+        "Manuel Sorge"
       ],
       "editions": [
         {
-          "access": "Theorem 4.1 in §4.1.1, p. 33, gives the paired binary row-address construction. The later MFCS and JCSS Hitting Set reductions use an unbounded alphabet. Chapter 4 of Froese’s 2018 doctoral thesis treats binary Hamming-distance restrictions using a different construction.",
-          "id": "thesis",
-          "kind": "thesis",
-          "label": "Master’s thesis, Technische Universität Berlin (2012)",
-          "preferredUrl": "https://fpt.akt.tu-berlin.de/publications/theses/MA-vincent-froese.pdf",
-          "primaryUrl": "https://fpt.akt.tu-berlin.de/publications/theses/MA-vincent-froese.pdf"
+          "access": "Theorem 1.3 and its proof in §5.2, pp. 25–26.",
+          "doi": "10.48550/arXiv.2611.27956",
+          "id": "v1",
+          "kind": "preprint",
+          "label": "arXiv:2611.27956v1, 20 November 2026",
+          "openUrl": "https://arxiv.org/html/2611.27956v1",
+          "preferredUrl": "https://doi.org/10.48550/arXiv.2611.27956",
+          "primaryUrl": "https://doi.org/10.48550/arXiv.2611.27956"
         }
       ],
-      "id": "froese2012",
-      "preferredEditionId": "thesis",
-      "preferredUrl": "https://fpt.akt.tu-berlin.de/publications/theses/MA-vincent-froese.pdf",
-      "title": "Combinatorial Feature Selection: Parameterized Algorithms and Complexity"
+      "id": "firbas-sorge2026-cluster-editing",
+      "preferredEditionId": "v1",
+      "preferredUrl": "https://doi.org/10.48550/arXiv.2611.27956",
+      "title": "Cluster Editing in Subexponential Fixed-Parameter Time"
     },
     {
       "authors": [
@@ -39230,6 +39274,18 @@
           "type": "bound"
         }
       ],
+      "firbas-sorge2026-cluster-editing": [
+        {
+          "caseId": "cluster-editing-budget",
+          "editionId": "v1",
+          "id": "cluster-editing-budget-eth",
+          "locator": "Alexander Firbas and Manuel Sorge, Cluster Editing in Subexponential Fixed-Parameter Time, arXiv:2611.27956v1, Theorem 1.3 and its proof in Section 5.2.",
+          "paperId": "firbas-sorge2026-cluster-editing",
+          "revision": 1,
+          "role": "converse implication",
+          "type": "bound"
+        }
+      ],
       "galby-et-al2024-directed-steiner": [
         {
           "caseId": "directed-steiner-tree-terminals",
@@ -39503,6 +39559,16 @@
           "type": "bound"
         },
         {
+          "caseId": "cluster-editing-budget",
+          "editionId": "journal",
+          "id": "cluster-editing-budget-eth",
+          "locator": "Russell Impagliazzo, Ramamohan Paturi and Francis Zane, Which Problems Have Strongly Exponential Complexity?, Journal of Computer and System Sciences 63 (2001), pp. 512–530. Corollary 1 and its proof, fixed-width decision sparsification.",
+          "paperId": "ipz2001",
+          "revision": 1,
+          "role": "forward implication",
+          "type": "bound"
+        },
+        {
           "caseId": "connected-vertex-cover-budget",
           "editionId": "journal",
           "id": "connected-vertex-cover-budget-eth",
@@ -39547,6 +39613,16 @@
           "type": "bound"
         },
         {
+          "caseId": "fixed-width-sat-formula-size",
+          "editionId": "journal",
+          "id": "fixed-width-sat-formula-size-eth",
+          "locator": "Impagliazzo, Paturi and Zane, JCSS 63 (2001), pp. 519–524, Corollary 1 and its proof (fixed-width decision sparsification), and Lemma 10 (width reduction).",
+          "paperId": "ipz2001",
+          "revision": 1,
+          "role": "converse implication",
+          "type": "bound"
+        },
+        {
           "caseId": "fixed-width-sat-variables",
           "editionId": "journal",
           "id": "fixed-width-sat-variables-eth",
@@ -39555,6 +39631,16 @@
           "placement": "statement",
           "revision": 1,
           "role": "fixed-width comparison",
+          "type": "bound"
+        },
+        {
+          "caseId": "fixed-width-sat-variables",
+          "editionId": "journal",
+          "id": "fixed-width-sat-variables-eth",
+          "locator": "IPZ Corollary 1, Lemma 10 and Theorem 3.",
+          "paperId": "ipz2001",
+          "revision": 1,
+          "role": "converse implication",
           "type": "bound"
         },
         {
@@ -39621,6 +39707,16 @@
           "placement": "forward",
           "revision": 1,
           "role": "decision sparsification",
+          "type": "bound"
+        },
+        {
+          "caseId": "three-sat-clauses",
+          "editionId": "journal",
+          "id": "three-sat-clauses-eth",
+          "locator": "Impagliazzo, Paturi and Zane, JCSS 63 (2001), pp. 519–524, Corollary 1 and its proof (fixed-width decision sparsification), and Lemma 10 (width reduction).",
+          "paperId": "ipz2001",
+          "revision": 1,
+          "role": "converse implication",
           "type": "bound"
         },
         {
@@ -40362,6 +40458,26 @@
           "placement": "statement",
           "revision": 1,
           "role": "conditional lower bound",
+          "type": "bound"
+        },
+        {
+          "caseId": "three-sat-variables",
+          "editionId": "bulletin",
+          "id": "three-sat-variables-eth",
+          "locator": "Lokshtanov, Marx and Saurabh, Bulletin of the EATCS 105 (2011), §2, ETH in the single-algorithm subexponential convention.",
+          "paperId": "lms2011",
+          "revision": 1,
+          "role": "forward implication",
+          "type": "bound"
+        },
+        {
+          "caseId": "three-sat-variables",
+          "editionId": "bulletin",
+          "id": "three-sat-variables-eth",
+          "locator": "Lokshtanov, Marx and Saurabh, Bulletin of the EATCS 105 (2011), §2, ETH in the single-algorithm subexponential convention.",
+          "paperId": "lms2011",
+          "revision": 1,
+          "role": "converse implication",
           "type": "bound"
         },
         {
@@ -43161,6 +43277,6 @@
       "verdict": "verified"
     }
   ],
-  "revision": 6,
+  "revision": 7,
   "schemaVersion": 1
 }

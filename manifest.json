@@ -423,7 +423,7 @@
     "api/v1/papers/fgls2010-clique-width.json",
     "api/v1/papers/fgls2014-clique-width.json",
     "api/v1/papers/fhp2020.json",
-    "api/v1/papers/froese2012.json",
+    "api/v1/papers/firbas-sorge2026-cluster-editing.json",
     "api/v1/papers/galby-et-al2024-directed-steiner.json",
     "api/v1/papers/ganian-dehaan-kanj-szeider2020.json",
     "api/v1/papers/garey-johnson-stockmeyer1976.json",
@@ -2140,9 +2140,9 @@
     "papers/fhp2020/index.html",
     "papers/fhp2020/proceedings.bib",
     "papers/fhp2020/proceedings.txt",
-    "papers/froese2012/index.html",
-    "papers/froese2012/thesis.bib",
-    "papers/froese2012/thesis.txt",
+    "papers/firbas-sorge2026-cluster-editing/index.html",
+    "papers/firbas-sorge2026-cluster-editing/v1.bib",
+    "papers/firbas-sorge2026-cluster-editing/v1.txt",
     "papers/galby-et-al2024-directed-steiner/index.html",
     "papers/galby-et-al2024-directed-steiner/proceedings.bib",
     "papers/galby-et-al2024-directed-steiner/proceedings.txt",
@@ -2400,8 +2400,8 @@
   ],
   "generator": "lower-bound-atlas/website",
   "preview": false,
-  "registryRevision": 6,
+  "registryRevision": 7,
   "releaseValidated": true,
   "schemaVersion": 1,
-  "sourceCommit": "e4901f536a9f9534d753f58f36d02137bb74ecb1"
+  "sourceCommit": "758c51b1f411688aa1ce28747a8fe7369c489d9a"
 }
