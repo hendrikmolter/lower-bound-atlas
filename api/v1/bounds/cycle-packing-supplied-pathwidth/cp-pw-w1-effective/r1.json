@@ -14,8 +14,8 @@
             "hypothesisRevision": 1,
             "reviewId": "cp-pw-w1-effective-molter-source-review",
             "source": {
-              "editionId": "arxiv-v1",
-              "locator": "Theorem 10, Section 13",
+              "editionId": "arxiv-v2",
+              "locator": "Theorem 5, §§8 and 8.2",
               "paperId": "molter2026-running-time",
               "placement": "forward",
               "role": "forward implication"
@@ -39,10 +39,7 @@
   "exponentDomain": "computable-integer",
   "id": "cp-pw-w1-effective",
   "inputConditions": [
-    "connected-bipartite-degree-six",
-    "equal-pathwidth",
-    "large-girth",
-    "optimal-path-decomposition"
+    "connected-bipartite"
   ],
   "inputFactor": "N^(O(1))",
   "proofs": [],
@@ -61,13 +58,12 @@
   "runtimeSymbols": [
     "p",
     "N",
-    "n",
-    "γ"
+    "n"
   ],
   "sources": [
     {
-      "editionId": "arxiv-v1",
-      "locator": "Theorem 10, Section 13",
+      "editionId": "arxiv-v2",
+      "locator": "Theorem 5, §§8 and 8.2",
       "paperId": "molter2026-running-time",
       "placement": "statement",
       "role": "running-time lower bound"

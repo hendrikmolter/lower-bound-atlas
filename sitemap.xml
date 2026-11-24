@@ -430,7 +430,6 @@
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/problems/weighted-normalized-circuit-satisfiability/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/problems/weighted-tardy-jobs/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/proofs/dominating-set-order-sh/</loc></url>
-  <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/proofs/dominating-set-rankwidth/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/reviews/clique-budget-w1-equivalence-review/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/reviews/clique-order-eth-equivalence-review/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/reviews/clique-order-sh-source-audit-r3/</loc></url>
@@ -439,8 +438,11 @@
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/reviews/cp-pw-w1-effective-molter-source-review/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/reviews/cp-tw-w1-effective-molter-source-review/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/reviews/cs-kxk-balanced-literature-audit/</loc></url>
+  <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/reviews/dominating-set-linear-rank-width-w1-effective-molter-source-review/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/reviews/dominating-set-order-sh-review/</loc></url>
-  <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/reviews/dominating-set-rankwidth-review/</loc></url>
+  <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/reviews/dominating-set-rank-width-w1-effective-molter-source-review/</loc></url>
+  <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/reviews/dominating-set-supplied-linear-layout-w1-effective-molter-source-review/</loc></url>
+  <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/reviews/dominating-set-supplied-rank-decomposition-w1-effective-molter-source-review/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/reviews/ds-order-eth-equivalence-review/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/reviews/ds-order-sh-fixed-power-source-audit-r2/</loc></url>
   <url><loc>https://hendrikmolter.github.io/lower-bound-atlas/reviews/ecc-budget-np-qp-literature-audit/</loc></url>

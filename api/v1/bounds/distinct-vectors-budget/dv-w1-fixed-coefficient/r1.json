@@ -58,11 +58,18 @@
   ],
   "sources": [
     {
-      "editionId": "arxiv-v1",
-      "locator": "Theorem 7, Section 9",
+      "editionId": "arxiv-v2",
+      "locator": "§3, Consequences of Lin’s Set Cover reduction, pp. 11–12",
       "paperId": "molter2026-running-time",
       "placement": "statement",
-      "role": "running-time lower bound"
+      "role": "fixed-coefficient consequence of the effective lower bound"
+    },
+    {
+      "editionId": "proceedings",
+      "locator": "Lemma 14 and proof, §3.4, pp. 81:11–81:12",
+      "paperId": "lin2019",
+      "placement": "statement",
+      "role": "Set Cover construction with a logarithmic-size universe"
     }
   ],
   "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Distinct Vectors within the stated running time.",

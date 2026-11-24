@@ -14,14 +14,18 @@
             "hypothesisRevision": 1,
             "reviewId": "cp-tw-w1-effective-molter-source-review",
             "source": {
-              "editionId": "arxiv-v1",
-              "locator": "Theorem 10, Section 13",
+              "editionId": "arxiv-v2",
+              "locator": "Theorem 5, §§8 and 8.2, and §1.4 following Table 2",
               "paperId": "molter2026-running-time",
               "placement": "forward",
               "role": "forward implication"
             }
           }
         ],
+        "sourceBasis": {
+          "kind": "derived",
+          "step": "Discard the supplied path decomposition. On the reduction outputs the intrinsic treewidth t is at most the supplied width p. The maximum of an effectively little-o exponent over widths up to p is still effectively little-o at the same scale, and the graph-only input is no larger than the supplied-decomposition input."
+        },
         "status": "established"
       },
       "hypothesisRevision": 1,
@@ -39,9 +43,7 @@
   "exponentDomain": "computable-integer",
   "id": "cp-tw-w1-effective",
   "inputConditions": [
-    "connected-bipartite-degree-six",
-    "equal-pathwidth",
-    "large-girth"
+    "connected-bipartite"
   ],
   "inputFactor": "N^(O(1))",
   "proofs": [],
@@ -60,13 +62,16 @@
   "runtimeSymbols": [
     "t",
     "N",
-    "n",
-    "γ"
+    "n"
   ],
+  "sourceBasis": {
+    "kind": "derived",
+    "step": "Discard the supplied path decomposition. On the reduction outputs the intrinsic treewidth t is at most the supplied width p. The maximum of an effectively little-o exponent over widths up to p is still effectively little-o at the same scale, and the graph-only input is no larger than the supplied-decomposition input."
+  },
   "sources": [
     {
-      "editionId": "arxiv-v1",
-      "locator": "Theorem 10, Section 13",
+      "editionId": "arxiv-v2",
+      "locator": "Theorem 5, §§8 and 8.2, and §1.4 following Table 2",
       "paperId": "molter2026-running-time",
       "placement": "statement",
       "role": "running-time lower bound"

@@ -62,11 +62,11 @@
                 "hypothesisRevision": 1,
                 "reviewId": "independent-set-supplied-linear-layout-sh-degree-source-review",
                 "source": {
-                  "editionId": "arxiv-v1",
-                  "locator": "Sections 7.1–7.3",
-                  "paperId": "molter2026-running-time",
+                  "editionId": "proceedings",
+                  "locator": "§4, Lemmas 4.8–4.10 and 4.12 and proof of Theorem 4.11, pp. 11:9–11:11",
+                  "paperId": "bkn2023-rankwidth",
                   "placement": "forward",
-                  "role": "reduction to triangle-free Independent Set with optimal width certificates"
+                  "role": "3-SAT reduction and explicit width witness"
                 }
               },
               {
@@ -97,10 +97,7 @@
       ],
       "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
       "id": "independent-set-supplied-linear-layout-sh-degree",
-      "inputConditions": [
-        "triangle-free",
-        "optimal-certificate"
-      ],
+      "inputConditions": [],
       "inputFactor": "N^(O(1))",
       "proofs": [],
       "provenance": "literature",
@@ -108,9 +105,9 @@
         "For every fixed 0<ε<2."
       ],
       "reader": {
-        "label": "Fixed-power bound below squared width on triangle-free graphs",
+        "label": "Fixed-power bound below squared width",
         "revision": 1,
-        "title": "Fixed-power bound below squared width on triangle-free graphs under SH"
+        "title": "Fixed-power bound below squared width under SH"
       },
       "reviewIds": [
         "independent-set-supplied-linear-layout-sh-degree-source-review"
@@ -124,15 +121,15 @@
       ],
       "sourceBasis": {
         "kind": "derived",
-        "step": "On a 3-CNF formula with s variables plus clauses, Molter’s reduction produces a triangle-free graph of width O(√s) in 2^{O(√s log(s+2))} time. The supplied certificate is optimal. Substituting the width bound gives a fixed power saving in the exponent for 3-SAT."
+        "step": "On a 3-CNF formula with s variables plus clauses, the reduction and false-twin expansion take 2^{O(√s)} time up to a polynomial factor and construct a vertex order of width O(√s). Substituting this width gives a fixed power saving in the exponent for 3-SAT."
       },
       "sources": [
         {
-          "editionId": "arxiv-v1",
-          "locator": "Sections 7.1–7.3",
-          "paperId": "molter2026-running-time",
+          "editionId": "proceedings",
+          "locator": "§4, Lemmas 4.8–4.10 and 4.12 and proof of Theorem 4.11, pp. 11:9–11:11",
+          "paperId": "bkn2023-rankwidth",
           "placement": "forward",
-          "role": "reduction to triangle-free Independent Set with optimal width certificates"
+          "role": "3-SAT reduction and explicit width witness"
         },
         {
           "editionId": "v2",
@@ -162,8 +159,8 @@
                 "hypothesisRevision": 1,
                 "reviewId": "independent-set-supplied-linear-layout-w1-effective-molter-source-review",
                 "source": {
-                  "editionId": "arxiv-v1",
-                  "locator": "Theorem 5, Section 7",
+                  "editionId": "arxiv-v2",
+                  "locator": "Theorem 2 and §§5.1–5.3",
                   "paperId": "molter2026-running-time",
                   "placement": "forward",
                   "role": "forward implication"
@@ -186,18 +183,15 @@
       "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
       "exponentDomain": "computable-integer",
       "id": "independent-set-supplied-linear-layout-w1-effective",
-      "inputConditions": [
-        "triangle-free",
-        "optimal-certificate"
-      ],
+      "inputConditions": [],
       "inputFactor": "N^(O(1))",
       "proofs": [],
       "provenance": "literature",
       "qualifications": [],
       "reader": {
-        "label": "Effective quadratic-width bound on triangle-free graphs",
+        "label": "Effective quadratic-width bound",
         "revision": 1,
-        "title": "Effective quadratic-width bound on triangle-free graphs under FPT ≠ W[1]"
+        "title": "Effective quadratic-width bound under FPT ≠ W[1]"
       },
       "reviewIds": [
         "independent-set-supplied-linear-layout-w1-effective-molter-source-review"
@@ -208,10 +202,14 @@
         "p",
         "N"
       ],
+      "sourceBasis": {
+        "kind": "derived",
+        "step": "Supply the order constructed in Lemma 3 after the false-twin expansion. The squared width is still O(k log n + 1) for a source Clique instance on n vertices with requested size k. The same effective transfer applies."
+      },
       "sources": [
         {
-          "editionId": "arxiv-v1",
-          "locator": "Theorem 5, Section 7",
+          "editionId": "arxiv-v2",
+          "locator": "Theorem 2 and §§5.1–5.3",
           "paperId": "molter2026-running-time",
           "placement": "statement",
           "role": "running-time lower bound"
@@ -225,18 +223,7 @@
   "coverage": "Historical ETH and independently reviewed recoveries.",
   "encoding": "A finite, simple, undirected, unweighted graph G and a nonnegative integer k.",
   "id": "independent-set-supplied-linear-layout",
-  "inputConditions": [
-    {
-      "condition": "The input graph has no triangle.",
-      "id": "triangle-free",
-      "level": "bound"
-    },
-    {
-      "condition": "The supplied vertex order has minimum width.",
-      "id": "optimal-certificate",
-      "level": "bound"
-    }
-  ],
+  "inputConditions": [],
   "kind": "lower-bound-case",
   "parameter": "The maximum cut rank over prefixes of the supplied vertex order, denoted by p. Cut rank is computed over the binary field.",
   "problemDefinitionHash": "6fe0108aa6b3df98d29b1ee8450fbb8ed4348f500e86e17718dd16c389a351d5",
@@ -270,12 +257,12 @@
   },
   "recoveryAssessments": [
     {
-      "comparison": "The recovered clock is the same squared-width scale with a computable exponent and modulus. The restricted instances are valid inputs of the historical task and the normalized full graph encoding, including any supplied certificate, is polynomial in its order.",
+      "comparison": "The clock has the historical squared-width scale with a computable exponent and modulus. The normalized graph encoding, including any supplied certificate, is polynomial in the graph order.",
       "effective": true,
       "evidence": [
         {
-          "editionId": "arxiv-v1",
-          "locator": "Theorem 5, Section 7",
+          "editionId": "arxiv-v2",
+          "locator": "Theorem 2 and §§5.1–5.3",
           "paperId": "molter2026-running-time",
           "placement": "statement",
           "role": "running-time lower bound"
@@ -298,15 +285,15 @@
       "targetScale": "p^2"
     },
     {
-      "comparison": "For every fixed positive exponent saving below two, the recovery excludes the corresponding power of the same width. The restricted instances are valid inputs of the historical task and the normalized full graph encoding, including any supplied certificate, is polynomial in its order.",
+      "comparison": "For every fixed positive exponent saving below two, the recovery excludes the corresponding power of the same width. The normalized graph encoding, including any supplied certificate, is polynomial in the graph order.",
       "effective": false,
       "evidence": [
         {
-          "editionId": "arxiv-v1",
-          "locator": "Sections 7.1–7.3",
-          "paperId": "molter2026-running-time",
+          "editionId": "proceedings",
+          "locator": "§4, Lemmas 4.8–4.10 and 4.12 and proof of Theorem 4.11, pp. 11:9–11:11",
+          "paperId": "bkn2023-rankwidth",
           "placement": "forward",
-          "role": "reduction to triangle-free Independent Set with optimal width certificates"
+          "role": "3-SAT reduction and explicit width witness"
         },
         {
           "editionId": "v2",
@@ -357,15 +344,15 @@
       }
     },
     {
-      "comparison": "For every fixed positive exponent saving below two, the recovery excludes the corresponding power of the same width. The restricted instances are valid inputs of the historical task and the normalized full graph encoding, including any supplied certificate, is polynomial in its order.",
+      "comparison": "For every fixed positive exponent saving below two, the recovery excludes the corresponding power of the same width. The normalized graph encoding, including any supplied certificate, is polynomial in the graph order.",
       "effective": false,
       "evidence": [
         {
-          "editionId": "arxiv-v1",
-          "locator": "Sections 7.1–7.3",
-          "paperId": "molter2026-running-time",
+          "editionId": "proceedings",
+          "locator": "§4, Lemmas 4.8–4.10 and 4.12 and proof of Theorem 4.11, pp. 11:9–11:11",
+          "paperId": "bkn2023-rankwidth",
           "placement": "forward",
-          "role": "reduction to triangle-free Independent Set with optimal width certificates"
+          "role": "3-SAT reduction and explicit width witness"
         },
         {
           "editionId": "v2",
@@ -393,12 +380,12 @@
       "targetScale": "p^2"
     },
     {
-      "comparison": "The recovered clock is the same squared-width scale with a computable exponent and modulus. The restricted instances are valid inputs of the historical task and the normalized full graph encoding, including any supplied certificate, is polynomial in its order.",
+      "comparison": "The clock has the historical squared-width scale with a computable exponent and modulus. The normalized graph encoding, including any supplied certificate, is polynomial in the graph order.",
       "effective": true,
       "evidence": [
         {
-          "editionId": "arxiv-v1",
-          "locator": "Theorem 5, Section 7",
+          "editionId": "arxiv-v2",
+          "locator": "Theorem 2 and §§5.1–5.3",
           "paperId": "molter2026-running-time",
           "placement": "statement",
           "role": "running-time lower bound"

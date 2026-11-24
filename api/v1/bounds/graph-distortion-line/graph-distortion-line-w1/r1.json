@@ -14,8 +14,8 @@
             "hypothesisRevision": 1,
             "reviewId": "graph-distortion-line-w1-molter-source-review",
             "source": {
-              "editionId": "arxiv-v1",
-              "locator": "Theorem 12, Section 15",
+              "editionId": "arxiv-v2",
+              "locator": "Lemma 12 and Theorem 7, §9",
               "paperId": "molter2026-running-time",
               "placement": "forward",
               "role": "forward implication"
@@ -61,8 +61,8 @@
   ],
   "sources": [
     {
-      "editionId": "arxiv-v1",
-      "locator": "Theorem 12, Section 15",
+      "editionId": "arxiv-v2",
+      "locator": "Lemma 12 and Theorem 7, §9",
       "paperId": "molter2026-running-time",
       "placement": "statement",
       "role": "running-time lower bound"

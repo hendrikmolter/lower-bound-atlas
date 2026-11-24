@@ -12,8 +12,7 @@
   "id": "vdp-tw-w1",
   "inputConditions": [
     "connected-bipartite-subcubic",
-    "distinct-leaf-endpoints",
-    "equal-widths"
+    "distinct-leaf-endpoints"
   ],
   "inputFactor": "B^(O(1))",
   "proofs": [],
@@ -30,10 +29,14 @@
     "t",
     "B"
   ],
+  "sourceBasis": {
+    "kind": "derived",
+    "step": "Discard the supplied path decomposition. On the reduction outputs the intrinsic treewidth t is at most the supplied width p. The maximum of an effectively little-o exponent over widths up to p is still effectively little-o at the same scale, and the graph-only input is no larger than the supplied-decomposition input."
+  },
   "sources": [
     {
-      "editionId": "arxiv-v1",
-      "locator": "Theorem 9, Section 12",
+      "editionId": "arxiv-v2",
+      "locator": "Theorem 4, §§7 and 7.4, and §1.4 following Table 2",
       "paperId": "molter2026-running-time",
       "placement": "statement",
       "role": "running-time lower bound"

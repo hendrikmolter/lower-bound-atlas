@@ -87,14 +87,18 @@
                 "hypothesisRevision": 1,
                 "reviewId": "cp-tw-w1-effective-molter-source-review",
                 "source": {
-                  "editionId": "arxiv-v1",
-                  "locator": "Theorem 10, Section 13",
+                  "editionId": "arxiv-v2",
+                  "locator": "Theorem 5, §§8 and 8.2, and §1.4 following Table 2",
                   "paperId": "molter2026-running-time",
                   "placement": "forward",
                   "role": "forward implication"
                 }
               }
             ],
+            "sourceBasis": {
+              "kind": "derived",
+              "step": "Discard the supplied path decomposition. On the reduction outputs the intrinsic treewidth t is at most the supplied width p. The maximum of an effectively little-o exponent over widths up to p is still effectively little-o at the same scale, and the graph-only input is no larger than the supplied-decomposition input."
+            },
             "status": "established"
           },
           "hypothesisRevision": 1,
@@ -112,9 +116,7 @@
       "exponentDomain": "computable-integer",
       "id": "cp-tw-w1-effective",
       "inputConditions": [
-        "connected-bipartite-degree-six",
-        "equal-pathwidth",
-        "large-girth"
+        "connected-bipartite"
       ],
       "inputFactor": "N^(O(1))",
       "proofs": [],
@@ -133,13 +135,16 @@
       "runtimeSymbols": [
         "t",
         "N",
-        "n",
-        "γ"
+        "n"
       ],
+      "sourceBasis": {
+        "kind": "derived",
+        "step": "Discard the supplied path decomposition. On the reduction outputs the intrinsic treewidth t is at most the supplied width p. The maximum of an effectively little-o exponent over widths up to p is still effectively little-o at the same scale, and the graph-only input is no larger than the supplied-decomposition input."
+      },
       "sources": [
         {
-          "editionId": "arxiv-v1",
-          "locator": "Theorem 10, Section 13",
+          "editionId": "arxiv-v2",
+          "locator": "Theorem 5, §§8 and 8.2, and §1.4 following Table 2",
           "paperId": "molter2026-running-time",
           "placement": "statement",
           "role": "running-time lower bound"
@@ -155,18 +160,8 @@
   "id": "cycle-packing-treewidth",
   "inputConditions": [
     {
-      "condition": "The graph is connected and bipartite with maximum degree at most six.",
-      "id": "connected-bipartite-degree-six",
-      "level": "bound"
-    },
-    {
-      "condition": "Treewidth equals pathwidth.",
-      "id": "equal-pathwidth",
-      "level": "bound"
-    },
-    {
-      "condition": "For every fixed γ with 0 < γ < 1, the bound holds even when the girth is at least n^(1−γ).",
-      "id": "large-girth",
+      "condition": "The graph is connected and bipartite.",
+      "id": "connected-bipartite",
       "level": "bound"
     }
   ],
@@ -194,21 +189,17 @@
       {
         "meaning": "complete binary input length, including a supplied certificate if present",
         "symbol": "N"
-      },
-      {
-        "meaning": "fixed constant in the girth promise",
-        "symbol": "γ"
       }
     ]
   },
   "recoveryAssessments": [
     {
-      "comparison": "The exclusion reaches the same width scale with a computable exponent and convergence. The more restricted graphs suffice to exclude a general solver, and normalized explicit graph inputs and the listed certificates have polynomial length.",
+      "comparison": "The exclusion reaches the historical treewidth exponent scale with a computable exponent and convergence modulus. The connected bipartite reduction outputs also suffice against a solver for unrestricted graphs. Their explicit graph encodings and thresholds have length polynomial in graph order.",
       "effective": true,
       "evidence": [
         {
-          "editionId": "arxiv-v1",
-          "locator": "Theorem 10, Section 13",
+          "editionId": "arxiv-v2",
+          "locator": "Theorem 5, §§8 and 8.2, and §1.4 following Table 2",
           "paperId": "molter2026-running-time",
           "placement": "statement",
           "role": "running-time lower bound"
@@ -266,12 +257,12 @@
       }
     },
     {
-      "comparison": "The exclusion reaches the same width scale with a computable exponent and convergence. The more restricted graphs suffice to exclude a general solver, and normalized explicit graph inputs and the listed certificates have polynomial length.",
+      "comparison": "The exclusion reaches the historical treewidth exponent scale with a computable exponent and convergence modulus. The connected bipartite reduction outputs also suffice against a solver for unrestricted graphs. Their explicit graph encodings and thresholds have length polynomial in graph order.",
       "effective": true,
       "evidence": [
         {
-          "editionId": "arxiv-v1",
-          "locator": "Theorem 10, Section 13",
+          "editionId": "arxiv-v2",
+          "locator": "Theorem 5, §§8 and 8.2, and §1.4 following Table 2",
           "paperId": "molter2026-running-time",
           "placement": "statement",
           "role": "running-time lower bound"

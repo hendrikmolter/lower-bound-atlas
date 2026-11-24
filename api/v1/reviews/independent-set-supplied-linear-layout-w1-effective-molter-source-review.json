@@ -1,7 +1,7 @@
 {
   "applicable": true,
-  "date": "2026-11-20",
-  "evidence": "evidence/molter2026-source-scope.md",
+  "date": "2026-11-24",
+  "evidence": "evidence/independent-set-rankwidth-sh-source-scope.md",
   "id": "independent-set-supplied-linear-layout-w1-effective-molter-source-review",
   "label": "Agent verified",
   "object": {
@@ -10,8 +10,8 @@
     "revision": 1,
     "type": "bound"
   },
-  "reviewer": "Codex source audit",
-  "scope": "Forward implication. Checked the exact task, parameter, input restrictions, and effective running time against Theorem 5, Section 7.",
+  "reviewer": "Atlas source audit",
+  "scope": "Checked the effective quadratic exclusion for general graphs and the recorded width interface against Theorem 2 and §5.",
   "stale": false,
   "type": "agent",
   "verdict": "verified"

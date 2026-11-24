@@ -14,8 +14,8 @@
             "hypothesisRevision": 1,
             "reviewId": "independent-set-linear-rank-width-w1-effective-molter-source-review",
             "source": {
-              "editionId": "arxiv-v1",
-              "locator": "Theorem 5, Section 7",
+              "editionId": "arxiv-v2",
+              "locator": "Theorem 2 and §§5.1–5.3",
               "paperId": "molter2026-running-time",
               "placement": "forward",
               "role": "forward implication"
@@ -38,17 +38,15 @@
   "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
   "exponentDomain": "computable-integer",
   "id": "independent-set-linear-rank-width-w1-effective",
-  "inputConditions": [
-    "triangle-free"
-  ],
+  "inputConditions": [],
   "inputFactor": "N^(O(1))",
   "proofs": [],
   "provenance": "literature",
   "qualifications": [],
   "reader": {
-    "label": "Effective quadratic-width bound on triangle-free graphs",
+    "label": "Effective quadratic-width bound",
     "revision": 1,
-    "title": "Effective quadratic-width bound on triangle-free graphs under FPT ≠ W[1]"
+    "title": "Effective quadratic-width bound under FPT ≠ W[1]"
   },
   "reviewIds": [
     "independent-set-linear-rank-width-w1-effective-molter-source-review"
@@ -61,8 +59,8 @@
   ],
   "sources": [
     {
-      "editionId": "arxiv-v1",
-      "locator": "Theorem 5, Section 7",
+      "editionId": "arxiv-v2",
+      "locator": "Theorem 2 and §§5.1–5.3",
       "paperId": "molter2026-running-time",
       "placement": "statement",
       "role": "running-time lower bound"

@@ -12,12 +12,14 @@
           {
             "boundRevision": 1,
             "hypothesisRevision": 1,
-            "proof": {
-              "proofId": "dominating-set-rankwidth",
-              "revision": 1,
-              "theorem": "dominating-set-rankwidth"
-            },
-            "reviewId": "dominating-set-rankwidth-review"
+            "reviewId": "dominating-set-linear-rank-width-w1-effective-molter-source-review",
+            "source": {
+              "editionId": "arxiv-v2",
+              "locator": "Table 1 and §3, “Dominating Set with a supplied vertex order”",
+              "paperId": "molter2026-running-time",
+              "placement": "forward",
+              "role": "effective running-time lower bound"
+            }
           }
         ],
         "status": "established"
@@ -40,32 +42,31 @@
     "monopolar"
   ],
   "inputFactor": "N^(O(1))",
-  "proofs": [
-    {
-      "proofId": "dominating-set-rankwidth",
-      "revision": 1,
-      "theorem": "dominating-set-rankwidth"
-    }
-  ],
-  "provenance": "atlas",
+  "proofs": [],
+  "provenance": "literature",
   "qualifications": [],
   "reader": {
     "label": "Effective quadratic-width bound on monopolar graphs",
     "revision": 1,
     "title": "Effective quadratic-width bound on monopolar graphs under FPT ≠ W[1]"
   },
-  "reviewIds": [],
+  "reviewIds": [
+    "dominating-set-linear-rank-width-w1-effective-molter-source-review"
+  ],
   "revision": 1,
   "runtime": "2^(o_eff(p^2)) N^(O(1))",
   "runtimeSymbols": [
     "p",
     "N"
   ],
-  "sourceBasis": {
-    "kind": "derived",
-    "step": "Liu and Meng’s construction gives a monopolar graph whose squared width is at most a constant times the number of variables in a compact Multicolored Clique encoding. The effective cutoff then gives a fixed-parameter algorithm for Multicolored Clique."
-  },
   "sources": [
+    {
+      "editionId": "arxiv-v2",
+      "locator": "Table 1 and §3, “Dominating Set with a supplied vertex order”",
+      "paperId": "molter2026-running-time",
+      "placement": "forward",
+      "role": "effective running-time lower bound"
+    },
     {
       "editionId": "v1",
       "locator": "Section 3.2, Lemmas 3.5–3.6, and Appendix C, proof of Theorem C.1",

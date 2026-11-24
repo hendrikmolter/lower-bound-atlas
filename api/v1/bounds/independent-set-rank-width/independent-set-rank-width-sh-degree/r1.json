@@ -14,23 +14,11 @@
             "hypothesisRevision": 1,
             "reviewId": "independent-set-rank-width-sh-degree-source-review",
             "source": {
-              "editionId": "arxiv-v1",
-              "locator": "Sections 7.1–7.3",
-              "paperId": "molter2026-running-time",
-              "placement": "forward",
-              "role": "reduction to triangle-free Independent Set with optimal width certificates"
-            }
-          },
-          {
-            "boundRevision": 1,
-            "hypothesisRevision": 1,
-            "reviewId": "independent-set-rank-width-sh-degree-source-review",
-            "source": {
               "editionId": "v2",
-              "locator": "Lemma 2.1, pp. 5–6, and Theorem 3.1, p. 8",
+              "locator": "Table 1 and footnote e, p. 4",
               "paperId": "sh26",
               "placement": "forward",
-              "role": "fixed-power lower bound transfer from 3-SAT under SH"
+              "role": "forward implication"
             }
           }
         ],
@@ -49,9 +37,7 @@
   ],
   "effectiveModel": "Uniform deterministic bit algorithm with worst-case running time.",
   "id": "independent-set-rank-width-sh-degree",
-  "inputConditions": [
-    "triangle-free"
-  ],
+  "inputConditions": [],
   "inputFactor": "N^(O(1))",
   "proofs": [],
   "provenance": "literature",
@@ -59,9 +45,9 @@
     "For every fixed 0<ε<2."
   ],
   "reader": {
-    "label": "Fixed-power bound below squared width on triangle-free graphs",
+    "label": "Fixed-power bound below squared width",
     "revision": 1,
-    "title": "Fixed-power bound below squared width on triangle-free graphs under SH"
+    "title": "Fixed-power bound below squared width under SH"
   },
   "reviewIds": [
     "independent-set-rank-width-sh-degree-source-review"
@@ -73,24 +59,13 @@
     "ε",
     "N"
   ],
-  "sourceBasis": {
-    "kind": "derived",
-    "step": "On a 3-CNF formula with s variables plus clauses, Molter’s reduction produces a triangle-free graph of width O(√s) in 2^{O(√s log(s+2))} time. Substituting the width bound gives a fixed power saving in the exponent for 3-SAT."
-  },
   "sources": [
     {
-      "editionId": "arxiv-v1",
-      "locator": "Sections 7.1–7.3",
-      "paperId": "molter2026-running-time",
-      "placement": "forward",
-      "role": "reduction to triangle-free Independent Set with optimal width certificates"
-    },
-    {
       "editionId": "v2",
-      "locator": "Lemma 2.1, pp. 5–6, and Theorem 3.1, p. 8",
+      "locator": "Table 1 and footnote e, p. 4",
       "paperId": "sh26",
-      "placement": "forward",
-      "role": "fixed-power lower bound transfer from 3-SAT under SH"
+      "placement": "statement",
+      "role": "running-time lower bound"
     }
   ],
   "statement": "Under SH, no deterministic algorithm decides Independent Set within the stated running time.",

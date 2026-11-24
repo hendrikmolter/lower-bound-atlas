@@ -1,6 +1,6 @@
 {
   "applicable": true,
-  "date": "2026-11-20",
+  "date": "2026-11-24",
   "evidence": "evidence/molter2026-source-scope.md",
   "id": "graph-distortion-line-w1-molter-source-review",
   "label": "Agent verified",
@@ -10,8 +10,8 @@
     "revision": 1,
     "type": "bound"
   },
-  "reviewer": "Codex source audit",
-  "scope": "Forward implication. Checked the exact task, parameter, input restrictions, and effective running time against Theorem 12, Section 15.",
+  "reviewer": "Atlas source audit",
+  "scope": "Checked the forward implication, including its running time, parameter and input restrictions, against Lemma 12 and Theorem 7, §9.",
   "stale": false,
   "type": "agent",
   "verdict": "verified"

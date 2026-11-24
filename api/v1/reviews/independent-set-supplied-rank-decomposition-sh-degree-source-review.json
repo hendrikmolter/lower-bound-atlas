@@ -1,6 +1,6 @@
 {
   "applicable": true,
-  "date": "2026-11-22",
+  "date": "2026-11-24",
   "evidence": "evidence/independent-set-rankwidth-sh-source-scope.md",
   "id": "independent-set-supplied-rank-decomposition-sh-degree-source-review",
   "label": "Agent verified",
@@ -10,8 +10,8 @@
     "revision": 1,
     "type": "bound"
   },
-  "reviewer": "Codex source audit",
-  "scope": "Forward implication from SH. Checked the 3-SAT exponent transfer, the triangle-free restriction, and the applicable width interface.",
+  "reviewer": "Atlas source audit",
+  "scope": "Checked the fixed-power SH bound for general graphs and the recorded width interface against the SH paper and its cited construction.",
   "stale": false,
   "type": "agent",
   "verdict": "verified"

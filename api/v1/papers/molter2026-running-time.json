@@ -4,18 +4,18 @@
   ],
   "editions": [
     {
-      "access": "Version 1 full text inspected.",
+      "access": "Version 2 full text inspected.",
       "doi": "10.48550/arXiv.2611.26080",
-      "id": "arxiv-v1",
+      "id": "arxiv-v2",
       "kind": "preprint",
-      "label": "arXiv:2611.26080v1, 19 November 2026",
-      "openUrl": "https://arxiv.org/html/2611.26080v1",
+      "label": "arXiv:2611.26080v2, 22 November 2026",
+      "openUrl": "https://arxiv.org/html/2611.26080v2",
       "preferredUrl": "https://doi.org/10.48550/arXiv.2611.26080",
-      "primaryUrl": "https://arxiv.org/abs/2611.26080v1"
+      "primaryUrl": "https://arxiv.org/abs/2611.26080v2"
     }
   ],
   "id": "molter2026-running-time",
-  "preferredEditionId": "arxiv-v1",
+  "preferredEditionId": "arxiv-v2",
   "preferredUrl": "https://doi.org/10.48550/arXiv.2611.26080",
   "title": "Running-Time Lower Bounds under FPT ≠ W[1]"
 }

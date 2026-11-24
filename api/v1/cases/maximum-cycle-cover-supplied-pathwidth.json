@@ -218,7 +218,7 @@
       "exponentDomain": "nonnegative",
       "id": "maximum-cycle-cover-supplied-pathwidth-w1",
       "inputConditions": [
-        "connected-bipartite-degree-eight"
+        "connected"
       ],
       "inputFactor": "B^(O(1))",
       "proofs": [],
@@ -239,8 +239,8 @@
       ],
       "sources": [
         {
-          "editionId": "arxiv-v1",
-          "locator": "Theorem 11, Section 14",
+          "editionId": "arxiv-v2",
+          "locator": "Theorem 6, §8.3",
           "paperId": "molter2026-running-time",
           "placement": "statement",
           "role": "running-time lower bound"
@@ -251,13 +251,13 @@
       "supported": true
     }
   ],
-  "coverage": "Published lower bounds for supplied pathwidth.",
+  "coverage": "Literature bounds for supplied pathwidth.",
   "encoding": "A finite simple undirected graph G and a nonnegative integer r in binary.",
   "id": "maximum-cycle-cover-supplied-pathwidth",
   "inputConditions": [
     {
-      "condition": "The graph is connected, bipartite, and has maximum degree at most eight.",
-      "id": "connected-bipartite-degree-eight",
+      "condition": "The graph is connected.",
+      "id": "connected",
       "level": "bound"
     }
   ],
@@ -286,12 +286,12 @@
   },
   "recoveryAssessments": [
     {
-      "comparison": "The exclusion reaches the historical supplied-pathwidth exponent scale with computable convergence. The hard inputs are connected and bipartite and have maximum degree eight.",
+      "comparison": "The exclusion reaches the historical supplied-width exponent scale with a computable exponent and convergence modulus. Both polynomial factors count the complete input, including the path decomposition. The connected reduction outputs suffice against a solver for unrestricted graphs.",
       "effective": true,
       "evidence": [
         {
-          "editionId": "arxiv-v1",
-          "locator": "Theorem 11, Section 14",
+          "editionId": "arxiv-v2",
+          "locator": "Theorem 6, §8.3",
           "paperId": "molter2026-running-time",
           "placement": "statement",
           "role": "running-time lower bound"
@@ -439,12 +439,12 @@
       }
     },
     {
-      "comparison": "The exclusion reaches the historical supplied-pathwidth exponent scale with computable convergence. The hard inputs are connected and bipartite and have maximum degree eight.",
+      "comparison": "The exclusion reaches the historical supplied-width exponent scale with a computable exponent and convergence modulus. Both polynomial factors count the complete input, including the path decomposition. The connected reduction outputs suffice against a solver for unrestricted graphs.",
       "effective": true,
       "evidence": [
         {
-          "editionId": "arxiv-v1",
-          "locator": "Theorem 11, Section 14",
+          "editionId": "arxiv-v2",
+          "locator": "Theorem 6, §8.3",
           "paperId": "molter2026-running-time",
           "placement": "statement",
           "role": "running-time lower bound"

@@ -1,6 +1,6 @@
 {
   "applicable": true,
-  "date": "2026-11-20",
+  "date": "2026-11-24",
   "evidence": "evidence/molter2026-source-scope.md",
   "id": "ilp-equations-w1-effective-molter-source-review",
   "label": "Agent verified",
@@ -10,8 +10,8 @@
     "revision": 2,
     "type": "bound"
   },
-  "reviewer": "Codex source audit",
-  "scope": "Forward implication. Checked the exact task, parameter, input restrictions, and effective running time against Theorem 8, Section 10.",
+  "reviewer": "Atlas source audit",
+  "scope": "Checked the forward implication, including its running time, parameter and input restrictions, against §3, Consequences of Lin’s Set Cover reduction, p. 12, and Lemma 1, p. 10.",
   "stale": false,
   "type": "agent",
   "verdict": "verified"

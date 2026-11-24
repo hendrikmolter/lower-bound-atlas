@@ -136,11 +136,18 @@
       ],
       "sources": [
         {
-          "editionId": "arxiv-v1",
-          "locator": "Theorem 7, Section 9",
+          "editionId": "arxiv-v2",
+          "locator": "§3, Consequences of Lin’s Set Cover reduction, pp. 11–12",
           "paperId": "molter2026-running-time",
           "placement": "statement",
-          "role": "running-time lower bound"
+          "role": "fixed-coefficient consequence of the effective lower bound"
+        },
+        {
+          "editionId": "proceedings",
+          "locator": "Lemma 14 and proof, §3.4, pp. 81:11–81:12",
+          "paperId": "lin2019",
+          "placement": "statement",
+          "role": "Set Cover construction with a logarithmic-size universe"
         }
       ],
       "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Distinct Vectors within the stated running time.",
@@ -190,15 +197,22 @@
   },
   "recoveryAssessments": [
     {
-      "comparison": "For any fixed c below 1/2, choose γ strictly between max(0,c) and 1. The W[1] bound then excludes the full historical running-time family for the same binary matrices and column budgets.",
+      "comparison": "The same binary matrix task is covered for every fixed 0 < γ < 1. For any historical coefficient c < 1/2, choose γ strictly between max(0,c) and 1 to exclude its running time.",
       "effective": false,
       "evidence": [
         {
-          "editionId": "arxiv-v1",
-          "locator": "Theorem 7, Section 9",
+          "editionId": "arxiv-v2",
+          "locator": "§3, Consequences of Lin’s Set Cover reduction, pp. 11–12",
           "paperId": "molter2026-running-time",
           "placement": "statement",
-          "role": "running-time lower bound"
+          "role": "fixed-coefficient consequence of the effective lower bound"
+        },
+        {
+          "editionId": "proceedings",
+          "locator": "Lemma 14 and proof, §3.4, pp. 81:11–81:12",
+          "paperId": "lin2019",
+          "placement": "statement",
+          "role": "Set Cover construction with a logarithmic-size universe"
         },
         {
           "editionId": "journal",
@@ -260,15 +274,22 @@
       }
     },
     {
-      "comparison": "For any fixed c below 1/2, choose γ strictly between max(0,c) and 1. The W[1] bound then excludes the full historical running-time family for the same binary matrices and column budgets.",
+      "comparison": "The same binary matrix task is covered for every fixed 0 < γ < 1. For any historical coefficient c < 1/2, choose γ strictly between max(0,c) and 1 to exclude its running time.",
       "effective": false,
       "evidence": [
         {
-          "editionId": "arxiv-v1",
-          "locator": "Theorem 7, Section 9",
+          "editionId": "arxiv-v2",
+          "locator": "§3, Consequences of Lin’s Set Cover reduction, pp. 11–12",
           "paperId": "molter2026-running-time",
           "placement": "statement",
-          "role": "running-time lower bound"
+          "role": "fixed-coefficient consequence of the effective lower bound"
+        },
+        {
+          "editionId": "proceedings",
+          "locator": "Lemma 14 and proof, §3.4, pp. 81:11–81:12",
+          "paperId": "lin2019",
+          "placement": "statement",
+          "role": "Set Cover construction with a logarithmic-size universe"
         },
         {
           "editionId": "journal",

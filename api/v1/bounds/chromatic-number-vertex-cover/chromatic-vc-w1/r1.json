@@ -27,8 +27,8 @@
   ],
   "sources": [
     {
-      "editionId": "arxiv-v1",
-      "locator": "Theorem 1, Section 3",
+      "editionId": "arxiv-v2",
+      "locator": "Theorem 1, §4, pp. 14–16",
       "paperId": "molter2026-running-time",
       "placement": "statement",
       "role": "running-time lower bound"

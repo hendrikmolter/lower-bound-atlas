@@ -149,8 +149,8 @@
                 "hypothesisRevision": 1,
                 "reviewId": "graph-distortion-line-w1-molter-source-review",
                 "source": {
-                  "editionId": "arxiv-v1",
-                  "locator": "Theorem 12, Section 15",
+                  "editionId": "arxiv-v2",
+                  "locator": "Lemma 12 and Theorem 7, §9",
                   "paperId": "molter2026-running-time",
                   "placement": "forward",
                   "role": "forward implication"
@@ -196,8 +196,8 @@
       ],
       "sources": [
         {
-          "editionId": "arxiv-v1",
-          "locator": "Theorem 12, Section 15",
+          "editionId": "arxiv-v2",
+          "locator": "Lemma 12 and Theorem 7, §9",
           "paperId": "molter2026-running-time",
           "placement": "statement",
           "role": "running-time lower bound"
@@ -251,12 +251,12 @@
   },
   "recoveryAssessments": [
     {
-      "comparison": "Both bounds use the d log₂ d scale. A solver on the full integer-line problem also handles connected bipartite hard instances. The graph encoding on the reduction images has length polynomial in graph order; the remaining gap is the computable convergence modulus.",
+      "comparison": "Both bounds use the d log₂ d scale. The recovered bound holds on connected bipartite graphs for each of the integer and real target lines, so it applies to the historical integer-line task. The graph encoding on the reduction outputs has length polynomial in graph order. The remaining exponent gap is the computable convergence modulus.",
       "effective": true,
       "evidence": [
         {
-          "editionId": "arxiv-v1",
-          "locator": "Theorem 12, Section 15",
+          "editionId": "arxiv-v2",
+          "locator": "Lemma 12 and Theorem 7, §9",
           "paperId": "molter2026-running-time",
           "placement": "statement",
           "role": "running-time lower bound"
@@ -374,12 +374,12 @@
       }
     },
     {
-      "comparison": "Both bounds use the d log₂ d scale. A solver on the full integer-line problem also handles connected bipartite hard instances. The graph encoding on the reduction images has length polynomial in graph order; the remaining gap is the computable convergence modulus.",
+      "comparison": "Both bounds use the d log₂ d scale. The recovered bound holds on connected bipartite graphs for each of the integer and real target lines, so it applies to the historical integer-line task. The graph encoding on the reduction outputs has length polynomial in graph order. The remaining exponent gap is the computable convergence modulus.",
       "effective": true,
       "evidence": [
         {
-          "editionId": "arxiv-v1",
-          "locator": "Theorem 12, Section 15",
+          "editionId": "arxiv-v2",
+          "locator": "Lemma 12 and Theorem 7, §9",
           "paperId": "molter2026-running-time",
           "placement": "statement",
           "role": "running-time lower bound"
