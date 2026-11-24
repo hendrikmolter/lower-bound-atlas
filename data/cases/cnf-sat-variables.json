@@ -1,0 +1,153 @@
+{
+  "id": "cnf-sat-variables",
+  "kind": "lower-bound-case",
+  "revision": 1,
+  "title": "CNF-SAT by number of variables",
+  "problemId": "cnf-sat",
+  "problemRevision": 1,
+  "problemDefinitionHash": "54cf10990fe9340228a42aed97a04ed82b03121133efa71b568e030acd07d735",
+  "aliases": [],
+  "variant": "Boolean CNF satisfiability",
+  "task": "Does the formula have a satisfying assignment?",
+  "encoding": "An explicitly listed Boolean CNF formula with no fixed bound on clause width.",
+  "parameter": "The number of occurring variables n.",
+  "coverage": "Historical ETH and effective bounds under FPT ≠ W[1].",
+  "inputConditions": [],
+  "resolutions": [],
+  "reader": {
+    "parameterLabel": "Number of variables",
+    "parameter": "The number of occurring variables n.",
+    "parameterSymbols": [
+      {
+        "symbol": "n",
+        "meaning": "number of occurring variables"
+      }
+    ],
+    "symbols": [
+      {
+        "symbol": "L",
+        "meaning": "complete binary formula input length"
+      }
+    ]
+  },
+  "bounds": [
+    {
+      "revision": 1,
+      "status": "established",
+      "provenance": "literature",
+      "assumptionOperator": "all",
+      "proofs": [],
+      "qualifications": [],
+      "inputConditions": [],
+      "id": "cnf-sat-variables-eth",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "runtime": "2^(o(n)) L^(O(1))",
+      "inputFactor": "L^(O(1))",
+      "runtimeSymbols": [
+        "n",
+        "L"
+      ],
+      "statement": "Under ETH, no deterministic algorithm decides CNF-SAT within the stated running time.",
+      "reader": {
+        "revision": 1,
+        "label": "Historical subexponential-time exclusion"
+      },
+      "sources": [
+        {
+          "paperId": "ipz2001",
+          "editionId": "journal",
+          "locator": "Introduction and Corollary 1",
+          "role": "historical 3SAT hypothesis by number of variables",
+          "placement": "statement"
+        }
+      ],
+      "sourceBasis": {
+        "kind": "derived",
+        "step": "A CNF-SAT algorithm with the stated running time applies in particular to width-three formulas with the same variable count."
+      }
+    },
+    {
+      "revision": 1,
+      "status": "established",
+      "provenance": "literature",
+      "assumptionOperator": "all",
+      "proofs": [],
+      "qualifications": [],
+      "inputConditions": [],
+      "id": "cnf-sat-variables-w1-effective",
+      "assumptions": [
+        {
+          "id": "w1",
+          "revision": 1
+        }
+      ],
+      "runtime": "2^(o_eff(n)) L^(O(1))",
+      "inputFactor": "L^(O(1))",
+      "runtimeSymbols": [
+        "n",
+        "L"
+      ],
+      "exponentDomain": "nonnegative",
+      "statement": "Under FPT ≠ W[1], no deterministic algorithm decides CNF-SAT within the stated running time.",
+      "reader": {
+        "revision": 1,
+        "label": "Effective subexponential-time exclusion"
+      },
+      "sources": [
+        {
+          "paperId": "cai-juedes2003",
+          "editionId": "journal",
+          "locator": "Lemma 3.1 and Corollary 3.1, §3, pp. 796–799",
+          "role": "paired-variable SAT reduction",
+          "placement": "statement"
+        }
+      ],
+      "sourceBasis": {
+        "kind": "derived",
+        "step": "For each paired variable pair in the Cai–Juedes construction, two CNF clauses enforce exactly one true variable without adding variables. The CNF has O(h log r) variables for source weight h and r source variables. A computable exponent cutoff then bounds CNF-SAT time by a fixed power of r times a computable function of h, which would decide the W[1]-hard source problem in FPT time."
+      }
+    }
+  ],
+  "recoveryAssessments": [
+    {
+      "target": {
+        "id": "cnf-sat-variables-eth",
+        "revision": 1
+      },
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "recovery": {
+        "id": "cnf-sat-variables-w1-effective",
+        "revision": 1
+      },
+      "scale": "full",
+      "effective": true,
+      "targetScale": "n",
+      "recoveredScale": "n",
+      "comparison": "Both exclusions use the number of occurring variables. The recovery requires a computable convergence cutoff and uses the same polynomial factor in the complete input length.",
+      "evidence": [
+        {
+          "paperId": "cai-juedes2003",
+          "editionId": "journal",
+          "locator": "Lemma 3.1 and Corollary 3.1, §3, pp. 796–799",
+          "role": "paired-variable SAT reduction",
+          "placement": "statement"
+        },
+        {
+          "paperId": "ipz2001",
+          "editionId": "journal",
+          "locator": "Introduction and Corollary 1",
+          "role": "historical 3SAT hypothesis by number of variables",
+          "placement": "statement"
+        }
+      ]
+    }
+  ]
+}

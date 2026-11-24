@@ -213,12 +213,109 @@
       ],
       "statement": "Under the k × k Clique Hypothesis, no deterministic algorithm solves List Coloring within the stated running time.",
       "status": "established"
+    },
+    {
+      "id": "list-coloring-treewidth-fixed-q-eth",
+      "revision": 1,
+      "statement": "Under ETH, no deterministic algorithm decides List Coloring within the stated running time.",
+      "runtime": "2^(o(t)) n^(O(1))",
+      "inputFactor": "n^(O(1))",
+      "runtimeSymbols": [
+        "t",
+        "n"
+      ],
+      "qualifications": [
+        "For every fixed integer q ≥ 3."
+      ],
+      "inputConditions": [
+        "fixed-common-palette"
+      ],
+      "status": "established",
+      "provenance": "literature",
+      "assumptions": [
+        {
+          "id": "eth",
+          "revision": 1
+        }
+      ],
+      "assumptionOperator": "all",
+      "sources": [
+        {
+          "paperId": "lms2011",
+          "editionId": "bulletin",
+          "locator": "Theorem 3.2, PDF p. 12",
+          "role": "3-Coloring graph-order lower bound",
+          "placement": "statement"
+        }
+      ],
+      "proofs": [],
+      "reader": {
+        "revision": 1,
+        "label": "Subexponential bound in treewidth · Fixed common palette",
+        "title": "Subexponential bound in treewidth under ETH · Fixed common palette"
+      },
+      "sourceBasis": {
+        "kind": "derived",
+        "step": "Give every vertex of a 3-Coloring instance the list {1, 2, 3}, a subset of the fixed palette [q]. The graph and treewidth are unchanged. A treewidth-subexponential algorithm would also be subexponential in the number of vertices, since treewidth is at most the graph order."
+      }
+    },
+    {
+      "id": "list-coloring-treewidth-fixed-q-w1",
+      "revision": 1,
+      "statement": "Under FPT ≠ W[1], no deterministic algorithm decides List Coloring within the stated running time.",
+      "runtime": "2^(o_eff(t)) B^(O(1))",
+      "inputFactor": "B^(O(1))",
+      "runtimeSymbols": [
+        "t",
+        "B"
+      ],
+      "qualifications": [
+        "For every fixed integer q ≥ 3."
+      ],
+      "inputConditions": [
+        "fixed-common-palette"
+      ],
+      "status": "established",
+      "provenance": "literature",
+      "assumptions": [
+        {
+          "id": "w1",
+          "revision": 1
+        }
+      ],
+      "assumptionOperator": "all",
+      "sources": [
+        {
+          "paperId": "bodlaender2025-linear-structure",
+          "editionId": "journal",
+          "locator": "§4.3, Lemma 4 and Claim 12",
+          "role": "fixed-palette logarithmic-pathwidth hardness",
+          "placement": "statement"
+        }
+      ],
+      "proofs": [],
+      "reader": {
+        "revision": 1,
+        "label": "Effective subexponential bound in treewidth · Fixed common palette",
+        "title": "Effective subexponential bound in treewidth under FPT ≠ W[1] · Fixed common palette"
+      },
+      "exponentDomain": "nonnegative",
+      "sourceBasis": {
+        "kind": "derived",
+        "step": "The logarithmic-pathwidth hardness gives a fixed-parameter reduction from Clique whose output pathwidth is at most a computable parameter factor times the logarithm of the graph order. Treewidth is at most that pathwidth. The effective cutoff would turn the claimed solver into a fixed-parameter algorithm for Clique."
+      }
     }
   ],
   "coverage": "Published lower bounds for treewidth.",
   "encoding": "A finite simple undirected graph G with one explicitly listed finite color set per vertex.",
   "id": "list-coloring-treewidth",
-  "inputConditions": [],
+  "inputConditions": [
+    {
+      "id": "fixed-common-palette",
+      "condition": "The available palette is [q]. Every vertex list is a subset of this same palette.",
+      "level": "bound"
+    }
+  ],
   "kind": "lower-bound-case",
   "parameter": "Treewidth.",
   "problemDefinitionHash": "bcd7d72dee1b5ef94ec8fd4bdd1b96b9f5569fe6c596223c8a03f29c3aab5feb",
@@ -238,11 +335,15 @@
       {
         "meaning": "complete explicit binary input length",
         "symbol": "B"
+      },
+      {
+        "symbol": "n",
+        "meaning": "number of vertices of G"
       }
     ]
   },
   "resolutions": [],
-  "revision": 4,
+  "revision": 5,
   "task": "Can each vertex be assigned a color from its list so that adjacent vertices receive distinct colors?",
   "title": "List Coloring by treewidth",
   "variant": "List Coloring",
@@ -261,6 +362,51 @@
         "revision": 1
       },
       "reason": "Ordinary parameterized hardness excludes a fixed polynomial input exponent. The historical result excludes a growing little-o exponent."
+    },
+    {
+      "target": {
+        "id": "list-coloring-treewidth-fixed-q-eth",
+        "revision": 1
+      },
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "recovery": {
+        "id": "list-coloring-treewidth-w1",
+        "revision": 1
+      },
+      "reason": "The exclusion concerns arbitrary palettes. A solver for a fixed common palette need not solve those instances."
+    },
+    {
+      "target": {
+        "id": "list-coloring-treewidth-fixed-q-eth",
+        "revision": 1
+      },
+      "hypothesis": {
+        "id": "kxk",
+        "revision": 1
+      },
+      "recovery": {
+        "id": "list-coloring-treewidth-kxk",
+        "revision": 1
+      },
+      "reason": "The exclusion concerns arbitrary palettes. A solver for a fixed common palette need not solve those instances."
+    },
+    {
+      "target": {
+        "id": "list-coloring-treewidth-eth",
+        "revision": 1
+      },
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "recovery": {
+        "id": "list-coloring-treewidth-fixed-q-w1",
+        "revision": 1
+      },
+      "reason": "The fixed-palette result excludes a subexponential parameter factor with a fixed polynomial input exponent. The historical result quantifies over little-o input exponents and arbitrary computable parameter factors."
     }
   ],
   "recoveryAssessments": [
@@ -303,6 +449,346 @@
           "paperId": "szeider2026",
           "placement": "statement",
           "role": "benchmark"
+        }
+      ]
+    },
+    {
+      "target": {
+        "id": "list-coloring-treewidth-fixed-q-eth",
+        "revision": 1
+      },
+      "hypothesis": {
+        "id": "w1",
+        "revision": 1
+      },
+      "recovery": {
+        "id": "list-coloring-treewidth-fixed-q-w1",
+        "revision": 1
+      },
+      "scale": "full",
+      "effective": true,
+      "targetScale": "t",
+      "recoveredScale": "t",
+      "comparison": "The bound reaches the historical treewidth exponent scale on the same inputs, with a computable cutoff for each prescribed saving.",
+      "evidence": [
+        {
+          "paperId": "bodlaender2025-linear-structure",
+          "editionId": "journal",
+          "locator": "§4.3, Lemma 4 and Claim 12",
+          "role": "fixed-palette logarithmic-pathwidth hardness",
+          "placement": "statement"
+        }
+      ]
+    }
+  ],
+  "history": [
+    {
+      "aliases": [
+        "lms-listcolor-tw"
+      ],
+      "bounds": [
+        {
+          "assessments": {
+            "eth": {
+              "converse": {
+                "evidence": [],
+                "status": "unknown"
+              },
+              "forward": {
+                "evidence": [],
+                "status": "unassessed"
+              },
+              "hypothesisRevision": 1
+            },
+            "sh": {
+              "converse": {
+                "evidence": [],
+                "status": "unknown"
+              },
+              "forward": {
+                "evidence": [],
+                "status": "unassessed"
+              },
+              "hypothesisRevision": 1
+            }
+          },
+          "assumptionOperator": "all",
+          "assumptions": [
+            {
+              "id": "eth",
+              "revision": 1
+            }
+          ],
+          "id": "list-coloring-treewidth-eth",
+          "inputConditions": [],
+          "inputFactor": "B^(o(t))",
+          "proofs": [],
+          "provenance": "literature",
+          "qualifications": [
+            "The parameter factor f is an arbitrary computable function."
+          ],
+          "reader": {
+            "label": "Exponent in treewidth",
+            "revision": 1,
+            "title": "Exponent in treewidth under ETH"
+          },
+          "revision": 1,
+          "runtime": "f(t) B^(o(t))",
+          "runtimeSymbols": [
+            "t",
+            "B"
+          ],
+          "sources": [
+            {
+              "paperId": "fellows-et-al2011-colorful-treewidth",
+              "editionId": "journal",
+              "locator": "§2.1, Theorem 1 and its reduction, pp. 145–146",
+              "placement": "forward",
+              "role": "Original polynomial-time reduction from Multicolored Clique, with treewidth at most the number of colors"
+            },
+            {
+              "editionId": "book",
+              "locator": "Theorem 14.29, pp. 492–493 (planar hard instances)",
+              "paperId": "cygan2015",
+              "placement": "statement",
+              "role": "benchmark"
+            },
+            {
+              "editionId": "bulletin",
+              "locator": "Theorem 6.5",
+              "paperId": "lms2011",
+              "placement": "statement",
+              "role": "benchmark"
+            }
+          ],
+          "statement": "Under ETH, no deterministic algorithm solves List Coloring within the stated running time.",
+          "status": "established"
+        },
+        {
+          "assessments": {
+            "eth": {
+              "converse": {
+                "evidence": [],
+                "status": "unknown"
+              },
+              "forward": {
+                "evidence": [],
+                "status": "unassessed"
+              },
+              "hypothesisRevision": 1
+            },
+            "sh": {
+              "converse": {
+                "evidence": [],
+                "status": "unknown"
+              },
+              "forward": {
+                "evidence": [],
+                "status": "unassessed"
+              },
+              "hypothesisRevision": 1
+            }
+          },
+          "assumptionOperator": "all",
+          "assumptions": [
+            {
+              "id": "w1",
+              "revision": 1
+            }
+          ],
+          "hardnessBaseline": "W[1]",
+          "id": "list-coloring-treewidth-w1",
+          "inputConditions": [],
+          "inputFactor": "B^(O(1))",
+          "proofs": [],
+          "provenance": "literature",
+          "qualifications": [
+            "The parameter factor f is an arbitrary computable function."
+          ],
+          "reader": {
+            "label": "Fixed-parameter tractability",
+            "revision": 1,
+            "title": "Fixed-parameter tractability under FPT ≠ W[1]"
+          },
+          "revision": 1,
+          "runtime": "f(t) B^(O(1))",
+          "runtimeSymbols": [
+            "t",
+            "B"
+          ],
+          "sources": [
+            {
+              "paperId": "fellows-et-al2011-colorful-treewidth",
+              "editionId": "journal",
+              "locator": "§2.1, Theorem 1 and its reduction, pp. 145–146",
+              "placement": "statement",
+              "role": "W[1]-hardness"
+            }
+          ],
+          "statement": "Under FPT ≠ W[1], no deterministic algorithm solves List Coloring within the stated running time.",
+          "status": "established"
+        },
+        {
+          "assessments": {
+            "eth": {
+              "converse": {
+                "evidence": [],
+                "status": "unknown"
+              },
+              "forward": {
+                "evidence": [],
+                "status": "unassessed"
+              },
+              "hypothesisRevision": 1
+            },
+            "sh": {
+              "converse": {
+                "evidence": [],
+                "status": "unknown"
+              },
+              "forward": {
+                "evidence": [],
+                "status": "unassessed"
+              },
+              "hypothesisRevision": 1
+            }
+          },
+          "assumptionOperator": "all",
+          "assumptions": [
+            {
+              "id": "kxk",
+              "revision": 1
+            }
+          ],
+          "id": "list-coloring-treewidth-kxk",
+          "inputConditions": [],
+          "inputFactor": "B^(o(t))",
+          "proofs": [],
+          "provenance": "literature",
+          "qualifications": [
+            "The parameter factor f is an arbitrary computable function."
+          ],
+          "reader": {
+            "label": "Exponent in treewidth",
+            "revision": 1,
+            "title": "Exponent in treewidth under the k × k Clique Hypothesis"
+          },
+          "revision": 1,
+          "runtime": "f(t) B^(o(t))",
+          "runtimeSymbols": [
+            "t",
+            "B"
+          ],
+          "sources": [
+            {
+              "editionId": "v3",
+              "locator": "§3, Proposition 1, pp. 3–4, and Table 1, second row, p. 5",
+              "paperId": "szeider2026",
+              "placement": "statement",
+              "role": "benchmark"
+            },
+            {
+              "paperId": "cygan2015",
+              "editionId": "book",
+              "locator": "Theorem 14.29, pp. 492–493",
+              "role": "underlying reduction",
+              "placement": "statement"
+            }
+          ],
+          "statement": "Under the k × k Clique Hypothesis, no deterministic algorithm solves List Coloring within the stated running time.",
+          "status": "established"
+        }
+      ],
+      "coverage": "Published lower bounds for treewidth.",
+      "encoding": "A finite simple undirected graph G with one explicitly listed finite color set per vertex.",
+      "id": "list-coloring-treewidth",
+      "inputConditions": [],
+      "kind": "lower-bound-case",
+      "parameter": "Treewidth.",
+      "problemDefinitionHash": "bcd7d72dee1b5ef94ec8fd4bdd1b96b9f5569fe6c596223c8a03f29c3aab5feb",
+      "problemId": "list-coloring",
+      "problemRevision": 1,
+      "reader": {
+        "anchor": "treewidth",
+        "parameter": "Treewidth.",
+        "parameterLabel": "Treewidth",
+        "parameterSymbols": [
+          {
+            "meaning": "treewidth of the input graph",
+            "symbol": "t"
+          }
+        ],
+        "symbols": [
+          {
+            "meaning": "complete explicit binary input length",
+            "symbol": "B"
+          }
+        ]
+      },
+      "resolutions": [],
+      "revision": 4,
+      "task": "Can each vertex be assigned a color from its list so that adjacent vertices receive distinct colors?",
+      "title": "List Coloring by treewidth",
+      "variant": "List Coloring",
+      "recoveryDispositions": [
+        {
+          "target": {
+            "id": "list-coloring-treewidth-eth",
+            "revision": 1
+          },
+          "hypothesis": {
+            "id": "w1",
+            "revision": 1
+          },
+          "recovery": {
+            "id": "list-coloring-treewidth-w1",
+            "revision": 1
+          },
+          "reason": "Ordinary parameterized hardness excludes a fixed polynomial input exponent. The historical result excludes a growing little-o exponent."
+        }
+      ],
+      "recoveryAssessments": [
+        {
+          "target": {
+            "id": "list-coloring-treewidth-eth",
+            "revision": 1
+          },
+          "hypothesis": {
+            "id": "kxk",
+            "revision": 1
+          },
+          "recovery": {
+            "id": "list-coloring-treewidth-kxk",
+            "revision": 1
+          },
+          "scale": "full",
+          "effective": false,
+          "targetScale": "B^(o(t))",
+          "recoveredScale": "B^(o(t))",
+          "comparison": "The published transfer gives the same rate for the same problem and explicit input convention, including arbitrary computable parameter prefactors.",
+          "evidence": [
+            {
+              "editionId": "book",
+              "locator": "Theorem 14.29, pp. 492–493 (planar hard instances)",
+              "paperId": "cygan2015",
+              "placement": "statement",
+              "role": "benchmark"
+            },
+            {
+              "editionId": "bulletin",
+              "locator": "Theorem 6.5",
+              "paperId": "lms2011",
+              "placement": "statement",
+              "role": "benchmark"
+            },
+            {
+              "editionId": "v3",
+              "locator": "§3, Proposition 1, pp. 3–4, and Table 1, second row, p. 5",
+              "paperId": "szeider2026",
+              "placement": "statement",
+              "role": "benchmark"
+            }
+          ]
         }
       ]
     }

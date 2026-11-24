@@ -144,17 +144,10 @@
       "status": "established",
       "sources": [
         {
-          "paperId": "molter2026-running-time",
-          "editionId": "arxiv-v2",
-          "locator": "§3, Consequences of Lin’s Set Cover reduction, p. 12, and Lemma 1, p. 10",
-          "role": "effective lower bound for binary incidence matrices with an all-ones right-hand side",
-          "placement": "statement"
-        },
-        {
           "paperId": "lin2019",
           "editionId": "proceedings",
           "locator": "Lemma 14 and proof, §3.4, pp. 81:11–81:12",
-          "role": "Set Cover construction used for the exact-cover count",
+          "role": "Set Cover construction underlying the exact-cover encoding",
           "placement": "statement"
         }
       ],
@@ -170,14 +163,18 @@
                 "hypothesisRevision": 1,
                 "reviewId": "ilp-equations-w1-effective-molter-source-review",
                 "source": {
-                  "paperId": "molter2026-running-time",
-                  "editionId": "arxiv-v2",
-                  "locator": "§3, Consequences of Lin’s Set Cover reduction, p. 12, and Lemma 1, p. 10",
-                  "role": "forward implication",
+                  "paperId": "lin2019",
+                  "editionId": "proceedings",
+                  "locator": "Lemma 14 and proof, §3.4, pp. 81:11–81:12",
+                  "role": "Set Cover construction underlying the exact-cover encoding",
                   "placement": "forward"
                 }
               }
-            ]
+            ],
+            "sourceBasis": {
+              "kind": "derived",
+              "step": "In Lin’s construction, the universe size equals the Set Cover budget times the common set size. A cover within budget is therefore an exact cover, and each exact cover meets the budget. The binary incidence matrix encodes exact cover as Ax=1 with a nonzero column for every set. Its O(h³ log n) rows allow the effective exponent cutoff to give a fixed-parameter algorithm for Multicolored Clique."
+            }
           },
           "converse": {
             "status": "unassessed",
@@ -190,7 +187,11 @@
         "label": "Effective sublinear exponent with an all-ones right-hand side",
         "title": "All-ones right-hand-side integer programming under FPT ≠ W[1]"
       },
-      "exponentDomain": "nonnegative"
+      "exponentDomain": "nonnegative",
+      "sourceBasis": {
+        "kind": "derived",
+        "step": "In Lin’s construction, the universe size equals the Set Cover budget times the common set size. A cover within budget is therefore an exact cover, and each exact cover meets the budget. The binary incidence matrix encodes exact cover as Ax=1 with a nonzero column for every set. Its O(h³ log n) rows allow the effective exponent cutoff to give a fixed-parameter algorithm for Multicolored Clique."
+      }
     }
   ],
   "coverage": "Published lower bounds.",
@@ -270,17 +271,10 @@
       "comparison": "The all-ones incidence matrices are valid inputs to the binary-coefficient task with general right-hand sides. The exclusion on those matrices gives a logarithmic-scale recovery for that task, with computable convergence cutoffs and a fixed polynomial input factor.",
       "evidence": [
         {
-          "paperId": "molter2026-running-time",
-          "editionId": "arxiv-v2",
-          "locator": "§3, Consequences of Lin’s Set Cover reduction, p. 12, and Lemma 1, p. 10",
-          "role": "effective lower bound for binary incidence matrices with an all-ones right-hand side",
-          "placement": "statement"
-        },
-        {
           "paperId": "lin2019",
           "editionId": "proceedings",
           "locator": "Lemma 14 and proof, §3.4, pp. 81:11–81:12",
-          "role": "Set Cover construction used for the exact-cover count",
+          "role": "Set Cover construction underlying the exact-cover encoding",
           "placement": "statement"
         }
       ]

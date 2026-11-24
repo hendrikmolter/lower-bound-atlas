@@ -107,13 +107,6 @@
       "assumptionOperator": "all",
       "sources": [
         {
-          "paperId": "molter2026-running-time",
-          "editionId": "arxiv-v2",
-          "locator": "Table 1 and §3, “Dominating Set with a supplied vertex order”",
-          "role": "effective running-time lower bound",
-          "placement": "forward"
-        },
-        {
           "paperId": "liu-meng2026-rankwidth",
           "editionId": "v1",
           "locator": "Section 3.2, Lemmas 3.5–3.6, and Appendix C, proof of Theorem C.1",
@@ -138,14 +131,18 @@
                 "hypothesisRevision": 1,
                 "reviewId": "dominating-set-supplied-linear-layout-w1-effective-molter-source-review",
                 "source": {
-                  "paperId": "molter2026-running-time",
-                  "editionId": "arxiv-v2",
-                  "locator": "Table 1 and §3, “Dominating Set with a supplied vertex order”",
-                  "role": "effective running-time lower bound",
-                  "placement": "forward"
+                  "paperId": "liu-meng2026-rankwidth",
+                  "editionId": "v1",
+                  "locator": "Section 3.2, Lemmas 3.5–3.6, and Appendix C, proof of Theorem C.1",
+                  "placement": "forward",
+                  "role": "monopolar construction, width witnesses, and arbitrary-clause interface used for the effective FPT ≠ W[1] consequence"
                 }
               }
-            ]
+            ],
+            "sourceBasis": {
+              "kind": "derived",
+              "step": "Encode the k vertices of a clique choice in O(k log n) Boolean variables, using clauses to forbid invalid vertices, repetitions and nonedges. Liu and Meng’s reduction then supplies a monopolar graph and a vertex order of width p with p² = O(k log n), in fixed-parameter time. The computable cutoff for the exponent converts any algorithm with the displayed running time into a fixed-parameter algorithm for Clique."
+            }
           },
           "converse": {
             "status": "unassessed",
@@ -153,7 +150,11 @@
           }
         }
       },
-      "exponentDomain": "computable-integer"
+      "exponentDomain": "computable-integer",
+      "sourceBasis": {
+        "kind": "derived",
+        "step": "Encode the k vertices of a clique choice in O(k log n) Boolean variables, using clauses to forbid invalid vertices, repetitions and nonedges. Liu and Meng’s reduction then supplies a monopolar graph and a vertex order of width p with p² = O(k log n), in fixed-parameter time. The computable cutoff for the exponent converts any algorithm with the displayed running time into a fixed-parameter algorithm for Clique."
+      }
     }
   ],
   "resolutions": [],
@@ -181,11 +182,11 @@
       "comparison": "Both bounds concern the same width interface and monopolar graphs. The W[1] recovery retains the quadratic scale with computable exponent and convergence. The explicit order and rank decomposition have polynomial length in graph order.",
       "evidence": [
         {
-          "paperId": "molter2026-running-time",
-          "editionId": "arxiv-v2",
-          "locator": "Table 1 and §3, “Dominating Set with a supplied vertex order”",
-          "role": "effective running-time lower bound",
-          "placement": "forward"
+          "paperId": "liu-meng2026-rankwidth",
+          "editionId": "v1",
+          "locator": "Section 3.2, Lemmas 3.5–3.6, and Appendix C, proof of Theorem C.1",
+          "placement": "forward",
+          "role": "monopolar construction, width witnesses, and arbitrary-clause interface used for the effective FPT ≠ W[1] consequence"
         }
       ]
     }

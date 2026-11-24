@@ -55,7 +55,7 @@
       "sources": [
         {
           "editionId": "bulletin",
-          "locator": "Theorem 6.2",
+          "locator": "Theorem 6.2, p. 62",
           "paperId": "lms2011",
           "placement": "statement",
           "role": "benchmark"
@@ -116,8 +116,8 @@
         {
           "paperId": "bodlaender2025-linear-structure",
           "editionId": "journal",
-          "locator": "Theorem 6 (logarithmic pathwidth).",
-          "role": "unrestricted lower bound",
+          "locator": "§4.3, Theorem 6 and Lemma 5 (logarithmic pathwidth)",
+          "role": "logarithmic pathwidth hardness",
           "placement": "statement"
         }
       ],
@@ -188,8 +188,8 @@
         {
           "paperId": "bodlaender2025-linear-structure",
           "editionId": "journal",
-          "locator": "Theorem 6 (logarithmic pathwidth).",
-          "role": "unrestricted lower bound",
+          "locator": "§4.3, Theorem 6 and Lemma 5 (logarithmic pathwidth)",
+          "role": "logarithmic pathwidth hardness",
           "placement": "statement"
         }
       ]

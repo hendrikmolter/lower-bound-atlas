@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "edition": "v1.0.0",
-  "revision": 8,
+  "revision": 9,
   "assumptions": [
     {
       "id": "eth",
@@ -1721,6 +1721,23 @@
           "access": "Theorem 1.3 and its proof in §5.2, pp. 25–26."
         }
       ]
+    },
+    {
+      "id": "froese2012-binary-distinct-vectors",
+      "title": "Combinatorial Feature Selection: Parameterized Algorithms and Complexity",
+      "authors": [
+        "Vincent Froese"
+      ],
+      "preferredEditionId": "thesis",
+      "editions": [
+        {
+          "id": "thesis",
+          "kind": "thesis",
+          "label": "Master’s thesis, Technische Universität Berlin, 2012",
+          "primaryUrl": "https://fpt.akt.tu-berlin.de/publications/theses/MA-vincent-froese.pdf",
+          "access": "Theorem 4.1 and proof inspected. This thesis gives the binary address construction. The later joint journal paper uses an unbounded-alphabet construction for its Hitting Set reduction."
+        }
+      ]
     }
   ],
   "proofs": [
@@ -1897,8 +1914,8 @@
       "reviewer": "Atlas source audit",
       "date": "2026-11-24",
       "verdict": "verified",
-      "scope": "Checked the forward implication, including its running time, parameter and input restrictions, against §3, Consequences of Lin’s Set Cover reduction, p. 12, and Lemma 1, p. 10.",
-      "evidence": "evidence/molter2026-source-scope.md",
+      "scope": "Checked the all-ones right-hand side and effective exponent using the exact-one interpretation of the incidence matrix in Lin’s Lemma 14.",
+      "evidence": "evidence/table-one-original-sources.md",
       "object": {
         "type": "bound",
         "caseId": "integer-linear-programming-equations",
@@ -2148,8 +2165,8 @@
       "reviewer": "Independent Atlas source audit",
       "date": "2026-11-24",
       "verdict": "verified",
-      "scope": "Checked the effective quadratic exclusion on monopolar graphs for the recorded width interface against §3 and Table 1, including the layout conversion where required.",
-      "evidence": "evidence/molter2026-source-scope.md",
+      "scope": "Checked the effective quadratic exclusion on monopolar graphs using Liu and Meng’s construction for arbitrary CNF, its supplied order and the width guarantee for this parameterization.",
+      "evidence": "evidence/table-one-original-sources.md",
       "object": {
         "type": "bound",
         "caseId": "dominating-set-linear-rank-width",
@@ -2163,8 +2180,8 @@
       "reviewer": "Independent Atlas source audit",
       "date": "2026-11-24",
       "verdict": "verified",
-      "scope": "Checked the effective quadratic exclusion on monopolar graphs for the recorded width interface against §3 and Table 1, including the layout conversion where required.",
-      "evidence": "evidence/molter2026-source-scope.md",
+      "scope": "Checked the effective quadratic exclusion on monopolar graphs using Liu and Meng’s construction for arbitrary CNF, its supplied order and the width guarantee for this parameterization.",
+      "evidence": "evidence/table-one-original-sources.md",
       "object": {
         "type": "bound",
         "caseId": "dominating-set-rank-width",
@@ -2178,8 +2195,8 @@
       "reviewer": "Independent Atlas source audit",
       "date": "2026-11-24",
       "verdict": "verified",
-      "scope": "Checked the effective quadratic exclusion on monopolar graphs for the recorded width interface against §3 and Table 1, including the layout conversion where required.",
-      "evidence": "evidence/molter2026-source-scope.md",
+      "scope": "Checked the effective quadratic exclusion on monopolar graphs using Liu and Meng’s construction for arbitrary CNF, its supplied order and the width guarantee for this parameterization.",
+      "evidence": "evidence/table-one-original-sources.md",
       "object": {
         "type": "bound",
         "caseId": "dominating-set-supplied-linear-layout",
@@ -2193,12 +2210,108 @@
       "reviewer": "Independent Atlas source audit",
       "date": "2026-11-24",
       "verdict": "verified",
-      "scope": "Checked the effective quadratic exclusion on monopolar graphs for the recorded width interface against §3 and Table 1, including the layout conversion where required.",
-      "evidence": "evidence/molter2026-source-scope.md",
+      "scope": "Checked the effective quadratic exclusion on monopolar graphs using Liu and Meng’s construction for arbitrary CNF, its supplied order and the width guarantee for this parameterization.",
+      "evidence": "evidence/table-one-original-sources.md",
       "object": {
         "type": "bound",
         "caseId": "dominating-set-supplied-rank-decomposition",
         "id": "dominating-set-supplied-rank-decomposition-w1-effective",
+        "revision": 1
+      }
+    },
+    {
+      "id": "vc-tw-eth-literature-source-review",
+      "type": "agent",
+      "date": "2026-11-24",
+      "reviewer": "Codex source audit",
+      "verdict": "verified",
+      "independent": true,
+      "scope": "Forward implication for intrinsic treewidth. The Vertex Cover instances produced from sparse 3-SAT have linear graph order, and treewidth is bounded by that order. A solver with the stated dependence on treewidth would solve sparse 3-SAT in subexponential time.",
+      "evidence": "evidence/table-one-original-sources.md",
+      "object": {
+        "type": "bound",
+        "id": "vc-tw-eth",
+        "caseId": "vertex-cover-treewidth",
+        "revision": 1
+      }
+    },
+    {
+      "id": "vc-tw-w1-effective-literature-source-review",
+      "type": "agent",
+      "date": "2026-11-24",
+      "reviewer": "Codex source audit",
+      "verdict": "verified",
+      "independent": true,
+      "scope": "Forward implication for intrinsic treewidth. Logarithmic-treewidth Vertex Cover is XALP-hard, so it is W[1]-hard. Discard the supplied decomposition from the reduction output. For a Clique input of order n and parameter k, the output treewidth is at most g(k)(1+log₂ n) for a computable g. Use the computable cutoff for a slope at most 1/g(k). Above the cutoff the exponential factor is polynomial in n, and below it the computable exponent has a finite maximum controlled by k. The polynomial-size reduction output then gives an FPT algorithm for Clique.",
+      "evidence": "evidence/table-one-original-sources.md",
+      "object": {
+        "type": "bound",
+        "id": "vc-tw-w1-effective",
+        "caseId": "vertex-cover-treewidth",
+        "revision": 1
+      }
+    },
+    {
+      "id": "rbds-tw-eth-literature-source-review",
+      "type": "agent",
+      "date": "2026-11-24",
+      "reviewer": "Codex source audit",
+      "verdict": "verified",
+      "independent": true,
+      "scope": "Forward implication for intrinsic treewidth. Subdivide every edge of a Vertex Cover instance. The blue original vertices dominate the red subdivision vertices exactly when they cover all original edges. A single bag with all original vertices and an attached bag for each subdivision gives treewidth at most max(n−1, 2) for original order n. The new explicit encoding has polynomial size.",
+      "evidence": "evidence/table-one-original-sources.md",
+      "object": {
+        "type": "bound",
+        "id": "rbds-tw-eth",
+        "caseId": "red-blue-dominating-set-treewidth",
+        "revision": 1
+      }
+    },
+    {
+      "id": "rbds-tw-w1-effective-literature-source-review",
+      "type": "agent",
+      "date": "2026-11-24",
+      "reviewer": "Codex source audit",
+      "verdict": "verified",
+      "independent": true,
+      "scope": "Forward implication for intrinsic treewidth. Logarithmic-treewidth Red-Blue Dominating Set is XALP-hard, so it is W[1]-hard. The edge-subdivision construction has an explicit blue/red partition. Discard the supplied decomposition. For a Clique input of order n and parameter k, the output treewidth is at most g(k)(1+log₂ n) for a computable g. Use the computable cutoff for a slope at most 1/g(k). Above the cutoff the exponential factor is polynomial in n, and below it the computable exponent has a finite maximum controlled by k. The polynomial-size reduction output then gives an FPT algorithm for Clique.",
+      "evidence": "evidence/table-one-original-sources.md",
+      "object": {
+        "type": "bound",
+        "id": "rbds-tw-w1-effective",
+        "caseId": "red-blue-dominating-set-treewidth",
+        "revision": 1
+      }
+    },
+    {
+      "id": "fvs-tw-eth-literature-source-review",
+      "type": "agent",
+      "date": "2026-11-24",
+      "reviewer": "Codex source audit",
+      "verdict": "verified",
+      "independent": true,
+      "scope": "Forward implication for intrinsic treewidth. Add one private vertex adjacent to both ends of each edge of the Vertex Cover instance. A cover leaves a forest. Conversely, any feedback vertex set hits each edge triangle, so replacing any selected private vertex with an endpoint yields a cover of no larger size. A bag for each private vertex and its endpoints gives treewidth at most max(n−1, 2) for original order n, with polynomial encoding size.",
+      "evidence": "evidence/table-one-original-sources.md",
+      "object": {
+        "type": "bound",
+        "id": "fvs-tw-eth",
+        "caseId": "feedback-vertex-set-treewidth",
+        "revision": 1
+      }
+    },
+    {
+      "id": "fvs-tw-w1-effective-literature-source-review",
+      "type": "agent",
+      "date": "2026-11-24",
+      "reviewer": "Codex source audit",
+      "verdict": "verified",
+      "independent": true,
+      "scope": "Forward implication for intrinsic treewidth. Logarithmic-pathwidth Feedback Vertex Set is XNLP-hard, so it is W[1]-hard. A graph’s treewidth is at most the width of the supplied path decomposition, which can be discarded. For a Clique input of order n and parameter k, the output treewidth is at most g(k)(1+log₂ n) for a computable g. Use the computable cutoff for a slope at most 1/g(k). Above the cutoff the exponential factor is polynomial in n, and below it the computable exponent has a finite maximum controlled by k. The polynomial-size reduction output then gives an FPT algorithm for Clique.",
+      "evidence": "evidence/table-one-original-sources.md",
+      "object": {
+        "type": "bound",
+        "id": "fvs-tw-w1-effective",
+        "caseId": "feedback-vertex-set-treewidth",
         "revision": 1
       }
     }
@@ -2879,6 +2992,20 @@
       "name": "Graph Motif",
       "input": "An explicitly encoded finite simple undirected graph G with a color on each vertex, and a multiset M of colors.",
       "question": "Is there a set of vertices that induces a connected subgraph and whose colors, counted with multiplicity, form M?",
+      "revision": 1
+    },
+    {
+      "id": "cnf-sat",
+      "name": "CNF-SAT",
+      "input": "An explicitly listed Boolean formula in conjunctive normal form.",
+      "question": "Does the formula have a satisfying assignment?",
+      "revision": 1
+    },
+    {
+      "id": "red-blue-dominating-set",
+      "name": "Red-Blue Dominating Set",
+      "input": "A finite simple undirected bipartite graph G with specified blue and red vertex classes and a nonnegative integer budget k.",
+      "question": "Is there a set of at most k blue vertices such that every red vertex has a neighbor in the set?",
       "revision": 1
     }
   ],

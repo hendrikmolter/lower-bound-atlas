@@ -92,7 +92,7 @@ test('renaming a problem and admitting another hypothesis require only data chan
     assert.ok(existsSync(join(dir,'dist/site',url.pathname.slice('/lower-bound-atlas/'.length),'index.html')));
   }
   assert.ok(paths.includes('problems/3-coloring/') && paths.includes('cases/lms-closest-string-radius/'));
-  assert.ok(paths.includes('assumptions/test-premise/') && !paths.includes('cases/lms-3color-order/'));
+  assert.ok(paths.includes('assumptions/test-premise/') && paths.includes('cases/lms-3color-order/') && !paths.includes('cases/cnf-sat-variables/'));
   assert.ok(paths.includes('bounds/lms-3color-order/color-sh-fixed-power/'));
   assert.ok(!paths.some(path => /\/r\d+\//.test(path)));
   assert.ok(html('problems/closest-string').includes('<title>Renamed string problem — running-time lower bounds | Lower Bound Atlas</title>'));
@@ -133,14 +133,13 @@ test('the launch history records one initial snapshot with the released totals',
   const dir = readerFixture(t);
   execFileSync(process.execPath, ['website/build.mjs'], {cwd:dir});
   const read = path => readFileSync(join(dir, 'dist/site', path), 'utf8');
-  const catalogue = JSON.parse(read('api/v1/atlas.json'));
   const history = read('about/index.html').split('<section id="version-history">')[1];
   assert.equal((history.match(/<h4>Initial private launch candidate</g) ?? []).length, 1);
   assert.match(history, /<time datetime="2026-11-19">19 November 2026<\/time>/);
   assert.match(history, /<h4>Initial private launch candidate<\/h4>/);
   assert.ok(history.indexOf('<h4>Search filters and original references</h4>') >= 0);
   assert.ok(history.indexOf('Search filters and original references') < history.indexOf('Initial private launch candidate'));
-  assert.ok(history.includes(`${catalogue.problems.length} problems and ${catalogue.cases.length} parameterizations.`));
+  assert.ok(history.includes('73 problems and 106 parameterizations.'));
   assert.match(history, /<p>Hendrik Molter<\/p>/);
   const initialEntry = history.split('<h4>Initial private launch candidate</h4>')[1].split('</li>')[0];
   assert.doesNotMatch(initialEntry, /\/commit\/[a-f0-9]{40}|Read review|Read challenge|Problem added|Lower bounds changed/);
