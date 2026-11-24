@@ -61,7 +61,7 @@ A current citation to a nonpreferred edition must supply an `editionReason` spec
 
 ## Walk through an atlas proof
 
-The Atlas primarily documents the literature. Cite the original proof whenever it establishes the recorded direction. If a short mathematical step connects the cited theorems to the statement, record the sources and that step under the public derivation rule. Reserve a self-contained Atlas manuscript for an exceptional result requiring a substantive additional argument. The Dominating Set rank-width entry illustrates this workflow.
+The Atlas primarily documents the literature. Cite the original proof whenever it establishes the recorded direction. If a short mathematical step connects the cited theorems to the statement, record the sources and that step under the public derivation rule. Reserve a self-contained Atlas manuscript for an exceptional result requiring a substantive additional argument. The converse for Dominating Set by number of vertices illustrates this workflow.
 
 1. Write a self-contained LaTeX proof of the exact exclusion. State the premise, input model and encoding, parameter, restrictions, quantifiers and input-polynomial factor. Give precise sources for imported results and an addressable PDF destination for each theorem.
 2. Compile the PDF and add source and PDF in `proofs/`. In the proposal, reference the proof ID, revision and theorem. Use `provenance: "atlas"` and `status: "proposed"` for a new argument awaiting review. For each directional assessment, report evidence separately for the forward and converse implications.

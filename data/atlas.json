@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "edition": "v1.0.0",
-  "revision": 7,
+  "revision": 8,
   "assumptions": [
     {
       "id": "eth",
@@ -1454,15 +1454,15 @@
       "authors": [
         "Hendrik Molter"
       ],
-      "preferredEditionId": "arxiv-v1",
+      "preferredEditionId": "arxiv-v2",
       "editions": [
         {
-          "id": "arxiv-v1",
+          "id": "arxiv-v2",
           "kind": "preprint",
-          "label": "arXiv:2611.26080v1, 19 November 2026",
-          "primaryUrl": "https://arxiv.org/abs/2611.26080v1",
-          "openUrl": "https://arxiv.org/html/2611.26080v1",
-          "access": "Version 1 full text inspected.",
+          "label": "arXiv:2611.26080v2, 22 November 2026",
+          "primaryUrl": "https://arxiv.org/abs/2611.26080v2",
+          "openUrl": "https://arxiv.org/html/2611.26080v2",
+          "access": "Version 2 full text inspected.",
           "doi": "10.48550/arXiv.2611.26080"
         }
       ]
@@ -1751,34 +1751,6 @@
           }
         }
       ]
-    },
-    {
-      "id": "dominating-set-rankwidth",
-      "title": "An effective quadratic lower bound for unweighted Dominating Set",
-      "revisions": [
-        {
-          "revision": 1,
-          "source": "proofs/dominating-set-rankwidth.tex",
-          "pdf": "proofs/dominating-set-rankwidth.pdf",
-          "theorems": [
-            {
-              "label": "dominating-set-rankwidth",
-              "number": "1",
-              "destination": "dominating-set-rankwidth",
-              "statement": "Assuming deterministic FPT ≠ W[1], there is no deterministic effective 2^(o(p²)) N^(O(1)) Dominating Set algorithm on monopolar graphs by rank-width, linear rank-width, or the actual width of a supplied rank decomposition or vertex order."
-            }
-          ],
-          "dependencyCoverage": "complete",
-          "dependencies": [],
-          "authorship": {
-            "origin": "atlas",
-            "kind": "ai",
-            "authors": [
-              "Atlas"
-            ]
-          }
-        }
-      ]
     }
   ],
   "reviews": [
@@ -1815,29 +1787,12 @@
       "sourceSha256": "1f151ecd300ae91f60a5ff999b95dc45d35f83d6caad844e110e2c62d98d2726"
     },
     {
-      "id": "dominating-set-rankwidth-review",
-      "type": "agent",
-      "date": "2026-11-18",
-      "reviewer": "Codex agent derived_shortlist",
-      "verdict": "verified",
-      "scope": "Assuming deterministic FPT ≠ W[1], there is no deterministic effective 2^(o(p²)) N^(O(1)) Dominating Set algorithm on monopolar graphs by rank-width, linear rank-width, or the actual width of a supplied rank decomposition or vertex order.",
-      "evidence": "evidence/dominating-set-rankwidth-independent.md",
-      "object": {
-        "type": "proof",
-        "id": "dominating-set-rankwidth",
-        "revision": 1,
-        "theorem": "dominating-set-rankwidth"
-      },
-      "independent": true,
-      "sourceSha256": "fa61733eeae80fa150716b31461435cdb7f52bb6be5a7b1e26f8930ecf566bad"
-    },
-    {
       "id": "cp-pw-w1-effective-molter-source-review",
       "type": "agent",
-      "reviewer": "Codex source audit",
-      "date": "2026-11-20",
+      "reviewer": "Atlas source audit",
+      "date": "2026-11-24",
       "verdict": "verified",
-      "scope": "Forward implication. Checked the exact task, parameter, input restrictions, and effective running time against Theorem 10, Section 13.",
+      "scope": "Checked the forward implication, including its running time, parameter and input restrictions, against Theorem 5, §§8 and 8.2.",
       "evidence": "evidence/molter2026-source-scope.md",
       "object": {
         "type": "bound",
@@ -1849,10 +1804,10 @@
     {
       "id": "cp-tw-w1-effective-molter-source-review",
       "type": "agent",
-      "reviewer": "Codex source audit",
-      "date": "2026-11-20",
+      "reviewer": "Atlas source audit",
+      "date": "2026-11-24",
       "verdict": "verified",
-      "scope": "Forward implication. Checked the exact task, parameter, input restrictions, and effective running time against Theorem 10, Section 13.",
+      "scope": "Checked the forward implication, including its running time, parameter and input restrictions, against Theorem 5, §§8 and 8.2, and §1.4 following Table 2.",
       "evidence": "evidence/molter2026-source-scope.md",
       "object": {
         "type": "bound",
@@ -1864,10 +1819,10 @@
     {
       "id": "graph-distortion-line-w1-molter-source-review",
       "type": "agent",
-      "reviewer": "Codex source audit",
-      "date": "2026-11-20",
+      "reviewer": "Atlas source audit",
+      "date": "2026-11-24",
       "verdict": "verified",
-      "scope": "Forward implication. Checked the exact task, parameter, input restrictions, and effective running time against Theorem 12, Section 15.",
+      "scope": "Checked the forward implication, including its running time, parameter and input restrictions, against Lemma 12 and Theorem 7, §9.",
       "evidence": "evidence/molter2026-source-scope.md",
       "object": {
         "type": "bound",
@@ -1879,11 +1834,11 @@
     {
       "id": "independent-set-linear-rank-width-w1-effective-molter-source-review",
       "type": "agent",
-      "reviewer": "Codex source audit",
-      "date": "2026-11-20",
+      "reviewer": "Atlas source audit",
+      "date": "2026-11-24",
       "verdict": "verified",
-      "scope": "Forward implication. Checked the exact task, parameter, input restrictions, and effective running time against Theorem 5, Section 7.",
-      "evidence": "evidence/molter2026-source-scope.md",
+      "scope": "Checked the effective quadratic exclusion for general graphs and the recorded width interface against Theorem 2 and §5.",
+      "evidence": "evidence/independent-set-rankwidth-sh-source-scope.md",
       "object": {
         "type": "bound",
         "caseId": "independent-set-linear-rank-width",
@@ -1894,11 +1849,11 @@
     {
       "id": "independent-set-rank-width-w1-effective-molter-source-review",
       "type": "agent",
-      "reviewer": "Codex source audit",
-      "date": "2026-11-20",
+      "reviewer": "Atlas source audit",
+      "date": "2026-11-24",
       "verdict": "verified",
-      "scope": "Forward implication. Checked the exact task, parameter, input restrictions, and effective running time against Theorem 5, Section 7.",
-      "evidence": "evidence/molter2026-source-scope.md",
+      "scope": "Checked the effective quadratic exclusion for general graphs and the recorded width interface against Theorem 2 and §5.",
+      "evidence": "evidence/independent-set-rankwidth-sh-source-scope.md",
       "object": {
         "type": "bound",
         "caseId": "independent-set-rank-width",
@@ -1909,11 +1864,11 @@
     {
       "id": "independent-set-supplied-linear-layout-w1-effective-molter-source-review",
       "type": "agent",
-      "reviewer": "Codex source audit",
-      "date": "2026-11-20",
+      "reviewer": "Atlas source audit",
+      "date": "2026-11-24",
       "verdict": "verified",
-      "scope": "Forward implication. Checked the exact task, parameter, input restrictions, and effective running time against Theorem 5, Section 7.",
-      "evidence": "evidence/molter2026-source-scope.md",
+      "scope": "Checked the effective quadratic exclusion for general graphs and the recorded width interface against Theorem 2 and §5.",
+      "evidence": "evidence/independent-set-rankwidth-sh-source-scope.md",
       "object": {
         "type": "bound",
         "caseId": "independent-set-supplied-linear-layout",
@@ -1924,11 +1879,11 @@
     {
       "id": "independent-set-supplied-rank-decomposition-w1-effective-molter-source-review",
       "type": "agent",
-      "reviewer": "Codex source audit",
-      "date": "2026-11-20",
+      "reviewer": "Atlas source audit",
+      "date": "2026-11-24",
       "verdict": "verified",
-      "scope": "Forward implication. Checked the exact task, parameter, input restrictions, and effective running time against Theorem 5, Section 7.",
-      "evidence": "evidence/molter2026-source-scope.md",
+      "scope": "Checked the effective quadratic exclusion for general graphs and the recorded width interface against Theorem 2 and §5.",
+      "evidence": "evidence/independent-set-rankwidth-sh-source-scope.md",
       "object": {
         "type": "bound",
         "caseId": "independent-set-supplied-rank-decomposition",
@@ -1939,10 +1894,10 @@
     {
       "id": "ilp-equations-w1-effective-molter-source-review",
       "type": "agent",
-      "reviewer": "Codex source audit",
-      "date": "2026-11-20",
+      "reviewer": "Atlas source audit",
+      "date": "2026-11-24",
       "verdict": "verified",
-      "scope": "Forward implication. Checked the exact task, parameter, input restrictions, and effective running time against Theorem 8, Section 10.",
+      "scope": "Checked the forward implication, including its running time, parameter and input restrictions, against §3, Consequences of Lin’s Set Cover reduction, p. 12, and Lemma 1, p. 10.",
       "evidence": "evidence/molter2026-source-scope.md",
       "object": {
         "type": "bound",
@@ -2130,10 +2085,10 @@
     {
       "id": "independent-set-linear-rank-width-sh-degree-source-review",
       "type": "agent",
-      "date": "2026-11-22",
-      "reviewer": "Codex source audit",
+      "date": "2026-11-24",
+      "reviewer": "Atlas source audit",
       "verdict": "verified",
-      "scope": "Forward implication from SH. Checked the 3-SAT exponent transfer, the triangle-free restriction, and the applicable width interface.",
+      "scope": "Checked the fixed-power SH bound for general graphs and the recorded width interface against the SH paper and its cited construction.",
       "evidence": "evidence/independent-set-rankwidth-sh-source-scope.md",
       "object": {
         "type": "bound",
@@ -2145,10 +2100,10 @@
     {
       "id": "independent-set-rank-width-sh-degree-source-review",
       "type": "agent",
-      "date": "2026-11-22",
-      "reviewer": "Codex source audit",
+      "date": "2026-11-24",
+      "reviewer": "Atlas source audit",
       "verdict": "verified",
-      "scope": "Forward implication from SH. Checked the 3-SAT exponent transfer, the triangle-free restriction, and the applicable width interface.",
+      "scope": "Checked the fixed-power SH bound for general graphs and the recorded width interface against the SH paper and its cited construction.",
       "evidence": "evidence/independent-set-rankwidth-sh-source-scope.md",
       "object": {
         "type": "bound",
@@ -2160,10 +2115,10 @@
     {
       "id": "independent-set-supplied-linear-layout-sh-degree-source-review",
       "type": "agent",
-      "date": "2026-11-22",
-      "reviewer": "Codex source audit",
+      "date": "2026-11-24",
+      "reviewer": "Atlas source audit",
       "verdict": "verified",
-      "scope": "Forward implication from SH. Checked the 3-SAT exponent transfer, the triangle-free restriction, and the applicable width interface.",
+      "scope": "Checked the fixed-power SH bound for general graphs and the recorded width interface against the SH paper and its cited construction.",
       "evidence": "evidence/independent-set-rankwidth-sh-source-scope.md",
       "object": {
         "type": "bound",
@@ -2175,15 +2130,75 @@
     {
       "id": "independent-set-supplied-rank-decomposition-sh-degree-source-review",
       "type": "agent",
-      "date": "2026-11-22",
-      "reviewer": "Codex source audit",
+      "date": "2026-11-24",
+      "reviewer": "Atlas source audit",
       "verdict": "verified",
-      "scope": "Forward implication from SH. Checked the 3-SAT exponent transfer, the triangle-free restriction, and the applicable width interface.",
+      "scope": "Checked the fixed-power SH bound for general graphs and the recorded width interface against the SH paper and its cited construction.",
       "evidence": "evidence/independent-set-rankwidth-sh-source-scope.md",
       "object": {
         "type": "bound",
         "caseId": "independent-set-supplied-rank-decomposition",
         "id": "independent-set-supplied-rank-decomposition-sh-degree",
+        "revision": 1
+      }
+    },
+    {
+      "id": "dominating-set-linear-rank-width-w1-effective-molter-source-review",
+      "type": "agent",
+      "reviewer": "Independent Atlas source audit",
+      "date": "2026-11-24",
+      "verdict": "verified",
+      "scope": "Checked the effective quadratic exclusion on monopolar graphs for the recorded width interface against §3 and Table 1, including the layout conversion where required.",
+      "evidence": "evidence/molter2026-source-scope.md",
+      "object": {
+        "type": "bound",
+        "caseId": "dominating-set-linear-rank-width",
+        "id": "dominating-set-linear-rank-width-w1-effective",
+        "revision": 1
+      }
+    },
+    {
+      "id": "dominating-set-rank-width-w1-effective-molter-source-review",
+      "type": "agent",
+      "reviewer": "Independent Atlas source audit",
+      "date": "2026-11-24",
+      "verdict": "verified",
+      "scope": "Checked the effective quadratic exclusion on monopolar graphs for the recorded width interface against §3 and Table 1, including the layout conversion where required.",
+      "evidence": "evidence/molter2026-source-scope.md",
+      "object": {
+        "type": "bound",
+        "caseId": "dominating-set-rank-width",
+        "id": "dominating-set-rank-width-w1-effective",
+        "revision": 1
+      }
+    },
+    {
+      "id": "dominating-set-supplied-linear-layout-w1-effective-molter-source-review",
+      "type": "agent",
+      "reviewer": "Independent Atlas source audit",
+      "date": "2026-11-24",
+      "verdict": "verified",
+      "scope": "Checked the effective quadratic exclusion on monopolar graphs for the recorded width interface against §3 and Table 1, including the layout conversion where required.",
+      "evidence": "evidence/molter2026-source-scope.md",
+      "object": {
+        "type": "bound",
+        "caseId": "dominating-set-supplied-linear-layout",
+        "id": "dominating-set-supplied-linear-layout-w1-effective",
+        "revision": 1
+      }
+    },
+    {
+      "id": "dominating-set-supplied-rank-decomposition-w1-effective-molter-source-review",
+      "type": "agent",
+      "reviewer": "Independent Atlas source audit",
+      "date": "2026-11-24",
+      "verdict": "verified",
+      "scope": "Checked the effective quadratic exclusion on monopolar graphs for the recorded width interface against §3 and Table 1, including the layout conversion where required.",
+      "evidence": "evidence/molter2026-source-scope.md",
+      "object": {
+        "type": "bound",
+        "caseId": "dominating-set-supplied-rank-decomposition",
+        "id": "dominating-set-supplied-rank-decomposition-w1-effective",
         "revision": 1
       }
     }

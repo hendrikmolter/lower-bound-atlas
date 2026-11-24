@@ -90,8 +90,7 @@
       "id": "vdp-tw-w1",
       "inputConditions": [
         "connected-bipartite-subcubic",
-        "distinct-leaf-endpoints",
-        "equal-widths"
+        "distinct-leaf-endpoints"
       ],
       "inputFactor": "B^(O(1))",
       "proofs": [],
@@ -110,15 +109,19 @@
       "sources": [
         {
           "paperId": "molter2026-running-time",
-          "editionId": "arxiv-v1",
-          "locator": "Theorem 9, Section 12",
+          "editionId": "arxiv-v2",
+          "locator": "Theorem 4, §§7 and 7.4, and §1.4 following Table 2",
           "role": "running-time lower bound",
           "placement": "statement"
         }
       ],
       "statement": "Under FPT ≠ W[1], no deterministic algorithm decides Vertex-Disjoint Paths within the stated running time.",
       "status": "established",
-      "exponentDomain": "nonnegative"
+      "exponentDomain": "nonnegative",
+      "sourceBasis": {
+        "kind": "derived",
+        "step": "Discard the supplied path decomposition. On the reduction outputs the intrinsic treewidth t is at most the supplied width p. The maximum of an effectively little-o exponent over widths up to p is still effectively little-o at the same scale, and the graph-only input is no larger than the supplied-decomposition input."
+      }
     }
   ],
   "coverage": "Literature bounds.",
@@ -133,11 +136,6 @@
     {
       "condition": "All demand endpoints are distinct leaves.",
       "id": "distinct-leaf-endpoints",
-      "level": "bound"
-    },
-    {
-      "condition": "The treewidth and pathwidth of G are equal.",
-      "id": "equal-widths",
       "level": "bound"
     }
   ],
@@ -210,12 +208,12 @@
       "effective": true,
       "targetScale": "t log₂ t",
       "recoveredScale": "t log₂ t",
-      "comparison": "The recovery excludes the same scale with a computable convergence modulus. The proof obtains the exclusion on connected bipartite graphs of maximum degree three with distinct leaf terminals and equal widths.",
+      "comparison": "The exclusion reaches the historical treewidth exponent scale with a computable exponent and convergence modulus. The reduction uses connected bipartite graphs of maximum degree three with distinct leaf terminals. Both polynomial factors count the complete input, including the demand list.",
       "evidence": [
         {
           "paperId": "molter2026-running-time",
-          "editionId": "arxiv-v1",
-          "locator": "Theorem 9, Section 12",
+          "editionId": "arxiv-v2",
+          "locator": "Theorem 4, §§7 and 7.4, and §1.4 following Table 2",
           "role": "running-time lower bound",
           "placement": "statement"
         }

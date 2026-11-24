@@ -510,5 +510,12 @@
     "contributor": "Hendrik Molter with ChatGPT",
     "title": "Cluster Editing by edit budget and uniform ETH",
     "summary": "The degree-six lower bound is equivalent to uniform ETH. The reverse implication uses the transfer theorem of Firbas and Sorge."
+  },
+  {
+    "kind": "update",
+    "date": "2026-11-24",
+    "contributor": "Hendrik Molter with ChatGPT",
+    "title": "Revised running-time lower bounds under FPT ≠ W[1]",
+    "summary": "The recorded restrictions and width guarantees follow the revised paper. The four Dominating Set rank-width entries cite its transfer of the Liu–Meng construction."
   }
 ]

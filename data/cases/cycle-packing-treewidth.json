@@ -80,14 +80,11 @@
       "runtimeSymbols": [
         "t",
         "N",
-        "n",
-        "γ"
+        "n"
       ],
       "qualifications": [],
       "inputConditions": [
-        "connected-bipartite-degree-six",
-        "equal-pathwidth",
-        "large-girth"
+        "connected-bipartite"
       ],
       "status": "established",
       "provenance": "literature",
@@ -101,8 +98,8 @@
       "sources": [
         {
           "paperId": "molter2026-running-time",
-          "editionId": "arxiv-v1",
-          "locator": "Theorem 10, Section 13",
+          "editionId": "arxiv-v2",
+          "locator": "Theorem 5, §§8 and 8.2, and §1.4 following Table 2",
           "role": "running-time lower bound",
           "placement": "statement"
         }
@@ -125,13 +122,17 @@
                 "reviewId": "cp-tw-w1-effective-molter-source-review",
                 "source": {
                   "paperId": "molter2026-running-time",
-                  "editionId": "arxiv-v1",
-                  "locator": "Theorem 10, Section 13",
+                  "editionId": "arxiv-v2",
+                  "locator": "Theorem 5, §§8 and 8.2, and §1.4 following Table 2",
                   "role": "forward implication",
                   "placement": "forward"
                 }
               }
-            ]
+            ],
+            "sourceBasis": {
+              "kind": "derived",
+              "step": "Discard the supplied path decomposition. On the reduction outputs the intrinsic treewidth t is at most the supplied width p. The maximum of an effectively little-o exponent over widths up to p is still effectively little-o at the same scale, and the graph-only input is no larger than the supplied-decomposition input."
+            }
           },
           "converse": {
             "status": "unassessed",
@@ -139,7 +140,11 @@
           }
         }
       },
-      "exponentDomain": "computable-integer"
+      "exponentDomain": "computable-integer",
+      "sourceBasis": {
+        "kind": "derived",
+        "step": "Discard the supplied path decomposition. On the reduction outputs the intrinsic treewidth t is at most the supplied width p. The maximum of an effectively little-o exponent over widths up to p is still effectively little-o at the same scale, and the graph-only input is no larger than the supplied-decomposition input."
+      }
     }
   ],
   "resolutions": [],
@@ -155,10 +160,6 @@
       {
         "symbol": "N",
         "meaning": "complete binary input length, including a supplied certificate if present"
-      },
-      {
-        "symbol": "γ",
-        "meaning": "fixed constant in the girth promise"
       }
     ],
     "boundContext": "The treewidth t of G. Here n is the number of vertices of G.",
@@ -171,18 +172,8 @@
   },
   "inputConditions": [
     {
-      "id": "connected-bipartite-degree-six",
-      "condition": "The graph is connected and bipartite with maximum degree at most six.",
-      "level": "bound"
-    },
-    {
-      "id": "equal-pathwidth",
-      "condition": "Treewidth equals pathwidth.",
-      "level": "bound"
-    },
-    {
-      "id": "large-girth",
-      "condition": "For every fixed γ with 0 < γ < 1, the bound holds even when the girth is at least n^(1−γ).",
+      "id": "connected-bipartite",
+      "condition": "The graph is connected and bipartite.",
       "level": "bound"
     }
   ],
@@ -207,12 +198,12 @@
       "effective": true,
       "targetScale": "t log₂ t",
       "recoveredScale": "t log₂ t",
-      "comparison": "The exclusion reaches the same width scale with a computable exponent and convergence. The more restricted graphs suffice to exclude a general solver, and normalized explicit graph inputs and the listed certificates have polynomial length.",
+      "comparison": "The exclusion reaches the historical treewidth exponent scale with a computable exponent and convergence modulus. The connected bipartite reduction outputs also suffice against a solver for unrestricted graphs. Their explicit graph encodings and thresholds have length polynomial in graph order.",
       "evidence": [
         {
           "paperId": "molter2026-running-time",
-          "editionId": "arxiv-v1",
-          "locator": "Theorem 10, Section 13",
+          "editionId": "arxiv-v2",
+          "locator": "Theorem 5, §§8 and 8.2, and §1.4 following Table 2",
           "role": "running-time lower bound",
           "placement": "statement"
         }

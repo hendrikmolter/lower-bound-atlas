@@ -97,7 +97,7 @@
         "monopolar"
       ],
       "status": "established",
-      "provenance": "atlas",
+      "provenance": "literature",
       "assumptions": [
         {
           "id": "w1",
@@ -107,6 +107,13 @@
       "assumptionOperator": "all",
       "sources": [
         {
+          "paperId": "molter2026-running-time",
+          "editionId": "arxiv-v2",
+          "locator": "Table 1 and §3, “Dominating Set with a supplied vertex order”",
+          "role": "effective running-time lower bound",
+          "placement": "forward"
+        },
+        {
           "paperId": "liu-meng2026-rankwidth",
           "editionId": "v1",
           "locator": "Section 3.2, Lemmas 3.5–3.6, and Appendix C, proof of Theorem C.1",
@@ -114,13 +121,7 @@
           "role": "monopolar construction, width witnesses, and arbitrary-clause interface used for the effective FPT ≠ W[1] consequence"
         }
       ],
-      "proofs": [
-        {
-          "proofId": "dominating-set-rankwidth",
-          "revision": 1,
-          "theorem": "dominating-set-rankwidth"
-        }
-      ],
+      "proofs": [],
       "reader": {
         "revision": 1,
         "label": "Effective quadratic-width bound on monopolar graphs",
@@ -135,11 +136,13 @@
               {
                 "boundRevision": 1,
                 "hypothesisRevision": 1,
-                "reviewId": "dominating-set-rankwidth-review",
-                "proof": {
-                  "proofId": "dominating-set-rankwidth",
-                  "revision": 1,
-                  "theorem": "dominating-set-rankwidth"
+                "reviewId": "dominating-set-supplied-rank-decomposition-w1-effective-molter-source-review",
+                "source": {
+                  "paperId": "molter2026-running-time",
+                  "editionId": "arxiv-v2",
+                  "locator": "Table 1 and §3, “Dominating Set with a supplied vertex order”",
+                  "role": "effective running-time lower bound",
+                  "placement": "forward"
                 }
               }
             ]
@@ -153,7 +156,7 @@
       "exponentDomain": "computable-integer",
       "sourceBasis": {
         "kind": "derived",
-        "step": "Liu and Meng’s construction gives a monopolar graph whose squared width is at most a constant times the number of variables in a compact Multicolored Clique encoding. The effective cutoff then gives a fixed-parameter algorithm for Multicolored Clique."
+        "step": "Convert the order in the cited reduction to a caterpillar rank decomposition in polynomial time. Its cuts are prefix cuts or singleton cuts, so its width is at most the larger of one and the maximum prefix cut rank. The same effective transfer applies to that width."
       }
     }
   ],
@@ -182,9 +185,11 @@
       "comparison": "Both bounds concern the same width interface and monopolar graphs. The W[1] recovery retains the quadratic scale with computable exponent and convergence. The explicit order and rank decomposition have polynomial length in graph order.",
       "evidence": [
         {
-          "proofId": "dominating-set-rankwidth",
-          "revision": 1,
-          "theorem": "dominating-set-rankwidth"
+          "paperId": "molter2026-running-time",
+          "editionId": "arxiv-v2",
+          "locator": "Table 1 and §3, “Dominating Set with a supplied vertex order”",
+          "role": "effective running-time lower bound",
+          "placement": "forward"
         }
       ]
     }

@@ -224,8 +224,7 @@ test('proof headings distinguish authorship from human verification', t => {
     .reduce((latest, entry) => entry.revision > latest.revision ? entry : latest);
   const external = {origin:'external', kind:'human', authors:['Test Author']};
   const id = 'dominating-set-order-sh';
-  manuscript(id).authorship = external;
-  delete manuscript('dominating-set-rankwidth').authorship.authors;
+  delete manuscript(id).authorship.authors;
   const review = data.reviews.find(r => r.object.id === id &&
     r.object.revision === manuscript(id).revision && r.type === 'agent');
   const build = () => {
@@ -234,6 +233,10 @@ test('proof headings distinguish authorship from human verification', t => {
   };
   const output = path => readFileSync(join(dir,'dist/site',path),'utf8');
   const statement = () => output('bounds/dominating-set-order/ds-order-sh-fixed-power/index.html');
+  build();
+  assert.ok(statement().includes('<h4 id="proof">Proof by AI</h4>'));
+  assert.match(output('proofs/' + id + '/r1/' + id + '/citation.txt'),/^Atlas\./);
+  manuscript(id).authorship = external;
   build();
   assert.ok(statement().includes('<h4 id="proof">Proof manuscript</h4>'));
   data.reviews.push({...review, id:'fixture-human-review', type:'human'});
@@ -253,11 +256,7 @@ test('proof headings distinguish authorship from human verification', t => {
   const literature = output('bounds/distinct-vectors-budget/dv-eth-column-budget/index.html');
   const [claim, support] = literature.split('aria-label="ETH implies Statement"');
   assert.ok(!claim.includes('source-edition') && support.includes('source-edition'));
-  const derived = output('bounds/dominating-set-rank-width/dominating-set-rank-width-w1-effective/index.html');
-  const proofHeading = derived.indexOf('Proof by AI');
-  assert.ok(proofHeading >= 0 && proofHeading < derived.indexOf('<h2>Recovery of a historical ETH bound'));
   assert.match(output('proofs/' + id + '/r1/' + id + '/citation.txt'),/^Test Author\./);
-  assert.match(output('proofs/dominating-set-rankwidth/r1/dominating-set-rankwidth/citation.txt'),/^Atlas\./);
 });
 
 test('links the preferred publication and labels the exact edition inspected for a locator', t => {

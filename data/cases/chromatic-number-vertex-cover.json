@@ -117,8 +117,8 @@
       "sources": [
         {
           "paperId": "molter2026-running-time",
-          "editionId": "arxiv-v1",
-          "locator": "Theorem 1, Section 3",
+          "editionId": "arxiv-v2",
+          "locator": "Theorem 1, §4, pp. 14–16",
           "role": "running-time lower bound",
           "placement": "statement"
         }
@@ -169,8 +169,8 @@
       "evidence": [
         {
           "paperId": "molter2026-running-time",
-          "editionId": "arxiv-v1",
-          "locator": "Theorem 1, Section 3",
+          "editionId": "arxiv-v2",
+          "locator": "Theorem 1, §4, pp. 14–16",
           "role": "running-time lower bound",
           "placement": "statement"
         }

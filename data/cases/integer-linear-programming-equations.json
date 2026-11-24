@@ -145,9 +145,16 @@
       "sources": [
         {
           "paperId": "molter2026-running-time",
-          "editionId": "arxiv-v1",
-          "locator": "Theorem 8, Section 10",
-          "role": "running-time lower bound",
+          "editionId": "arxiv-v2",
+          "locator": "§3, Consequences of Lin’s Set Cover reduction, p. 12, and Lemma 1, p. 10",
+          "role": "effective lower bound for binary incidence matrices with an all-ones right-hand side",
+          "placement": "statement"
+        },
+        {
+          "paperId": "lin2019",
+          "editionId": "proceedings",
+          "locator": "Lemma 14 and proof, §3.4, pp. 81:11–81:12",
+          "role": "Set Cover construction used for the exact-cover count",
           "placement": "statement"
         }
       ],
@@ -164,8 +171,8 @@
                 "reviewId": "ilp-equations-w1-effective-molter-source-review",
                 "source": {
                   "paperId": "molter2026-running-time",
-                  "editionId": "arxiv-v1",
-                  "locator": "Theorem 8, Section 10",
+                  "editionId": "arxiv-v2",
+                  "locator": "§3, Consequences of Lin’s Set Cover reduction, p. 12, and Lemma 1, p. 10",
                   "role": "forward implication",
                   "placement": "forward"
                 }
@@ -260,13 +267,20 @@
       "effective": true,
       "targetScale": "k log₂ k",
       "recoveredScale": "k",
-      "comparison": "The new bound applies to the subclass with all-ones right-hand side and nonzero columns. Any solver for the general binary-coefficient task must handle this subclass. The W[1] exclusion is therefore a logarithmic recovery for the general task, using a computable convergence cutoff and an arbitrary fixed polynomial in the complete input length. The ETH k log₂ k exclusion concerns general right-hand sides. The all-ones subclass has a 2^k N^(O(1)) subset algorithm.",
+      "comparison": "The all-ones incidence matrices are valid inputs to the binary-coefficient task with general right-hand sides. The exclusion on those matrices gives a logarithmic-scale recovery for that task, with computable convergence cutoffs and a fixed polynomial input factor.",
       "evidence": [
         {
           "paperId": "molter2026-running-time",
-          "editionId": "arxiv-v1",
-          "locator": "Theorem 8, Section 10",
-          "role": "running-time lower bound",
+          "editionId": "arxiv-v2",
+          "locator": "§3, Consequences of Lin’s Set Cover reduction, p. 12, and Lemma 1, p. 10",
+          "role": "effective lower bound for binary incidence matrices with an all-ones right-hand side",
+          "placement": "statement"
+        },
+        {
+          "paperId": "lin2019",
+          "editionId": "proceedings",
+          "locator": "Lemma 14 and proof, §3.4, pp. 81:11–81:12",
+          "role": "Set Cover construction used for the exact-cover count",
           "placement": "statement"
         }
       ]

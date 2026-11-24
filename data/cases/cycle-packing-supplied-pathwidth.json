@@ -162,15 +162,11 @@
       "runtimeSymbols": [
         "p",
         "N",
-        "n",
-        "γ"
+        "n"
       ],
       "qualifications": [],
       "inputConditions": [
-        "connected-bipartite-degree-six",
-        "equal-pathwidth",
-        "large-girth",
-        "optimal-path-decomposition"
+        "connected-bipartite"
       ],
       "status": "established",
       "provenance": "literature",
@@ -184,8 +180,8 @@
       "sources": [
         {
           "paperId": "molter2026-running-time",
-          "editionId": "arxiv-v1",
-          "locator": "Theorem 10, Section 13",
+          "editionId": "arxiv-v2",
+          "locator": "Theorem 5, §§8 and 8.2",
           "role": "running-time lower bound",
           "placement": "statement"
         }
@@ -208,8 +204,8 @@
                 "reviewId": "cp-pw-w1-effective-molter-source-review",
                 "source": {
                   "paperId": "molter2026-running-time",
-                  "editionId": "arxiv-v1",
-                  "locator": "Theorem 10, Section 13",
+                  "editionId": "arxiv-v2",
+                  "locator": "Theorem 5, §§8 and 8.2",
                   "role": "forward implication",
                   "placement": "forward"
                 }
@@ -242,10 +238,6 @@
       {
         "symbol": "n",
         "meaning": "number of vertices of G"
-      },
-      {
-        "symbol": "γ",
-        "meaning": "fixed constant in the girth promise"
       }
     ],
     "boundContext": "The width p of the supplied path decomposition. Here B is the input length in bits, including the decomposition.",
@@ -259,23 +251,8 @@
   },
   "inputConditions": [
     {
-      "id": "connected-bipartite-degree-six",
-      "condition": "The graph is connected and bipartite with maximum degree at most six.",
-      "level": "bound"
-    },
-    {
-      "id": "equal-pathwidth",
-      "condition": "Treewidth equals pathwidth.",
-      "level": "bound"
-    },
-    {
-      "id": "large-girth",
-      "condition": "For every fixed γ with 0 < γ < 1, the bound holds even when the girth is at least n^(1−γ).",
-      "level": "bound"
-    },
-    {
-      "id": "optimal-path-decomposition",
-      "condition": "The supplied path decomposition is optimal.",
+      "id": "connected-bipartite",
+      "condition": "The graph is connected and bipartite.",
       "level": "bound"
     }
   ],
@@ -332,12 +309,12 @@
       "effective": true,
       "targetScale": "p log₂ p",
       "recoveredScale": "p log₂ p",
-      "comparison": "The exclusion reaches the same width scale with a computable exponent and convergence. The more restricted graphs suffice to exclude a general solver, and normalized explicit graph inputs and the listed certificates have polynomial length.",
+      "comparison": "The exclusion reaches the historical supplied-width exponent scale with a computable exponent and convergence modulus. Both polynomial factors count the complete input, including the path decomposition. The connected bipartite reduction outputs suffice against a solver for unrestricted graphs.",
       "evidence": [
         {
           "paperId": "molter2026-running-time",
-          "editionId": "arxiv-v1",
-          "locator": "Theorem 10, Section 13",
+          "editionId": "arxiv-v2",
+          "locator": "Theorem 5, §§8 and 8.2",
           "role": "running-time lower bound",
           "placement": "statement"
         }

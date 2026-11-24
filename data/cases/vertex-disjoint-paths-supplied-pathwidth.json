@@ -105,9 +105,7 @@
       "id": "vdp-pw-w1",
       "inputConditions": [
         "connected-bipartite-subcubic",
-        "distinct-leaf-endpoints",
-        "equal-widths",
-        "optimal-path-decomposition"
+        "distinct-leaf-endpoints"
       ],
       "inputFactor": "B^(O(1))",
       "proofs": [],
@@ -126,8 +124,8 @@
       "sources": [
         {
           "paperId": "molter2026-running-time",
-          "editionId": "arxiv-v1",
-          "locator": "Theorem 9, Section 12",
+          "editionId": "arxiv-v2",
+          "locator": "Theorem 4, §§7 and 7.4",
           "role": "running-time lower bound",
           "placement": "statement"
         }
@@ -149,16 +147,6 @@
     {
       "condition": "All demand endpoints are distinct leaves.",
       "id": "distinct-leaf-endpoints",
-      "level": "bound"
-    },
-    {
-      "condition": "The treewidth and pathwidth of G are equal.",
-      "id": "equal-widths",
-      "level": "bound"
-    },
-    {
-      "condition": "The supplied path decomposition is optimal.",
-      "id": "optimal-path-decomposition",
       "level": "bound"
     }
   ],
@@ -239,12 +227,12 @@
       "effective": true,
       "targetScale": "p log₂ p",
       "recoveredScale": "p log₂ p",
-      "comparison": "The recovery excludes the same scale with a computable convergence modulus. The proof obtains the exclusion on connected bipartite graphs of maximum degree three with distinct leaf terminals and equal widths.",
+      "comparison": "The exclusion reaches the historical supplied-width exponent scale with a computable exponent and convergence modulus. The reduction uses connected bipartite graphs of maximum degree three with distinct leaf terminals. Both polynomial factors count all demands and the supplied path decomposition.",
       "evidence": [
         {
           "paperId": "molter2026-running-time",
-          "editionId": "arxiv-v1",
-          "locator": "Theorem 9, Section 12",
+          "editionId": "arxiv-v2",
+          "locator": "Theorem 4, §§7 and 7.4",
           "role": "running-time lower bound",
           "placement": "statement"
         }
